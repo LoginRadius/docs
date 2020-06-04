@@ -1,0 +1,158 @@
+@import "variables.scss";
+body {
+  font-family: $font-stack;
+  color: $body-black;
+}
+#___gatsby {
+  a {
+    cursor: pointer;
+    .active {
+      color: $blue-bright;
+    }
+    &:hover {
+      color: $black;
+      transition: all 0.3s;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $black;
+  }
+  .sidebar {
+    a {
+      color: $black;
+      &:hover {
+        color: $blue-bright;
+      }
+      &[aria-current="page"] {
+        background-color: $gray-lightest;
+        color: $blue-bright;
+        & svg {
+          color: $blue-bright;
+        }
+      }
+    }
+    & > div {
+      button {
+        min-height: 44px;
+        border-bottom: 1px solid $bg-color;
+        padding: 0 24px;
+        &:hover {
+          background-color: $gray-lightest;
+        }
+        &.active {
+          h6 {
+            color: $blue-bright;
+          }
+        }
+        h6 {
+          font-weight: 500;
+        }
+      }
+      ul {
+        li {
+          margin-bottom: 0;
+          a {
+            font-size: 0.875rem;
+            padding: 10px 24px;
+            line-height: 24px;
+            &:hover {
+              background-color: $gray-lightest;
+            }
+            &[aria-current="page"] {
+              background-color: $gray-lightest;
+              color: $blue-bright;
+              & svg {
+                color: $blue-bright;
+              }
+            }
+          }
+        }
+      }
+    }
+    & > span,
+    & > ul,
+    & > button {
+      padding: 0 24px;
+    }
+  }
+  .gatsby-highlight {
+    button {
+      display: flex;
+      align-items: center;
+      &:hover,
+      &:active {
+        background-color: $blue-bright;
+        color: $white;
+      }
+    }
+  }
+  blockquote {
+    border-left: 2px solid $blue-bright;
+  }
+  table {
+    th {
+      color: $black;
+    }
+  }
+  hr {
+    background-color: $gray-light;
+  }
+  .algolia-autocomplete {
+    input {
+      border-color: $gray-light;
+    }
+  }
+  aside {
+    border-right-color: $gray-light;
+  }
+  nav {
+    a {
+      &:hover {
+        h4 {
+          color: $white;
+        }
+      }
+    }
+  }
+  .toc {
+    li {
+      margin-bottom: 0;
+      a {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        width: 240px;
+        line-height: 24px;
+        padding: 6px 0px 6px 16px;
+        border-left: 1px solid $gray-light;
+        transition: width 0.25s ease;
+      }
+    }
+    .active-heading {
+      a {
+        color: $blue-bright;
+        border-left-color: $blue-bright;
+        background-color: $blue-light;
+      }
+    }
+  }
+
+  .pro {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: $error;
+    font-size: 1rem;
+    color: $white;
+    margin-left: 5px;
+    font-weight: 500;
+    &:hover {
+      color: $white !important;
+    }
+  }
+}

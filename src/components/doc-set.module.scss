@@ -1,0 +1,47 @@
+@import "../styles/variables.scss";
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 0;
+}
+.doc-container {
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+  box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  width: calc(33.33% - 16px);
+  text-align: center;
+  a {
+    padding: 1rem;
+    color: $black !important;
+    font-weight: 500;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      color: $blue-bright !important;
+      text-decoration: none !important;
+    }
+  }
+  &:not(:nth-child(3n)) {
+    margin-right: 1.5rem;
+  }
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .image {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .description {
+    margin-top: 1rem;
+
+    p {
+      font-weight: 500;
+    }
+  }
+}
