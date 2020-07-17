@@ -8,7 +8,7 @@ const navConfig = {
   },
   "API Reference": {
     url:
-      "https://www.loginradius.com/docs/developer/api/v2/customer-identity-api/overview/",
+      "https://www.loginradius.com/docs/developer/api/",
     description: "Reference of all the REST APIs which you can use",
     isExternal: true,
   },

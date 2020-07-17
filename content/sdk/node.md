@@ -49,7 +49,7 @@ Require the loginradius-sdk package and pass the config object
   var lrv2 = require('loginradius-sdk')(config);
  ```
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/v2/customer-identity-api/overview/)
+For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
 
 ## API Details
 

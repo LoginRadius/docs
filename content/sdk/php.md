@@ -151,7 +151,7 @@ $result = $accountObject->accountProfileByEmail($email,$fields);
 }
 ```
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/v2/customer-identity-api/overview/)
+For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
 
 
 
