@@ -1,43 +1,47 @@
 const navConfig = {
-  'Quick Start': {
-    url: '/',
+  "Quick Start": {
+    url: "/",
     description:
-      'A quick way to implement the authentication mechanism in your application',
-    omitLandingPage: true
+      "A quick way to implement the authentication mechanism in your application",
+    omitLandingPage: true,
+    isExternal: false,
   },
-  'API Reference': {
-    url: 'https://www.loginradius.com/docs/developer/api/v2/customer-identity-api/overview/',
-    description:
-      'Reference of all the REST APIs which you can use'
+  "API Reference": {
+    url:
+      "https://www.loginradius.com/docs/developer/api/v2/customer-identity-api/overview/",
+    description: "Reference of all the REST APIs which you can use",
+    isExternal: true,
   },
-  'How to': {
-    url: '/howto/email-smtp-config/',
+  "How to": {
+    url: "/howto/email-smtp-config/",
     description:
-      "Once you are finished with basic authentication, there are other things to add in your application"
+      "Once you are finished with basic authentication, there are other things to add in your application",
+    isExternal: false,
   },
-  'FAQ': {
-    url: '/faq/api-credentials/',
+  FAQ: {
+    url: "/faq/api-credentials/",
     description:
-      "List of all the nitty-gritty questions you may encounter during your implimentation"
-  }
+      "List of all the nitty-gritty questions you may encounter during your implimentation",
+    isExternal: false,
+  },
 };
 
 const footerNavConfig = {
   Blog: {
-    href: 'https://www.loginradius.com/engineering/blog/',
-    target: '_blank',
-    rel: 'noopener noreferrer'
+    href: "https://www.loginradius.com/engineering/blog/",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   Contribute: {
-    href: 'https://github.com/LoginRadius/',
-    target: '_blank',
-    rel: 'noopener noreferrer'
+    href: "https://github.com/LoginRadius/",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   Dashboard: {
-    href: 'https://dashboard.loginradius.com/',
-    target: '_blank',
-    rel: 'noopener noreferrer'
-  }
+    href: "https://dashboard.loginradius.com/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
 };
 
 module.exports = {
@@ -55,5 +59,5 @@ module.exports = {
   // baseDir: 'docs',
   // contentDir: 'source',
   navConfig,
-  footerNavConfig
+  footerNavConfig,
 };

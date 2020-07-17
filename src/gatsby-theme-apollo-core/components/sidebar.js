@@ -6,6 +6,8 @@ import styled from "@emotion/styled";
 import { colors } from "../utils/colors";
 import { transparentize } from "polished";
 
+import { withPrefix } from "gatsby";
+
 const Container = styled.aside({
   flexShrink: 0,
   width: 288,
@@ -49,7 +51,7 @@ const Sidebar = React.forwardRef((props, ref) => {
   const content = (
     <Fragment>
       <Header>
-        <StyledLink href={props.logoLink}>
+        <StyledLink href={withPrefix(props.logoLink)}>
           <Logo />
         </StyledLink>
       </Header>

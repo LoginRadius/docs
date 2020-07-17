@@ -8,6 +8,7 @@ import { IconYoutube } from "@apollo/space-kit/icons/IconYoutube";
 import { boxShadow } from "./search";
 import { breakpoints, colors, smallCaps } from "gatsby-theme-apollo-core";
 import { size, transparentize } from "polished";
+import { withPrefix } from "gatsby";
 
 const Wrapper = styled.div({
   width: "100%",
@@ -183,6 +184,7 @@ export default function DocsetSwitcher(props) {
   const hasSocialUrls = Boolean(
     props.spectrumUrl || props.twitterUrl || props.youtubeUrl
   );
+
   return (
     <Wrapper
       onClick={handleWrapperClick}
@@ -204,7 +206,11 @@ export default function DocsetSwitcher(props) {
         <StyledNav>
           {props.navItems.map((navItem) => (
             <NavItem key={navItem.url}>
-              <NavItemInner href={navItem.url}>
+              <NavItemInner
+                href={
+                  navItem.isExternal ? navItem.url : withPrefix(navItem.url)
+                }
+              >
                 <NavItemTitle>{navItem.title}</NavItemTitle>
                 <NavItemDescription>{navItem.description}</NavItemDescription>
               </NavItemInner>
