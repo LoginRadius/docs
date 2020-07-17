@@ -18,7 +18,7 @@ import {
 } from "gatsby-theme-apollo-core";
 import { Helmet } from "react-helmet";
 import { IconLayoutModule } from "@apollo/space-kit/icons/IconLayoutModule";
-import { Link, graphql, navigate, useStaticQuery } from "gatsby";
+import { Link, graphql, navigate, useStaticQuery, withPrefix } from "gatsby";
 import Search from "./search";
 import { MobileLogo } from "./mobile-logo";
 import { Select } from "./select";
@@ -201,7 +201,7 @@ export default function PageLayout(props) {
           open={sidebarOpen}
           ref={sidebarRef}
           title={siteName}
-          logoLink={logoLink}
+          logoLink={withPrefix(logoLink)}
         >
           <HeaderInner>
             {hasNavItems ? (
@@ -269,10 +269,7 @@ export default function PageLayout(props) {
               <MenuButton onClick={openSidebar} />
               <MobileLogo width={32} fill="currentColor" />
             </MobileNav>
-            <Search
-              siteName={siteName}
-              searchIndex={index}
-            />
+            <Search siteName={siteName} searchIndex={index} />
             <HeaderButton />
           </Header>
           <SelectedLanguageContext.Provider value={selectedLanguageState}>
