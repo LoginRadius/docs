@@ -4,10 +4,8 @@ description: ""
 summary: "A guide to impliment LoginRadius SDK in a Java application"
 ---
 
-Disclaimer
->This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
+>**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-## Getting Started
 This document contains information and examples regarding the LoginRadius Java SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google and Twitter. 
 You can get the SDK from [here](http://github.com/LoginRadius/java-sdk) 
 
