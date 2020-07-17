@@ -131,7 +131,7 @@ Example : In appsettings.json, add following statement -
 "ApiRequestSigning" : "false"
 ```
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/v2/customer-identity-api/overview/)
+For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
 
 ## API Details
 
