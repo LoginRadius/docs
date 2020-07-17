@@ -26,19 +26,19 @@ module.exports = {
             'guides/mobile-ios'
           ],
           "Web SDK": [
-            "sdk/overview",
-            "sdk/html5",
-            "sdk/asp",
-            "sdk/java",
-            "sdk/php",
-            "sdk/node",
-            "sdk/ruby",
-            "sdk/python",
-            "sdk/golang"
+            "sdk-libraries/overview",
+            "sdk-libraries/html5-library",
+            "sdk-libraries/asp-net-library",
+            "sdk-libraries/java-library",
+            "sdk-libraries/php-library",
+            "sdk-libraries/node-js-library",
+            "sdk-libraries/ruby-library",
+            "sdk-libraries/python-library",
+            "sdk-libraries/golang-library"
           ],
           "Mobile SDK": [
-            'mobile-sdk/android-sdk',
-            'mobile-sdk/ios-sdk'
+            'mobile-sdk-libraries/android-library',
+            'mobile-sdk-libraries/ios-library'
           ],
           "How to": [
             "howto/dashboard-setup",
