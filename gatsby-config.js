@@ -1,6 +1,7 @@
 const themeOptions = require("./theme-options.js");
 const remark = require('remark')
 const visit = require('unist-util-visit')
+require("dotenv").config({ path: `${__dirname}/.env` })
 
 module.exports = {
   plugins: [
@@ -12,6 +13,7 @@ module.exports = {
         siteName: "",
         subtitle: "Quick Links",
         description: "Loginradius developer documentation",
+        gaTrackingId: process.env.GA_TRACKING_ID,
         sidebarCategories: {
           null: ["index"],
           "Quick Start Guides": [
