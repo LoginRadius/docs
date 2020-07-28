@@ -4,7 +4,7 @@ description: ""
 summary: "A guide on how to select and customize IDX themes"
 ---
 
-The Secotion explains the available IDX customization options:
+The Section explains the available IDX customization options:
 
 ## Theme Selection
 
