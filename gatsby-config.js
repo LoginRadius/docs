@@ -47,6 +47,7 @@ module.exports = {
             "howto/email-smtp-config",
             "howto/email-templates",
             "howto/social-login",
+            "howto/idx",
             "howto/authentication-theme",
             "howto/work-with-sott",
             //"howto/implement-captcha",
