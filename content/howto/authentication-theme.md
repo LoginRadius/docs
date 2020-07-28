@@ -4,9 +4,7 @@ description: ""
 summary: "A guide on how to select and customize IDX themes"
 ---
 
-**IDX (Identity Experience Framework)** is a ready-to-use web page available on a dedicated instance in LoginRadius. It is a set of registration, login, and related web pages such as forgot password, profile.
-
-The following explains the available IDX customization options:
+The Secotion explains the available IDX customization options:
 
 ## Theme Selection
 
