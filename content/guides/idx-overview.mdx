@@ -1,13 +1,25 @@
 ---
-title: IDX Overview
+title: Start with IDX
 description: ""
 summary: "An Overview about Identity Experience Framework"
 ---
 
+
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Customize from "../howto/authentication-theme"
+
 **IDX (Identity Experience Framework)** is a ready-to-use web page available on a dedicated instance in LoginRadius. It is a set of registration, login, and related web pages such as forgot password, profile.
+
 All the available actions such as Login, Registration, Forgot password, Profile page, logout with the Identity Experience Framework page, can be utilized as per your needs.
 
 Below is a list of the available actions with the LoginRadius Identity Experience Framework Page:
+
+## Actions
 
 ### Login
 To display the Login interface, direct your customers to this URL:
@@ -20,6 +32,10 @@ To display the Registration interface, direct your customers to this URL:
 ```
 https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>
 ```
+
+> **Note**: After the successful completion of Login or Registration action, token will get appended with the mentioned Return URL `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e`.
+> This token can further be utilized as per your requirement.
+
 
 ### Forgot Password
 To display the Forgot Password interface, direct your customers to this URL:
@@ -40,4 +56,11 @@ https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return
 ```
 
 
-> **Note**: Replace <LoginRadius APP Name> with The LoginRadius APP Name that you can find on [Setup your Dashboard](https://www.loginradius.com/docs/developer/howto/dashboard-setup/) page and the <Return URL> with the locations you would like to direct customers after completing the action.
+> **Note**: Replace `<LoginRadius APP Name>` with The LoginRadius APP Name that you can find on [Setup your Dashboard](/howto/dashboard-setup/) page and the `<Return URL>` with the locations you would like to direct customers after completing the action.
+
+## Customization
+Go through this section for IDX customization
+
+<ExpansionPanel title="Click here to view details">
+<Customize />
+</ExpansionPanel>
