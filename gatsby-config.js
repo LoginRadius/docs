@@ -41,7 +41,8 @@ module.exports = {
           ],
           "Mobile SDK": [
             'mobile-sdk-libraries/android-library',
-            'mobile-sdk-libraries/ios-library'
+            'mobile-sdk-libraries/ios-library',
+            'mobile-sdk-libraries/react-native-library'
           ],
           "How to": [
             "howto/dashboard-setup",
