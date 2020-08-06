@@ -41,13 +41,15 @@ module.exports = {
           ],
           "Mobile SDK": [
             'mobile-sdk-libraries/android-library',
-            'mobile-sdk-libraries/ios-library'
+            'mobile-sdk-libraries/ios-library',
+            'mobile-sdk-libraries/react-native-library'
           ],
           "How to": [
             "howto/dashboard-setup",
             "howto/email-smtp-config",
             "howto/email-templates",
             "howto/social-login",
+            "howto/idx",
             "howto/authentication-theme",
             "howto/work-with-sott",
             //"howto/implement-captcha",
