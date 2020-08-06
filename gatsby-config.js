@@ -13,7 +13,7 @@ module.exports = {
         siteName: "",
         subtitle: "Quick Links",
         description: "Loginradius developer documentation",
-        gaTrackingId: process.env.GA_TRACKING_ID,
+        // gaTrackingId: process.env.GA_TRACKING_ID,
         sidebarCategories: {
           null: ["index"],
           "Quick Start Guides": [
@@ -58,6 +58,12 @@ module.exports = {
             "faq/supported-browsers",
           ],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     `gatsby-plugin-sass`,
