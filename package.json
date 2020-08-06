@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "gatsby develop",
+    "develop": "gatsby develop",
     "build": "gatsby build",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "start": "npm run clean && npm run develop"
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-rc.0",
