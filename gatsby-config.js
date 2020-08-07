@@ -17,7 +17,6 @@ module.exports = {
         sidebarCategories: {
           null: ["index"],
           "Quick Start Guides": [
-            "guides/idx-overview",
             "guides/web-nodejs",
             "guides/web-java",
             "guides/web-python",
@@ -53,6 +52,9 @@ module.exports = {
             "howto/authentication-theme",
             "howto/work-with-sott",
             //"howto/implement-captcha",
+          ],
+          "Concepts": [
+            "concepts/idx-overview"
           ],
           "FAQ": [
             "faq/api-credentials",
