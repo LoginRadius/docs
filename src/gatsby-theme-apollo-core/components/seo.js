@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import defaultImg from "../../../static/lr-logo.svg"
+
 import { withPrefix } from "gatsby";
 
 export default function SEO(props) {
@@ -16,6 +18,7 @@ export default function SEO(props) {
     <Helmet>
       <title>{title}</title>
       <meta property="og:title" content={title} />
+      <meta property="og:image" content={defaultImg} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:description" content={description} />
       <meta name="twitter:card" content={twitterCard} />
