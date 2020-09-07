@@ -45,19 +45,7 @@ const footerNavConfig = {
 };
 
 module.exports = {
-  // siteName: 'Apollo Docs',
-  // pageTitle: 'Apollo GraphQL Docs',
-  // menuTitle: 'Apollo Platform',
-  // gaTrackingId: 'UA-74643563-13',
-  // algoliaApiKey: '768e823959d35bbd51e4b2439be13fb7',
-  // algoliaIndexName: 'apollodata',
-  // baseUrl: 'https://www.apollographql.com',
-  // twitterHandle: 'apollographql',
-  // spectrumHandle: 'apollo',
-  // youtubeUrl: 'https://www.youtube.com/channel/UC0pEW_GOrMJ23l8QcrGdKSw',
-  // logoLink: 'https://www.apollographql.com/docs/',
-  // baseDir: 'docs',
-  // contentDir: 'source',
   navConfig,
   footerNavConfig,
+
 };
