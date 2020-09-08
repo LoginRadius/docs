@@ -1,7 +1,7 @@
 const themeOptions = require("./theme-options.js");
-const remark = require('remark')
-const visit = require('unist-util-visit')
-require("dotenv").config({ path: `${__dirname}/.env` })
+const remark = require("remark");
+const visit = require("unist-util-visit");
+require("dotenv").config({ path: `${__dirname}/.env` });
 
 module.exports = {
   plugins: [
@@ -10,9 +10,11 @@ module.exports = {
       options: {
         ...themeOptions,
         root: __dirname,
-        siteName: "",
+        siteName: "LoginRadius Developer Docs",
+        baseUrl: "https://www.loginradius.com",
         subtitle: "Quick Links",
-        description: "Loginradius developer documentation",
+        description:
+          "Get started and implement authentication and user management in minutes for your web and mobile application.",
         // gaTrackingId: process.env.GA_TRACKING_ID,
         sidebarCategories: {
           null: ["index"],
@@ -24,8 +26,8 @@ module.exports = {
             "guides/web-golang",
             "guides/web-ror",
             "guides/web-php",
-            'guides/mobile-android',
-            'guides/mobile-ios'
+            "guides/mobile-android",
+            "guides/mobile-ios",
           ],
           "Web SDK": [
             "sdk-libraries/overview",
@@ -36,12 +38,12 @@ module.exports = {
             "sdk-libraries/node-js-library",
             "sdk-libraries/ruby-library",
             "sdk-libraries/python-library",
-            "sdk-libraries/golang-library"
+            "sdk-libraries/golang-library",
           ],
           "Mobile SDK": [
-            'mobile-sdk-libraries/android-library',
-            'mobile-sdk-libraries/ios-library',
-            'mobile-sdk-libraries/react-native-library'
+            "mobile-sdk-libraries/android-library",
+            "mobile-sdk-libraries/ios-library",
+            "mobile-sdk-libraries/react-native-library",
           ],
           "How to": [
             "howto/dashboard-setup",
@@ -53,16 +55,14 @@ module.exports = {
             "howto/work-with-sott",
             //"howto/implement-captcha",
           ],
-          "Concepts": [
-            "concepts/idx-overview"
-          ],
-          "FAQ": [
+          Concepts: ["concepts/idx-overview"],
+          FAQ: [
             "faq/api-credentials",
             "faq/troubleshooting",
             "faq/supported-browsers",
           ],
         },
-        githubRepo: 'LoginRadius/docs',
+        githubRepo: "LoginRadius/docs",
       },
     },
     {
@@ -81,23 +81,23 @@ module.exports = {
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
           MarkdownRemark: {
-            excerpt: node => {
-              const excerptLength = 136 // Hard coded excerpt length
-              let excerpt = ''
-              const tree = remark().parse(node.rawMarkdownBody)
-              visit(tree, 'text', (node) => {
-                excerpt += node.value
-              })
-              return excerpt.slice(0, excerptLength) + '...'
+            excerpt: (node) => {
+              const excerptLength = 136; // Hard coded excerpt length
+              let excerpt = "";
+              const tree = remark().parse(node.rawMarkdownBody);
+              visit(tree, "text", (node) => {
+                excerpt += node.value;
+              });
+              return excerpt.slice(0, excerptLength) + "...";
             },
-            title: node => node.frontmatter.title,
-            description: node => node.frontmatter.summary,
-            path: node => node.fields.slug,
+            title: (node) => node.frontmatter.title,
+            description: (node) => node.frontmatter.summary,
+            path: (node) => node.fields.slug,
           },
           Mdx: {
-            title: node => node.frontmatter.title,
-            description: node => node.frontmatter.summary,
-            path: node => node.fields.slug,
+            title: (node) => node.frontmatter.title,
+            description: (node) => node.frontmatter.summary,
+            path: (node) => node.fields.slug,
           },
         },
       },
