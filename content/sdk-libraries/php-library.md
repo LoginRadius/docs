@@ -85,10 +85,6 @@ define('API_DOMAIN', 'DEFINE_CUSTOM_API_DOMAIN');   // Custom API Domain
 </div>
 
 
->API Request Signing:- define('API_REQUEST_SIGNING', true); When initializing the SDK, you can optionally specify enabling this feature. Enabling this feature means the customer does not need to pass an API secret in an API request. Instead, they can pass a dynamically generated hash value. This feature will also make sure that the message is not tampered during transit when someone calls our APIs.
-
->Pass the **proxy configurations** if you want to **set Http Server Proxy Configuration** through your PHP SDK. Protocol, Host and port are required to set Http Server Proxy configuration (username and password are optional).
-
 >If you have Custom API Domain then define 'API_DOMAIN' then replaced it with your custom API domain, Otherwise no need to define this option in configuration.
 
 ### Implementation

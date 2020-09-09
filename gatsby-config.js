@@ -60,6 +60,7 @@ module.exports = {
             "concepts/idx-overview",
             "concepts/phone-login",
             "concepts/passwordless-login",
+            "concepts/advanced-editor"
           ],
           FAQ: [
             "faq/api-credentials",
