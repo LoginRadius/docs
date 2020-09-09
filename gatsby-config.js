@@ -54,13 +54,15 @@ module.exports = {
             "howto/email-templates",
             "howto/social-login",
             "howto/authentication-theme",
-            "howto/work-with-sott"
+            "howto/work-with-sott",
+            "howto/migrate-data",
           ],
           Concepts: [
             "concepts/idx-overview",
             "concepts/phone-login",
             "concepts/passwordless-login",
             "concepts/advanced-editor"
+            //"howto/implement-captcha",
           ],
           FAQ: [
             "faq/api-credentials",
