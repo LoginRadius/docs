@@ -50,12 +50,11 @@ module.exports = {
             "howto/email-smtp-config",
             "howto/email-templates",
             "howto/social-login",
-            "howto/idx",
             "howto/authentication-theme",
             "howto/work-with-sott",
             //"howto/implement-captcha",
           ],
-          Concepts: ["concepts/idx-overview"],
+          Concepts: ["concepts/idx-overview", "concepts/advanced-editor"],
           FAQ: [
             "faq/api-credentials",
             "faq/troubleshooting",
