@@ -45,6 +45,9 @@ module.exports = {
             "mobile-sdk-libraries/ios-library",
             "mobile-sdk-libraries/react-native-library",
           ],
+          "Plugins": [
+            'plugin/wordpress'
+          ],
           "How to": [
             "howto/dashboard-setup",
             "howto/email-smtp-config",
@@ -52,8 +55,7 @@ module.exports = {
             "howto/social-login",
             "howto/idx",
             "howto/authentication-theme",
-            "howto/work-with-sott",
-            //"howto/implement-captcha",
+            "howto/work-with-sott"
           ],
           Concepts: ["concepts/idx-overview"],
           FAQ: [

@@ -78,7 +78,12 @@ define('PASSWORD', 'PROXY_PASSWORD'); // Replace PROXY_PASSWORD with your proxy 
 define('API_DOMAIN', 'DEFINE_CUSTOM_API_DOMAIN');   // Custom API Domain
 ```
 
->Replace 'LOGINRADIUS_SITE_NAME_HERE', 'LOGINRADIUS_API_KEY_HERE' and  'LOGINRADIUS_API_SECRET_HERE' in the above code with your LoginRadius Site Name, LoginRadius API Key, and Secret which you can get [here](https://dashboard.loginradius.com/dashboard).
+>Replace `LOGINRADIUS_SITE_NAME_HERE`, `LOGINRADIUS_API_KEY_HERE` and  `LOGINRADIUS_API_SECRET_HERE` in the above code with your LoginRadius Site Name, LoginRadius API Key, and Secret which you can get [here](https://dashboard.loginradius.com/dashboard), as shown below:
+
+<div style="text-align:center">
+  <img src="../assets/app_credentials.png" alt="app_credentials" />
+</div>
+
 
 >API Request Signing:- define('API_REQUEST_SIGNING', true); When initializing the SDK, you can optionally specify enabling this feature. Enabling this feature means the customer does not need to pass an API secret in an API request. Instead, they can pass a dynamically generated hash value. This feature will also make sure that the message is not tampered during transit when someone calls our APIs.
 
