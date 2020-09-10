@@ -8,7 +8,8 @@ summary: "A guide to implementing WordPress plugin in your application"
 WordPress is an open-source and free content management system that is written in PHP and uses MySQL or MariaDB database. WordPress features have a plugin architecture and different templates, which is commonly referred to as WordPress Themes.
 
 
-> **Disclaimer** <br/><br/> LoginRadius Customer Identity and Access Management Plugin simplifies and secures your customer registration process, increases customer conversion with Social Login, and offers a full solution with Traditional customer Registration.
+> **Disclaimer** <br/>
+> LoginRadius Customer Identity and Access Management Plugin simplifies and secures your customer registration process, increases customer conversion with Social Login, and offers a full solution with Traditional customer Registration.
 
 > **Note:** Based on your LoginRadius plan you have, you may have access to one or more of the following modules. This document provides an overview of each component listed below. If you require additional components that are not included in your plugin please contact your product specialist at LoginRadius.
 
@@ -36,21 +37,23 @@ WordPress is an open-source and free content management system that is written i
 
 ## Authentication
 
-- To enable authentication settings navigate to Wordpress Admin Panel->CIAM->Authentication here, you will find 4 admin settings:
+To enable authentication settings navigate to Wordpress **Admin Panel->CIAM->Authentication**, Here you will find 4 admin settings as shown in the image :
+
+  1. User Registration
+  2. Authentication                                       
+  3. Advanced settings
+  4. Short Codes
   
-  <div style="text-align:center">
+<div style="text-align:center">
   <img src="../assets/wp-authentication-settings.png" alt="wp-authentication-settings" />
 </div>
+<br/>
 
-1. User Registration
-2. Authentication                                       
-3. Advanced settings
-4. Short Codes
 
 
 ### Single Sign-On
 
-LoginRadius Single Sign-On (SSO) is a feature for multiple site management. To enable the SSO, navigate to WordPress Admin Panel->CIAM->SSO. In the SSO tab enable the radio button under the 'Enable SSO' tab and then click the Save Settings button.
+LoginRadius Single Sign-On (SSO) is a feature for multiple site management. To enable the SSO, navigate to **WordPress Admin Panel->CIAM->SSO**. In the SSO tab enable the radio button under the **Enable SSO** tab and then click the Save Settings button.
 
 <div style="text-align:center">
   <img src="../assets/wp-sso.png" alt="wp-sso" />
@@ -94,7 +97,7 @@ To auto-generate the registration page, navigate to WordPress Admin Panel->CIAM-
 
 Forgot password interfaces can be used from the forgot password page created from the plugin authentication tab from the admin panel. It can also be used from the page on which the admin has applied the shortcode for forgot password i.e. [ciam_forgot_form].
 
-To auto-generate the registration page, navigate to WordPress Admin Panel->CIAM->Authentication and check ' Auto Generate User Registration' under the User Registration section.
+To auto-generate the registration page, navigate to WordPress **Admin Panel->CIAM->Authentication** and check 'Auto Generate User Registration' under the User Registration section.
 
 The below screenshot is for the Forgot Password page.
 
@@ -114,7 +117,7 @@ The customer can reset their password from the link which they receive in their 
   <img src="../assets/wp-reset-password-interface.png" alt="wp-reset-password-interface" />
 </div>
 
-###Default WP Login Form
+### Default WP Login Form
 
 Default WP Login Form is used for admin purposes. If the admin wants to bypass the LoginRadius authentication services or doesn't require to register a customer at LoginRadius then it can be done using the [ciam_wp_default_login] shortcode. For this Admin needs to create a separate page and apply the given shortcode on it.
 
@@ -159,8 +162,8 @@ To uninstall the plugin go to the installed plugin section and click on the deac
 > <br/> On uninstallation of the plugin all the options setting will be deleted from the "wp_options" table.
 
 
-###FAQ
-1.  How to update the plugin?
+### FAQ
+1. **How to update the plugin?**
 <br/>In case of updating the plugin first deactivate the previous plugin and replace the codebase and activate the new plugin. Alternatively, you can also update it by clicking on the “update” of LoginRadius CIAM at “/wp-admin/plugins.php” of your site.
 
-**Note:** WordPress version tested up to 5.5
+> **Note:** WordPress version tested up to 5.5
