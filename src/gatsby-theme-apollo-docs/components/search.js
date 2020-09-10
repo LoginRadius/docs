@@ -92,7 +92,7 @@ export default class Search extends Component {
             onFocus={() => this.setState({ focused: true })}
             onBlur={() => this.setState({ focused: false })}
             value={query}
-            placeholder={`Search in LogonRadius Docs`}
+            placeholder={`Search in LoginRadius Docs`}
             resultsShown={resultsShown}
           />
           {results.length ? (
