@@ -45,6 +45,9 @@ module.exports = {
             "mobile-sdk-libraries/ios-library",
             "mobile-sdk-libraries/react-native-library",
           ],
+          "Plugins": [
+            'plugin/wordpress'
+          ],
           "How to": [
             "howto/dashboard-setup",
             "howto/email-smtp-config",
