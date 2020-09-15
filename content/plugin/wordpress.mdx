@@ -1,169 +1,179 @@
 ---
-title: WordPress
+title: WordPress Authentication and SSO 
 description: ""
 summary: "A guide to implementing WordPress plugin in your application"
 ---
 
+WordPress LoginRadius CIAM replaces the WordPress default login form and includes the following features:
 
-WordPress is an open-source and free content management system that is written in PHP and uses MySQL or MariaDB database. WordPress features have a plugin architecture and different templates, which is commonly referred to as WordPress Themes.
+- Standard login (email login)
+- Social login (Facebook, Google, Twitter)
+- User management
+- Customizable interfaces for login, registration, and forgot password pages.
 
-
-> **Disclaimer** <br/>
-> LoginRadius Customer Identity and Access Management Plugin simplifies and secures your customer registration process, increases customer conversion with Social Login, and offers a full solution with Traditional customer Registration.
-
-> **Note:** Based on your LoginRadius plan you have, you may have access to one or more of the following modules. This document provides an overview of each component listed below. If you require additional components that are not included in your plugin please contact your product specialist at LoginRadius.
-
-
+Note: Based on your LoginRadius plan, you may have access to one or more of the following modules. If you require additional components that are not included in your plugin, contact our support team at LoginRadius.
 
 ## Installation
 
-- Navigate to WordPress Admin Panel->Plugins
-- Click the "Add New" button
-- To install the LoginRadius plugin, type "loginradius" in the search field, or use the "Upload Plugin" button. You can use the plugin that was provided to you by the LoginRadius team or can download the default plugin here.
+- Log in to your WordPress account and then navigate to **WordPress Admin Panel->Plugins**
+- Click the **"Add New"** button
+- To install the LoginRadius plugin, search **loginradius**  keyword. From the search results, click the **Install Now** button given next to the LoginRadius CIAM plugin:
   
 <div style="text-align:center">
-  <img src="../assets/wp-installation.png" alt="wp-installation" />
+  <img src="../assets/wordpress/wp-installation.png" alt="wp-installation" />
+</div>
+
+<br/>
+
+OR click the **Upload Plugin** button, choose the plugin provided to you by the LoginRadius team and then click the **Install Now** button.
+
+
+<div style="text-align:center">
+  <img src="../assets/wordpress/wp-upload.png" alt="wp-activation" />
 </div>
 
 ## Activation
 
-- To activate the plugin, navigate to WordPress Admin Panel->CIAM
-- On the Activation tab, enter your API Key, and API Secret as provided on your LoginRadius Admin Console.
-- Click 'Save Settings'.
+- To activate the plugin, navigate to **WordPress Admin Panel->CIAM**
+- On the **Activation** tab, enter your API Key, and API Secret as provided on your LoginRadius Admin Console. For more details, refer to this [document]("/howto/dashboard-setup/").
+- Click **Save Settings** button.
 
 <div style="text-align:center">
-  <img src="../assets/wp-activation.png" alt="wp-activation" />
+  <img src="../assets/wordpress/wp-activation.png" alt="wp-activation" />
 </div>
 
 ## Authentication
 
-To enable authentication settings navigate to Wordpress **Admin Panel->CIAM->Authentication**, Here you will find 4 admin settings as shown in the image :
+To enable authentication settings, navigate to **WordPress Admin Panel->CIAM->Authentication**, Here you will find the following 4 admin settings:
 
   1. User Registration
   2. Authentication                                       
   3. Advanced settings
   4. Short Codes
-  
+
+The following image displays the settings mentioned above; configure them as per your requirements to use this plugin’s authentication feature on your WordPress website:
+
+
 <div style="text-align:center">
-  <img src="../assets/wp-authentication-settings.png" alt="wp-authentication-settings" />
+  <img src="../assets/wordpress/wp-authentication-settings.png" alt="wp-authentication-settings" />
 </div>
 <br/>
 
 
-
 ### Single Sign-On
 
-LoginRadius Single Sign-On (SSO) is a feature for multiple site management. To enable the SSO, navigate to **WordPress Admin Panel->CIAM->SSO**. In the SSO tab enable the radio button under the **Enable SSO** tab and then click the Save Settings button.
+LoginRadius Single Sign-On (SSO) enables customer to access multiple applications with a single set of login credentials and an active login session. Navigate to **WordPress Admin Panel >CIAM >SSO**, select the radio button under the **Enable SSO** section and then click the **Save Settings** button.
 
 <div style="text-align:center">
-  <img src="../assets/wp-sso.png" alt="wp-sso" />
-</div>
+  <img src="../assets/wordpress/wp-sso.png" alt="wp-sso" />
+</div> 
 
 > **Note:** SSO is not available for the free plan customer.
 
-### Debug Mode
-
-- To generate Debug log for debugging purpose, enable **WordPress developer mode** option from **wp-config.php **
-
-> **Note:** When the log is enabled, then it will start writing the log to the 'ciam_debug.log' file which is present at the plugin root.
-
 ## Interfaces
 
-Following are the user Interfaces provided by LoginRadius:
+Following are the user Interfaces provided by **LoginRadius WordPress CIAM**:
 
 ### Login Interface
 
-Login interfaces can be used from the login page created from the plugin authentication tab from the admin panel. It can also be used from the page on which the admin has applied the shortcode for login i.e. [ciam_login_form].
+It can be used from the login page created from the plugin's authentication tab in the WordPress admin panel. It can also be used from the page on which the admin has applied the shortcode for login i.e. **[ciam_login_form]**.
 
-To auto-generate the registration page, navigate to WordPress Admin Panel->CIAM->Authentication and check ' Auto Generate User Registration' under the User Registration section.
+To auto-generate the registration page, navigate to **WordPress Admin Panel >CIAM >Authentication** and check **'Auto Generate User Registration'** under the User Registration tab.
 
 <div style="text-align:center">
-  <img src="../assets/wp-login-interface.png" alt="wp-login-interface" />
+  <img src="../assets/wordpress/wp-login-interface.png" alt="wp-login-interface" />
 </div>
 
 
 ### Registration Interface
 
-The registration interface can be used from the Registration page created from the plugin authentication tab from the admin panel. It can also be used from the page on which admin has applied the shortcode for registration i.e. [ciam_registration_form].
+It can be used from the Registration page created from the plugin's authentication tab in the WordPress Admin Panel. It can also be used from the page on which admin has applied the shortcode for registration i.e. **[ciam_registration_form]**.
 
 To auto-generate the registration page, navigate to WordPress Admin Panel->CIAM->Authentication and check 'Auto Generate User Registration' under the User Registration section.
 
 
 <div style="text-align:center">
-  <img src="../assets/wp-register-interface.png" alt="wp-register-interface" />
+  <img src="../assets/wordpress/wp-register-interface.png" alt="wp-register-interface" />
 </div>
 
 ### Forgot password Interface
 
-Forgot password interfaces can be used from the forgot password page created from the plugin authentication tab from the admin panel. It can also be used from the page on which the admin has applied the shortcode for forgot password i.e. [ciam_forgot_form].
+It can be used from the forgot password page created from the plugin's authentication tab in the WordPress Admin Panel. It can also be used from the page on which the admin has applied the shortcode for forgot password i.e. **[ciam_forgot_form]**.
 
-To auto-generate the registration page, navigate to WordPress **Admin Panel->CIAM->Authentication** and check 'Auto Generate User Registration' under the User Registration section.
+To auto-generate the registration page, navigate to WordPress **Admin Panel >CIAM >Authentication** and check **'Auto Generate User Registration'** under the User Registration section.
 
 The below screenshot is for the Forgot Password page.
 
 <div style="text-align:center">
-  <img src="../assets/wp-forgot-passowrd-interface.png" alt="wp-forgot-passowrd-interface" />
+  <img src="../assets/wordpress/wp-forgot-passowrd-interface.png" alt="wp-forgot-passowrd-interface" />
 </div>
 
 ### Reset password Interface
 
-Reset password interfaces can be used from the Reset password page created from the plugin authentication tab from the admin panel. It can also be used from the page on which the admin has applied the shortcode for Reset password i.e. [ciam_password_form].
+It can be used from the Reset password page created from the plugin's authentication tab in the WordPress Admin Panel. It can also be used from the page on which the admin has applied the shortcode for Reset password i.e. **[ciam_password_form]**.
 
 To auto-generate the registration page, navigate to WordPress Admin Panel->CIAM->Authentication and check 'Enable Auto Generate User Registration' under the User Registration Integration section.
 
-The customer can reset their password from the link which they receive in their mail after doing the forgot password process.
+The customers can reset their password from the link received in their mail after following the forgot password process.
 
 <div style="text-align:center">
-  <img src="../assets/wp-reset-password-interface.png" alt="wp-reset-password-interface" />
+  <img src="../assets/wordpress/wp-reset-password-interface.png" alt="wp-reset-password-interface" />
 </div>
 
 ### Default WP Login Form
 
-Default WP Login Form is used for admin purposes. If the admin wants to bypass the LoginRadius authentication services or doesn't require to register a customer at LoginRadius then it can be done using the [ciam_wp_default_login] shortcode. For this Admin needs to create a separate page and apply the given shortcode on it.
+Default WP Login Form is used for admin purposes. If the admin wants to bypass the LoginRadius authentication services or doesn't require registering a customer at LoginRadius, it can be done using the **[ciam_wp_default_login]** shortcode. For this Admin needs to create a separate page and apply the given shortcode on it.
 
-**For example:** We have created a new page by the name “Default” and applied [ciam_wp_default_login] shortcode on it, (refer the below screenshot) this will display the default WordPress login form.
+**For example:** We have created a new page by the name “**Default**” and applied **[ciam_wp_default_login]** shortcode on it. The follwoing displays the default WordPress login form:
 
 <div style="text-align:center">
-  <img src="../assets/wp-default-form1.png" alt="wp-default-form1" />
+  <img src="../assets/wordpress/wp-default-form1.png" alt="wp-default-form1" />
 </div>
 
 <br/>
 
 <div style="text-align:center">
-  <img src="../assets/wp-default-form2.png" alt="wp-default-form2" />
+  <img src="../assets/wordpress/wp-default-form2.png" alt="wp-default-form2" />
 </div>
 
 
 ### Interface customization
 
-To customize the LoginRadius Interface like Login, Register, forgot password, etc then we have the following options:
-
-- **CSS Customization**
-  <br/><br/>To make the designing customization like interface layout, popup designing, or interface elements, use the current theme's CSS file for overriding the design.
+To customize the design (layout, pop-up design, or interface element) of LoginRadius interfaces like Login, Register, Forgot Password, etc  you can use the theme’s CSS file for overriding the design.
 
 
-### Where to look user details in the database?
+### FAQ
+
+#### Where to look user details in the database?
 
 - You can see the user's email id and username in the "wp_users" table.
 - And plugin options setting in the "wp_options" table. 
 
-### How to troubleshoot plugin?
+#### How to troubleshoot plugin?
 
 While Troubleshooting, make sure to check out the following points:
 
-- WordPress plugin uses “wp_remote_request” function to run APIs that indirectly call cURL or fsockopen, so please make sure that cURL remains open on the server.
-- If you have enabled any caching plugin on your site, then please make sure to clear the cache from it after making any update/customization to the plugin.
+- WordPress plugin uses **wp_remote_request** function to run APIs that indirectly call cURL or fsockopen, so ensure that cURL remains open on the server.
+- If you have enabled any caching plugin on your site, clear the cache from that plugin after updating/customizing the **Authentication and SSO by LoginRadius** plugin.
 
-### How to Uninstall plugin?
+#### How to Uninstall plugin?
 
-To uninstall the plugin go to the installed plugin section and click on the deactivate button below the "LoginRadius CIAM" or you can select "LoginRadius CIAM" after that choose to deactivate from Bulk Action and click on the Apply button.
+To uninstall the plugin go to the installed plugin section and click on the deactivate button given below the **LoginRadius CIAM**.
 
 > Note: 
-> <br/> On uninstallation of the plugin all the options setting will be deleted from the "wp_options" table.
+> <br/>All the options setting will be deleted from the **wp_options** table on the plugin’s uninstallation.
 
 
-### FAQ
-1. **How to update the plugin?**
-<br/>In case of updating the plugin first deactivate the previous plugin and replace the codebase and activate the new plugin. Alternatively, you can also update it by clicking on the “update” of LoginRadius CIAM at “/wp-admin/plugins.php” of your site.
+
+#### How to update the plugin?
+
+In case of updating the plugin first deactivate the previous plugin, replace the codebase and activate the new plugin. Alternatively, you can also update it by clicking the **update** of LoginRadius CIAM at “/wp-admin/plugins.php” of your site.
+
+#### How can we generate the debug mode in wordpress?
+
+To generate Debug log for debugging purpose, enable the WordPress developer mode option from wp-config.php
+
+Note: When the log is enabled, it will start writing the log to the 'ciam_debug.log' file present at the plugin root.
+
 
 > **Note:** WordPress version tested up to 5.5
