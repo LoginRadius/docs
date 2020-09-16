@@ -52,7 +52,7 @@ In LoginRadius Dashboard, navigate to Domain Whitelisting section and the follow
   <img src="../assets/domain_whitelist.png" alt="Whitlist the domain" />
 </div>
 
- You can see the social icons implemented on your IDX as below:
+ You can see the social icons implemented on your Auth Page (IDX) as below:
 
 <div style="text-align:center">
   <img src="../assets/social_login_idx.png" alt="Whitlist the domain" />
