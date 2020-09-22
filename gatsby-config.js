@@ -56,7 +56,11 @@ module.exports = {
             "howto/authentication-theme",
             "howto/work-with-sott"
           ],
-          Concepts: ["concepts/idx-overview"],
+          Concepts: [
+            "concepts/idx-overview",
+            "concepts/phone-login",
+            "concepts/passwordless-login",
+          ],
           FAQ: [
             "faq/api-credentials",
             "faq/troubleshooting",
