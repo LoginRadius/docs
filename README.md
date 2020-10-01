@@ -18,4 +18,4 @@ Use these Quick Links for handy use:
 - `npm start` in this directory
 -  Open a browser to the link provided in the console.
 
-
+**Note:** Before start contributing to this docs you must read [contributing guidelines](CONTRIBUTING.md).
