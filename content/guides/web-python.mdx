@@ -61,20 +61,33 @@ This is the file structure you will get in the Python demo, let me explain what 
 
 
 ```
-+demo/
-|-- app.py
-|-- auth.py
-|-- lr.py
-|-- +static/
-|-- |--css/
-|-- |--images/
-|-- |--js/
-|-- +templates
-|-- |--index.html
-|-- |--profile.html
-|-- |--resetpassword.html
-|-- +LoginRadius/
++Demo
+├── LoginRadius/
+├── app.py
+├── auth.py
+├── lr.py
+├── requirements.txt
+├── static
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   │   ├── favicon-lr.png
+│   │   ├── lr-logo.png
+│   │   └── user-blank.png
+│   └── js
+│       ├── index.js
+│       ├── indexView.js
+│       ├── jquery.min.js
+│       ├── options.js
+│       ├── profile-view.js
+│       └── profile.js
+├── templates
+│   ├── index.html
+│   ├── profile.html
+│   └── resetpassword.html
+└── user.py
 ```
+
 3. You need to add your LoginRadius credentials in the demo app to communicate with [LoginRadius SDK](https://www.loginradius.com/docs/libraries/sdk-libraries/python-library/)
 
 Server Side: `python-idx-demo/Demo/lr.py`
@@ -96,9 +109,11 @@ commonOptions.appName = "<App Name>";
 Run the below commands in the terminal from the root folder of the application
 
 ```
-pip install flast requests pbkdf2 cryptography && cd python-idx-demo/Demo
+cd python-idx-demo/Demo
+pip install -r requirements.txt
 ```
-This command will install all the required dependency to run the python demo and change the directory to Demo folder from where your application will be served.
+
+This command will change the directory to Demo folder from where your application will be served and install all the required dependency to run the python demo.
 
 Once all the dependencies have been installed run the application
 
