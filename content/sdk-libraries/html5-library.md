@@ -23,7 +23,7 @@ LoginRadiusSDK.initSDK(sdkoptions);
 ```
 
 ## Configuration 
-- Download the SDK from [Github](https://github.com/LoginRadius/HTML5-SDK).
+- Download the SDK from [GitHub](https://github.com/LoginRadius/HTML5-SDK).
 - Include the SDK javascript file on your website.
 
 ```html

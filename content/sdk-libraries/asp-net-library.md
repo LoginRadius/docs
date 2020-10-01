@@ -22,7 +22,7 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtoc
 ```
 
 ### Importing Required Libraries
-- Download the User Registration .Net SDK from [Github](https://github.com/LoginRadius/dot-net-sdk)
+- Download the User Registration .Net SDK from [GitHub](https://github.com/LoginRadius/dot-net-sdk)
 
 - Copy LoginRadiusSDK.V2.dll and LoginRadiusSDK.V2.pdb files into the References directory of your ASP.NET project.
 
