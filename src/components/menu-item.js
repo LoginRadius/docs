@@ -36,7 +36,7 @@ const components = {
         });
       }
     }
-    return <a {...props} onClick={handleClick} />;
+    return <a href={props.href} onClick={handleClick}>{props.children}</a>;
   }
 }
 
