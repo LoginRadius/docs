@@ -83,7 +83,8 @@ export default class Search extends Component {
       >
         <Overlay visible={resultsShown} />
         <Container
-          onMouseOver={() => (this._shouldClose = false)}
+          onMouseOver={() => (this._shouldClose = false)} 
+          onFocus={() => (this._shouldClose = false)}
           onMouseLeave={() => (this._shouldClose = true)}
         >
           <StyledInput
