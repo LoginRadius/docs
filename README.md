@@ -1,5 +1,3 @@
-
-
 ## About LoginRadius Docs
 
 
@@ -16,6 +14,6 @@ https://www.loginradius.com/docs/developer
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.MD](CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
