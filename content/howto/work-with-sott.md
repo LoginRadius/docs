@@ -30,7 +30,7 @@ Constant values to generate SOTT-
 
 #### Steps to generate SOTT
 
-1. Calculate DateInterval( Difference of start time and end time ) in the above DateFormat.
+1. Calculate DateInterval ( Difference of start time and end time ) in the above DateFormat.
 2. Calculate plain text like StartDateInterval + "#" + + "#" + EndDateInterval.
 3. Generate a PBKDF2 key derivation of a supplied encoded Secret key.
 4. Encrypt the text with below parameters
@@ -42,7 +42,7 @@ Constant values to generate SOTT-
 
 ## Implement using Node.js
 
-The Node.js code below will calculate and generate a SOTT dynamicaaly
+The Node.js code below will calculate and generate a SOTT dynamically
 
 ```JavaScript
 'use strict';
