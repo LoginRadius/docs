@@ -122,7 +122,7 @@ The customers can reset their password from the link received in their mail afte
 
 ### Default WP Login Form
 
-Default WP Login Form is used for admin purposes. If the admin wants to bypass the LoginRadius authentication services or doesn't require registering a customer at LoginRadius, it can be done using the **[ciam_wp_default_login]** shortcode. For this Admin needs to create a separate page and apply the given shortcode on it.
+Default WP Login Form is used for admin purposes. If the admin wants to bypass the LoginRadius authentication services or doesn't require registering a customer at LoginRadius, it can be done using the **[ciam_wp_default_login]** shortcode. In order to accomplish this, Admin needs to create a separate page and apply the given shortcode on it.
 
 **For example:** We have created a new page by the name “**Default**” and applied **[ciam_wp_default_login]** shortcode on it. The follwoing displays the default WordPress login form:
 
@@ -139,15 +139,14 @@ Default WP Login Form is used for admin purposes. If the admin wants to bypass t
 
 ### Interface customization
 
-To customize the design (layout, pop-up design, or interface element) of LoginRadius interfaces like Login, Register, Forgot Password, etc  you can use the theme’s CSS file for overriding the design.
-
+You can use the theme’s CSS file to customize the design (layout, pop-up design, or interface element) of LoginRadius interfaces like Login, Register, Forgot Password, etc. 
 
 ### FAQ
 
-#### Where to look user details in the database?
+#### Where to look up user details in the database?
 
 - You can see the user's email id and username in the "wp_users" table.
-- And plugin options setting in the "wp_options" table. 
+- Check plugin options setting in the "wp_options" table. 
 
 #### How to troubleshoot plugin?
 
@@ -158,7 +157,7 @@ While Troubleshooting, make sure to check out the following points:
 
 #### How to Uninstall plugin?
 
-To uninstall the plugin go to the installed plugin section and click on the deactivate button given below the **LoginRadius CIAM**.
+To uninstall the plugin, go to the installed plugin section and click on the deactivate button given below the **LoginRadius CIAM**.
 
 > Note: 
 > <br/>All the options setting will be deleted from the **wp_options** table on the plugin’s uninstallation.
@@ -167,7 +166,7 @@ To uninstall the plugin go to the installed plugin section and click on the deac
 
 #### How to update the plugin?
 
-In case of updating the plugin first deactivate the previous plugin, replace the codebase and activate the new plugin. Alternatively, you can also update it by clicking the **update** of LoginRadius CIAM at “/wp-admin/plugins.php” of your site.
+To update the plugin, first deactivate the previous plugin; then replace the codebase and activate the new plugin. Alternatively, you can also update it by clicking the **update** of LoginRadius CIAM at “/wp-admin/plugins.php” of your site.
 
 #### How can we generate the debug mode in wordpress?
 
