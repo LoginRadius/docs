@@ -1,7 +1,7 @@
 ---
 title: Android
 description: ""
-summary: "A guide to impliment LoginRadius SDK in a Android application"
+summary: "A guide to implement LoginRadius SDK in a Android application"
 ---
 
 This guide covers the various authentication types and features supported by the LoginRadius Identity Platform’s developer plan.
@@ -273,7 +273,7 @@ _Configurations_:
 
 #### Facebook Native Login
 
-1. Please add your facebook "app_id" in your string.xml, you can get the facebook application id by https://developers.facebook.com/
+1. Please add your Facebook "app_id" in your string.xml, you can get the Facebook application id by https://developers.facebook.com/
 
    ```xml
    <string name="app_id">your facebook app id</string>
@@ -323,7 +323,7 @@ _Configurations_:
 
    - Now select My Apps and create a new app using "Add a New App".
 
-   - After the creation of App, Click on setting into left panel, Select Add Plateform and choose Android
+   - After the creation of App, Click on setting into left panel, Select Add Platform and choose Android
 
    - After generating KeyHash successfully, you need to setup below setting and fill the required fields e.g. Package Name & Class Name.
      
@@ -358,7 +358,7 @@ Also, you need to add the configuration for support libraries of LoginRadius And
 ```
 
 ## Session Login/Logout
-Session Login and Logout mathod use for store access_token and userProfile after successful login in Android SharedPreferences for long time.
+Session Login and Logout method use for store access_token and userProfile after successful login in Android SharedPreferences for long time.
 
 ```java
 LoginUtil session = new LoginUtil(getApplicationContext());
@@ -377,7 +377,7 @@ session.setLogin(logindata.getAccessToken(),logindata.getProfile());
 ```
 
 
-After successful login or social login loginradius access token and user profile can be accessed like this.
+After successful login or social login LoginRadius access token and user profile can be accessed like this.
 
 ```java
 Log.d("token",session.getAccessToken()); //For Getting the LoginRadius Local Store(SharedPreferences) Access Token For Further Uses.
@@ -493,7 +493,7 @@ init.setResetPasswordUrl("<your-reset-password-url>");
 
 This section helps you to explore various API methods of LoginRadius Android SDK. They can be used to fulfill your identity based needs related to traditional login, registration, social login and many more.
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
+For more details check [API Reference Here](https://www.loginradius.com/docs/developer/api/)
 
 
 ## Reference Manual
