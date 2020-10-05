@@ -18,4 +18,9 @@ Use these Quick Links for handy use:
 - `npm start` in this directory
 -  Open a browser to the link provided in the console.
 
-**Note:** Before start contributing to this docs you must read [contributing guidelines](CONTRIBUTING.MD).
+
+## How to contribute
+
+We appreciate all kinds of contributions from anyone, be it finding an issue or writing a blog.
+
+Please check the [contributing guide](CONTRIBUTING.MD) to become a contributor.
