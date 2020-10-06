@@ -20,7 +20,7 @@ This guide will show you how to implement the user authentication in a Node.js E
 This tutorial assumes you have:
 
 - Basic knowledge of HTML/CSS
-- Latest Node.js version installed on your system
+- Latest Node.js version installed on your system ([click here](https://nodejs.org/en/) to install latest version)
 
 ## Setup Your Dashboard
 
@@ -70,7 +70,7 @@ Get your credentials and whitelist your application domain as explained in this 
     --- server.js
    ```
 
-3. Set your LoginRadius credentials on the client and server-side in the following files
+3. Set your LoginRadius credentials on the client and server-side in the following files.
 
    - Server side: `server.js`
 
@@ -80,7 +80,7 @@ Get your credentials and whitelist your application domain as explained in this 
     apiDomain: 'https://api.loginradius.com',
     apiKey: '<LoginRadius API key>',
     apiSecret: '<LoginRadius API secret>',
-    siteName: '<LoginRadius App name>',
+    siteName: '<LoginRadius App name>',   
   };
   ```
 
@@ -91,15 +91,17 @@ Get your credentials and whitelist your application domain as explained in this 
   commonOptions.appName = "<LoginRadius App Name>";
   ```
 
-4. Running application 
+4. Running application.
 
-  Run the below commands in the terminal from the root folder of the application
+  Open the terminal in the root folder of the application, and use the below commands to Run your application:
+
+  First install the dependencies.
 
   ``` JS
   npm install
   ```
 
-  Once all the dependencies have been installed run the application
+  And once all the dependencies have been installed run the application in your local system.
 
   ``` JS
   node server.js
