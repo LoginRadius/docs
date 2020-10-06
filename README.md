@@ -17,6 +17,6 @@ https://www.loginradius.com/docs/developer
 
 ## How to contribute
 
-We appreciate all kinds of contributions from anyone, be it finding an issue or writing a blog.
+We appreciate all kinds of contributions from our contributors.
 
 Please check the [contributing guide](CONTRIBUTING.MD) to become a contributor.
