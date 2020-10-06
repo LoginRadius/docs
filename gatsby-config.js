@@ -58,7 +58,8 @@ module.exports = {
             "howto/migrate-data",
             "howto/phone-login",
             "howto/passwordless-login",
-            "howto/advanced-editor"
+            "howto/advanced-editor",
+            "howto/communication-settings"
           ],
           Concepts: [
             "concepts/idx-overview",

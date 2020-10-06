@@ -1,0 +1,67 @@
+---
+title: Manage Communication Settings
+description: ""
+summary: "An Overview about Manage Communication Settings for email and sms providers"
+---
+
+You can manage the Email and SMS providers and settings for your LoginRadius App.
+
+## Email Configuration
+
+LoginRadius Identity Platform allows you to configure your [SMTP provider settings]() and generic [email settings]() in the Communication Setting section.
+
+### SMTP Provider Settings
+
+Setting up the SMTP server in LoginRadius allows the system to send out all email correspondences directly through your SMTP provider. It enables you to get deliverability stats and analytics and optimize your email messaging. To configure these emails to go through your SMTP, you should follow the below steps:
+
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, navigate to the Communication Settings sections and click the down arrow or anywhere in the section tile. The SMTP Provider Settings screen will appear:
+
+<!-- <add screen here with the SMTP Provider Settings highlighted in the left > -->
+
+2. Enter or select the following SMTP details:
+- **SMTP Providers:** Select a pre-configured provider or other for a custom provider.
+- **From Email Address:** Enter the email of the sender.
+- **SMTP User Name:** Enter the SMTP username.
+- **SMTP Password:** Enter the password for the SMTP username.
+- **From Name:** Enter the name of the sender.
+- **SMTP Host:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP host details.
+- **SMTP Port:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP port details.
+- **Enable SSL:** Select this option to make email communication more secure.
+
+### Email Settings
+You can use Email Settings to customize some of the behaviors for sending emails. To customize these settings, you should follow the below steps: 
+
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, navigate to the **Communication Settings** sections, and click the down arrow or anywhere in the section tile. Then select the **Email Settings** option from the left navigation pane, the following screen will appear:
+
+<!-- <add screen here with the Email Settings highlighted in the left navigation> -->
+
+2. Configure the following email settings as per your requirements: 
+
+**Request Limit** - The Request Limit is the number of times a user can request a given email during the request period (in minutes) before this feature is temporarily disabled. For example, a user can only request this email 5 times (Request Limit) within 120 minutes (Request Period) before the feature is disabled.
+
+**Request Disable period (Minutes)** - The amount of time (in minutes) that the given email request feature remains disabled for the user once they have reached their Request Limit.
+
+**Email Token Validity Limit (Minutes)** - The amount of time (in minutes) for which the link included in the given email remains valid.
+
+## SMS Configuration
+
+LoginRadius Identity Platform allows you to configure your SMS provider setting and generic SMS setting in the communication setting section.
+
+### SMS Provider Settings
+
+Here you can configure the Twilio SMS provider for sending the SMS to the customer by providing Twilio Account SID, Auth Token, and Twilio number.
+
+### SMS Settings
+
+You can customize your SMS setting for your SMS template. This section allows you to set up a OTP length, OTP Type, Request Limit, Request Disabled Period, OTP Validity Limit.
+
+**OTP Length:** The length of the one-time passcode you want to set for the SMS.
+
+**OTP Type:** The type of OTP you want to send to the customer. There are many options available, for example, Numeric, AlphaNumeric.
+
+**Request Limit:** The number of times a customer can request an OTP during the request period (in seconds) before this feature is temporarily disabled. For example, a customer can request an OTP 5 times (Request Limit) within 120 seconds (Request Period) before the feature is disabled.
+
+**Request Disabled Period (Minutes):** The duration for which the OTP request will be disabled once the request limit is reached.
+
+**OTP Validity Limit (Seconds):** The amount of time (in seconds) for which an OTP remains valid.
+
