@@ -56,12 +56,12 @@ module.exports = {
             "howto/authentication-theme",
             "howto/work-with-sott",
             "howto/migrate-data",
+            "howto/phone-login",
+            "howto/passwordless-login",
+            "howto/advanced-editor"
           ],
           Concepts: [
             "concepts/idx-overview",
-            "concepts/phone-login",
-            "concepts/passwordless-login",
-            "concepts/advanced-editor"
             //"howto/implement-captcha",
           ],
           FAQ: [
