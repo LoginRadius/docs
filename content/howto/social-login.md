@@ -31,6 +31,8 @@ For example, the following screen displays the configuration steps of Google:
   <img src="../assets/dev_console_google.png" alt="google-developer-console" />
 </div>
 
+<br>
+
 Upon completing the configuration steps of the selected Social ID Provider, you will get the credentials.
 
 ## Add Credentials
@@ -60,31 +62,31 @@ In LoginRadius Dashboard, navigate to Domain Whitelisting section and the follow
 
 ## Supported Social Providers
 
-The table below lists the social providers that LoginRadius supports for the Free and Developer Plan. 
+The table below lists the social providers that LoginRadius supports for the Free and Developer Plan.
 
 <table border="1">
- <tr> 
-   <th><strong> Plan </strong></th> 
-   <th><strong> Facebook </strong></th> 
+ <tr>
+   <th><strong> Plan </strong></th>
+   <th><strong> Facebook </strong></th>
    <th><strong> Google </strong></th>   
-   <th><strong> Twitter </strong></th> 
-   <th><strong> LinkedIn </strong></th> 
+   <th><strong> Twitter </strong></th>
+   <th><strong> LinkedIn </strong></th>
    <th><strong> GitHub </strong></th>   
   </tr>
- <tr> 
-   <td> <strong>Free</strong> </td> 
-   <td> Yes </td> 
+ <tr>
+   <td> <strong>Free</strong> </td>
+   <td> Yes </td>
    <td> Yes </td>   
-   <td> Yes </td> 
-   <td> No </td> 
+   <td> Yes </td>
+   <td> No </td>
    <td> No </td>   
   </tr>
- <tr> 
-   <td> <strong>Developer <strong> </td> 
-   <td> Yes </td> 
+ <tr>
+   <td> <strong>Developer <strong> </td>
+   <td> Yes </td>
    <td> Yes </td>   
-   <td> Yes </td> 
-   <td> Yes </td> 
+   <td> Yes </td>
+   <td> Yes </td>
    <td> Yes </td>   
   </tr>
 </table>
