@@ -16,7 +16,10 @@ Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_bla
   <img src="../assets/smtp_1.png" alt="smtp_form">
 </div>
 
+<br>
 The SMTP Settings section will appear as displayed in the screen below:
+<br></br>
+
 
 <div style="text-align:center">
   <img src="../assets/smtp_2.png" alt="smtp_settings">
@@ -43,7 +46,7 @@ Click the Verify button from the **SMTP Settings** screen, the following pop-up 
   <img src="../assets/smtp_3.png" alt="smtp_verification">
 </div>
 
-
+<br>
 Enter the email id in the To Email textbox and click the Send button. If the email is sent successfully, a success message will be displayed on the screen.
 
 ## Save Settings
