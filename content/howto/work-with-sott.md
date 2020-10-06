@@ -4,14 +4,14 @@ description: ""
 summary: "A guide on how to generate SOTT (Secure One Time Token)"
 ---
 
-Our Registration API is public and uses API key for request. To avoid spam automated registrations, in the request header, LoginRadius supports an additional token - **SOTT (Secure One Time Token)** along with API key
+Our Registration API is public and uses API key for request. To avoid spam automated registrations, in the request header, LoginRadius supports an additional token - **SOTT (Secure One Time Token)** along with API key.
 
-SOTT can be created using the API key, API secret, and a timestamp (start time and end time)
+SOTT can be created using the API key, API secret, and a timestamp (start time and end time).
 
 
 > **Note:** Once generated, SOTT can be used only for a short time. Thus, it helps to avoid Spams and Brute Force Attacks.
 
-> In our SDKs, SOTT is automatically handled when the SDK calls the authentication APIs, user registration methods. 
+> In our SDKs, SOTT is automatically handled when the SDK calls the authentication APIs, user registration methods.
 
 If you wish to manually create a SOTT then follow the sections below for the steps based on your particular language.
 
@@ -33,7 +33,7 @@ Constant values to generate SOTT-
 1. Calculate DateInterval( Difference of start time and end time ) in the above DateFormat.
 2. Calculate plain text like StartDateInterval + "#" + + "#" + EndDateInterval.
 3. Generate a PBKDF2 key derivation of a supplied encoded Secret key.
-4. Encrypt the text with below parameters
+4. Encrypt the text with below parameters:
     1. PBKDF2 key
     2. Plain text
     3. Encoded INITVECTOR
@@ -42,11 +42,11 @@ Constant values to generate SOTT-
 
 ## Implement using Node.js
 
-The Node.js code below will calculate and generate a SOTT dynamicaaly
+The Node.js code below will calculate and generate a SOTT dynamically.
 
 ```JavaScript
 'use strict';
-// Secret - Your APP secret 
+// Secret - Your APP secret
 // key -- Your API key
 module.exports = function (secret, key, startDate, endDate) {
   var crypto = require('crypto');
@@ -91,7 +91,7 @@ module.exports = function (secret, key, startDate, endDate) {
 
 ## Generate SOTT using SDKs
 
-You can also use our SDKs to generate the SOTT dynamically in your application
+You can also use our SDKs to generate the SOTT dynamically in your application.
 
 1. Using PHP SDK
 
