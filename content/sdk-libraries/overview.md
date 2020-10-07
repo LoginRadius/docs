@@ -22,6 +22,13 @@ The LoginRadius SDKs currently support the following languages:
 ## Node.js Library
 - [View on GitHub](https://github.com/LoginRadius/node-js-sdk)
 
+## Python Library
+- [View on GitHub](https://github.com/LoginRadius/python-sdk)
+
+## Ruby Library
+- [View on GitHub](https://github.com/LoginRadius/ruby-on-rails-sdk)
+
+
 ## Golang Library
 - [View on GitHub](https://www.github.com/loginradius/go-sdk)
 
