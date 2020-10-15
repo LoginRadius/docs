@@ -14,8 +14,8 @@ Use these Quick Links for handy use:
 ## Running Locally 
 
 
-- `npm install` in this directory
-- `npm start` in this directory
+- `npm install` in this directory.
+- `npm start` in this directory.
 -  Open a browser to the link provided in the console.
 
 
