@@ -69,3 +69,10 @@ yarn-error.log
 .yarn-integrity
 
 ./.idea
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
