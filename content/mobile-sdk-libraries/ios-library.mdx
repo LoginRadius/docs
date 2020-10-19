@@ -162,7 +162,7 @@ NSDictionary *payload=@{ @"Email": @[ @{ @"Type": @"Primary", @"Value": @"test@g
 }];
 ```
 
-> Registration API will only create a user. To retrieve userprofile and access_token, please call Login API.
+> Registration API will only create a user. To retrieve userProfile and access_token, please call Login API.
 
 For all the possible payload fields, please check the Auth User Registration by Email 
 
@@ -267,7 +267,7 @@ To integrate Web Social Login. Follow the steps
 
 **Facebook native login**
 
-> For Native Facebook login to work, create and configure your Facebook app as per [facebook docs](https://developers.facebook.com/facebook-login/ios).
+> For Native Facebook login to work, create and configure your Facebook app as per [facebook docs](https://developers.facebook.com/docs/facebook-login/ios).
 
 You don't need to download and integrate the Facebook SDK with your project. It is distributed as a dependency with LoginRadius SDK. Just make sure your `Info.plist` looks like this
 
@@ -527,7 +527,7 @@ Log out the user.
 ```
 
 ## Access Token and User Profile
-After successful login or social login loginradius access token and user profile can be accessed like this.
+After successful login or social login LoginRadius access token and user profile can be accessed like this.
 
 ```
 NSDictionary *profile = [[[LoginRadiusSDK sharedInstance] session] userProfile];
@@ -546,7 +546,7 @@ BOOL isUserLoggedIn = [[[LoginRadiusSDK sharedInstance] session] isLoggedIn];
 
 This section helps you to explore various API methods of LoginRadius IOS SDK. They can be used to fulfill your identity based needs related to traditional login, registration, social login and many more.
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
+For more details check [API Reference Here](https://www.loginradius.com/docs/developer/api/)
 
 
 ## Discover More 
