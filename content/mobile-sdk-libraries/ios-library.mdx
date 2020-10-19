@@ -1,7 +1,7 @@
 ---
 title: iOS
 description: ""
-summary: "A guide to impliment LoginRadius SDK in a Android application"
+summary: "A guide to implement LoginRadius SDK in a Android application"
 ---
 
 This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in an iOS app.
@@ -32,6 +32,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'TargetName' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
 pod 'LoginRadiusSDK', '~> 5.4.0'
 end
 ```
@@ -62,6 +64,8 @@ $ pod install
 <sub><sup>\*useKeychain needs to enable keychain sharing to work properly, to see visually how to enable it see [here](#singlesignon11)</sup></sub>
 
 > Details on obtaining Sitename and API key [here](https://dashboard.loginradius.com/dashboard)
+
+> Note: Here in this doc, Objective-C is used as language for demo code. You may use LoginRadiusSDK in your Swift projects as well by using Bridging Header feature.
 
 1. Import the module in your source code.
 
@@ -136,7 +140,7 @@ Registration requires a parameter called SOTT. You can create the SOTT token by 
 
 |Name|Description|Required|
 |---|----|----|
-|SOTT|Secure One-time Token which you can check information about sott [here](https://dashboard.loginradius.com/dashboard)|Yes for Registration.  You can generate a long term SOTT token from the Dadhboard
+|SOTT|Secure One-time Token which you can check information about sott [here](https://dashboard.loginradius.com/dashboard)|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
 |smstemplate|SMS template allows you to customize the formatting and text of SMS sent by users who share your content.|NO|
 |emailTemplate|Email templates allow you to customize the formatting and text of emails sent by users who share your content. Templates can be text-only, or HTML and text, in which case the user's email client will determine which is displayed. |NO  Go To API Configuration -> Email Workflow to get the template names|
 
@@ -230,7 +234,7 @@ Social Login can be done in two ways.
 
   SFSafariViewController is the default choice for authentication. If it is not available i.e < iOS 9,social login falls back to UIWebView.
 
-  > Note: Facebbok and Google no longer allow OAuth requests in embedded browsers on iOS.
+  > Note: Facebook and Google no longer allow OAuth requests in embedded browsers on iOS.
   For Google or Facebook social login to work you will need to use the Native Social Login implementation method.
 
 2. Native Social Login
