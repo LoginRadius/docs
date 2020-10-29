@@ -1,4 +1,8 @@
-
+<p align="center">
+  <a href="https://www.loginradius.com/">
+      <img src="logo/loginradius-logo.png" alt="loginradius logo" title="loginradius" height="150" width="700"/>
+  </a>
+</p>
 
 ## About LoginRadius Docs
 
