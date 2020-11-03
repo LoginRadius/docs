@@ -11,7 +11,7 @@ The sections below explain how you can configure the desired Social Login provid
 
 ## Select Provider
 
-Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account and navigate to the **Identity Provider** section. Then click the **Select a Provider** drop-down.
+Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account and navigate to the **Login Methods** section. Then click the **Select a Provider** drop-down.
 
 The following screen will appear:
 
@@ -49,7 +49,7 @@ In LoginRadius Dashboard, navigate to Domain Whitelisting section and the follow
 
 
 <div style="text-align:center">
-  <img src="../assets/domain_whitelist.png" alt="Whitlist the domain" />
+  <img src="../assets/domain_whitelisting.png" alt="Whitlist the domain" />
 </div>
 
  You can see the social icons implemented on your Auth Page (IDX) as below:
