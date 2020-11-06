@@ -53,7 +53,6 @@ module.exports = {
             "howto/email-smtp-config",
             "howto/email-templates",
             "howto/social-login",
-            "howto/web-sso",
             "howto/work-with-sott",
             "howto/authentication-theme",
             "howto/user-management",
