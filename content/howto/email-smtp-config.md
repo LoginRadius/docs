@@ -8,9 +8,9 @@ You can either configure your SMTP server or use the fully managed SMTP services
 
 Follow these steps for configuration of the SMTP provider in your LoginRadius Dashboard.
 
-## Navigate to Identity Provider
+## Navigate to Communication Settings
 
-Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>  account, navigate to **Identity Provider** section and click the **Edit** icon given next to the **Email/Password** provider, as highlighted in the screen below:
+Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>  account, navigate to the **Communication Settings** section and click on the **SMTP Provider Settings** section, as highlighted in the screen below:
 
 <div style="text-align:center">
   <img src="../assets/smtp_1.png" alt="smtp_form">

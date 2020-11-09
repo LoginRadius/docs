@@ -136,7 +136,7 @@ Registration requires a parameter called SOTT. You can create the SOTT token by 
 
 |Name|Description|Required|
 |---|----|----|
-|SOTT|Secure One-time Token which you can check information about sott [here](https://dashboard.loginradius.com/dashboard)|Yes for Registration.  You can generate a long term SOTT token from the Dadhboard
+|SOTT|Secure One-time Token which you can check information about SOTT [here](https://dashboard.loginradius.com/dashboard)|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
 |smstemplate|SMS template allows you to customize the formatting and text of SMS sent by users who share your content.|NO|
 |emailTemplate|Email templates allow you to customize the formatting and text of emails sent by users who share your content. Templates can be text-only, or HTML and text, in which case the user's email client will determine which is displayed. |NO  Go To API Configuration -> Email Workflow to get the template names|
 
@@ -158,7 +158,7 @@ NSDictionary *payload=@{ @"Email": @[ @{ @"Type": @"Primary", @"Value": @"test@g
 }];
 ```
 
-> Registration API will only create a user. To retrieve userprofile and access_token, please call Login API.
+> Registration API will only create a user. To retrieve userProfile and access_token, please call Login API.
 
 For all the possible payload fields, please check the Auth User Registration by Email 
 
@@ -230,7 +230,7 @@ Social Login can be done in two ways.
 
   SFSafariViewController is the default choice for authentication. If it is not available i.e < iOS 9,social login falls back to UIWebView.
 
-  > Note: Facebbok and Google no longer allow OAuth requests in embedded browsers on iOS.
+  > Note: Facebook and Google no longer allow OAuth requests in embedded browsers on iOS.
   For Google or Facebook social login to work you will need to use the Native Social Login implementation method.
 
 2. Native Social Login
@@ -263,7 +263,7 @@ To integrate Web Social Login. Follow the steps
 
 **Facebook native login**
 
-> For Native Facebook login to work, create and configure your Facebook app as per [facebook docs](https://developers.facebook.com/facebook-login/ios).
+> For Native Facebook login to work, create and configure your Facebook app as per [facebook docs](https://developers.facebook.com/docs/facebook-login/ios).
 
 You don't need to download and integrate the Facebook SDK with your project. It is distributed as a dependency with LoginRadius SDK. Just make sure your `Info.plist` looks like this
 
@@ -523,7 +523,7 @@ Log out the user.
 ```
 
 ## Access Token and User Profile
-After successful login or social login loginradius access token and user profile can be accessed like this.
+After successful login or social login LoginRadius access token and user profile can be accessed like this.
 
 ```
 NSDictionary *profile = [[[LoginRadiusSDK sharedInstance] session] userProfile];
@@ -542,7 +542,7 @@ BOOL isUserLoggedIn = [[[LoginRadiusSDK sharedInstance] session] isLoggedIn];
 
 This section helps you to explore various API methods of LoginRadius IOS SDK. They can be used to fulfill your identity based needs related to traditional login, registration, social login and many more.
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
+For more details check [API Reference Here](https://www.loginradius.com/docs/developer/api/)
 
 
 ## Discover More 
