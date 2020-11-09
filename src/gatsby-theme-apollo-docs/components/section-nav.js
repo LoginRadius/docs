@@ -43,7 +43,7 @@ export default function SectionNav(props) {
 
   const { contentRef, imagesLoaded } = props;
   useEffect(() => {
-    const headings = contentRef.current.querySelectorAll("h1, h2");
+    const headings = contentRef.current.querySelectorAll("h2, h3");
     setOffsets(
       Array.from(headings)
         .map((heading) => {

@@ -57,7 +57,10 @@ module.exports = {
             "howto/authentication-theme",
             "howto/user-management",
           ],
-          Concepts: ["concepts/idx-overview"],
+          Concepts: [
+            "concepts/idx-overview",
+
+          ],
           FAQ: [
             "faq/api-credentials",
             "faq/troubleshooting",

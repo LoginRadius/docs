@@ -1,0 +1,86 @@
+---
+title: Advanced Editor
+description: ""
+summary: "An advanced edior section to customize the IDX auth and profile pages"
+---
+
+
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Customize from "../howto/authentication-theme"
+
+Available with the premium plan this feature allows you to choose a design template for your authentication pages (register, login, forgot password, and reset password). You can then customize Favicon, Logo, and Labels for the selected template. The default design theme remains applicable even if you do not choose a template option.
+
+
+## Access the advanced editor
+
+Go to Auth Page Customization and click on the **Customize** button on the selected theme thumbnail.
+
+You can see an advanced editor section showing several files and their source codes, as shown in the image below.
+
+<div style="text-align:center">
+  <img src="../assets/concepts/advanced-editor.png" alt="Advanced Editor" />
+</div>
+
+
+## Customization
+
+The complete IDX consists of two main pages, one is Authentication and another one is the profile page. 
+
+The **Authentication** page is having the following interfaces:
+
+- Registration
+- Login
+- Forgot Password
+
+The **Profile** page is having the following interfaces:
+
+- Profile Editor
+- Change Password
+
+1. Markup
+2. Styling
+3. Script
+
+### Markup
+
+The HTML layout of both **Authentication** and **Profile** page is customizable. Go into the `HTML` tab in the *Authentication* section and you can see the complete HTML code over here.  To populate the containers, we have to include some JavaScript handlers to help make the associations between LoginRadius scripts and the Identity Experience Framework Registration page.
+
+The HTML interfaces to handle different authentication functionalities are set to some default containers. Below is the table to list down default interfaces and their corresponding containers. 
+
+| Interface       | Default Container ID| Related Section  |
+| ------------- |-------------| -----|
+| Login Form  | login-container | Authentication |
+| Registration    | registration-container      | Authentication |
+| Forgot Password  | forgotpassword-container      | Authentication |
+| Social Linking Interface  | lr-linked-social and lr-not-linked-social | Profile |
+| Profile Editor    | profile-editor-container      | Profile |
+| Change Password | change-password      | Profile |
+
+> Note: While changing the markup, you need to change the corresponding IDs for the interfaces in.
+
+
+For example, if you want to change the ID of the default login-container then while changing the ID of the element in the markup file, you can need to update the same ID reference in its corresponding JavaScript file `default-auth-before-script.js` using this variable `lr_raas_settings.login.containerid`.
+
+
+### Styling
+
+You can customize the CSS styling applied to the page by making changes to the provided `hosted-auth-default.css` according to your design/branding requirements.
+
+### Script
+
+You can control some additional functionality from `default-auth-before-script.js` and  `default-profile-before-script.js` JavaScript files to include any additional JS you would like to further customize the interfaces based on our documentation
+
+The following customizations are included in the provided JS files:
+
+**To change the messages**: Find the object `successMessages` in *JavaScript files* and change the message according to your requirements.
+
+**To change the Loading image**: Find function `visibleLoadingSpinner` in *JavaScript files* and customize it to your requirements.
+
+**To change form settings** : 
+ - Find functions showLogin, showRegister, showForgotPassword in **default-auth-before-script.js** and customize it to your requirements just below the default code.
+- Find functions LoginRadiusRaaS.\$hooks.setRenderProfileEditor in **default-profile-before-script.js** and customize it to your requirements just below the default code.
