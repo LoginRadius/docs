@@ -57,7 +57,7 @@ Both pages allow you to add your custom CSS and JS by adding the properties or d
 
 ### Markup
 
-The HTML layout of both **Authentication** and **Profile** page is customizable. Go into the `HTML` tab in the *Authentication* section, and you can see the complete HTML code over here.  You have to include some JavaScript handlers to populate the containers andhelp make the associations between LoginRadius scripts and the Identity Experience Framework Registration page.
+The HTML layout of both **Authentication** and **Profile** page is customizable. Go into the `HTML` tab in the *Authentication* section, and you can see the complete HTML code over here.  You have to include some JavaScript handlers to populate the containers and help make the associations between LoginRadius scripts and the Identity Experience Framework Registration page.
 The HTML interfaces are set to some default containers to handle different authentication functionalities. Below is the list of default interfaces and their corresponding containers. 
 
 | Interface       | Default Container ID| Related Section  |
@@ -90,5 +90,5 @@ The following customizations are included in the provided JS files:
 **To change the loading image**: Find function `visibleLoadingSpinner` in *JavaScript files* and customize it to your requirements.
 
 **To change form settings**: 
- - Find functions `showLogin, showRegister, showForgotPassword` in **default-auth-before-script.js** and customize it for your requirements just below the default code.
-- Find functions `LoginRadiusRaaS.\$hooks.setRenderProfileEditor` in **default-profile-before-script.js** and customize it for your requirements just below the default code.
+ - Find functions `showLogin, showRegister, showForgotPassword` in **default-auth-before-script.js** and customize it for your requirements. You can add the custom code just below the default code.
+- Find functions `LoginRadiusRaaS.\$hooks.setRenderProfileEditor` in **default-profile-before-script.js** and customize it for your requirements. You can add the custom code just below the default code.
