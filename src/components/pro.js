@@ -5,7 +5,7 @@ const Pro = ({ children }) => {
   return (
     <div>
       {children}
-      <Link className={"pro"}> Developer Plan </Link>
+      <Link className={"pro"}> Developer Permium </Link>
     </div>
   );
 };
