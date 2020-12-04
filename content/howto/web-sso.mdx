@@ -4,39 +4,44 @@ description: ""
 summary: "A guide on how to implement web sso in any web application"
 ---
 
-Single sign-on (SSO) is the authentication mechanism, which allows users to sign in to different software systems with a single digital identity. After signing into one application user is signed into another application automatically. 
+import Developer from "../../src/components/developer.js"
 
+Single sign-on (SSO) is the authentication mechanism, which allows users to sign in to different applications with a single digital identity. Also, upon signing into one application user is signed into another (SSO enabled) application automatically. 
 
-## Web SSO
+## <Developer>Web SSO</Developer>
 
 Web SSO is a method of browser-based session management that utilizes browser storage mechanisms like sessionStorage, localStorage, cookies to maintain the user’s session across your applications.
 
-## How does it work in LoginRadius?
-A centralized domain managed by LoginRadius Auth Page ( IDX ) is utilized to perform the authentication. When requested, this centralized domain shares the session with authorized applications.
+> Web SSO is only available for the developer and higher plans.
+
+**LoginRadius Web SSO**: A centralized domain managed by LoginRadius Auth Page ( IDX ) is utilized to perform the authentication. When requested, this centralized domain shares the session with authorized applications.
 
 So that the users logged in to one application automatically logs into other applications, independent of technology, platform, or domain the user is using.
 
-## Configuration
+## Domain Whitelisting
 
 To use LoginRadius Web SSO, make sure the desired domains are whitelisted under Domain Whitelisting in the LoginRadius dashboard.
-To add the application domain, Login to your LoginRadius Dashboard account, from the left navigation panel, click the Configuration and then navigate to the Domain Whitelisting section. Click the down arrow or anywhere within the section.
+
+To add the application domain, login to your LoginRadius Dashboard account, from the left navigation panel, click the Configuration and then navigate to the Domain Whitelisting section. Click the down arrow or anywhere within the section, the following screen will appear:
 
 <div style="text-align:center">
-  <img src="../assets/domain-whitelisting.png" alt="auth_1" />
+  <img src="../assets/howto/web-sso/domain-whitelisting.png" alt="Domain Whitelisting" />
 </div>
+<br/>
 
+Enter the desired domains in the Add Domain textbox highlighted above and then click the Add button. 
 ## Setting Up SSO Token
 This section covers how you can manually set a LoginRadius access_token for SSO.
 
-### Setting The SSO Token via Ajax Call
+### Setting SSO Token via Ajax Call
 
-To manually set the access_token for SSO via AJAX, simply makes an AJAX call to the following endpoint: `https://<LoginRadius Site Name>.hub.loginradius.com/ssologin/setToken`
+To manually set the access_token for SSO via AJAX, make an AJAX call to the following endpoint: `https://<LoginRadius Site Name>.hub.loginradius.com/ssologin/setToken`
 
 #### Query Parameters:
 
 - **token**: Pass in the access_token that you desire to set for SSO.
 
-- **apikey**: Your LoginRadius API Key
+- **apikey**: Your LoginRadius API Key.
 
 - **callback**: Your AJAX callback method.
 
@@ -66,21 +71,21 @@ $.ajax({
 
 ```
 
-### Setting the SSO Token via HTTPs Redirect
+### Setting SSO Token via HTTPs Redirect
 
 In Safari browsers, there is an additional security layer preventing cookies from being modified externally, which restricts the use of JSONP for this use case. As a solution, you can simply use an HTTPs redirect for your Safari customers.
 
-Simply do a redirect to the following endpoint:
+Do a redirect to the following endpoint:
 
 `https://<sitename>.hub.loginradius.com/ssologin/setSafariToken`
 
 #### Query Parameters:
 
-**token**: Pass in the access_token that you desire to set for SSO.
+- **token**: Pass in the access_token that you desire to set for SSO.
 
-**apikey**: Your LoginRadius API Key
+- **apikey**: Your LoginRadius API Key.
 
-**callback**: The callback URL, where you would like the customer to be redirected.
+- **callback**: The callback URL, where you would like the customer to be redirected.
 
 Example of a redirect method:
 
@@ -91,3 +96,4 @@ window.location="https://<sitename>.hub.loginradius.com/ssologin/setSafariToken?
    	Ajax function provided previously
 }
 ```
+
