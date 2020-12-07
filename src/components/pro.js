@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
 
 const Pro = ({ children }) => {
   return (
-    <div>
+    <div className={"pro-wrap"}>
       {children}
-      <Link className={"pro"}> Developer Permium </Link>
+      <div className={"pro"}> Developer Permium </div>
     </div>
   );
 };
