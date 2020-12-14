@@ -13,8 +13,7 @@ module.exports = {
         siteName: "LoginRadius Developer Docs",
         baseUrl: "https://www.l0oginradius.com",
         subtitle: "",
-        description:
-          "",
+        description: "",
         // gaTrackingId: process.env.GA_TRACKING_ID,
         sidebarCategories: {
           null: ["index"],
