@@ -57,11 +57,13 @@ module.exports = {
             "howto/authentication-theme",
             "howto/user-management",
           ],
-          Concepts: [
+          "Concepts": [
             "concepts/idx-overview",
-
           ],
-          FAQ: [
+          'API Reference': [
+            '[API Reference](https://www.loginradius.com/docs/developer/api/)'
+          ],
+          "FAQ": [
             "faq/api-credentials",
             "faq/troubleshooting",
             "faq/supported-browsers",
