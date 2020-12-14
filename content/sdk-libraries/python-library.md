@@ -1,6 +1,6 @@
 ---
 title: Python Library
-description: ""
+description: "A guide to impliment LoginRadius SDK in a Python application."
 summary: "A guide to impliment LoginRadius SDK in a Python application"
 ---
 

@@ -14,7 +14,7 @@ module.exports = {
         baseUrl: "https://www.l0oginradius.com",
         subtitle: "",
         description:
-          "Get started and implement authentication and user management in minutes for your web and mobile application.",
+          "",
         // gaTrackingId: process.env.GA_TRACKING_ID,
         sidebarCategories: {
           null: ["index"],

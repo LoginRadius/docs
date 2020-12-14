@@ -1,6 +1,6 @@
 ---
 title: Email/Password Login
-description: ""
+description: "A guide on Email/Password Login and how to customize the email templates available in your account."
 summary: "A guide on Email/Password Login and how to customize the email templates available in your account."
 ---
 

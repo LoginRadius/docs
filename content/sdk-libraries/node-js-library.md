@@ -1,6 +1,6 @@
 ---
 title: Node.js Library
-description: ""
+description: "A guide to impliment LoginRadius SDK in a Node.js application."
 summary: "A guide to impliment LoginRadius SDK in a Node.js application"
 ---
 

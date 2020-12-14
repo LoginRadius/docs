@@ -1,6 +1,6 @@
 ---
 title: PHP Library
-description: ""
+description: "A guide to impliment LoginRadius SDK in a PHP application."
 summary: "A guide to impliment LoginRadius SDK in a PHP application"
 ---
 

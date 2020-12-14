@@ -1,6 +1,6 @@
 ---
 title: Golang Library
-description: ""
+description: "A guide to impliment LoginRadius SDK in a Go application."
 summary: "A guide to impliment LoginRadius SDK in a Go application"
 ---
 

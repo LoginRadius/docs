@@ -1,6 +1,6 @@
 ---
 title: API Credentials
-description: ""
+description: "How to retrieve API key and secret?"
 ---
 
 ## Q: How to retrieve API key and secret?
