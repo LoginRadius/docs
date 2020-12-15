@@ -1,6 +1,6 @@
 ---
 title: HTML5 Library
-description: ""
+description: "A guide to impliment LoginRadius SDK in a HTML5 application."
 summary: "A guide to impliment LoginRadius SDK in a HTML5 application"
 ---
 

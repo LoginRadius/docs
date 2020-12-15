@@ -11,10 +11,9 @@ module.exports = {
         ...themeOptions,
         root: __dirname,
         siteName: "LoginRadius Developer Docs",
-        baseUrl: "https://www.loginradius.com",
-        subtitle: "Quick Links",
-        description:
-          "Get started and implement authentication and user management in minutes for your web and mobile application.",
+        baseUrl: "https://www.l0oginradius.com",
+        subtitle: "",
+        description: "",
         // gaTrackingId: process.env.GA_TRACKING_ID,
         sidebarCategories: {
           null: ["index"],
@@ -57,11 +56,13 @@ module.exports = {
             "howto/authentication-theme",
             "howto/user-management",
           ],
-          Concepts: [
+          "Concepts": [
             "concepts/idx-overview",
-
           ],
-          FAQ: [
+          'API Reference': [
+            '[API Reference](https://www.loginradius.com/docs/developer/api/)'
+          ],
+          "FAQ": [
             "faq/api-credentials",
             "faq/troubleshooting",
             "faq/supported-browsers",

@@ -1,6 +1,6 @@
 ---
 title: Ruby Library
-description: ""
+description: "A guide to impliment LoginRadius SDK in a Ruby on Rails application."
 summary: "A guide to impliment LoginRadius SDK in a Ruby on Rails application"
 ---
 

@@ -179,19 +179,19 @@ export default function SidebarNav(props) {
                 <StyledOutlinkIcon />
               </a>
             ) : (
-              <Link
-                className={
-                  isPageSelected(page.path, props.pathname) ? "active" : null
-                }
-                style={{ display: "flex" }}
-                to={page.path}
-                title={page.description}
-                onClick={props.onLinkClick}
-              >
-                {getIcon(page.path)}
-                {page.title}
-              </Link>
-            )}
+                <Link
+                  className={
+                    isPageSelected(page.path, props.pathname) ? "active" : null
+                  }
+                  style={{ display: "flex" }}
+                  to={page.path}
+                  title={page.description}
+                  onClick={props.onLinkClick}
+                >
+                  {getIcon(page.path)}
+                  {page.title}
+                </Link>
+              )}
           </StyledListItem>
         ));
 

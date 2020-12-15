@@ -1,6 +1,6 @@
 ---
 title: Supported Browsers
-description: ""
+description: "List of browsers that are supported by LoginRadius, including the different browser variants that are also supported."
 ---
 
 This is the list of browsers that are supported by LoginRadius, including the different browser variants that are also supported.

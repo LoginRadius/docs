@@ -1,6 +1,6 @@
 ---
 title: Configure SMTP
-description: ""
+description: "A guide on how to configure your SMTP server to send emails."
 summary: "A guide on how to configure your SMTP server to send emails"
 ---
 

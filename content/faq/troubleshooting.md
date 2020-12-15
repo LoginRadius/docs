@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: "Social Login"
+description: "Trobuble shoot issues facing in implementing LoginRadius."
 ---
 
 ## Q: How do I retrieve the provider access token?
