@@ -13,7 +13,7 @@ const navConfig = {
     isExternal: true,
   },
   "How to": {
-    url: "/howto/email-smtp-config/",
+    url: "/howto/manage-communication-settings/",
     description:
       "Once you are finished with basic authentication, there are other things to add in your application",
     isExternal: false,

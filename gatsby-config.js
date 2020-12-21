@@ -54,6 +54,7 @@ module.exports = {
             "howto/manage-communication-settings",
             "howto/work-with-sott",
             "howto/authentication-theme",
+            "howto/handle-token",
             "howto/advanced-editor",
             "howto/manage-phone-login",
             "howto/manage-passwordless-login",

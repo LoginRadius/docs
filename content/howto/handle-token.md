@@ -4,36 +4,35 @@ description: "This guide will explain everything about token handling."
 summary: "This guide will explain everything about token handling."
 ---
 
+> Access tokens are used to retrieve profile data and handle other user functionality. A client passes the access token to the server, and the server uses this token to decide whether the client is authorized to access the resource or not.
 
-Access tokens are used to retrieve profile data and handle additional user functionality. A client passes the access token to the server and the server uses this token to decide whether the client is authorized to access the resource or not.
 
-## Access token lifetime
+On successful authentication on the Auth Page (IDX), LoginRadius’s default script sends an access token in the query string as a token parameter with the return_url that you specified in the action URL. 
 
-LoginRadius Access tokens have some default expiration time and can be changed as per your business requirements. For example, access tokens should quickly expire in backing applications for security reasons.
-Checkout our [Session Management](/security/session-management/) document for more details about the access token lifetime.
-
-## How to get Access token
-
-On successful authentication on the IDX page, LoginRadius’s default script sends an access token in the query string as a token parameter the return_url that you specified in the action URL. 
-
-Below is the access URL for Login Action, checkout our [Auth Page (IDX)](/concepts/idx-overview/) for more information about actions and key benefits.
+Below is the access URL for Login Action:
 
 ```
 https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>
 ```
 
-After the successful completion of Login or Registration action, token will get appended with the mentioned Return URL as below:
+Upon registration or login, the user is redirected to the specified return URL with a token appended. The following is an example: 
 
 ` <Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
 
+Check out our [Auth Page (IDX)](/concepts/idx-overview/) for more information about available actions and key benefits.
+## Access Token Lifetime
+Access tokens have a default expiration time in the LoginRadius Identity Platform, and you can change it as per the business requirements. For example, access tokens should quickly expire in banking applications for security reasons.
+
+
+Check out our [Session Management](/security/session-management/) document for more details about the access token lifetime.
 ## Token Handling
 
-Once your application receives an access token, store this token client side and use for further API calls directly or using our SDKs by passing this as a **Bearer** credentials in HTTP **Authorization header**.
+Once your application receives an access token, store this token client-side/server-side and use it further for API calls or via our SDKs by passing this as a **Bearer** credentials in HTTP **Authorization header**.
 
 ### Web SDKs
 
-Following are the examples of Web SDKs, utilizing multiple languages and their [SDKs](/sdk-libraries/overview/) to identify this token and retrieve user data.
+Following are the examples of [Web SDKs](/sdk-libraries/overview/) utilizing multiple languages to identify this token and retrieve user data.
 
 PHP
 ```PHP
@@ -92,9 +91,9 @@ view:
 </html>
 ```
 
-
 ### Mobile SDKs
-Following are the examples of Mobile SDKs, utilizing multiple languages and their [SDKs](/mobile-sdk-libraries/android-library/) to identify this token and retrieve user data.
+
+Following are the examples of utilizing Android and iOS [SDKs](/mobile-sdk-libraries/android-library/) to identify this token and retrieve user data.
 
 Android
 
@@ -118,7 +117,7 @@ api.login(getApplicationContext(), params, new AsyncHandler<LoginData>() {
 
 iOS
 ```js
-	// make sure LoginRadius instance exists
+  // make sure LoginRadius instance exists
 let parameter:AnyObject = ["email":"email", "password":"password" ] as AnyObject
 
 AuthenticationAPI.authInstance().login(withPayload:parameter as? [AnyHashable : Any], loginurl:nil, emailtemplate:nil, smstemplate:nil, g_recaptcha_response:nil,completionHandler: { (data, error) in
@@ -132,4 +131,4 @@ AuthenticationAPI.authInstance().login(withPayload:parameter as? [AnyHashable : 
 ```
 
 
-> You can checkout our github repository for [developer authentication demos](https://github.com/LoginRadius/developer-authentication-demos) using IDX in multiple languages.
+> You can check out our GitHub repository for [developer authentication demos](https://github.com/LoginRadius/developer-authentication-demos) using IDX in multiple languages.
