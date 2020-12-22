@@ -4,6 +4,8 @@ description: "An Overview about Manage Communication Settings for email and sms 
 summary: "An Overview about Manage Communication Settings for email and sms providers"
 ---
 
+import Pro from "../../src/components/pro.js"
+
 You can manage the Email and SMS providers and settings for your LoginRadius App.
 
 ## Email Configuration
@@ -14,7 +16,7 @@ LoginRadius Identity Platform allows you to configure your SMTP provider setting
 
 Setting up the SMTP server in LoginRadius allows the system to send out all email correspondences directly through your SMTP provider. It enables you to get deliverability stats and analytics and also optimize your email messaging. To send emails through your SMTP, you should follow the below steps:
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, rom the left navigation panel, click the **Configuration** and then navigate to the **Communication Settings** section.  Click the down arrow or anywhere within the section. The **SMTP Provider Settings** screen will appear:
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **Communication Settings** section.  Click the down arrow or anywhere within the section. The **SMTP Provider Settings** screen will appear:
 
 <div style="text-align:center">
   <img src="../assets/howto/manage-communication-settings/smtp.png" alt="smtp" />
@@ -46,8 +48,8 @@ Enter the email id in the **To Email** textbox and click the **Send** button. If
 > Note: The following are the default SMTP providers list:
 
 - Amazon SES (US East)
-- Amazon SES (US East)
-- Amazon SES (US East)
+- Amazon SES (US West)
+- Amazon SES (EU)
 - Gmail
 - Mandrill
 - Rackspace-mailgun
@@ -74,7 +76,7 @@ You can use Email Settings to customize some of the behaviors for sending emails
 
 **Email Token Validity Limit (Minutes)**: The amount of time (in minutes) for which the link included in the given email remains valid.
 
-## SMS Configuration
+## <Pro>SMS Configuration</Pro>
 
 LoginRadius Identity Platform allows you to configure your SMS provider setting and generic SMS setting in the communication setting section.
 

@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
-import { colors } from 'gatsby-theme-apollo-core';
+// import { colors } from 'gatsby-theme-apollo-core';
+import utils from "../utils";
+
+import Developer from "../../components/developer.js"
 
 const Heading = styled.h1({
   ':not(:last-child)': {
@@ -9,17 +12,26 @@ const Heading = styled.h1({
   }
 });
 
-const Subheading = styled.h3({
-  color: colors.text2
-});
+// const Subheading = styled.h3({
+//   color: colors.text2
+// });
 
 export default function PageHeader(props) {
-  return (
-    <div className="header-wrapper">
-      <Heading>{props.title}</Heading>
-      {/* {props.description && <Subheading>{props.description}</Subheading>} */}
-    </div>
-  );
+
+  if (utils.premiumDocs.includes(props.title)) {
+    return (
+      <div className="header-wrapper" key="with_premium">
+        <Developer ><Heading>{props.title}</Heading></Developer>
+      </div>
+    );
+  } else {
+    return (
+      <div className="header-wrapper" key="without_premium">
+        <Heading>{props.title}</Heading>
+        {/* {props.description && <Subheading>{props.description}</Subheading>} */}
+      </div>
+    );
+  }
 }
 
 PageHeader.propTypes = {
