@@ -4,6 +4,12 @@ description: "A guide on Email/Password Login and how to customize the email tem
 summary: "A guide on Email/Password Login and how to customize the email templates available in your account."
 ---
 
+Watch the video for the step by step tutorial or refer to the section below for the text-based guide.
+
+<iframe width="480" height="250" src="https://www.youtube.com/embed/kHbXGqUNv-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr/>
+
 LoginRadius Identity Platform provides Email/Password as a default registration and login option. You can also view and customize the content of the available email templates for this login method. 
 
 
