@@ -37,31 +37,33 @@ LoginRadiusSDK.initSDK(sdkoptions);
 
 List of APIs in this Section:<br>
 
-* PUT : [Auth Update Profile by Token](#UpdateProfileByAccessToken-put-)<br>
-* PUT : [Auth Verify Email By OTP](#VerifyEmailByOTP-put-)<br>
-* PUT : [Auth Reset Password by Reset Token](#ResetPasswordByResetToken-put-)<br>
-* PUT : [Auth Change Password](#ChangePassword-put-)<br>
-* PUT : [Auth Resend Email Verification](#AuthResendEmailVerification-put-)<br>
-* POST : [Auth Add Email](#AddEmail-post-)<br>
-* POST : [Auth Login by Email](#LoginByEmail-post-)<br>
-* POST : [Auth Forgot Password](#ForgotPassword-post-)<br>
-* POST : [Auth User Registration by Email](#UserRegistrationByEmail-post-)<br>
-* POST : [Auth User Registration By Captcha](#UserRegistrationByCaptcha-post-)<br>
-* GET : [Auth Validate Access token](#AuthValidateAccessToken-get-)<br>
-* GET : [Access Token Invalidate](#AuthInValidateAccessToken-get-)<br>
-* GET : [Access Token Info](#GetAccessTokenInfo-get-)<br>
-* GET : [Auth Read all Profiles by Token](#GetProfileByAccessToken-get-)<br>
-* GET : [Auth Delete Account](#DeleteAccountByDeleteToken-get-)<br>
-* GET : [Auth Check Email Availability](#CheckEmailAvailability-get-)<br>
-* GET : [Auth Verify Email](#VerifyEmail-get-)<br>
-* GET : [Auth Social Identity](#GetSocialIdentity-get-)<br>
-* DELETE : [Auth Delete Account with Email Confirmation](#DeleteAccountWithEmailConfirmation-delete-)<br>
-* DELETE : [Auth Remove Email](#RemoveEmail-delete-)<br>
+* PUT : [Auth Update Profile by Token](#auth-update-profile-by-token-put)
+* PUT : [Auth Verify Email By OTP](#auth-verify-email-by-otp-put)
+* PUT : [Auth Reset Password by Reset Token](#auth-reset-password-by-reset-token-put)
+* PUT : [Auth Change Password](#auth-change-password-put)
+* PUT : [Auth Resend Email Verification](#auth-resend-email-verification-put)
+* POST : [Auth Add Email](#auth-add-email-post)
+* POST : [Auth Login by Email](#auth-login-by-email-post)
+* POST : [Auth Forgot Password](#auth-forgot-password-post)
+* POST : [Auth User Registration by Email](#auth-user-registration-by-email-post)
+* POST : [Auth User Registration By Captcha](#auth-user-registration-by-captcha-post)
+* GET : [Auth Validate Access token](#auth-validate-access-token-get)
+* GET : [Access Token Invalidate](#access-token-invalidate-get)
+* GET : [Access Token Info](#access-token-info-get)
+* GET : [Auth Read all Profiles by Token](#auth-read-all-profiles-by-token-get)
+* GET : [Auth Send Welcome Email](#auth-send-welcome-email-get)
+* GET : [Auth Delete Account](#auth-delete-account-get)
+* GET : [Auth Check Email Availability](#auth-check-email-availability-get)
+* GET : [Auth Verify Email](#auth-verify-email-get)
+* GET : [Auth Social Identity](#auth-social-identity-get)
+* GET : [Auth Privacy Policy Accept](#auth-privacy-policy-accept-get)
+* DELETE : [Auth Delete Account with Email Confirmation](#auth-delete-account-with-email-confirmation-delete)
+* DELETE : [Auth Remove Email](#auth-remove-email-delete)
 
 
 
-<h5 id="UpdateProfileByAccessToken-put-"> Auth Update Profile by Token (PUT)</h5>
- This API is used to update the user's profile by passing the access token.  [More Info](/api/v2/customer-identity-api/authentication/auth-update-profile-by-token/)
+##### Auth Update Profile by Token (PUT)
+ This API is used to update the user's profile by passing the access token.   
 
  
  
@@ -93,8 +95,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="VerifyEmailByOTP-put-"> Auth Verify Email By OTP (PUT)</h5>
- This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.  [More Info](/api/v2/customer-identity-api/authentication/auth-verify-email-by-otp/)
+##### Auth Verify Email By OTP (PUT)
+ This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.   
 
  
  
@@ -123,8 +125,8 @@ var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
   
   
  
-<h5 id="ResetPasswordByResetToken-put-"> Auth Reset Password by Reset Token (PUT)</h5>
- This API is used to set a new password for the specified account.  [More Info](/api/v2/customer-identity-api/authentication/auth-reset-password-by-reset-token)
+##### Auth Reset Password by Reset Token (PUT)
+ This API is used to set a new password for the specified account.   
 
  
  
@@ -150,8 +152,8 @@ var resetPasswordByResetTokenModel ={
   
   
  
-<h5 id="ChangePassword-put-"> Auth Change Password (PUT)</h5>
- This API is used to change the accounts password based on the previous password  [More Info](/api/v2/customer-identity-api/authentication/auth-change-password)
+##### Auth Change Password (PUT)
+ This API is used to change the accounts password based on the previous password   
 
  
  
@@ -175,8 +177,8 @@ var oldPassword = "<oldPassword>"; //Required
   
   
  
-<h5 id="AuthResendEmailVerification-put-"> Auth Resend Email Verification (PUT)</h5>
- This API resends the verification email to the user.  [More Info](/api/v2/customer-identity-api/authentication/auth-resend-email-verification/)
+##### Auth Resend Email Verification (PUT)
+ This API resends the verification email to the user.   
 
  
  
@@ -200,8 +202,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="AddEmail-post-"> Auth Add Email (POST)</h5>
- This API is used to add additional emails to a user's account.  [More Info](/api/v2/customer-identity-api/authentication/auth-add-email)
+##### Auth Add Email (POST)
+ This API is used to add additional emails to a user's account.   
 
  
  
@@ -227,8 +229,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="LoginByEmail-post-"> Auth Login by Email (POST)</h5>
- This API retrieves a copy of the user data based on the Email  [More Info](/api/v2/customer-identity-api/authentication/auth-login-by-email)
+##### Auth Login by Email (POST)
+ This API retrieves a copy of the user data based on the Email   
 
  
  
@@ -258,8 +260,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="ForgotPassword-post-"> Auth Forgot Password (POST)</h5>
- This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'  [More Info](/api/v2/customer-identity-api/authentication/auth-forgot-password)
+##### Auth Forgot Password (POST)
+ This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'   
 
  
  
@@ -283,8 +285,8 @@ var emailTemplate = "<emailTemplate>"; //Optional
   
   
  
-<h5 id="UserRegistrationByEmail-post-"> Auth User Registration by Email (POST)</h5>
- This API creates a user in the database as well as sends a verification email to the user.  [More Info](/api/v2/customer-identity-api/authentication/auth-user-registration-by-email)
+##### Auth User Registration by Email (POST)
+ This API creates a user in the database as well as sends a verification email to the user.   
 
  
  
@@ -321,8 +323,8 @@ var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
   
   
  
-<h5 id="UserRegistrationByCaptcha-post-"> Auth User Registration By Captcha (POST)</h5>
- This API creates a user in the database as well as sends a verification email to the user.  [More Info](/api/v2/customer-identity-api/authentication/auth-user-registration-by-recaptcha)
+##### Auth User Registration By Captcha (POST)
+ This API creates a user in the database as well as sends a verification email to the user.   
 
  
  
@@ -360,8 +362,8 @@ var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
   
   
  
-<h5 id="AuthValidateAccessToken-get-"> Auth Validate Access token (GET)</h5>
- This api validates access token, if valid then returns a response with its expiry otherwise error.  [More Info](/api/v2/customer-identity-api/authentication/auth-validate-access-token/)
+##### Auth Validate Access token (GET)
+ This api validates access token, if valid then returns a response with its expiry otherwise error.   
 
  
  
@@ -383,8 +385,8 @@ var accessToken = "<accessToken>"; //Required
   
   
  
-<h5 id="AuthInValidateAccessToken-get-"> Access Token Invalidate (GET)</h5>
- This api call invalidates the active access token or expires an access token's validity.  [More Info](/api/v2/customer-identity-api/authentication/auth-invalidate-access-token/)
+##### Access Token Invalidate (GET)
+ This api call invalidates the active access token or expires an access token's validity.   
 
  
  
@@ -407,8 +409,8 @@ var preventRefresh = true; //Optional
   
   
  
-<h5 id="GetAccessTokenInfo-get-"> Access Token Info (GET)</h5>
- This api call provide the active access token Information  [More Info](/api/v2/customer-identity-api/authentication/auth-access-token-info/)
+##### Access Token Info (GET)
+ This api call provide the active access token Information   
 
  
  
@@ -430,8 +432,8 @@ var accessToken = "<accessToken>"; //Required
   
   
  
-<h5 id="GetProfileByAccessToken-get-"> Auth Read all Profiles by Token (GET)</h5>
- This API retrieves a copy of the user data based on the access token.  [More Info](/api/v2/customer-identity-api/authentication/auth-read-profiles-by-token/)
+##### Auth Read all Profiles by Token (GET)
+ This API retrieves a copy of the user data based on the access token.   
 
  
  
@@ -450,10 +452,36 @@ var fields = null; //Optional
  });
 
  ```
+ 
+  
   
  
-<h5 id="DeleteAccountByDeleteToken-get-"> Auth Delete Account (GET)</h5>
- This API is used to delete an account by passing it a delete token.  [More Info](/api/v2/customer-identity-api/authentication/auth-delete-account/)
+##### Auth Send Welcome Email (GET)
+ This API sends a welcome email   
+
+ 
+ 
+
+ ```js
+
+var accessToken = "<accessToken>"; //Required
+var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+ LoginRadiusSDK.authenticationApi.sendWelcomeEmail(accessToken, welcomeEmailTemplate, function(error, data){
+    if(error){
+      console.log(error);
+	  return;
+	}
+	console.log(data);
+ });
+
+ ```
+ 
+  
+  
+ 
+##### Auth Delete Account (GET)
+ This API is used to delete an account by passing it a delete token.   
 
  
  
@@ -475,8 +503,8 @@ var deletetoken = "<deletetoken>"; //Required
   
   
  
-<h5 id="CheckEmailAvailability-get-"> Auth Check Email Availability (GET)</h5>
- This API is used to check the email exists or not on your site.  [More Info](/api/v2/customer-identity-api/authentication/auth-email-availability/)
+##### Auth Check Email Availability (GET)
+ This API is used to check the email exists or not on your site.   
 
  
  
@@ -498,8 +526,8 @@ var email = "<email>"; //Required
   
   
  
-<h5 id="VerifyEmail-get-"> Auth Verify Email (GET)</h5>
- This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.  [More Info](/api/v2/customer-identity-api/authentication/auth-verify-email/)
+##### Auth Verify Email (GET)
+ This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.   
 
  
  
@@ -524,8 +552,8 @@ var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
   
   
  
-<h5 id="GetSocialIdentity-get-"> Auth Social Identity (GET)</h5>
- This API is called just after account linking API and it prevents the raas profile of the second account from getting created.  [More Info](/api/v2/customer-identity-api/authentication/auth-social-identity)
+##### Auth Social Identity (GET)
+ This API is called just after account linking API and it prevents the raas profile of the second account from getting created.   
 
  
  
@@ -548,8 +576,32 @@ var fields = null; //Optional
   
   
  
-<h5 id="DeleteAccountWithEmailConfirmation-delete-"> Auth Delete Account with Email Confirmation (DELETE)</h5>
- This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token  [More Info](/api/v2/customer-identity-api/authentication/auth-delete-account-with-email-confirmation/)
+##### Auth Privacy Policy Accept (GET)
+ This API is used to update the privacy policy stored in the user's profile by providing the access token of the user accepting the privacy policy   
+
+ 
+ 
+
+ ```js
+
+var accessToken = "<accessToken>"; //Required
+var fields = null; //Optional
+
+ LoginRadiusSDK.authenticationApi.acceptPrivacyPolicy(accessToken, fields, function(error, data){
+    if(error){
+      console.log(error);
+	  return;
+	}
+	console.log(data);
+ });
+
+ ```
+ 
+  
+  
+ 
+##### Auth Delete Account with Email Confirmation (DELETE)
+ This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token   
 
  
  
@@ -573,8 +625,8 @@ var emailTemplate = "<emailTemplate>"; //Optional
   
   
  
-<h5 id="RemoveEmail-delete-"> Auth Remove Email (DELETE)</h5>
- This API is used to remove additional emails from a user's account.  [More Info](/api/v2/customer-identity-api/authentication/auth-remove-email)
+##### Auth Remove Email (DELETE)
+ This API is used to remove additional emails from a user's account.   
 
  
  
@@ -604,30 +656,30 @@ var email = "<email>"; //Required
 
 List of APIs in this Section:<br>
 
-* PUT : [Account Update](#UpdateAccountByUid-put-)<br>
-* PUT : [Update Phone ID by UID](#UpdatePhoneIDByUid-put-)<br>
-* PUT : [Account Set Password](#SetAccountPasswordByUid-put-)<br>
-* PUT : [Account Invalidate Verification Email](#InvalidateAccountEmailVerification-put-)<br>
-* PUT : [Reset phone ID verification](#ResetPhoneIDVerificationByUid-put-)<br>
-* PUT : [Upsert Email](#UpsertEmail-put-)<br>
-* PUT : [Update UID](#AccountUpdateUid-put-)<br>
-* POST : [Account Create](#CreateAccount-post-)<br>
-* POST : [Forgot Password token](#GetForgotPasswordToken-post-)<br>
-* POST : [Email Verification token](#GetEmailVerificationToken-post-)<br>
-* GET : [Account Profiles by Email](#GetAccountProfileByEmail-get-)<br>
-* GET : [Account Profile by Phone ID](#GetAccountProfileByPhone-get-)<br>
-* GET : [Account Profiles by UID](#GetAccountProfileByUid-get-)<br>
-* GET : [Account Password](#GetAccountPasswordHashByUid-get-)<br>
-* GET : [Access Token based on UID or User impersonation API](#GetAccessTokenByUid-get-)<br>
-* GET : [Account Identities by Email](#GetAccountIdentitiesByEmail-get-)<br>
-* DELETE : [Account Delete](#DeleteAccountByUid-delete-)<br>
-* DELETE : [Account Remove Email](#RemoveEmail-delete-)<br>
-* DELETE : [Delete User Profiles By Email](#AccountDeleteByEmail-delete-)<br>
+* PUT : [Account Update](#account-update-put)
+* PUT : [Update Phone ID by UID](#update-phone-id-by-uid-put)
+* PUT : [Account Set Password](#account-set-password-put)
+* PUT : [Account Invalidate Verification Email](#account-invalidate-verification-email-put)
+* PUT : [Reset phone ID verification](#reset-phone-id-verification-put)
+* PUT : [Upsert Email](#upsert-email-put)
+* PUT : [Update UID](#update-uid-put)
+* POST : [Account Create](#account-create-post)
+* POST : [Forgot Password token](#forgot-password-token-post)
+* POST : [Email Verification token](#email-verification-token-post)
+* GET : [Account Profiles by Email](#account-profiles-by-email-get)
+* GET : [Account Profile by Phone ID](#account-profile-by-phone-id-get)
+* GET : [Account Profiles by UID](#account-profiles-by-uid-get)
+* GET : [Account Password](#account-password-get)
+* GET : [Access Token based on UID or User impersonation API](#access-token-based-on-uid-or-user-impersonation-api-get)
+* GET : [Account Identities by Email](#account-identities-by-email-get)
+* DELETE : [Account Delete](#account-delete-delete)
+* DELETE : [Account Remove Email](#account-remove-email-delete)
+* DELETE : [Delete User Profiles By Email](#delete-user-profiles-by-email-delete)
 
 
 
-<h5 id="UpdateAccountByUid-put-"> Account Update (PUT)</h5>
- This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.  [More Info](/api/v2/customer-identity-api/account/account-update)
+##### Account Update (PUT)
+ This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.   
 
  
  
@@ -656,8 +708,8 @@ var nullSupport = true; //Optional
   
   
  
-<h5 id="UpdatePhoneIDByUid-put-"> Update Phone ID by UID (PUT)</h5>
- This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.  [More Info](/api/v2/customer-identity-api/account/update-phoneid-by-uid)
+##### Update Phone ID by UID (PUT)
+ This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.   
 
  
  
@@ -681,8 +733,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="SetAccountPasswordByUid-put-"> Account Set Password (PUT)</h5>
- This API is used to set the password of an account in Cloud Storage.  [More Info](/api/v2/customer-identity-api/account/account-set-password)
+##### Account Set Password (PUT)
+ This API is used to set the password of an account in Cloud Storage.   
 
  
  
@@ -705,8 +757,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="InvalidateAccountEmailVerification-put-"> Account Invalidate Verification Email (PUT)</h5>
- This API is used to invalidate the Email Verification status on an account.  [More Info](/api/v2/customer-identity-api/account/account-invalidate-verification-email)
+##### Account Invalidate Verification Email (PUT)
+ This API is used to invalidate the Email Verification status on an account.   
 
  
  
@@ -730,8 +782,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="ResetPhoneIDVerificationByUid-put-"> Reset phone ID verification (PUT)</h5>
- This API Allows you to reset the phone no verification of an end user’s account.  [More Info](/api/v2/customer-identity-api/phone-authentication/reset-phone-id-verification)
+##### Reset phone ID verification (PUT)
+ This API Allows you to reset the phone no verification of an end user’s account.   
 
  
  
@@ -754,8 +806,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="UpsertEmail-put-"> Upsert Email (PUT)</h5>
- This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.  [More Info](/api/v2/customer-identity-api/account/upsert-email)
+##### Upsert Email (PUT)
+ This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.   
 
  
  
@@ -785,8 +837,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="AccountUpdateUid-put-"> Update UID (PUT)</h5>
- This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.  [More Info](/api/v2/customer-identity-api/account/account-update/)
+##### Update UID (PUT)
+ This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.   
 
  
  
@@ -812,8 +864,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="CreateAccount-post-"> Account Create (POST)</h5>
- This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields  [More Info](/api/v2/customer-identity-api/account/account-create)
+##### Account Create (POST)
+ This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields   
 
  
  
@@ -845,8 +897,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="GetForgotPasswordToken-post-"> Forgot Password token (POST)</h5>
- This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.  [More Info](/api/v2/customer-identity-api/account/get-forgot-password-token)
+##### Forgot Password token (POST)
+ This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.   
 
  
  
@@ -871,8 +923,8 @@ var sendEmail = true; //Optional
   
   
  
-<h5 id="GetEmailVerificationToken-post-"> Email Verification token (POST)</h5>
- This API Returns an Email Verification token.  [More Info](/api/v2/customer-identity-api/account/get-email-verification-token)
+##### Email Verification token (POST)
+ This API Returns an Email Verification token.   
 
  
  
@@ -894,8 +946,8 @@ var email = "<email>"; //Required
   
   
  
-<h5 id="GetAccountProfileByEmail-get-"> Account Profiles by Email (GET)</h5>
- This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.  [More Info](/api/v2/customer-identity-api/account/account-profiles-by-email)
+##### Account Profiles by Email (GET)
+ This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.   
 
  
  
@@ -918,8 +970,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="GetAccountProfileByPhone-get-"> Account Profile by Phone ID (GET)</h5>
- This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.  [More Info](/api/v2/customer-identity-api/account/account-profiles-by-phone-id/)
+##### Account Profile by Phone ID (GET)
+ This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.   
 
  
  
@@ -942,8 +994,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="GetAccountProfileByUid-get-"> Account Profiles by UID (GET)</h5>
- This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.  [More Info](/api/v2/customer-identity-api/account/account-profiles-by-uid)
+##### Account Profiles by UID (GET)
+ This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.   
 
  
  
@@ -966,8 +1018,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="GetAccountPasswordHashByUid-get-"> Account Password (GET)</h5>
- This API use to retrive the hashed password of a specified account in Cloud Storage.  [More Info](/api/v2/customer-identity-api/account/account-password)
+##### Account Password (GET)
+ This API use to retrive the hashed password of a specified account in Cloud Storage.   
 
  
  
@@ -989,8 +1041,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="GetAccessTokenByUid-get-"> Access Token based on UID or User impersonation API (GET)</h5>
- The API is used to get LoginRadius access token based on UID.  [More Info](/api/v2/customer-identity-api/account/account-impersonation-api)
+##### Access Token based on UID or User impersonation API (GET)
+ The API is used to get LoginRadius access token based on UID.   
 
  
  
@@ -1012,8 +1064,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="GetAccountIdentitiesByEmail-get-"> Account Identities by Email (GET)</h5>
- Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.  [More Info](/api/v2/customer-identity-api/account/account-identities-by-email)
+##### Account Identities by Email (GET)
+ Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.   
 
  
  
@@ -1036,8 +1088,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="DeleteAccountByUid-delete-"> Account Delete (DELETE)</h5>
- This API deletes the Users account and allows them to re-register for a new account.  [More Info](/api/v2/customer-identity-api/account/account-delete)
+##### Account Delete (DELETE)
+ This API deletes the Users account and allows them to re-register for a new account.   
 
  
  
@@ -1059,8 +1111,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="RemoveEmail-delete-"> Account Remove Email (DELETE)</h5>
- Use this API to Remove emails from a user Account  [More Info](/api/v2/customer-identity-api/account/account-email-delete)
+##### Account Remove Email (DELETE)
+ Use this API to Remove emails from a user Account   
 
  
  
@@ -1084,8 +1136,8 @@ var fields = null; //Optional
   
   
  
-<h5 id="AccountDeleteByEmail-delete-"> Delete User Profiles By Email (DELETE)</h5>
- This API is used to delete all user profiles associated with an Email.  [More Info](/api/v2/customer-identity-api/account/account-email-delete/)
+##### Delete User Profiles By Email (DELETE)
+ This API is used to delete all user profiles associated with an Email.   
 
  
  
@@ -1114,22 +1166,22 @@ var email = "<email>"; //Required
 
 List of APIs in this Section:<br>
 
-* PUT : [Phone Reset Password by OTP](#ResetPasswordByPhoneOTP-put-)<br>
-* PUT : [Phone Verification OTP](#PhoneVerificationByOTP-put-)<br>
-* PUT : [Phone Verification OTP by Token](#PhoneVerificationOTPByAccessToken-put-)<br>
-* PUT : [Phone Number Update](#UpdatePhoneNumber-put-)<br>
-* POST : [Phone Login](#LoginByPhone-post-)<br>
-* POST : [Phone Forgot Password by OTP](#ForgotPasswordByPhoneOTP-post-)<br>
-* POST : [Phone Resend Verification OTP](#PhoneResendVerificationOTP-post-)<br>
-* POST : [Phone Resend Verification OTP By Token](#PhoneResendVerificationOTPByToken-post-)<br>
-* POST : [Phone User Registration by SMS](#UserRegistrationByPhone-post-)<br>
-* GET : [Phone Number Availability](#CheckPhoneNumberAvailability-get-)<br>
-* DELETE : [Remove Phone ID by Access Token](#RemovePhoneIDByAccessToken-delete-)<br>
+* PUT : [Phone Reset Password by OTP](#phone-reset-password-by-otp-put)
+* PUT : [Phone Verification OTP](#phone-verification-otp-put)
+* PUT : [Phone Verification OTP by Token](#phone-verification-otp-by-token-put)
+* PUT : [Phone Number Update](#phone-number-update-put)
+* POST : [Phone Login](#phone-login-post)
+* POST : [Phone Forgot Password by OTP](#phone-forgot-password-by-otp-post)
+* POST : [Phone Resend Verification OTP](#phone-resend-verification-otp-post)
+* POST : [Phone Resend Verification OTP By Token](#phone-resend-verification-otp-by-token-post)
+* POST : [Phone User Registration by SMS](#phone-user-registration-by-sms-post)
+* GET : [Phone Number Availability](#phone-number-availability-get)
+* DELETE : [Remove Phone ID by Access Token](#remove-phone-id-by-access-token-delete)
 
 
 
-<h5 id="ResetPasswordByPhoneOTP-put-"> Phone Reset Password by OTP (PUT)</h5>
- This API is used to reset the password  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-reset-password-by-otp)
+##### Phone Reset Password by OTP (PUT)
+ This API is used to reset the password   
 
  
  
@@ -1156,8 +1208,8 @@ var resetPasswordByOTPModel ={
   
   
  
-<h5 id="PhoneVerificationByOTP-put-"> Phone Verification OTP (PUT)</h5>
- This API is used to validate the verification code sent to verify a user's phone number  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-verify-otp)
+##### Phone Verification OTP (PUT)
+ This API is used to validate the verification code sent to verify a user's phone number   
 
  
  
@@ -1182,8 +1234,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="PhoneVerificationOTPByAccessToken-put-"> Phone Verification OTP by Token (PUT)</h5>
- This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-verify-otp-by-token)
+##### Phone Verification OTP by Token (PUT)
+ This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.   
 
  
  
@@ -1207,8 +1259,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="UpdatePhoneNumber-put-"> Phone Number Update (PUT)</h5>
- This API is used to update the login Phone Number of users  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-number-update)
+##### Phone Number Update (PUT)
+ This API is used to update the login Phone Number of users   
 
  
  
@@ -1232,8 +1284,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="LoginByPhone-post-"> Phone Login (POST)</h5>
- This API retrieves a copy of the user data based on the Phone  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-login)
+##### Phone Login (POST)
+ This API retrieves a copy of the user data based on the Phone   
 
  
  
@@ -1262,8 +1314,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="ForgotPasswordByPhoneOTP-post-"> Phone Forgot Password by OTP (POST)</h5>
- This API is used to send the OTP to reset the account password.  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-forgot-password-by-otp)
+##### Phone Forgot Password by OTP (POST)
+ This API is used to send the OTP to reset the account password.   
 
  
  
@@ -1286,8 +1338,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="PhoneResendVerificationOTP-post-"> Phone Resend Verification OTP (POST)</h5>
- This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-resend-otp)
+##### Phone Resend Verification OTP (POST)
+ This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input   
 
  
  
@@ -1310,8 +1362,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="PhoneResendVerificationOTPByToken-post-"> Phone Resend Verification OTP By Token (POST)</h5>
- This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-resend-otp-by-token)
+##### Phone Resend Verification OTP By Token (POST)
+ This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists   
 
  
  
@@ -1335,8 +1387,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="UserRegistrationByPhone-post-"> Phone User Registration by SMS (POST)</h5>
- This API registers the new users into your Cloud Storage and triggers the phone verification process.  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-user-registration-by-sms)
+##### Phone User Registration by SMS (POST)
+ This API registers the new users into your Cloud Storage and triggers the phone verification process.   
 
  
  
@@ -1370,8 +1422,8 @@ var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
   
   
  
-<h5 id="CheckPhoneNumberAvailability-get-"> Phone Number Availability (GET)</h5>
- This API is used to check the Phone Number exists or not on your site.  [More Info](/api/v2/customer-identity-api/phone-authentication/phone-number-availability)
+##### Phone Number Availability (GET)
+ This API is used to check the Phone Number exists or not on your site.   
 
  
  
@@ -1393,8 +1445,8 @@ var phone = "<phone>"; //Required
   
   
  
-<h5 id="RemovePhoneIDByAccessToken-delete-"> Remove Phone ID by Access Token (DELETE)</h5>
- This API is used to delete the Phone ID on a user's account via the access token  [More Info](/api/v2/customer-identity-api/phone-authentication/remove-phone-id-by-access-token)
+##### Remove Phone ID by Access Token (DELETE)
+ This API is used to delete the Phone ID on a user's account via the access token   
 
  
  
@@ -1423,23 +1475,23 @@ var accessToken = "<accessToken>"; //Required
 
 List of APIs in this Section:<br>
 
-* PUT : [Update MFA by Access Token](#MFAUpdateByAccessToken-put-)<br>
-* PUT : [MFA Update Phone Number by Token](#MFAUpdatePhoneNumberByToken-put-)<br>
-* PUT : [MFA Validate Google Auth Code](#MFAValidateGoogleAuthCode-put-)<br>
-* PUT : [MFA Update Phone Number](#MFAUpdatePhoneNumber-put-)<br>
-* POST : [MFA Email Login](#MFALoginByEmail-post-)<br>
-* POST : [MFA Phone Login](#MFALoginByPhone-post-)<br>
-* GET : [MFA Validate Access Token](#MFAConfigureByAccessToken-get-)<br>
-* GET : [MFA Resend Otp](#MFAResendOTP-get-)<br>
-* DELETE : [MFA Reset Google Authenticator by Token](#MFAResetGoogleAuthByToken-delete-)<br>
-* DELETE : [MFA Reset SMS Authenticator by Token](#MFAResetSMSAuthByToken-delete-)<br>
-* DELETE : [MFA Reset SMS Authenticator By UID](#MFAResetSMSAuthenticatorByUid-delete-)<br>
-* DELETE : [MFA Reset Google Authenticator By UID](#MFAResetGoogleAuthenticatorByUid-delete-)<br>
+* PUT : [Update MFA by Access Token](#update-mfa-by-access-token-put)
+* PUT : [MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
+* PUT : [MFA Validate Google Auth Code](#mfa-validate-google-auth-code-put)
+* PUT : [MFA Update Phone Number](#mfa-update-phone-number-put)
+* POST : [MFA Email Login](#mfa-email-login-post)
+* POST : [MFA Phone Login](#mfa-phone-login-post)
+* GET : [MFA Validate Access Token](#mfa-validate-access-token-get)
+* GET : [MFA Resend Otp](#mfa-resend-otp-get)
+* DELETE : [MFA Reset Google Authenticator by Token](#mfa-reset-google-authenticator-by-token-delete)
+* DELETE : [MFA Reset SMS Authenticator by Token](#mfa-reset-sms-authenticator-by-token-delete)
+* DELETE : [MFA Reset SMS Authenticator By UID](#mfa-reset-sms-authenticator-by-uid-delete)
+* DELETE : [MFA Reset Google Authenticator By UID](#mfa-reset-google-authenticator-by-uid-delete)
 
 
 
-<h5 id="MFAUpdateByAccessToken-put-"> Update MFA by Access Token (PUT)</h5>
- This API is used to Enable Multi-factor authentication by access token on user login  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/google-authenticator/update-mfa-by-access-token/)
+##### Update MFA by Access Token (PUT)
+ This API is used to Enable Multi-factor authentication by access token on user login   
 
  
  
@@ -1467,8 +1519,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="MFAUpdatePhoneNumberByToken-put-"> MFA Update Phone Number by Token (PUT)</h5>
- This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/sms-authenticator/mfa-update-phone-number-by-token/)
+##### MFA Update Phone Number by Token (PUT)
+ This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number   
 
  
  
@@ -1492,8 +1544,8 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
   
   
  
-<h5 id="MFAValidateGoogleAuthCode-put-"> MFA Validate Google Auth Code (PUT)</h5>
- This API is used to login via Multi-factor-authentication by passing the google authenticator code.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/google-authenticator/mfa-validate-google-auth-code/)
+##### MFA Validate Google Auth Code (PUT)
+ This API is used to login via Multi-factor-authentication by passing the google authenticator code.   
 
  
  
@@ -1518,8 +1570,8 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
   
   
  
-<h5 id="MFAUpdatePhoneNumber-put-"> MFA Update Phone Number (PUT)</h5>
- This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/sms-authenticator/mfa-update-phone-number/)
+##### MFA Update Phone Number (PUT)
+ This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number   
 
  
  
@@ -1543,8 +1595,8 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
   
   
  
-<h5 id="MFALoginByEmail-post-"> MFA Email Login (POST)</h5>
- This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/mfa-email-login)
+##### MFA Email Login (POST)
+ This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.   
 
  
  
@@ -1573,8 +1625,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="MFALoginByPhone-post-"> MFA Phone Login (POST)</h5>
- This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/mfa-phone-login)
+##### MFA Phone Login (POST)
+ This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.   
 
  
  
@@ -1603,8 +1655,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="MFAConfigureByAccessToken-get-"> MFA Validate Access Token (GET)</h5>
- This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/mfa-validate-access-token/)
+##### MFA Validate Access Token (GET)
+ This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.   
 
  
  
@@ -1627,8 +1679,8 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
   
   
  
-<h5 id="MFAResendOTP-get-"> MFA Resend Otp (GET)</h5>
- This API is used to resending the verification OTP to the provided phone number  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/resend-twofactorauthentication-otp/)
+##### MFA Resend Otp (GET)
+ This API is used to resending the verification OTP to the provided phone number   
 
  
  
@@ -1651,8 +1703,8 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
   
   
  
-<h5 id="MFAResetGoogleAuthByToken-delete-"> MFA Reset Google Authenticator by Token (DELETE)</h5>
- This API Resets the Google Authenticator configurations on a given account via the access token  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/google-authenticator/mfa-reset-google-authenticator-by-token/)
+##### MFA Reset Google Authenticator by Token (DELETE)
+ This API Resets the Google Authenticator configurations on a given account via the access token   
 
  
  
@@ -1675,8 +1727,8 @@ var googleauthenticator = true; //Required
   
   
  
-<h5 id="MFAResetSMSAuthByToken-delete-"> MFA Reset SMS Authenticator by Token (DELETE)</h5>
- This API resets the SMS Authenticator configurations on a given account via the access token.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/sms-authenticator/mfa-reset-sms-authenticator-by-token/)
+##### MFA Reset SMS Authenticator by Token (DELETE)
+ This API resets the SMS Authenticator configurations on a given account via the access token.   
 
  
  
@@ -1699,8 +1751,8 @@ var otpauthenticator = true; //Required
   
   
  
-<h5 id="MFAResetSMSAuthenticatorByUid-delete-"> MFA Reset SMS Authenticator By UID (DELETE)</h5>
- This API resets the SMS Authenticator configurations on a given account via the UID.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/sms-authenticator/mfa-reset-sms-authenticator-by-uid/)
+##### MFA Reset SMS Authenticator By UID (DELETE)
+ This API resets the SMS Authenticator configurations on a given account via the UID.   
 
  
  
@@ -1723,8 +1775,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="MFAResetGoogleAuthenticatorByUid-delete-"> MFA Reset Google Authenticator By UID (DELETE)</h5>
- This API resets the Google Authenticator configurations on a given account via the UID.  [More Info](/api/v2/customer-identity-api/multi-factor-authentication/google-authenticator/mfa-reset-google-authenticator-by-uid/)
+##### MFA Reset Google Authenticator By UID (DELETE)
+ This API resets the Google Authenticator configurations on a given account via the UID.   
 
  
  
@@ -1754,15 +1806,15 @@ var uid = "<uid>"; //Required
 
 List of APIs in this Section:<br>
 
-* PUT : [Passwordless Login Phone Verification](#PasswordlessLoginPhoneVerification-put-)<br>
-* GET : [Passwordless Login by Phone](#PasswordlessLoginByPhone-get-)<br>
-* GET : [Passwordless Login By Email](#PasswordlessLoginByEmail-get-)<br>
-* GET : [Passwordless Login Verification](#PasswordlessLoginVerification-get-)<br>
+* PUT : [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
+* GET : [Passwordless Login by Phone](#passwordless-login-by-phone-get)
+* GET : [Passwordless Login By Email](#passwordless-login-by-email-get)
+* GET : [Passwordless Login Verification](#passwordless-login-verification-get)
 
 
 
-<h5 id="PasswordlessLoginPhoneVerification-put-"> Passwordless Login Phone Verification (PUT)</h5>
- This API verifies an account by OTP and allows the customer to login.  [More Info](/api/v2/customer-identity-api/passwordless-login/passwordless-login-phone-verification)
+##### Passwordless Login Phone Verification (PUT)
+ This API verifies an account by OTP and allows the customer to login.   
 
  
  
@@ -1790,8 +1842,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="PasswordlessLoginByPhone-get-"> Passwordless Login by Phone (GET)</h5>
- API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID  [More Info](/api/v2/customer-identity-api/passwordless-login/passwordless-login-by-phone)
+##### Passwordless Login by Phone (GET)
+ API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID   
 
  
  
@@ -1814,8 +1866,8 @@ var smsTemplate = "<smsTemplate>"; //Optional
   
   
  
-<h5 id="PasswordlessLoginByEmail-get-"> Passwordless Login By Email (GET)</h5>
- This API is used to send a Passwordless Login verification link to the provided Email ID  [More Info](/api/v2/customer-identity-api/passwordless-login/passwordless-login-by-email)
+##### Passwordless Login By Email (GET)
+ This API is used to send a Passwordless Login verification link to the provided Email ID   
 
  
  
@@ -1839,8 +1891,8 @@ var verificationUrl = "<verificationUrl>"; //Optional
   
   
  
-<h5 id="PasswordlessLoginVerification-get-"> Passwordless Login Verification (GET)</h5>
- This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API  [More Info](/api/v2/customer-identity-api/passwordless-login/passwordless-login-verification)
+##### Passwordless Login Verification (GET)
+ This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API   
 
  
  
@@ -1871,25 +1923,25 @@ var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 List of APIs in this Section:<br>
 
-* PUT : [Assign Roles by UID](#AssignRolesByUid-put-)<br>
-* PUT : [Upsert Context](#UpdateRoleContextByUid-put-)<br>
-* PUT : [Add Permissions to Role](#AddRolePermissions-put-)<br>
-* POST : [Roles Create](#CreateRoles-post-)<br>
-* GET : [Roles by UID](#GetRolesByUid-get-)<br>
-* GET : [Get Context with Roles and Permissions](#GetRoleContextByUid-get-)<br>
-* GET : [Role Context profile](#GetRoleContextByContextName-get-)<br>
-* GET : [Roles List](#GetRolesList-get-)<br>
-* DELETE : [Unassign Roles by UID](#UnassignRolesByUid-delete-)<br>
-* DELETE : [Delete Role Context](#DeleteRoleContextByUid-delete-)<br>
-* DELETE : [Delete Role from Context](#DeleteRolesFromRoleContextByUid-delete-)<br>
-* DELETE : [Delete Additional Permission from Context](#DeleteAdditionalPermissionFromRoleContextByUid-delete-)<br>
-* DELETE : [Account Delete Role](#DeleteRole-delete-)<br>
-* DELETE : [Remove Permissions](#RemoveRolePermissions-delete-)<br>
+* PUT : [Assign Roles by UID](#assign-roles-by-uid-put)
+* PUT : [Upsert Context](#upsert-context-put)
+* PUT : [Add Permissions to Role](#add-permissions-to-role-put)
+* POST : [Roles Create](#roles-create-post)
+* GET : [Roles by UID](#roles-by-uid-get)
+* GET : [Get Context with Roles and Permissions](#get-context-with-roles-and-permissions-get)
+* GET : [Role Context profile](#role-context-profile-get)
+* GET : [Roles List](#roles-list-get)
+* DELETE : [Unassign Roles by UID](#unassign-roles-by-uid-delete)
+* DELETE : [Delete Role Context](#delete-role-context-delete)
+* DELETE : [Delete Role from Context](#delete-role-from-context-delete)
+* DELETE : [Delete Additional Permission from Context](#delete-additional-permission-from-context-delete)
+* DELETE : [Account Delete Role](#account-delete-role-delete)
+* DELETE : [Remove Permissions](#remove-permissions-delete)
 
 
 
-<h5 id="AssignRolesByUid-put-"> Assign Roles by UID (PUT)</h5>
- This API is used to assign your desired roles to a given user.  [More Info](/api/v2/customer-identity-api/roles-management/assign-roles-by-uid/)
+##### Assign Roles by UID (PUT)
+ This API is used to assign your desired roles to a given user.   
 
  
  
@@ -1915,8 +1967,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="UpdateRoleContextByUid-put-"> Upsert Context (PUT)</h5>
- This API creates a Context with a set of Roles  [More Info](/api/v2/customer-identity-api/roles-management/upsert-context)
+##### Upsert Context (PUT)
+ This API creates a Context with a set of Roles   
 
  
  
@@ -1947,8 +1999,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="AddRolePermissions-put-"> Add Permissions to Role (PUT)</h5>
- This API is used to add permissions to a given role.  [More Info](/api/v2/customer-identity-api/roles-management/add-permissions-to-role)
+##### Add Permissions to Role (PUT)
+ This API is used to add permissions to a given role.   
 
  
  
@@ -1974,8 +2026,8 @@ var role = "<role>"; //Required
   
   
  
-<h5 id="CreateRoles-post-"> Roles Create (POST)</h5>
- This API creates a role with permissions.  [More Info](/api/v2/customer-identity-api/roles-management/roles-create)
+##### Roles Create (POST)
+ This API creates a role with permissions.   
 
  
  
@@ -2003,8 +2055,8 @@ var rolesModel ={
   
   
  
-<h5 id="GetRolesByUid-get-"> Roles by UID (GET)</h5>
- API is used to retrieve all the assigned roles of a particular User.  [More Info](/api/v2/customer-identity-api/roles-management/get-roles-by-uid)
+##### Roles by UID (GET)
+ API is used to retrieve all the assigned roles of a particular User.   
 
  
  
@@ -2026,8 +2078,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="GetRoleContextByUid-get-"> Get Context with Roles and Permissions (GET)</h5>
- This API Gets the contexts that have been configured and the associated roles and permissions.  [More Info](/api/v2/customer-identity-api/roles-management/get-context)
+##### Get Context with Roles and Permissions (GET)
+ This API Gets the contexts that have been configured and the associated roles and permissions.   
 
  
  
@@ -2049,8 +2101,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="GetRoleContextByContextName-get-"> Role Context profile (GET)</h5>
- The API is used to retrieve role context by the context name.  [More Info](/api/v2/customer-identity-api/roles-management/role-context-profile/)
+##### Role Context profile (GET)
+ The API is used to retrieve role context by the context name.   
 
  
  
@@ -2072,8 +2124,8 @@ var contextName = "<contextName>"; //Required
   
   
  
-<h5 id="GetRolesList-get-"> Roles List (GET)</h5>
- This API retrieves the complete list of created roles with permissions of your app.  [More Info](/api/v2/customer-identity-api/roles-management/roles-list)
+##### Roles List (GET)
+ This API retrieves the complete list of created roles with permissions of your app.   
 
  
  
@@ -2094,8 +2146,8 @@ var contextName = "<contextName>"; //Required
   
   
  
-<h5 id="UnassignRolesByUid-delete-"> Unassign Roles by UID (DELETE)</h5>
- This API is used to unassign roles from a user.  [More Info](/api/v2/customer-identity-api/roles-management/unassign-roles-by-uid)
+##### Unassign Roles by UID (DELETE)
+ This API is used to unassign roles from a user.   
 
  
  
@@ -2121,8 +2173,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="DeleteRoleContextByUid-delete-"> Delete Role Context (DELETE)</h5>
- This API Deletes the specified Role Context  [More Info](/api/v2/customer-identity-api/roles-management/delete-context)
+##### Delete Role Context (DELETE)
+ This API Deletes the specified Role Context   
 
  
  
@@ -2145,8 +2197,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="DeleteRolesFromRoleContextByUid-delete-"> Delete Role from Context (DELETE)</h5>
- This API Deletes the specified Role from a Context.  [More Info](/api/v2/customer-identity-api/roles-management/delete-role-from-context/)
+##### Delete Role from Context (DELETE)
+ This API Deletes the specified Role from a Context.   
 
  
  
@@ -2173,8 +2225,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="DeleteAdditionalPermissionFromRoleContextByUid-delete-"> Delete Additional Permission from Context (DELETE)</h5>
- This API Deletes Additional Permissions from Context.  [More Info](/api/v2/customer-identity-api/roles-management/delete-permissions-from-context)
+##### Delete Additional Permission from Context (DELETE)
+ This API Deletes Additional Permissions from Context.   
 
  
  
@@ -2201,8 +2253,8 @@ var uid = "<uid>"; //Required
   
   
  
-<h5 id="DeleteRole-delete-"> Account Delete Role (DELETE)</h5>
- This API is used to delete the role.  [More Info](/api/v2/customer-identity-api/roles-management/delete-role)
+##### Account Delete Role (DELETE)
+ This API is used to delete the role.   
 
  
  
@@ -2224,8 +2276,8 @@ var role = "<role>"; //Required
   
   
  
-<h5 id="RemoveRolePermissions-delete-"> Remove Permissions (DELETE)</h5>
- API is used to remove permissions from a role.  [More Info](/api/v2/customer-identity-api/roles-management/remove-permissions)
+##### Remove Permissions (DELETE)
+ API is used to remove permissions from a role.   
 
  
  
@@ -2258,12 +2310,12 @@ var role = "<role>"; //Required
 
 List of APIs in this Section:<br>
 
-* GET : [Generate SOTT](#GenerateSott-get-)<br>
+* GET : [Generate SOTT](#generate-sott-get)
 
 
 
-<h5 id="GenerateSott-get-"> Generate SOTT (GET)</h5>
- This API allows you to generate SOTT with a given expiration time.  [More Info](/api/v2/customer-identity-api/session/generate-sott-token)
+##### Generate SOTT (GET)
+ This API allows you to generate SOTT with a given expiration time.   
 
  
  
@@ -2292,17 +2344,17 @@ var timeDifference = 0; //Optional
 
 List of APIs in this Section:<br>
 
-* GET : [Access Token via Facebook Token](#GetAccessTokenByFacebookAccessToken-get-)<br>
-* GET : [Access Token via Twitter Token](#GetAccessTokenByTwitterAccessToken-get-)<br>
-* GET : [Access Token via Google Token](#GetAccessTokenByGoogleAccessToken-get-)<br>
-* GET : [Access Token using google JWT token for Native Mobile Login](#GetAccessTokenByGoogleJWTAccessToken-get-)<br>
-* GET : [Access Token via Linkedin Token](#GetAccessTokenByLinkedinAccessToken-get-)<br>
-* GET : [Access Token via Google AuthCode](#GetAccessTokenByGoogleAuthCode-get-)<br>
+* GET : [Access Token via Facebook Token](#access-token-via-facebook-token-get)
+* GET : [Access Token via Twitter Token](#access-token-via-twitter-token-get)
+* GET : [Access Token via Google Token](#access-token-via-google-token-get)
+* GET : [Access Token using google JWT token for Native Mobile Login](#access-token-using-google-jwt-token-for-native-mobile-login-get)
+* GET : [Access Token via Linkedin Token](#access-token-via-linkedin-token-get)
+* GET : [Access Token via Google AuthCode](#access-token-via-google-authcode-get)
 
 
 
-<h5 id="GetAccessTokenByFacebookAccessToken-get-"> Access Token via Facebook Token (GET)</h5>
- The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.  [More Info](/api/v2/customer-identity-api/social-login/native-social-login-api/access-token-via-facebook-token/)
+##### Access Token via Facebook Token (GET)
+ The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -2324,8 +2376,8 @@ var fbAccessToken = "<fbAccessToken>"; //Required
   
   
  
-<h5 id="GetAccessTokenByTwitterAccessToken-get-"> Access Token via Twitter Token (GET)</h5>
- The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.  [More Info](/api/v2/customer-identity-api/social-login/native-social-login-api/access-token-via-twitter-token)
+##### Access Token via Twitter Token (GET)
+ The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -2348,8 +2400,8 @@ var twTokenSecret = "<twTokenSecret>"; //Required
   
   
  
-<h5 id="GetAccessTokenByGoogleAccessToken-get-"> Access Token via Google Token (GET)</h5>
- The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.  [More Info](/api/v2/customer-identity-api/social-login/native-social-login-api/access-token-via-google-token)
+##### Access Token via Google Token (GET)
+ The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -2373,8 +2425,8 @@ var refreshToken = "<refreshToken>"; //Optional
   
   
  
-<h5 id="GetAccessTokenByGoogleJWTAccessToken-get-"> Access Token using google JWT token for Native Mobile Login (GET)</h5>
- This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.  [More Info](/api/v2/customer-identity-api/social-login/native-social-login-api/access-token-via-googlejwt)
+##### Access Token using google JWT token for Native Mobile Login (GET)
+ This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.   
 
  
  
@@ -2396,8 +2448,8 @@ var idToken = "<idToken>"; //Required
   
   
  
-<h5 id="GetAccessTokenByLinkedinAccessToken-get-"> Access Token via Linkedin Token (GET)</h5>
- The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.  [More Info](/api/v2/customer-identity-api/social-login/native-social-login-api/access-token-via-linkedin-token/)
+##### Access Token via Linkedin Token (GET)
+ The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -2419,8 +2471,8 @@ var lnAccessToken = "<lnAccessToken>"; //Required
   
   
  
-<h5 id="GetAccessTokenByGoogleAuthCode-get-"> Access Token via Google AuthCode (GET)</h5>
- The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.  [More Info](/api/v2/customer-identity-api/social-login/native-social-login-api/access-token-via-google-auth-code)
+##### Access Token via Google AuthCode (GET)
+ The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -2449,15 +2501,15 @@ var googleAuthcode = "<googleAuthcode>"; //Required
 
 List of APIs in this Section:<br>
 
-* POST : [Webhook Subscribe](#WebHookSubscribe-post-)<br>
-* GET : [Webhook Subscribed URLs](#GetWebHookSubscribedURLs-get-)<br>
-* GET : [Webhook Test](#WebhookTest-get-)<br>
-* DELETE : [WebHook Unsubscribe](#WebHookUnsubscribe-delete-)<br>
+* POST : [Webhook Subscribe](#webhook-subscribe-post)
+* GET : [Webhook Subscribed URLs](#webhook-subscribed-urls-get)
+* GET : [Webhook Test](#webhook-test-get)
+* DELETE : [WebHook Unsubscribe](#webhook-unsubscribe-delete)
 
 
 
-<h5 id="WebHookSubscribe-post-"> Webhook Subscribe (POST)</h5>
- API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.  [More Info](/api/v2/integrations/webhooks/webhook-subscribe)
+##### Webhook Subscribe (POST)
+ API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.   
 
  
  
@@ -2483,8 +2535,8 @@ var webHookSubscribeModel ={
   
   
  
-<h5 id="GetWebHookSubscribedURLs-get-"> Webhook Subscribed URLs (GET)</h5>
- This API is used to fatch all the subscribed URLs, for particular event  [More Info](/api/v2/integrations/webhooks/webhook-subscribed-urls)
+##### Webhook Subscribed URLs (GET)
+ This API is used to fatch all the subscribed URLs, for particular event   
 
  
  
@@ -2506,8 +2558,8 @@ var event = "<event>"; //Required
   
   
  
-<h5 id="WebhookTest-get-"> Webhook Test (GET)</h5>
- API can be used to test a subscribed WebHook.  [More Info](/api/v2/integrations/webhooks/webhook-test)
+##### Webhook Test (GET)
+ API can be used to test a subscribed WebHook.   
 
  
  
@@ -2528,8 +2580,8 @@ var event = "<event>"; //Required
   
   
  
-<h5 id="WebHookUnsubscribe-delete-"> WebHook Unsubscribe (DELETE)</h5>
- API can be used to unsubscribe a WebHook configured on your LoginRadius site.  [More Info](/api/v2/integrations/webhooks/webhook-unsubscribe)
+##### WebHook Unsubscribe (DELETE)
+ API can be used to unsubscribe a WebHook configured on your LoginRadius site.   
 
  
  
