@@ -91,6 +91,14 @@ module.exports = {
         trackingId: process.env.GA_TRACKING_ID,
       },
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: process.env.HOTJAR_ID,
+        sv: process.env.HOTJAR_SNIPPET_VERSION,
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,

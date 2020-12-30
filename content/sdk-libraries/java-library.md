@@ -155,7 +155,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="UpdateProfileByAccessToken-put-">Auth Update Profile by Token (PUT)</h6>
+<h5 id="UpdateProfileByAccessToken-put-">Auth Update Profile by Token (PUT)</h5>
  This API is used to update the user's profile by passing the access token.
 
 ```java
@@ -190,7 +190,7 @@ authenticationApi.updateProfileByAccessToken(accessToken,  userProfileUpdateMode
 
 
 
-<h5 id="VerifyEmailByOTP-put-">Auth Verify Email By OTP (PUT)</h6>
+<h5 id="VerifyEmailByOTP-put-">Auth Verify Email By OTP (PUT)</h5>
  This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
 
 ```java
@@ -222,7 +222,7 @@ authenticationApi.verifyEmailByOTP( emailVerificationByOtpModel, fields, url, we
 
 
 
-<h5 id="ResetPasswordByResetToken-put-">Auth Reset Password by Reset Token (PUT)</h6>
+<h5 id="ResetPasswordByResetToken-put-">Auth Reset Password by Reset Token (PUT)</h5>
  This API is used to set a new password for the specified account.
 
 ```java
@@ -251,7 +251,7 @@ authenticationApi.resetPasswordByResetToken( resetPasswordByResetTokenModel ,  n
 
 
 
-<h5 id="ChangePassword-put-">Auth Change Password (PUT)</h6>
+<h5 id="ChangePassword-put-">Auth Change Password (PUT)</h5>
  This API is used to change the accounts password based on the previous password
 
 ```java
@@ -280,7 +280,7 @@ authenticationApi.changePassword(accessToken, newPassword, oldPassword ,  new As
 
 
 
-<h5 id="AuthResendEmailVerification-put-">Auth Resend Email Verification (PUT)</h6>
+<h5 id="AuthResendEmailVerification-put-">Auth Resend Email Verification (PUT)</h5>
  This API resends the verification email to the user.
 
 ```java
@@ -309,7 +309,7 @@ authenticationApi.authResendEmailVerification(email, emailTemplate, verification
 
 
 
-<h5 id="AddEmail-post-">Auth Add Email (POST)</h6>
+<h5 id="AddEmail-post-">Auth Add Email (POST)</h5>
  This API is used to add additional emails to a user's account.
 
 ```java
@@ -340,7 +340,7 @@ authenticationApi.addEmail(accessToken, email, type, emailTemplate, verification
 
 
 
-<h5 id="LoginByEmail-post-">Auth Login by Email (POST)</h6>
+<h5 id="LoginByEmail-post-">Auth Login by Email (POST)</h5>
  This API retrieves a copy of the user data based on the Email
 
 ```java
@@ -373,7 +373,7 @@ authenticationApi.loginByEmail( emailAuthenticationModel, emailTemplate, fields,
 
 
 
-<h5 id="ForgotPassword-post-">Auth Forgot Password (POST)</h6>
+<h5 id="ForgotPassword-post-">Auth Forgot Password (POST)</h5>
  This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'
 
 ```java
@@ -402,7 +402,7 @@ authenticationApi.forgotPassword(email, resetPasswordUrl, emailTemplate ,  new A
 
 
 
-<h5 id="UserRegistrationByEmail-post-">Auth User Registration by Email (POST)</h6>
+<h5 id="UserRegistrationByEmail-post-">Auth User Registration by Email (POST)</h5>
  This API creates a user in the database as well as sends a verification email to the user.
 
 ```java
@@ -444,7 +444,7 @@ authenticationApi.userRegistrationByEmail( authUserRegistrationModel, sott, emai
 
 
 
-<h5 id="UserRegistrationByCaptcha-post-">Auth User Registration By Captcha (POST)</h6>
+<h5 id="UserRegistrationByCaptcha-post-">Auth User Registration By Captcha (POST)</h5>
  This API creates a user in the database as well as sends a verification email to the user.
 
 ```java
@@ -487,7 +487,7 @@ authenticationApi.userRegistrationByCaptcha( authUserRegistrationModelWithCaptch
 
 
 
-<h5 id="AuthValidateAccessToken-get-">Auth Validate Access token (GET)</h6>
+<h5 id="AuthValidateAccessToken-get-">Auth Validate Access token (GET)</h5>
  This api validates access token, if valid then returns a response with its expiry otherwise error.
 
 ```java
@@ -514,7 +514,7 @@ authenticationApi.authValidateAccessToken(accessToken ,  new AsyncHandler<Access
 
 
 
-<h5 id="AuthInValidateAccessToken-get-">Access Token Invalidate (GET)</h6>
+<h5 id="AuthInValidateAccessToken-get-">Access Token Invalidate (GET)</h5>
  This api call invalidates the active access token or expires an access token's validity.
 
 ```java
@@ -542,7 +542,7 @@ authenticationApi.authInValidateAccessToken(accessToken, preventRefresh ,  new A
 
 
 
-<h5 id="GetAccessTokenInfo-get-">Access Token Info (GET)</h6>
+<h5 id="GetAccessTokenInfo-get-">Access Token Info (GET)</h5>
  This api call provide the active access token Information
 
 ```java
@@ -569,7 +569,7 @@ authenticationApi.getAccessTokenInfo(accessToken ,  new AsyncHandler<TokenInfoRe
 
 
 
-<h5 id="GetProfileByAccessToken-get-">Auth Read all Profiles by Token (GET)</h6>
+<h5 id="GetProfileByAccessToken-get-">Auth Read all Profiles by Token (GET)</h5>
  This API retrieves a copy of the user data based on the access token.
 
 ```java
@@ -597,7 +597,7 @@ authenticationApi.getProfileByAccessToken(accessToken, fields ,  new AsyncHandle
 
 
 
-<h5 id="DeleteAccountByDeleteToken-get-">Auth Delete Account (GET)</h6>
+<h5 id="DeleteAccountByDeleteToken-get-">Auth Delete Account (GET)</h5>
  This API is used to delete an account by passing it a delete token.
 
 ```java
@@ -624,7 +624,7 @@ authenticationApi.deleteAccountByDeleteToken(deletetoken ,  new AsyncHandler<Pos
 
 
 
-<h5 id="CheckEmailAvailability-get-">Auth Check Email Availability (GET)</h6>
+<h5 id="CheckEmailAvailability-get-">Auth Check Email Availability (GET)</h5>
  This API is used to check the email exists or not on your site.
 
 ```java
@@ -651,7 +651,7 @@ authenticationApi.checkEmailAvailability(email ,  new AsyncHandler<ExistResponse
 
 
 
-<h5 id="VerifyEmail-get-">Auth Verify Email (GET)</h6>
+<h5 id="VerifyEmail-get-">Auth Verify Email (GET)</h5>
  This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
 
 ```java
@@ -681,7 +681,7 @@ authenticationApi.verifyEmail(verificationToken, fields, url, welcomeEmailTempla
 
 
 
-<h5 id="GetSocialIdentity-get-">Auth Social Identity (GET)</h6>
+<h5 id="GetSocialIdentity-get-">Auth Social Identity (GET)</h5>
  This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
 
 ```java
@@ -707,7 +707,7 @@ authenticationApi.getSocialIdentity(accessToken, fields ,  new AsyncHandler<Soci
 
 
 
-<h5 id="DeleteAccountWithEmailConfirmation-delete-">Auth Delete Account with Email Confirmation (DELETE)</h6>
+<h5 id="DeleteAccountWithEmailConfirmation-delete-">Auth Delete Account with Email Confirmation (DELETE)</h5>
  This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token
 
 ```java
@@ -736,7 +736,7 @@ authenticationApi.deleteAccountWithEmailConfirmation(accessToken, deleteUrl, ema
 
 
 
-<h5 id="RemoveEmail-delete-">Auth Remove Email (DELETE)</h6>
+<h5 id="RemoveEmail-delete-">Auth Remove Email (DELETE)</h5>
  This API is used to remove additional emails from a user's account.
 
 ```java
@@ -795,7 +795,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="UpdateAccountByUid-put-">Account Update (PUT)</h6>
+<h5 id="UpdateAccountByUid-put-">Account Update (PUT)</h5>
  This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
 
 ```java
@@ -827,7 +827,7 @@ accountApi.updateAccountByUid( accountUserProfileUpdateModel, uid, fields ,  new
 
 
 
-<h5 id="UpdatePhoneIDByUid-put-">Update Phone ID by UID (PUT)</h6>
+<h5 id="UpdatePhoneIDByUid-put-">Update Phone ID by UID (PUT)</h5>
  This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
 
 ```java
@@ -856,7 +856,7 @@ accountApi.updatePhoneIDByUid(phone, uid, fields ,  new AsyncHandler<Identity> (
 
 
 
-<h5 id="SetAccountPasswordByUid-put-">Account Set Password (PUT)</h6>
+<h5 id="SetAccountPasswordByUid-put-">Account Set Password (PUT)</h5>
  This API is used to set the password of an account in Cloud Storage.
 
 ```java
@@ -884,7 +884,7 @@ accountApi.setAccountPasswordByUid(password, uid ,  new AsyncHandler<UserPasswor
 
 
 
-<h5 id="InvalidateAccountEmailVerification-put-">Account Invalidate Verification Email (PUT)</h6>
+<h5 id="InvalidateAccountEmailVerification-put-">Account Invalidate Verification Email (PUT)</h5>
  This API is used to invalidate the Email Verification status on an account.
 
 ```java
@@ -913,7 +913,7 @@ accountApi.invalidateAccountEmailVerification(uid, emailTemplate, verificationUr
 
 
 
-<h5 id="ResetPhoneIDVerificationByUid-put-">Reset phone ID verification (PUT)</h6>
+<h5 id="ResetPhoneIDVerificationByUid-put-">Reset phone ID verification (PUT)</h5>
  This API Allows you to reset the phone no verification of an end user’s account.
 
 ```java
@@ -941,7 +941,7 @@ accountApi.resetPhoneIDVerificationByUid(uid, smsTemplate ,  new AsyncHandler<Po
 
 
 
-<h5 id="UpsertEmail-put-">Upsert Email (PUT)</h6>
+<h5 id="UpsertEmail-put-">Upsert Email (PUT)</h5>
  This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.
 
 ```java
@@ -976,7 +976,7 @@ accountApi.upsertEmail( upsertEmailModel, uid, fields ,  new AsyncHandler<Identi
 
 
 
-<h5 id="AccountUpdateUid-put-">Update UID (PUT)</h6>
+<h5 id="AccountUpdateUid-put-">Update UID (PUT)</h5>
  This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.
 
 ```java
@@ -1005,7 +1005,7 @@ accountApi.accountUpdateUid( updateUidModel, uid ,  new AsyncHandler<PostRespons
 
 
 
-<h5 id="CreateAccount-post-">Account Create (POST)</h6>
+<h5 id="CreateAccount-post-">Account Create (POST)</h5>
  This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields
 
 ```java
@@ -1042,7 +1042,7 @@ accountApi.createAccount( accountCreateModel, fields ,  new AsyncHandler<Identit
 
 
 
-<h5 id="GetForgotPasswordToken-post-">Forgot Password token (POST)</h6>
+<h5 id="GetForgotPasswordToken-post-">Forgot Password token (POST)</h5>
  This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.
 
 ```java
@@ -1072,7 +1072,7 @@ accountApi.getForgotPasswordToken(email, emailTemplate, resetPasswordUrl, sendEm
 
 
 
-<h5 id="GetEmailVerificationToken-post-">Email Verification token (POST)</h6>
+<h5 id="GetEmailVerificationToken-post-">Email Verification token (POST)</h5>
  This API Returns an Email Verification token.
 
 ```java
@@ -1099,7 +1099,7 @@ accountApi.getEmailVerificationToken(email ,  new AsyncHandler<EmailVerification
 
 
 
-<h5 id="GetAccountProfileByEmail-get-">Account Profiles by Email (GET)</h6>
+<h5 id="GetAccountProfileByEmail-get-">Account Profiles by Email (GET)</h5>
  This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.
 
 ```java
@@ -1127,7 +1127,7 @@ accountApi.getAccountProfileByEmail(email, fields ,  new AsyncHandler<Identity> 
 
 
 
-<h5 id="GetAccountProfileByPhone-get-">Account Profile by Phone ID (GET)</h6>
+<h5 id="GetAccountProfileByPhone-get-">Account Profile by Phone ID (GET)</h5>
  This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.
 
 ```java
@@ -1155,7 +1155,7 @@ accountApi.getAccountProfileByPhone(phone, fields ,  new AsyncHandler<Identity> 
 
 
 
-<h5 id="GetAccountProfileByUid-get-">Account Profiles by UID (GET)</h6>
+<h5 id="GetAccountProfileByUid-get-">Account Profiles by UID (GET)</h5>
  This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.
 
 ```java
@@ -1183,7 +1183,7 @@ accountApi.getAccountProfileByUid(uid, fields ,  new AsyncHandler<Identity> (){
 
 
 
-<h5 id="GetAccountPasswordHashByUid-get-">Account Password (GET)</h6>
+<h5 id="GetAccountPasswordHashByUid-get-">Account Password (GET)</h5>
  This API use to retrive the hashed password of a specified account in Cloud Storage.
 
 ```java
@@ -1210,7 +1210,7 @@ accountApi.getAccountPasswordHashByUid(uid ,  new AsyncHandler<UserPasswordHash>
 
 
 
-<h5 id="GetAccessTokenByUid-get-">Access Token based on UID or User impersonation API (GET)</h6>
+<h5 id="GetAccessTokenByUid-get-">Access Token based on UID or User impersonation API (GET)</h5>
  The API is used to get LoginRadius access token based on UID.
 
 ```java
@@ -1237,7 +1237,7 @@ accountApi.getAccessTokenByUid(uid ,  new AsyncHandler<AccessTokenBase> (){
 
 
 
-<h5 id="GetAccountIdentitiesByEmail-get-">Account Identities by Email (GET)</h6>
+<h5 id="GetAccountIdentitiesByEmail-get-">Account Identities by Email (GET)</h5>
  Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
 
 ```java
@@ -1265,7 +1265,7 @@ accountApi.getAccountIdentitiesByEmail(email, fields ,  new AsyncHandler<ListRet
 
 
 
-<h5 id="DeleteAccountByUid-delete-">Account Delete (DELETE)</h6>
+<h5 id="DeleteAccountByUid-delete-">Account Delete (DELETE)</h5>
  This API deletes the Users account and allows them to re-register for a new account.
 
 ```java
@@ -1292,7 +1292,7 @@ accountApi.deleteAccountByUid(uid ,  new AsyncHandler<DeleteResponse> (){
 
 
 
-<h5 id="RemoveEmail-delete-">Account Remove Email (DELETE)</h6>
+<h5 id="RemoveEmail-delete-">Account Remove Email (DELETE)</h5>
  Use this API to Remove emails from a user Account
 
 ```java
@@ -1321,7 +1321,7 @@ accountApi.removeEmail(email, uid, fields ,  new AsyncHandler<Identity> (){
 
 
 
-<h5 id="AccountDeleteByEmail-delete-">Delete User Profiles By Email (DELETE)</h6>
+<h5 id="AccountDeleteByEmail-delete-">Delete User Profiles By Email (DELETE)</h5>
  This API is used to delete all user profiles associated with an Email.
 
 ```java
@@ -1371,7 +1371,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="ResetPasswordByPhoneOTP-put-">Phone Reset Password by OTP (PUT)</h6>
+<h5 id="ResetPasswordByPhoneOTP-put-">Phone Reset Password by OTP (PUT)</h5>
  This API is used to reset the password
 
 ```java
@@ -1401,7 +1401,7 @@ phoneAuthenticationApi.resetPasswordByPhoneOTP( resetPasswordByOTPModel ,  new A
 
 
 
-<h5 id="PhoneVerificationByOTP-put-">Phone Verification OTP (PUT)</h6>
+<h5 id="PhoneVerificationByOTP-put-">Phone Verification OTP (PUT)</h5>
  This API is used to validate the verification code sent to verify a user's phone number
 
 ```java
@@ -1431,7 +1431,7 @@ phoneAuthenticationApi.phoneVerificationByOTP(otp, phone, fields, smsTemplate , 
 
 
 
-<h5 id="PhoneVerificationOTPByAccessToken-put-">Phone Verification OTP by Token (PUT)</h6>
+<h5 id="PhoneVerificationOTPByAccessToken-put-">Phone Verification OTP by Token (PUT)</h5>
  This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
 
 ```java
@@ -1460,7 +1460,7 @@ phoneAuthenticationApi.phoneVerificationOTPByAccessToken(accessToken, otp, smsTe
 
 
 
-<h5 id="UpdatePhoneNumber-put-">Phone Number Update (PUT)</h6>
+<h5 id="UpdatePhoneNumber-put-">Phone Number Update (PUT)</h5>
  This API is used to update the login Phone Number of users
 
 ```java
@@ -1489,7 +1489,7 @@ phoneAuthenticationApi.updatePhoneNumber(accessToken, phone, smsTemplate ,  new 
 
 
 
-<h5 id="LoginByPhone-post-">Phone Login (POST)</h6>
+<h5 id="LoginByPhone-post-">Phone Login (POST)</h5>
  This API retrieves a copy of the user data based on the Phone
 
 ```java
@@ -1521,7 +1521,7 @@ phoneAuthenticationApi.loginByPhone( phoneAuthenticationModel, fields, loginUrl,
 
 
 
-<h5 id="ForgotPasswordByPhoneOTP-post-">Phone Forgot Password by OTP (POST)</h6>
+<h5 id="ForgotPasswordByPhoneOTP-post-">Phone Forgot Password by OTP (POST)</h5>
  This API is used to send the OTP to reset the account password.
 
 ```java
@@ -1549,7 +1549,7 @@ phoneAuthenticationApi.forgotPasswordByPhoneOTP(phone, smsTemplate ,  new AsyncH
 
 
 
-<h5 id="PhoneResendVerificationOTP-post-">Phone Resend Verification OTP (POST)</h6>
+<h5 id="PhoneResendVerificationOTP-post-">Phone Resend Verification OTP (POST)</h5>
  This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input
 
 ```java
@@ -1577,7 +1577,7 @@ phoneAuthenticationApi.phoneResendVerificationOTP(phone, smsTemplate ,  new Asyn
 
 
 
-<h5 id="PhoneResendVerificationOTPByToken-post-">Phone Resend Verification OTP By Token (POST)</h6>
+<h5 id="PhoneResendVerificationOTPByToken-post-">Phone Resend Verification OTP By Token (POST)</h5>
  This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists
 
 ```java
@@ -1606,7 +1606,7 @@ phoneAuthenticationApi.phoneResendVerificationOTPByToken(accessToken, phone, sms
 
 
 
-<h5 id="UserRegistrationByPhone-post-">Phone User Registration by SMS (POST)</h6>
+<h5 id="UserRegistrationByPhone-post-">Phone User Registration by SMS (POST)</h5>
  This API registers the new users into your Cloud Storage and triggers the phone verification process.
 
 ```java
@@ -1643,7 +1643,7 @@ phoneAuthenticationApi.userRegistrationByPhone( authUserRegistrationModel, sott,
 
 
 
-<h5 id="CheckPhoneNumberAvailability-get-">Phone Number Availability (GET)</h6>
+<h5 id="CheckPhoneNumberAvailability-get-">Phone Number Availability (GET)</h5>
  This API is used to check the Phone Number exists or not on your site.
 
 ```java
@@ -1670,7 +1670,7 @@ phoneAuthenticationApi.checkPhoneNumberAvailability(phone ,  new AsyncHandler<Ex
 
 
 
-<h5 id="RemovePhoneIDByAccessToken-delete-">Remove Phone ID by Access Token (DELETE)</h6>
+<h5 id="RemovePhoneIDByAccessToken-delete-">Remove Phone ID by Access Token (DELETE)</h5>
  This API is used to delete the Phone ID on a user's account via the access token
 
 ```java
@@ -1721,7 +1721,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="MFAUpdateByAccessToken-put-">Update MFA by Access Token (PUT)</h6>
+<h5 id="MFAUpdateByAccessToken-put-">Update MFA by Access Token (PUT)</h5>
  This API is used to Enable Multi-factor authentication by access token on user login
 
 ```java
@@ -1752,7 +1752,7 @@ multiFactorAuthenticationApi.mfaUpdateByAccessToken(accessToken,  multiFactorAut
 
 
 
-<h5 id="MFAUpdatePhoneNumberByToken-put-">MFA Update Phone Number by Token (PUT)</h6>
+<h5 id="MFAUpdatePhoneNumberByToken-put-">MFA Update Phone Number by Token (PUT)</h5>
  This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number
 
 ```java
@@ -1781,7 +1781,7 @@ multiFactorAuthenticationApi.mfaUpdatePhoneNumberByToken(accessToken, phoneNo2FA
 
 
 
-<h5 id="MFAValidateGoogleAuthCode-put-">MFA Validate Google Auth Code (PUT)</h6>
+<h5 id="MFAValidateGoogleAuthCode-put-">MFA Validate Google Auth Code (PUT)</h5>
  This API is used to login via Multi-factor-authentication by passing the google authenticator code.
 
 ```java
@@ -1811,7 +1811,7 @@ multiFactorAuthenticationApi.mfaValidateGoogleAuthCode(googleAuthenticatorCode, 
 
 
 
-<h5 id="MFAUpdatePhoneNumber-put-">MFA Update Phone Number (PUT)</h6>
+<h5 id="MFAUpdatePhoneNumber-put-">MFA Update Phone Number (PUT)</h5>
  This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number
 
 ```java
@@ -1840,7 +1840,7 @@ multiFactorAuthenticationApi.mfaUpdatePhoneNumber(phoneNo2FA, secondFactorAuthen
 
 
 
-<h5 id="MFALoginByEmail-post-">MFA Email Login (POST)</h6>
+<h5 id="MFALoginByEmail-post-">MFA Email Login (POST)</h5>
  This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.
 
 ```java
@@ -1874,7 +1874,7 @@ multiFactorAuthenticationApi.mfaLoginByEmail(email, password, emailTemplate, fie
 
 
 
-<h5 id="MFALoginByPhone-post-">MFA Phone Login (POST)</h6>
+<h5 id="MFALoginByPhone-post-">MFA Phone Login (POST)</h5>
  This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.
 
 ```java
@@ -1908,7 +1908,7 @@ multiFactorAuthenticationApi.mfaLoginByPhone(password, phone, emailTemplate, fie
 
 
 
-<h5 id="MFAConfigureByAccessToken-get-">MFA Validate Access Token (GET)</h6>
+<h5 id="MFAConfigureByAccessToken-get-">MFA Validate Access Token (GET)</h5>
  This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.
 
 ```java
@@ -1936,7 +1936,7 @@ multiFactorAuthenticationApi.mfaConfigureByAccessToken(accessToken, smsTemplate2
 
 
 
-<h5 id="MFAResendOTP-get-">MFA Resend Otp (GET)</h6>
+<h5 id="MFAResendOTP-get-">MFA Resend Otp (GET)</h5>
  This API is used to resending the verification OTP to the provided phone number
 
 ```java
@@ -1964,7 +1964,7 @@ multiFactorAuthenticationApi.mfaResendOTP(secondFactorAuthenticationToken, smsTe
 
 
 
-<h5 id="MFAResetGoogleAuthByToken-delete-">MFA Reset Google Authenticator by Token (DELETE)</h6>
+<h5 id="MFAResetGoogleAuthByToken-delete-">MFA Reset Google Authenticator by Token (DELETE)</h5>
  This API Resets the Google Authenticator configurations on a given account via the access token
 
 ```java
@@ -1992,7 +1992,7 @@ multiFactorAuthenticationApi.mfaResetGoogleAuthByToken(accessToken, googleauthen
 
 
 
-<h5 id="MFAResetSMSAuthByToken-delete-">MFA Reset SMS Authenticator by Token (DELETE)</h6>
+<h5 id="MFAResetSMSAuthByToken-delete-">MFA Reset SMS Authenticator by Token (DELETE)</h5>
  This API resets the SMS Authenticator configurations on a given account via the access token.
 
 ```java
@@ -2020,7 +2020,7 @@ multiFactorAuthenticationApi.mfaResetSMSAuthByToken(accessToken, otpauthenticato
 
 
 
-<h5 id="MFAResetSMSAuthenticatorByUid-delete-">MFA Reset SMS Authenticator By UID (DELETE)</h6>
+<h5 id="MFAResetSMSAuthenticatorByUid-delete-">MFA Reset SMS Authenticator By UID (DELETE)</h5>
  This API resets the SMS Authenticator configurations on a given account via the UID.
 
 ```java
@@ -2048,7 +2048,7 @@ multiFactorAuthenticationApi.mfaResetSMSAuthenticatorByUid(otpauthenticator, uid
 
 
 
-<h5 id="MFAResetGoogleAuthenticatorByUid-delete-">MFA Reset Google Authenticator By UID (DELETE)</h6>
+<h5 id="MFAResetGoogleAuthenticatorByUid-delete-">MFA Reset Google Authenticator By UID (DELETE)</h5>
  This API resets the Google Authenticator configurations on a given account via the UID.
 
 ```java
@@ -2092,7 +2092,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="PasswordlessLoginPhoneVerification-put-">Passwordless Login Phone Verification (PUT)</h6>
+<h5 id="PasswordlessLoginPhoneVerification-put-">Passwordless Login Phone Verification (PUT)</h5>
  This API verifies an account by OTP and allows the customer to login.
 
 ```java
@@ -2123,7 +2123,7 @@ passwordLessLoginApi.passwordlessLoginPhoneVerification( passwordLessLoginOtpMod
 
 
 
-<h5 id="PasswordlessLoginByPhone-get-">Passwordless Login by Phone (GET)</h6>
+<h5 id="PasswordlessLoginByPhone-get-">Passwordless Login by Phone (GET)</h5>
  API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID
 
 ```java
@@ -2151,7 +2151,7 @@ passwordLessLoginApi.passwordlessLoginByPhone(phone, smsTemplate ,  new AsyncHan
 
 
 
-<h5 id="PasswordlessLoginByEmail-get-">Passwordless Login By Email (GET)</h6>
+<h5 id="PasswordlessLoginByEmail-get-">Passwordless Login By Email (GET)</h5>
  This API is used to send a Passwordless Login verification link to the provided Email ID
 
 ```java
@@ -2180,7 +2180,7 @@ passwordLessLoginApi.passwordlessLoginByEmail(email, passwordLessLoginTemplate, 
 
 
 
-<h5 id="PasswordlessLoginVerification-get-">Passwordless Login Verification (GET)</h6>
+<h5 id="PasswordlessLoginVerification-get-">Passwordless Login Verification (GET)</h5>
  This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API
 
 ```java
@@ -2235,7 +2235,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="AssignRolesByUid-put-">Assign Roles by UID (PUT)</h6>
+<h5 id="AssignRolesByUid-put-">Assign Roles by UID (PUT)</h5>
  This API is used to assign your desired roles to a given user.
 
 ```java
@@ -2266,7 +2266,7 @@ roleApi.assignRolesByUid( accountRolesModel, uid ,  new AsyncHandler<com.loginra
 
 
 
-<h5 id="UpdateRoleContextByUid-put-">Upsert Context (PUT)</h6>
+<h5 id="UpdateRoleContextByUid-put-">Upsert Context (PUT)</h5>
  This API creates a Context with a set of Roles
 
 ```java
@@ -2306,7 +2306,7 @@ roleApi.updateRoleContextByUid( accountRoleContextModel, uid ,  new AsyncHandler
 
 
 
-<h5 id="AddRolePermissions-put-">Add Permissions to Role (PUT)</h6>
+<h5 id="AddRolePermissions-put-">Add Permissions to Role (PUT)</h5>
  This API is used to add permissions to a given role.
 
 ```java
@@ -2337,7 +2337,7 @@ roleApi.addRolePermissions( permissionsModel, role ,  new AsyncHandler<com.login
 
 
 
-<h5 id="CreateRoles-post-">Roles Create (POST)</h6>
+<h5 id="CreateRoles-post-">Roles Create (POST)</h5>
  This API creates a role with permissions.
 
 ```java
@@ -2372,7 +2372,7 @@ roleApi.createRoles( rolesModel ,  new AsyncHandler<ListData<com.loginradius.sdk
 
 
 
-<h5 id="GetRolesByUid-get-">Roles by UID (GET)</h6>
+<h5 id="GetRolesByUid-get-">Roles by UID (GET)</h5>
  API is used to retrieve all the assigned roles of a particular User.
 
 ```java
@@ -2399,7 +2399,7 @@ roleApi.getRolesByUid(uid ,  new AsyncHandler<com.loginradius.sdk.models.respons
 
 
 
-<h5 id="GetRoleContextByUid-get-">Get Context with Roles and Permissions (GET)</h6>
+<h5 id="GetRoleContextByUid-get-">Get Context with Roles and Permissions (GET)</h5>
  This API Gets the contexts that have been configured and the associated roles and permissions.
 
 ```java
@@ -2426,7 +2426,7 @@ roleApi.getRoleContextByUid(uid ,  new AsyncHandler<ListReturn<RoleContext>> (){
 
 
 
-<h5 id="GetRoleContextByContextName-get-">Role Context profile (GET)</h6>
+<h5 id="GetRoleContextByContextName-get-">Role Context profile (GET)</h5>
  The API is used to retrieve role context by the context name.
 
 ```java
@@ -2453,7 +2453,7 @@ roleApi.getRoleContextByContextName(contextName ,  new AsyncHandler<ListReturn<R
 
 
 
-<h5 id="GetRolesList-get-">Roles List (GET)</h6>
+<h5 id="GetRolesList-get-">Roles List (GET)</h5>
  This API retrieves the complete list of created roles with permissions of your app.
 
 ```java
@@ -2479,7 +2479,7 @@ roleApi.getRolesList( new AsyncHandler<ListData<com.loginradius.sdk.models.respo
 
 
 
-<h5 id="UnassignRolesByUid-delete-">Unassign Roles by UID (DELETE)</h6>
+<h5 id="UnassignRolesByUid-delete-">Unassign Roles by UID (DELETE)</h5>
  This API is used to unassign roles from a user.
 
 ```java
@@ -2510,7 +2510,7 @@ roleApi.unassignRolesByUid( accountRolesModel, uid ,  new AsyncHandler<DeleteRes
 
 
 
-<h5 id="DeleteRoleContextByUid-delete-">Delete Role Context (DELETE)</h6>
+<h5 id="DeleteRoleContextByUid-delete-">Delete Role Context (DELETE)</h5>
  This API Deletes the specified Role Context
 
 ```java
@@ -2538,7 +2538,7 @@ roleApi.deleteRoleContextByUid(contextName, uid ,  new AsyncHandler<DeleteRespon
 
 
 
-<h5 id="DeleteRolesFromRoleContextByUid-delete-">Delete Role from Context (DELETE)</h6>
+<h5 id="DeleteRolesFromRoleContextByUid-delete-">Delete Role from Context (DELETE)</h5>
  This API Deletes the specified Role from a Context.
 
 ```java
@@ -2570,7 +2570,7 @@ roleApi.deleteRolesFromRoleContextByUid(contextName,  roleContextRemoveRoleModel
 
 
 
-<h5 id="DeleteAdditionalPermissionFromRoleContextByUid-delete-">Delete Additional Permission from Context (DELETE)</h6>
+<h5 id="DeleteAdditionalPermissionFromRoleContextByUid-delete-">Delete Additional Permission from Context (DELETE)</h5>
  This API Deletes Additional Permissions from Context.
 
 ```java
@@ -2602,7 +2602,7 @@ roleApi.deleteAdditionalPermissionFromRoleContextByUid(contextName,  roleContext
 
 
 
-<h5 id="DeleteRole-delete-">Account Delete Role (DELETE)</h6>
+<h5 id="DeleteRole-delete-">Account Delete Role (DELETE)</h5>
  This API is used to delete the role.
 
 ```java
@@ -2629,7 +2629,7 @@ roleApi.deleteRole(role ,  new AsyncHandler<DeleteResponse> (){
 
 
 
-<h5 id="RemoveRolePermissions-delete-">Remove Permissions (DELETE)</h6>
+<h5 id="RemoveRolePermissions-delete-">Remove Permissions (DELETE)</h5>
  API is used to remove permissions from a role.
 
 ```java
@@ -2673,7 +2673,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="GenerateSott-get-">Generate SOTT (GET)</h6>
+<h5 id="GenerateSott-get-">Generate SOTT (GET)</h5>
  This API allows you to generate SOTT with a given expiration time.
 
 ```java
@@ -2718,7 +2718,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="GetAccessTokenByFacebookAccessToken-get-">Access Token via Facebook Token (GET)</h6>
+<h5 id="GetAccessTokenByFacebookAccessToken-get-">Access Token via Facebook Token (GET)</h5>
  The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.
 
 ```java
@@ -2745,7 +2745,7 @@ nativeSocialApi.getAccessTokenByFacebookAccessToken(fbAccessToken ,  new AsyncHa
 
 
 
-<h5 id="GetAccessTokenByTwitterAccessToken-get-">Access Token via Twitter Token (GET)</h6>
+<h5 id="GetAccessTokenByTwitterAccessToken-get-">Access Token via Twitter Token (GET)</h5>
  The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.
 
 ```java
@@ -2773,7 +2773,7 @@ nativeSocialApi.getAccessTokenByTwitterAccessToken(twAccessToken, twTokenSecret 
 
 
 
-<h5 id="GetAccessTokenByGoogleAccessToken-get-">Access Token via Google Token (GET)</h6>
+<h5 id="GetAccessTokenByGoogleAccessToken-get-">Access Token via Google Token (GET)</h5>
  The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.
 
 ```java
@@ -2802,7 +2802,7 @@ nativeSocialApi.getAccessTokenByGoogleAccessToken(googleAccessToken, clientId, r
 
 
 
-<h5 id="GetAccessTokenByGoogleJWTAccessToken-get-">Access Token using google JWT token for Native Mobile Login (GET)</h6>
+<h5 id="GetAccessTokenByGoogleJWTAccessToken-get-">Access Token using google JWT token for Native Mobile Login (GET)</h5>
  This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.
 
 ```java
@@ -2829,7 +2829,7 @@ nativeSocialApi.getAccessTokenByGoogleJWTAccessToken(idToken ,  new AsyncHandler
 
 
 
-<h5 id="GetAccessTokenByLinkedinAccessToken-get-">Access Token via Linkedin Token (GET)</h6>
+<h5 id="GetAccessTokenByLinkedinAccessToken-get-">Access Token via Linkedin Token (GET)</h5>
  The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.
 
 ```java
@@ -2856,7 +2856,7 @@ nativeSocialApi.getAccessTokenByLinkedinAccessToken(lnAccessToken ,  new AsyncHa
 
 
 
-<h5 id="GetAccessTokenByGoogleAuthCode-get-">Access Token via Google AuthCode (GET)</h6>
+<h5 id="GetAccessTokenByGoogleAuthCode-get-">Access Token via Google AuthCode (GET)</h5>
  The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.
 
 ```java
@@ -2899,7 +2899,7 @@ List of APIs in this Section:<br>
 
 
 
-<h5 id="WebHookSubscribe-post-">Webhook Subscribe (POST)</h6>
+<h5 id="WebHookSubscribe-post-">Webhook Subscribe (POST)</h5>
  API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
 
 ```java
@@ -2928,7 +2928,7 @@ webHookApi.webHookSubscribe( webHookSubscribeModel ,  new AsyncHandler<PostRespo
 
 
 
-<h5 id="GetWebHookSubscribedURLs-get-">Webhook Subscribed URLs (GET)</h6>
+<h5 id="GetWebHookSubscribedURLs-get-">Webhook Subscribed URLs (GET)</h5>
  This API is used to fatch all the subscribed URLs, for particular event
 
 ```java
@@ -2955,7 +2955,7 @@ webHookApi.getWebHookSubscribedURLs(event ,  new AsyncHandler<ListData<com.login
 
 
 
-<h5 id="WebhookTest-get-">Webhook Test (GET)</h6>
+<h5 id="WebhookTest-get-">Webhook Test (GET)</h5>
  API can be used to test a subscribed WebHook.
 
 ```java
@@ -2981,7 +2981,7 @@ webHookApi.webhookTest( new AsyncHandler<EntityPermissionAcknowledgement> (){
 
 
 
-<h5 id="WebHookUnsubscribe-delete-">WebHook Unsubscribe (DELETE)</h6>
+<h5 id="WebHookUnsubscribe-delete-">WebHook Unsubscribe (DELETE)</h5>
  API can be used to unsubscribe a WebHook configured on your LoginRadius site.
 
 ```java

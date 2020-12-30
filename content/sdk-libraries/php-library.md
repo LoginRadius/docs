@@ -188,7 +188,7 @@ $authenticationAPI = new AuthenticationAPI();
 ```
 
 
-<h5 id="UpdateProfileByAccessToken-put-">Auth Update Profile by Token (PUT)</h6>
+<h5 id="UpdateProfileByAccessToken-put-">Auth Update Profile by Token (PUT)</h5>
 This API is used to update the user's profile by passing the access token.
  
 
@@ -209,7 +209,7 @@ $result = $authenticationAPI->updateProfileByAccessToken($access_token,$payload,
  ```
 
  
-<h5 id="VerifyEmailByOTP-put-">Auth Verify Email By OTP (PUT)</h6>
+<h5 id="VerifyEmailByOTP-put-">Auth Verify Email By OTP (PUT)</h5>
 This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
  
 
@@ -227,7 +227,7 @@ $result = $authenticationAPI->verifyEmailByOTP($payload,$fields,$url,$welcomeEma
  ```
 
  
-<h5 id="ResetPasswordByResetToken-put-">Auth Reset Password by Reset Token (PUT)</h6>
+<h5 id="ResetPasswordByResetToken-put-">Auth Reset Password by Reset Token (PUT)</h5>
 This API is used to set a new password for the specified account.
  
 
@@ -242,7 +242,7 @@ $result = $authenticationAPI->resetPasswordByResetToken($payload);
  ```
 
  
-<h5 id="ChangePassword-put-">Auth Change Password (PUT)</h6>
+<h5 id="ChangePassword-put-">Auth Change Password (PUT)</h5>
 This API is used to change the accounts password based on the previous password
  
 
@@ -256,7 +256,7 @@ $result = $authenticationAPI->changePassword($access_token,$newPassword,$oldPass
  ```
 
  
-<h5 id="AuthResendEmailVerification-put-">Auth Resend Email Verification (PUT)</h6>
+<h5 id="AuthResendEmailVerification-put-">Auth Resend Email Verification (PUT)</h5>
 This API resends the verification email to the user.
  
 
@@ -270,7 +270,7 @@ $result = $authenticationAPI->authResendEmailVerification($email,$emailTemplate,
  ```
 
  
-<h5 id="AddEmail-post-">Auth Add Email (POST)</h6>
+<h5 id="AddEmail-post-">Auth Add Email (POST)</h5>
 This API is used to add additional emails to a user's account.
  
 
@@ -286,7 +286,7 @@ $result = $authenticationAPI->addEmail($access_token,$email,$type,$emailTemplate
  ```
 
  
-<h5 id="LoginByEmail-post-">Auth Login by Email (POST)</h6>
+<h5 id="LoginByEmail-post-">Auth Login by Email (POST)</h5>
 This API retrieves a copy of the user data based on the Email
  
 
@@ -305,7 +305,7 @@ $result = $authenticationAPI->loginByEmail($payload,$emailTemplate,$fields,$logi
  ```
 
  
-<h5 id="ForgotPassword-post-">Auth Forgot Password (POST)</h6>
+<h5 id="ForgotPassword-post-">Auth Forgot Password (POST)</h5>
 This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'
  
 
@@ -319,7 +319,7 @@ $result = $authenticationAPI->forgotPassword($email,$resetPasswordUrl,$emailTemp
  ```
 
  
-<h5 id="UserRegistrationByEmail-post-">Auth User Registration by Email (POST)</h6>
+<h5 id="UserRegistrationByEmail-post-">Auth User Registration by Email (POST)</h5>
 This API creates a user in the database as well as sends a verification email to the user.
  
 
@@ -345,7 +345,7 @@ $result = $authenticationAPI->userRegistrationByEmail($payload,$sott,$emailTempl
  ```
 
  
-<h5 id="UserRegistrationByCaptcha-post-">Auth User Registration By Captcha (POST)</h6>
+<h5 id="UserRegistrationByCaptcha-post-">Auth User Registration By Captcha (POST)</h5>
 This API creates a user in the database as well as sends a verification email to the user.
  
 
@@ -372,7 +372,7 @@ $result = $authenticationAPI->userRegistrationByCaptcha($payload,$emailTemplate,
  ```
 
  
-<h5 id="AuthValidateAccessToken-get-">Auth Validate Access token (GET)</h6>
+<h5 id="AuthValidateAccessToken-get-">Auth Validate Access token (GET)</h5>
 This api validates access token, if valid then returns a response with its expiry otherwise error.
  
 
@@ -384,7 +384,7 @@ $result = $authenticationAPI->authValidateAccessToken($access_token);
  ```
 
  
-<h5 id="AuthInValidateAccessToken-get-">Access Token Invalidate (GET)</h6>
+<h5 id="AuthInValidateAccessToken-get-">Access Token Invalidate (GET)</h5>
 This api call invalidates the active access token or expires an access token's validity.
  
 
@@ -397,7 +397,7 @@ $result = $authenticationAPI->authInValidateAccessToken($access_token,$preventRe
  ```
 
  
-<h5 id="GetAccessTokenInfo-get-">Access Token Info (GET)</h6>
+<h5 id="GetAccessTokenInfo-get-">Access Token Info (GET)</h5>
 This api call provide the active access token Information
  
 
@@ -409,7 +409,7 @@ $result = $authenticationAPI->getAccessTokenInfo($access_token);
  ```
 
  
-<h5 id="GetProfileByAccessToken-get-">Auth Read all Profiles by Token (GET)</h6>
+<h5 id="GetProfileByAccessToken-get-">Auth Read all Profiles by Token (GET)</h5>
 This API retrieves a copy of the user data based on the access token.
  
 
@@ -423,7 +423,7 @@ $result = $authenticationAPI->getProfileByAccessToken($access_token,$fields);
 
 
  
-<h5 id="DeleteAccountByDeleteToken-get-">Auth Delete Account (GET)</h6>
+<h5 id="DeleteAccountByDeleteToken-get-">Auth Delete Account (GET)</h5>
 This API is used to delete an account by passing it a delete token.
  
 
@@ -435,7 +435,7 @@ $result = $authenticationAPI->deleteAccountByDeleteToken($deletetoken);
  ```
 
  
-<h5 id="CheckEmailAvailability-get-">Auth Check Email Availability (GET)</h6>
+<h5 id="CheckEmailAvailability-get-">Auth Check Email Availability (GET)</h5>
 This API is used to check the email exists or not on your site.
  
 
@@ -447,7 +447,7 @@ $result = $authenticationAPI->checkEmailAvailability($email);
  ```
 
  
-<h5 id="VerifyEmail-get-">Auth Verify Email (GET)</h6>
+<h5 id="VerifyEmail-get-">Auth Verify Email (GET)</h5>
 This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
  
 
@@ -462,7 +462,7 @@ $result = $authenticationAPI->verifyEmail($verificationToken,$fields,$url,$welco
  ```
 
  
-<h5 id="GetSocialIdentity-get-">Auth Social Identity (GET)</h6>
+<h5 id="GetSocialIdentity-get-">Auth Social Identity (GET)</h5>
 This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
  
 
@@ -475,7 +475,7 @@ $result = $authenticationAPI->getSocialIdentity($access_token,$fields);
  ```
 
  
-<h5 id="DeleteAccountWithEmailConfirmation-delete-">Auth Delete Account with Email Confirmation (DELETE)</h6>
+<h5 id="DeleteAccountWithEmailConfirmation-delete-">Auth Delete Account with Email Confirmation (DELETE)</h5>
 This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token
  
 
@@ -489,7 +489,7 @@ $result = $authenticationAPI->deleteAccountWithEmailConfirmation($access_token,$
  ```
 
  
-<h5 id="RemoveEmail-delete-">Auth Remove Email (DELETE)</h6>
+<h5 id="RemoveEmail-delete-">Auth Remove Email (DELETE)</h5>
 This API is used to remove additional emails from a user's account.
  
 
@@ -534,7 +534,7 @@ $accountAPI = new AccountAPI();
 ```
 
 
-<h5 id="UpdateAccountByUid-put-">Account Update (PUT)</h6>
+<h5 id="UpdateAccountByUid-put-">Account Update (PUT)</h5>
 This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
  
 
@@ -552,7 +552,7 @@ $result = $accountAPI->updateAccountByUid($payload,$uid,$fields,$nullSupport);
  ```
 
  
-<h5 id="UpdatePhoneIDByUid-put-">Update Phone ID by UID (PUT)</h6>
+<h5 id="UpdatePhoneIDByUid-put-">Update Phone ID by UID (PUT)</h5>
 This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
  
 
@@ -566,7 +566,7 @@ $result = $accountAPI->updatePhoneIDByUid($phone,$uid,$fields);
  ```
 
  
-<h5 id="SetAccountPasswordByUid-put-">Account Set Password (PUT)</h6>
+<h5 id="SetAccountPasswordByUid-put-">Account Set Password (PUT)</h5>
 This API is used to set the password of an account in Cloud Storage.
  
 
@@ -579,7 +579,7 @@ $result = $accountAPI->setAccountPasswordByUid($password,$uid);
  ```
 
  
-<h5 id="InvalidateAccountEmailVerification-put-">Account Invalidate Verification Email (PUT)</h6>
+<h5 id="InvalidateAccountEmailVerification-put-">Account Invalidate Verification Email (PUT)</h5>
 This API is used to invalidate the Email Verification status on an account.
  
 
@@ -593,7 +593,7 @@ $result = $accountAPI->invalidateAccountEmailVerification($uid,$emailTemplate,$v
  ```
 
  
-<h5 id="ResetPhoneIDVerificationByUid-put-">Reset phone ID verification (PUT)</h6>
+<h5 id="ResetPhoneIDVerificationByUid-put-">Reset phone ID verification (PUT)</h5>
 This API Allows you to reset the phone no verification of an end user’s account.
  
 
@@ -606,7 +606,7 @@ $result = $accountAPI->resetPhoneIDVerificationByUid($uid,$smsTemplate);
  ```
 
  
-<h5 id="UpsertEmail-put-">Upsert Email (PUT)</h6>
+<h5 id="UpsertEmail-put-">Upsert Email (PUT)</h5>
 This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.
  
 
@@ -625,7 +625,7 @@ $result = $accountAPI->upsertEmail($payload,$uid,$fields);
  ```
 
  
-<h5 id="AccountUpdateUid-put-">Update UID (PUT)</h6>
+<h5 id="AccountUpdateUid-put-">Update UID (PUT)</h5>
 This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.
  
 
@@ -640,7 +640,7 @@ $result = $accountAPI->accountUpdateUid($payload,$uid);
  ```
 
  
-<h5 id="CreateAccount-post-">Account Create (POST)</h6>
+<h5 id="CreateAccount-post-">Account Create (POST)</h5>
 This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields
  
 
@@ -661,7 +661,7 @@ $result = $accountAPI->createAccount($payload,$fields);
  ```
 
  
-<h5 id="GetForgotPasswordToken-post-">Forgot Password token (POST)</h6>
+<h5 id="GetForgotPasswordToken-post-">Forgot Password token (POST)</h5>
 This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.
  
 
@@ -676,7 +676,7 @@ $result = $accountAPI->getForgotPasswordToken($email,$emailTemplate,$resetPasswo
  ```
 
  
-<h5 id="GetEmailVerificationToken-post-">Email Verification token (POST)</h6>
+<h5 id="GetEmailVerificationToken-post-">Email Verification token (POST)</h5>
 This API Returns an Email Verification token.
  
 
@@ -688,7 +688,7 @@ $result = $accountAPI->getEmailVerificationToken($email);
  ```
 
  
-<h5 id="GetAccountProfileByEmail-get-">Account Profiles by Email (GET)</h6>
+<h5 id="GetAccountProfileByEmail-get-">Account Profiles by Email (GET)</h5>
 This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.
  
 
@@ -701,7 +701,7 @@ $result = $accountAPI->getAccountProfileByEmail($email,$fields);
  ```
 
  
-<h5 id="GetAccountProfileByPhone-get-">Account Profile by Phone ID (GET)</h6>
+<h5 id="GetAccountProfileByPhone-get-">Account Profile by Phone ID (GET)</h5>
 This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.
  
 
@@ -714,7 +714,7 @@ $result = $accountAPI->getAccountProfileByPhone($phone,$fields);
  ```
 
  
-<h5 id="GetAccountProfileByUid-get-">Account Profiles by UID (GET)</h6>
+<h5 id="GetAccountProfileByUid-get-">Account Profiles by UID (GET)</h5>
 This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.
  
 
@@ -727,7 +727,7 @@ $result = $accountAPI->getAccountProfileByUid($uid,$fields);
  ```
 
  
-<h5 id="GetAccountPasswordHashByUid-get-">Account Password (GET)</h6>
+<h5 id="GetAccountPasswordHashByUid-get-">Account Password (GET)</h5>
 This API use to retrive the hashed password of a specified account in Cloud Storage.
  
 
@@ -739,7 +739,7 @@ $result = $accountAPI->getAccountPasswordHashByUid($uid);
  ```
 
  
-<h5 id="GetAccessTokenByUid-get-">Access Token based on UID or User impersonation API (GET)</h6>
+<h5 id="GetAccessTokenByUid-get-">Access Token based on UID or User impersonation API (GET)</h5>
 The API is used to get LoginRadius access token based on UID.
  
 
@@ -751,7 +751,7 @@ $result = $accountAPI->getAccessTokenByUid($uid);
  ```
 
  
-<h5 id="GetAccountIdentitiesByEmail-get-">Account Identities by Email (GET)</h6>
+<h5 id="GetAccountIdentitiesByEmail-get-">Account Identities by Email (GET)</h5>
 Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
  
 
@@ -764,7 +764,7 @@ $result = $accountAPI->getAccountIdentitiesByEmail($email,$fields);
  ```
 
  
-<h5 id="DeleteAccountByUid-delete-">Account Delete (DELETE)</h6>
+<h5 id="DeleteAccountByUid-delete-">Account Delete (DELETE)</h5>
 This API deletes the Users account and allows them to re-register for a new account.
  
 
@@ -776,7 +776,7 @@ $result = $accountAPI->deleteAccountByUid($uid);
  ```
 
  
-<h5 id="RemoveEmail-delete-">Account Remove Email (DELETE)</h6>
+<h5 id="RemoveEmail-delete-">Account Remove Email (DELETE)</h5>
 Use this API to Remove emails from a user Account
  
 
@@ -790,7 +790,7 @@ $result = $accountAPI->removeEmail($email,$uid,$fields);
  ```
 
  
-<h5 id="AccountDeleteByEmail-delete-">Delete User Profiles By Email (DELETE)</h6>
+<h5 id="AccountDeleteByEmail-delete-">Delete User Profiles By Email (DELETE)</h5>
 This API is used to delete all user profiles associated with an Email.
  
 
@@ -826,7 +826,7 @@ $phoneAuthenticationAPI = new PhoneAuthenticationAPI();
 ```
 
 
-<h5 id="ResetPasswordByPhoneOTP-put-">Phone Reset Password by OTP (PUT)</h6>
+<h5 id="ResetPasswordByPhoneOTP-put-">Phone Reset Password by OTP (PUT)</h5>
 This API is used to reset the password
  
 
@@ -842,7 +842,7 @@ $result = $phoneAuthenticationAPI->resetPasswordByPhoneOTP($payload);
  ```
 
  
-<h5 id="PhoneVerificationByOTP-put-">Phone Verification OTP (PUT)</h6>
+<h5 id="PhoneVerificationByOTP-put-">Phone Verification OTP (PUT)</h5>
 This API is used to validate the verification code sent to verify a user's phone number
  
 
@@ -857,7 +857,7 @@ $result = $phoneAuthenticationAPI->phoneVerificationByOTP($otp,$phone,$fields,$s
  ```
 
  
-<h5 id="PhoneVerificationOTPByAccessToken-put-">Phone Verification OTP by Token (PUT)</h6>
+<h5 id="PhoneVerificationOTPByAccessToken-put-">Phone Verification OTP by Token (PUT)</h5>
 This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
  
 
@@ -871,7 +871,7 @@ $result = $phoneAuthenticationAPI->phoneVerificationOTPByAccessToken($access_tok
  ```
 
  
-<h5 id="UpdatePhoneNumber-put-">Phone Number Update (PUT)</h6>
+<h5 id="UpdatePhoneNumber-put-">Phone Number Update (PUT)</h5>
 This API is used to update the login Phone Number of users
  
 
@@ -885,7 +885,7 @@ $result = $phoneAuthenticationAPI->updatePhoneNumber($access_token,$phone,$smsTe
  ```
 
  
-<h5 id="LoginByPhone-post-">Phone Login (POST)</h6>
+<h5 id="LoginByPhone-post-">Phone Login (POST)</h5>
 This API retrieves a copy of the user data based on the Phone
  
 
@@ -903,7 +903,7 @@ $result = $phoneAuthenticationAPI->loginByPhone($payload,$fields,$loginUrl,$smsT
  ```
 
  
-<h5 id="ForgotPasswordByPhoneOTP-post-">Phone Forgot Password by OTP (POST)</h6>
+<h5 id="ForgotPasswordByPhoneOTP-post-">Phone Forgot Password by OTP (POST)</h5>
 This API is used to send the OTP to reset the account password.
  
 
@@ -916,7 +916,7 @@ $result = $phoneAuthenticationAPI->forgotPasswordByPhoneOTP($phone,$smsTemplate)
  ```
 
  
-<h5 id="PhoneResendVerificationOTP-post-">Phone Resend Verification OTP (POST)</h6>
+<h5 id="PhoneResendVerificationOTP-post-">Phone Resend Verification OTP (POST)</h5>
 This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input
  
 
@@ -929,7 +929,7 @@ $result = $phoneAuthenticationAPI->phoneResendVerificationOTP($phone,$smsTemplat
  ```
 
  
-<h5 id="PhoneResendVerificationOTPByToken-post-">Phone Resend Verification OTP By Token (POST)</h6>
+<h5 id="PhoneResendVerificationOTPByToken-post-">Phone Resend Verification OTP By Token (POST)</h5>
 This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists
  
 
@@ -943,7 +943,7 @@ $result = $phoneAuthenticationAPI->phoneResendVerificationOTPByToken($access_tok
  ```
 
  
-<h5 id="UserRegistrationByPhone-post-">Phone User Registration by SMS (POST)</h6>
+<h5 id="UserRegistrationByPhone-post-">Phone User Registration by SMS (POST)</h5>
 This API registers the new users into your Cloud Storage and triggers the phone verification process.
  
 
@@ -966,7 +966,7 @@ $result = $phoneAuthenticationAPI->userRegistrationByPhone($payload,$sott,$field
  ```
 
  
-<h5 id="CheckPhoneNumberAvailability-get-">Phone Number Availability (GET)</h6>
+<h5 id="CheckPhoneNumberAvailability-get-">Phone Number Availability (GET)</h5>
 This API is used to check the Phone Number exists or not on your site.
  
 
@@ -978,7 +978,7 @@ $result = $phoneAuthenticationAPI->checkPhoneNumberAvailability($phone);
  ```
 
  
-<h5 id="RemovePhoneIDByAccessToken-delete-">Remove Phone ID by Access Token (DELETE)</h6>
+<h5 id="RemovePhoneIDByAccessToken-delete-">Remove Phone ID by Access Token (DELETE)</h5>
 This API is used to delete the Phone ID on a user's account via the access token
  
 
@@ -1015,7 +1015,7 @@ $multiFactorAuthenticationAPI = new MultiFactorAuthenticationAPI();
 ```
 
 
-<h5 id="MFAUpdateByAccessToken-put-">Update MFA by Access Token (PUT)</h6>
+<h5 id="MFAUpdateByAccessToken-put-">Update MFA by Access Token (PUT)</h5>
 This API is used to Enable Multi-factor authentication by access token on user login
  
 
@@ -1032,7 +1032,7 @@ $result = $multiFactorAuthenticationAPI->mfaUpdateByAccessToken($access_token,$p
  ```
 
  
-<h5 id="MFAUpdatePhoneNumberByToken-put-">MFA Update Phone Number by Token (PUT)</h6>
+<h5 id="MFAUpdatePhoneNumberByToken-put-">MFA Update Phone Number by Token (PUT)</h5>
 This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number
  
 
@@ -1046,7 +1046,7 @@ $result = $multiFactorAuthenticationAPI->mfaUpdatePhoneNumberByToken($access_tok
  ```
 
  
-<h5 id="MFAValidateGoogleAuthCode-put-">MFA Validate Google Auth Code (PUT)</h6>
+<h5 id="MFAValidateGoogleAuthCode-put-">MFA Validate Google Auth Code (PUT)</h5>
 This API is used to login via Multi-factor-authentication by passing the google authenticator code.
  
 
@@ -1061,7 +1061,7 @@ $result = $multiFactorAuthenticationAPI->mfaValidateGoogleAuthCode($googleAuthen
  ```
 
  
-<h5 id="MFAUpdatePhoneNumber-put-">MFA Update Phone Number (PUT)</h6>
+<h5 id="MFAUpdatePhoneNumber-put-">MFA Update Phone Number (PUT)</h5>
 This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number
  
 
@@ -1075,7 +1075,7 @@ $result = $multiFactorAuthenticationAPI->mfaUpdatePhoneNumber($phoneNo2FA,$secon
  ```
 
  
-<h5 id="MFALoginByEmail-post-">MFA Email Login (POST)</h6>
+<h5 id="MFALoginByEmail-post-">MFA Email Login (POST)</h5>
 This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.
  
 
@@ -1094,7 +1094,7 @@ $result = $multiFactorAuthenticationAPI->mfaLoginByEmail($email,$password,$email
  ```
 
  
-<h5 id="MFALoginByPhone-post-">MFA Phone Login (POST)</h6>
+<h5 id="MFALoginByPhone-post-">MFA Phone Login (POST)</h5>
 This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.
  
 
@@ -1113,7 +1113,7 @@ $result = $multiFactorAuthenticationAPI->mfaLoginByPhone($password,$phone,$email
  ```
 
  
-<h5 id="MFAConfigureByAccessToken-get-">MFA Validate Access Token (GET)</h6>
+<h5 id="MFAConfigureByAccessToken-get-">MFA Validate Access Token (GET)</h5>
 This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.
  
 
@@ -1126,7 +1126,7 @@ $result = $multiFactorAuthenticationAPI->mfaConfigureByAccessToken($access_token
  ```
 
  
-<h5 id="MFAResendOTP-get-">MFA Resend Otp (GET)</h6>
+<h5 id="MFAResendOTP-get-">MFA Resend Otp (GET)</h5>
 This API is used to resending the verification OTP to the provided phone number
  
 
@@ -1139,7 +1139,7 @@ $result = $multiFactorAuthenticationAPI->mfaResendOTP($secondFactorAuthenticatio
  ```
 
  
-<h5 id="MFAResetGoogleAuthByToken-delete-">MFA Reset Google Authenticator by Token (DELETE)</h6>
+<h5 id="MFAResetGoogleAuthByToken-delete-">MFA Reset Google Authenticator by Token (DELETE)</h5>
 This API Resets the Google Authenticator configurations on a given account via the access token
  
 
@@ -1152,7 +1152,7 @@ $result = $multiFactorAuthenticationAPI->mfaResetGoogleAuthByToken($access_token
  ```
 
  
-<h5 id="MFAResetSMSAuthByToken-delete-">MFA Reset SMS Authenticator by Token (DELETE)</h6>
+<h5 id="MFAResetSMSAuthByToken-delete-">MFA Reset SMS Authenticator by Token (DELETE)</h5>
 This API resets the SMS Authenticator configurations on a given account via the access token.
  
 
@@ -1165,7 +1165,7 @@ $result = $multiFactorAuthenticationAPI->mfaResetSMSAuthByToken($access_token,$o
  ```
 
  
-<h5 id="MFAResetSMSAuthenticatorByUid-delete-">MFA Reset SMS Authenticator By UID (DELETE)</h6>
+<h5 id="MFAResetSMSAuthenticatorByUid-delete-">MFA Reset SMS Authenticator By UID (DELETE)</h5>
 This API resets the SMS Authenticator configurations on a given account via the UID.
  
 
@@ -1178,7 +1178,7 @@ $result = $multiFactorAuthenticationAPI->mfaResetSMSAuthenticatorByUid($otpauthe
  ```
 
  
-<h5 id="MFAResetGoogleAuthenticatorByUid-delete-">MFA Reset Google Authenticator By UID (DELETE)</h6>
+<h5 id="MFAResetGoogleAuthenticatorByUid-delete-">MFA Reset Google Authenticator By UID (DELETE)</h5>
 This API resets the Google Authenticator configurations on a given account via the UID.
  
 
@@ -1208,7 +1208,7 @@ $passwordLessLoginAPI = new PasswordLessLoginAPI();
 ```
 
 
-<h5 id="PasswordlessLoginPhoneVerification-put-">Passwordless Login Phone Verification (PUT)</h6>
+<h5 id="PasswordlessLoginPhoneVerification-put-">Passwordless Login Phone Verification (PUT)</h5>
 This API verifies an account by OTP and allows the customer to login.
  
 
@@ -1225,7 +1225,7 @@ $result = $passwordLessLoginAPI->passwordlessLoginPhoneVerification($payload,$fi
  ```
 
  
-<h5 id="PasswordlessLoginByPhone-get-">Passwordless Login by Phone (GET)</h6>
+<h5 id="PasswordlessLoginByPhone-get-">Passwordless Login by Phone (GET)</h5>
 API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID
  
 
@@ -1238,7 +1238,7 @@ $result = $passwordLessLoginAPI->passwordlessLoginByPhone($phone,$smsTemplate);
  ```
 
  
-<h5 id="PasswordlessLoginByEmail-get-">Passwordless Login By Email (GET)</h6>
+<h5 id="PasswordlessLoginByEmail-get-">Passwordless Login By Email (GET)</h5>
 This API is used to send a Passwordless Login verification link to the provided Email ID
  
 
@@ -1252,7 +1252,7 @@ $result = $passwordLessLoginAPI->passwordlessLoginByEmail($email,$passwordLessLo
  ```
 
  
-<h5 id="PasswordlessLoginVerification-get-">Passwordless Login Verification (GET)</h6>
+<h5 id="PasswordlessLoginVerification-get-">Passwordless Login Verification (GET)</h5>
 This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API
  
 
@@ -1293,7 +1293,7 @@ $roleAPI = new RoleAPI();
 ```
 
 
-<h5 id="AssignRolesByUid-put-">Assign Roles by UID (PUT)</h6>
+<h5 id="AssignRolesByUid-put-">Assign Roles by UID (PUT)</h5>
 This API is used to assign your desired roles to a given user.
  
 
@@ -1308,7 +1308,7 @@ $result = $roleAPI->assignRolesByUid($payload,$uid);
  ```
 
  
-<h5 id="UpdateRoleContextByUid-put-">Upsert Context (PUT)</h6>
+<h5 id="UpdateRoleContextByUid-put-">Upsert Context (PUT)</h5>
 This API creates a Context with a set of Roles
  
 
@@ -1328,7 +1328,7 @@ $result = $roleAPI->updateRoleContextByUid($payload,$uid);
  ```
 
  
-<h5 id="AddRolePermissions-put-">Add Permissions to Role (PUT)</h6>
+<h5 id="AddRolePermissions-put-">Add Permissions to Role (PUT)</h5>
 This API is used to add permissions to a given role.
  
 
@@ -1343,7 +1343,7 @@ $result = $roleAPI->addRolePermissions($payload,$role);
  ```
 
  
-<h5 id="CreateRoles-post-">Roles Create (POST)</h6>
+<h5 id="CreateRoles-post-">Roles Create (POST)</h5>
 This API creates a role with permissions.
  
 
@@ -1360,7 +1360,7 @@ $result = $roleAPI->createRoles($payload);
  ```
 
  
-<h5 id="GetRolesByUid-get-">Roles by UID (GET)</h6>
+<h5 id="GetRolesByUid-get-">Roles by UID (GET)</h5>
 API is used to retrieve all the assigned roles of a particular User.
  
 
@@ -1372,7 +1372,7 @@ $result = $roleAPI->getRolesByUid($uid);
  ```
 
  
-<h5 id="GetRoleContextByUid-get-">Get Context with Roles and Permissions (GET)</h6>
+<h5 id="GetRoleContextByUid-get-">Get Context with Roles and Permissions (GET)</h5>
 This API Gets the contexts that have been configured and the associated roles and permissions.
  
 
@@ -1384,7 +1384,7 @@ $result = $roleAPI->getRoleContextByUid($uid);
  ```
 
  
-<h5 id="GetRoleContextByContextName-get-">Role Context profile (GET)</h6>
+<h5 id="GetRoleContextByContextName-get-">Role Context profile (GET)</h5>
 The API is used to retrieve role context by the context name.
  
 
@@ -1396,7 +1396,7 @@ $result = $roleAPI->getRoleContextByContextName($contextName);
  ```
 
  
-<h5 id="GetRolesList-get-">Roles List (GET)</h6>
+<h5 id="GetRolesList-get-">Roles List (GET)</h5>
 This API retrieves the complete list of created roles with permissions of your app.
  
 
@@ -1407,7 +1407,7 @@ $result = $roleAPI->getRolesList();
  ```
 
  
-<h5 id="UnassignRolesByUid-delete-">Unassign Roles by UID (DELETE)</h6>
+<h5 id="UnassignRolesByUid-delete-">Unassign Roles by UID (DELETE)</h5>
 This API is used to unassign roles from a user.
  
 
@@ -1422,7 +1422,7 @@ $result = $roleAPI->unassignRolesByUid($payload,$uid);
  ```
 
  
-<h5 id="DeleteRoleContextByUid-delete-">Delete Role Context (DELETE)</h6>
+<h5 id="DeleteRoleContextByUid-delete-">Delete Role Context (DELETE)</h5>
 This API Deletes the specified Role Context
  
 
@@ -1435,7 +1435,7 @@ $result = $roleAPI->deleteRoleContextByUid($contextName,$uid);
  ```
 
  
-<h5 id="DeleteRolesFromRoleContextByUid-delete-">Delete Role from Context (DELETE)</h6>
+<h5 id="DeleteRolesFromRoleContextByUid-delete-">Delete Role from Context (DELETE)</h5>
 This API Deletes the specified Role from a Context.
  
 
@@ -1451,7 +1451,7 @@ $result = $roleAPI->deleteRolesFromRoleContextByUid($contextName,$payload,$uid);
  ```
 
  
-<h5 id="DeleteAdditionalPermissionFromRoleContextByUid-delete-">Delete Additional Permission from Context (DELETE)</h6>
+<h5 id="DeleteAdditionalPermissionFromRoleContextByUid-delete-">Delete Additional Permission from Context (DELETE)</h5>
 This API Deletes Additional Permissions from Context.
  
 
@@ -1467,7 +1467,7 @@ $result = $roleAPI->deleteAdditionalPermissionFromRoleContextByUid($contextName,
  ```
 
  
-<h5 id="DeleteRole-delete-">Account Delete Role (DELETE)</h6>
+<h5 id="DeleteRole-delete-">Account Delete Role (DELETE)</h5>
 This API is used to delete the role.
  
 
@@ -1479,7 +1479,7 @@ $result = $roleAPI->deleteRole($role);
  ```
 
  
-<h5 id="RemoveRolePermissions-delete-">Remove Permissions (DELETE)</h6>
+<h5 id="RemoveRolePermissions-delete-">Remove Permissions (DELETE)</h5>
 API is used to remove permissions from a role.
  
 
@@ -1508,7 +1508,7 @@ $sottAPI = new SottAPI();
 ```
 
 
-<h5 id="GenerateSott-get-">Generate SOTT (GET)</h6>
+<h5 id="GenerateSott-get-">Generate SOTT (GET)</h5>
 This API allows you to generate SOTT with a given expiration time.
  
 
@@ -1539,7 +1539,7 @@ $nativeSocialAPI = new NativeSocialAPI();
 ```
 
 
-<h5 id="GetAccessTokenByFacebookAccessToken-get-">Access Token via Facebook Token (GET)</h6>
+<h5 id="GetAccessTokenByFacebookAccessToken-get-">Access Token via Facebook Token (GET)</h5>
 The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.
  
 
@@ -1551,7 +1551,7 @@ $result = $nativeSocialAPI->getAccessTokenByFacebookAccessToken($fb_Access_Token
  ```
 
  
-<h5 id="GetAccessTokenByTwitterAccessToken-get-">Access Token via Twitter Token (GET)</h6>
+<h5 id="GetAccessTokenByTwitterAccessToken-get-">Access Token via Twitter Token (GET)</h5>
 The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.
  
 
@@ -1564,7 +1564,7 @@ $result = $nativeSocialAPI->getAccessTokenByTwitterAccessToken($tw_Access_Token,
  ```
 
  
-<h5 id="GetAccessTokenByGoogleAccessToken-get-">Access Token via Google Token (GET)</h6>
+<h5 id="GetAccessTokenByGoogleAccessToken-get-">Access Token via Google Token (GET)</h5>
 The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.
  
 
@@ -1578,7 +1578,7 @@ $result = $nativeSocialAPI->getAccessTokenByGoogleAccessToken($google_Access_Tok
  ```
 
  
-<h5 id="GetAccessTokenByGoogleJWTAccessToken-get-">Access Token using google JWT token for Native Mobile Login (GET)</h6>
+<h5 id="GetAccessTokenByGoogleJWTAccessToken-get-">Access Token using google JWT token for Native Mobile Login (GET)</h5>
 This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.
  
 
@@ -1590,7 +1590,7 @@ $result = $nativeSocialAPI->getAccessTokenByGoogleJWTAccessToken($id_Token);
  ```
 
  
-<h5 id="GetAccessTokenByLinkedinAccessToken-get-">Access Token via Linkedin Token (GET)</h6>
+<h5 id="GetAccessTokenByLinkedinAccessToken-get-">Access Token via Linkedin Token (GET)</h5>
 The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.
  
 
@@ -1602,7 +1602,7 @@ $result = $nativeSocialAPI->getAccessTokenByLinkedinAccessToken($ln_Access_Token
  ```
 
  
-<h5 id="GetAccessTokenByGoogleAuthCode-get-">Access Token via Google AuthCode (GET)</h6>
+<h5 id="GetAccessTokenByGoogleAuthCode-get-">Access Token via Google AuthCode (GET)</h5>
 The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.
  
 
@@ -1631,7 +1631,7 @@ $webHookAPI = new WebHookAPI();
 ```
 
 
-<h5 id="WebHookSubscribe-post-">Webhook Subscribe (POST)</h6>
+<h5 id="WebHookSubscribe-post-">Webhook Subscribe (POST)</h5>
 API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
  
 
@@ -1646,7 +1646,7 @@ $result = $webHookAPI->webHookSubscribe($payload);
  ```
 
  
-<h5 id="GetWebHookSubscribedURLs-get-">Webhook Subscribed URLs (GET)</h6>
+<h5 id="GetWebHookSubscribedURLs-get-">Webhook Subscribed URLs (GET)</h5>
 This API is used to fatch all the subscribed URLs, for particular event
  
 
@@ -1658,7 +1658,7 @@ $result = $webHookAPI->getWebHookSubscribedURLs($event);
  ```
 
  
-<h5 id="WebhookTest-get-">Webhook Test (GET)</h6>
+<h5 id="WebhookTest-get-">Webhook Test (GET)</h5>
 API can be used to test a subscribed WebHook.
  
 
@@ -1669,7 +1669,7 @@ $result = $webHookAPI->webhookTest();
  ```
 
  
-<h5 id="WebHookUnsubscribe-delete-">WebHook Unsubscribe (DELETE)</h6>
+<h5 id="WebHookUnsubscribe-delete-">WebHook Unsubscribe (DELETE)</h5>
 API can be used to unsubscribe a WebHook configured on your LoginRadius site.
  
 
