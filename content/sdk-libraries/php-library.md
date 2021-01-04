@@ -161,28 +161,28 @@ For more details check [API Refrence Here](https://www.loginradius.com/docs/deve
 ### Authentication API
 
 List of APIs in this Section:<br>
-[PUT : Auth Update Profile by Token](#auth-update-profile-by-token-put)
-[PUT : Auth Verify Email By OTP](#auth-verify-email-by-otp-put)
-[PUT : Auth Reset Password by Reset Token](#auth-reset-password-by-reset-token-put)
-[PUT : Auth Change Password](#auth-change-password-put)
-[PUT : Auth Resend Email Verification](#auth-resend-email-verification-put)
-[POST : Auth Add Email](#auth-add-email-post)
-[POST : Auth Login by Email](#auth-login-by-email-post)
-[POST : Auth Forgot Password](#auth-forgot-password-post)
-[POST : Auth User Registration by Email](#auth-user-registration-by-email-post)
-[POST : Auth User Registration By Captcha](#auth-user-registration-by-captcha-post)
-[GET : Auth Validate Access token](#auth-validate-access-token-get)
-[GET : Access Token Invalidate](#access-token-invalidate-get)
-[GET : Access Token Info](#access-token-info-get)
-[GET : Auth Read all Profiles by Token](#auth-read-all-profiles-by-token-get)
-[GET : Auth Send Welcome Email](#auth-send-welcome-email-get)
-[GET : Auth Delete Account](#auth-delete-account-get)
-[GET : Auth Check Email Availability](#auth-check-email-availability-get)
-[GET : Auth Verify Email](#auth-verify-email-get)
-[GET : Auth Social Identity](#auth-social-identity-get)
-[GET : Auth Privacy Policy Accept](#auth-privacy-policy-accept-get)
-[DELETE : Auth Delete Account with Email Confirmation](#auth-delete-account-with-email-confirmation-delete)
-[DELETE : Auth Remove Email](#auth-remove-email-delete)
+* [PUT : Auth Update Profile by Token](#auth-update-profile-by-token-put)
+* [PUT : Auth Verify Email By OTP](#auth-verify-email-by-otp-put)
+* [PUT : Auth Reset Password by Reset Token](#auth-reset-password-by-reset-token-put)
+* [PUT : Auth Change Password](#auth-change-password-put)
+* [PUT : Auth Resend Email Verification](#auth-resend-email-verification-put)
+* [POST : Auth Add Email](#auth-add-email-post)
+* [POST : Auth Login by Email](#auth-login-by-email-post)
+* [POST : Auth Forgot Password](#auth-forgot-password-post)
+* [POST : Auth User Registration by Email](#auth-user-registration-by-email-post)
+* [POST : Auth User Registration By Captcha](#auth-user-registration-by-captcha-post)
+* [GET : Auth Validate Access token](#auth-validate-access-token-get)
+* [GET : Access Token Invalidate](#access-token-invalidate-get)
+* [GET : Access Token Info](#access-token-info-get)
+* [GET : Auth Read all Profiles by Token](#auth-read-all-profiles-by-token-get)
+* [GET : Auth Send Welcome Email](#auth-send-welcome-email-get)
+* [GET : Auth Delete Account](#auth-delete-account-get)
+* [GET : Auth Check Email Availability](#auth-check-email-availability-get)
+* [GET : Auth Verify Email](#auth-verify-email-get)
+* [GET : Auth Social Identity](#auth-social-identity-get)
+* [GET : Auth Privacy Policy Accept](#auth-privacy-policy-accept-get)
+* [DELETE : Auth Delete Account with Email Confirmation](#auth-delete-account-with-email-confirmation-delete)
+* [DELETE : Auth Remove Email](#auth-remove-email-delete)
 
 If you have not already initialized the Authentication object do so now
 ```php
@@ -535,25 +535,25 @@ $result = $authenticationAPI->removeEmail($access_token,$email);
 ### Account API
 
 List of APIs in this Section:<br>
-[PUT : Account Update](#account-update-put)
-[PUT : Update Phone ID by UID](#update-phone-id-by-uid-put)
-[PUT : Account Set Password](#account-set-password-put)
-[PUT : Account Invalidate Verification Email](#account-invalidate-verification-email-put)
-[PUT : Reset phone ID verification](#reset-phone-id-verification-put)
-[PUT : Upsert Email](#upsert-email-put)
-[PUT : Update UID](#update-uid-put)
-[POST : Account Create](#account-create-post)
-[POST : Forgot Password token](#forgot-password-token-post)
-[POST : Email Verification token](#email-verification-token-post)
-[GET : Account Profiles by Email](#account-profiles-by-email-get)
-[GET : Account Profile by Phone ID](#account-profile-by-phone-id-get)
-[GET : Account Profiles by UID](#account-profiles-by-uid-get)
-[GET : Account Password](#account-password-get)
-[GET : Access Token based on UID or User impersonation API](#access-token-based-on-uid-or-user-impersonation-api-get)
-[GET : Account Identities by Email](#account-identities-by-email-get)
-[DELETE : Account Delete](#account-delete-delete)
-[DELETE : Account Remove Email](#account-remove-email-delete)
-[DELETE : Delete User Profiles By Email](#delete-user-profiles-by-email-delete)
+* [PUT : Account Update](#account-update-put)
+* [PUT : Update Phone ID by UID](#update-phone-id-by-uid-put)
+* [PUT : Account Set Password](#account-set-password-put)
+* [PUT : Account Invalidate Verification Email](#account-invalidate-verification-email-put)
+* [PUT : Reset phone ID verification](#reset-phone-id-verification-put)
+* [PUT : Upsert Email](#upsert-email-put)
+* [PUT : Update UID](#update-uid-put)
+* [POST : Account Create](#account-create-post)
+* [POST : Forgot Password token](#forgot-password-token-post)
+* [POST : Email Verification token](#email-verification-token-post)
+* [GET : Account Profiles by Email](#account-profiles-by-email-get)
+* [GET : Account Profile by Phone ID](#account-profile-by-phone-id-get)
+* [GET : Account Profiles by UID](#account-profiles-by-uid-get)
+* [GET : Account Password](#account-password-get)
+* [GET : Access Token based on UID or User impersonation API](#access-token-based-on-uid-or-user-impersonation-api-get)
+* [GET : Account Identities by Email](#account-identities-by-email-get)
+* [DELETE : Account Delete](#account-delete-delete)
+* [DELETE : Account Remove Email](#account-remove-email-delete)
+* [DELETE : Delete User Profiles By Email](#delete-user-profiles-by-email-delete)
 
 If you have not already initialized the Account object do so now
 ```php
@@ -835,17 +835,17 @@ $result = $accountAPI->accountDeleteByEmail($email);
 ### PhoneAuthentication API
 
 List of APIs in this Section:<br>
-[PUT : Phone Reset Password by OTP](#phone-reset-password-by-otp-put)
-[PUT : Phone Verification OTP](#phone-verification-otp-put)
-[PUT : Phone Verification OTP by Token](#phone-verification-otp-by-token-put)
-[PUT : Phone Number Update](#phone-number-update-put)
-[POST : Phone Login](#phone-login-post)
-[POST : Phone Forgot Password by OTP](#phone-forgot-password-by-otp-post)
-[POST : Phone Resend Verification OTP](#phone-resend-verification-otp-post)
-[POST : Phone Resend Verification OTP By Token](#phone-resend-verification-otp-by-token-post)
-[POST : Phone User Registration by SMS](#phone-user-registration-by-sms-post)
-[GET : Phone Number Availability](#phone-number-availability-get)
-[DELETE : Remove Phone ID by Access Token](#remove-phone-id-by-access-token-delete)
+* [PUT : Phone Reset Password by OTP](#phone-reset-password-by-otp-put)
+* [PUT : Phone Verification OTP](#phone-verification-otp-put)
+* [PUT : Phone Verification OTP by Token](#phone-verification-otp-by-token-put)
+* [PUT : Phone Number Update](#phone-number-update-put)
+* [POST : Phone Login](#phone-login-post)
+* [POST : Phone Forgot Password by OTP](#phone-forgot-password-by-otp-post)
+* [POST : Phone Resend Verification OTP](#phone-resend-verification-otp-post)
+* [POST : Phone Resend Verification OTP By Token](#phone-resend-verification-otp-by-token-post)
+* [POST : Phone User Registration by SMS](#phone-user-registration-by-sms-post)
+* [GET : Phone Number Availability](#phone-number-availability-get)
+* [DELETE : Remove Phone ID by Access Token](#remove-phone-id-by-access-token-delete)
 
 If you have not already initialized the PhoneAuthentication object do so now
 ```php
@@ -1023,18 +1023,18 @@ $result = $phoneAuthenticationAPI->removePhoneIDByAccessToken($access_token);
 ### MultiFactorAuthentication API
 
 List of APIs in this Section:<br>
-[PUT : Update MFA by Access Token](#update-mfa-by-access-token-put)
-[PUT : MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
-[PUT : MFA Validate Google Auth Code](#mfa-validate-google-auth-code-put)
-[PUT : MFA Update Phone Number](#mfa-update-phone-number-put)
-[POST : MFA Email Login](#mfa-email-login-post)
-[POST : MFA Phone Login](#mfa-phone-login-post)
-[GET : MFA Validate Access Token](#mfa-validate-access-token-get)
-[GET : MFA Resend Otp](#mfa-resend-otp-get)
-[DELETE : MFA Reset Google Authenticator by Token](#mfa-reset-google-authenticator-by-token-delete)
-[DELETE : MFA Reset SMS Authenticator by Token](#mfa-reset-sms-authenticator-by-token-delete)
-[DELETE : MFA Reset SMS Authenticator By UID](#mfa-reset-sms-authenticator-by-uid-delete)
-[DELETE : MFA Reset Google Authenticator By UID](#mfa-reset-google-authenticator-by-uid-delete)
+* [PUT : Update MFA by Access Token](#update-mfa-by-access-token-put)
+* [PUT : MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
+* [PUT : MFA Validate Google Auth Code](#mfa-validate-google-auth-code-put)
+* [PUT : MFA Update Phone Number](#mfa-update-phone-number-put)
+* [POST : MFA Email Login](#mfa-email-login-post)
+* [POST : MFA Phone Login](#mfa-phone-login-post)
+* [GET : MFA Validate Access Token](#mfa-validate-access-token-get)
+* [GET : MFA Resend Otp](#mfa-resend-otp-get)
+* [DELETE : MFA Reset Google Authenticator by Token](#mfa-reset-google-authenticator-by-token-delete)
+* [DELETE : MFA Reset SMS Authenticator by Token](#mfa-reset-sms-authenticator-by-token-delete)
+* [DELETE : MFA Reset SMS Authenticator By UID](#mfa-reset-sms-authenticator-by-uid-delete)
+* [DELETE : MFA Reset Google Authenticator By UID](#mfa-reset-google-authenticator-by-uid-delete)
 
 If you have not already initialized the MultiFactorAuthentication object do so now
 ```php
@@ -1224,10 +1224,10 @@ $result = $multiFactorAuthenticationAPI->mfaResetGoogleAuthenticatorByUid($googl
 ### PasswordLessLogin API
 
 List of APIs in this Section:<br>
-[PUT : Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
-[GET : Passwordless Login by Phone](#passwordless-login-by-phone-get)
-[GET : Passwordless Login By Email](#passwordless-login-by-email-get)
-[GET : Passwordless Login Verification](#passwordless-login-verification-get)
+* [PUT : Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
+* [GET : Passwordless Login by Phone](#passwordless-login-by-phone-get)
+* [GET : Passwordless Login By Email](#passwordless-login-by-email-get)
+* [GET : Passwordless Login Verification](#passwordless-login-verification-get)
 
 If you have not already initialized the PasswordLessLogin object do so now
 ```php
@@ -1299,20 +1299,20 @@ $result = $passwordLessLoginAPI->passwordlessLoginVerification($verificationToke
 ### Role API
 
 List of APIs in this Section:<br>
-[PUT : Assign Roles by UID](#assign-roles-by-uid-put)
-[PUT : Upsert Context](#upsert-context-put)
-[PUT : Add Permissions to Role](#add-permissions-to-role-put)
-[POST : Roles Create](#roles-create-post)
-[GET : Roles by UID](#roles-by-uid-get)
-[GET : Get Context with Roles and Permissions](#get-context-with-roles-and-permissions-get)
-[GET : Role Context profile](#role-context-profile-get)
-[GET : Roles List](#roles-list-get)
-[DELETE : Unassign Roles by UID](#unassign-roles-by-uid-delete)
-[DELETE : Delete Role Context](#delete-role-context-delete)
-[DELETE : Delete Role from Context](#delete-role-from-context-delete)
-[DELETE : Delete Additional Permission from Context](#delete-additional-permission-from-context-delete)
-[DELETE : Account Delete Role](#account-delete-role-delete)
-[DELETE : Remove Permissions](#remove-permissions-delete)
+* [PUT : Assign Roles by UID](#assign-roles-by-uid-put)
+* [PUT : Upsert Context](#upsert-context-put)
+* [PUT : Add Permissions to Role](#add-permissions-to-role-put)
+* [POST : Roles Create](#roles-create-post)
+* [GET : Roles by UID](#roles-by-uid-get)
+* [GET : Get Context with Roles and Permissions](#get-context-with-roles-and-permissions-get)
+* [GET : Role Context profile](#role-context-profile-get)
+* [GET : Roles List](#roles-list-get)
+* [DELETE : Unassign Roles by UID](#unassign-roles-by-uid-delete)
+* [DELETE : Delete Role Context](#delete-role-context-delete)
+* [DELETE : Delete Role from Context](#delete-role-from-context-delete)
+* [DELETE : Delete Additional Permission from Context](#delete-additional-permission-from-context-delete)
+* [DELETE : Account Delete Role](#account-delete-role-delete)
+* [DELETE : Remove Permissions](#remove-permissions-delete)
 
 If you have not already initialized the Role object do so now
 ```php
@@ -1527,7 +1527,7 @@ $result = $roleAPI->removeRolePermissions($payload,$role);
 ### Sott API
 
 List of APIs in this Section:<br>
-[GET : Generate SOTT](#generate-sott-get)
+* [GET : Generate SOTT](#generate-sott-get)
 
 If you have not already initialized the Sott object do so now
 ```php
@@ -1553,12 +1553,12 @@ $result = $sottAPI->generateSott($timeDifference);
 ### NativeSocial API
 
 List of APIs in this Section:<br>
-[GET : Access Token via Facebook Token](#access-token-via-facebook-token-get)
-[GET : Access Token via Twitter Token](#access-token-via-twitter-token-get)
-[GET : Access Token via Google Token](#access-token-via-google-token-get)
-[GET : Access Token using google JWT token for Native Mobile Login](#access-token-using-google-jwt-token-for-native-mobile-login-get)
-[GET : Access Token via Linkedin Token](#access-token-via-linkedin-token-get)
-[GET : Access Token via Google AuthCode](#access-token-via-google-authcode-get)
+* [GET : Access Token via Facebook Token](#access-token-via-facebook-token-get)
+* [GET : Access Token via Twitter Token](#access-token-via-twitter-token-get)
+* [GET : Access Token via Google Token](#access-token-via-google-token-get)
+* [GET : Access Token using google JWT token for Native Mobile Login](#access-token-using-google-jwt-token-for-native-mobile-login-get)
+* [GET : Access Token via Linkedin Token](#access-token-via-linkedin-token-get)
+* [GET : Access Token via Google AuthCode](#access-token-via-google-authcode-get)
 
 If you have not already initialized the NativeSocial object do so now
 ```php
@@ -1647,10 +1647,10 @@ $result = $nativeSocialAPI->getAccessTokenByGoogleAuthCode($google_authcode);
 ### WebHook API
 
 List of APIs in this Section:<br>
-[POST : Webhook Subscribe](#webhook-subscribe-post)
-[GET : Webhook Subscribed URLs](#webhook-subscribed-urls-get)
-[GET : Webhook Test](#webhook-test-get)
-[DELETE : WebHook Unsubscribe](#webhook-unsubscribe-delete)
+* [POST : Webhook Subscribe](#webhook-subscribe-post)
+* [GET : Webhook Subscribed URLs](#webhook-subscribed-urls-get)
+* [GET : Webhook Test](#webhook-test-get)
+* [DELETE : WebHook Unsubscribe](#webhook-unsubscribe-delete)
 
 If you have not already initialized the WebHook object do so now
 ```php
