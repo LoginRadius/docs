@@ -81,7 +81,7 @@ define('API_DOMAIN', 'DEFINE_CUSTOM_API_DOMAIN');   // Custom API Domain
 >Replace `LOGINRADIUS_SITE_NAME_HERE`, `LOGINRADIUS_API_KEY_HERE` and  `LOGINRADIUS_API_SECRET_HERE` in the above code with your LoginRadius Site Name, LoginRadius API Key, and Secret which you can get [here](https://dashboard.loginradius.com/configuration), as shown below:
 
 <div style="text-align:center">
-  <img src="../assets/app_credentials.png" alt="app_credentials" />
+  <img src="../assets/web-sdk/app_credentials.png" alt="app_credentials" />
 </div>
 
 
