@@ -76,7 +76,6 @@ Set your [app credentials](https://dashboard.loginradius.com/dashboard):
 LoginRadiusSdkGlobalConfig.ApiKey = "__API_KEY__";
 LoginRadiusSdkGlobalConfig.ApiSecret = "__API_SECRET__";
 LoginRadiusSdkGlobalConfig.AppName = "__LoginRadius_APP_NAME__";
-LoginRadiusSdkGlobalConfig.ApiRequestSigning ="false";
 LoginRadiusSdkGlobalConfig.ConnectionTimeout = 30000; // Connection Timeout (milliseconds)
 LoginRadiusSdkGlobalConfig.ProxyAddress = "__HTTP_PROXY_ADDRESS__"; // Absolute Proxy URI
 LoginRadiusSdkGlobalConfig.ProxyCredentials = "__HTTP_PROXY_CREDENTIALS__"; // Proxy Credentials in the format 'USERNAME:PASSWORD'
@@ -99,7 +98,6 @@ For ASP.NET. in  `web.config`:
       <add name="apiKey" value="__API_KEY__" />
       <add name="apiSecret" value="__API_SECRET__" />
       <add name="appName" value="__LoginRadius_APP_NAME__"/>
-	  <add name="ApiRequestSigning" value="false"/>
       <add name="proxyAddress" value="__HTTP_PROXY_ADDRESS__" /> <!-- Absolute Proxy URI -->
       <add name="proxyCredentials" value="__HTTP_PROXY_CREDENTIALS__" /> <!-- Proxy Credentials in the format 'USERNAME:PASSWORD' -->
       <add name="connectionTimeout" value="__HTTP_CONNECTION_TIMEOUT__" /> <!-- Connection Timeout (milliseconds) -->
@@ -119,7 +117,6 @@ For .NET Core, in `appsettings.json`:
     "apiKey": "__API_KEY__",
     "apiSecret": "__API_SECRET__",
     "appName" : "__LoginRadius_APP_NAME__",
-	"ApiRequestSigning" : "false",
     "proxyAddress" : "__HTTP_PROXY_ADDRESS__",
     "proxyCredentials" : "__HTTP_PROXY_CREDENTIAL__",
     "connectionTimeout" : "__HTTP_CONNECTION_TIMEOUT__",
@@ -138,17 +135,6 @@ Example : In appsettings.json, add following statement -
 "domainName" : "https://api.loginradius.com/"
 ```
 
-
-
-### API Request Signing
-When initializing the SDK, you can optionally specify enabling this feature. Enabling this feature means the customer does not need to pass an API secret in an API request. Instead, they can pass a dynamically generated hash value. This feature will also make sure that the message is not tampered during transit when someone calls our APIs.
-Example : In appsettings.json, add following statement -
-
-```cs
-"ApiRequestSigning" : "false"
-```
-
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
 
 ## API Details
 
