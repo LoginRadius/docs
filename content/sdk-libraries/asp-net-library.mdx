@@ -51,6 +51,23 @@ Next, include the following namespaces in your project:
 using LoginRadiusSDK.V2.Api;
 using LoginRadiusSDK.V2.Models;
 ```
+
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Setup from "../howto/dashboard-setup"
+
+## Setup Your Dashboard
+
+Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+
+<ExpansionPanel title="Click here to view details">
+<Setup />
+</ExpansionPanel>
+
 ## Configuration
 
 Set your [app credentials](https://dashboard.loginradius.com/dashboard):
@@ -142,6 +159,7 @@ For more details check [API Refrence Here](https://www.loginradius.com/docs/deve
 
 
 List of APIs in this Section:
+
 - [PUT : Auth Update Profile by Token](#auth-update-profile-by-token-put)
 - [PUT : Auth Verify Email By OTP](#auth-verify-email-by-otp-put)
 - [PUT : Auth Reset Password by Reset Token](#auth-reset-password-by-reset-token-put)
@@ -489,6 +507,7 @@ var apiResponse = new AuthenticationApi().RemoveEmail(accessToken, email);
 
 
 List of APIs in this Section:
+
 - [PUT : Account Update](#account-update-put)
 - [PUT : Update Phone ID by UID](#update-phone-id-by-uid-put)
 - [PUT : Account Set Password](#account-set-password-put)
@@ -619,7 +638,9 @@ var apiResponse = new AccountApi().AccountUpdateUid(updateUidModel, uid);
 
 
 ##### Account Create (POST)
-This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields 
+This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
+
+In order to use this API, you need to format a JSON request body with all of the mandatory fields 
 
 
 
@@ -790,6 +811,7 @@ var apiResponse = new AccountApi().AccountDeleteByEmail(email);
 
 
 List of APIs in this Section:
+
 - [PUT : Phone Reset Password by OTP](#phone-reset-password-by-otp-put)
 - [PUT : Phone Verification OTP](#phone-verification-otp-put)
 - [PUT : Phone Verification OTP by Token](#phone-verification-otp-by-token-put)
@@ -977,6 +999,7 @@ var apiResponse = new PhoneAuthenticationApi().RemovePhoneIDByAccessToken(access
 
 
 List of APIs in this Section:
+
 - [PUT : Update MFA by Access Token](#update-mfa-by-access-token-put)
 - [PUT : MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
 - [PUT : MFA Validate Google Auth Code](#mfa-validate-google-auth-code-put)
@@ -1177,6 +1200,7 @@ var apiResponse = new MultiFactorAuthenticationApi().MFAResetGoogleAuthenticator
 
 
 List of APIs in this Section:
+
 - [PUT : Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
 - [GET : Passwordless Login by Phone](#passwordless-login-by-phone-get)
 - [GET : Passwordless Login By Email](#passwordless-login-by-email-get)
@@ -1251,6 +1275,7 @@ var apiResponse = new PasswordLessLoginApi().PasswordlessLoginVerification(verif
 
 
 List of APIs in this Section:
+
 - [PUT : Assign Roles by UID](#assign-roles-by-uid-put)
 - [PUT : Upsert Context](#upsert-context-put)
 - [PUT : Add Permissions to Role](#add-permissions-to-role-put)
@@ -1507,6 +1532,7 @@ var apiResponse = new SottApi().GenerateSott(timeDifference);
 
 
 List of APIs in this Section:
+
 - [GET : Access Token via Facebook Token](#access-token-via-facebook-token-get)
 - [GET : Access Token via Twitter Token](#access-token-via-twitter-token-get)
 - [GET : Access Token via Google Token](#access-token-via-google-token-get)
@@ -1600,6 +1626,7 @@ var apiResponse = new NativeSocialApi().GetAccessTokenByGoogleAuthCode(googleAut
 
 
 List of APIs in this Section:
+
 - [POST : Webhook Subscribe](#webhook-subscribe-post)
 - [GET : Webhook Subscribed URLs](#webhook-subscribed-urls-get)
 - [GET : Webhook Test](#webhook-test-get)

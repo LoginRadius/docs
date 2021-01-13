@@ -24,6 +24,22 @@ The jars are also available at [Maven](https://mvnrepository.com/artifact/com.lo
 
 Select the directory for the latest version and download the jar files.
 
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Setup from "../howto/dashboard-setup"
+
+## Setup Your Dashboard
+
+Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+
+<ExpansionPanel title="Click here to view details">
+<Setup />
+</ExpansionPanel>
+
 ## Configuration
 
 ### Initialize SDK
@@ -55,35 +71,32 @@ init.setRequestSigning(true);
 ### SOTT Configuration 
 Sott class that uses 256-bit AES encryption which is not supported by Java out of the box,
 Before calling the class of SOTT you need to install the JCE unlimited strength jars in the security folder.
-<br/>
+
 * To apply the policy files:
 
  1. Download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files from Oracle.
-<br/>
+
 Be sure to download the correct policy file updates for your version of Java:
-<br/>
-Java 6
-http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html
-<br/>
-java 7
-http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
-<br/>
-java 8
-http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
-<br/>
-  2. Uncompress and extract the downloaded file. The download includes a Readme.txt and two .jar files with the same names as the existing policy files.
-<br/>
-  3. Locate the two existing policy files:
-<br/>
+
+Java 6 - http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html
+
+java 7 - http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
+
+java 8 - http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+
+2. Uncompress and extract the downloaded file. The download includes a Readme.txt and two .jar files with the same names as the existing policy files.
+
+3. Locate the two existing policy files:
+
 local_policy.jar
-<br/>
+
 US_export_policy.jar
-<br/>
-On UNIX, look in <java-home>/lib/security/
-<br/>
-On Windows, look in C:/Program Files/Java/jre<version>/lib/security/
-<br/>
-  4. Replace the existing policy files with the unlimited strength policy files you extracted.
+
+On UNIX, look in `<java-home>/lib/security/`
+
+On Windows, look in `C:/Program Files/Java/jre<version>/lib/security/`
+
+4. Replace the existing policy files with the unlimited strength policy files you extracted.
 
 
 * After complete the configuration, use below code to get the SOTT.
@@ -129,7 +142,7 @@ For more details check [API Refrence Here](https://www.loginradius.com/docs/deve
 ### Authentication API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * PUT : [Auth Update Profile by Token](#auth-update-profile-by-token-put)
 * PUT : [Auth Verify Email By OTP](#auth-verify-email-by-otp-put)
@@ -830,7 +843,7 @@ authenticationApi.removeEmail(accessToken, email ,  new AsyncHandler<DeleteRespo
 ### Account API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * PUT : [Account Update](#account-update-put)
 * PUT : [Update Phone ID by UID](#update-phone-id-by-uid-put)
@@ -1066,7 +1079,9 @@ accountApi.accountUpdateUid( updateUidModel, uid ,  new AsyncHandler<PostRespons
 
 
 ##### Account Create (POST)
- This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields
+ This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
+ 
+ In order to use this API, you need to format a JSON request body with all of the mandatory fields
 
 ```java
 
@@ -1414,7 +1429,7 @@ accountApi.accountDeleteByEmail(email ,  new AsyncHandler<DeleteResponse> (){
 ### PhoneAuthentication API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * PUT : [Phone Reset Password by OTP](#phone-reset-password-by-otp-put)
 * PUT : [Phone Verification OTP](#phone-verification-otp-put)
@@ -1763,7 +1778,7 @@ phoneAuthenticationApi.removePhoneIDByAccessToken(accessToken ,  new AsyncHandle
 ### MultiFactorAuthentication API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * PUT : [Update MFA by Access Token](#update-mfa-by-access-token-put)
 * PUT : [MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
@@ -2142,7 +2157,7 @@ multiFactorAuthenticationApi.mfaResetGoogleAuthenticatorByUid(googleauthenticato
 ### PasswordLessLogin API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * PUT : [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
 * GET : [Passwordless Login by Phone](#passwordless-login-by-phone-get)
@@ -2275,7 +2290,7 @@ passwordLessLoginApi.passwordlessLoginVerification(verificationToken, fields, we
 ### Role API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * PUT : [Assign Roles by UID](#assign-roles-by-uid-put)
 * PUT : [Upsert Context](#upsert-context-put)
@@ -2726,7 +2741,7 @@ roleApi.removeRolePermissions( permissionsModel, role ,  new AsyncHandler<com.lo
 ### Sott API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * GET : [Generate SOTT](#generate-sott-get)
 
@@ -2766,7 +2781,7 @@ sottApi.generateSott(timeDifference ,  new AsyncHandler<SottResponseData> (){
 ### NativeSocial API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * GET : [Access Token via Facebook Token](#access-token-via-facebook-token-get)
 * GET : [Access Token via Twitter Token](#access-token-via-twitter-token-get)
@@ -2949,7 +2964,7 @@ nativeSocialApi.getAccessTokenByGoogleAuthCode(googleAuthcode ,  new AsyncHandle
 ### WebHook API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 * POST : [Webhook Subscribe](#webhook-subscribe-post)
 * GET : [Webhook Subscribed URLs](#webhook-subscribed-urls-get)

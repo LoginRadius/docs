@@ -20,6 +20,22 @@ You can get the SDK from [here](http://github.com/LoginRadius/node-js-sdk)
 npm install loginradius-sdk@10.0.0
 ```
 
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Setup from "../howto/dashboard-setup"
+
+## Setup Your Dashboard
+
+Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+
+<ExpansionPanel title="Click here to view details">
+<Setup />
+</ExpansionPanel>
+
 ## Configuration
 
 
@@ -56,7 +72,7 @@ For more details check [API Refrence Here](https://www.loginradius.com/docs/deve
 ### Authentication API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * PUT : [Auth Update Profile by Token](#auth-update-profile-by-token-put) 
 * PUT : [Auth Verify Email By OTP](#auth-verify-email-by-otp-put) 
@@ -631,7 +647,7 @@ lrv2.authenticationApi.removeEmail(accessToken, email).then((response) => {
 ### Account API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * PUT : [Account Update](#account-update-put) 
 * PUT : [Update Phone ID by UID](#update-phone-id-by-uid-put) 
@@ -828,7 +844,9 @@ lrv2.accountApi.accountUpdateUid(updateUidModel, uid).then((response) => {
   
  
 ##### Account Create (POST)
- This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. <br><br>In order to use this API, you need to format a JSON request body with all of the mandatory fields
+ This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
+ 
+ In order to use this API, you need to format a JSON request body with all of the mandatory fields
 
  
  
@@ -1103,7 +1121,7 @@ lrv2.accountApi.accountDeleteByEmail(email).then((response) => {
 ### PhoneAuthentication API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * PUT : [Phone Reset Password by OTP](#phone-reset-password-by-otp-put) 
 * PUT : [Phone Verification OTP](#phone-verification-otp-put) 
@@ -1390,7 +1408,7 @@ lrv2.phoneAuthenticationApi.removePhoneIDByAccessToken(accessToken).then((respon
 ### MultiFactorAuthentication API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * PUT : [Update MFA by Access Token](#update-mfa-by-access-token-put) 
 * PUT : [MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put) 
@@ -1697,7 +1715,7 @@ lrv2.multiFactorAuthenticationApi.mfaResetGoogleAuthenticatorByUid(googleauthent
 ### PasswordLessLogin API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * PUT : [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put) 
 * GET : [Passwordless Login by Phone](#passwordless-login-by-phone-get) 
@@ -1806,7 +1824,7 @@ lrv2.passwordLessLoginApi.passwordlessLoginVerification(verificationToken, field
 ### Role API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * PUT : [Assign Roles by UID](#assign-roles-by-uid-put) 
 * PUT : [Upsert Context](#upsert-context-put) 
@@ -2165,7 +2183,7 @@ lrv2.roleApi.removeRolePermissions(permissionsModel, role).then((response) => {
 ### Sott API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * GET : [Generate SOTT](#generate-sott-get)
 
@@ -2197,7 +2215,7 @@ lrv2.sottApi.generateSott(timeDifference).then((response) => {
 ### NativeSocial API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * GET : [Access Token via Facebook Token](#access-token-via-facebook-token-get) 
 * GET : [Access Token via Twitter Token](#access-token-via-twitter-token-get) 
@@ -2342,7 +2360,7 @@ lrv2.nativeSocialApi.getAccessTokenByGoogleAuthCode(googleAuthcode).then((respon
 ### WebHook API
 
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 * POST : [Webhook Subscribe](#webhook-subscribe-post) 
 * GET : [Webhook Subscribed URLs](#webhook-subscribed-urls-get) 

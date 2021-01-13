@@ -13,12 +13,27 @@ You can get the SDK from [here](https://github.com/LoginRadius/go-sdk)
 
 > Note: Before starting, install Golang and setup the proper paths. Find the instructions [here](https://golang.org/doc/install).
 
-## Installation <br/>
+## Installation 
 
 ```
 go get github.com/loginradius/go-sdk
 ```
 
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Setup from "../howto/dashboard-setup"
+
+## Setup Your Dashboard
+
+Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+
+<ExpansionPanel title="Click here to view details">
+<Setup />
+</ExpansionPanel>
 
 ## Configuration
 
@@ -97,7 +112,8 @@ import (
  github.com/loginradius/go-sdk/api/authentication
 )
 ```
-List of APIs in this Section:<br>
+
+List of APIs in this Section:
 
 - PUT : [Auth Change Password](#auth-change-password-put)
 - PUT : [Auth Resend Email Verification](#auth-resend-email-verification-put)
@@ -313,7 +329,7 @@ import (
 )
 ```
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 
 - PUT : [Account Update](#account-update-put)
@@ -479,7 +495,7 @@ import (
 )
 ```
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
  
 - GET : [Access Token](#access-token-get)
 - GET : [Token Validate](#token-validate-get)
@@ -552,7 +568,7 @@ import (
 )
 ```
 
-List of APIs in this Section:<br>
+List of APIs in this Section:
 
 - GET : [Access Token via Facebook Token](#access-token-via-facebook-token-get)
 - GET : [Access Token via Twitter Token](#access-token-via-twitter-token-get)
