@@ -6,7 +6,7 @@ description: "How to retrieve API key and secret?"
 ## Q: How to retrieve API key and secret?
 
 
-Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section. 
+Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section. 
 
 Click the down arrow or anywhere within the section and the **API Credentials** screen will appear:
 
@@ -17,7 +17,7 @@ Click the down arrow or anywhere within the section and the **API Credentials** 
 
 
 
-Click the **API Key And Secret** to get your unique credentials as displayed in the following screen:
+Click **API Key And Secret** to get your unique credentials as displayed in the following screen:
 
 <div style="text-align:center">
   <img src="../assets/howto/setup-your-dashboard/key-secret.png" alt="Key Secret" />
@@ -40,7 +40,7 @@ Click the **eye** button given next to the API Secret field. The API secret is n
 
 ## Q: How to reset the API Secret?
 
-Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section. 
+Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section. 
 
 Click the **API Key And Secret** or anywhere within the section and the below screen will appear:
 
