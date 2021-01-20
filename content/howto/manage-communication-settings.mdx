@@ -1,7 +1,7 @@
 ---
-title: Manage Communication Settings
-description: "An Overview about Manage Communication Settings for email and sms providers."
-summary: "An Overview about Manage Communication Settings for email and sms providers"
+title: Manage Email/SMS Provider Settings
+description: "An Overview about Manage Email/SMS Provider Settings for email and sms providers."
+summary: "An Overview about Manage Email/SMS Provider Settings for email and sms providers"
 ---
 
 import Pro from "../../src/components/pro.js"
@@ -10,13 +10,13 @@ You can manage the Email and SMS providers and settings for your LoginRadius App
 
 ## Email Configuration
 
-LoginRadius Identity Platform allows you to configure your SMTP provider settings and generic email settings in the Communication Setting section.
+LoginRadius Identity Platform allows you to configure your SMTP provider settings and generic email settings in the Email/SMS Provider Settings section.
 
 ### SMTP Provider Settings
 
 Setting up the SMTP server in LoginRadius allows the system to send out all email correspondences directly through your SMTP provider. It enables you to get deliverability stats and analytics and also optimize your email messaging. To send emails through your SMTP, you should follow the below steps:
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **Communication Settings** section.  Click the down arrow or anywhere within the section. The **SMTP Provider Settings** screen will appear:
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section.  Click the down arrow or anywhere within the section. The **SMTP Provider Settings** screen will appear:
 
 <div style="text-align:center">
   <img src="../assets/howto/manage-communication-settings/smtp.png" alt="smtp" />
@@ -26,13 +26,14 @@ Setting up the SMTP server in LoginRadius allows the system to send out all emai
 
 
 2. Enter or select the following SMTP details:
+
+- **From Name:** Enter the name of the sender.
 - **SMTP Providers:** Select a pre-configured provider or other for a custom provider.
 - **From Email Address:** Enter the email of the sender.
-- **SMTP User Name:** Enter the SMTP username.
-- **SMTP Password:** Enter the password for the SMTP username.
-- **From Name:** Enter the name of the sender.
 - **SMTP Host:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP host details.
+- **SMTP User Name:** Enter the SMTP username.
 - **SMTP Port:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP port details.
+- **SMTP Password:** Enter the password for the SMTP username.
 - **Enable SSL:** Select this option to make email communication more secure.
 
 3. Click the **Verify** button, the following pop-up will appear:
@@ -62,7 +63,7 @@ Enter the email id in the **To Email** textbox and click the **Send** button. If
 ### Email Settings
 You can use Email Settings to customize some of the behaviors for sending emails. To customize these settings, you should follow the below steps: 
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **Communication Settings** sections, and click the down arrow or anywhere in the section tile. Then select the **Email Settings** option from the left navigation pane, the following screen will appear:
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** sections, and click the down arrow or anywhere in the section tile. Then select the **Email Settings** option from the left navigation pane, the following screen will appear:
 
 <div style="text-align:center">
   <img src="../assets/howto/manage-communication-settings/emil-setting.png" alt="emil-setting" />
@@ -79,13 +80,13 @@ You can use Email Settings to customize some of the behaviors for sending emails
 
 ## <Pro>SMS Configuration</Pro>
 
-LoginRadius Identity Platform allows you to configure your SMS provider setting and generic SMS setting in the communication setting section.
+The LoginRadius Identity Platform allows you to configure your SMS provider settings and generic SMS settings in the **Email/SMS Provider Settings** section.
 
 ### SMS Provider Settings
 
 Setting up an SMS provider allows you to send and receive text messages to and from an SMS capable device over the network. To send SMS through your SMS Provider, you should follow the below steps:
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **Communication Settings** section. Click the down arrow or anywhere within the section and then select the **SMS Provider Settings** as highlighted in the below screen:
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. Click the down arrow or anywhere within the section and then select the **SMS Provider Settings** section as highlighted in the below screen:
 
 <div style="text-align:center">
   <img src="../assets/howto/manage-communication-settings/sms-provider.png" alt="sms-provider" />
@@ -106,7 +107,7 @@ Setting up an SMS provider allows you to send and receive text messages to and f
 
 You can use SMS Settings to customize some of the behaviors for sending SMS. To customize these settings, you should follow the below steps: 
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, select the **Configuration** and then navigate to the **Communication Settings** sections.Click the down arrow or anywhere within this section and then select the **SMS Settings** option as highlighted in the below screenL 
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, select **Configuration** and then navigate to the **Email/SMS Provider Settings** section. Click the down arrow or anywhere within this section and then select the **SMS Settings** option as highlighted in the below screen: 
 
 <div style="text-align:center">
   <img src="../assets/howto/manage-communication-settings/sms-settings.png" alt="sms-settings" />

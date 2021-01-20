@@ -24,7 +24,7 @@ With the extended profile data set, which you can view on the [LoginRadius datap
 On login with Facebook, the error message shown below is sometimes displayed to developer or admin users:
 
 <div style="text-align:center">
-  <img src="../assets/invalid_scopes.png" alt="invalid_scopes" width="400">
+  <img src="../assets/faq/invalid_scopes.png" alt="invalid_scopes" width="400">
 </div>
 
 

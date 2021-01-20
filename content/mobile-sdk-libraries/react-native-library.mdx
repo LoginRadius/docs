@@ -7,7 +7,7 @@ summary: "A guide to impliment LoginRadius SDK in a React Native application"
 
 This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in a React Native app.
 
-> **Disclaimer** <br/><br/> This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
+> **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
 ## Prerequisites
 
@@ -30,6 +30,23 @@ Open dashboard, Click on *Configure Your Application* and open *Mobile SOTT* . n
 <div style="text-align:center">
   <img src="../assets/howto/work-with-sott/sott.png" alt="SOTT" />
 </div>
+
+
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Setup from "../howto/dashboard-setup"
+
+## Setup Your Dashboard
+
+Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+
+<ExpansionPanel title="Click here to view details">
+<Setup />
+</ExpansionPanel>
 
 ## Installation
 
@@ -209,7 +226,7 @@ try {
 - After generating KeyHash successfully, you need to setup below setting and fill the required fields e.g. Package Name & Class Name.
 
 <div style="text-align:center">
-  <img src="../assets/facebook-native-android.png" alt="React-Native-sott" />
+  <img src="../assets/mobile-sdk/facebook-native-android.png" alt="React-Native-sott" />
 </div>
 
 #### iOS
@@ -218,7 +235,7 @@ try {
 - Pass your project bundle ID, iPhone store ID and iPad store ID.
 
 <div style="text-align:center">
-  <img src="../assets/facebook-native-ios.png" alt="React-Native-sott" />
+  <img src="../assets/mobile-sdk/facebook-native-ios.png" alt="React-Native-sott" />
 </div>
 
 ### Google Native Login
@@ -245,7 +262,7 @@ react-native link react-native-google-signin
 - After generating the configuration file, move to [Google Credentials Manager](https://console.developers.google.com/apis/credentials?pli=1) and select your project name (Which you have created) in the header section. Now Select Credentials from the left panel and copy the Client ID available under project's **web application**.
 
 <div style="text-align:center">
-  <img src="../assets/google-native-android.png" alt="React-Native-sott" />
+  <img src="../assets/mobile-sdk/google-native-android.png" alt="React-Native-sott" />
 </div>
 
 - Now pass the webClientId as

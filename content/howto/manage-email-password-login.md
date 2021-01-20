@@ -13,9 +13,9 @@ Watch the video for the step by step tutorial or refer to the section below for 
 LoginRadius Identity Platform provides Email/Password as a default registration and login option. You can also view and customize the content of the available email templates for this login method. 
 
 
-To access the Email/Password login method, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **Login Methods** section. 
+To access the Email/Password login method, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **Add a Login Method** section. 
 
-Click the down arrow or anywhere within the section and the **Login Methods** screen will appear:
+Click the down arrow or anywhere within the section and the **Add a Login Method** screen will appear:
 
 <div style="text-align:center">
   <img src="../assets/howto/implement-social-login/login-methods.png" alt="Login Methods" />

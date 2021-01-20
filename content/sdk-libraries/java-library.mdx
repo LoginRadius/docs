@@ -1,0 +1,3081 @@
+---
+title: Java Library
+description: "A guide to impliment LoginRadius SDK in a Java application."
+summary: "A guide to impliment LoginRadius SDK in a Java application"
+---
+
+>**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
+
+This document contains information and examples regarding the LoginRadius Java SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google and Twitter. 
+You can get the SDK from [here](http://github.com/LoginRadius/java-sdk) 
+
+
+## Installation
+
+Use the following dependency in your project:
+
+You can also compile the source by running the following commands. This will generate the javadocs in java-sdk/target/apidocs
+
+
+`$ cd java-sdk`<br/>
+`$ mvn install  `     # Requires maven, download from http://maven.apache.org/download.html
+`$ mvn dependency:copy-dependencies`   # This will generate all dependencies here: java-sdk/target/dependency
+The jars are also available at [Maven](https://mvnrepository.com/artifact/com.loginradius.sdk/java-sdk).
+
+Select the directory for the latest version and download the jar files.
+
+import {
+  ExpansionPanel,
+  ExpansionPanelList,
+  ExpansionPanelListItem
+} from 'gatsby-theme-apollo-docs';
+
+import Setup from "../howto/dashboard-setup"
+
+## Setup Your Dashboard
+
+Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+
+<ExpansionPanel title="Click here to view details">
+<Setup />
+</ExpansionPanel>
+
+## Configuration
+
+### Initialize SDK
+
+- Before using the SDK, you must initialize the SDK with the help of following code:
+API Key and secret of your LoginRadius site. You can get one from [here](https://dashboard.loginradius.com/dashboard)
+
+```Java
+LoginRadiusSDK.Initialize init = new LoginRadiusSDK.Initialize();
+init.setApiKey("<your-loginradius-api-key>");
+init.setApiSecret("<your-loginradius-api-secret>");
+```
+
+### Custom Domain
+When initializing the SDK, optionally specify a custom domain.
+
+```Java
+init.setCustomDomain("<CUSTOM-DOMAIN>");
+```
+
+### API Request Signing
+When initializing the SDK, you can optionally specify enabling this feature. Enabling this feature means the customer does not need to pass an API secret in an API request. Instead, they can pass a dynamically generated hash value. This feature will also make sure that the message is not tampered during transit when someone calls our APIs.
+
+```Java
+init.setRequestSigning(true);
+```
+
+
+### SOTT Configuration 
+Sott class that uses 256-bit AES encryption which is not supported by Java out of the box,
+Before calling the class of SOTT you need to install the JCE unlimited strength jars in the security folder.
+
+* To apply the policy files:
+
+ 1. Download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files from Oracle.
+
+Be sure to download the correct policy file updates for your version of Java:
+
+Java 6 - http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html
+
+java 7 - http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
+
+java 8 - http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+
+2. Uncompress and extract the downloaded file. The download includes a Readme.txt and two .jar files with the same names as the existing policy files.
+
+3. Locate the two existing policy files:
+
+local_policy.jar
+
+US_export_policy.jar
+
+On UNIX, look in `<java-home>/lib/security/`
+
+On Windows, look in `C:/Program Files/Java/jre<version>/lib/security/`
+
+4. Replace the existing policy files with the unlimited strength policy files you extracted.
+
+
+* After complete the configuration, use below code to get the SOTT.
+
+* By default, the SOTT expiration time will be 10 minutes if you use the below code.
+
+```
+Sott sott = new Sott();
+String sottResponse = sott.getSott(null);
+```
+* If you want to validate your SOTT for long term then pass required timedifference in minutes.
+* We recommend to use the below way to validate SOTT for a long term because it uses the server time not your system local time.
+
+```
+ConfigurationApi config = new ConfigurationApi();
+config.getServerInfo(50, new AsyncHandler < ServiceInfoModel > () {
+
+  @Override
+  public void onFailure(ErrorResponse errorResponse) {
+      
+      System.out.println(errorResponse.getDescription());
+  }
+
+  @Override
+  public void onSuccess(ServiceInfoModel service) {
+      
+      try {
+          String sottResponse = Sott.getSott(service);
+          System.out.println("sott = " + sottResponse);
+      } catch (Exception e) {
+         
+          e.printStackTrace();
+      }
+  }
+
+});
+```
+
+For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
+
+## API Details
+
+### Authentication API
+
+
+List of APIs in this Section:
+
+* PUT : [Auth Update Profile by Token](#auth-update-profile-by-token-put)
+* PUT : [Auth Verify Email By OTP](#auth-verify-email-by-otp-put)
+* PUT : [Auth Reset Password by Reset Token](#auth-reset-password-by-reset-token-put)
+* PUT : [Auth Change Password](#auth-change-password-put)
+* PUT : [Auth Resend Email Verification](#auth-resend-email-verification-put)
+* POST : [Auth Add Email](#auth-add-email-post)
+* POST : [Auth Login by Email](#auth-login-by-email-post)
+* POST : [Auth Forgot Password](#auth-forgot-password-post)
+* POST : [Auth User Registration by Email](#auth-user-registration-by-email-post)
+* POST : [Auth User Registration By Captcha](#auth-user-registration-by-captcha-post)
+* GET : [Auth Validate Access token](#auth-validate-access-token-get)
+* GET : [Access Token Invalidate](#access-token-invalidate-get)
+* GET : [Access Token Info](#access-token-info-get)
+* GET : [Auth Read all Profiles by Token](#auth-read-all-profiles-by-token-get)
+* GET : [Auth Send Welcome Email](#auth-send-welcome-email-get)
+* GET : [Auth Delete Account](#auth-delete-account-get)
+* GET : [Auth Check Email Availability](#auth-check-email-availability-get)
+* GET : [Auth Verify Email](#auth-verify-email-get)
+* GET : [Auth Social Identity](#auth-social-identity-get)
+* GET : [Auth Privacy Policy Accept](#auth-privacy-policy-accept-get)
+* DELETE : [Auth Delete Account with Email Confirmation](#auth-delete-account-with-email-confirmation-delete)
+* DELETE : [Auth Remove Email](#auth-remove-email-delete)
+
+
+
+
+##### Auth Update Profile by Token (PUT)
+ This API is used to update the user's profile by passing the access token.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+UserProfileUpdateModel userProfileUpdateModel = new UserProfileUpdateModel(); //Required
+userProfileUpdateModel.setFirstName("firstName"); 
+userProfileUpdateModel.setLastName("lastName"); 
+String emailTemplate = "<emailTemplate>"; //Optional
+String fields = null; //Optional
+
+String smsTemplate = "<smsTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.updateProfileByAccessToken(accessToken,  userProfileUpdateModel, emailTemplate, fields, smsTemplate, verificationUrl ,  new AsyncHandler<UserProfilePostResponse<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<Identity> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Verify Email By OTP (PUT)
+ This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
+
+```java
+
+EmailVerificationByOtpModel emailVerificationByOtpModel = new EmailVerificationByOtpModel(); //Required
+emailVerificationByOtpModel.setEmail("email"); 
+emailVerificationByOtpModel.setOtp("otp"); 
+String fields = null; //Optional
+String url = "<url>"; //Optional
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.verifyEmailByOTP( emailVerificationByOtpModel, fields, url, welcomeEmailTemplate ,  new AsyncHandler<UserProfilePostResponse<EmailVerificationData<Identity>>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<EmailVerificationData<Identity>> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Reset Password by Reset Token (PUT)
+ This API is used to set a new password for the specified account.
+
+```java
+
+ResetPasswordByResetTokenModel resetPasswordByResetTokenModel = new ResetPasswordByResetTokenModel(); //Required
+resetPasswordByResetTokenModel.setPassword("password"); 
+resetPasswordByResetTokenModel.setResetToken("resetToken"); 
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.resetPasswordByResetToken( resetPasswordByResetTokenModel ,  new AsyncHandler<UserProfilePostResponse<AccessTokenBase>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<AccessTokenBase> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Change Password (PUT)
+ This API is used to change the accounts password based on the previous password
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String newPassword = "<newPassword>"; //Required
+String oldPassword = "<oldPassword>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.changePassword(accessToken, newPassword, oldPassword ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Resend Email Verification (PUT)
+ This API resends the verification email to the user.
+
+```java
+
+String email = "<email>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.authResendEmailVerification(email, emailTemplate, verificationUrl ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Add Email (POST)
+ This API is used to add additional emails to a user's account.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String email = "<email>"; //Required
+String type = "<type>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.addEmail(accessToken, email, type, emailTemplate, verificationUrl ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Login by Email (POST)
+ This API retrieves a copy of the user data based on the Email
+
+```java
+
+EmailAuthenticationModel emailAuthenticationModel = new EmailAuthenticationModel(); //Required
+emailAuthenticationModel.setEmail("email"); 
+emailAuthenticationModel.setPassword("password"); 
+String emailTemplate = "<emailTemplate>"; //Optional
+String fields = null; //Optional
+String loginUrl = "<loginUrl>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.loginByEmail( emailAuthenticationModel, emailTemplate, fields, loginUrl, verificationUrl ,  new AsyncHandler<AccessToken<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessToken<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Forgot Password (POST)
+ This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'
+
+```java
+
+String email = "<email>"; //Required
+String resetPasswordUrl = "<resetPasswordUrl>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.forgotPassword(email, resetPasswordUrl, emailTemplate ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth User Registration by Email (POST)
+ This API creates a user in the database as well as sends a verification email to the user.
+
+```java
+
+AuthUserRegistrationModel authUserRegistrationModel = new AuthUserRegistrationModel(); //Required
+List<EmailModel> email = new ArrayList < EmailModel >();
+EmailModel emailModel = new EmailModel(); 
+emailModel.setType("type");
+emailModel.setValue("value");
+email.add(emailModel);
+authUserRegistrationModel.setEmail(email); 
+authUserRegistrationModel.setFirstName("firstName"); 
+authUserRegistrationModel.setLastName("lastName"); 
+authUserRegistrationModel.setPassword("password"); 
+String sott = "<sott>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String fields = null; //Optional
+String options = "<options>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.userRegistrationByEmail( authUserRegistrationModel, sott, emailTemplate, fields, options, verificationUrl, welcomeEmailTemplate ,  new AsyncHandler<UserProfilePostResponse<AccessToken<Identity>>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<AccessToken<Identity>> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth User Registration By Captcha (POST)
+ This API creates a user in the database as well as sends a verification email to the user.
+
+```java
+
+AuthUserRegistrationModelWithCaptcha authUserRegistrationModelWithCaptcha = new AuthUserRegistrationModelWithCaptcha(); //Required
+List<EmailModel> email = new ArrayList < EmailModel >();
+EmailModel emailModel = new EmailModel(); 
+emailModel.setType("type");
+emailModel.setValue("value");
+email.add(emailModel);
+authUserRegistrationModelWithCaptcha.setEmail(email); 
+authUserRegistrationModelWithCaptcha.setFirstName("firstName"); 
+authUserRegistrationModelWithCaptcha.setG_Recaptcha_Response("g-recaptcha-response"); 
+authUserRegistrationModelWithCaptcha.setLastName("lastName"); 
+authUserRegistrationModelWithCaptcha.setPassword("password"); 
+String emailTemplate = "<emailTemplate>"; //Optional
+String fields = null; //Optional
+String options = "<options>"; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.userRegistrationByCaptcha( authUserRegistrationModelWithCaptcha, emailTemplate, fields, options, smsTemplate, verificationUrl, welcomeEmailTemplate ,  new AsyncHandler<UserProfilePostResponse<AccessToken<Identity>>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<AccessToken<Identity>> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Validate Access token (GET)
+ This api validates access token, if valid then returns a response with its expiry otherwise error.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.authValidateAccessToken(accessToken ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token Invalidate (GET)
+ This api call invalidates the active access token or expires an access token's validity.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+Boolean preventRefresh = true; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.authInValidateAccessToken(accessToken, preventRefresh ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token Info (GET)
+ This api call provide the active access token Information
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.getAccessTokenInfo(accessToken ,  new AsyncHandler<TokenInfoResponseModel> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(TokenInfoResponseModel response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Read all Profiles by Token (GET)
+ This API retrieves a copy of the user data based on the access token.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String fields = null; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.getProfileByAccessToken(accessToken, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Send Welcome Email (GET)
+ This API sends a welcome email
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.sendWelcomeEmail(accessToken, welcomeEmailTemplate ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Delete Account (GET)
+ This API is used to delete an account by passing it a delete token.
+
+```java
+
+String deletetoken = "<deletetoken>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.deleteAccountByDeleteToken(deletetoken ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Check Email Availability (GET)
+ This API is used to check the email exists or not on your site.
+
+```java
+
+String email = "<email>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.checkEmailAvailability(email ,  new AsyncHandler<ExistResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ExistResponse response) {
+  System.out.println(response.getIsExist());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Verify Email (GET)
+ This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
+
+```java
+
+String verificationToken = "<verificationToken>"; //Required
+String fields = null; //Optional
+String url = "<url>"; //Optional
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.verifyEmail(verificationToken, fields, url, welcomeEmailTemplate ,  new AsyncHandler<UserProfilePostResponse<EmailVerificationData<Identity>>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<EmailVerificationData<Identity>> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Social Identity (GET)
+ This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String fields = null; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.getSocialIdentity(accessToken, fields ,  new AsyncHandler<SocialUserProfile> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(SocialUserProfile response) {
+  System.out.println(response.getAbout());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Privacy Policy Accept (GET)
+ This API is used to update the privacy policy stored in the user's profile by providing the access token of the user accepting the privacy policy
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String fields = null; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.acceptPrivacyPolicy(accessToken, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Delete Account with Email Confirmation (DELETE)
+ This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String deleteUrl = "<deleteUrl>"; //Optional
+String emailTemplate = "<emailTemplate>"; //Optional
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.deleteAccountWithEmailConfirmation(accessToken, deleteUrl, emailTemplate ,  new AsyncHandler<DeleteRequestAcceptResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteRequestAcceptResponse response) {
+  System.out.println(response.getIsDeleteRequestAccepted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Auth Remove Email (DELETE)
+ This API is used to remove additional emails from a user's account.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String email = "<email>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.removeEmail(accessToken, email ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### Account API
+
+
+List of APIs in this Section:
+
+* PUT : [Account Update](#account-update-put)
+* PUT : [Update Phone ID by UID](#update-phone-id-by-uid-put)
+* PUT : [Account Set Password](#account-set-password-put)
+* PUT : [Account Invalidate Verification Email](#account-invalidate-verification-email-put)
+* PUT : [Reset phone ID verification](#reset-phone-id-verification-put)
+* PUT : [Upsert Email](#upsert-email-put)
+* PUT : [Update UID](#update-uid-put)
+* POST : [Account Create](#account-create-post)
+* POST : [Forgot Password token](#forgot-password-token-post)
+* POST : [Email Verification token](#email-verification-token-post)
+* GET : [Account Profiles by Email](#account-profiles-by-email-get)
+* GET : [Account Profile by Phone ID](#account-profile-by-phone-id-get)
+* GET : [Account Profiles by UID](#account-profiles-by-uid-get)
+* GET : [Account Password](#account-password-get)
+* GET : [Access Token based on UID or User impersonation API](#access-token-based-on-uid-or-user-impersonation-api-get)
+* GET : [Account Identities by Email](#account-identities-by-email-get)
+* DELETE : [Account Delete](#account-delete-delete)
+* DELETE : [Account Remove Email](#account-remove-email-delete)
+* DELETE : [Delete User Profiles By Email](#delete-user-profiles-by-email-delete)
+
+
+
+
+##### Account Update (PUT)
+ This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
+
+```java
+
+AccountUserProfileUpdateModel accountUserProfileUpdateModel = new AccountUserProfileUpdateModel(); //Required
+accountUserProfileUpdateModel.setFirstName("firstName"); 
+accountUserProfileUpdateModel.setLastName("lastName"); 
+String uid = "<uid>"; //Required
+String fields = null; //Optional
+
+
+AccountApi accountApi = new AccountApi();
+accountApi.updateAccountByUid( accountUserProfileUpdateModel, uid, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Update Phone ID by UID (PUT)
+ This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
+
+```java
+
+String phone = "<phone>"; //Required
+String uid = "<uid>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.updatePhoneIDByUid(phone, uid, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Set Password (PUT)
+ This API is used to set the password of an account in Cloud Storage.
+
+```java
+
+String password = "<password>"; //Required
+String uid = "<uid>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.setAccountPasswordByUid(password, uid ,  new AsyncHandler<UserPasswordHash> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserPasswordHash response) {
+  System.out.println(response.getPasswordHash());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Invalidate Verification Email (PUT)
+ This API is used to invalidate the Email Verification status on an account.
+
+```java
+
+String uid = "<uid>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.invalidateAccountEmailVerification(uid, emailTemplate, verificationUrl ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Reset phone ID verification (PUT)
+ This API Allows you to reset the phone no verification of an end user’s account.
+
+```java
+
+String uid = "<uid>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.resetPhoneIDVerificationByUid(uid, smsTemplate ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Upsert Email (PUT)
+ This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.
+
+```java
+
+UpsertEmailModel upsertEmailModel = new UpsertEmailModel(); //Required
+List<EmailModel> email = new ArrayList < EmailModel >();
+EmailModel emailModel = new EmailModel(); 
+emailModel.setType("type");
+emailModel.setValue("value");
+email.add(emailModel);
+upsertEmailModel.setEmail(email); 
+String uid = "<uid>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.upsertEmail( upsertEmailModel, uid, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Update UID (PUT)
+ This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.
+
+```java
+
+UpdateUidModel updateUidModel = new UpdateUidModel(); //Required
+updateUidModel.setNewUid("newUid"); 
+String uid = "<uid>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.accountUpdateUid( updateUidModel, uid ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Create (POST)
+ This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
+ 
+ In order to use this API, you need to format a JSON request body with all of the mandatory fields
+
+```java
+
+AccountCreateModel accountCreateModel = new AccountCreateModel(); //Required
+List<EmailModel> email = new ArrayList < EmailModel >();
+EmailModel emailModel = new EmailModel(); 
+emailModel.setType("type");
+emailModel.setValue("value");
+email.add(emailModel);
+accountCreateModel.setEmail(email); 
+accountCreateModel.setFirstName("firstName"); 
+accountCreateModel.setLastName("lastName"); 
+accountCreateModel.setPassword("password"); 
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.createAccount( accountCreateModel, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Forgot Password token (POST)
+ This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.
+
+```java
+
+String email = "<email>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String resetPasswordUrl = "<resetPasswordUrl>"; //Optional
+Boolean sendEmail = true; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.getForgotPasswordToken(email, emailTemplate, resetPasswordUrl, sendEmail ,  new AsyncHandler<ForgotPasswordResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ForgotPasswordResponse response) {
+  System.out.println(response.getForgotToken());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Email Verification token (POST)
+ This API Returns an Email Verification token.
+
+```java
+
+String email = "<email>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.getEmailVerificationToken(email ,  new AsyncHandler<EmailVerificationTokenResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(EmailVerificationTokenResponse response) {
+  System.out.println(response.getVerificationToken());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Profiles by Email (GET)
+ This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.
+
+```java
+
+String email = "<email>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.getAccountProfileByEmail(email, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Profile by Phone ID (GET)
+ This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.
+
+```java
+
+String phone = "<phone>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.getAccountProfileByPhone(phone, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Profiles by UID (GET)
+ This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.
+
+```java
+
+String uid = "<uid>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.getAccountProfileByUid(uid, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Password (GET)
+ This API use to retrive the hashed password of a specified account in Cloud Storage.
+
+```java
+
+String uid = "<uid>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.getAccountPasswordHashByUid(uid ,  new AsyncHandler<UserPasswordHash> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserPasswordHash response) {
+  System.out.println(response.getPasswordHash());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token based on UID or User impersonation API (GET)
+ The API is used to get LoginRadius access token based on UID.
+
+```java
+
+String uid = "<uid>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.getAccessTokenByUid(uid ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Identities by Email (GET)
+ Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
+
+```java
+
+String email = "<email>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.getAccountIdentitiesByEmail(email, fields ,  new AsyncHandler<ListReturn<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListReturn<Identity> response) {
+  System.out.println(response.getData().get(0).getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Delete (DELETE)
+ This API deletes the Users account and allows them to re-register for a new account.
+
+```java
+
+String uid = "<uid>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.deleteAccountByUid(uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Remove Email (DELETE)
+ Use this API to Remove emails from a user Account
+
+```java
+
+String email = "<email>"; //Required
+String uid = "<uid>"; //Required
+String fields = null; //Optional
+
+AccountApi accountApi = new AccountApi();
+accountApi.removeEmail(email, uid, fields ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Delete User Profiles By Email (DELETE)
+ This API is used to delete all user profiles associated with an Email.
+
+```java
+
+String email = "<email>"; //Required
+
+AccountApi accountApi = new AccountApi();
+accountApi.accountDeleteByEmail(email ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### PhoneAuthentication API
+
+
+List of APIs in this Section:
+
+* PUT : [Phone Reset Password by OTP](#phone-reset-password-by-otp-put)
+* PUT : [Phone Verification OTP](#phone-verification-otp-put)
+* PUT : [Phone Verification OTP by Token](#phone-verification-otp-by-token-put)
+* PUT : [Phone Number Update](#phone-number-update-put)
+* POST : [Phone Login](#phone-login-post)
+* POST : [Phone Forgot Password by OTP](#phone-forgot-password-by-otp-post)
+* POST : [Phone Resend Verification OTP](#phone-resend-verification-otp-post)
+* POST : [Phone Resend Verification OTP By Token](#phone-resend-verification-otp-by-token-post)
+* POST : [Phone User Registration by SMS](#phone-user-registration-by-sms-post)
+* GET : [Phone Number Availability](#phone-number-availability-get)
+* DELETE : [Remove Phone ID by Access Token](#remove-phone-id-by-access-token-delete)
+
+
+
+
+##### Phone Reset Password by OTP (PUT)
+ This API is used to reset the password
+
+```java
+
+ResetPasswordByOTPModel resetPasswordByOTPModel = new ResetPasswordByOTPModel(); //Required
+resetPasswordByOTPModel.setOtp("otp"); 
+resetPasswordByOTPModel.setPassword("password"); 
+resetPasswordByOTPModel.setPhone("phone"); 
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.resetPasswordByPhoneOTP( resetPasswordByOTPModel ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Verification OTP (PUT)
+ This API is used to validate the verification code sent to verify a user's phone number
+
+```java
+
+String otp = "<otp>"; //Required
+String phone = "<phone>"; //Required
+String fields = null; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.phoneVerificationByOTP(otp, phone, fields, smsTemplate ,  new AsyncHandler<AccessToken<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessToken<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Verification OTP by Token (PUT)
+ This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String otp = "<otp>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.phoneVerificationOTPByAccessToken(accessToken, otp, smsTemplate ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Number Update (PUT)
+ This API is used to update the login Phone Number of users
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String phone = "<phone>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.updatePhoneNumber(accessToken, phone, smsTemplate ,  new AsyncHandler<UserProfilePostResponse<SMSResponseData>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<SMSResponseData> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Login (POST)
+ This API retrieves a copy of the user data based on the Phone
+
+```java
+
+PhoneAuthenticationModel phoneAuthenticationModel = new PhoneAuthenticationModel(); //Required
+phoneAuthenticationModel.setPassword("password"); 
+phoneAuthenticationModel.setPhone("phone"); 
+String fields = null; //Optional
+String loginUrl = "<loginUrl>"; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.loginByPhone( phoneAuthenticationModel, fields, loginUrl, smsTemplate ,  new AsyncHandler<AccessToken<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessToken<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Forgot Password by OTP (POST)
+ This API is used to send the OTP to reset the account password.
+
+```java
+
+String phone = "<phone>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.forgotPasswordByPhoneOTP(phone, smsTemplate ,  new AsyncHandler<UserProfilePostResponse<SMSResponseData>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<SMSResponseData> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Resend Verification OTP (POST)
+ This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input
+
+```java
+
+String phone = "<phone>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.phoneResendVerificationOTP(phone, smsTemplate ,  new AsyncHandler<UserProfilePostResponse<SMSResponseData>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<SMSResponseData> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Resend Verification OTP By Token (POST)
+ This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String phone = "<phone>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.phoneResendVerificationOTPByToken(accessToken, phone, smsTemplate ,  new AsyncHandler<UserProfilePostResponse<SMSResponseData>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<SMSResponseData> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone User Registration by SMS (POST)
+ This API registers the new users into your Cloud Storage and triggers the phone verification process.
+
+```java
+
+AuthUserRegistrationModel authUserRegistrationModel = new AuthUserRegistrationModel(); //Required
+authUserRegistrationModel.setFirstName("firstName"); 
+authUserRegistrationModel.setLastName("lastName"); 
+authUserRegistrationModel.setPassword("password"); 
+authUserRegistrationModel.setPhoneId("phoneId"); 
+String sott = "<sott>"; //Required
+String fields = null; //Optional
+String options = "<options>"; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.userRegistrationByPhone( authUserRegistrationModel, sott, fields, options, smsTemplate, verificationUrl, welcomeEmailTemplate ,  new AsyncHandler<UserProfilePostResponse<AccessToken<Identity>>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(UserProfilePostResponse<AccessToken<Identity>> response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Phone Number Availability (GET)
+ This API is used to check the Phone Number exists or not on your site.
+
+```java
+
+String phone = "<phone>"; //Required
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.checkPhoneNumberAvailability(phone ,  new AsyncHandler<ExistResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ExistResponse response) {
+  System.out.println(response.getIsExist());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Remove Phone ID by Access Token (DELETE)
+ This API is used to delete the Phone ID on a user's account via the access token
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+
+PhoneAuthenticationApi phoneAuthenticationApi = new PhoneAuthenticationApi();
+phoneAuthenticationApi.removePhoneIDByAccessToken(accessToken ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### MultiFactorAuthentication API
+
+
+List of APIs in this Section:
+
+* PUT : [Update MFA by Access Token](#update-mfa-by-access-token-put)
+* PUT : [MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
+* PUT : [MFA Validate Google Auth Code](#mfa-validate-google-auth-code-put)
+* PUT : [MFA Update Phone Number](#mfa-update-phone-number-put)
+* POST : [MFA Email Login](#mfa-email-login-post)
+* POST : [MFA Phone Login](#mfa-phone-login-post)
+* GET : [MFA Validate Access Token](#mfa-validate-access-token-get)
+* GET : [MFA Resend Otp](#mfa-resend-otp-get)
+* DELETE : [MFA Reset Google Authenticator by Token](#mfa-reset-google-authenticator-by-token-delete)
+* DELETE : [MFA Reset SMS Authenticator by Token](#mfa-reset-sms-authenticator-by-token-delete)
+* DELETE : [MFA Reset SMS Authenticator By UID](#mfa-reset-sms-authenticator-by-uid-delete)
+* DELETE : [MFA Reset Google Authenticator By UID](#mfa-reset-google-authenticator-by-uid-delete)
+
+
+
+
+##### Update MFA by Access Token (PUT)
+ This API is used to Enable Multi-factor authentication by access token on user login
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+MultiFactorAuthModelByGoogleAuthenticatorCode multiFactorAuthModelByGoogleAuthenticatorCode = new MultiFactorAuthModelByGoogleAuthenticatorCode(); //Required
+multiFactorAuthModelByGoogleAuthenticatorCode.setGoogleAuthenticatorCode("googleAuthenticatorCode"); 
+String fields = null; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaUpdateByAccessToken(accessToken,  multiFactorAuthModelByGoogleAuthenticatorCode, fields, smsTemplate ,  new AsyncHandler<Identity> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(Identity response) {
+  System.out.println(response.getUid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Update Phone Number by Token (PUT)
+ This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String phoneNo2FA = "<phoneNo2FA>"; //Required
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaUpdatePhoneNumberByToken(accessToken, phoneNo2FA, smsTemplate2FA ,  new AsyncHandler<SMSResponseData> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(SMSResponseData response) {
+  System.out.println(response.getAccountSid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Validate Google Auth Code (PUT)
+ This API is used to login via Multi-factor-authentication by passing the google authenticator code.
+
+```java
+
+String googleAuthenticatorCode = "<googleAuthenticatorCode>"; //Required
+String secondFactorAuthenticationToken = "<secondFactorAuthenticationToken>"; //Required
+String fields = null; //Optional
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaValidateGoogleAuthCode(googleAuthenticatorCode, secondFactorAuthenticationToken, fields, smsTemplate2FA ,  new AsyncHandler<AccessToken<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessToken<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Update Phone Number (PUT)
+ This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number
+
+```java
+
+String phoneNo2FA = "<phoneNo2FA>"; //Required
+String secondFactorAuthenticationToken = "<secondFactorAuthenticationToken>"; //Required
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaUpdatePhoneNumber(phoneNo2FA, secondFactorAuthenticationToken, smsTemplate2FA ,  new AsyncHandler<SMSResponseData> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(SMSResponseData response) {
+  System.out.println(response.getAccountSid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Email Login (POST)
+ This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.
+
+```java
+
+String email = "<email>"; //Required
+String password = "<password>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String fields = null; //Optional
+String loginUrl = "<loginUrl>"; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaLoginByEmail(email, password, emailTemplate, fields, loginUrl, smsTemplate, smsTemplate2FA, verificationUrl ,  new AsyncHandler<MultiFactorAuthenticationResponse<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(MultiFactorAuthenticationResponse<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Phone Login (POST)
+ This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.
+
+```java
+
+String password = "<password>"; //Required
+String phone = "<phone>"; //Required
+String emailTemplate = "<emailTemplate>"; //Optional
+String fields = null; //Optional
+String loginUrl = "<loginUrl>"; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaLoginByPhone(password, phone, emailTemplate, fields, loginUrl, smsTemplate, smsTemplate2FA, verificationUrl ,  new AsyncHandler<MultiFactorAuthenticationResponse<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(MultiFactorAuthenticationResponse<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Validate Access Token (GET)
+ This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaConfigureByAccessToken(accessToken, smsTemplate2FA ,  new AsyncHandler<MultiFactorAuthenticationSettingsResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(MultiFactorAuthenticationSettingsResponse response) {
+  System.out.println(response.getIsGoogleAuthenticatorVerified());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Resend Otp (GET)
+ This API is used to resending the verification OTP to the provided phone number
+
+```java
+
+String secondFactorAuthenticationToken = "<secondFactorAuthenticationToken>"; //Required
+String smsTemplate2FA = "<smsTemplate2FA>"; //Optional
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaResendOTP(secondFactorAuthenticationToken, smsTemplate2FA ,  new AsyncHandler<SMSResponseData> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(SMSResponseData response) {
+  System.out.println(response.getAccountSid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Reset Google Authenticator by Token (DELETE)
+ This API Resets the Google Authenticator configurations on a given account via the access token
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+Boolean googleauthenticator = true; //Required
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaResetGoogleAuthByToken(accessToken, googleauthenticator ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Reset SMS Authenticator by Token (DELETE)
+ This API resets the SMS Authenticator configurations on a given account via the access token.
+
+```java
+
+String accessToken = "<accessToken>"; //Required
+Boolean otpauthenticator = true; //Required
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaResetSMSAuthByToken(accessToken, otpauthenticator ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Reset SMS Authenticator By UID (DELETE)
+ This API resets the SMS Authenticator configurations on a given account via the UID.
+
+```java
+
+Boolean otpauthenticator = true; //Required
+String uid = "<uid>"; //Required
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaResetSMSAuthenticatorByUid(otpauthenticator, uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### MFA Reset Google Authenticator By UID (DELETE)
+ This API resets the Google Authenticator configurations on a given account via the UID.
+
+```java
+
+Boolean googleauthenticator = true; //Required
+String uid = "<uid>"; //Required
+
+MultiFactorAuthenticationApi multiFactorAuthenticationApi = new MultiFactorAuthenticationApi();
+multiFactorAuthenticationApi.mfaResetGoogleAuthenticatorByUid(googleauthenticator, uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### PasswordLessLogin API
+
+
+List of APIs in this Section:
+
+* PUT : [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
+* GET : [Passwordless Login by Phone](#passwordless-login-by-phone-get)
+* GET : [Passwordless Login By Email](#passwordless-login-by-email-get)
+* GET : [Passwordless Login Verification](#passwordless-login-verification-get)
+
+
+
+
+##### Passwordless Login Phone Verification (PUT)
+ This API verifies an account by OTP and allows the customer to login.
+
+```java
+
+PasswordLessLoginOtpModel passwordLessLoginOtpModel = new PasswordLessLoginOtpModel(); //Required
+passwordLessLoginOtpModel.setOtp("otp"); 
+passwordLessLoginOtpModel.setPhone("phone"); 
+String fields = null; //Optional
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PasswordLessLoginApi passwordLessLoginApi = new PasswordLessLoginApi();
+passwordLessLoginApi.passwordlessLoginPhoneVerification( passwordLessLoginOtpModel, fields, smsTemplate ,  new AsyncHandler<AccessToken<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessToken<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Passwordless Login by Phone (GET)
+ API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID
+
+```java
+
+String phone = "<phone>"; //Required
+String smsTemplate = "<smsTemplate>"; //Optional
+
+PasswordLessLoginApi passwordLessLoginApi = new PasswordLessLoginApi();
+passwordLessLoginApi.passwordlessLoginByPhone(phone, smsTemplate ,  new AsyncHandler<GetResponse<SMSResponseData>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(GetResponse<SMSResponseData> response) {
+  System.out.println(response.getData().getSid());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Passwordless Login By Email (GET)
+ This API is used to send a Passwordless Login verification link to the provided Email ID
+
+```java
+
+String email = "<email>"; //Required
+String passwordLessLoginTemplate = "<passwordLessLoginTemplate>"; //Optional
+String verificationUrl = "<verificationUrl>"; //Optional
+
+PasswordLessLoginApi passwordLessLoginApi = new PasswordLessLoginApi();
+passwordLessLoginApi.passwordlessLoginByEmail(email, passwordLessLoginTemplate, verificationUrl ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Passwordless Login Verification (GET)
+ This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API
+
+```java
+
+String verificationToken = "<verificationToken>"; //Required
+String fields = null; //Optional
+String welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
+
+PasswordLessLoginApi passwordLessLoginApi = new PasswordLessLoginApi();
+passwordLessLoginApi.passwordlessLoginVerification(verificationToken, fields, welcomeEmailTemplate ,  new AsyncHandler<AccessToken<Identity>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessToken<Identity> response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### Role API
+
+
+List of APIs in this Section:
+
+* PUT : [Assign Roles by UID](#assign-roles-by-uid-put)
+* PUT : [Upsert Context](#upsert-context-put)
+* PUT : [Add Permissions to Role](#add-permissions-to-role-put)
+* POST : [Roles Create](#roles-create-post)
+* GET : [Roles by UID](#roles-by-uid-get)
+* GET : [Get Context with Roles and Permissions](#get-context-with-roles-and-permissions-get)
+* GET : [Role Context profile](#role-context-profile-get)
+* GET : [Roles List](#roles-list-get)
+* DELETE : [Unassign Roles by UID](#unassign-roles-by-uid-delete)
+* DELETE : [Delete Role Context](#delete-role-context-delete)
+* DELETE : [Delete Role from Context](#delete-role-from-context-delete)
+* DELETE : [Delete Additional Permission from Context](#delete-additional-permission-from-context-delete)
+* DELETE : [Account Delete Role](#account-delete-role-delete)
+* DELETE : [Remove Permissions](#remove-permissions-delete)
+
+
+
+
+##### Assign Roles by UID (PUT)
+ This API is used to assign your desired roles to a given user.
+
+```java
+
+AccountRolesModel accountRolesModel = new AccountRolesModel(); //Required
+List<String> roles = new ArrayList < String >();
+roles.add("roles");
+accountRolesModel.setRoles(roles); 
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.assignRolesByUid( accountRolesModel, uid ,  new AsyncHandler<com.loginradius.sdk.models.responsemodels.otherobjects.AccountRolesModel> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(com.loginradius.sdk.models.responsemodels.otherobjects.AccountRolesModel response) {
+  System.out.println(response.getRoles());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Upsert Context (PUT)
+ This API creates a Context with a set of Roles
+
+```java
+
+AccountRoleContextModel accountRoleContextModel = new AccountRoleContextModel(); //Required
+List<RoleContextRoleModel> roleContext = new ArrayList < RoleContextRoleModel >();
+RoleContextRoleModel roleContextRoleModel = new RoleContextRoleModel(); 
+List<String> additionalPermissions = new ArrayList < String > ();
+additionalPermissions.add("additionalPermissions");
+roleContextRoleModel.setAdditionalPermissions(additionalPermissions);
+roleContextRoleModel.setContext("context");
+roleContextRoleModel.setExpiration("expiration");
+List<String> roles = new ArrayList < String > ();
+roles.add("roles");
+roleContextRoleModel.setRoles(roles);
+roleContext.add(roleContextRoleModel);
+accountRoleContextModel.setRoleContext(roleContext); 
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.updateRoleContextByUid( accountRoleContextModel, uid ,  new AsyncHandler<ListReturn<RoleContext>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListReturn<RoleContext> response) {
+  System.out.println(response.getData().get(0).getAdditionalPermissions());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Add Permissions to Role (PUT)
+ This API is used to add permissions to a given role.
+
+```java
+
+PermissionsModel permissionsModel = new PermissionsModel(); //Required
+List<String> permissions = new ArrayList < String >();
+permissions.add("permissions");
+permissionsModel.setPermissions(permissions); 
+String role = "<role>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.addRolePermissions( permissionsModel, role ,  new AsyncHandler<com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel response) {
+  System.out.println(response.getName());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Roles Create (POST)
+ This API creates a role with permissions.
+
+```java
+
+RolesModel rolesModel = new RolesModel(); //Required
+List<com.loginradius.sdk.models.requestmodels.RoleModel> roles = new ArrayList < com.loginradius.sdk.models.requestmodels.RoleModel >();
+RoleModel roleModel = new RoleModel(); 
+roleModel.setName("name");
+Map<String,Boolean> permissions= new HashMap<String,Boolean> ();
+permissions.put( "Permission Name", true  );
+roleModel.setPermissions(permissions);
+roles.add(roleModel);
+rolesModel.setRoles(roles); 
+
+RoleApi roleApi = new RoleApi();
+roleApi.createRoles( rolesModel ,  new AsyncHandler<ListData<com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListData<com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel> response) {
+  System.out.println(response.getCount());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Roles by UID (GET)
+ API is used to retrieve all the assigned roles of a particular User.
+
+```java
+
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.getRolesByUid(uid ,  new AsyncHandler<com.loginradius.sdk.models.responsemodels.otherobjects.AccountRolesModel> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(com.loginradius.sdk.models.responsemodels.otherobjects.AccountRolesModel response) {
+  System.out.println(response.getRoles());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Get Context with Roles and Permissions (GET)
+ This API Gets the contexts that have been configured and the associated roles and permissions.
+
+```java
+
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.getRoleContextByUid(uid ,  new AsyncHandler<ListReturn<RoleContext>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListReturn<RoleContext> response) {
+  System.out.println(response.getData().get(0).getAdditionalPermissions());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Role Context profile (GET)
+ The API is used to retrieve role context by the context name.
+
+```java
+
+String contextName = "<contextName>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.getRoleContextByContextName(contextName ,  new AsyncHandler<ListReturn<RoleContextResponseModel>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListReturn<RoleContextResponseModel> response) {
+  System.out.println(response.getData().get(0).getEmail().get(0).getValue());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Roles List (GET)
+ This API retrieves the complete list of created roles with permissions of your app.
+
+```java
+
+
+RoleApi roleApi = new RoleApi();
+roleApi.getRolesList( new AsyncHandler<ListData<com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListData<com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel> response) {
+  System.out.println(response.getCount());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Unassign Roles by UID (DELETE)
+ This API is used to unassign roles from a user.
+
+```java
+
+AccountRolesModel accountRolesModel = new AccountRolesModel(); //Required
+List<String> roles = new ArrayList < String >();
+roles.add("roles");
+accountRolesModel.setRoles(roles); 
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.unassignRolesByUid( accountRolesModel, uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Delete Role Context (DELETE)
+ This API Deletes the specified Role Context
+
+```java
+
+String contextName = "<contextName>"; //Required
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.deleteRoleContextByUid(contextName, uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Delete Role from Context (DELETE)
+ This API Deletes the specified Role from a Context.
+
+```java
+
+String contextName = "<contextName>"; //Required
+RoleContextRemoveRoleModel roleContextRemoveRoleModel = new RoleContextRemoveRoleModel(); //Required
+List<String> roles = new ArrayList < String >();
+roles.add("roles");
+roleContextRemoveRoleModel.setRoles(roles); 
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.deleteRolesFromRoleContextByUid(contextName,  roleContextRemoveRoleModel, uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Delete Additional Permission from Context (DELETE)
+ This API Deletes Additional Permissions from Context.
+
+```java
+
+String contextName = "<contextName>"; //Required
+RoleContextAdditionalPermissionRemoveRoleModel roleContextAdditionalPermissionRemoveRoleModel = new RoleContextAdditionalPermissionRemoveRoleModel(); //Required
+List<String> additionalPermissions = new ArrayList < String >();
+additionalPermissions.add("additionalPermissions");
+roleContextAdditionalPermissionRemoveRoleModel.setAdditionalPermissions(additionalPermissions); 
+String uid = "<uid>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.deleteAdditionalPermissionFromRoleContextByUid(contextName,  roleContextAdditionalPermissionRemoveRoleModel, uid ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Account Delete Role (DELETE)
+ This API is used to delete the role.
+
+```java
+
+String role = "<role>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.deleteRole(role ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Remove Permissions (DELETE)
+ API is used to remove permissions from a role.
+
+```java
+
+PermissionsModel permissionsModel = new PermissionsModel(); //Required
+List<String> permissions = new ArrayList < String >();
+permissions.add("permissions");
+permissionsModel.setPermissions(permissions); 
+String role = "<role>"; //Required
+
+RoleApi roleApi = new RoleApi();
+roleApi.removeRolePermissions( permissionsModel, role ,  new AsyncHandler<com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(com.loginradius.sdk.models.responsemodels.otherobjects.RoleModel response) {
+  System.out.println(response.getName());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### Sott API
+
+
+List of APIs in this Section:
+
+* GET : [Generate SOTT](#generate-sott-get)
+
+
+
+
+##### Generate SOTT (GET)
+ This API allows you to generate SOTT with a given expiration time.
+
+```java
+
+Integer timeDifference = 0; //Optional
+
+SottApi sottApi = new SottApi();
+sottApi.generateSott(timeDifference ,  new AsyncHandler<SottResponseData> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(SottResponseData response) {
+  System.out.println(response.getExpiryTime());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### NativeSocial API
+
+
+List of APIs in this Section:
+
+* GET : [Access Token via Facebook Token](#access-token-via-facebook-token-get)
+* GET : [Access Token via Twitter Token](#access-token-via-twitter-token-get)
+* GET : [Access Token via Google Token](#access-token-via-google-token-get)
+* GET : [Access Token using google JWT token for Native Mobile Login](#access-token-using-google-jwt-token-for-native-mobile-login-get)
+* GET : [Access Token via Linkedin Token](#access-token-via-linkedin-token-get)
+* GET : [Access Token via Google AuthCode](#access-token-via-google-authcode-get)
+
+
+
+
+##### Access Token via Facebook Token (GET)
+ The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.
+
+```java
+
+String fbAccessToken = "<fbAccessToken>"; //Required
+
+NativeSocialApi nativeSocialApi = new NativeSocialApi();
+nativeSocialApi.getAccessTokenByFacebookAccessToken(fbAccessToken ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token via Twitter Token (GET)
+ The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.
+
+```java
+
+String twAccessToken = "<twAccessToken>"; //Required
+String twTokenSecret = "<twTokenSecret>"; //Required
+
+NativeSocialApi nativeSocialApi = new NativeSocialApi();
+nativeSocialApi.getAccessTokenByTwitterAccessToken(twAccessToken, twTokenSecret ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token via Google Token (GET)
+ The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.
+
+```java
+
+String googleAccessToken = "<googleAccessToken>"; //Required
+String clientId = "<clientId>"; //Optional
+String refreshToken = "<refreshToken>"; //Optional
+
+NativeSocialApi nativeSocialApi = new NativeSocialApi();
+nativeSocialApi.getAccessTokenByGoogleAccessToken(googleAccessToken, clientId, refreshToken ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token using google JWT token for Native Mobile Login (GET)
+ This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.
+
+```java
+
+String idToken = "<idToken>"; //Required
+
+NativeSocialApi nativeSocialApi = new NativeSocialApi();
+nativeSocialApi.getAccessTokenByGoogleJWTAccessToken(idToken ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token via Linkedin Token (GET)
+ The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.
+
+```java
+
+String lnAccessToken = "<lnAccessToken>"; //Required
+
+NativeSocialApi nativeSocialApi = new NativeSocialApi();
+nativeSocialApi.getAccessTokenByLinkedinAccessToken(lnAccessToken ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Access Token via Google AuthCode (GET)
+ The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.
+
+```java
+
+String googleAuthcode = "<googleAuthcode>"; //Required
+
+NativeSocialApi nativeSocialApi = new NativeSocialApi();
+nativeSocialApi.getAccessTokenByGoogleAuthCode(googleAuthcode ,  new AsyncHandler<AccessTokenBase> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(AccessTokenBase response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+
+```
+
+  
+
+
+
+
+
+
+
+### WebHook API
+
+
+List of APIs in this Section:
+
+* POST : [Webhook Subscribe](#webhook-subscribe-post)
+* GET : [Webhook Subscribed URLs](#webhook-subscribed-urls-get)
+* GET : [Webhook Test](#webhook-test-get)
+* DELETE : [WebHook Unsubscribe](#webhook-unsubscribe-delete)
+
+
+
+
+##### Webhook Subscribe (POST)
+ API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
+
+```java
+
+WebHookSubscribeModel webHookSubscribeModel = new WebHookSubscribeModel(); //Required
+webHookSubscribeModel.setEvent("event"); 
+webHookSubscribeModel.setTargetUrl("targetUrl"); 
+
+WebHookApi webHookApi = new WebHookApi();
+webHookApi.webHookSubscribe( webHookSubscribeModel ,  new AsyncHandler<PostResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(PostResponse response) {
+  System.out.println(response.getIsPosted());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Webhook Subscribed URLs (GET)
+ This API is used to fatch all the subscribed URLs, for particular event
+
+```java
+
+String event = "<event>"; //Required
+
+WebHookApi webHookApi = new WebHookApi();
+webHookApi.getWebHookSubscribedURLs(event ,  new AsyncHandler<ListData<com.loginradius.sdk.models.responsemodels.otherobjects.WebHookSubscribeModel>> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(ListData<com.loginradius.sdk.models.responsemodels.otherobjects.WebHookSubscribeModel> response) {
+  System.out.println(response.getCount());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### Webhook Test (GET)
+ API can be used to test a subscribed WebHook.
+
+```java
+
+
+WebHookApi webHookApi = new WebHookApi();
+webHookApi.webhookTest( new AsyncHandler<EntityPermissionAcknowledgement> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(EntityPermissionAcknowledgement response) {
+  System.out.println(response.getIsAllowed());
+ }
+});
+
+```
+
+  
+
+
+
+
+##### WebHook Unsubscribe (DELETE)
+ API can be used to unsubscribe a WebHook configured on your LoginRadius site.
+
+```java
+
+WebHookSubscribeModel webHookSubscribeModel = new WebHookSubscribeModel(); //Required
+webHookSubscribeModel.setEvent("event"); 
+webHookSubscribeModel.setTargetUrl("targetUrl"); 
+
+WebHookApi webHookApi = new WebHookApi();
+webHookApi.webHookUnsubscribe( webHookSubscribeModel ,  new AsyncHandler<DeleteResponse> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(DeleteResponse response) {
+  System.out.println(response.getIsDeleted());
+ }
+});
+
+```
