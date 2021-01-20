@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import utils from "../utils";
 
 import Developer from "../../components/developer.js"
+import Pro from "../../components/pro.js"
 
 const Heading = styled.h1({
   ':not(:last-child)': {
@@ -18,10 +19,16 @@ const Heading = styled.h1({
 
 export default function PageHeader(props) {
 
-  if (utils.premiumDocs.includes(props.title)) {
+  if (utils.developerDocs.includes(props.title)) {
+    return (
+      <div className="header-wrapper" key="with_developer">
+        <Developer><Heading>{props.title}</Heading></Developer>
+      </div>
+    );
+  } else if (utils.premiumDocs.includes(props.title)) {
     return (
       <div className="header-wrapper" key="with_premium">
-        <Developer ><Heading>{props.title}</Heading></Developer>
+        <Pro><Heading>{props.title}</Heading></Pro>
       </div>
     );
   } else {
