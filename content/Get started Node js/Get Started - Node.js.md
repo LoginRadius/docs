@@ -4,11 +4,9 @@ The tutorial lets you implement user registration, login, profile, and log out t
 
 
 ```
-You must have Node.js installed and minimum supported version is 10.0.0
+You must have Node.js installed and the minimum supported version is 10.0.0
 ```
 
-
-Watch the video to get started or refer to the section below for the text-based guide
 
 <figure class="video_container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/efM46qNSaeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
@@ -19,7 +17,7 @@ Signing up for LoginRadius created an app for you, this app is linked to a ready
 
 
 ```
-Create an account to get started, if you don't have one yet!
+[Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started, if you don't have one yet!
 ```
 
 
@@ -49,21 +47,27 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 Here we are using express framework to create node js api.
 
-## Installation
+## SDK Installation
 
-Install loginradius-sdk to use loginradius features and functionality.
+Download the Node.js SDK from here or you can install it using npm by running the following command in command line
 
-`npm install loginradius-sdk@10.0.0`
+`npm install loginradius-sdk`
+
+Upon installation, you can see LoginRadius Node.js SDK under node module and the folder structure looks like the following:
+
+![alt_text](images/images3.png "image_tooltip")
+
+![alt_text](images/images4.png "image_tooltip")
 
 ## Configuration
 
-Initialize configuration object.
+Initialize configuration object in index file or desired route.
 ```
  var config = {
       apiDomain: 'https://api.loginradius.com',
-      apiKey: '{{ Your API KEY }}',
+      apiKey: '{{ Your API Key }}',
       apiSecret: '{{ Your API Secret }}',
-      siteName: '{{ Your Sitename }}',
+      siteName: '{{ Your App name }}',
       proxy:{
         host:'',
         port:'',
@@ -73,9 +77,9 @@ Initialize configuration object.
   }
 ```
 
-Replace the placeholders in the config object with your LoginRadius credentials **apikey, apisecret, sitename**. which find from previous step.
+Replace the placeholders in the config object with your LoginRadius credentials **API Key, API Secret, and App Name**. you found in the Get Credentials step.
 
-Pass the proxy configurations if you want to set Http Server Proxy Configuration through your Node.js SDK. Host and port are required to set Http Server Proxy configuration (username and password are optional).
+Pass the proxy configurations if you want to set Http Server Proxy Configuration through your Node.js SDK. Host and port are required to set Http Server Proxy configuration while username and password are optional.
 
 Require the `loginradius-sdk` package and pass the config object
 
@@ -103,7 +107,7 @@ Check out our [Auth Page (IDX)](https://www.loginradius.com/docs/developer/conce
 
 # Retrieve User Data using Access Token
 
-Once the authentication is done using Auth Page, the return_url will access the node js backend api with query parameter (access token), then can use the same token to fetch to user profile.
+Once the authentication is done using Auth Page, the return_url will access the node js backend api with query parameter (access token), then can use the same token to fetch the user profile.
 
 ```
 router.get('/userProfile', function(req, res) {
