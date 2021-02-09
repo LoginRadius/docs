@@ -125,7 +125,7 @@ LoginRadius processes the API calls that are received from the whitelisted domai
 
 To use your own domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
-<image will be added here>
+![alt_text](images/image5.png "image_tooltip")
 
 
 
