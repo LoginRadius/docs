@@ -4,8 +4,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 
 
-> You must have Node.js installed, and the minimum supported version is 10.0.0
-> New to Node.Js? Check out [this reference](https://nodejs.org/en/about/).
+> You must have Node.js installed, and the minimum supported version is 10.0.0. New to Node.Js? Check out [this reference](https://nodejs.org/en/about/).
 
 Watch the video to get started, or refer to the section below for the text-based guide.
 
@@ -23,12 +22,12 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, navigate to the Auth Page (IDX) and click the **Theme Customization** to choose the theme of your choice. It will be the design theme of your login page:
+In your LoginRadius Dashboard, from the left navigatation, click the **Auth Page (IDX)** and click the **Theme Customization** to choose the theme of your choice or customize it's look and feel:
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/Image6.png "image_tooltip")
 
 
-To check your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember Me are already implemented on your Auth Page(IDX).
+To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
 
 
 ## Get Credentials {#getcredential}
@@ -39,7 +38,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/Image7.png "image_tooltip")
 
 
 
@@ -51,11 +50,11 @@ Here we are using the express framework to create Node.js API. Perform the follo
 
   `npm init`
 
-  Upon completion, it will add a `package.json` file in the project folder 
+  Upon completion, it will add a `package.json` file in the project folder. 
 
-- Create a server file in project and name it `server.js`
+- Create a server file in project and name it `server.js`.
 
-- Add the following snippet in the `server.js`
+- Add the following snippet in the `server.js`.
 
 ```
 var express = require('express');
@@ -121,15 +120,15 @@ In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the 
 
 > Registration and Login functionality is already implemented on your Auth Page (IDX). Thus, you don’t need to implement them separately.
 
-Registration Page URL:
+**Registration Page URL:**
 
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`
 
-Login Page URL:
+**Login Page URL:**
 
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
-Where:
+**Where:**
 - LoginRadius App Name is the name of your app as mentioned in [Get Credential](#getcredential) step.
 - return_url is where you want to redirect users upon successful registration or login.
 
@@ -155,9 +154,9 @@ You can use the access token to retrieve profile data and handle other user func
 
 ## Retrieve User Data using Access Token
 
-Once the authentication is done using Auth Page, the return_url will access the Node.js backend API with query parameter (access token). You can use this token to fetch the user profile:
+Once the authentication is done using Auth Page, the return_url will access the Node.js backend API with query parameter (access token). You can use this token to fetch the user profile.
 
-For example: To get the user profile, add the following API snippet to `server.js`
+For example: To get the user profile, add the following API snippet to `server.js`:
 
 ```
 router.get('/userProfile', function(req, res) {
