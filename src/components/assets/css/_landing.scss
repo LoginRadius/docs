@@ -1,0 +1,156 @@
+.hero {
+  h1 {
+    margin-bottom: 24px;
+    font-size: 44px;
+  }
+  p {
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .btn-group {
+    margin-top: 48px;
+  }
+  .step {
+    display: flex;
+    position: relative;
+    min-height: 130px;
+    &:last-child {
+      min-height: 50px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 70px;
+      height: 0;
+      width: 2px;
+      background-color: rgba(179, 182, 184, 0.45);
+    }
+    &.step1 {
+      .info {
+        margin-top: 10px;
+      }
+    }
+    .info {
+      margin: 24px 0 20px;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: $black;
+      span {
+        color: $cta;
+        display: block;
+      }
+    }
+
+    .text {
+      font-size: 12px;
+      color: $black;
+      padding-bottom: 0;
+      margin: 0;
+    }
+
+    &:not(:last-child) {
+      &:after {
+        height: 48%;
+      }
+    }
+  }
+
+  .number {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(232, 233, 234, 0.3);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 1.5rem;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+  .grid-50 {
+    & > div {
+      &:first-child {
+        p {
+          padding-right: 40px;
+        }
+      }
+      &:nth-child(2) {
+        padding-left: 250px;
+      }
+    }
+  }
+}
+section {
+  .section-header {
+    p {
+      width: 70%;
+    }
+  }
+}
+//tutorials
+.tutorials {
+  .card {
+    min-height: 405px;
+  }
+  .read-more {
+    font-size: 18px;
+    color: $black;
+    margin-top: 24px;
+    a {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+//resources
+
+.resources {
+  .grid-50 {
+    & > div {
+      margin-bottom: 24px;
+    }
+  }
+  .card {
+    min-height: 404px;
+    ul {
+      li {
+        width: 50%;
+        float: left;
+        a {
+          color: $blue;
+          &:hover {
+            color: $gray-dark;
+          }
+        }
+      }
+    }
+  }
+  &.comprehensive-resources {
+    .card {
+      min-height: 284px;
+    }
+  }
+}
