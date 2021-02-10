@@ -1,10 +1,11 @@
 import React from "react"
 
-const Middle =() => { 
-    return (
-        <main>
-        <section class="hero py-72">
-          <div class="grid-50 d-flex align-items-center">
+const Middle = () => {
+  return (
+      <main>
+        {/*Hero section*/}
+        <section className="hero py-72">
+          <div className="grid-50 d-flex align-items-center">
             <div>
               <h1>Identity Platform Documents</h1>
               <p>
@@ -17,171 +18,176 @@ const Middle =() => {
                 You can find everything from SDKs in your favorite languages to
                 APIs and sample demos using various technologies.
               </p>
-              <div class="btn-group">
-                <a href="#" class="btn btn-primary">Try 5 minute Setup Guide</a>
-                <a href="#" class="btn btn-outline">Sign up for free</a>
+              <div className="btn-group">
+                <a href="#" className="btn btn-primary">
+                  Try 5 minute Setup Guide
+                </a>
+                <a href="#" className="btn btn-outline">
+                  Sign up for free
+                </a>
               </div>
             </div>
-            <div class="wrapper">
-              <div class="steps" id="steps">
-                <div class="step step1">
-                  <div class="number">
-                    <img src="assets/images/step1.png" width="36" />
+            <div className="wrapper">
+              <div className="steps" id="steps">
+                <div className="step step1">
+                  <div className="number">
+                    <img src="static/images/step1.png" width={36} />
                   </div>
-                  <div class="info">
-                    <p class="title">
+                  <div className="info">
+                    <p className="title">
                       Create your account <span>(it’s free)</span>
                     </p>
                   </div>
                 </div>
-
-                <div class="step step2">
-                  <div class="number">
-                    <img src="assets/images/step2.png" width="36" />
+                <div className="step step2">
+                  <div className="number">
+                    <img src="static/images/step2.png" width={36} />
                   </div>
-                  <div class="info">
-                    <p class="title">Setup Your App</p>
+                  <div className="info">
+                    <p className="title">Setup Your App</p>
                   </div>
                 </div>
-                <div class="step step3">
-                  <div class="number">
-                    <img src="assets/images/step3.png" width="36" />
+                <div className="step step3">
+                  <div className="number">
+                    <img src="static/images/step3.png" width={36} />
                   </div>
-                  <div class="info">
-                    <p class="title">Get Started</p>
+                  <div className="info">
+                    <p className="title">Get Started</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="tutorials py-72">
-          <div class="section-header">
+        {/*Hero section*/}
+        {/*Tutorials section*/}
+        <section className="tutorials py-72">
+          <div className="section-header">
             <h2>Tutorials</h2>
             <p>
               Explore our code and resources to get started in just few minutes.
             </p>
           </div>
-          <div class="grid-25">
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/single-page-app.svg" />
+          <div className="grid-25">
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/single-page-app.svg" />
               </div>
-              <h3 class="title">Single Page App</h3>
+              <h3 className="title">Single Page App</h3>
               <ul>
                 <li>
                   <a href="#">
-                    <img src="assets/images/react.svg" width="20" />
+                    <img src="static/images/react.svg" width={20} />
                     <span>React</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/angular.svg" width="20" />
+                    <img src="static/images/angular.svg" width={20} />
                     <span>Angular</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/vue-dot-js.svg" width="20" />
+                    <img src="static/images/vue-dot-js.svg" width={20} />
                     <span>VueJs</span>
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/web-apps.svg" />
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/web-apps.svg" />
               </div>
-              <h3 class="title">Web Apps</h3>
+              <h3 className="title">Web Apps</h3>
               <ul>
                 <li>
                   <a href="#">
-                    <img src="assets/images/node-dot-js.svg" width="20" />
+                    <img src="static/images/node-dot-js.svg" width={20} />
                     <span>NodeJs</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/php.svg" width="20" />
+                    <img src="static/images/php.svg" width={20} />
                     <span>PHP</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/java.svg" width="20" />
+                    <img src="static/images/java.svg" width={20} />
                     <span>JAVA</span>
                   </a>
                 </li>
               </ul>
-              <div class="read-more">
+              <div className="read-more">
                 <a href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
+                    width={20}
+                    height={20}
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#008ecf"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-plus"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="feather feather-plus"
                   >
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <line x1={12} y1={5} x2={12} y2={19} />
+                    <line x1={5} y1={12} x2={19} y2={12} />
                   </svg>
-                  <span>More</span></a
-                >
+                  <span>More</span>
+                </a>
               </div>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/mobile-apps.svg" />
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/mobile-apps.svg" />
               </div>
-              <h3 class="title">Mobile Apps</h3>
+              <h3 className="title">Mobile Apps</h3>
               <ul>
                 <li>
                   <a href="#">
-                    <img src="assets/images/android.svg" width="20" />
+                    <img src="static/images/android.svg" width={20} />
                     <span>Android</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/ios.svg" width="20" />
+                    <img src="static/images/ios.svg" width={20} />
                     <span>iOS</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/adobephonegap.svg" width="20" />
+                    <img src="static/images/adobephonegap.svg" width={20} />
                     <span>PhoneGap</span>
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/cms-app.svg" />
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/cms-app.svg" />
               </div>
-              <h3 class="title">CMS App</h3>
+              <h3 className="title">CMS App</h3>
               <ul>
                 <li>
                   <a href="#">
-                    <img src="assets/images/wordpress.svg" width="20" />
+                    <img src="static/images/wordpress.svg" width={20} />
                     <span>WordPress</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/drupal.svg" width="20" />
+                    <img src="static/images/drupal.svg" width={20} />
                     <span>Drupal </span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/images/joomla.svg" width="20" />
+                    <img src="static/images/joomla.svg" width={20} />
                     <span>Joomla</span>
                   </a>
                 </li>
@@ -189,8 +195,10 @@ const Middle =() => {
             </div>
           </div>
         </section>
-        <section class="resources py-72">
-          <div class="section-header">
+        {/*Tutorials section*/}
+        {/*Section Recommended Resources*/}
+        <section className="resources py-72">
+          <div className="section-header">
             <h2>Recommended Resources</h2>
             <p>
               Whether you are a beginner or an experienced professional, our
@@ -198,12 +206,13 @@ const Middle =() => {
               confidence and at your own pace.
             </p>
           </div>
-          <div class="grid-50">
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/login-methods.svg" />
+          <div className="grid-50">
+            {/*Login Methods we offer*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/login-methods.svg" />
               </div>
-              <h3 class="title">Login Methods we offer</h3>
+              <h3 className="title">Login Methods we offer</h3>
               <ul>
                 <li>
                   <a href="#">Email/Password Login</a>
@@ -219,11 +228,13 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/user-managment.svg" />
+            {/*Login Methods we offer*/}
+            {/*Explore user managment options*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/user-managment.svg" />
               </div>
-              <h3 class="title">Explore user managment options</h3>
+              <h3 className="title">Explore user managment options</h3>
               <ul>
                 <li>
                   <a href="#">Mange Users</a>
@@ -236,11 +247,13 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/branding.svg" />
+            {/*Explore user managment options*/}
+            {/*Personalize interfaces and branding*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/branding.svg" />
               </div>
-              <h3 class="title">Personalize interfaces and branding</h3>
+              <h3 className="title">Personalize interfaces and branding</h3>
               <ul>
                 <li>
                   <a href="#">Customize Auth Page (IDX)</a>
@@ -259,11 +272,13 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/sso.svg" />
+            {/*Personalize interfaces and branding*/}
+            {/*Single Sign On*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/sso.svg" />
               </div>
-              <h3 class="title">Single Sign On</h3>
+              <h3 className="title">Single Sign On</h3>
               <ul>
                 <li>
                   <a href="#">Web SSO </a>
@@ -273,11 +288,13 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/intigration.svg" />
+            {/*Single Sign On*/}
+            {/*Integrate Third Parties*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/intigration.svg" />
               </div>
-              <h3 class="title">Integrate Third Parties</h3>
+              <h3 className="title">Integrate Third Parties</h3>
               <ul>
                 <li>
                   <a href="#">Setup Web Hooks </a>
@@ -302,11 +319,13 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/secure-authentication.svg" />
+            {/*Integrate Third Parties*/}
+            {/*Secure Authentication*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/secure-authentication.svg" />
               </div>
-              <h3 class="title">Secure Authentication</h3>
+              <h3 className="title">Secure Authentication</h3>
               <ul>
                 <li>
                   <a href="#">Google reCAPTCHA </a>
@@ -328,33 +347,39 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
+            {/*Secure Authentication*/}
           </div>
         </section>
-        <section class="resources comprehensive-resources py-72">
-          <div class="section-header">
+        {/*Section Recommended Resources*/}
+        {/*Section Comprehensive Resources*/}
+        <section className="resources comprehensive-resources py-72">
+          <div className="section-header">
             <h2>Comprehensive Resources</h2>
             <p>
               Check out concepts, SDKs, and APIs to extensively use LoginRadius
               Identity Platform.
             </p>
           </div>
-          <div class="grid-50">
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/concepts.svg" />
+          <div className="grid-50">
+            {/*Concepts*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/concepts.svg" />
               </div>
-              <h3 class="title">Concepts</h3>
+              <h3 className="title">Concepts</h3>
               <ul>
                 <li>
                   <a href="#">IDX</a>
                 </li>
               </ul>
             </div>
-            <div class="card">
-              <div class="icon">
-                <img src="assets/images/references.svg" />
+            {/*Concepts*/}
+            {/*References*/}
+            <div className="card">
+              <div className="icon">
+                <img src="static/images/references.svg" />
               </div>
-              <h3 class="title">References</h3>
+              <h3 className="title">References</h3>
               <ul>
                 <li>
                   <a href="#">SDKs </a>
@@ -364,10 +389,12 @@ const Middle =() => {
                 </li>
               </ul>
             </div>
+            {/*References*/}
           </div>
         </section>
-    </main>
-    )
+        {/*Section Comprehensive Resources*/}
+      </main>
+  )
 }
 
-export default Middle 
+export default Middle

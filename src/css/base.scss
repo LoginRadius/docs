@@ -1,0 +1,194 @@
+@import "variable", "button", "link", "grid", "header", "landing", "footer";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  color: $black;
+}
+html,
+body {
+  min-height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: $font-stack;
+  margin-top: 0;
+}
+a {
+  text-decoration: none;
+  color: $blue;
+  transition: all 0.2s ease-in-out 0s;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+button,
+input[type="button"] {
+  cursor: pointer;
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s,
+    box-shadow 0.35s, opacity 0.35s;
+}
+.p-0 {
+  padding: 0 !important;
+}
+.py-32 {
+  padding: 32px 0;
+}
+.py-72 {
+  padding: 72px 0;
+}
+.py-112 {
+  padding: 112px 0;
+}
+.m-auto {
+  margin: 0 auto;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.card {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 32px;
+  border: 1px solid $gray-lightest;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s,
+    box-shadow 0.35s, opacity 0.35s;
+  &:hover {
+    border-color: $blue;
+  }
+  .icon {
+    margin-bottom: 33px;
+    img,
+    svg {
+      max-width: 70px;
+      max-height: 70px;
+      min-height: 70px;
+    }
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  ul {
+    li {
+      margin-bottom: 24px;
+      img {
+        margin-right: 1rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: $gray-dark;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+.shadow {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.03);
+}
+.d-flex {
+  display: flex;
+}
+.align-items-stretch {
+  align-items: stretch;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.h-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//placeholder CSS
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: $gray-light;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $gray-light;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $gray-light;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $gray-light;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+// container
+section,
+header,
+footer {
+  overflow: hidden;
+  & > div {
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1248px;
+    h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 44px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 28px;
+      margin-bottom: 56px;
+      margin-top: 0;
+      color: $gray-dark;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
