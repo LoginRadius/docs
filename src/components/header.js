@@ -1,12 +1,12 @@
 import React from "react"
 
 const Header =() => { 
-    return (
+    return ( 
       <header>
         <div>
         <div>
           <div class="logo">
-            <img src="static/images/logo.svg" width="228" />
+            <img src="images/logo.svg" width="228" />
           </div>
           <div class="search">
             <form>
