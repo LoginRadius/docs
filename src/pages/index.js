@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import App from "../components/app"
+import Layout from "../components/app"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
-      <App location={location} title={siteTitle}>
+      <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
         <p>
@@ -19,12 +19,12 @@ const BlogIndex = ({ data, location }) => {
           directory you specified for the "gatsby-source-filesystem" plugin in
           gatsby-config.js).
         </p>
-      </App>
+      </Layout>
     )
   }
 
   return (
-    <App location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
@@ -59,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
-    </App>
+    </Layout>
   )
 }
 

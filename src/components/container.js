@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Middle = () => {
   return (
@@ -102,10 +103,10 @@ const Middle = () => {
               <h3 className="title">Web Apps</h3>
               <ul>
                 <li>
-                  <a href="#">
-                    <img src="images/node-dot-js.svg" width={20} />
-                    <span>NodeJs</span>
-                  </a>
+                <Link to="/get-started-node-js">
+                <img src="images/node-dot-js.svg" width={20} />
+                <span>NodeJs</span>
+                  </Link>
                 </li>
                 <li>
                   <a href="#">

@@ -2,7 +2,7 @@ import React from "react"
 import Header from "./header"
 import Container from "./container"
 import Footer from "./footer"
-const App = ({ location, title, children }) => {
+const Layout = ({ location, title, children }) => {
 //  const rootPath = `${__PATH_PREFIX__}/`
 //  const isRootPath = location.pathname === rootPath
     return (
@@ -16,4 +16,4 @@ const App = ({ location, title, children }) => {
   )
 }
 
-export default App
+export default Layout

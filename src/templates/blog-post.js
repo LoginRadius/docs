@@ -1,9 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
-import App from "../components/app"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Header from "../components/header"
+import Footer from "../components/footer"
+
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -11,12 +13,20 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <App location={location} title={siteTitle}>
+    <div className="global-wrapper" >
+    <div id="root">
+    <Header />
+    <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
+        <section
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        />
+
+       {/* <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
@@ -33,8 +43,8 @@ const BlogPostTemplate = ({ data, location }) => {
         <footer>
           <Bio />
         </footer>
-      </article>
-      <nav className="blog-post-nav">
+      </article> */}
+      {/* <nav className="blog-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -59,9 +69,13 @@ const BlogPostTemplate = ({ data, location }) => {
             )}
           </li>
         </ul>
-      </nav>
-    </App>
-  )
+      </nav> */}
+    </Layout>
+    <Footer />
+    </div>
+    </div>
+
+)
 }
 
 export default BlogPostTemplate
