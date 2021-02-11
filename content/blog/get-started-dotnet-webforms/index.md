@@ -2,8 +2,6 @@
 
 The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP.NET Web Forms application.
 
-> This tutorial assumes that you already have an ASP&#46;NET development environment set up with a minimum version of 4.0 or later.
-
 ---------------------------------------------------
 
 When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/). When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your Web Forms application.
@@ -14,7 +12,7 @@ When you signed up for a LoginRadius account, an app was created for you. This a
 
 In your LoginRadius Dashboard, navigate to the **Auth Page (IDX)** section located in the left navigation bar and click the **Theme Customization** section. There you can select a design theme for your login page, or further customize the content displayed:
 
-![alt_text](../assets/tutorial-common/theme-customization.png "image_tooltip")
+![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
 To preview your theme and content, click the **Go to your Login Page** link as highlighted on the above screen. There are various features already implemented on your Auth Page, such as Email and Password Login, User Registration, Forgot Password, and Remember Password.
 
@@ -24,7 +22,7 @@ Before using any of the APIs or methods that LoginRadius provides, you will need
 
 In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)**, and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
-![alt_text](../assets/tutorial-common/api-credentials.png "image_tooltip")
+![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 ## SDK Installation
 
@@ -112,13 +110,15 @@ For example: To get the user profile, add the following script tag to your web p
 </script>
 ```
 
+From here, you can use JQuery or vanilla JavaScript to populate your webpage with the retrieved user profile.
+
 ## Domain Whitelisting
 
 For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default. 
 
 To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
-![alt_text](../assets/tutorial-common/domain-whitelisting.png "image_tooltip")
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 # Recommended Next Steps
 
