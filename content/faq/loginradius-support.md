@@ -43,7 +43,7 @@ To access the LoginRadius Support section, login to your [LoginRadius Dashboard]
 </div>
 <br/>
 
-Apart from this, you can also check out **Need help?** section available at the bottom of getting started page as displayed in the below screen:
+Apart from this, you can also check out the **Report An Issue** section available at the bottom of getting started page as displayed in the below screen:
 
 
 
