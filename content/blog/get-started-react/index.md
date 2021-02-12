@@ -11,7 +11,7 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, from the left navigatation, click the **Auth Page (IDX)** and click the **Theme Customization** to choose the theme of your choice or customize it's look and feel:
+In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to to select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](images/image6.png "image_tooltip")
 
@@ -183,6 +183,9 @@ class Login extends React.Component {
 
 export default withRouter(Login);
 ```
+Replace the following placeholder in the above code:
+{{YOUR API KEY}} : API Key obtained in the Get Credentials step.
+
 
 Once the `Login` component is implemented, set the `return_url` to point to the `/login` subdomain of your application. For example, in the local React instance, it can point to `http://localhost:3000/login`. This way, after logging in through the IDX Login page, your user will be redirected to the Login component that we just implemented.
 
@@ -190,7 +193,7 @@ Once the `Login` component is implemented, set the `return_url` to point to the 
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
 
-To whilelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](images/image5.png "image_tooltip")
 
