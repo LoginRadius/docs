@@ -24,7 +24,7 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 In your LoginRadius Dashboard, from the left navigatation, click the **Auth Page (IDX)** and click the **Theme Customization** to choose the theme of your choice or customize it's look and feel:
 
-![alt_text](images/Image6.png "image_tooltip")
+![alt_text](images/image6.png "image_tooltip")
 
 
 To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
@@ -38,7 +38,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 
 
-![alt_text](images/Image7.png "image_tooltip")
+![alt_text](images/image7.png "image_tooltip")
 
 
 

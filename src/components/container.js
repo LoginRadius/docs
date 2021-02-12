@@ -75,12 +75,12 @@ const Middle = () => {
                 <img src="images/single-page-app.svg" />
               </div>
               <h3 className="title">Single Page App</h3>
-              <ul>
+              <ul>  
                 <li>
-                  <a href="#">
+                <Link to="/get-started-react">   
                     <img src="images/react.svg" width={20} />
                     <span>React</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#">
@@ -97,7 +97,7 @@ const Middle = () => {
               </ul>
             </div>
             <div className="card">
-              <div className="icon">
+              <div className="icon"> 
                 <img src="images/web-apps.svg" />
               </div>
               <h3 className="title">Web Apps</h3>
