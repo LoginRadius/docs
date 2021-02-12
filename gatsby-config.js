@@ -11,7 +11,7 @@ module.exports = {
         ...themeOptions,
         root: __dirname,
         siteName: "LoginRadius Developer Docs",
-        baseUrl: "https://www.l0oginradius.com",
+        baseUrl: "https://www.loginradius.com",
         subtitle: "",
         description: "",
         // gaTrackingId: process.env.GA_TRACKING_ID,
