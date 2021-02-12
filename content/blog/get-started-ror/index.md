@@ -24,7 +24,8 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
 
-![alt_text](images/Image6.png "image_tooltip")
+![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
+
 
 
 To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
@@ -38,7 +39,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 
 
-![alt_text](images/Image7.png "image_tooltip")
+![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 
 
@@ -140,7 +141,8 @@ For security reasons, LoginRadius processes the API calls that are received from
 
 To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
+
 
 
 > Now, run the API Server and you should get the user profile in response (json format). Similarly, you can implement more features using ROR SDK. 
