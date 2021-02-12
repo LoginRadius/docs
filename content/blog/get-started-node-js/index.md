@@ -38,7 +38,6 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 
-
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 

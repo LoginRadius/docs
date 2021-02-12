@@ -43,7 +43,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 
 
-## ROR Implementation
+## ROR Implementation 
 
 
 ## SDK Installation
