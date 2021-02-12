@@ -22,9 +22,9 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, from the left navigatation, click the **Auth Page (IDX)** and click the **Theme Customization** to choose the theme of your choice or customize it's look and feel:
+In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/Image6.png "image_tooltip")
 
 
 To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
@@ -38,7 +38,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/Image7.png "image_tooltip")
 
 
 
@@ -52,16 +52,11 @@ Add project dependency and loginradius SDK by adding this line to your applicati
 ```
  gem 'login_radius', '~> 11.0' 
 ```
-Once your gems are added, install with the following command:
+Once your gems are added, run the following command in command line:
  
  ```
  bundle install
  ```
-Or install it yourself as:
-
-```
- $ gem install login_radius
-```
 
 ## Configuration
 Define the global constant in `config/application.yml`:
@@ -81,32 +76,19 @@ Replace the following placeholders in the above config object in `config/applica
 - apiSecret: **API Secret** obtained in the [Get Credential](#getcredential) step.
 - siteName: **App Name** obtained in the [Get Credential](#getcredential) step.
 
-Now Create `login_radius.rb` in `/config/initializers` as module must first be instantiated::
+Now create `login_radius.rb` in `/config/initializers` to instantiate the module and add following code in it:
 
 ```
 require 'login_radius'
 
 ::AuthenticationApi = LoginRadius::AuthenticationApi.new
 ::AccountApi = LoginRadius::AccountApi.new
-::RoleApi = LoginRadius::RoleApi.new
-::SottApi = LoginRadius::SottApi.new
-::ConfigurationApi = LoginRadius::ConfigurationApi.new
-::MultiFactorAuthenticationApi = LoginRadius::MultiFactorAuthenticationApi.new
-::WebHookApi = LoginRadius::WebHookApi.new
-::PasswordLessLoginApi = LoginRadius::PasswordLessLoginApi.new
-::PhoneAuthenticationApi = LoginRadius::PhoneAuthenticationApi.new
-::NativeSocialApi = LoginRadius::NativeSocialApi.new
-::SocialApi = LoginRadius::SocialApi.new
 
 ```
 
+## Perform Registration or Login
 
-
-## Registration or Login
-
-In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the following registration and login URLs at the front end of your application. For example, you can add these links to **Sign Up** and **Sign In** buttons of your application. 
-
-> Registration and Login functionality is already implemented on your Auth Page (IDX). Thus, you don’t need to implement them separately.
+In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login funtionality is already implemented. Thus, navigate your Register or Login links or buttons to the following URLs:
 
 **Registration Page URL:**
 
@@ -123,7 +105,6 @@ In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 
 
 
-
 ##  Obtain Access Token
 
 On successful authentication on the Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url.
@@ -132,7 +113,7 @@ The following is an example of the access token in the query string with the Ret
 
 `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
-> If return_url is frontend, then from that application, pass the token to backend ROR API. Else you can use path of back end API as the return_url.
+> If return_url is frontend, then from that application, pass the token to the backend ROR API. Else you can use the path of back end API as the return_url.
 
 You can use the access token to retrieve profile data and handle other user functionality.
 
@@ -144,7 +125,7 @@ You can use the access token to retrieve profile data and handle other user func
 
 Once the authentication is done using Auth Page, the return_url will access the ROR backend API with query parameter (access token). You can use this token to fetch the user profile:
 
-For eg: to get user profile add below function snippet 
+For example- To get user profile add below function snippet 
 
 ```
 access_token = "<access_token>" #Required
@@ -157,7 +138,7 @@ response = AuthenticationApi.get_profile_by_access_token(access_token, fields)
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
 
-To whilelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](images/image5.png "image_tooltip")
 
