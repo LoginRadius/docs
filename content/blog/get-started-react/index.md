@@ -20,7 +20,7 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
 
 
-## Get Credentials {#getcredential}
+## Get Credentials
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
@@ -84,7 +84,7 @@ In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the 
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
-- LoginRadius App Name is the name of your app as mentioned in [Get Credential](#getcredential) step.
+- LoginRadius App Name is the name of your app as mentioned in  step.
 - return_url is where you want to redirect users upon successful registration or login.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 

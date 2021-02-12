@@ -16,7 +16,7 @@ In your LoginRadius Dashboard, navigate to the **Auth Page (IDX)** section locat
 
 To preview your theme and content, click the **Go to your Login Page** link as highlighted on the above screen. There are various features already implemented on your Auth Page, such as Email and Password Login, User Registration, Forgot Password, and Remember Password.
 
-## Get Credentials {#getcredentials}
+## Get Credentials
 
 Before using any of the APIs or methods that LoginRadius provides, you will need to retrieve your **App Name**, **API Key**, and **API Secret**.
 
@@ -51,7 +51,7 @@ Under your SDK script declaration, you will need to initialize the SDK:
 ```
 
 Replace the following placeholder in the above configuration object:
-- `{{YOUR API KEY}}` : **API Key** obtained in the [Get Credentials](#getcredentials) step.step.
+- `{{YOUR API KEY}}` : **API Key** obtained in the Get Credentials step.step.
 
 ## Registration or Login
 
@@ -69,7 +69,7 @@ In this tutorial, we will use the Auth Page (IDX) for authentication. Thus, your
 
 **Where:**
 
-- LoginRadius App Name is the name of your app as mentioned in the [Get Credentials](#getcredentials) step.
+- LoginRadius App Name is the name of your app as mentioned in the Get Credentials step.
 - Return URL is where you want to redirect users upon successful registration or login.
 
 > Return URL would be where in your application you would like to handle the returned access token.

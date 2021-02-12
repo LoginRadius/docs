@@ -31,7 +31,7 @@ In your LoginRadius Dashboard, from the left navigatation, click the **Auth Page
 To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
 
 
-## Get Credentials {#getcredential}
+## Get Credentials
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
@@ -107,9 +107,9 @@ var lrv2 = require('loginradius-sdk')(config);
 ```
 
 Replace the following placeholders in the above config object in `server.js`:
-- apiKey:  **API Key** obtained in the [Get Credential](#getcredential) step.
-- apiSecret: **API Secret** obtained in the [Get Credential](#getcredential) step.
-- siteName: **App Name** obtained in the [Get Credential](#getcredential) step.
+- apiKey:  **API Key** obtained in the Get Credential step.
+- apiSecret: **API Secret** obtained in the Get Credential step.
+- siteName: **App Name** obtained in the Get Credential step.
 
 >Pass the proxy configurations if you want to set HTTP Server Proxy Configuration through your Node.js SDK. In this case, host and port are required, while username and password are optional.
 
@@ -129,7 +129,7 @@ In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the 
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
-- LoginRadius App Name is the name of your app as mentioned in [Get Credential](#getcredential) step.
+- LoginRadius App Name is the name of your app as mentioned in Get Credential step.
 - return_url is where you want to redirect users upon successful registration or login.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 
