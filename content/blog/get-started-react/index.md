@@ -1,4 +1,4 @@
-# Get Started - Node.js
+# Get Started - React.js
 
 The tutorial lets you implement LoginRadius user registration, login and view profile on your React.js based application. 
 
@@ -6,7 +6,7 @@ The tutorial lets you implement LoginRadius user registration, login and view pr
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
 
-Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Node.js application.
+Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your React.js application.
 
 
 ## Choose Theme
@@ -97,9 +97,7 @@ The following is an example of the access token in the query string with the Ret
 
 `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
-> If return_url is frontend, then from that application, pass the token to backend node API. Else you can use path of back end API as the return_url.
-
-You can use the access token to retrieve profile data and handle other user functionality.
+Pointing return_url to a route in your React application, you can capture the access token and proceed to retrieve the customer profile data with it in the next step, as well as handle other user functionality.
 
 > Similar to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
@@ -107,7 +105,7 @@ You can use the access token to retrieve profile data and handle other user func
 
 ## Retrieve User Data using Access Token
 
-Once the authentication is done using Auth Page, the user will be redirected to the supplied `return_url`. From your React application, you can capture this access token and use this token to fetch the user profile.
+Once the authentication is done using Auth Page, the user will be redirected to the supplied `return_url`. From your React application, we will implement a route to capture the access token.
 
 For example: To get the user profile, add the `"/login"` route to the `App` component:
 
@@ -197,11 +195,11 @@ To whilelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ![alt_text](images/image5.png "image_tooltip")
 
 
-> Now, run the API Server and you should get the user profile in response (json format). Similarly, you can implement more features using Node.js SDK. 
+> Now, run the React application and you should get the user profile in response (json format) displayed in the "/login" route. Similarly, you can implement more features using the LoginRadius API. 
 
 ##  Explore Node.js Demo
 
-As an alternative to handling all API calls in the React frontend, you may also opt to access the LoginRadius API from a Node backend. If you wish to do so, you can check out our Node.js demo to know how you can implement various LoginRadius features using SDK and its functions.
+As an alternative to handling all API calls in the React frontend, you may also opt to access the LoginRadius API from a Node backend. If you wish to do so, you can check out our Node.js demo to learn how to implement various LoginRadius features using SDK and its functions.
 
 **[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**   |   **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**   
 
