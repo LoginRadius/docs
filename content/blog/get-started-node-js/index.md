@@ -62,14 +62,13 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
 var PORT = 3000;
-app.use('/demo', express.static(path.join(__dirname, '/demo')));
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.get('/', function (req, res) {
+// your LR api impl goes here  
 
-})
+app.listen(PORT, () => console.log('App can be accessed at localhost:' + PORT ));
 
 ```
 
@@ -95,6 +94,7 @@ Add the following config object in the `server.js` file:
       apiKey: '{{ Your API Key }}',
       apiSecret: '{{ Your API Secret }}',
       siteName: '{{ Your App Name }}',
+   	  apiRequestSigning: false,
       proxy:{
         host:'',
         port:'',
@@ -103,6 +103,7 @@ Add the following config object in the `server.js` file:
      }
   }
 var lrv2 = require('loginradius-sdk')(config);
+
 
 ```
 
@@ -144,7 +145,7 @@ The following is an example of the access token in the query string with the Ret
 
 `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
-> If return_url is frontend, then from that application, pass the token to backend node API. Else you can use path of back end API as the return_url.
+> If return_url is frontend, then from that application, pass the token to backend node API (eg: http://localhost:3000). Else you can use path of back end API as the return_url.
 
 You can use the access token to retrieve profile data and handle other user functionality.
 
@@ -159,7 +160,7 @@ Once the authentication is done using Auth Page, the return_url will access the 
 For example: To get the user profile, add the following API snippet to `server.js`:
 
 ```
-router.get('/userProfile', function(req, res) {
+app.get('/', function(req, res) {
     var fields = null; //Optional
 
     lrv2.authenticationApi.getProfileByAccessToken(req.query.token, fields).then((response) => {
@@ -168,7 +169,6 @@ router.get('/userProfile', function(req, res) {
         res.json({'ErrorMessage':error.message});   
        });
   });
-});
 ```
 ##  Domain Whitelisting
 
