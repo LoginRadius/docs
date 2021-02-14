@@ -185,7 +185,7 @@ To whilelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 Check out our Node.js demo to know how you can implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**   |   **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**   
+**[Download Demo](/download/get-started-node-js.zip)**  |  **[Download Complete Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**  | **[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**   
 
 
 # Recommended Next Steps
