@@ -179,7 +179,7 @@ To whilelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 
-> Now, run the API Server and you should get the user profile in response (json format). Similarly, you can implement more features using Node.js SDK. 
+> Now, run the API Server [`node server.js`] using cmd and try logging in Auth Page IDX on redirect you should get the user profile in response (json format). Similarly, you can implement more features using Node.js SDK. 
 
 ##  Explore Node.js Demo
 
@@ -190,24 +190,9 @@ Check out our Node.js demo to know how you can implement various LoginRadius fea
 
 # Recommended Next Steps
 
-How to manage email templates for verification and forgot password
-
-How to personalize interfaces and branding of login pages
-
-How to configure SMTP settings for sending emails to consumers
-
-How to implement Social Login options like Facebook, Google
-
-How to implement Phone Login
-
-How to implement Passwordless Login
-
 
 # Node.js SDK Reference
-
-< Link to Node.js SKD doc >
 
 
 # API Reference
 
-< Link to APIs doc >
