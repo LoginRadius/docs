@@ -90,7 +90,7 @@ Add the following config object in the `server.js` file:
 
 ```
  var config = {
-      apiDomain: 'https://api.loginradius.com',
+      apiDomain: 'api.loginradius.com',
       apiKey: '{{ Your API Key }}',
       apiSecret: '{{ Your API Secret }}',
       siteName: '{{ Your App Name }}',
