@@ -6,27 +6,28 @@ import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
   return (
-    <div className="global-wrapper" >
-    <div id="root">
-    <Header />
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+    <div className="global-wrapper">
+      <div id="root">
+        <Header />
+        <Layout location={location} title={siteTitle}>
+          <SEO
+            title={post.frontmatter.title}
+            description={post.frontmatter.description || post.excerpt}
+          />
+          <section className="py-72 detail-page">
+            <div
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+            />
+          </section>
 
-       {/* <article
+          {/* <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
@@ -44,7 +45,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article> */}
-      {/* <nav className="blog-post-nav">
+          {/* <nav className="blog-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -70,12 +71,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav> */}
-    </Layout>
-    <Footer />
+        </Layout>
+        <Footer />
+      </div>
     </div>
-    </div>
-
-)
+  )
 }
 
 export default BlogPostTemplate
