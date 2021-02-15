@@ -1,6 +1,6 @@
 # Get Started - Node.js
 
-The tutorial lets you implement LoginRadius user registration, login, profile, and log out to your Node.js based application. 
+The tutorial lets you implement LoginRadius user registration, login, profile, and log out for your Node.js based application. 
 
 
 
@@ -22,7 +22,7 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, from the left navigatation, click the **Auth Page (IDX)** and click the **Theme Customization** to choose the theme of your choice or customize it's look and feel:
+In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
@@ -108,18 +108,18 @@ var lrv2 = require('loginradius-sdk')(config);
 ```
 
 Replace the following placeholders in the above config object in `server.js`:
-- apiKey:  **API Key** obtained in the Get Credential step.
-- apiSecret: **API Secret** obtained in the Get Credential step.
-- siteName: **App Name** obtained in the Get Credential step.
+- apiKey:  **API Key** obtained in the [Get Credentials](#get-credentials) step.
+- apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
+- siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 >Pass the proxy configurations if you want to set HTTP Server Proxy Configuration through your Node.js SDK. In this case, host and port are required, while username and password are optional.
 
 
-## Registration or Login
+## Configure Registration and Login URLs
 
-In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the following registration and login URLs at the front end of your application. For example, you can add these links to **Sign Up** and **Sign In** buttons of your application. 
+> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
 
-> Registration and Login functionality is already implemented on your Auth Page (IDX). Thus, you don’t need to implement them separately.
+Navigate your Register or Login links or buttons to the following URLs:
 
 **Registration Page URL:**
 
@@ -130,34 +130,23 @@ In this tutorial, we are using Auth Page(IDX) for authentication. Thus, use the 
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
-- LoginRadius App Name is the name of your app as mentioned in Get Credential step.
-- return_url is where you want to redirect users upon successful registration or login.
+- **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 
 
 
-
-##  Obtain Access Token
-
-On successful authentication on the Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url.
-
-The following is an example of the access token in the query string with the Return URL:
-
-`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
-
-> If return_url is frontend, then from that application, pass the token to backend node API (eg: http://localhost:3000). Else you can use path of back end API as the return_url.
-
-You can use the access token to retrieve profile data and handle other user functionality.
-
-> Similar to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
-
-
-
 ## Retrieve User Data using Access Token
 
-Once the authentication is done using Auth Page, the return_url will access the Node.js backend API with query parameter (access token). You can use this token to fetch the user profile.
+> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Node.js backend API with query parameter (access token). 
+>
+>The following is an example of the access token in the query string with the Return URL:
+>
+>`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
+>
+> If return_url is frontend, then from that application, pass the token to backend node API (eg: http://localhost:3000). Otherwise use the path of the back end API as the return_url. 
 
-For example: To get the user profile, add the following API snippet to `server.js`:
+Add the following API snippet to `server.js`to get the user profile using the access token:
 
 ```
 app.get('/', function(req, res) {
@@ -170,16 +159,36 @@ app.get('/', function(req, res) {
        });
   });
 ```
+## Run and See Result
+
+
+- Run the API Server by executing the following command in command line:
+[`node server.js`]
+
+
+- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+
+![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+
+
+- Register a user here and then log in. Upon successful login, it will redirect you to the URL with access token and give you user profile in response (json format). The following displays a sample json response:
+
+![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+
+Similarly, you can implement more features using Node.js SDK. 
+
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+
 ##  Domain Whitelisting
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
 
-To whilelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 
-> Now, run the API Server [`node server.js`] using cmd and try logging in Auth Page IDX on redirect you should get the user profile in response (json format). Similarly, you can implement more features using Node.js SDK. 
+
 
 ##  Explore Node.js Demo
 

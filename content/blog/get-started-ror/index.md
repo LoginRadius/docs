@@ -1,6 +1,6 @@
 # Get Started - ROR
 
-The tutorial lets you implement LoginRadius user registration, login, profile, and log out to your ROR based application. 
+The tutorial lets you implement LoginRadius user registration, login, profile, and log out for your ROR based application. 
 
 
 
@@ -73,9 +73,9 @@ API_REQUEST_SIGNING: "false"
 
 ```
 Replace the following placeholders in the above config object in `config/application.yml`:
-- apiKey:  **API Key** obtained in the Get Credential step.
-- apiSecret: **API Secret** obtained in the Get Credential step.
-- siteName: **App Name** obtained in the Get Credential step.
+- apiKey:  **API Key** obtained in the [Get Credentials](#get-credentials) step.
+- apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
+- siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 Now create `login_radius.rb` in `/config/initializers` to instantiate the module and add following code in it:
 
@@ -87,9 +87,11 @@ require 'login_radius'
 
 ```
 
-## Perform Registration or Login
+## Configure Registration and Login URL
 
-In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login funtionality is already implemented. Thus, navigate your Register or Login links or buttons to the following URLs:
+> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
+
+Navigate your Register or Login links or buttons to the following URLs:
 
 **Registration Page URL:**
 
@@ -100,40 +102,51 @@ In this tutorial, we are using Auth Page(IDX) for authentication, where Registra
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
-- LoginRadius App Name is the name of your app as mentioned in Get Credential step.
-- return_url is where you want to redirect users upon successful registration or login.
+- **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 
 
 
-##  Obtain Access Token
-
-On successful authentication on the Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url.
-
-The following is an example of the access token in the query string with the Return URL:
-
-`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
-
-> If return_url is frontend, then from that application, pass the token to the backend ROR API. Else you can use the path of back end API as the return_url.
-
-You can use the access token to retrieve profile data and handle other user functionality.
-
-> Similar to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
-
-
-
 ## Retrieve User Data using Access Token
 
-Once the authentication is done using Auth Page, the return_url will access the ROR backend API with query parameter (access token). You can use this token to fetch the user profile:
+> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Node.js backend API with query parameter (access token). 
+>
+>The following is an example of the access token in the query string with the Return URL:
+>
+>`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
+>
+> If return_url is frontend, then from that application, pass the token to the backend ROR API. Otherwise use the path of the back end API as the return_url.
 
-For example- To get user profile add below function snippet 
+Add the following function snippet in your code to get the user profile:
 
 ```
-access_token = "<access_token>" #Required
-fields = nil #Optional
+    def read_profile_by_access_token
+      puts "params #{params[:auth]}"
+      access_token = params[:auth]
+      fields = ''
+      response = AuthenticationApi.get_profile_by_access_token(access_token, fields)
 
-response = AuthenticationApi.get_profile_by_access_token(access_token, fields)
+      render :status => response.code, :json => response.body
+    end
 ```
+
+## Run and See Result
+
+- Run the server using the following command in command line `rails server`.
+
+- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+
+![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+
+- Register a user here and then log in. Upon successful login, it will redirect you to the URL with access token and give you user profile in response (json format). The following displays a sample json response:
+
+![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+
+Similarly, you can implement more features using Node.js SDK. 
+
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+
 
 ##  Domain Whitelisting
 
@@ -144,8 +157,6 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 
-
-> Now, run the API Server and you should get the user profile in response (json format). Similarly, you can implement more features using ROR SDK. 
 
 ##  Explore ROR Demo
 
