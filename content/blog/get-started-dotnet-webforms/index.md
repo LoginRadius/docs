@@ -113,7 +113,7 @@ From here, you can use JQuery or vanilla JavaScript to populate your webpage wit
 
 - Start your Web Forms Application.
 
-- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It should display something similar to:
 
 ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
