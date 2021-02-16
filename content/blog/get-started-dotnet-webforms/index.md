@@ -1,6 +1,6 @@
 # Get Started - ASP&#46;NET Web Forms
 
-The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP.NET Web Forms application.
+The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Web Forms application.
 
 ---------------------------------------------------
 
@@ -109,19 +109,170 @@ From here, you can use JQuery or vanilla JavaScript to populate your webpage wit
 
 ## Run and See Result
 
-- Run the --- the info goes here ---
+- Add the mentioned above script to the web page that you have specified as a return_url after login.
 
+- Start your Web Forms Application.
 
-- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
 ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
+- Register a user here and then log in. Upon successful login, it will redirect you to the page you have specified in the return url. Using the script included above, the user profile corresponding to the log in details provided will be printed to your browser console. Here is an example user profile object that is returned from the `getProfileByAccessToken` SDK call:
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format. The following displays a sample json response:
-
-![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
-
-Similarly, you can implement more features using ASP.net SDK. 
+```
+{
+  "Identities": null,
+  "Password": "**********",
+  "LastPasswordChangeDate": "2021-02-11T02:36:01.8420000Z",
+  "PasswordExpirationDate": null,
+  "LastPasswordChangeToken": null,
+  "EmailVerified": true,
+  "IsActive": true,
+  "IsDeleted": false,
+  "Uid": "0df01f54954d4e9f9b3b18c30fa5b0ea",
+  "CustomFields": null,
+  "IsEmailSubscribed": false,
+  "UserName": null,
+  "NoOfLogins": 6,
+  "PhoneId": null,
+  "PhoneIdVerified": false,
+  "Roles": null,
+  "ExternalUserLoginId": null,
+  "RegistrationProvider": "Email",
+  "IsLoginLocked": false,
+  "LoginLockedType": "None",
+  "LastLoginLocation": "Vancouver, Canada",
+  "RegistrationSource": "https://***.hub.loginradius.com/",
+  "IsCustomUid": false,
+  "UnverifiedEmail": null,
+  "IsSecurePassword": null,
+  "PrivacyPolicy": null,
+  "ExternalIds": null,
+  "IsRequiredFieldsFilledOnce": true,
+  "ConsentProfile": null,
+  "PIN": null,
+  "RegistrationData": null,
+  "ID": "5446de8561ec47809325f9b430e2750e",
+  "Provider": "Email",
+  "Prefix": null,
+  "FirstName": null,
+  "MiddleName": null,
+  "LastName": null,
+  "Suffix": null,
+  "FullName": null,
+  "NickName": null,
+  "ProfileName": null,
+  "BirthDate": null,
+  "Gender": null,
+  "Website": null,
+  "Email": [
+    {
+      "Type": "Primary",
+      "Value": "***@***.com"
+    }
+  ],
+  "Country": null,
+  "ThumbnailImageUrl": null,
+  "ImageUrl": null,
+  "Favicon": null,
+  "ProfileUrl": null,
+  "HomeTown": null,
+  "State": null,
+  "City": null,
+  "Industry": null,
+  "About": null,
+  "TimeZone": null,
+  "LocalLanguage": null,
+  "CoverPhoto": null,
+  "TagLine": null,
+  "Language": null,
+  "Verified": null,
+  "UpdatedTime": null,
+  "Positions": null,
+  "Educations": null,
+  "PhoneNumbers": null,
+  "IMAccounts": null,
+  "Addresses": null,
+  "MainAddress": null,
+  "Created": null,
+  "CreatedDate": "2020-10-15T22:09:55.8440000Z",
+  "ModifiedDate": "2020-10-15T22:09:55.8630000Z",
+  "ProfileModifiedDate": null,
+  "LocalCity": "Vancouver",
+  "ProfileCity": null,
+  "LocalCountry": "Canada",
+  "ProfileCountry": null,
+  "FirstLogin": false,
+  "IsProtected": false,
+  "RelationshipStatus": null,
+  "Quota": null,
+  "Quote": null,
+  "InterestedIn": null,
+  "Interests": null,
+  "Religion": null,
+  "Political": null,
+  "Sports": null,
+  "InspirationalPeople": null,
+  "HttpsImageUrl": null,
+  "FollowersCount": 0,
+  "FriendsCount": 0,
+  "IsGeoEnabled": null,
+  "TotalStatusesCount": 0,
+  "Associations": null,
+  "NumRecommenders": 0,
+  "Honors": null,
+  "Awards": null,
+  "Skills": null,
+  "CurrentStatus": null,
+  "Certifications": null,
+  "Courses": null,
+  "Volunteer": null,
+  "RecommendationsReceived": null,
+  "Languages": null,
+  "Projects": null,
+  "Games": null,
+  "Family": null,
+  "TeleVisionShow": null,
+  "MutualFriends": null,
+  "Movies": null,
+  "Books": null,
+  "AgeRange": null,
+  "PublicRepository": null,
+  "Hireable": false,
+  "RepositoryUrl": null,
+  "Age": null,
+  "Patents": null,
+  "FavoriteThings": null,
+  "ProfessionalHeadline": null,
+  "ProviderAccessCredential": null,
+  "RelatedProfileViews": null,
+  "KloutScore": null,
+  "LRUserID": null,
+  "PlacesLived": null,
+  "Publications": null,
+  "JobBookmarks": null,
+  "Suggestions": null,
+  "Badges": null,
+  "MemberUrlResources": null,
+  "TotalPrivateRepository": 0,
+  "Currency": null,
+  "StarredUrl": null,
+  "GistsUrl": null,
+  "PublicGists": 0,
+  "PrivateGists": 0,
+  "Subscription": null,
+  "Company": null,
+  "GravatarImageUrl": null,
+  "ProfileImageUrls": null,
+  "WebProfiles": null,
+  "PinsCount": 0,
+  "BoardsCount": 0,
+  "LikesCount": 0,
+  "SignupDate": "2020-10-15T22:09:55.8440000Z",
+  "LastLoginDate": "2021-02-16T19:53:28.3120000Z",
+  "PreviousUids": null
+}
+```
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
@@ -147,9 +298,9 @@ How to implement Phone Login
 
 How to implement Passwordless Login
 
-# ASP&#46;NET SDK Reference
+# HTML SDK Reference
 
-< Link to ASP&#46;NET SDK doc >
+< Link to HTML SDK doc >
 
 # API Reference
 
