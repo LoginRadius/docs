@@ -149,10 +149,12 @@ const Middle = () => {
               <h3 className="title">Mobile Apps</h3>
               <ul>
                 <li>
-                  <a href="#">
+                  
+                  <Link to="/get-started-android"> 
                     <img src="images/android.svg" width={20} />
                     <span>Android</span>
-                  </a>
+                  
+                  </Link>
                 </li>
                 <li>
                   <a href="#">
