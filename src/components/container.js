@@ -126,6 +126,12 @@ const Middle = () => {
                     <span>ASP.NET Web Forms</span>
                   </Link>
                 </li>
+                <li>
+                  <Link to="/get-started-dotnetcore-razor">
+                    {/*<img src="images/" width={20} />-->*/}
+                    <span>ASP.NET Core Razor Pages</span>
+                  </Link>
+                </li>
               </ul>
               <div className="read-more">
                 <a href="#">
