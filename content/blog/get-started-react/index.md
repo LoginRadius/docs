@@ -183,10 +183,13 @@ export default withRouter(Login);
 
 ## Run and See Result
 
-- Run the --- the info goes here ---
+- From your command line, run the React application:
+  
+  `npm start`
 
+- Wait for the application to finish launching
 
-- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`or `http://localhost:3000/login`. It will display the following screen:
+- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost:3000/login`. It will display the following screen:
 
 ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
@@ -194,8 +197,6 @@ export default withRouter(Login);
 - Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format displayed in the "/login" route. The following displays a sample json response:
 
 ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
-
-Similarly, you can implement more features using React SDK. 
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
