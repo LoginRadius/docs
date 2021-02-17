@@ -120,6 +120,18 @@ const Middle = () => {
                     <span>JAVA</span>
                   </a>
                 </li>
+                <li>
+                  <Link to="/get-started-dotnet-webforms">
+                    {/*<img src="images/" width={20} />-->*/}
+                    <span>ASP.NET Web Forms</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/get-started-dotnetcore-razor">
+                    {/*<img src="images/" width={20} />-->*/}
+                    <span>ASP.NET Core Razor Pages</span>
+                  </Link>
+                </li>
               </ul>
               <div className="read-more">
                 <a href="#">

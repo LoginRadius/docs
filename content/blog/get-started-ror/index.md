@@ -4,7 +4,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 
 
-> You must have ROR installed in your system
+> You must have ROR installed in your system. New to Ruby on rails? Check out this [reference](https://guides.rubyonrails.org/v5.0/getting_started.html).
 
 Watch the video to get started, or refer to the section below for the text-based guide.
 

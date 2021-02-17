@@ -1,6 +1,6 @@
 # Get Started - Node.js
 
-The tutorial lets you implement LoginRadius user registration, login, profile, and log out for your Node.js based application. 
+The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Node.js based application. 
 
 
 
@@ -171,7 +171,7 @@ app.get('/', function(req, res) {
 ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the URL with access token and give you user profile in response (json format). The following displays a sample json response:
+- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format. The following displays a sample json response:
 
 ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
