@@ -8,10 +8,8 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 - Email Support 
 - Raise Support ticket
-- Live Chat based on your plan
+- Live Chat
 - Support documentation
-
-[What support is available for Free, Developer, and Developer Premium Plan?](#what-support-is-available-for-free-developer-and-developer-premium-plan)
 
 [How to access the LoginRadius Support section?](#how-to-access-the-loginradius-support-section)
 
@@ -22,16 +20,6 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 [Do you provide support in our time zone?](#do-you-provide-support-in-our-time-zone)
 
 [How do I create/review support tickets?](#how-do-i-createreview-support-tickets)
-
-
-## What support is available for Free, Developer, and Developer Premium Plan?
-
-| **Plan** | **LoginRadius Support** |
-| ----------------- | ------------------- |
-| Free              | Email Support, Support Ticket, Support Document |
-| Developer         | Email Support, Support Ticket, Support Document |
-| Developer Premium | Email Support, Support Ticket, Live Chat Support, Support Document |
-
 
 ## How to access the LoginRadius Support section?
 To access the LoginRadius Support section, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the top header panel, click the **SUPPORT** as displayed in the below screen.

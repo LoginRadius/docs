@@ -34,7 +34,11 @@ Enter or select the following Webhook details:
 
 - **Name**: Enter the name of the Webhook
 - **Event**: Choose the type of event from the dropdown.
-> **Note**: **Allowed events** are Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, InvalidatePhoneVerification, RemovePhoneId, RemoveRoleContext.
+
+|**Plan** | **Allowed Events** |
+|-----|--------|
+|**Developer**|Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification|
+|**Developer Premium**|Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext|
 
 - **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
 
