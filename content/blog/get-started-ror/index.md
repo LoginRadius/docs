@@ -4,7 +4,9 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 
 
-> You must have ROR installed in your system. New to Ruby on rails? Check out this [reference](https://guides.rubyonrails.org/v5.0/getting_started.html).
+> You must have ROR installed in your system. 
+>
+> New to Ruby on rails? Check out this [reference](https://guides.rubyonrails.org/v5.0/getting_started.html).
 
 Watch the video to get started, or refer to the section below for the text-based guide.
 
@@ -41,9 +43,6 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
-
-
-## ROR Implementation 
 
 
 ## SDK Installation
@@ -137,13 +136,13 @@ Add the following function snippet in your code to get the user profile:
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
-![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
 - Register a user here and then log in. Upon successful login, it will redirect you to the URL with access token and give you user profile in response (json format). The following displays a sample json response:
 
-![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
-Similarly, you can implement more features using Node.js SDK. 
+Similarly, you can implement more features using ROR SDK. 
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 

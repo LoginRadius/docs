@@ -43,31 +43,31 @@ Once the CRA boilerplate is set up, follow these steps:
 
 - Go to `App.js` and modify the App component as follows:
 
-```JavaScript
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Login from './Login'
+  ```JavaScript
+  import './App.css';
+  import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
+  import Login from './Login'
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <div>{"Application home"}</div>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+  function App() {
+    return (
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/">
+              <div>{"Application home"}</div>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 
-export default App;
-```
+  export default App;
+  ```
 
 ## Configure Registration and Login URLs
 
@@ -101,82 +101,82 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 - Add the `"/login"` route to the `App` component to get the user profile:
 
-```JavaScript
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Login from './Login'
+  ```JavaScript
+  import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
+  import Login from './Login'
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <div>{"Application home"}</div>
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
-```
+  function App() {
+    return (
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/">
+              <div>{"Application home"}</div>
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+  ```
 
 - Create a folder for the Login component from the source root src folder and populate the index.js file:
 
-```JavaScript
-import React from "react"
-import { withRouter } from "react-router-dom";
+  ```JavaScript
+  import React from "react"
+  import { withRouter } from "react-router-dom";
 
-const apiKey = '{{ Your API Key }}';
+  const apiKey = '{{ Your API Key }}';
 
-class Login extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userProfileResponse: null
+  class Login extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        userProfileResponse: null
+      }
+    }
+
+    componentDidMount() {
+      const token = new URLSearchParams(this.props.location.search).get("token");
+      fetch("https://api.loginradius.com/identity/v2/auth/account?apikey=" + apiKey, {
+        method: 'GET',
+        headers: {
+          'Authorization': 'Bearer ' + token
+        },
+      })
+        .then(res => res.json())
+        .then(res => {
+          this.setState({ userProfileResponse: res })
+        })
+        .catch(e => {
+          console.log(e);
+        })
+    }
+
+    render() {
+      const { userProfileResponse } = this.state;
+    
+      return (
+        <div>
+          <span style={{ whiteSpace: "pre-wrap", textAlign: "left" }}>
+            {JSON.stringify(userProfileResponse, null, 4)}
+          </span>
+        </div>
+      );
     }
   }
 
-  componentDidMount() {
-    const token = new URLSearchParams(this.props.location.search).get("token");
-    fetch("https://api.loginradius.com/identity/v2/auth/account?apikey=" + apiKey, {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + token
-      },
-    })
-      .then(res => res.json())
-      .then(res => {
-        this.setState({ userProfileResponse: res })
-      })
-      .catch(e => {
-        console.log(e);
-      })
-  }
-
-  render() {
-    const { userProfileResponse } = this.state;
-    
-    return (
-      <div>
-        <span style={{ whiteSpace: "pre-wrap", textAlign: "left" }}>
-          {JSON.stringify(userProfileResponse, null, 4)}
-        </span>
-      </div>
-    );
-  }
-}
-
-export default withRouter(Login);
-```
+  export default withRouter(Login);
+  ```
 - Replace the following placeholder in the above code:
-{{YOUR API KEY}} : API Key obtained in the [Get Credentials](#get-credentials) step.
+  {{YOUR API KEY}} : API Key obtained in the [Get Credentials](#get-credentials) step.
 
 
 - Once the `Login` component is implemented. Set the `return_url` to point to the `/login` subdomain of your application. For example, in the local React instance, it can point to `http://localhost:3000/login`. This way, after logging in through the Auth Page (IDX) Login page, your user will be redirected to the Login component that we just implemented.
@@ -191,12 +191,12 @@ export default withRouter(Login);
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost:3000/login`. It will display the following screen:
 
-![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
 
 - Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format displayed in the "/login" route. The following displays a sample json response:
 
-![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 

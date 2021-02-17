@@ -4,8 +4,6 @@ The purpose of this tutorial is to help you with implementing LoginRadius user r
 
 > You must have the &#46;NET 5.0 SDK installed or later.
 
----------------------------------------------------
-
 When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/). When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your web application.
 
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
@@ -28,9 +26,9 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ## SDK Installation
 
-In this tutorial, we assume that you are following the Razor Page design pattern in your web application. We will use the LoginRadius &#46;NET SDK to make API calls to LoginRadius.
+This tutorial assumes that you are following the Razor Page design pattern in your web application and uses the LoginRadius &#46;NET SDK to make API calls to LoginRadius.
 
-- Run the following command in the NuGet Package Manager Console:
+Run the following command in the NuGet Package Manager Console:
 ```
 PM> Install-Package LoginRadiusSDK.NET
 ```
@@ -38,6 +36,7 @@ PM> Install-Package LoginRadiusSDK.NET
 ## Configuration
 
 Go to your `appsettings.json` file in your project, and add the following configurations:
+
 ```json
 "loginradius": {
     "apiKey": "__API_KEY__",
@@ -56,7 +55,7 @@ Replace the following placeholders in the above config in `appsettings.json`:
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
+> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented. 
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -74,11 +73,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. In the case of this tutorial, this would be the page in your web application where you will process the received access token and retrieve the LoginRadius user profile.
 
-In this example, we will create a Profile page to redirect to after authentication. 
+## Setup Profile Page
 
-### Profile.cshtml
+Create a Profile Page to redirect to after authentication and add the view and page model as explained below:
 
-We add the following view under `/Pages/Profile.cshtml`.
+**Profile.cshtml**
+
+Add the following view under `/Pages/Profile.cshtml`.
 
 ```csharp
 @page
@@ -92,9 +93,9 @@ We add the following view under `/Pages/Profile.cshtml`.
 
 ```
 
-### Profile.cshtml.cs
+**Profile.cshtml.cs**
 
-We add the following page model under `/Pages/Profile.cshtml.cs`.
+Add the following page model under `/Pages/Profile.cshtml.cs`.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -122,26 +123,26 @@ namespace RazorPagesDemoApplication.Pages
 >`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 >
 
-Add the following namespaces in `/Pages/Profile.cshtml.cs` to allow us to work with the `GetProfileByAccessToken` SDK method easily:
+- Add the following namespaces in `/Pages/Profile.cshtml.cs` to allow us to work with the `GetProfileByAccessToken` SDK method easily:
 
-```csharp
-using LoginRadiusSDK.V2.Api.Authentication;
-using LoginRadiusSDK.V2.Models.ResponseModels.UserProfile;
-```
+  ```csharp
+  using LoginRadiusSDK.V2.Api.Authentication;
+  using LoginRadiusSDK.V2.Models.ResponseModels.UserProfile;
+  ```
 
-Add the following API snippet to the `/Pages/Profile.cshtml.cs` `OnGet` method to retrieve the user profile using the received access token:
+- Add the following API snippet to the `/Pages/Profile.cshtml.cs` `OnGet` method to retrieve the user profile using the received access token:
 
-```csharp
-var apiResponse = new AuthenticationApi().GetProfileByAccessToken(Token);
-if (apiResponse.RestException != null)
-{
-    ViewData["error"] = apiResponse.RestException.Description;
-    return;
-}
+  ```csharp
+  var apiResponse = new AuthenticationApi().GetProfileByAccessToken(Token);
+  if (apiResponse.RestException != null)
+  {
+      ViewData["error"] = apiResponse.RestException.Description;
+      return;
+  }
 
-UserProfile profile = apiResponse.Response;
-ViewData["email"] = profile.Email[0].Value;
-```
+  UserProfile profile = apiResponse.Response;
+  ViewData["email"] = profile.Email[0].Value;
+  ```
 
 Your page model should look something like this:
 
@@ -178,13 +179,13 @@ namespace RazorPagesDemoApplication.Pages
 
 - Start your Razor Pages web application.
 
-- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. In our example, our return URL was `https://localhost:<PORT>/Profile`. It should display something similar to:
+- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. In this tutorial, the return URL was `https://localhost:<PORT>/Profile`. It should display something similar to:
 
-![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the page you have specified in the return url. In your page model, the LoginRadius SDK will return a user profile. The following displays the profile page described in our example:
+- Register a user here and then log in. Upon successful login, it will redirect you to the page specified in the return url. In your page model, the LoginRadius SDK will return a user profile. The following displays the profile page described in [above example](#setup-profile-page):
 
-![alt_text](images/example.png "image_tooltip")
+  ![alt_text](images/example.png "image_tooltip")
 
 ## Domain Whitelisting
 
