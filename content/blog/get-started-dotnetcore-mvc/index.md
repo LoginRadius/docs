@@ -1,8 +1,10 @@
-# Get Started - ASP&#46;NET Core Razor Pages
+# Get Started - ASP&#46;NET Core MVC
 
-The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Core Razor Pages web application.
+The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Core MVC web application.
 
 > You must have the &#46;NET 5.0 SDK installed or later.
+
+---------------------------------------------------
 
 When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/). When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your web application.
 
@@ -24,11 +26,12 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
+
 ## SDK Installation
 
-This tutorial assumes that you are following the Razor Page design pattern in your web application and uses the LoginRadius &#46;NET SDK to make API calls to LoginRadius.
+In this tutorial, we assume that you are following the MVC design pattern in your web application. We will use the LoginRadius &#46;NET SDK to make API calls to LoginRadius.
 
-Run the following command in the NuGet Package Manager Console:
+- Run the following command in the NuGet Package Manager Console:
 ```
 PM> Install-Package LoginRadiusSDK.NET
 ```
@@ -36,7 +39,6 @@ PM> Install-Package LoginRadiusSDK.NET
 ## Configuration
 
 Go to your `appsettings.json` file in your project, and add the following configurations:
-
 ```json
 "loginradius": {
     "apiKey": "__API_KEY__",
@@ -55,7 +57,7 @@ Replace the following placeholders in the above config in `appsettings.json`:
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented. 
+> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -73,17 +75,32 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. In the case of this tutorial, this would be the page in your web application where you will process the received access token and retrieve the LoginRadius user profile.
 
-## Setup Profile Page
+In this example, we will create a Profile page (with a controller and view) to redirect to after authentication.
 
-Create a Profile Page to redirect to after authentication and add the view and page model as explained below:
+### ProfileController.cs
 
-**Profile.cshtml**
+We add the following controller under `/Controllers/ProfileController.cs`.
 
-Add the following view under `/Pages/Profile.cshtml`.
+```csharp
+using Microsoft.AspNetCore.Mvc;
+
+namespace MVCDemoApplication.Controllers
+{
+    public class ProfileController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}
+```
+
+### Index.cshtml
+
+We add the following view under `Views/Profile/Index.cshtml`.
 
 ```html
-@page
-@model RazorPagesDemoApplication.Pages.ProfileModel
 @{
     ViewData["Title"] = "Your LoginRadius Profile";
 }
@@ -91,32 +108,10 @@ Add the following view under `/Pages/Profile.cshtml`.
 <h2>Your LoginRadius Profile</h2>
 
 <div class="text-center">
-    <h1 class="display-4">Access Token: @Model.Token</h1>
+    <h1 class="display-4">Access Token: @ViewData["token"]</h1>
     <h3>Email: @ViewData["email"]</h3>
     <p>Error: @ViewData["error"]</p>
 </div>
-```
-
-**Profile.cshtml.cs**
-
-Add the following page model under `/Pages/Profile.cshtml.cs`.
-
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace RazorPagesDemoApplication.Pages
-{
-    public class ProfileModel : PageModel
-    {
-        [BindProperty(SupportsGet = true)]
-        public string Token { get; set; }
-        public void OnGet()
-        {
-        }
-    }
-}
-
 ```
 
 ## Retrieve User Data using Access Token
@@ -127,66 +122,69 @@ namespace RazorPagesDemoApplication.Pages
 >`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 >
 
-- Add the following namespaces in `/Pages/Profile.cshtml.cs` to allow us to work with the `GetProfileByAccessToken` SDK method easily:
-
-  ```csharp
-  using LoginRadiusSDK.V2.Api.Authentication;
-  using LoginRadiusSDK.V2.Models.ResponseModels.UserProfile;
-  ```
-
-- Add the following API snippet to the `/Pages/Profile.cshtml.cs` `OnGet` method to retrieve the user profile using the received access token:
+Add the following namespaces in `Controllers/ProfileController.cs` to allow us to work the the `GetProfileByAccessToken` SDK method easily:
 
 ```csharp
-if (Token == null)
+using LoginRadiusSDK.V2.Api.Authentication;
+using LoginRadiusSDK.V2.Models.ResponseModels.UserProfile;
+```
+
+Add the following API snippet to the `/Controllers/ProfileController.cs` `Index` method to retrieve user profile using the received access token:
+
+```csharp
+ViewData["token"] = token;
+
+if (token == null)
 {
     ViewData["error"] = "Expected token query parameter.";
-    return;
+    return View();
 }
 
-var apiResponse = new AuthenticationApi().GetProfileByAccessToken(Token);
-
+var apiResponse = new AuthenticationApi().GetProfileByAccessToken(token);
 if (apiResponse.RestException != null)
 {
     ViewData["error"] = apiResponse.RestException.Description;
-    return;
+    return View();
 }
 
-  UserProfile profile = apiResponse.Response;
-  ViewData["email"] = profile.Email[0].Value;
-  ```
+UserProfile profile = apiResponse.Response;
+ViewData["email"] = profile.Email[0].Value;
 
-Your page model should look something like this:
+return View();
+```
+
+Your profile controller should look something like this:
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using LoginRadiusSDK.V2.Api.Authentication;
 using LoginRadiusSDK.V2.Models.ResponseModels.UserProfile;
 
-namespace RazorPagesDemoApplication.Pages
+namespace MVCDemoApplication.Controllers
 {
-    public class ProfileModel : PageModel
+    public class ProfileController : Controller
     {
-        [BindProperty(SupportsGet = true)]
-        public string Token { get; set; }
-        public void OnGet()
+        public IActionResult Index(string token)
         {
-            if (Token == null)
+            ViewData["token"] = token;
+
+            if (token == null)
             {
                 ViewData["error"] = "Expected token query parameter.";
-                return;
+                return View();
             }
 
-            var apiResponse = new AuthenticationApi().GetProfileByAccessToken(Token);
-
+            var apiResponse = new AuthenticationApi().GetProfileByAccessToken(token);
             if (apiResponse.RestException != null)
             {
                 ViewData["error"] = apiResponse.RestException.Description;
-                return;
+                return View();
             }
 
             UserProfile profile = apiResponse.Response;
             ViewData["email"] = profile.Email[0].Value;
+
+            return View();
         }
     }
 }
@@ -195,15 +193,15 @@ namespace RazorPagesDemoApplication.Pages
 
 ## Run and See Result
 
-- Start your Razor Pages web application.
+- Start your MVC web application.
 
-- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. In this tutorial, the return URL was `https://localhost:<PORT>/Profile`. It should display something similar to:
+- Open your Auth Page (IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. In our example, our return URL was `https://localhost:<PORT>/Profile`. It should display something similar to:
 
-  ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the page specified in the return url. In your page model, the LoginRadius SDK will return a user profile. The following displays the profile page described in [above example](#setup-profile-page):
+- Register a user here and then log in. Upon successful login, it will redirect you to the page you have specified in the return url. In your page controller, the LoginRadius SDK will return a user profile, which you can then pass to your view. The following displays the profile view described in our example:
 
-  ![alt_text](images/example.png "image_tooltip")
+![alt_text](images/example.png "image_tooltip")
 
 ## Domain Whitelisting
 
