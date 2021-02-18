@@ -132,6 +132,12 @@ const Middle = () => {
                     <span>ASP.NET Core Razor Pages</span>
                   </Link>
                 </li>
+                <li>
+                  <Link to="/get-started-dotnetcore-mvc">
+                    {/*<img src="images/" width={20} />-->*/}
+                    <span>ASP.NET Core MVC</span>
+                  </Link>
+                </li>
               </ul>
               <div className="read-more">
                 <a href="#">
