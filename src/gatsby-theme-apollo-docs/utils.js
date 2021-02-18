@@ -1,5 +1,5 @@
-const developerDocs = ["Advanced Editor", "Enable Web SSO", "Brute Force Lockout", "Google reCAPTCHA", "Password Policy", "Session Management"]
-const premiumDocs = ["Manage Phone Login", "Manage Passwordless Login", "Setup Team Management", "Two Factor Authentication"]
+const developerDocs = ["Advanced Editor", "Enable Web SSO", "Brute Force Lockout", "Google reCAPTCHA", "Password Policy", "Session Management", "Webhook", "Setup Custom Domain"]
+const premiumDocs = ["Manage Phone Login", "Manage Passwordless Login", "Setup Team Management", "Two Factor Authentication", "Manage Roles"]
 
 function getVersionBasePath(version) {
   return `/v${version.replace(/\s+/g, '-')}`;

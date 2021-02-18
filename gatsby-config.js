@@ -11,7 +11,7 @@ module.exports = {
         ...themeOptions,
         root: __dirname,
         siteName: "LoginRadius Developer Docs",
-        baseUrl: "https://www.l0oginradius.com",
+        baseUrl: "https://www.loginradius.com",
         subtitle: "",
         description: "",
         // gaTrackingId: process.env.GA_TRACKING_ID,
@@ -57,9 +57,11 @@ module.exports = {
             "howto/web-sso",
             "howto/authentication-theme",
             "howto/advanced-editor",
+            "howto/customize-domain",
             "howto/work-with-sott",
             "howto/user-management",
             "howto/migrate-user-data",
+            "howto/manage-role",
             "howto/setup-team-management",
             "howto/handle-token",
           ],
@@ -70,6 +72,9 @@ module.exports = {
             "security/two-factor-authentication",
             "security/session-management",
           ],
+          "Integrations": [
+            "integrations/webhook"
+          ],
           "Concepts": [
             "concepts/idx-overview",
           ],
@@ -78,8 +83,9 @@ module.exports = {
           ],
           "FAQ": [
             "faq/api-credentials",
+            "faq/loginradius-support",
             "faq/troubleshooting",
-            "faq/supported-browsers",
+            "faq/supported-browsers"
           ],
         },
         githubRepo: "LoginRadius/docs",
@@ -95,23 +101,23 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: process.env.GOOGLE_TAGMANAGER_ID,
-  
+
         // Include GTM in development.
         //
         // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-  
+
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         //
         // Defaults to null
         //defaultDataLayer: { platform: "gatsby" },
-  
+
         // Specify optional GTM environment details.
         //gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
         //gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
         //dataLayerName: "YOUR_DATA_LAYER_NAME",
-  
+
         // Name of the event that is triggered
         // on every Gatsby route change.
         //
