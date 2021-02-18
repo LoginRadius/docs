@@ -2,11 +2,11 @@ import React,{ useState } from "react"
 import { Link } from "gatsby"
 import Modal from 'react-modal'
 
-function PopUp(){
+function PopUp(props){
     const [modalIsOpen, setModalIsOpen]= useState(false);
     return(
         <div>
-            <button onClick={()=>setModalIsOpen(true)}>
+            <a onClick={()=>setModalIsOpen(true)}>
                 <div className="read-more">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ function PopUp(){
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#008ecf"
-                  strokeWidth={2}
+                  strokeWidth={2} 
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="feather feather-plus"
@@ -25,43 +25,20 @@ function PopUp(){
                 </svg>
                 <span>More</span>
                 </div>
-                </button>
-            <Modal isOpen={modalIsOpen}>
+                </a>
+            <Modal isOpen={modalIsOpen} ariaHideApp={false}>
                 <h2>Select the technologies</h2>
                 <h3 className="title">Web Apps</h3>
               <ul>
-                <li>
-                <Link to="/get-started-node-js">
-                <img src="images/node-dot-js.svg" width={20} />
-                <span>NodeJs</span>
-                  </Link>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="images/php.svg" width={20} />
-                    <span>PHP</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="images/java.svg" width={20} />
-                    <span>JAVA</span>
-                  </a>
-                </li>
-                <li>
-                  <Link to="/get-started-dotnet-webforms">
-                    <img src="images/" width={20} />
-                    <span>ASP.NET Web Forms</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/get-started-dotnetcore-razor">
-                    <img src="images/" width={20} />
-                    <span>ASP.NET Core Razor Pages</span>
-                  </Link>
-                </li>
+                {props.data && props.data.map((item,index)=>(
+                  <li key={index}>
+                  <Link to={item.link}>
+                  <img src={item.icon} width={20} />
+                <span>{item.text}</span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
-                <p>place the options here</p>
                 <button onClick={()=>setModalIsOpen(false)}>close</button>
             </Modal>
         </div>
