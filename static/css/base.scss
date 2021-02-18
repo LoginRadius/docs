@@ -213,6 +213,7 @@ footer {
       left: 0 !important;
       right: 0 !important;
       top: 50% !important;
+      height: fit-content;
       transform: translateY(-50%);
       .card {
         border: 0 !important;
@@ -232,6 +233,8 @@ footer {
         }
         .popup-content {
           padding: 24px;
+          max-height: 340px;
+          overflow: auto;
           h4 {
             font-size: 18px;
             font-weight: 500;
