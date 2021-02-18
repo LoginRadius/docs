@@ -1,5 +1,7 @@
 import React from "react"
+import Modal from "react-modal"
 import { Link } from "gatsby"
+import PopUp from "./modal.js"
 
 const Middle = () => {
   return (
@@ -120,45 +122,8 @@ const Middle = () => {
                     <span>JAVA</span>
                   </a>
                 </li>
-                <li>
-                  <Link to="/get-started-dotnet-webforms">
-                    {/*<img src="images/" width={20} />-->*/}
-                    <span>ASP.NET Web Forms</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/get-started-dotnetcore-razor">
-                    {/*<img src="images/" width={20} />-->*/}
-                    <span>ASP.NET Core Razor Pages</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/get-started-dotnetcore-mvc">
-                    {/*<img src="images/" width={20} />-->*/}
-                    <span>ASP.NET Core MVC</span>
-                  </Link>
-                </li>
               </ul>
-              <div className="read-more">
-                <a href="#">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={20}
-                    height={20}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#008ecf"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="feather feather-plus"
-                  >
-                    <line x1={12} y1={5} x2={12} y2={19} />
-                    <line x1={5} y1={12} x2={19} y2={12} />
-                  </svg>
-                  <span>More</span>
-                </a>
-              </div>
+                  <PopUp />
             </div>
             <div className="card">
               <div className="icon">
