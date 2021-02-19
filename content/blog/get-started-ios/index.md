@@ -3,17 +3,8 @@
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your iOS mobile application. 
 
 
-> You must have the OS X, Xcode and iOS 9 or higher.
-
-
-
-Watch the video to get started, or refer to the section below for the text-based guide.
-
-
-<figure class="video_container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/efM46qNSaeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
-
----------------------------------------------------
+> You must have OS X, Xcode, and iOS 9 or higher.
+>
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 
@@ -26,7 +17,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
   ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
-- Now click the the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
+- Now click the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
 
   ![alt_text](images/sott.png "image_tooltip")
 
@@ -45,7 +36,7 @@ $ gem install cocoapods
 
 **Podfile**
 
-Open a terminal window and navigate to the location of the Xcode project for your application. If you have not already created a Podfile for your application, create one now:
+Open a terminal window and navigate to the location of the Xcode project for your application. If you have not already created a `Podfile` for your application, create one now by running the following command:
 
 ```
 $ pod init
@@ -53,7 +44,7 @@ $ pod init
 ```
 ## SDK Installation
 
-Integrate LoginRadiusSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
+Integrate LoginRadiusSDK into your Xcode project using CocoaPods by adding the following code snippet to your `Podfile`:
 
 ```
 source 'https://github.com/CocoaPods/Specs.git '
@@ -73,35 +64,36 @@ end
 
 2. Add the following entries to your `LoginRadius.plist`.
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>apiKey</key>
-	<string>API_Key</string>
-	<key>siteName</key>
-	<string>APP_Name</string>
+   ```
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+	   <key>apiKey</key>
+	   <string>API_Key</string>
+	   <key>siteName</key>
+	   <string>APP_Name</string>
 	
-</dict>
-</plist>
-```
-- Replace the following placeholders in the above :
-  - apiKey:  **API Key** obtained in the [Get Credential](#getcredentials) step.
-  - siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
+   </dict>
+   </plist>
+   ```
+   Replace the following placeholders in the above :
+     - apiKey:  **API Key** obtained in the [Get Credentials](#getcredentials) step.
+     - siteName: **App Name** obtained in the [Get Credentials](#getcredentials) step.
 
-- Import the SDK with `import LoginRadiusSDK` and Initialize with your API key and Site name in your `AppDelegate.swift` as below.
 
-```
+3. Import the SDK with `import LoginRadiusSDK` and Initialize with your API key and Site name in your `AppDelegate.swift` as below.
 
-import LoginRadiusSDK
- ...
+   ```
 
-@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
+   import LoginRadiusSDK
+   ...
 
-...
+   @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+   ...
+
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey: Any]?)  -> Bool {
 
             let sdk:LoginRadiusSDK = LoginRadiusSDK.instance();
             sdk.applicationLaunched(options: launchOptions);
@@ -109,19 +101,19 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
             //Your code
 
             return true
- }
+   }
 
-...
+   ...
 
-}
+   }
 
-```
+   ```
 
 
 
 ## Implement Registration 
 
-> Add a button to your application that calls below function for registration.
+> Add a button to your application that calls the below function for registration.
 
 Add the following code to implement registration:
 
@@ -146,7 +138,7 @@ AuthenticationAPI.authInstance().userRegistration(withSott:sott,payload:paramete
 
 ## Implement Login 
 
-> Add a button to your application that calls below function for login.
+> Add a button to your application that calls the below function for login.
 
 Add the following code to implement login:
 
