@@ -18,7 +18,7 @@
   font-family: inherit;
   border: 1px solid $cta;
   min-height: 48px;
-
+  white-space: nowrap;
   &.btn-primary {
     background-color: $cta;
     color: $white;

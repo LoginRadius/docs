@@ -60,6 +60,9 @@ input[type="button"] {
 }
 .py-72 {
   padding: 72px 0;
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
 }
 .py-112 {
   padding: 112px 0;
@@ -250,5 +253,17 @@ footer {
         }
       }
     }
+  }
+}
+
+// Responsive CSS
+.hide-desktop {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.hide-mobile {
+  @media (max-width: 768px) {
+    display: none;
   }
 }

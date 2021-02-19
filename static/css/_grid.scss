@@ -1,3 +1,10 @@
+.grid-60-40,
+.grid-50,
+.grid-33,
+.grid-25 {
+  display: flex;
+  flex-wrap: wrap;
+}
 .grid-60-40 {
   & > div {
     display: inline-block;
@@ -8,6 +15,10 @@
       margin-right: 0;
       width: calc(40% - (24px * 1 / 2));
     }
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }
 .grid-50 {
@@ -17,6 +28,10 @@
     margin-right: 24px;
     width: calc(50% - (24px / 2));
     &:nth-child(2n) {
+      margin-right: 0;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
       margin-right: 0;
     }
   }
@@ -30,6 +45,10 @@
     &:nth-child(3n) {
       margin-right: 0;
     }
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }
 .grid-25 {
@@ -38,8 +57,21 @@
     float: left;
     margin-right: 24px;
     width: calc(25% - (24px * 3 / 4));
+    @media (max-width: 768px) {
+      width: calc(50% - (24px / 2));
+      margin-bottom: 24px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+    }
     &:nth-child(4n) {
       margin-right: 0;
+    }
+    @media (max-width: 768px) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 }

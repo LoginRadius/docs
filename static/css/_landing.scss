@@ -11,6 +11,18 @@
   }
   .btn-group {
     margin-top: 48px;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      .btn {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+        & + .btn {
+          margin-left: 0;
+        }
+      }
+    }
   }
   .step {
     display: flex;
@@ -88,13 +100,23 @@
   }
   .grid-50 {
     & > div {
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+      }
       &:first-child {
         p {
           padding-right: 40px;
         }
       }
       &:nth-child(2) {
+        @media (max-width: 768px) {
+          display: none;
+        }
         padding-left: 250px;
+        @media (max-width: 1024px) {
+          padding-left: 150px;
+        }
       }
     }
   }
@@ -103,14 +125,14 @@ section {
   .section-header {
     p {
       width: 70%;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
     }
   }
 }
 //tutorials
 .tutorials {
-  .card {
-    min-height: 405px;
-  }
   .read-more {
     font-size: 18px;
     color: $black;
@@ -135,11 +157,13 @@ section {
     }
   }
   .card {
-    min-height: 404px;
     ul {
       li {
         width: 50%;
         float: left;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
         a {
           color: $blue;
           &:hover {
@@ -147,11 +171,6 @@ section {
           }
         }
       }
-    }
-  }
-  &.comprehensive-resources {
-    .card {
-      min-height: 284px;
     }
   }
 }

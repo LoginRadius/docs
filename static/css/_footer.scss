@@ -5,10 +5,23 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
     a {
       padding: 0 1rem;
+      @media (max-width: 768px) {
+        padding: 0 0.5rem;
+      }
       &:hover {
         color: $gray-dark;
+      }
+    }
+    & > div {
+      &:not(:last-child) {
+        @media (max-width: 767px) {
+          margin-bottom: 24px;
+        }
       }
     }
   }
