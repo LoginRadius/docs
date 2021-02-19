@@ -20,7 +20,8 @@ const BlogPostTemplate = ({ data, location }) => {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <section className="py-72 detail-page">
+          <span dangerouslySetInnerHTML={{__html:post.tableOfContents}} />
+                 <section className="py-72 detail-page">
             <div
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"
@@ -100,6 +101,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
       }
+      tableOfContents(heading: "")
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
