@@ -2,6 +2,8 @@
 
 The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Web Forms application.
 
+> This tutorial assumes that you have Visual Studio 2019 with &#46;NET Framework installed.
+
 ---------------------------------------------------
 
 When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/). When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your Web Forms application.
@@ -24,16 +26,29 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
+## Project Set Up
+
+Before doing anything, we need to first set up a Web Forms project:
+
+- Open Visual Studio and select `New` &rarr; `Project` from the `File` menu on your top bar.
+
+- Select `ASP.NET Web Application (.NET Framework)` and click `Next`.
+
+- Give your project a name, select a &#46;NET Framework version to use for your project, and click `Create`. This tutorial is using &#46;NET Framework 4.7.2.
+
+- Select the `Web Forms` template and click `Create`.
+
 ## SDK Installation
 
-In this tutorial, we will use JavaScript to make API calls to LoginRadius. 
+In this tutorial, we'll use JavaScript to make API calls to LoginRadius. 
 
-- Download the LoginRadius HTML5 SDK from **[Github](https://github.com/LoginRadius/HTML5-SDK)**.
-- Include the JavaScript file on your web page. In this example, we've saved the SDK script file to project's `Scripts` folder like such:
+- Download the LoginRadius HTML5 SDK from **[Github](https://github.com/LoginRadius/HTML5-SDK)**. You will find the SDK script file under `html5-sdk/lib`, as `LoginRadiusV2SDK.x.x.x.js` or the minified version as `LoginRadiusV2SDK.x.x.x.min.js`.
+- Save the SDK script in your project's directory. In this example, we've saved it in our project's `Scripts` folder like such:
 
 ![alt_text](images/scripts.png "image_tooltip")
 
-- Include the script in the web page with the following:
+- You'll need to include this script on any web page where you'd like to make API calls to LoginRadius. 
+- You can do this by pasting the following script tag inside your web page's `<asp:Content></asp:Content>` tag:
 
 ```html
 <script src="/Scripts/LoginRadiusV2SDK.11.0.0.js" type="text/javascript"></script>
@@ -41,9 +56,10 @@ In this tutorial, we will use JavaScript to make API calls to LoginRadius.
 
 ## Configuration
 
-Initialize the SDK under your SDK script declaration:
+Initialize the SDK under your SDK script declaration. It should look something like this:
 
 ```html
+<script src="/Scripts/LoginRadiusV2SDK.11.0.0.js" type="text/javascript"></script>
 <script>
   var sdkOptions = {
       "apiKey": "{{YOUR API KEY}}"
@@ -58,7 +74,7 @@ Replace the following placeholder in the above configuration object:
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
+> In this tutorial, we are using Auth Page (IDX) for authentication, where Registration and Login functionality  is already implemented. 
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -74,8 +90,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 - **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
 - **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
 
-> return_url can be your website, frontend app, or backend server url where you are handling the access token. 
-
+> For your Web Forms application, this will likely be a static page that requires data from your logged in user. However, the return_url can be anything from a static page to a backend server endpoint. 
 
 ## Retrieve User Data using Access Token
 
@@ -85,10 +100,35 @@ Navigate your Register or Login links or buttons to the following URLs:
 >`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 >
 
-Add the following script tag to your web page to get the user profile:
+Add the script to your web page specified in the `return_url` to get user profile data from LoginRadius:
+
+```javascript
+var url = new URL(window.location.href);
+var accessToken = url.searchParams.get("token");
+
+if (accessToken !== null) {
+  LoginRadiusSDK.authenticationApi.getProfileByAccessToken(accessToken, null, function (error, data) {
+      if (error) {
+          console.log(error);
+          return;
+      }
+
+      console.log(data);
+  });
+}
+```
+
+Along with your SDK declaration and initialization, your web page might look something like this:
 
 ```html
+<script src="/Scripts/LoginRadiusV2SDK.11.0.0.js" type="text/javascript"></script>
 <script>
+  var sdkOptions = {
+      "apiKey": "{{YOUR API KEY}}"
+  };
+
+  LoginRadiusSDK.initSDK(sdkOptions);
+
   var url = new URL(window.location.href);
   var accessToken = url.searchParams.get("token");
 
@@ -105,7 +145,7 @@ Add the following script tag to your web page to get the user profile:
 </script>
 ```
 
-From here, you can use JQuery or vanilla JavaScript to populate your webpage with the retrieved user profile.
+From here, you can use JQuery or vanilla JavaScript to populate your web page with the retrieved user profile.
 
 ## Run and See Result
 
