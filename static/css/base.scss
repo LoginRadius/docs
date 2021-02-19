@@ -30,6 +30,7 @@ button {
   margin-top: 0;
 }
 a {
+  cursor: pointer;
   text-decoration: none;
   color: $blue;
   transition: all 0.2s ease-in-out 0s;
@@ -77,6 +78,12 @@ input[type="button"] {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   transition: color 0.35s, background-color 0.35s, border-color 0.35s,
     box-shadow 0.35s, opacity 0.35s;
+  &.no-shadow {
+    box-shadow: none;
+    &:hover {
+      border-color: transparent;
+    }
+  }
   &:hover {
     border-color: $blue;
   }
@@ -189,6 +196,59 @@ footer {
     }
     img {
       max-width: 100%;
+    }
+  }
+}
+
+// Modal popup
+.ReactModal__Body--open {
+  overflow: hidden;
+  .ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.36) !important;
+    .ReactModal__Content {
+      padding: 0 !important;
+      border: 0 !important;
+      max-width: 540px;
+      margin: 0 auto;
+      left: 0 !important;
+      right: 0 !important;
+      top: 50% !important;
+      height: fit-content;
+      transform: translateY(-50%);
+      .card {
+        border: 0 !important;
+        .popup-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 80px;
+          border-bottom: 1px solid $gray-light;
+          padding: 0 24px;
+          .title {
+            margin-bottom: 0;
+          }
+          a {
+            color: $black;
+          }
+        }
+        .popup-content {
+          padding: 24px;
+          max-height: 340px;
+          overflow: auto;
+          h4 {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+              width: 48%;
+            }
+          }
+        }
+      }
     }
   }
 }

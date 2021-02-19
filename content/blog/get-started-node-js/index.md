@@ -4,7 +4,9 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 
 
-> You must have Node.js installed, and the minimum supported version is 10.0.0. New to Node.Js? Check out [this reference](https://nodejs.org/en/about/).
+> You must have Node.js installed, and the minimum supported version is 10.0.0. 
+>
+> New to Node.Js? Check out [this reference](https://nodejs.org/en/about/).
 
 Watch the video to get started, or refer to the section below for the text-based guide.
 
@@ -56,21 +58,21 @@ Here we are using the express framework to create Node.js API. Perform the follo
 
 - Add the following snippet in the `server.js`.
 
-```
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
-var app = express();
-var PORT = 3000;
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+  ```
+  var express = require('express');
+  var bodyParser = require('body-parser');
+  var path = require('path');
+  var app = express();
+  var PORT = 3000;
+  app.use(bodyParser.urlencoded({
+    extended: true
+  }));
 
-// your LR api impl goes here  
+  // your LR api impl goes here  
 
-app.listen(PORT, () => console.log('App can be accessed at localhost:' + PORT ));
+  app.listen(PORT, () => console.log('App can be accessed at localhost:' + PORT ));
 
-```
+  ```
 
 
 
@@ -168,12 +170,12 @@ app.get('/', function(req, res) {
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
-![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
 
 - Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format. The following displays a sample json response:
 
-![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
 Similarly, you can implement more features using Node.js SDK. 
 
