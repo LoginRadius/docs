@@ -218,6 +218,9 @@ footer {
       top: 50% !important;
       height: fit-content;
       transform: translateY(-50%);
+      @media (max-width: 767px) {
+        margin: 0 24px;
+      }
       .card {
         border: 0 !important;
         .popup-header {
@@ -248,6 +251,9 @@ footer {
             justify-content: space-between;
             li {
               width: 48%;
+              @media (max-width: 767px) {
+                width: 100%;
+              }
             }
           }
         }
