@@ -4,7 +4,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 
 
-> You must have ROR installed in your system. 
+> You must have [Ruby On Rails](https://www.ruby-lang.org/en/downloads/) installed in your system. 
 >
 > New to Ruby on rails? Check out this [reference](https://guides.rubyonrails.org/v5.0/getting_started.html).
 
@@ -50,16 +50,19 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 Add project dependency and loginradius SDK by adding this line to your application's Gemfile:
 
 ```
- gem 'login_radius', '~> 11.0' 
+gem 'login_radius', '~> 11.0' 
 ```
 Once your gems are added, run the following command in command line:
  
  ```
- bundle install
+bundle install
  ```
 
 ## Configuration
-Define the global constant in `config/application.yml`:
+
+Create `application.yml` in config folder of your project.
+
+Add the following code in `config/application.yml` to define global constant:
 
 ```
 
@@ -117,7 +120,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > If return_url is frontend, then from that application, pass the token to the backend ROR API. Otherwise use the path of the back end API as the return_url.
 
-Add the following function snippet in your code to get the user profile:
+Create  `app/controllers/api/profile_controller.rb ` controller and add the  method to retrieve user profile using the received access token:
 
 ```
     def read_profile_by_access_token
@@ -129,10 +132,33 @@ Add the following function snippet in your code to get the user profile:
       render :status => response.code, :json => response.body
     end
 ```
+Your profile controller should look something like this:
+```
+module Api
+  class ProfileController < ApplicationController
+    def read_profile_by_access_token
+      puts "params #{params[:auth]}"
+      access_token = params[:auth]
+      fields = ''
+      response = AuthenticationApi.get_profile_by_access_token(access_token, fields)
 
+      render :status => response.code, :json => response.body
+    end
+  end
+end
+```
+You can call this function from `config/routes.rb` 
+```
+Rails.application.routes.draw do
+
+  namespace :api do
+get "profile", action: "read_profile_by_access_token", controller: "profile"
+ end
+end
+```
 ## Run and See Result
 
-- Run the server using the following command in command line `rails server`.
+- Run the server using the following command in command line `bin/rails server`.
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
