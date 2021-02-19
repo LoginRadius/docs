@@ -169,10 +169,10 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">
+              <Link to="/get-started-ios">
                   <img src="images/ios.svg" width={20} />
                   <span>iOS</span>
-                </a>
+                  </Link>
               </li>
               <li>
                 <a href="#">
