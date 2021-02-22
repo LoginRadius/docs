@@ -27,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout
       location={location}
       title={siteTitle}
-      // searchIndex={data.siteSearchIndex.index}
+       searchIndex={data.siteSearchIndex.index}
     >
       <SEO title="All posts" />
       <Bio />
