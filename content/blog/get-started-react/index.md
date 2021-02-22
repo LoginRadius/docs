@@ -99,9 +99,10 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > Point return_url to a route in your React application to capture the access token and retrieve the user profile data.
 
-- Add the `"/login"` route to the `App` component to get the user profile:
+- Add the `"/login"` route to the `App` component to get the user profile. Your `App.js` file should look like this:
 
   ```JavaScript
+  import './App.css';
   import {
     BrowserRouter as Router,
     Switch,
@@ -125,9 +126,15 @@ Navigate your Register or Login links or buttons to the following URLs:
       </Router>
     );
   }
+
+  export default App;
   ```
 
-- Create a folder for the Login component from the source root src folder and populate the index.js file:
+- Create a `Login` folder (case-sensitive) for the new component under the `src` folder, then create a new empty file `index.js` within `Login` folder:
+
+  ![alt_text](./images/folder-tree1.png "image_tooltip")
+
+- Populate the `src/Login/index.js` file with:
 
   ```JavaScript
   import React from "react"
