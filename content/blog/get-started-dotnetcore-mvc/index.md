@@ -1,3 +1,9 @@
+---
+title: "Get started with Dot Net Core MVC"
+tags: ["MVC",".NET","Dot Net","GetStarted"]
+description: "This is a tutorial with IDX and .NET Core MVC implmentation."
+---
+
 # Get Started - ASP&#46;NET Core MVC
 
 The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Core MVC web application.

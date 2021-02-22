@@ -20,8 +20,17 @@ const BlogPostTemplate = ({ data, location }) => {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <span dangerouslySetInnerHTML={{__html:post.tableOfContents}} />
-                 <section className="py-72 detail-page">
+          <section className=" sidebar-page">
+            WEB APP
+            <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+            <div>
+              GET IN TOUCH
+              <ul>
+                <li>Ask on StackOverflow</li>
+              </ul>
+            </div>
+          </section>
+          <section className="py-72 detail-page">
             <div
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"

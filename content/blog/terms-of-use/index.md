@@ -1,20 +1,11 @@
-<div class="entry-content" itemprop="text">
-
-<section class="bg-light-03">
-
-<div class="grid-100">
-
-<div class="title">
+---
+title: "Terms Of Use"
+tags: ["Terms Of Use"]
+description: "Terms Of Use." 
+---
 
 # Terms
 
-</div>
-
-</div>
-
-<div class="grid-100">
-
-<div class="text plain-content">
 
 _Last updated on: May 24, 2018._
 
@@ -48,11 +39,3 @@ c/o LoginRadius Inc.
 Suite 801  
 Vancouver BC  
 Canada V6C 1B4
-
-</div>
-
-</div>
-
-</section>
-
-</div>

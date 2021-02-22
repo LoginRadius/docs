@@ -1,3 +1,9 @@
+---
+title: "Get started with Dot Net Razor"
+tags: ["Razor",".NET","Dot Net","GetStarted"]
+description: "This is a tutorial with IDX and .NET Razor implmentation."
+---
+
 # Get Started - ASP&#46;NET Core Razor Pages
 
 The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Core Razor Pages web application.

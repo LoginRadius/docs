@@ -1,3 +1,10 @@
+---
+title: "Get started with Ruby On Rails"
+tags: ["Ruby on Rails","ROR", "GetStarted"]
+description: "This is a tutorial with IDX and ROR basic implmentation."
+---
+
+
 # Get Started - ROR
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out for your ROR based application. 

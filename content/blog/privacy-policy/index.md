@@ -1,22 +1,12 @@
-<div class="entry-content" itemprop="text">
-
-<section class="bg-light-03">
-
-<div class="grid-100">
-
-<div class="title">
+---
+title: "Privacy Policy"
+tags: ["Privacy Policy"]
+description: "Privacy Policy."
+---
 
 # LoginRadius Privacy Policy
 
-</div>
 
-</div>
-
-<div class="grid-100">
-
-<div class="text plain-content">
-
-_Last updated on: May 24, 2018._
 
 **Introduction**  
 We respect your privacy and want to ensure the best experience while interacting with LoginRadius Inc. (“LoginRadius”, “we” or “us”), while using our services (“LoginRadius Services”, “LoginRadius API” or “LoginRadius Identity Platform” or “LoginRadius Products”), or browsing our website www.loginradius.com (“Website”, or “LoginRadius Website”), including the internal LoginRadius Admin Console provided to our Customers. LoginRadius Services are deployed on our Customers’ web or mobile applications (“Customer Web Applications” or “Customer Websites”) and are used by our Customers’ online users (“End Users”).
@@ -104,10 +94,3 @@ Suite 801
 Vancouver, BC  
 Canada V6C 1B4
 
-</div>
-
-</div>
-
-</section>
-
-</div>

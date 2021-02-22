@@ -1,3 +1,9 @@
+---
+title: "Get started with Android"
+tags: ["Android", "GetStarted"]
+description: "This is a tutorial with IDX and Android."
+---
+
 # Get Started - Android
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Android mobile application. 

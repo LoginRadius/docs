@@ -1,3 +1,8 @@
+---
+title: "Get started with IOS"
+tags: ["IOS", "GetStarted"]
+description: "This is a tutorial with IDX and IOS implmentation."
+---
 # Get Started - iOS
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your iOS mobile application. 
