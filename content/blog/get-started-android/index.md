@@ -6,8 +6,7 @@ description: "This is a tutorial with IDX and Android."
 
 # Get Started - Android
 
-The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Android mobile application. 
-
+The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Android mobile application.
 
 > You must have the following:
 >
@@ -17,17 +16,14 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > - Android Studio >= 3.5.2
 
-
 Watch the video to get started, or refer to the section below for the text-based guide.
-
 
 <figure class="video_container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/efM46qNSaeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
 
----------------------------------------------------
+---
+
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
-
-
 
 ## Get Credentials
 
@@ -41,7 +37,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
   ![alt_text](images/sott.png "image_tooltip")
 
-- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard). 
+- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
 ## SDK Installation
 
@@ -54,6 +50,7 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 ## Configuration
 
 - Add the following code to the `onCreate()` method in `MainActivity.java`.
+
   ```
 
   LoginRadiusSDK.Initialize init = new LoginRadiusSDK.Initialize();
@@ -63,11 +60,12 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 
 
   ```
+
 - Replace the following placeholders in the above :
-  - apiKey:  **API Key** obtained in the [Get Credential](#getcredentials) step.
+
+  - apiKey: **API Key** obtained in the [Get Credential](#getcredentials) step.
   - sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
   - siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
-
 
 - Add the following permissions to the `AndroidManifest.xml`:
 
@@ -81,8 +79,7 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 
   ```
 
-
-## Implement Registration 
+## Implement Registration
 
 > Add a button to your application that calls below function for registration.
 
@@ -115,11 +112,10 @@ Add the following code to implement registration:
                  }
              });
           }
- 
+
 ```
 
-
-## Implement Login 
+## Implement Login
 
 > Add a button to your application that calls below function for login.
 
@@ -161,9 +157,9 @@ api.login(LoginActivity.this, params, new AsyncHandler < LoginData > () {
 });
 }
 
-```  
+```
 
-##  Retrieve User Data using Access Token
+## Retrieve User Data using Access Token
 
 > You will get an `access token` in response to Registration and Login functions.
 
@@ -191,15 +187,13 @@ public void readAllUserProfile(String access_token) {
 
 > Call the `readAllUserProfile` function after login and verify that the user's profile information has been returned in the `onSuccess` callback.
 
-
-##  Explore Android Demo
+## Explore Android Demo
 
 Check out our Android demo to know how you can implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/android-sdk)**   |   **[Download Demo](https://github.com/LoginRadius/android-sdk/archive/master.zip)**   
+**[GitHub Demo Link](https://github.com/LoginRadius/android-sdk)** | **[Download Demo](https://github.com/LoginRadius/android-sdk/archive/master.zip)**
 
-
-# Recommended Next Steps
+## Recommended Next Steps
 
 How to manage email templates for verification and forgot password
 
@@ -213,12 +207,10 @@ How to implement Phone Login
 
 How to implement Passwordless Login
 
-
-# Android SDK Reference
+## Android SDK Reference
 
 < Link to Android SDK doc >
 
-
-# API Reference
+## API Reference
 
 < Link to APIs doc >

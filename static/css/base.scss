@@ -1,4 +1,5 @@
-@import "variable", "button", "link", "grid", "header", "landing", "footer";
+@import "variable", "button", "link", "grid", "header", "landing", "detail-page",
+  "footer";
 *,
 *:before,
 *:after {
@@ -193,7 +194,7 @@ footer {
     p {
       font-size: 17px;
       line-height: 28px;
-      margin-bottom: 56px;
+
       margin-top: 0;
       color: $gray-dark;
     }

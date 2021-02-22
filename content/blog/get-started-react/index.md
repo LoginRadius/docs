@@ -6,7 +6,7 @@ description: "This is a tutorial with IDX and React basic implmentation."
 
 # Get Started - React.js
 
-The tutorial lets you implement LoginRadius user registration, login and view profile on your React.js based application. 
+The tutorial lets you implement LoginRadius user registration, login and view profile on your React.js based application.
 
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
@@ -14,17 +14,13 @@ When you signed up for the LoginRadius account, it created an app for you. This 
 
 Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your React.js application.
 
-
 ## Choose Theme
 
 In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to to select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-
-
 To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
-
 
 ## Get Credentials
 
@@ -32,10 +28,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
-
-
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
-
 
 ## React JS Implementation
 
@@ -43,7 +36,7 @@ For this example, we will be using a sample app based on the Create React App bo
 
 Once the CRA boilerplate is set up, follow these steps:
 
-- Navigate to the project root and install `react-router-dom`: 
+- Navigate to the project root and install `react-router-dom`:
 
   `npm install react-router-dom`
 
@@ -77,7 +70,7 @@ Once the CRA boilerplate is set up, follow these steps:
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
+> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -90,18 +83,18 @@ Navigate your Register or Login links or buttons to the following URLs:
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
+
 - **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
 
-> return_url can be your website, frontend app, or backend server url where you are handling the access token. 
-
+> return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
 ## Retrieve User Data using Access Token
 
 > Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url should be your application's web page where you would like to receive the access token.
->The following is an example of the access token in the query string with the Return URL:
+> The following is an example of the access token in the query string with the Return URL:
 >
->`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
+> `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 >
 > Point return_url to a route in your React application to capture the access token and retrieve the user profile data.
 
@@ -175,7 +168,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
     render() {
       const { userProfileResponse } = this.state;
-    
+
       return (
         <div>
           <span style={{ whiteSpace: "pre-wrap", textAlign: "left" }}>
@@ -188,16 +181,16 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   export default withRouter(Login);
   ```
+
 - Replace the following placeholder in the above code:
   {{YOUR API KEY}} : API Key obtained in the [Get Credentials](#get-credentials) step.
-
 
 - Once the `Login` component is implemented. Set the `return_url` to point to the `/login` subdomain of your application. For example, in the local React instance, it can point to `http://localhost:3000/login`. This way, after logging in through the Auth Page (IDX) Login page, your user will be redirected to the Login component that we just implemented.
 
 ## Run and See Result
 
 - From your command line, run the React application:
-  
+
   `npm start`
 
 - Wait for the application to finish launching
@@ -206,31 +199,27 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-
 - Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format displayed in the "/login" route. The following displays a sample json response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
-##  Domain Whitelisting
+## Domain Whitelisting
 
-For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
 To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
-
-
-##  Explore Node.js Demo
+## Explore Node.js Demo
 
 As an alternative to handling all API calls in the React frontend, you may also opt to access the LoginRadius API from a Node backend. If you wish to do so, you can check out our Node.js demo to learn how to implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**   |   **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**   
+**[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)** | **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**
 
-
-# Recommended Next Steps
+## Recommended Next Steps
 
 How to manage email templates for verification and forgot password
 
@@ -244,12 +233,10 @@ How to implement Phone Login
 
 How to implement Passwordless Login
 
-
 <!-- # Node.js SDK Reference
 
 < Link to Node.js SDK doc > -->
 
-
-# API Reference
+## API Reference
 
 < Link to APIs doc >

@@ -1,6 +1,6 @@
 ---
 title: "Get started with Dot Net Razor"
-tags: ["Razor",".NET","Dot Net","GetStarted"]
+tags: ["Razor", ".NET", "Dot Net", "GetStarted"]
 description: "This is a tutorial with IDX and .NET Razor implmentation."
 ---
 
@@ -35,6 +35,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 This tutorial assumes that you are following the Razor Page design pattern in your web application and uses the LoginRadius &#46;NET SDK to make API calls to LoginRadius.
 
 Run the following command in the NuGet Package Manager Console:
+
 ```
 PM> Install-Package LoginRadiusSDK.NET
 ```
@@ -55,13 +56,14 @@ Go to your `appsettings.json` file in your project, and add the following config
 ```
 
 Replace the following placeholders in the above config in `appsettings.json`:
-- apiKey:  **API Key** obtained in the [Get Credentials](#get-credentials) step.
+
+- apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
 - apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
 - appName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented. 
+> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -74,8 +76,9 @@ Navigate your Register or Login links or buttons to the following URLs:
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
+
 - **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. In the case of this tutorial, this would be the page in your web application where you will process the received access token and retrieve the LoginRadius user profile.
 
@@ -88,18 +91,15 @@ Create a Profile Page to redirect to after authentication and add the view and p
 Add the following view under `/Pages/Profile.cshtml`.
 
 ```html
-@page
-@model RazorPagesDemoApplication.Pages.ProfileModel
-@{
-    ViewData["Title"] = "Your LoginRadius Profile";
-}
+@page @model RazorPagesDemoApplication.Pages.ProfileModel @{ ViewData["Title"] =
+"Your LoginRadius Profile"; }
 
 <h2>Your LoginRadius Profile</h2>
 
 <div class="text-center">
-    <h1 class="display-4">Access Token: @Model.Token</h1>
-    <h3>Email: @ViewData["email"]</h3>
-    <p>Error: @ViewData["error"]</p>
+  <h1 class="display-4">Access Token: @Model.Token</h1>
+  <h3>Email: @ViewData["email"]</h3>
+  <p>Error: @ViewData["error"]</p>
 </div>
 ```
 
@@ -128,10 +128,9 @@ namespace RazorPagesDemoApplication.Pages
 ## Retrieve User Data using Access Token
 
 > Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url should be your application's web page where you would like to receive the access token.
->The following is an example of the access token in the query string with the Return URL:
+> The following is an example of the access token in the query string with the Return URL:
 >
->`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
->
+> `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
 - Add the following namespaces in `/Pages/Profile.cshtml.cs` to allow us to work with the `GetProfileByAccessToken` SDK method easily:
 
@@ -159,7 +158,7 @@ if (apiResponse.RestException != null)
 
   UserProfile profile = apiResponse.Response;
   ViewData["email"] = profile.Email[0].Value;
-  ```
+```
 
 Your page model should look something like this:
 
@@ -213,13 +212,13 @@ namespace RazorPagesDemoApplication.Pages
 
 ## Domain Whitelisting
 
-For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default. 
+For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default.
 
 To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
-# Recommended Next Steps
+## Recommended Next Steps
 
 How to manage email templates for verification and forgot password
 
@@ -233,10 +232,10 @@ How to implement Phone Login
 
 How to implement Passwordless Login
 
-# &#46;NET SDK Reference
+## &#46;NET SDK Reference
 
 < Link to HTML SDK doc >
 
-# API Reference
+## API Reference
 
 < Link to API docs >

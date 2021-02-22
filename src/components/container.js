@@ -25,7 +25,7 @@ const Middle = () => {
                 Try 5 minute Setup Guide
               </a>
               <a href="#" className="btn btn-outline">
-                Sign up for free
+                Curious How It Works?
               </a>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Middle = () => {
         <div className="section-header">
           <h2>Tutorials</h2>
           <p>
-            Explore our code and resources to get started in just few minutes.
+            Explore our code and resources to get started in just a few minutes
           </p>
         </div>
         <div className="grid-25">
@@ -116,7 +116,7 @@ const Middle = () => {
                 </a>
               </li>
               <li>
-                <a href="#"> 
+                <a href="#">
                   <img src="images/java.svg" width={20} />
                   <span>JAVA</span>
                 </a>
@@ -138,7 +138,8 @@ const Middle = () => {
                   link: "",
                   icon: "images/java.svg",
                   text: "JAVA",
-                },{
+                },
+                {
                   link: "/get-started-dotnet-webforms",
                   icon: "images/node-dot-js.svg",
                   text: "ASP.NET Web Forms",
@@ -169,10 +170,10 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-              <Link to="/get-started-ios">
+                <Link to="/get-started-ios">
                   <img src="images/ios.svg" width={20} />
                   <span>iOS</span>
-                  </Link>
+                </Link>
               </li>
               <li>
                 <a href="#">
@@ -216,9 +217,8 @@ const Middle = () => {
         <div className="section-header">
           <h2>Recommended Resources</h2>
           <p>
-            Whether you are a beginner or an experienced professional, our
-            hands-on approach helps you arrive at your goals faster, with more
-            confidence and at your own pace.
+            Try our hands-on approach based guides to arrive at your goals
+            faster
           </p>
         </div>
         <div className="grid-50">
@@ -227,7 +227,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/login-methods.svg" />
             </div>
-            <h3 className="title">Login Methods we offer</h3>
+            <h3 className="title">Login Methods</h3>
             <ul>
               <li>
                 <a href="#">Email/Password Login</a>
@@ -249,7 +249,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/user-managment.svg" />
             </div>
-            <h3 className="title">Explore user managment options</h3>
+            <h3 className="title">User Management Options</h3>
             <ul>
               <li>
                 <a href="#">Mange Users</a>
@@ -268,7 +268,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/branding.svg" />
             </div>
-            <h3 className="title">Personalize interfaces and branding</h3>
+            <h3 className="title">Interfaces and Branding Personalization</h3>
             <ul>
               <li>
                 <a href="#">Customize Auth Page (IDX)</a>
@@ -309,7 +309,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/intigration.svg" />
             </div>
-            <h3 className="title">Integrate Third Parties</h3>
+            <h3 className="title">Third Parties Integration</h3>
             <ul>
               <li>
                 <a href="#">Setup Web Hooks </a>
@@ -372,7 +372,7 @@ const Middle = () => {
           <h2>Comprehensive Resources</h2>
           <p>
             Check out concepts, SDKs, and APIs to extensively use LoginRadius
-            Identity Platform.
+            Identity Platform
           </p>
         </div>
         <div className="grid-50">

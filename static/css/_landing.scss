@@ -46,7 +46,7 @@
       }
     }
     .info {
-      margin: 24px 0 20px;
+      margin: 24px 0 10px;
     }
 
     .title {
@@ -125,6 +125,7 @@ section {
   .section-header {
     p {
       width: 70%;
+      margin-bottom: 56px;
       @media (max-width: 1024px) {
         width: 100%;
       }

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
-
+import Logo from "../../public/images/logo.svg"
 // Header component
 export default class Header extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ export default class Header extends Component {
           <div>
             <div className="logo">
               <Link to="/">
-                <img src="images/logo.svg" width="228" />
+                <img src={Logo} width="228" />
               </Link>
             </div>
             <div
@@ -66,25 +66,25 @@ export default class Header extends Component {
               onMouseLeave={() => (this._shouldClose = true)}
             >
               <form>
-              <input
-                type="text"
-                placeholder="Search documentation..."
-                onChange={this.search}
-                id={"search"}
-              />
-              <a onClick={this._toggleSearch}></a>
+                <input
+                  type="text"
+                  placeholder="Search documentation..."
+                  onChange={this.search}
+                  id={"search"}
+                />
+                <a onClick={this._toggleSearch}></a>
 
-              {results.length ? (
-                <ul>
-                  {results.slice(0, 4).map(page => (
-                    <li key={page.id}>
-                      <div>
-                        <Link to={"/" + page.path}>{page.title}</Link>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              ) : null} 
+                {results.length ? (
+                  <ul>
+                    {results.slice(0, 4).map(page => (
+                      <li key={page.id}>
+                        <div>
+                          <Link to={"/" + page.path}>{page.title}</Link>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </form>
             </div>
           </div>
@@ -104,7 +104,9 @@ export default class Header extends Component {
     this.index
       ? this.index
       : // Create an elastic lunr index and hydrate with graphql query results
-      this.props.searchIndex? Index.load(this.props.searchIndex): 0
+      this.props.searchIndex
+      ? Index.load(this.props.searchIndex)
+      : 0
 
   search = evt => {
     const query = evt.target.value
@@ -113,10 +115,12 @@ export default class Header extends Component {
     this.setState({
       query,
       // Query the index with search string to get an [] of IDs
-      results: this.index?this.index
-        .search(query, { expand: true })
-        // Map over each ID and return the full document
-        .map(({ ref }) => this.index.documentStore.getDoc(ref)):[]
+      results: this.index
+        ? this.index
+            .search(query, { expand: true })
+            // Map over each ID and return the full document
+            .map(({ ref }) => this.index.documentStore.getDoc(ref))
+        : [],
     })
   }
 }

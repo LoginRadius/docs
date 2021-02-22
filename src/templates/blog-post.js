@@ -20,21 +20,41 @@ const BlogPostTemplate = ({ data, location }) => {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <section className=" sidebar-page">
-            WEB APP
-            <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+          <section className="detail-page py-72">
             <div>
-              GET IN TOUCH
-              <ul>
-                <li>Ask on StackOverflow</li>
-              </ul>
+              <div className="sidebar">
+                <div className="headings">Web APP</div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+                />
+                <div className="get-in-touch">
+                  <div className="headings">Get in Touch</div>
+                  <ul>
+                    <li>
+                      <span className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ionicon"
+                          viewBox="0 0 512 512"
+                        >
+                          <title>Logo Stackoverflow</title>
+                          <path d="M392 440V320h40v160H64V320h40v120z" />
+                          <path d="M149.1 308.77l198.57 40.87 8.4-39.32-198.57-40.87zm26.27-93.12L359.22 300 376 263.76l-183.82-84.84zm50.95-89l156 127.78 25.74-30.52-156-127.78zM328 32l-33.39 23.8 120.82 160.37L448 192zM144 400h204v-40H144z" />
+                        </svg>
+                      </span>
+                      <span>
+                        <a href="#">Ask on StackOverflow</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                className="content"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                itemProp="articleBody"
+              />
             </div>
-          </section>
-          <section className="py-72 detail-page">
-            <div
-              dangerouslySetInnerHTML={{ __html: post.html }}
-              itemProp="articleBody"
-            />
           </section>
 
           {/* <article

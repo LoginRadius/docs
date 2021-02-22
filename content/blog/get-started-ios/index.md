@@ -3,16 +3,14 @@ title: "Get started with IOS"
 tags: ["IOS", "GetStarted"]
 description: "This is a tutorial with IDX and IOS implmentation."
 ---
+
 # Get Started - iOS
 
-The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your iOS mobile application. 
-
+The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your iOS mobile application.
 
 > You must have OS X, Xcode, and iOS 9 or higher.
 >
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
-
-
 
 ## Get Credentials
 
@@ -26,7 +24,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
   ![alt_text](images/sott.png "image_tooltip")
 
-- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard). 
+- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
 ## iOS Implementation
 
@@ -47,6 +45,7 @@ Open a terminal window and navigate to the location of the Xcode project for you
 $ pod init
 
 ```
+
 ## SDK Installation
 
 Integrate LoginRadiusSDK into your Xcode project using CocoaPods by adding the following code snippet to your `Podfile`:
@@ -74,18 +73,19 @@ end
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
    <plist version="1.0">
    <dict>
-	   <key>apiKey</key>
-	   <string>API_Key</string>
-	   <key>siteName</key>
-	   <string>APP_Name</string>
-	
+      <key>apiKey</key>
+      <string>API_Key</string>
+      <key>siteName</key>
+      <string>APP_Name</string>
+
    </dict>
    </plist>
    ```
-   Replace the following placeholders in the above :
-     - apiKey:  **API Key** obtained in the [Get Credentials](#getcredentials) step.
-     - siteName: **App Name** obtained in the [Get Credentials](#getcredentials) step.
 
+   Replace the following placeholders in the above :
+
+   - apiKey: **API Key** obtained in the [Get Credentials](#getcredentials) step.
+   - siteName: **App Name** obtained in the [Get Credentials](#getcredentials) step.
 
 3. Import the SDK with `import LoginRadiusSDK` and Initialize with your API key and Site name in your `AppDelegate.swift` as below.
 
@@ -114,9 +114,7 @@ end
 
    ```
 
-
-
-## Implement Registration 
+## Implement Registration
 
 > Add a button to your application that calls the below function for registration.
 
@@ -137,11 +135,12 @@ AuthenticationAPI.authInstance().userRegistration(withSott:sott,payload:paramete
             print("successfully registered");
         }
 
-}) 
+})
 ```
+
 - sott: **SOTT** obtained in the [Get Credential](#getcredential) step.
 
-## Implement Login 
+## Implement Login
 
 > Add a button to your application that calls the below function for login.
 
@@ -161,9 +160,9 @@ AuthenticationAPI.authInstance().login(withPayload:parameter as! [AnyHashable : 
         print("login successful")
     }
 })
-```  
+```
 
-##  Retrieve User Data using Access Token
+## Retrieve User Data using Access Token
 
 > You will get an `access token` in response to Registration and Login functions.
 
@@ -183,15 +182,13 @@ AuthenticationAPI.authInstance().profiles(withAccessToken:"<access_token>", comp
 
 > Call the `profileswithAccessToken` function after login and verify that the user's profile information has been returned in the `data` field.
 
-
-##  Explore iOS Demo
+## Explore iOS Demo
 
 Check out our iOS demo to know how you can implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/ios-sdk)**   |   **[Download Demo](https://github.com/LoginRadius/ios-sdk/archive/master.zip)**   
+**[GitHub Demo Link](https://github.com/LoginRadius/ios-sdk)** | **[Download Demo](https://github.com/LoginRadius/ios-sdk/archive/master.zip)**
 
-
-# Recommended Next Steps
+## Recommended Next Steps
 
 How to manage email templates for verification and forgot password
 
@@ -205,12 +202,10 @@ How to implement Phone Login
 
 How to implement Passwordless Login
 
-
-# iOS SDK Reference
+## iOS SDK Reference
 
 < Link to iOS SDK doc >
 
-
-# API Reference
+## API Reference
 
 < Link to APIs doc >
