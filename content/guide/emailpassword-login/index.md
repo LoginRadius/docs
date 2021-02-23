@@ -43,11 +43,11 @@ When certain events related to the Email/Password Login Method occur, LoginRadiu
 
 #### Verification Email
 
-The Verification Email is sent to your consumer when they first register on your application. This email contains a link that will need to be clicked in order to verify their email address.
+The Verification Email is sent to your consumer when they first register on your application. This email contains a link that will need to be clicked to verify their email address.
 
 #### Forgot Password Email
 
-The Forgot Password Email is sent to your consumer when they request to reset their password. This email contains a link that will need to be clicked in order to reset their password.
+The Forgot Password Email is sent to your consumer when they request to reset their password. This email contains a link that will need to be clicked to reset their password.
 
 ### Step 4
 
@@ -73,20 +73,24 @@ In your template, you can make use of predefined tags to define where LoginRadiu
 
 #### Placeholder Tags
 
-* **#Name#**:
-* **#GUID#**:
-* **#Url#**:
-* **#Providers#**:
-* **#Email#**:
-* **#FirstName#**:
-* **#LastName#**:
-* **#IpAddress#**:
-* **#UserAgent#**:
+These tags are used to define where LoginRadius retrieved data will appear in your email.
+
+* **#Name#**: The consumer's name as defined in your registration form.
+* **#GUID#**: The token used by LoginRadius to identify the consumer's email verification/forgot password request. This should typically be appended to the query parameter `vtoken`.
+* **#Url#**:  The URL used to receive email verification and forgot password requests. This will be the URL of your IDX Auth Page by default. This can be modified by passing an alternate URL in the relevant API endpoints.
+* **#Providers#**: The name of the social provider (if any) which the consumer logged in with.
+* **#Email#**: The consumer's email address used to register their account.
+* **#FirstName#**: The consumer's first name as defined in your registration form.
+* **#LastName#**: The consumer's last name as defined in your registration form.
+* **#IpAddress#**: The IP address of the consumer.
+* **#UserAgent#**: The browser information of the consumer.
 
 #### Section Tags
 
-* **#FPass**:
-* **#FProv**:
+These tags are specific to the **Forgot Password** email template. The text defined inside each tag will appear in forgot password emails depending on the consumer's login method.
+
+* **#FPass \<Content\> FPass#**: This tag defines a section that will appear in cases where the consumer has signed up using a traditional Email and Password. This section will typically be used with the **#Url#** and **#GUID#** placeholder tags to display a link for the consumer to reset their password.
+* **#FProv \<Content\> FProv#**: This tag defines a section that will appear in cases where the consumer has signed up using a social provider. This section will typically be used with the **#Providers#** placeholder tag to inform the consumer as to which social provider they used to register with.
 
 To save your changes, click the **Save** button.
 
