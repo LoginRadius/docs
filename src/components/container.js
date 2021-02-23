@@ -80,7 +80,7 @@ const Middle = () => {
             <h3 className="title">Single Page App</h3>
             <ul>
               <li>
-                <Link to="/get-started-react">
+                <Link to="/tutorial/react">
                   <img src="images/react.svg" width={20} />
                   <span>React</span>
                 </Link>
@@ -106,7 +106,7 @@ const Middle = () => {
             <h3 className="title">Web Apps</h3>
             <ul>
               <li>
-                <Link to="/get-started-node-js">
+                <Link to="/tutorial/tutorial/node-js">
                   <img src="images/node-dot-js.svg" width={20} />
                   <span>NodeJs</span>
                 </Link>
@@ -127,7 +127,7 @@ const Middle = () => {
             <PopUp
               data={[
                 {
-                  link: "/get-started-node-js",
+                  link: "/tutorial/node-js",
                   icon: "images/node-dot-js.svg",
                   text: "Node.js",
                 },
@@ -142,17 +142,17 @@ const Middle = () => {
                   text: "JAVA",
                 },
                 {
-                  link: "/get-started-dotnet-webforms",
+                  link: "/tutorial/dotnet-webforms",
                   icon: "images/node-dot-js.svg",
                   text: "ASP.NET Web Forms",
                 },
                 {
-                  link: "/get-started-dotnetcore-razor",
+                  link: "/tutorial/dotnetcore-razor",
                   icon: "images/php.svg",
                   text: "ASP.NET Core Razor Pages",
                 },
                 {
-                  link: "/get-started-dotnetcore-mvc",
+                  link: "/tutorial/dotnetcore-mvc",
                   icon: "images/java.svg",
                   text: "ASP.NET Core MVC",
                 },
@@ -166,13 +166,13 @@ const Middle = () => {
             <h3 className="title">Mobile Apps</h3>
             <ul>
               <li>
-                <Link to="/get-started-android">
+                <Link to="/tutorial/android">
                   <img src="images/android.svg" width={20} />
                   <span>Android</span>
                 </Link>
               </li>
               <li>
-                <Link to="/get-started-ios">
+                <Link to="/tutorial/ios">
                   <img src="images/ios.svg" width={20} />
                   <span>iOS</span>
                 </Link>
@@ -235,7 +235,7 @@ const Middle = () => {
                 <a href="#">Email/Password Login</a>
               </li>
               <li>
-                <Link to="/guide-social-login">
+                <Link to="/guide/social-login">
                   <span>Social Login</span>
                 </Link>
               </li>
