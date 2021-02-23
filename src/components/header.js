@@ -93,7 +93,7 @@ export default class Header extends Component {
               Login
             </a>
             <a href="#" className="btn btn-primary">
-              Sign up for free
+              Free Sign Up
             </a>
           </div>
         </div>

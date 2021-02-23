@@ -10,19 +10,20 @@ const Middle = () => {
       <section className="hero py-72">
         <div className="grid-50 d-flex align-items-center">
           <div>
-            <h1>Identity Platform Documents</h1>
+            <h1>LoginRadius Documentation</h1>
             <p>
-              Learn how to implement the LoginRadius Identity Platform for your
-              application. Get the comprehensive guide including quick-starts,
-              implementation tutorials, example code, features and more.
+              Your quest to implement the best User Authentication, Single
+              Sign-On (SSO), and Secure Access has come to an end with
+              LoginRadius! Be it Web and Mobile Application or Smart and IoT
+              device based Apps, you can use LoginRadius solution everywhere.
             </p>
             <p>
-              You can find everything from SDKs in your favorite languages to
-              APIs and sample demos using various technologies.
+              On top of that, you can easily extend Authentication and User Data
+              to third-party applications using 30+ Integration options.
             </p>
             <div className="btn-group">
               <a href="#" className="btn btn-primary">
-                Try 5 minute Setup Guide
+                Try 5 Minute Setup Guide
               </a>
               <a href="#" className="btn btn-outline">
                 Curious How It Works?
@@ -37,7 +38,7 @@ const Middle = () => {
                 </div>
                 <div className="info">
                   <p className="title">
-                    Create your account <span>(it’s free)</span>
+                    Create Your Account <span>(it’s free)</span>
                   </p>
                 </div>
               </div>
@@ -65,9 +66,10 @@ const Middle = () => {
       {/*Tutorials section*/}
       <section className="tutorials py-72">
         <div className="section-header">
-          <h2>Tutorials</h2>
+          <h2>Ready To Start Building?</h2>
           <p>
-            Explore our code and resources to get started in just a few minutes
+            Choose your application type and implement authentication in a few
+            minutes
           </p>
         </div>
         <div className="grid-25">
@@ -215,10 +217,10 @@ const Middle = () => {
       {/*Section Recommended Resources*/}
       <section className="resources py-72">
         <div className="section-header">
-          <h2>Recommended Resources</h2>
+          <h2>Got Questions?</h2>
           <p>
-            Try our hands-on approach based guides to arrive at your goals
-            faster
+            Find common use cases and answers to your how-to and next-step
+            questions
           </p>
         </div>
         <div className="grid-50">
@@ -233,7 +235,9 @@ const Middle = () => {
                 <a href="#">Email/Password Login</a>
               </li>
               <li>
-                <a href="#">Social Login</a>
+                <Link to="/guide-social-login">
+                  <span>Social Login</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Phone Login</a>
@@ -371,8 +375,8 @@ const Middle = () => {
         <div className="section-header">
           <h2>Comprehensive Resources</h2>
           <p>
-            Check out concepts, SDKs, and APIs to extensively use LoginRadius
-            Identity Platform
+            Understand LoginRadius Identity Platform concepts, and work with
+            SDKs and APIs
           </p>
         </div>
         <div className="grid-50">
