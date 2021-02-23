@@ -87,14 +87,14 @@ export default class Header extends Component {
                 ) : null}
               </form>
             </div>
-          </div>
-          <div className="authentication-buttons">
-            <a href="#" className="btn btn-secondary">
-              Login
-            </a>
-            <a href="#" className="btn btn-primary">
-              Free Sign Up
-            </a>
+            <div className="authentication-buttons">
+              <a href="#" className="btn btn-secondary">
+                Login
+              </a>
+              <a href="#" className="btn btn-primary">
+                Free Sign Up
+              </a>
+            </div>
           </div>
         </div>
       </header>
