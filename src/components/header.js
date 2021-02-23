@@ -54,14 +54,14 @@ export default class Header extends Component {
     return (
       <header>
         <div>
-          <div>
-            <div className="logo">
-              <Link to="/">
-                <img src={Logo} width="228" />
-              </Link>
-            </div>
+          <div className="logo">
+            <Link to="/">
+              <img src={Logo} width="228" />
+            </Link>
+          </div>
+          <div className="right-section">
             <div
-              className="search"
+              className="search "
               onMouseOver={() => (this._shouldClose = false)}
               onMouseLeave={() => (this._shouldClose = true)}
             >
@@ -116,7 +116,8 @@ export default class Header extends Component {
       query,
       // Query the index with search string to get an [] of IDs
       results: this.index
-        ? this.index.search(query, { expand: true })
+        ? this.index
+            .search(query, { expand: true })
             // Map over each ID and return the full document
             .map(({ ref }) => this.index.documentStore.getDoc(ref))
         : [],

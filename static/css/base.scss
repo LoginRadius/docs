@@ -180,7 +180,6 @@ input[type="button"] {
 section,
 header,
 footer {
-  overflow: hidden;
   & > div {
     margin: 0 auto;
     padding: 0 24px;
@@ -272,5 +271,44 @@ footer {
 .hide-mobile {
   @media (max-width: 768px) {
     display: none;
+  }
+}
+
+// code highlighter
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #e8e9ea !important;
+  padding: 4px !important;
+  border-radius: 4px !important;
+  font-family: $font-stack !important;
+  text-shadow: none !important;
+  color: $gray-dark !important;
+}
+
+.gatsby-highlight {
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: $blue-darkest !important;
+    border-radius: 4px !important;
+    padding: 20px !important;
+  }
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none !important;
+    color: #e8e9ea !important;
+    font-family: $font-stack !important;
+  }
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    background: transparent !important;
+  }
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    background-color: $blue-dark;
   }
 }

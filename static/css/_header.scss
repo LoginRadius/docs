@@ -13,6 +13,7 @@ header {
     flex-wrap: wrap;
     @media (max-width: 768px) {
       justify-content: center;
+      flex-direction: column;
     }
     & > div {
       display: flex;
@@ -23,7 +24,7 @@ header {
       }
     }
     .search {
-      margin-left: 2rem;
+      position: relative;
       @media (max-width: 768px) {
         margin-left: 0;
         margin-top: 24px;
@@ -56,11 +57,40 @@ header {
           }
         }
       }
+      ul {
+        position: absolute;
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+        border: 1px solid $gray-medium;
+        background-color: $white;
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        li {
+          padding: 0.6rem 0;
+          a {
+            color: $black;
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
     }
   }
   .authentication-buttons {
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       margin-top: 24px;
+    }
+  }
+  .right-section {
+    flex: 1 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      margin-left: 0;
+      width: 100%;
     }
   }
 }
