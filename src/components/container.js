@@ -106,7 +106,7 @@ const Middle = () => {
             <h3 className="title">Web Apps</h3>
             <ul>
               <li>
-                <Link to="/tutorial/tutorial/node-js">
+                <Link to="/tutorial/node-js">
                   <img src="images/node-dot-js.svg" width={20} />
                   <span>NodeJs</span>
                 </Link>

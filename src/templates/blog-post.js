@@ -10,7 +10,10 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
+  const pathArray = location.pathname.split("/")
+  const breadcrumbPath = pathArray
+    .map((e, i) => (e ? e + (i + 1 === pathArray.length ? "" : " > ") : ""))
+    .join(" ")
   return (
     <div className="global-wrapper">
       <div id="root">
@@ -34,7 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
                       <span className="icon">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="ionicon"
+                          className="ionicon"
                           viewBox="0 0 512 512"
                         >
                           <title>Logo Stackoverflow</title>
@@ -49,6 +52,7 @@ const BlogPostTemplate = ({ data, location }) => {
                   </ul>
                 </div>
               </div>
+              {/* {breadcrumbPath} */}
               <div
                 className="content"
                 dangerouslySetInnerHTML={{ __html: post.html }}
