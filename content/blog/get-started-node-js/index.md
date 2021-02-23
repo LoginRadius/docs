@@ -12,7 +12,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Node.Js? Check out [this reference](https://nodejs.org/en/about/).
 
-Watch the video to get started, or refer to the section below for the text-based guide.
+Watch this video to get started, or refer to the section below for the text-based guide.
 
 <figure class="video_container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/efM46qNSaeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
@@ -31,7 +31,9 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
+To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
+
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
 
 ## Get Credentials
 
@@ -41,19 +43,19 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
-## Node JS Implementation
+## Setup Node.js 
 
-Here we are using the express framework to create Node.js API. Perform the following steps:
+This implementation uses the express framework to create Node.js API.
 
-- Create a node project by running following command in the command line:
+- Create a node project by running the following command in the command line:
 
   `npm init`
 
-  Upon completion, it will add a `package.json` file in the project folder.
+  > Upon completion, it will add a `package.json` file in the project folder.
 
-- Create a server file in project and name it `server.js`.
+- Create a server file in the project and name it `server.js`.
 
-- Add the following snippet in the `server.js`.
+- Add the following code snippet to the `server.js` file.
 
   ```
   var express = require('express');
@@ -65,13 +67,13 @@ Here we are using the express framework to create Node.js API. Perform the follo
     extended: true
   }));
 
-  // your LR api impl goes here
+  // your LR API implementation goes here
 
   app.listen(PORT, () => console.log('App can be accessed at localhost:' + PORT ));
 
   ```
 
-## SDK Installation
+## Install SDK
 
 Add project dependency and LoginRadius SDK using npm by running the following command in the command line:
 
@@ -81,7 +83,7 @@ Upon installation, you will find LoginRadius Node.js SDK under the node module. 
 
 ![alt_text](images/images4.png "image_tooltip")
 
-## Configuration
+## Configure Project
 
 Add the following config object in the `server.js` file:
 
@@ -104,7 +106,7 @@ var lrv2 = require('loginradius-sdk')(config);
 
 ```
 
-Replace the following placeholders in the above config object in `server.js`:
+Replace the placeholders in the above config object with the following values:
 
 - apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
 - apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
@@ -114,7 +116,7 @@ Replace the following placeholders in the above config object in `server.js`:
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
+> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -128,7 +130,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 
-- **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
+- **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
 - **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
@@ -141,7 +143,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 >
-> If return_url is frontend, then from that application, pass the token to backend node API (eg: http://localhost:3000). Otherwise use the path of the back end API as the return_url.
+> If return_url is of frontend, pass the token to backend node API (eg: http://localhost:3000) from the application. Or you can use the path of the back end API as the return_url.
 
 Add the following API snippet to `server.js`to get the user profile using the access token:
 
@@ -159,14 +161,14 @@ app.get('/', function(req, res) {
 
 ## Run and See Result
 
-- Run the API Server by executing the following command in command line:
+- Run the API Server by executing the following command in the command line:
   [`node server.js`]
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format. The following displays a sample json response:
+- Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
@@ -174,7 +176,7 @@ Similarly, you can implement more features using Node.js SDK.
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
-## Domain Whitelisting
+## Whitelist Domain
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
@@ -184,9 +186,9 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ## Explore Node.js Demo
 
-Check out our Node.js demo to know how you can implement various LoginRadius features using SDK and its functions.
+- **[Download Demo](/download/get-started-node-js.zip)** of the above-explained tutorial to support your implementation.
 
-**[Download Demo](/download/get-started-node-js.zip)** | **[Download Complete Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)** | **[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**
+- **[Refer to GitHub Demo](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**  to know how to implement various LoginRadius features using SDK Functions.
 
 ## Recommended Next Steps
 
