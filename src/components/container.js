@@ -232,7 +232,9 @@ const Middle = () => {
             <h3 className="title">Login Methods</h3>
             <ul>
               <li>
-                <a href="#">Email/Password Login</a>
+                <Link to="/guide/emailpassword-login">
+                  <span>Email/Password Login</span>
+                </Link>
               </li>
               <li>
                 <Link to="/guide/social-login">
