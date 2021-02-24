@@ -44,7 +44,7 @@ PM> Install-Package LoginRadiusSDK.NET
 
 ## Configuration
 
-Go to your `appsettings.json` file in your project, and add the following configurations:
+Go to your `appsettings.json` file in your project, and add the following object to your JSON configuration:
 
 ```json
 "loginradius": {
@@ -110,7 +110,9 @@ namespace MVCDemoApplication.Controllers
 We add the following view under `Views/Profile/Index.cshtml`.
 
 ```html
-@{ ViewData["Title"] = "Your LoginRadius Profile"; }
+@{
+    ViewData["Title"] = "Your LoginRadius Profile";
+}
 
 <h2>Your LoginRadius Profile</h2>
 

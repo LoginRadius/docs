@@ -42,7 +42,7 @@ PM> Install-Package LoginRadiusSDK.NET
 
 ## Configuration
 
-Go to your `appsettings.json` file in your project, and add the following configurations:
+Go to your `appsettings.json` file in your project, and add the following object to your JSON configuration:
 
 ```json
 "loginradius": {
@@ -91,8 +91,11 @@ Create a Profile Page to redirect to after authentication and add the view and p
 Add the following view under `/Pages/Profile.cshtml`.
 
 ```html
-@page @model RazorPagesDemoApplication.Pages.ProfileModel @{ ViewData["Title"] =
-"Your LoginRadius Profile"; }
+@page
+@model RazorPagesDemoApplication.Pages.ProfileModel
+@{
+  ViewData["Title"] = "Your LoginRadius Profile";
+}
 
 <h2>Your LoginRadius Profile</h2>
 
