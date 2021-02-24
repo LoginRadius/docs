@@ -49,7 +49,8 @@ Set up a Web Forms project as explained below:
 
 This tutorial uses JavaScript to make API calls to LoginRadius.
 
-- Download the LoginRadius HTML5 SDK from **[Github](https://github.com/LoginRadius/HTML5-SDK)**. You will find the SDK script file under `html5-sdk/lib`, as `LoginRadiusV2SDK.x.x.x.js`, or the minified version as `LoginRadiusV2SDK.x.x.x.min.js`.
+- Download the LoginRadius HTML5 SDK from **[Github](https://github.com/LoginRadius/HTML5-SDK)**. You will find the SDK script file `LoginRadiusV2SDK.x.x.x.js` or `LoginRadiusV2SDK.x.x.x.min.js` (minified version) under `html5-sdk/lib`.
+
 - Save the SDK script in your project's directory. In this example, we've saved it in our project's `Scripts` folder like:
 
   ![alt_text](images/scripts.png "image_tooltip")
