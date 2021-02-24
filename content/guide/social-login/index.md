@@ -40,8 +40,6 @@ Watch this video for step by step information, or refer to the section below for
 2. Perform each step and click the **Next** button to go to the next step.
 The steps for configuring each social provider will be different and displayed after selecting the respective social provider.
 
-   ![alt_text](./images/configuresocial.png "image_tooltip")
-
 
 3. Upon completing the selected Social ID Provider’s configuration steps, you will get the credentials, you will get the credentails. Save these credentials and then click the **Take Me To Setup** from the guide’s right corner.
 
