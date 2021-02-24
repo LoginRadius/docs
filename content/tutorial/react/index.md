@@ -1,12 +1,12 @@
 ---
 title: "Get started with React"
 tags: ["React", "GetStarted"]
-description: "This is a tutorial with IDX and React basic implmentation."
+description: "This is a tutorial with IDX and React basic implementation."
 ---
 
 # Get Started - React.js
 
-The tutorial lets you implement LoginRadius user registration, login and view profile on your React.js based application.
+The tutorial lets you implement LoginRadius user registration, login, and view profile on your React.js based application.
 
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
@@ -20,7 +20,9 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
+To preview your login page's theme, click the **Go to your Login Page** link highlighted on the above screen. 
+
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).
 
 ## Get Credentials
 
@@ -30,9 +32,9 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
-## React JS Implementation
+## Setup React JS
 
-For this example, we will be using a sample app based on the Create React App boilerplate. For directions on how to use Create React App, you can reference [here.](https://reactjs.org/docs/create-a-new-react-app.html)
+This example uses a sample app based on the Create React App (CRA) boilerplate. For directions on how to Create React App, you can reference [here.](https://reactjs.org/docs/create-a-new-react-app.html)
 
 Once the CRA boilerplate is set up, follow these steps:
 
@@ -70,7 +72,7 @@ Once the CRA boilerplate is set up, follow these steps:
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
+> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -84,10 +86,12 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 
-- **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
+- **LoginRadius App Name** is the name of your app as mentioned in [Get Credential](#get-credentials) step.
 - **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
+>
+> For this tutorial, set the `return_url` to point to the `/login` subdomain of your application. For example, in the local React instance, it can point to `http://localhost:3000/login`. This way, after logging in through the Auth Page (IDX) Login page, it will redirect the user to the Login component implemented in below [step](#retrieve-user-data-using-access-token).
 
 ## Retrieve User Data using Access Token
 
@@ -183,9 +187,8 @@ Navigate your Register or Login links or buttons to the following URLs:
   ```
 
 - Replace the following placeholder in the above code:
-  {{YOUR API KEY}} : API Key obtained in the [Get Credentials](#get-credentials) step.
+  {{YOUR API KEY}}: API Key obtained in the [Get Credentials](#get-credentials) step.
 
-- Once the `Login` component is implemented. Set the `return_url` to point to the `/login` subdomain of your application. For example, in the local React instance, it can point to `http://localhost:3000/login`. This way, after logging in through the Auth Page (IDX) Login page, your user will be redirected to the Login component that we just implemented.
 
 ## Run and See Result
 
@@ -199,13 +202,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format displayed in the "/login" route. The following displays a sample json response:
+- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in JSON format displayed in the "/login" route. The following displays a sample JSON response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
-## Domain Whitelisting
+## Whitelist Domain
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
