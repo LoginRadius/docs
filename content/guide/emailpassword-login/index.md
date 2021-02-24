@@ -1,14 +1,14 @@
 ---
-title: "Manage Email/Password Login"
+title: "Customize Email for Email/Password Login"
 tags: ["Login"]
-description: "This is a guide for managing the Email and Password login option in LoginRadius."
+description: "This is a guide for managing the email content for Email and Password login option in LoginRadius."
 ---
 
-# Manage Email and Password Login
+# Customize Email for Email/Password Login
 
 The LoginRadius Identity Platform provides Email and Password as the default registration and login option. This guide explains how to configure the content of emails that LoginRadius sends to your consumers using the LoginRadius Dashboard.
 
-Watch the video or refer to the section below for the text-based guide.
+Watch this video step by step information, or refer to the section below for the text-based guide.
 
 ---
 
@@ -25,7 +25,7 @@ Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboa
 
 ### Step 2
 
-Click the down caret, or anywhere within the section to expand it. The **Add a Login Method** screen will appear:
+Click the down caret, and the **Add a Login Method** screen will appear:
 
 ![alt_text](images/configuration.png "image_tooltip")
 
@@ -41,13 +41,9 @@ When certain events related to the Email/Password Login Method occur, LoginRadiu
 
 ![alt_text](images/templates.png "image_tooltip")
 
-#### Verification Email
+* **Verification Email**: The Verification Email is sent to your consumer when they first register on your application. This email contains a link that will need to be clicked to verify their email address.
 
-The Verification Email is sent to your consumer when they first register on your application. This email contains a link that will need to be clicked to verify their email address.
-
-#### Forgot Password Email
-
-The Forgot Password Email is sent to your consumer when they request to reset their password. This email contains a link that will need to be clicked to reset their password.
+* **Forgot Password Email**: The Forgot Password Email is sent to your consumer when they request to reset their password. This email contains a link that will need to be clicked to reset their password.
 
 ### Step 4
 
@@ -66,32 +62,35 @@ These actions are available in the action bar highlighted in the image below:
 When editing a template, you can update the following:
 
 * **SUBJECT**: The subject line of the template.
-* **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. The [Placeholder](#placeholder-tags) and [Section](#section-tags) tags can be used in the HTML Body.
+* **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) and [Section](#section-tags) tags in the HTML Body.
 * **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails.
 
-In your template, you can make use of predefined tags to define where LoginRadius data will appear in your email.
+In your template, you can use predefined tags to define where LoginRadius data will appear in your email. 
 
-#### Placeholder Tags
+To save your changes, click the **Save** button.
+
+## Placeholder Tags
 
 These tags are used to define where LoginRadius retrieved data will appear in your email.
 
 * **#Name#**: The consumer's name as defined in your registration form.
-* **#GUID#**: The token used by LoginRadius to identify the consumer's email verification/forgot password request. This should typically be appended to the query parameter `vtoken`.
-* **#Url#**:  The URL used to receive email verification and forgot password requests. This will be the URL of your IDX Auth Page by default. This can be modified by passing an alternate URL in the relevant API endpoints.
-* **#Providers#**: The name of the social provider (if any) which the consumer logged in with.
+* **#GUID#**: The token used by LoginRadius to identify the consumer's email verification/forgot password request. You should typically append it to the query parameter `vtoken`.
+* **#Url#**:  The URL used to receive email verification and forgot password requests. This will be the URL of your IDX Auth Page by default. You can modify this by passing an alternate URL in the relevant API endpoints.
+* **#Providers#**: The name of the social provider (if any) using which the consumer logged in.
 * **#Email#**: The consumer's email address used to register their account.
 * **#FirstName#**: The consumer's first name as defined in your registration form.
 * **#LastName#**: The consumer's last name as defined in your registration form.
 * **#IpAddress#**: The IP address of the consumer.
 * **#UserAgent#**: The browser information of the consumer.
 
-#### Section Tags
+## Section Tags
 
 These tags are specific to the **Forgot Password** email template. The text defined inside each tag will appear in forgot password emails depending on the consumer's login method.
 
-* **#FPass \<Content\> FPass#**: This tag defines a section that will appear in cases where the consumer has signed up using a traditional Email and Password. This section will typically be used with the **#Url#** and **#GUID#** placeholder tags to display a link for the consumer to reset their password.
-* **#FProv \<Content\> FProv#**: This tag defines a section that will appear in cases where the consumer has signed up using a social provider. This section will typically be used with the **#Providers#** placeholder tag to inform the consumer as to which social provider they used to register with.
+* **#FPass \<Content\> FPass#**: This tag defines a section that will appear in cases where the consumer has signed up using a traditional Email and Password. You should typically use this section with the **#Url#** and **#GUID#** placeholder tags to display a link for the consumer to reset their password.
 
-To save your changes, click the **Save** button.
+* **#FProv \<Content\> FProv#**: This tag defines a section that will appear in cases where the consumer has signed up using a social provider. You should typically use this section with the **#Providers#** placeholder tag to inform the consumer  about the social provider they used for registration.
+
+
 
 ## Recommended Next Steps
