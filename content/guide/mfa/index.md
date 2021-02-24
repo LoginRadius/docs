@@ -34,7 +34,7 @@ To access the respective SMS template, click the down arrow available next to th
 
 ![alt_text](/images/onetimepasscode.png "image_tooltip")
 
-### [](#two-factor-authentication-sms-template)Two Factor Authentication SMS Template
+## [](#two-factor-authentication-sms-template)Two Factor Authentication SMS Template
 
 Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.
 

@@ -360,7 +360,7 @@ const Middle = () => {
                 <a href="#"> Set Strong Password policy</a>
               </li>
               <li>
-                <Link to='/blog/mfa'> Multi Factor Authentication</Link>
+                <Link to='/guide/mfa'> Multi Factor Authentication</Link>
               </li>
               <li>
                 <a href="#"> Change Session Lifetime </a>
