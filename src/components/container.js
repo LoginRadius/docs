@@ -242,7 +242,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Phone Login</a>
+                <Link to="/guide/phone-login">
+                  <span>Phone Login</span>
+                </Link>
               </li>
               <li>
                 <Link to="/guide/passwordless-login">
