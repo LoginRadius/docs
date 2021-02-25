@@ -245,7 +245,9 @@ const Middle = () => {
                 <a href="#">Phone Login</a>
               </li>
               <li>
-                <a href="#">Passwordless Login</a>
+                <Link to="/guide/passwordless-login">
+                  <span>Passwordless Login</span>
+                </Link>
               </li>
             </ul>
           </div>
