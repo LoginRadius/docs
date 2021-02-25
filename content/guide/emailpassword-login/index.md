@@ -6,7 +6,7 @@ description: "This is a guide for managing the email content for Email and Passw
 
 # Customize Email for Email/Password Login
 
-The LoginRadius Identity Platform provides Email and Password as the default registration and login option. This guide explains how to configure the content of emails that LoginRadius sends to your consumers using the LoginRadius Dashboard.
+The LoginRadius Identity Platform provides Email and Password as the default registration and login method. This guide explains how to configure the content of emails that LoginRadius sends to your consumers using the LoginRadius Dashboard.
 
 Watch this video step by step information, or refer to the section below for the text-based guide.
 
@@ -27,9 +27,9 @@ Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboa
 
 Click the down caret, and the **Add a Login Method** screen will appear:
 
-![alt_text](images/configuration.png "image_tooltip")
+![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
-In the above screen, you will see that the Email/Password option is enabled by default for your application.
+In the above screen, you will see that the Email/Password method is enabled by default for your application.
 
 ### Step 3
 
@@ -63,7 +63,7 @@ When editing a template, you can update the following:
 
 * **SUBJECT**: The subject line of the template.
 * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) and [Section](#section-tags) tags in the HTML Body.
-* **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails.
+* **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) and [Section](#section-tags) tags in the Text Body.
 
 In your template, you can use predefined tags to define where LoginRadius data will appear in your email. 
 
