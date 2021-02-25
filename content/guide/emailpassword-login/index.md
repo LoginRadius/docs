@@ -19,21 +19,19 @@ Watch this video step by step information, or refer to the section below for the
 
 ## Configuration
 
-### Step 1
+### Step 1: Choose Login Method
 
-Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
 
-### Step 2
-
-Click the down caret, and the **Add a Login Method** screen will appear:
+2. Click the down caret, and the **Add a Login Method** screen will appear:
 
 ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
 In the above screen, you will see that the Email/Password method is enabled by default for your application.
 
-### Step 3
+### Step 2: Configure Email Templates
 
-Click the **Edit** icon given next to the Email/Password provider, as highlighted in the screen below:
+1. Click the **Edit** icon given next to the Email/Password provider, as highlighted in the screen below:
 
 ![alt_text](images/edit-template.png "image_tooltip")
 
@@ -45,9 +43,7 @@ When certain events related to the Email/Password Login Method occur, LoginRadiu
 
 * **Forgot Password Email**: The Forgot Password Email is sent to your consumer when they request to reset their password. This email contains a link that will need to be clicked to reset their password.
 
-### Step 4
-
-With an email template type selected, you can perform the following actions:
+4. With an email template type selected, you can perform the following actions:
 
 * Edit template content.
 * Reset the template to its default content.
@@ -57,9 +53,7 @@ These actions are available in the action bar highlighted in the image below:
 
 ![alt_text](images/template-action-bar.png "image_tooltip")
 
-### Step 5
-
-When editing a template, you can update the following:
+5. When editing a template, you can update the following:
 
 * **SUBJECT**: The subject line of the template.
 * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) and [Section](#section-tags) tags in the HTML Body.
@@ -90,7 +84,3 @@ These tags are specific to the **Forgot Password** email template. The text defi
 * **#FPass \<Content\> FPass#**: This tag defines a section that will appear in cases where the consumer has signed up using a traditional Email and Password. You should typically use this section with the **#Url#** and **#GUID#** placeholder tags to display a link for the consumer to reset their password.
 
 * **#FProv \<Content\> FProv#**: This tag defines a section that will appear in cases where the consumer has signed up using a social provider. You should typically use this section with the **#Providers#** placeholder tag to inform the consumer  about the social provider they used for registration.
-
-
-
-## Recommended Next Steps

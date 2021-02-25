@@ -20,15 +20,13 @@ You can implement the Passwordless Login method in two following ways:
 
 ## Configuration
 
-### Step 1
+### Step 1: Choose Login Method
 
-[LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
 
 ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
-### Step 2
-
-To enable the Passwordless Login method for your application, click the **Add Method** dropdown, and select the **Passwordless Login** method.
+2. To enable the Passwordless Login method for your application, click the **Add Method** dropdown, and select the **Passwordless Login** method.
 
 > Note: You will need to be subscribed to the Developer Premium plan in order to enable this login method.
 
@@ -36,9 +34,9 @@ To enable the Passwordless Login method for your application, click the **Add Me
 
 When the login method is successfully enabled, you will see it listed in your table of login methods.
 
-### Step 3
+### Step 2: Configure Passwordless Login Templates
 
-Similarly to the Email/Password and Phone login method, you can perform the following actions:
+1. Similarly to the Email/Password and Phone login method, you can perform the following actions:
 
 * Edit templates associated to this login method.
 
@@ -48,15 +46,11 @@ These actions are available in the action bar highlighted in the image below:
 
 ![alt_text](images/passwordless-method-actions.png "image_tooltip")
 
-### Step 4
-
-To edit the templates used for the Passwordless Login method, click the **Edit** icon given in the action bar highlighted in the previous step. Each template corresponds to one of the two ways that the Passwordless Login method can be implemented.
+2. To edit the templates used for the Passwordless Login method, click the **Edit** icon given in the action bar highlighted in the previous step. Each template corresponds to one of the two ways that the Passwordless Login method can be implemented.
 
 ![alt_text](images/passwordless-templates.png "image_tooltip")
 
-### Step 5
-
-With a Passwordless Login template type selected, you can perform the following actions:
+3. With a Passwordless Login template type selected, you can perform the following actions:
 
 * Edit template content.
 
@@ -66,9 +60,7 @@ These actions are available in the action bar highlighted in the image below:
 
 ![alt_text](images/passwordless-template-edit.png "image_tooltip")
 
-### Step 5
-
-When editing the **Passwordless Login with OTP** template, you can update the following:
+4. When editing the **Passwordless Login with OTP** template, you can update the following:
 
 * **SMS CONTENT**: The plain text template. You can use [Placeholder](#placeholder-tags) tags in the SMS Content Body.
 
@@ -80,7 +72,7 @@ When editing the **Passwordless Login with Email** template, you can update the 
 
 In your template, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your email.
 
-### Step 6
+### Step 3: Check Auth Page (IDX)
 
 To verify that the Passwordless Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. You should see the following login options available:
 
