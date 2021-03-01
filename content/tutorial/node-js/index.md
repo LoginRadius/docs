@@ -47,15 +47,15 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 This implementation uses the express framework to create Node.js API.
 
-- Create a node project by running the following command in the command line:
+* Create a node project by running the following command in the command line:
 
   `npm init`
 
   > Upon completion, it will add a `package.json` file in the project folder.
 
-- Create a server file in the project and name it `server.js`.
+* Create a server file in the project and name it `server.js`.
 
-- Add the following code snippet to the `server.js` file.
+* Add the following code snippet to the `server.js` file.
 
   ```
   var express = require('express');
@@ -108,9 +108,9 @@ var lrv2 = require('loginradius-sdk')(config);
 
 Replace the placeholders in the above config object with the following values:
 
-- apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
-- apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
-- siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
+* apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
+* apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
+* siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 > Pass the proxy configurations if you want to set HTTP Server Proxy Configuration through your Node.js SDK. In this case, host and port are required, while username and password are optional.
 
@@ -130,8 +130,8 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 
-- **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
+* **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
+* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
@@ -161,14 +161,14 @@ app.get('/', function(req, res) {
 
 ## Run and See Result
 
-- Run the API Server by executing the following command in the command line:
+* Run the API Server by executing the following command in the command line:
   [`node server.js`]
 
-- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+* Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
+* Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
@@ -186,9 +186,9 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ## Explore Node.js Demo
 
-- **[Download Demo](/download/get-started-node-js.zip)** of the above-explained tutorial to support your implementation.
+* **[Download Demo](/download/get-started-node-js.zip)** of the above-explained tutorial to support your implementation.
 
-- **[Refer to GitHub Demo](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**  to know how to implement various LoginRadius features using SDK Functions.
+* **[Refer to GitHub Demo](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**  to know how to implement various LoginRadius features using SDK Functions.
 
 ## Recommended Next Steps
 
