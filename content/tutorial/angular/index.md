@@ -1,6 +1,6 @@
 # Get Started - Angular
 
-The tutorial lets you implement LoginRadius user registration, login and view profile on your Angular application. 
+The tutorial lets you implement LoginRadius user registration, login, and view profile on your Angular application. 
 
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
@@ -11,13 +11,15 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to to select a design theme for your login page, or further customize the content displayed:
+In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
 
 
-To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
+To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
+
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).
 
 
 ## Get Credentials
@@ -31,11 +33,12 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 
-## Angular Implementation
+## Setup Angular 
 
-For this example, we will create a sample Angular application based on the Angular official tutorial. A shortened version of the process will be provided below, and for more information, please visit the [Angular Documentation page.](https://angular.io/docs)
+This example uses a sample Angular application based on the Angular official tutorial. 
+A shortened version of the process is provided below, and for more information, visit the [Angular Documentation page.](https://angular.io/docs)
 
-- To install Angular CLI tool, run:
+- To install the Angular CLI tool, run the following command:
 
   `npm install -g @angular/cli`
 
@@ -43,9 +46,9 @@ For this example, we will create a sample Angular application based on the Angul
 
   `ng new lr-demo-application --routing`
 
-  This will create a new application in the current folder named `lr-demo-application`, as well as enable Routing, which will be important for this tutorial.
+  This will create a new (sample) application in the current folder named `lr-demo-application`, and enable Routing, which is important for this tutorial.
 
-- At this point, the sample application has been generated. We will remove the placeholder landing page so it is less cluttered so we can see the data in later steps more easily. From the project root, navigate to `src/app/app.component.html` and modify the content to be as follows:
+- Remove the placeholder landing page so it is less cluttered, and we can see the data in later steps more easily. From the project root, navigate to `src/app/app.component.html` and modify the content to be as follows:
 
   ```HTML
   <style>
@@ -62,7 +65,7 @@ For this example, we will create a sample Angular application based on the Angul
 
 ## Configure Registration and Login URLs
 
-> In this tutorial, we are using Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
+> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -75,7 +78,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
 
 **Where:**
-- **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
+- **LoginRadius App Name** is the name of your app as mentioned in [Get Credentials](#get-credentials) step.
 - **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 
@@ -90,11 +93,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > Point return_url to a route in your Angular application to capture the access token and retrieve the user profile data.
 
-- From the Angular application, we will implement a new Login components to capture the access token and fetch user data accordingly. Start by using Angular CLI to generate a new `login` component. From the project root folder, run:
+- From the Angular application, we will implement a new Login component to capture the access token and fetch user data accordingly. Start by using Angular CLI to generate a new `login` component. From the project root folder, run the following command:
 
   `ng generate component login`
 
-- A new folder and default files will be generated for Login component. We can proceed to register the new component with the app. Navigate to `src\app\app.module.ts` and update the content as follows:
+  > A new folder and default files will be generated for Login component. We can proceed to register the new component with the app. 
+
+- Navigate to `src\app\app.module.ts` and update the content as follows:
 
   ```JavaScript
   import { NgModule } from '@angular/core';
@@ -119,7 +124,7 @@ Navigate your Register or Login links or buttons to the following URLs:
   export class AppModule { }
   ```
 
-- Then navigate to `src\app\app-routing.module.ts` and update content as follows:
+- Navigate to `src\app\app-routing.module.ts` and update content as follows:
 
   ```JavaScript
   import { NgModule } from '@angular/core';
@@ -136,8 +141,9 @@ Navigate your Register or Login links or buttons to the following URLs:
   })
   export class AppRoutingModule { }
   ```
+  > From here, we can proceed to implement the Login component view and logic. 
 
-- From there we can proceed to implementing the Login component view and logic. Navigate to `src\app\login\login.component.html` and update the content as follows:
+- Navigate to `src\app\login\login.component.html` and update the content as follows:
 
   ```HTML
   <style>
@@ -155,7 +161,7 @@ Navigate your Register or Login links or buttons to the following URLs:
   </div>
   ```
 
-- After that, update `src\app\login\login.component.ts`:
+- Update `src\app\login\login.component.ts`with the following snippet:
 
   ```JavaScript
   import { Component, OnInit } from '@angular/core';
@@ -206,7 +212,7 @@ Navigate your Register or Login links or buttons to the following URLs:
   {{YOUR API KEY}} : API Key obtained in the [Get Credentials](#get-credentials) step.
 
 
-- Once the `Login` component is implemented. Set the `return_url` to point to the `/login` subdomain of your application. For example, in the local Angular instance, it can point to `http://localhost:4200/login`. This way, after logging in through the Auth Page (IDX) Login page, your user will be redirected to the Login component that we just implemented.
+- Once the `Login` component is implemented. Set the `return_url` to point to the `/login` subdomain of your application. For example, in the local Angular instance, it can point to `http://localhost:4200/login`. This way, after logging in through the Auth Page (IDX), your user will be redirected to the Login component that we just implemented.
 
 ## Run and See Result
 
@@ -220,13 +226,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in json format displayed in the "/login" route. The following displays a sample json response:
+- Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in the JSON format displayed in the "/login" route. The following displays a sample JSON response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
-##  Domain Whitelisting
+##  Whitelist Domain
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
 
