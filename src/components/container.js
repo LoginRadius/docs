@@ -262,7 +262,9 @@ const Middle = () => {
             <h3 className="title">User Management Options</h3>
             <ul>
               <li>
-                <a href="#">Mange Users</a>
+                <Link to="/guide/manage-users">
+                  <span>Manage Users</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Migrate User Data</a>
