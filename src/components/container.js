@@ -86,7 +86,7 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">
+                <a href="/tutorial/angular">
                   <img src="images/angular.svg" width={20} />
                   <span>Angular</span>
                 </a>
