@@ -370,7 +370,7 @@ const Middle = () => {
                 <Link to='/guide/change-session-lifetime'> Change Session Lifetime </Link>
               </li>
               <li>
-                <a href="#">Enable Force Logout</a>
+                <Link to='guide/enable-force-logout'>Enable Force Logout</Link>
               </li>
             </ul>
           </div>
