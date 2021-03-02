@@ -57,18 +57,18 @@ bundle install
 
 ## Configuration
 
-Create `application.yml` in config folder of your project.
+Add `Figaro` for secure environment variables by this line to your application's Gemfile:
 
-Add the following code in `config/application.yml` to define global constant:
+```
+gem "figaro" 
+```
 
+Run `bundle exec figaro install`, then configure the generated `/config/application.yml` file
 ```
 
 SITE_NAME: "<App Name>"
 API_KEY: "<API Key>"
 API_SECRET: "<API Secret>"
-CUSTOM_API_DOMAIN: "<custom-domain-url-if-any>"
-API_REQUEST_SIGNING: "false"
-
 
 ```
 
@@ -84,8 +84,6 @@ Now create `login_radius.rb` in `/config/initializers` to instantiate the module
 require 'login_radius'
 
 ::AuthenticationApi = LoginRadius::AuthenticationApi.new
-::AccountApi = LoginRadius::AccountApi.new
-
 ```
 
 ## Configure Registration and Login URL
@@ -119,7 +117,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > If return_url is frontend, then from that application, pass the token to the backend ROR API. Otherwise use the path of the back end API as the return_url.
 
-Create `app/controllers/api/profile_controller.rb ` controller and add the method to retrieve user profile using the received access token:
+Create profile controller `app/controllers/api/profile_controller.rb `  and add the method to retrieve user profile using the received access token:
 
 ```
     def read_profile_by_access_token
@@ -162,7 +160,7 @@ end
 
 ## Run and See Result
 
-- Run the server using the following command in command line `bin/rails server`.
+- Run the server using the following command in command line `rails server`.
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
