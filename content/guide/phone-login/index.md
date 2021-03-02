@@ -8,7 +8,10 @@ description: "This is a guide for managing the Phone Login method in LoginRadius
 
 The LoginRadius Identity Platform provides the Phone Login method to enable your consumer to register and log in using their phone number. After registration, your consumer must verify their phone number via a one-time password (OTP) before logging in.
 
-> Note: The Passwordless Login method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP which they can use to log in without a password. The Phone Login method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login](../passwordless-login/index.md) document.
+During login, the consumer will need to provide both the Phone Number and Password. This guide explains how to configure Phone Login for your consumers.
+> Note: The **Passwordless Login** method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP, which they can use to log in without a password. 
+> 
+> The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login](../passwordless-login/index.md) document.
 
 ## Configuration
 
@@ -20,15 +23,15 @@ The LoginRadius Identity Platform provides the Phone Login method to enable your
 
 2. To enable the Phone Login method for your application, click the **Add Method** dropdown, and select the **Phone** login method.
 
-> Note: You will need to be subscribed to the Developer Premium plan to enable this login method.
+> Note: You will need to be subscribed to the **Developer Premium** plan to enable this login method.
 
 ![alt_text](images/add-phone-method.png "image_tooltip")
 
-When the login method is successfully enabled, you will see it listed in your table of login methods.
+When the login method is successfully enabled, you will see it listed in your login methods table.
 
 ### Step 2: Configure Phone Login Templates
 
-1. Similarly to the Email/Password Login and Passwordless Login methods, you can perform the following actions:
+1. Similarly to the [Email/Password Login](https://lr-developer-docs.netlify.app/guide/emailpassword-login) and [Passwordless Login](https://lr-developer-docs.netlify.app/guide/passwordless-login) methods, you can perform the following actions:
 
 * Edit templates associated with this login method.
 
@@ -63,7 +66,7 @@ These actions are available in the action bar highlighted in the image below:
 
 * **SMS CONTENT**: The plain text template.
 
-In your templates, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your SMS.
+In your templates, you can use predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your SMS.
 
 To save your changes, click the **Save** button.
 
@@ -80,6 +83,6 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 * **#Name#**: The consumer's name as defined in your registration form.
 * **#OTP#**: The OTP received in an SMS for verification purposes.
 * **#OTPExpiry#**: The expiration time of the OTP in seconds.
-* **#Email#**: The consumer's email address used to register their account.
+* **#Email#**: The consumer's email address is used to register their account.
 * **#FirstName#**: The consumer's first name as defined in your registration form.
 * **#LastName#**: The consumer's last name as defined in your registration form.
