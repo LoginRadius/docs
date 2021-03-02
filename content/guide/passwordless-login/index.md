@@ -8,6 +8,8 @@ description: "This is a guide for managing the Passwordless Login method in Logi
 
 The LoginRadius Identity Platform provides the Passwordless Login method to enable your consumers to log in without providing a password. Upon initiating a Passwordless Login, an OTP/link is sent to your consumer's registered phone number or email address. When the OTP/link is verified, the consumer will be logged into their account.
 
+This guide explains how to configure the Passwordless Login for your consumers.
+
 > Note: Your consumer will still need to register by providing a password. After registering, the consumer will have the option to log in without a password.
 
 You can implement the Passwordless Login method in two following ways:
@@ -24,53 +26,57 @@ You can implement the Passwordless Login method in two following ways:
 
 1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
 
-![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
-2. To enable the Passwordless Login method for your application, click the **Add Method** dropdown, and select the **Passwordless** login method.
+2. To enable the Passwordless Login method for your application, click the **Add Method** dropdown and select the **Passwordless** login method.
 
-> Note: You will need to be subscribed to the Developer Premium plan to enable this login method.
+   > Note: You will need to be subscribed to the **Developer Premium** plan to enable this login method.
 
-![alt_text](images/add-passwordless-method.png "image_tooltip")
+   ![alt_text](images/add-passwordless-method.png "image_tooltip")
 
-When the login method is successfully enabled, you will see it listed in your table of login methods.
+When the login method is successfully enabled, you will see it listed in your login methods table.
 
 ### Step 2: Configure Passwordless Login Templates
 
-1. Similarly to the Email/Password Login and Phone Login methods, you can perform the following actions:
+1. Similar to the [Email/Password Login](https://lr-developer-docs.netlify.app/guide/emailpassword-login/) and [Phone Login](https://lr-developer-docs.netlify.app/guide/phone-login) methods, you can perform the following actions:
 
-* Edit templates associated with this login method.
-* Delete the login method from your application.
+   * Edit templates associated with this login method.
+   * Delete the login method from your application.
 
-These actions are available in the action bar highlighted in the image below:
+   These actions are available in the action bar highlighted in the image below:
 
-![alt_text](images/passwordless-method-actions.png "image_tooltip")
+   ![alt_text](images/passwordless-method-actions.png "image_tooltip")
 
 2. To edit the templates used for the Passwordless Login method, click the **Edit** icon given in the action bar highlighted in the previous step. Each template corresponds to one of the two ways that the Passwordless Login method can be implemented.
 
-![alt_text](images/passwordless-templates.png "image_tooltip")
+   ![alt_text](images/passwordless-templates.png "image_tooltip")
 
 3. With a Passwordless Login template type selected, you can perform the following actions:
 
-* Edit template content.
-* Reset the template to its default content.
+   * Edit template content.
+   * Reset the template to its default content.
 
-These actions are available in the action bar highlighted in the image below:
+   These actions are available in the action bar highlighted in the image below:
 
-![alt_text](images/passwordless-template-edit.png "image_tooltip")
+   ![alt_text](images/passwordless-template-edit.png "image_tooltip")
 
 4. When editing the **Passwordless Login with OTP** template, you can update the following:
 
-* **SMS CONTENT**: The plain text template. You can use [Placeholder](#placeholder-tags) tags in the SMS Content Body.
+   * **SMS CONTENT**: The plain text template. You can use [Placeholder](#placeholder-tags) tags in the SMS Content Body.
 
-When editing the **Passwordless Login with Email** template, you can update the following:
 
-* **SUBJECT**: The subject line of the template.
-* **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body.
-* **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) tags in the Text Body.
+5. When editing the **Passwordless Login with Email** template, you can update the following:
 
-In your templates, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your email or SMS.
+   * **SUBJECT**: The subject line of the template.
+   * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body.
+   * **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) tags in the Text Body.
+   
 
-To save your changes, click the **Save** button.
+6. To save your changes, click the **Save** button.
+
+> In your templates, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your email or SMS.
+
+
 
 ### Step 3: Check Auth Page (IDX)
 
