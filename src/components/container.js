@@ -97,6 +97,12 @@ const Middle = () => {
                   <span>VueJs</span>
                 </a>
               </li>
+              <li>
+                <a href="/tutorial/html-and-js-tutorial">
+                  <img src="images/html5.svg" width={20} />
+                  <span>HTML and JS</span>
+                </a>
+              </li>
             </ul>
           </div>
           <div className="card">
@@ -334,7 +340,7 @@ const Middle = () => {
                 <a href="#"> Connect JWT App</a>
               </li>
               <li>
-                <a href="#"> Connect OAuth App</a>
+                <a href="/guide/oauth"> Connect OAuth App</a>
               </li>
               <li>
                 <a href="#">Connect OIDC App </a>
@@ -373,9 +379,7 @@ const Middle = () => {
               <li>
                 <Link to='guide/enable-force-logout'>Enable Force Logout</Link>
               </li>
-              <li>
-                <Link to="/guide/oauth">OAuth 2.0</Link>
-              </li>
+              
             </ul>
           </div>
           {/*Secure Authentication*/}
