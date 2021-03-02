@@ -18,7 +18,7 @@ You can implement the Passwordless Login method in two following ways:
 
 * **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
 
-> Note: If both Passwordless Login and [Two Factor Authentication (2FA)]() are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
+> Note: If both Passwordless Login and [Two Factor Authentication (2FA)](/guide/mfa) are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
 
 ## Configuration
 
@@ -38,7 +38,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 2: Configure Passwordless Login Templates
 
-1. Similar to the [Email/Password Login](https://lr-developer-docs.netlify.app/guide/emailpassword-login/) and [Phone Login](https://lr-developer-docs.netlify.app/guide/phone-login) methods, you can perform the following actions:
+1. Similar to the [Email/Password Login](/guide/emailpassword-login/) and [Phone Login](/guide/phone-login) methods, you can perform the following actions:
 
    * Edit templates associated with this login method.
    * Delete the login method from your application.

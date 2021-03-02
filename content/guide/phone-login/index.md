@@ -12,7 +12,7 @@ During login, the consumer will need to provide both the Phone Number and Passwo
 
 > Note: The **Passwordless Login** method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP, which they can use to log in without a password. 
 > 
-> The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login](../passwordless-login/index.md) document.
+> The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login](/guide/passwordless-login) document.
 
 ## Configuration
 
@@ -33,7 +33,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 2: Configure Phone Login Templates
 
-1. Similarly to the [Email/Password Login](https://lr-developer-docs.netlify.app/guide/emailpassword-login) and [Passwordless Login](https://lr-developer-docs.netlify.app/guide/passwordless-login) methods, you can perform the following actions:
+1. Similarly to the [Email/Password Login](/guide/emailpassword-login) and [Passwordless Login](/guide/passwordless-login) methods, you can perform the following actions:
 
    * Edit templates associated with this login method.
 

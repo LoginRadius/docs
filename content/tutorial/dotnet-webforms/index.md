@@ -21,7 +21,7 @@ In your LoginRadius Dashboard, navigate to the **Auth Page (IDX)** section locat
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-To preview your theme and content, click the **Go to your Login Page** link highlighted on the above screen. 
+To preview your theme and content, click the **Go to your Login Page** link as highlighted on the above screen. 
 
 > There are various features already configured on your Auth Page, such as Email and Password Login, User Registration, Forgot Password, and Remember Password.
 
