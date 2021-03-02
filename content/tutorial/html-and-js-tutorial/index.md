@@ -1,3 +1,8 @@
+---
+title: "Get started with HTML and JS"
+tags: ["HTML5", "CSS", "JS", "GetStarted"]
+description: "This is a tutorial with IDX and HTML5 SDK implementation."
+---
 # HTML AND JS Tutorial
 
 **HTML** is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. JavaScript is a programming language, it enables interactive web pages and is an essential part of web applications.
