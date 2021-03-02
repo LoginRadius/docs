@@ -25,3 +25,8 @@ var LRObject= new LoginRadiusV2(commonOptions);
 - Now, you can start the demo and play with the available features in it.
 
 > **Note :** You can edit the registration scheme from LoginRadius [Admin Console](https://adminconsole.loginradius.com/platform-configuration/authentication-configuration/standard-login/data-schema) and you can also configure social logins from [here](https://www.loginradius.com/docs/api/v2/customer-identity-api/social-login/getting-started/).
+
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
