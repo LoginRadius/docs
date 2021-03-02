@@ -16,7 +16,7 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to to select a design theme for your login page, or further customize the content displayed:
+In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
@@ -196,7 +196,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   `npm start`
 
-- Wait for the application to finish launching
+- Wait for the application to finish launching.
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost:3000/login`. It will display the following screen:
 
