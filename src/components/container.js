@@ -92,7 +92,7 @@ const Middle = () => {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/tutorial/vue">
                   <img src="images/vue-dot-js.svg" width={20} />
                   <span>VueJs</span>
                 </a>
