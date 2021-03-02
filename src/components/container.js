@@ -118,7 +118,7 @@ const Middle = () => {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/tutorial/java">
                   <img src="images/java.svg" width={20} />
                   <span>JAVA</span>
                 </a>
@@ -251,6 +251,7 @@ const Middle = () => {
                   <span>Passwordless Login</span>
                 </Link>
               </li>
+              
             </ul>
           </div>
           {/*Login Methods we offer*/}
@@ -371,6 +372,9 @@ const Middle = () => {
               </li>
               <li>
                 <Link to='guide/enable-force-logout'>Enable Force Logout</Link>
+              </li>
+              <li>
+                <Link to="/guide/oauth">OAuth 2.0</Link>
               </li>
             </ul>
           </div>
