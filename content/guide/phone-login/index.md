@@ -9,6 +9,7 @@ description: "This is a guide for managing the Phone Login method in LoginRadius
 The LoginRadius Identity Platform provides the Phone Login method to enable your consumer to register and log in using their phone number. After registration, your consumer must verify their phone number via a one-time password (OTP) before logging in.
 
 During login, the consumer will need to provide both the Phone Number and Password. This guide explains how to configure Phone Login for your consumers.
+
 > Note: The **Passwordless Login** method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP, which they can use to log in without a password. 
 > 
 > The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login](../passwordless-login/index.md) document.
@@ -83,6 +84,6 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 * **#Name#**: The consumer's name as defined in your registration form.
 * **#OTP#**: The OTP received in an SMS for verification purposes.
 * **#OTPExpiry#**: The expiration time of the OTP in seconds.
-* **#Email#**: The consumer's email address is used to register their account.
+* **#Email#**: The consumer's email address used to register their account.
 * **#FirstName#**: The consumer's first name as defined in your registration form.
 * **#LastName#**: The consumer's last name as defined in your registration form.
