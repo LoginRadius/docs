@@ -274,7 +274,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Migrate User Data</a>
+                <Link to="/guide/migrate-user-data">
+                  <span>Migrate User Data</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Manage Roles</a>
