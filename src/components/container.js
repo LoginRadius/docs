@@ -332,9 +332,7 @@ const Middle = () => {
             </div>
             <h3 className="title">Third Parties Integration</h3>
             <ul>
-              <li>
-                <a href="#">Setup Web Hooks </a>
-              </li>
+            <Link to='/guide/webhook'> Setup Web Hooks</Link>
               <li>
                 <a href="#">Connect SAML App </a>
               </li>
