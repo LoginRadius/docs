@@ -57,7 +57,7 @@ Trigger Method: POST
 
 Format:
 
-```
+```javascript
 {
    "HookName":"login",
    "Time":"2018-07-31T09:03:18Z",
@@ -95,7 +95,7 @@ The following is a sample script in .NET that can be used to generate a signatur
 Replace <LoginRadius API secret> with API secret for your LoginRadius site in the below code. Replace <Webhook payload body> with Webhook payload Body in string format The code will write the derived signature in the console.
 
 
-```
+```javascript
 using System;
 using System.Text;
 using System.Security.Cryptography;
@@ -137,7 +137,7 @@ Here is the sample for the Webhook payload header:
 All webhook request payload contains the configured webhook name, time at which the webhook triggered, webhook id, and information about the event associated with the webhook. The following is a sample payload body:
 
 
-```
+```javascript
 {
     "HookName": "<Web Hook Name>",
     "Time": "2019-06-11T20:27:56Z",
