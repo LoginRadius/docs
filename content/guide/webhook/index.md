@@ -131,7 +131,7 @@ All webhook POST request headers will contain the following fields: host, accept
 
 Here is the sample for the Webhook payload header:
 
- ![alt_text](./images/payload.png "image_tooltip")
+ ![alt_text](./images/webhookpayload.png "image_tooltip")
 
 ## Webhook Sample Payload Body
 All webhook request payload contains the configured webhook name, time at which the webhook triggered, webhook id, and information about the event associated with the webhook. The following is a sample payload body:
