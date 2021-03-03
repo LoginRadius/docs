@@ -356,7 +356,7 @@ const Middle = () => {
                 <a href="/guide/oauth"> Connect OAuth App</a>
               </li>
               <li>
-                <a href="#">Connect OIDC App </a>
+                <a href="/guide/oidc">Connect OIDC App </a>
               </li>
               <li>
                 <a href="#">Integrate BigCommerce</a>
