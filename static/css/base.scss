@@ -312,3 +312,11 @@ pre[class*="language-"] {
     background-color: $blue-dark;
   }
 }
+
+// main tag
+main {
+  padding-top: 100px;
+  @media (max-width: 768px) {
+    padding-top: 224px;
+  }
+}

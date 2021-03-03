@@ -2,16 +2,28 @@
   & > div {
     display: flex;
     flex-wrap: wrap;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
   }
   .sidebar {
     max-width: 280px;
     border-right: 1px solid $gray-light;
     padding-right: 24px;
+    @media (min-width: 769px) {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 100px;
+    }
     @media (max-width: 768px) {
       max-width: 100%;
       border-right: 0;
       padding-right: 0;
       width: 100%;
+      padding-bottom: 48px;
+      border-bottom: 1px solid $gray-light;
+      margin-bottom: 48px;
     }
     .headings {
       font-size: 0.75rem;
