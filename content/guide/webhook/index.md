@@ -19,7 +19,7 @@ Follow the below step by step information to configure webhook.
 ###Step 1: Visit Integration Section 
  login to your LoginRadius Dashboard account, from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
-   ![alt_text](./images/configured-integration.png "image_tooltip")
+   ![alt_text](./images/configureintegration.png "image_tooltip")
 
 ###Step 2: Add Webhook
 
