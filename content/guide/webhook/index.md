@@ -4,48 +4,56 @@ tags: ["webhook", "configure","Setup"]
 description: "step by step guide to configure webhook."
 ---
 
-# Webhook
+# Setup Webhooks
 
 Webhooks allow you to build or set up integrations that subscribe to certain events on LoginRadius. When one of these events is triggered, LoginRadius automatically sends a POST payload over HTTPS to the Webhook's configured URL in real-time. You can use Webhooks to update an external tracker or update a backup mirror.
 
 >**Note:** Upon submitting the request to the configured Webhook URL, LoginRadius does not track payload deliverability.
 
-Follow the below step by step information to configure webhook.
+This guide explains how to configure webhook in LoginRadius Dashboard.
 
 
 
-##Configuration
+## Configuration
 
-###Step 1: Visit Integration Section 
- login to your LoginRadius Dashboard account, from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
+### Step 1: Visit Integration Section 
+Login to your LoginRadius Dashboard account, from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
-   ![alt_text](./images/configureintegration.png "image_tooltip")
+![alt_text](./images/configureintegration.png "image_tooltip")
 
-###Step 2: Add Webhook
+### Step 2: Add Webhook
 
-Click the Add button, and you will find the list of all available integrations as displayed in the below screen:
+Click the **Add** button from the above screen, and you will find the list of all available integrations as displayed in the below screen:
 
-   ![alt_text](./images/available-integration.png "image_tooltip")
+![alt_text](./images/available-integration.png "image_tooltip")
 
-###Step 3: Configure Webhook
+Click the **Add** button from the Webhook tile on the above screen. The Webhook screen will appear.
 
-   ![alt_text](./images/add-webhook.png "image_tooltip")
-Enter or select the following Webhook details:
+### Step 3: Configure Webhook
 
-**Name**: Enter the name of the Webhook
-**Event**: Choose the type of event from the dropdown.
+Enter or select the following details on the Webhook screen:
 
-| PLAN | ALLOWED EVENTS |
-|----|----|
-| **Developer**	|Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification
-| **Developer Premium**	| Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext
+- **Name**: Enter the name of the Webhook
+- **Event**: Choose the type of event from the dropdown.
 
-**Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
+  | PLAN | ALLOWED EVENTS |
+  |----|----|
+  | **Developer**	|Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification
+  | **Developer Premium**	| Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext
+
+- **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
+
+The following displays the Webhook screen:
+
+![alt_text](./images/add-webhook.png "image_tooltip")
+
 
 Click the **Save** button after providing the required details.
 
+
 You will find the successfully configured webhook in the **Configured Integrations** section as displayed in the below screen:
-   ![alt_text](./images/configured-webhook.png "image_tooltip")
+
+![alt_text](./images/configured-webhook.png "image_tooltip")
 
 >Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
 
@@ -53,9 +61,9 @@ You will find the successfully configured webhook in the **Configured Integratio
 
 Once you configure the webhook with an event, LoginRadius triggers that webhook every time for that event. For example, a webhook subscribed URL configured for a Login event will receive a POST request on your server with the below sample payload:
 
-Trigger Method: POST
+**Trigger Method**: POST
 
-Format:
+**Format**:
 
 ```javascript
 {
@@ -77,22 +85,24 @@ Format:
      },
 }
 ```
+Where: 
 - **HookName**: Webhook event which is triggered.
 - **Time**: The timestamp when the hook is triggered.
 - **HookId**: A uniquely generated number associated with the triggered hook.
 - **Data**: The object that contains information about the event associated with the webhook.
 
-##Webhook Security
+## Webhook Security
 
 LoginRadius follows the best practices to ensure your endpoint security and provides several ways to verify that triggered events are securely coming from LoginRadius:
 
-Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event
+> Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
 
 All the Webhooks configured URL must use HTTPS as it is more secure. To use HTTPS, you must have a valid SSL/TLS certificate.
-A signature field is passed in every Webhook payload header to the subscribed URL. The signature field value contains API secret and payload body in the hashed form. The signature data field can be used to verify that the source of data for each incoming POST request is LoginRadius.
+A signature field is passed in every Webhook payload header to the subscribed URL. The signature field value contains API secret and payload body in the hashed form. You can use the signature data field to verify that the source of data for each incoming POST request is LoginRadius.
+
 The following is a sample script in .NET that can be used to generate a signature field from the LoginRadius API secret and Webhook payload Body. You can compare this generated signature with the signature field value in the Webhook payload header to validate the Webhook source of data.
 
-Replace <LoginRadius API secret> with API secret for your LoginRadius site in the below code. Replace <Webhook payload body> with Webhook payload Body in string format The code will write the derived signature in the console.
+Replace <LoginRadius API secret> with API secret for your LoginRadius account in the below code. Replace <Webhook payload body> with Webhook payload Body in string format. The code will write the derived signature in the console.
 
 
 ```javascript
@@ -125,15 +135,16 @@ public class Program
     }    
 }
 ```
-##Webhook Sample Header
+## Webhook Sample Header
 
 All webhook POST request headers will contain the following fields: host, accept, accept-encoding, content-type, request-context, request-id, signature, user-agent, content-length, connection.
 
 Here is the sample for the Webhook payload header:
 
- ![alt_text](./images/webhookpayload.png "image_tooltip")
+![alt_text](./images/webhookpayload.png "image_tooltip")
 
 ## Webhook Sample Payload Body
+
 All webhook request payload contains the configured webhook name, time at which the webhook triggered, webhook id, and information about the event associated with the webhook. The following is a sample payload body:
 
 
