@@ -16,7 +16,7 @@ To begin configuration you will need to click "Add" and fill out the form as fol
 
 - **App Name:** The name of your OpenID Connect App.
 
-- **Secret Key:** You will need to generate an OpenID Connect Secret using RS256 and add it here. You can get the secret Key by running the following command:
+- **Secret Key:** You will need to generate an OpenID Connect Secret using RS256 and add it here. You can get the secret Key by running the following command on your terminal:
 
 ```
 openssl genrsa -out key.pem 2048
