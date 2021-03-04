@@ -98,7 +98,7 @@ If the customer is not logged into the hosted page, the customer will be asked t
 
 This section covers the required configurations that you need to perform in the LoginRadius Admin Console for JWT Login.
 
-**Step 1:** Log in to your [Admin Console](https://dashboard.loginradius.com) account, and navigate to [Platform Configuration > Access Configuration > Federated SSO > JWT](https://adminconsole.loginradius.com/platform-configuration/access-configuration/federated-sso/jwt).
+**Step 1:** Log in to your [Admin Console](https://dashboard.loginradius.com) account, and navigate to [Platform Configuration > Access Configuration > Federated SSO > JWT](https://devadmin-console.lrinternal.com/platform-configuration/access-configuration/federated-sso/jwt).
 
 The following screen appear :
 
