@@ -86,7 +86,7 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">
+                <a href="/tutorial/angular">
                   <img src="images/angular.svg" width={20} />
                   <span>Angular</span>
                 </a>
@@ -242,7 +242,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Phone Login</a>
+                <Link to="/guide/phone-login">
+                  <span>Phone Login</span>
+                </Link>
               </li>
               <li>
                 <Link to="/guide/passwordless-login">
@@ -260,7 +262,9 @@ const Middle = () => {
             <h3 className="title">User Management Options</h3>
             <ul>
               <li>
-                <a href="#">Mange Users</a>
+                <Link to="/guide/manage-users">
+                  <span>Manage Users</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Migrate User Data</a>
@@ -363,10 +367,10 @@ const Middle = () => {
                 <Link to='/guide/mfa'> Multi Factor Authentication</Link>
               </li>
               <li>
-                <a href="#"> Change Session Lifetime </a>
+                <Link to='/guide/change-session-lifetime'> Change Session Lifetime </Link>
               </li>
               <li>
-                <a href="#">Enable Force Logout</a>
+                <Link to='guide/enable-force-logout'>Enable Force Logout</Link>
               </li>
             </ul>
           </div>

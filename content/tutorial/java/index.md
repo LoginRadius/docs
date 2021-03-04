@@ -28,3 +28,8 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 ## Java Implementation
 
 ## SDK Implementation
+
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)

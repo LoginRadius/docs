@@ -1,12 +1,12 @@
 ---
-title: "Customize Passwordless Login"
+title: "Manage Passwordless Login"
 tags: ["Login"]
-description: "This is a guide for managing the Passwordless login method in LoginRadius."
+description: "This is a guide for managing the Passwordless Login method in LoginRadius."
 ---
 
 # Manage Passwordless Login
 
-The LoginRadius Identity Platform provides the Passwordless Login option to enable your consumers to log in without providing a password. Upon initiating a Passwordless Login, an OTP/link is sent to your consumer's registered phone number or email address. When the OTP/link is verified, the consumer will be logged into their account.
+The LoginRadius Identity Platform provides the Passwordless Login method to enable your consumers to log in without providing a password. Upon initiating a Passwordless Login, an OTP/link is sent to your consumer's registered phone number or email address. When the OTP/link is verified, the consumer will be logged into their account.
 
 > Note: Your consumer will still need to register by providing a password. After registering, the consumer will have the option to log in without a password.
 
@@ -16,59 +16,49 @@ You can implement the Passwordless Login method in two following ways:
 
 * **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
 
-> Note: If both Passwordless Login and [Two Factor Authentication (2FA)]() are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless Login method.
+> Note: If both Passwordless Login and [Two Factor Authentication (2FA)]() are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
 
 ## Configuration
 
-### Step 1
+### Step 1: Choose Login Method
 
-[LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
 
 ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
-### Step 2
+2. To enable the Passwordless Login method for your application, click the **Add Method** dropdown, and select the **Passwordless** login method.
 
-To enable the Passwordless Login method for your application, click the **Add Method** dropdown, and select the **Passwordless Login** method.
-
-> Note: You will need to be subscribed to the Developer Premium plan in order to enable this login method.
+> Note: You will need to be subscribed to the Developer Premium plan to enable this login method.
 
 ![alt_text](images/add-passwordless-method.png "image_tooltip")
 
 When the login method is successfully enabled, you will see it listed in your table of login methods.
 
-### Step 3
+### Step 2: Configure Passwordless Login Templates
 
-Similarly to the Email/Password and Phone login method, you can perform the following actions:
+1. Similarly to the Email/Password Login and Phone Login methods, you can perform the following actions:
 
-* Edit templates associated to this login method.
-
+* Edit templates associated with this login method.
 * Delete the login method from your application.
 
 These actions are available in the action bar highlighted in the image below:
 
 ![alt_text](images/passwordless-method-actions.png "image_tooltip")
 
-### Step 4
-
-To edit the templates used for the Passwordless Login method, click the **Edit** icon given in the action bar highlighted in the previous step. Each template corresponds to one of the two ways that the Passwordless Login method can be implemented.
+2. To edit the templates used for the Passwordless Login method, click the **Edit** icon given in the action bar highlighted in the previous step. Each template corresponds to one of the two ways that the Passwordless Login method can be implemented.
 
 ![alt_text](images/passwordless-templates.png "image_tooltip")
 
-### Step 5
-
-With a Passwordless Login template type selected, you can perform the following actions:
+3. With a Passwordless Login template type selected, you can perform the following actions:
 
 * Edit template content.
-
 * Reset the template to its default content.
 
 These actions are available in the action bar highlighted in the image below:
 
 ![alt_text](images/passwordless-template-edit.png "image_tooltip")
 
-### Step 5
-
-When editing the **Passwordless Login with OTP** template, you can update the following:
+4. When editing the **Passwordless Login with OTP** template, you can update the following:
 
 * **SMS CONTENT**: The plain text template. You can use [Placeholder](#placeholder-tags) tags in the SMS Content Body.
 
@@ -78,13 +68,15 @@ When editing the **Passwordless Login with Email** template, you can update the 
 * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body.
 * **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) tags in the Text Body.
 
-In your template, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your email.
+In your templates, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your email or SMS.
 
-### Step 6
+To save your changes, click the **Save** button.
+
+### Step 3: Check Auth Page (IDX)
 
 To verify that the Passwordless Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. You should see the following login options available:
 
-![alt_text](images/idx-passwordless-options.png "image_tooltip")
+![alt_text](../../assets/blog-common/idx-passwordless.png "image_tooltip")
 
 > Note: The **Phone Login** method must be enabled for the **Send an OTP to Login** option to be available.
 
