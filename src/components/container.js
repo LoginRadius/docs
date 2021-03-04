@@ -279,7 +279,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Manage Roles</a>
+                <Link to="/guide/manage-roles">
+                  <span>Manage Roles</span>
+                </Link>
               </li>
             </ul>
           </div>
