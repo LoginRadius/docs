@@ -1,3 +1,8 @@
+---
+title: "OpenID connect"
+tags: ["OIDC", "OpenID Connect", "OAuth2.0"]
+description: "This is a guide for implementing OpenID Connect flow in the LoginRadius Identity Platform."
+---
 # OpenID Connect
 
 OpenID Connect or (OIDC) is an authentication layer on top of the OAuth 2.0 framework that is standardized by the OpenID Foundation. LoginRadius provides a way to integrate your OpenID Connect client with our APIs by following the standards specified in the [OpenID Connect specs](https://openid.net/specs/openid-authentication-2_0.html). These specs cover the various requirements and standardized process that OpenID Connect encompasses.
