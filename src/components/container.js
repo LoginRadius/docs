@@ -346,7 +346,7 @@ const Middle = () => {
                 <a href="#">Connect SAML App </a>
               </li>
               <li>
-                <a href="#"> Connect JWT App</a>
+                <a href="/guide/jwt"> Connect JWT App</a>
               </li>
               <li>
                 <a href="/guide/oauth"> Connect OAuth App</a>
