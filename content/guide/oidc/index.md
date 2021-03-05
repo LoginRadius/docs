@@ -13,7 +13,7 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
 You can configure your OpenID Connect settings in the LoginRadius Admin Console under:
 
-**Platform Configuraton ➔ Access Configuration ➔ Federated SSO ➔ (left sidebar) OpenID Connect**
+**Platform Configuraton ➔ Access Configuration ➔ Federated SSO ➔  Openid Connect**
 
 ![alt_text](../../assets/blog-common/OpenID-config.png "image_tooltip")
 
