@@ -294,7 +294,9 @@ const Middle = () => {
             <h3 className="title">Interfaces and Branding Personalization</h3>
             <ul>
               <li>
-                <a href="#">Customize Auth Page (IDX)</a>
+                <Link to="/guide/customize-auth-page">
+                  <span>Customize Auth Page (IDX)</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Advanced Editor </a>
