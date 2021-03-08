@@ -75,15 +75,15 @@ This guide will take you through the process of setup and implementation of the 
 
 The following flow chart shows how JWT flow works between IDP and SP, where IDP here is LoginRadius and SP is customer’s application: 
 
-![alt_text](../../assets/blog-common/jwt-sso-flow.png "image_tooltip")
+![alt_text](../../guide/jwt/images/jwt-sso-flow.png "image_tooltip")
 
 LoginRadius supports a delegated redirect SSO flow through which you can redirect your customer to [LoginRadius Identity Experience Framework](https://www.loginradius.com/docs/libraries/identity-experience-framework/overview/), where your customer can do account management actions.
 
 Upon successful login or social login, the customer will be redirected to the return URL along with the JWT for this authentication session. Here is the step by step instruction for setting JWT SSO flow:
 
-**Step 1:** First of all, configure a JWT app in your LoginRadius Admin Console. Refer to the JWT Admin Console Configuration section for how to configure JWT in the LoginRadius Admin Console.
+**Step 1:** First of all, configure a JWT app in your LoginRadius Dashboard. Refer to the JWT Darwin Dashboard Configuration section for how to configure JWT in the LoginRadius Dashboard.
 
-**Step 2:** Whitelist the service provider URL in the LoginRadius Admin Console. Follow [this](#domain-whitelisting) for information on how to whitelist URLs in the LoginRadius Admin console.
+**Step 2:** Whitelist the service provider URL in the LoginRadius Dashboard. Follow [this](#domain-whitelisting) for information on how to whitelist URLs in the LoginRadius Dashboard.
 
 **Step 3:** The following is the LoginRadius JWT SSO URL: `https://cloud-api.loginradius.com/sso/jwt/redirect/token?apikey=<LRapikey>&jwtapp=<jwtAppName>&return_url=<encode(service provider url)>`
 
@@ -94,36 +94,52 @@ Upon successful login or social login, the customer will be redirected to the re
 If the customer is not logged into the hosted page, the customer will be asked to log in. After authentication, the customer will be redirected back to the return URL with the JWT as a query parameter.
 
 
-### Part 2 - Admin Console Configuration
+### Part 2 - Darwin Dashboard Configuration
 
-This section covers the required configurations that you need to perform in the LoginRadius Admin Console for JWT Login.
+This section covers the required configurations that you need to perform in the LoginRadius Darwin Dashboard for JWT Login.
 
-**Step 1:** Log in to your [Admin Console](https://dashboard.loginradius.com) account, and navigate to [Platform Configuration > Access Configuration > Federated SSO > JWT](https://devadmin-console.lrinternal.com/platform-configuration/access-configuration/federated-sso/jwt).
+**Step 1:** Log in to your [Darwin Dashboard](https://dev-dashboard.lrinternal.com/) account, and navigate to [Integration](https://dev-dashboard.lrinternal.com/integration)
 
 The following screen appear :
 
-![alt_text](../../assets/blog-common/jwt-adminconsole.png "image_tooltip")
+![alt_text](../../guide/jwt/images/jwt-integration.png "image_tooltip")
 
-**Step 2:** Click **+ Add App** option for adding a new JWT app. The following configuration options will appear: 
-
-
-![alt_text](../../assets/blog-common/jwt-adminconsole-addapp.png "image_tooltip")
+**Step 2:** Click **Add** option for adding a new JWT app. The following configuration options will appear: 
 
 
-Step 3: You need to provide or select the following values to add the APP.
-AppName: A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
-Secret Key: A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
-QueryStringParameter: The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
-Algo: Algorithm to sign JWT. LoginRadius supports the following algorithms:
+![alt_text](../../guide/jwt/images/jwt-configuration.png "image_tooltip")
+
+
+Step 3: Either search for JWT in search bar or go to the **Select Category** dropdown and selected **Federation**. Locate **JWT** and click on **Add me**. Select Enable.
+
+![alt_text](../../guide/jwt/images/jwt-federation-option.png "image_tooltip")
+
+![alt_text](../../guide/jwt/images/jwt-enable.png "image_tooltip")
+
+After this configuration the app is availabe in **Available Integrations**. There, click on **Configure Me** under JWT.
+You need to provide or select the following values to add the APP.
+
+![alt_text](../../guide/jwt/images/jwt-configure-me.png "image_tooltip")
+
+* **AppName:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
+
+* **Secret Key:** A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
+
+* **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
+
+* **Algorithms:** Algorithm to sign JWT. LoginRadius supports the following algorithms:
 HS256
 HS384
 HS512
 RS256
 RS384
 RS512
-Mapping: Specify the Key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
+
+* **Enter the Key** Specify the Key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
 Enter any value for the key column( left column), these values will be used as keys for claims in the payload.
-Select the desired LoginRadius profile field name in the profile key (right column). The values for these fields from the customer's profile in LoginRadius will be returned to the JWT payload. Refer to the LoginRadius data points document for available profile fields. Keep in mind that for some of the profile fields, you will need to use dot notation to access them. For the Advanced field values in the customer profile, use the dot notation. For example, if the advanced field name is Position, enter Position.Positionsummary as the attribute value. If you don't find the field in the drop-down list, select Others and add the fields' value using dot notation.
+Select the desired LoginRadius profile field name in the profile key (right column). The values for these fields from the customer's profile in LoginRadius will be returned to the JWT payload. 
+
+Refer to the LoginRadius data points document for available profile fields. Keep in mind that for some of the profile fields, you will need to use dot notation to access them. For the Advanced field values in the customer profile, use the dot notation. For example, if the advanced field name is Position, enter Position.Positionsummary as the attribute value. If you don't find the field in the drop-down list, select Others and add the fields' value using dot notation.
 Similarly, by clicking the Add Row button, you can map multiple attributes.
 
 
