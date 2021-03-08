@@ -62,11 +62,11 @@ Navigate to the directory where you'd like to set up your Vue JS project and run
 
 Use arrow keys to select `default` and press **enter/return** :
 
-![alt_text](../../assets/blog-common/vue-cli-preset.png "image_tooltip")
+![alt_text](../../content/tutorial/vue/images/vue-cli-preset.png "image_tooltip")
 
 Once your project is generated, and type `cd hello-world`. Wait for the app to compile, and navigate to URL shown on terminal. You should see following:
 
-![alt_text](../../assets/blog-common/vue-browser.png "image_tooltip")
+![alt_text](../../content/tutorial/vue/images/vue-browser.png "image_tooltip")
 
 
 ## Running VueJS LoginRadius SDK demo
