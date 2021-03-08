@@ -15,6 +15,8 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 > - Build Tools Version = 28.0.0 (changeable in build.gradle)
 >
 > - Android Studio >= 3.5.2
+>
+>  New to Android? Check out [this reference](https://developer.android.com/training/basics/firstapp/creating-project).
 
 Watch the video to get started, or refer to the section below for the text-based guide.
 
@@ -41,7 +43,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 ## SDK Installation
 
-Add the following dependency in your app's build.gradle:
+Add the following dependency in your app's `build.gradle`:
 
 ```
 implementation 'com.loginradius.android:androidsdk:4.8.0'
@@ -49,9 +51,9 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 
 ## Configuration
 
-- Add the following code to the `onCreate()` method in `MainActivity.java`.
+- Add the following code to the `onCreate()` method in `MainActivity.java`:
 
-  ```
+  ```java
 
   LoginRadiusSDK.Initialize init = new LoginRadiusSDK.Initialize();
   init.setApiKey("<apikey>");
@@ -67,9 +69,9 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
   - sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
   - siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
 
-- Add the following permissions to the `AndroidManifest.xml`:
+- Add the following permissions in your app's `manifests/AndroidManifest.xml` :
 
-  ```
+  ```xml
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -85,7 +87,7 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 
 Add the following code to implement registration:
 
-```
+```java
           private void doRegistration() {
              QueryParams params = new QueryParams();
              params.setEmailTemplate("<email-template>");        //put your emailTemplate(optional)
@@ -121,7 +123,7 @@ Add the following code to implement registration:
 
 Add the following code to implement login:
 
-```
+```java
 private void doLogin() {
 QueryParams params = new QueryParams();
 params.setEmail("xyz@mailinator.com");
@@ -147,12 +149,6 @@ api.login(LoginActivity.this, params, new AsyncHandler < LoginData > () {
     @Override
     public void onFailure(Throwable error, String errorcode) {
         Toast.makeText(LoginActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
-        //this code will be used for getting pinAuthToken for calling setPinByPINAAuthToken API.
-        if (errorResponse.getData() != null) { //the Data is generic type of property for fetching any value from data then we can use property key
-            LinkedTreeMap linkedTreeMap = new LinkedTreeMap();
-            linkedTreeMap.putAll((Map) errorResponse.getData());
-            Log.e("pinAuthToken", linkedTreeMap.get("PINAuthToken").toString());
-        }
     }
 });
 }
@@ -165,7 +161,7 @@ api.login(LoginActivity.this, params, new AsyncHandler < LoginData > () {
 
 Once the authentication is done, you can use the `access token` to retrieve profile data and handle other user functionality. Add the following code to get the user profile:
 
-```
+```java
 public void readAllUserProfile(String access_token) {
  QueryParams params = new QueryParams();
  params.setAccess_token(access_token);
@@ -186,6 +182,164 @@ public void readAllUserProfile(String access_token) {
 ```
 
 > Call the `readAllUserProfile` function after login and verify that the user's profile information has been returned in the `onSuccess` callback.
+
+Here is an example user profile object that is returned from the `readAllUserProfile` SDK call:
+
+  ```json
+  {
+    "Identities": null,
+    "Password": "**********",
+    "LastPasswordChangeDate": "2021-02-11T02:36:01.8420000Z",
+    "PasswordExpirationDate": null,
+    "LastPasswordChangeToken": null,
+    "EmailVerified": true,
+    "IsActive": true,
+    "IsDeleted": false,
+    "Uid": "0df01f54954d4e9f9b3b18c30fa5b0ea",
+    "CustomFields": null,
+    "IsEmailSubscribed": false,
+    "UserName": null,
+    "NoOfLogins": 6,
+    "PhoneId": null,
+    "PhoneIdVerified": false,
+    "Roles": null,
+    "ExternalUserLoginId": null,
+    "RegistrationProvider": "Email",
+    "IsLoginLocked": false,
+    "LoginLockedType": "None",
+    "LastLoginLocation": "Vancouver, Canada",
+    "RegistrationSource": "https://***.hub.loginradius.com/",
+    "IsCustomUid": false,
+    "UnverifiedEmail": null,
+    "IsSecurePassword": null,
+    "PrivacyPolicy": null,
+    "ExternalIds": null,
+    "IsRequiredFieldsFilledOnce": true,
+    "ConsentProfile": null,
+    "PIN": null,
+    "RegistrationData": null,
+    "ID": "5446de8561ec47809325f9b430e2750e",
+    "Provider": "Email",
+    "Prefix": null,
+    "FirstName": null,
+    "MiddleName": null,
+    "LastName": null,
+    "Suffix": null,
+    "FullName": null,
+    "NickName": null,
+    "ProfileName": null,
+    "BirthDate": null,
+    "Gender": null,
+    "Website": null,
+    "Email": [
+      {
+        "Type": "Primary",
+        "Value": "***@***.com"
+      }
+    ],
+    "Country": null,
+    "ThumbnailImageUrl": null,
+    "ImageUrl": null,
+    "Favicon": null,
+    "ProfileUrl": null,
+    "HomeTown": null,
+    "State": null,
+    "City": null,
+    "Industry": null,
+    "About": null,
+    "TimeZone": null,
+    "LocalLanguage": null,
+    "CoverPhoto": null,
+    "TagLine": null,
+    "Language": null,
+    "Verified": null,
+    "UpdatedTime": null,
+    "Positions": null,
+    "Educations": null,
+    "PhoneNumbers": null,
+    "IMAccounts": null,
+    "Addresses": null,
+    "MainAddress": null,
+    "Created": null,
+    "CreatedDate": "2020-10-15T22:09:55.8440000Z",
+    "ModifiedDate": "2020-10-15T22:09:55.8630000Z",
+    "ProfileModifiedDate": null,
+    "LocalCity": "Vancouver",
+    "ProfileCity": null,
+    "LocalCountry": "Canada",
+    "ProfileCountry": null,
+    "FirstLogin": false,
+    "IsProtected": false,
+    "RelationshipStatus": null,
+    "Quota": null,
+    "Quote": null,
+    "InterestedIn": null,
+    "Interests": null,
+    "Religion": null,
+    "Political": null,
+    "Sports": null,
+    "InspirationalPeople": null,
+    "HttpsImageUrl": null,
+    "FollowersCount": 0,
+    "FriendsCount": 0,
+    "IsGeoEnabled": null,
+    "TotalStatusesCount": 0,
+    "Associations": null,
+    "NumRecommenders": 0,
+    "Honors": null,
+    "Awards": null,
+    "Skills": null,
+    "CurrentStatus": null,
+    "Certifications": null,
+    "Courses": null,
+    "Volunteer": null,
+    "RecommendationsReceived": null,
+    "Languages": null,
+    "Projects": null,
+    "Games": null,
+    "Family": null,
+    "TeleVisionShow": null,
+    "MutualFriends": null,
+    "Movies": null,
+    "Books": null,
+    "AgeRange": null,
+    "PublicRepository": null,
+    "Hireable": false,
+    "RepositoryUrl": null,
+    "Age": null,
+    "Patents": null,
+    "FavoriteThings": null,
+    "ProfessionalHeadline": null,
+    "ProviderAccessCredential": null,
+    "RelatedProfileViews": null,
+    "KloutScore": null,
+    "LRUserID": null,
+    "PlacesLived": null,
+    "Publications": null,
+    "JobBookmarks": null,
+    "Suggestions": null,
+    "Badges": null,
+    "MemberUrlResources": null,
+    "TotalPrivateRepository": 0,
+    "Currency": null,
+    "StarredUrl": null,
+    "GistsUrl": null,
+    "PublicGists": 0,
+    "PrivateGists": 0,
+    "Subscription": null,
+    "Company": null,
+    "GravatarImageUrl": null,
+    "ProfileImageUrls": null,
+    "WebProfiles": null,
+    "PinsCount": 0,
+    "BoardsCount": 0,
+    "LikesCount": 0,
+    "SignupDate": "2020-10-15T22:09:55.8440000Z",
+    "LastLoginDate": "2021-02-16T19:53:28.3120000Z",
+    "PreviousUids": null
+  }
+  ```
+
 
 ## Explore Android Demo
 
