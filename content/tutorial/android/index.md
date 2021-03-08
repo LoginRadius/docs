@@ -18,10 +18,6 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 >  New to Android? Check out [this reference](https://developer.android.com/training/basics/firstapp/creating-project).
 
-Watch the video to get started, or refer to the section below for the text-based guide.
-
-<figure class="video_container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/efM46qNSaeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
 
 ---
 
@@ -41,7 +37,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 - Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
-## SDK Installation
+## Install SDK 
 
 Add the following dependency in your app's `build.gradle`:
 
@@ -83,7 +79,7 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 
 ## Implement Registration
 
-> Add a button to your application that calls below function for registration.
+> Add a button to your application that calls the below function for registration.
 
 Add the following code to implement registration:
 
@@ -119,7 +115,7 @@ Add the following code to implement registration:
 
 ## Implement Login
 
-> Add a button to your application that calls below function for login.
+> Add a button to your application that calls the below function for login.
 
 Add the following code to implement login:
 
