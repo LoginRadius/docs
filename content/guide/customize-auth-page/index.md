@@ -24,17 +24,17 @@ Watch this video's step-by-step information, or refer to the section below for t
 
 2. Click the down caret, and the **Theme Customization** screen will appear:
 
-  ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-  To preview your login page's theme, click the **Go to your Login Page** link as highlighted on the above screen. 
+   To preview your login page's theme, click the **Go to your Login Page** link as highlighted on the above screen. 
 
 ## Theme Selection
 
 To activate a theme, hover over any inactive theme image and click on the **Activate** button:
 
-  > Note: Activating a new theme will replace your existing theme and its customized content with default values.
+> Note: Activating a new theme will replace your existing theme and its customized content with default values.
 
-  ![alt_text](images/activate-theme-button.png "image_tooltip")
+![alt_text](images/activate-theme-button.png "image_tooltip")
 
 These themes will reflect in your registration, login, reset password, and profile page.
 
@@ -42,13 +42,13 @@ These themes will reflect in your registration, login, reset password, and profi
 
 After you have selected a theme, you can further customize its content as per your requirements. To customize your theme, hover over your active theme image and click on the **Customize** button:
 
-  ![alt_text](images/customize-theme-button.png "image_tooltip")
+![alt_text](images/customize-theme-button.png "image_tooltip")
 
 The theme customization screen will show as below:
 
-  ![alt_text](images/customize-theme.png "image_tooltip")
+![alt_text](images/customize-theme.png "image_tooltip")
 
-> Note: You can view your changes to your Auth Page (IDX) immediately after saving your configurations. Click the **Go to your Login Page** button as highlighted on the above screen to navigate to your Auth Page (IDX).
+> Note: You can immediately view your changes to Auth Page (IDX) after saving your configurations. Click the **Go to your Login Page** button as highlighted on the above screen to navigate to your Auth Page (IDX).
 
 There are three sections available for you to customize your Auth Page (IDX)'s content:
 
@@ -56,9 +56,9 @@ There are three sections available for you to customize your Auth Page (IDX)'s c
 
 Click the **General Configuration** section to expand its customization options. You can manage your Auth Page (IDX)'s favicon and logo here:
 
-  ![alt_text](images/customize-general-configuration.png "image_tooltip")
+![alt_text](images/customize-general-configuration.png "image_tooltip")
 
-  * **Favicon**: Either upload or enter the URL for your favicon resource. It is recommended that your favicon have a minimum to maximum dimension of 16x16 to 48x48 pixels respectively. If you are uploading your resource, only *ico files are supported, and its file size should not exceed 2 MB.
+  * **Favicon**: Either upload or enter the URL for your favicon resource. It is recommended that your favicon have a minimum to maximum dimension of 16x16 to 48x48 pixels, respectively. If you are uploading your resource, only *ico files are supported, and its file size should not exceed 2 MB.
 
   * **Logo**: Either upload or enter the URL for your logo resource. It is recommended that your logo have a maximum width of 200 pixels. If you are uploading your resource, only *png files are supported, and its file size should not exceed 2 MB.
 
@@ -66,7 +66,7 @@ Click the **Save** button to save your changes.
 
 ### Body
 
-Click the **Body** section to expand its customization options. You can manage your Auth Page (IDX)'s body attributes, such as font family, text color and background color here:
+Click the **Body** section to expand its customization options. You can manage your Auth Page (IDX)'s body attributes, such as font family, text color, and background color here:
 
   ![alt_text](images/customize-body.png "image_tooltip")
 
@@ -106,10 +106,10 @@ Click the **Content** section to expand its customization options. You can manag
 
 Each content field and its corresponding text on your Auth Page (IDX) is illustrated below:
 
-  ![alt_text](images/idx-content-fields-1.png "image_tooltip")
+![alt_text](images/idx-content-fields-1.png "image_tooltip")
 
-  ![alt_text](images/idx-content-fields-2.png)
+![alt_text](images/idx-content-fields-2.png)
 
 ## Further Customization
 
-For further customizations, you can manually edit the HTML and JavaScript code used for your Auth Page (IDX), or use your own. These options are only available in the **Advanced Editor**. Refer to the [Advanced Editor](/guide/advanced-editor) document for more information.
+You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the [Advanced Editor](/guide/advanced-editor) document for more information.
