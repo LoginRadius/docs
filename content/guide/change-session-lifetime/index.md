@@ -1,6 +1,6 @@
-#Change Session Lifetime?
+#Change Session Lifetime
 
-Session Management allows you to control and manage your customer’s login session.Change Session Lifetime feature is available through the **Token Lifetime** option inside Session Management Section. **Token lifetime** is the amount of time a customer is logged in to your application until it expires and prompts the customer to log back in.This can be done by the following steps:
+Session Management allows you to control and manage your consumer’s login session.Change Session Lifetime feature is available through the **Token Lifetime** option inside Session Management Section. **Token lifetime** is the amount of time a consumer is logged in to your application until it expires and prompts the customer to log back in.This can be done by the following steps:
 
 ##Step 1 :Navigation
 1. To access **Session Management** options, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account
@@ -14,7 +14,7 @@ Session Management allows you to control and manage your customer’s login sess
 
 Here you can set the token expiration time and extend the token validity if it has been accessed/used before the expiration time.
 
-1. **Use Case**: A token having the expiration at 7.00 will be extended to the configured expiration time if your customer logged in before the expiry (i.e., 7.00).
+1. **Use Case**: A token having the expiration at 7.00 will be extended to the configured expiration time if your consumer logged in before the expiry (i.e., 7.00).
 
 > The default token lifetime is 15 min and configurable from 15 min to 24 hours.
 
