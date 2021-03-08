@@ -11,11 +11,24 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
 ## Configurations
 
-You can configure your OpenID Connect settings in the LoginRadius Admin Console under:
+Step 1: Log in to your Darwin Dashboard account, and navigate to Integration
 
-**Platform Configuraton ➔ Access Configuration ➔ Federated SSO ➔  Openid Connect**
+The following screen appear :
 
-![alt_text](../../assets/blog-common/OpenID-config.png "image_tooltip")
+![alt_text](../../guide/oidc/images/OpenID-integration.png "image_tooltip")
+
+Step 2: Click Add option for adding a new OpenID app. The following configuration options will appear:
+
+![alt_text](../../guide/oidc/images/OpenID-config.png "image_tooltip")
+
+Step 3: Either search for OpenID  in search bar or go to the Select Category dropdown and selected Federation. Locate OpenID and click on Add me. Select Enable.
+
+
+![alt_text](../../guide/oidc/images/OpenID-addon.png "image_tooltip")
+
+After this configuration the app is availabe in Available Integrations. There, click on Configure Me under OpenID . You need to provide or select the following values to add the APP.
+
+![alt_text](../../guide/oidc/images/OpenID-settings.png "image_tooltip")
 
 To begin configuration you will need to click "Add" and fill out the form as follows:
 
@@ -38,9 +51,9 @@ openssl rsa -in key.pem -outform PEM -pubout -out public.pem
 
 - **Data Mapping:** Enter your desired fields and how they map out the left column is how they will show up in the JWT, the right column is the field name in the LoginRadius profile, keep in mind that for some of the profile fields you will need to use dot notation to access them.
 
-Once this is complete, click on "Add".
+Once this is complete, click on "Save".
 
-![alt_text](../../assets/blog-common/OpenID-add-app.png "image_tooltip")
+
 
 
 ## OpenID Connect Flows
