@@ -1,6 +1,6 @@
 #Enable Force Logout
  
-Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed.This can be done by the following steps:
+Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed.This can be done by the following steps
 
 ##Step 1:Navigation
 1. To access **Session Management** options, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account
