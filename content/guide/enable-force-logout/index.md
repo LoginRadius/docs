@@ -1,27 +1,32 @@
-#Enable Force Logout
+# Enable Force Logout
  
-Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed.This can be done by the following steps
+Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed. This guide explains how to enable force logout for your consumers.
 
-##Step 1:Navigation
-1. To access **Session Management** options, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account
-2. From the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
-3. Click the down arrow or anywhere within the section and the **Session Management** screen will appear
-4. Select the Force Logout Option
+## Step 1: Access Force Logout Section
 
-![alt_text](./../../assets/blog-common/session-management-settings.png "image_tooltip")
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
 
-##Step 2:Enable Force Logout
+2. Click the down arrow, and the **Session Management** screen will appear.
 
-Select Whether to Force-logout or not
+   ![alt_text](./../../assets/blog-common/session-management-settings.png "image_tooltip")
 
-##Step 3:(Additional) Remember-me option
+## Step 2: Configure Force Logout
 
-1. **Remember Me** feature allows your consumer to stay logged in until the access token expires, even after the browser is closed.
+Enable the **Force Logout** option. 
 
-> Remember me expiry duration will be same as token lifetime.
+The Force Logout feature is now enabled, and upon resetting the password, the consumer will be logged out from other active login sessions.
 
-2. By enabling this option, a Remember Me checkbox will show up on your IDX - Auth Page `<your-app-name>.hub.loginradius.com/auth.aspx` as highlighted in the below screen.
 
-![alt_text](/images/remember-me.png "image_tooltip")
+## Remember Me (Additional) 
 
-This way Force Logout can be enabled
+You can enable the **Remember Me** option to keep your consumers logged in until the access token expires, even after the browser is closed.
+
+By enabling this option, a **Remember Me** checkbox will show up on your Auth Page(IDX) `<your-app-name>.hub.loginradius.com/auth.aspx` as highlighted in the below screen.
+
+![alt_text](images/remember-me.png "image_tooltip")
+
+> Note: Remember me token expiry duration will be the same as token lifetime.
+
+
+
+
