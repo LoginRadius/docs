@@ -20,13 +20,12 @@ The Advanced Editor allows you to manually edit the HTML, scripts, and CSS that 
 
   ![alt_text](../../assets/blog-common/customize-theme-button.png "image_tooltip")
 
-  The **Auth Page (IDX) Customization** screen will appear.
 
-4. Click the **Switch To Advanced Editor** button as highlighted below to activate the Advanced Editor for your Auth Page (IDX):
+4. On the resulting **Auth Page (IDX) Customization** screen, click the **Switch To Advanced Editor** button as highlighted below to activate the Advanced Editor:
 
   ![alt_text](images/advanced-editor-button.png "image_tooltip")
 
-  The Advanced Editor screen will appear as below:
+  Advanced editing options will be enabled as below:
 
   ![alt_text](images/advanced-editor.png "image_tooltip")
 
@@ -73,7 +72,11 @@ The various forms that are present on your pages are managed using an imported L
 
 ### HTML
 
-The complete HTML layout of the page is located here and can be edited freely. The location in your markup where the default interfaces (mentioned above) will appear is controlled by specific HTML elements identified by their IDs. Below is a table of default interfaces and their corresponding containers:
+The complete HTML layout of the page is located here and can be edited freely. The location in your markup where the default interfaces (mentioned above) will appear is controlled by specific HTML elements identified by their IDs.
+
+For example, the HTML element `<div id="login-container" class="lr-widget-container"></div>` will be populated with the Login Form as configured by your account when the page's scripts are loaded.
+
+Below is a table of default interfaces and their corresponding containers:
 
 | Interface | Default Container ID | Related Section |
 |:---|:---:|---:|
