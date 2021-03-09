@@ -49,14 +49,16 @@ const BlogPostTemplate = ({ data, location }) => {
                   </ul>
                 </div>
               </div>
-              <ul>
-              {pathArray.map(e => e?(<li> {e} </li>):null)}
-              </ul>
-              <div
-                className="content"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-                itemProp="articleBody"
-              />
+
+              <div className="content">
+                <ul className="breadcrumbs">
+                  {pathArray.map(e => (e ? <li> {e} </li> : null))}
+                </ul>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  itemProp="articleBody"
+                />
+              </div>
             </div>
           </section>
 

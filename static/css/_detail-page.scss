@@ -9,7 +9,7 @@
   }
   .sidebar {
     max-width: 280px;
-    border-right: 1px solid $gray-light;
+
     padding-right: 24px;
     @media (min-width: 769px) {
       position: -webkit-sticky;
@@ -33,10 +33,10 @@
       margin-bottom: 10px;
     }
     ul {
-      li {
-        p {
+      & > li {
+        & > p {
           margin-bottom: 1rem;
-          a {
+          & > a {
             color: $black;
             font-weight: 500;
             padding-top: 0;
@@ -52,17 +52,39 @@
         }
       }
       ul {
-        margin-bottom: 56px;
+        // margin-bottom: 56px;
         li {
+          p {
+            margin-bottom: 0;
+            color: $gray-dark;
+            font-size: 16px;
+            a {
+              font-weight: 400;
+            }
+          }
           a {
             color: $gray-dark;
-            padding: 8px 24px;
+            padding: 8px 0 8px 24px;
             display: block;
             border-left: 2px solid #e8e9ea;
             &.active,
             &:hover {
               border-color: $blue;
               color: $blue;
+            }
+          }
+          ul {
+            li {
+              a {
+                padding-left: 40px;
+              }
+              ul {
+                li {
+                  a {
+                    padding-left: 56px;
+                  }
+                }
+              }
             }
           }
         }
@@ -93,14 +115,47 @@
     flex: 1 1;
     padding-left: 24px;
     width: calc(100% - 280px);
+    border-left: 1px solid $gray-light;
     @media (max-width: 768px) {
       padding-left: 0;
       width: 100%;
     }
+    .breadcrumbs {
+      display: flex;
+      color: #757a7e;
+      list-style: none;
+      font-weight: 500;
+      margin: 0 0 24px 0;
+      padding: 0;
+      & > li {
+        position: relative;
+        text-transform: capitalize;
+        &:not(:first-child) {
+          padding-left: 36px;
+        }
+        & + li {
+          &:before {
+            content: "";
+            display: inline-block;
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            transform: rotate(45deg);
+            width: 7px;
+            height: 7px;
+            vertical-align: baseline;
+            padding: 0;
+            margin: 0 14px;
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+          }
+        }
+      }
+    }
     h1 {
       margin-top: 0;
       font-size: 44px;
-      margin-bottom: 24px;
+      margin-bottom: 12px;
       @media (max-width: 768px) {
         font-size: 32px;
       }
@@ -114,11 +169,20 @@
         margin-top: 24px;
       }
     }
+    h3 {
+      position: relative;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 600;
+      & + blockquote {
+        margin-top: 24px;
+      }
+    }
     p {
       strong {
         a {
           font-weight: 500;
-          padding: 0 1rem;
           &:hover {
             color: $black;
           }
@@ -138,7 +202,7 @@
       color: $black;
       border-radius: 4px;
       border-radius: 4px;
-      margin: 56px 0;
+      margin: 48px 0;
       padding: 24px 24px 24px 64px;
       p {
         &:last-child {
@@ -154,6 +218,61 @@
           }
         }
       }
+    }
+    // detail page image alignment
+    .gatsby-resp-image-wrapper {
+      margin-left: 0 !important;
+    }
+    ul:not(.breadcrumbs) {
+      margin: 0 0 2rem 1.2rem;
+      list-style-type: disc;
+      li {
+        margin: 0 auto 1rem;
+      }
+    }
+    ol {
+      margin: 0 0 2rem 1.2rem;
+      padding: 0;
+      li {
+        margin: 0 auto 1rem;
+      }
+    }
+    table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 28px;
+      border-spacing: 0;
+      border-collapse: collapse;
+      background-color: transparent;
+      & > thead {
+        & > tr {
+          & > th {
+            vertical-align: bottom;
+            border-bottom: 2px solid $gray-light;
+            padding: 8px;
+            line-height: 2;
+          }
+        }
+      }
+      & > tbody {
+        & > tr {
+          & > td {
+            padding: 8px;
+            line-height: 2;
+            vertical-align: top;
+            border-top: 1px solid $gray-light;
+          }
+        }
+      }
+    }
+    // video width
+    .gatsby-resp-iframe-wrapper {
+      max-width: 75%;
+      margin: 2rem 0;
+    }
+    b,
+    strong {
+      font-weight: 600;
     }
   }
 }

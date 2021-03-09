@@ -208,6 +208,7 @@ footer {
   overflow: hidden;
   .ReactModal__Overlay {
     background-color: rgba(0, 0, 0, 0.36) !important;
+    z-index: 1;
     .ReactModal__Content {
       padding: 0 !important;
       border: 0 !important;
@@ -278,7 +279,7 @@ footer {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #e8e9ea !important;
-  padding: 4px !important;
+  padding: 2px 4px !important;
   border-radius: 4px !important;
   font-family: $font-stack !important;
   text-shadow: none !important;
