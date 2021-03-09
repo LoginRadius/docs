@@ -20,7 +20,7 @@ The Advanced Editor allows you to manually edit the HTML, scripts, and CSS that 
 
   ![alt_text](../../assets/blog-common/customize-theme-button.png "image_tooltip")
 
-  The theme customization screen will appear.
+  The **Auth Page (IDX) Customization** screen will appear.
 
 4. Click the **Switch To Advanced Editor** button as highlighted below to activate the Advanced Editor for your Auth Page (IDX):
 
