@@ -1,3 +1,9 @@
+---
+title: "Multi Factor Authentication"
+tags: ["2FA", "MFA"]
+description: "This is a guide for setting up Multifactor Authentication."
+---
+
 # Implement Two-Factor Authentication (2FA)
 The LoginRadius Identity Platform provides Two-Factor Authentication to add an extra layer of security for the consumers' accounts. With this feature enabled, once the consumer enters their login credentials, they are sent an authentication code to complete the login. This feature is available on an add-on basis for your LoginRadius account.
 
