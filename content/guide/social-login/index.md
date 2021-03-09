@@ -6,7 +6,7 @@ description: "step by step guide to implement social login."
 
 #Implement Social Login
 
-
+   
 You can implement Social Login for a quick and convenient approach for consumer registration and login. This guide explains how to add and configure the desired Social Login providers on your application using LoginRadius Dashboard.
 
 Watch this video for step by step information, or refer to the section below for the text-based guide.
@@ -81,7 +81,7 @@ The following are the social providers that LoginRadius supports for the Free, D
 
 
 |PLAN |	FACEBOOK |	GOOGLE |	TWITTER |	LINKEDIN |	GITHUB
-:|:---:|:---:|:---:|:---:|:---:|:---:|:
+|:---|:---|:---|:---|:---|:---|:
 |Free |	Yes |	Yes |	Yes |	No | No
 |Developer	| Yes	| Yes	| Yes	| Yes	| Yes
-|Developer Premium	| Supports| 20+ | Social| ID | Providers| 			
+|Developer Premium	| Supports| 20+ | Social| ID | Providers| 
