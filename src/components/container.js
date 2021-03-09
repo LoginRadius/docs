@@ -385,7 +385,7 @@ const Middle = () => {
                 <a href="/guide/oidc">Connect OIDC App </a>
               </li>
               <li>
-                <a href="#">Integrate BigCommerce</a>
+                <a href="/guide/big-commerce">Integrate BigCommerce</a>
               </li>
               <li>
                 <a href="#">Integrate Shopify</a>
