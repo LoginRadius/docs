@@ -38,7 +38,7 @@ Your Auth Page (IDX) consists of two main pages - Authentication and Profile. Yo
 
 To edit a component, click the relevant component inside either the **Authentication Pages** or **Profile Pages** section. The components **HTML**, **Before Script**, and **End Script** consist of a single file, while the other components **Custom CSS**, **Custom JS**, and **Head Tags** allow you to add additional files.
 
-Edit the content of your component in the editor window highlighted below:
+Edit the content of your component in the editor window as highlighted below:
 
   ![alt_text](images/advanced-editor-component-editor.png "image_tooltip")
 
