@@ -50,7 +50,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 </div>
               </div>
               <ul>
-              {pathArray.map(e => (<li> {e} </li>))}
+              {pathArray.map(e => e?(<li> {e} </li>):null)}
               </ul>
               <div
                 className="content"
