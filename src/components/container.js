@@ -299,7 +299,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Advanced Editor </a>
+                <Link to="/guide/auth-page-advanced-editor">
+                  <span>Advanced Editor</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Change Email Templates</a>

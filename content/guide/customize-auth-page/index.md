@@ -42,7 +42,7 @@ These themes will reflect in your registration, login, reset password, and profi
 
 After you have selected a theme, you can further customize its content as per your requirements. To customize your theme, hover over your active theme image and click on the **Customize** button:
 
-![alt_text](images/customize-theme-button.png "image_tooltip")
+![alt_text](../../assets/blog-common/customize-theme-button.png "image_tooltip")
 
 The theme customization screen will show as below:
 
@@ -112,4 +112,4 @@ Each content field and its corresponding text on your Auth Page (IDX) is illustr
 
 ## Further Customization
 
-You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the [Advanced Editor](/guide/advanced-editor) document for more information.
+You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the [Advanced Editor](/guide/auth-page-advanced-editor) document for more information.
