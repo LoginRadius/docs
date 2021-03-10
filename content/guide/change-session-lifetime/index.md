@@ -4,24 +4,31 @@ tags: ["Token", "Session","Lifetime","Change"]
 description: "This is a guide for Changing Session Lifetime."
 ---
 
-#Change Session Lifetime
+# Change Session Lifetime
 
-Session Management allows you to control and manage your consumer’s login session.Change Session Lifetime feature is available through the **Token Lifetime** option inside Session Management Section. **Token lifetime** is the amount of time a consumer is logged in to your application until it expires and prompts the customer to log back in.This can be done by the following steps
+Session Management allows you to control and manage your consumer’s login session. This feature is available through the **Token Lifetime** option inside the Session Management section. **Token lifetime** is the amount of time a consumer is logged in to your application until it expires and prompts the consumer to log back in. 
 
-##Step 1:Navigation
-1. To access **Session Management** options, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account
-2. From the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
-3. Click the down arrow or anywhere within the section and the **Session Management** screen will appear
-4. Select the Token Lifetime Option
+This time can be managed by the following steps:
 
-![alt_text](./../../assets/blog-common/session-management-settings.png "image_tooltip")
+## Step 1: Access Session Management
 
-##Step 2:Configire Token Lifetime
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
 
-Here you can set the token expiration time and extend the token validity if it has been accessed/used before the expiration time.
+2. Click the down arrow and the **Session Management** screen will appear.
 
-1. **Use Case**: A token having the expiration at 7.00 will be extended to the configured expiration time if your consumer logged in before the expiry (i.e., 7.00).
+   ![alt_text](./../../assets/blog-common/session-management-settings.png "image_tooltip")
 
-> The default token lifetime is 15 min and configurable from 15 min to 24 hours.
 
-This way the Session Lifetime can be changed
+## Step 2: Configure Token Lifetime
+
+1. Enter the desired token lifetime in the **Access Token Expiration** text box.
+
+   ![alt_text](./../../assets/blog-common/session-token.png "image_tooltip")
+
+   Here you can set the token expiration time and extend the token validity if it has been accessed/used before the expiration time.
+
+   > The default token lifetime is 15 min and configurable from 15 min to 24 hours.
+
+   **Use Case**: A token having the expiration at 7.00 will be extended to the configured expiration time if your consumer logged in before the expiry (i.e., 7.00).
+
+2. Click the **Save** button.
