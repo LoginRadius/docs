@@ -6,7 +6,7 @@ description: "This is a guide for customizing the HTML, scripts, and CSS of your
 
 # Advanced Editor
 
-The Advanced Editor allows you to manually edit the HTML, scripts, and CSS that make up your LoginRadius Auth Page (IDX).
+The Advanced Editor allows you to manually edit the HTML, Scripts, and CSS that make up your LoginRadius Auth Page (IDX).
 
 > Note: You must have a **Developer** plan subscription or higher to access the **Advanced Editor** section.
 
@@ -18,32 +18,32 @@ The Advanced Editor allows you to manually edit the HTML, scripts, and CSS that 
 
 3. On your selected theme, click the **Customize** button as highlighted below:
 
-  ![alt_text](../../assets/blog-common/customize-theme-button.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/customize-theme-button.png "image_tooltip")
 
 
 4. On the resulting **Auth Page (IDX) Customization** screen, click the **Switch To Advanced Editor** button as highlighted below to activate the Advanced Editor:
 
-  ![alt_text](images/advanced-editor-button.png "image_tooltip")
+   ![alt_text](images/advanced-editor-button.png "image_tooltip")
 
-  Advanced editing options will be enabled as below:
+   Advanced editing options will be enabled as below:
 
-  ![alt_text](images/advanced-editor.png "image_tooltip")
+   ![alt_text](images/advanced-editor.png "image_tooltip")
 
-## Using the Advanced Editor
+## Use Advanced Editor
 
-Your Auth Page (IDX) consists of two main pages - Authentication and Profile. You can access the components that make up the page by expanding the relevant sections on the left sidebar:
+Your Auth Page (IDX) consists of two main pages - **Authentication** and **Profile**. You can access the components that make up the page by expanding the relevant sections on the left sidebar:
 
-  ![alt_text](images/advanced-editor-components.png "image_tooltip")
+![alt_text](images/advanced-editor-components.png "image_tooltip")
 
 To edit a component, click the relevant component inside either the **Authentication Pages** or **Profile Pages** section. The components **HTML**, **Before Script**, and **End Script** consist of a single file, while the other components **Custom CSS**, **Custom JS**, and **Head Tags** allow you to add additional files.
 
 Edit the content of your component in the editor window as highlighted below:
 
-  ![alt_text](images/advanced-editor-component-editor.png "image_tooltip")
+![alt_text](images/advanced-editor-component-editor.png "image_tooltip")
 
 When editing a component, an action bar is available located at the top-right of your editor window:
 
-  ![alt_text](images/advanced-editor-component-actions.png "image_tooltip")
+![alt_text](images/advanced-editor-component-actions.png "image_tooltip")
 
 You can perform the following actions:
 
