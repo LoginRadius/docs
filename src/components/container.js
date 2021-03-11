@@ -304,7 +304,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Change Email Templates</a>
+                <Link to="/guide/customize-email-and-sms-settings">
+                  <span>Customize Email and SMS Settings</span>
+                </Link>
               </li>
               <li>
                 <a href="#">Add Fields to Registartion</a>
