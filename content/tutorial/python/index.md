@@ -160,9 +160,7 @@ def get_user():
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-* Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
-
-  ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+* Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format.
 
 Similarly, you can implement more features using Python SDK.
 
