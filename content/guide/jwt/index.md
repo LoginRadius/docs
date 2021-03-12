@@ -77,7 +77,7 @@ This guide will take you through the process of setup and implementation of the 
 * Configuration you need to do in LoginRadius Dashboard
 * Implementing JWT SSO with LoginRadius APIs
 
-### Part 1: JWT SSO Flow
+### JWT SSO Flow
 
 The following flow chart shows how JWT flow works between IDP and SP, where IDP here is LoginRadius and SP is consumer's application: 
 
@@ -100,7 +100,7 @@ Upon successful login or social login, the consumer will be redirected to the re
 If the consumer is not logged into the hosted page, the consumer will be asked to log in. After authentication, the consumer will be redirected back to the return URL with the JWT as a query parameter.
 
 
-### Part 2: LoginRadius Dashboard Configuration
+### LoginRadius Dashboard Configuration
 
 This section covers the required configurations that you need to perform in the LoginRadius Dashboard for JWT Login.
 
@@ -147,7 +147,7 @@ Select the desired LoginRadius profile field name in the profile key (right colu
 Similarly, by clicking the Add Row button, you can map multiple attributes.
 
 
-### Part 3: JWT LoginRadius APIs
+### JWT LoginRadius APIs
 
 If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
@@ -165,7 +165,7 @@ The response from the above APIs will look like this:
 ```
 For more information on `<JWTresponse>`, refer to JWT Token Structure.
 
-### Part 4: JWT Best Practices
+### JWT Best Practices
 
 Before starting with best practices, it is important to note that many attacks on JWT are related to its way of implementation, instead of its design. This does not mean that they are less critical.
 
