@@ -8,6 +8,14 @@ description: "This is a tutorial with IDX and JAVA SDK implementation."
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your JAVA application. 
 
+> For developing a JAVA project a JDK is required. For this guide, the supported version is JDK 8.0 or JDK 11.0. The guide to install JDK can be found [here](https://medium.com/how-to-start-developing-java-applications/how-to-install-java-development-kit-jdk-on-windows-bb68641c516c).
+
+> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
+
+Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Node.js application.
+
 
 ## Choose Theme
 
@@ -34,14 +42,14 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ### Setup a JAVA project
 
-For developing a JAVA project a JDK is required. The guide to install JDK can be found [here](https://medium.com/how-to-start-developing-java-applications/how-to-install-java-development-kit-jdk-on-windows-bb68641c516c).
+
 
 Next, we can either install Eclipse or VSCode (available from their respective websites) as an IDE to run our JAVA project. For this project, we are choosing Visual Studio Code. For Eclipse, refer [here](https://medium.com/how-to-start-developing-java-applications/simple-hello-world-application-in-java-using-eclipse-1ebae99d9fcf).
 
 
-After installing JDK, we can follow [this guide] (https://medium.com/@tariqul.islam.rony/learning-java-and-spring-boot-with-visual-studio-code-vscode-part-1-54073f2fa264) to setup a JAVA environment in Visual Studio Code.
+Once you have both JDK and VSCode installed, we can follow [this guide] (https://medium.com/@tariqul.islam.rony/learning-java-and-spring-boot-with-visual-studio-code-vscode-part-1-54073f2fa264) to setup a JAVA environment in Visual Studio Code.
 
-### Set up a server for JAVA project
+### Set up a server for the JAVA project
 
 Usually, web applications require a server for setting up, for this we will be needing SpringBoot. To set up spring-boot:
 
