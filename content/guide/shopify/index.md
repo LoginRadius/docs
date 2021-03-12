@@ -28,7 +28,7 @@ This section covers the required configurations that you need to perform to enab
 
 ## LoginRadius Darwin Dashboard Configurations
 
-**Step 1:** Log in to your [Darwin Dashboard](https://dev-dashboard.lrinternal.com/) account, and navigate to [Integration](https://dev-dashboard.lrinternal.com/integration)
+**Step 1:** Log in to your [Darwin Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration)
 
 The following screen appear :
 
