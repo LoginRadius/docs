@@ -283,6 +283,11 @@ const Middle = () => {
                   <span>Manage Roles</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/smtp-provider-settings">
+                  <span>SMTP provider settings</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Explore user managment options*/}
