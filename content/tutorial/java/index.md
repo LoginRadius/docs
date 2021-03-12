@@ -58,6 +58,9 @@ Usually, web applications require a server for setting up, for this we will be n
 Install the Spring boot Extensions Pack for getting Spring boot Development Environment to Visual Studio Code from VSCode Extensions marketplace.
 
 
+![alt_text](/images/springboot-setup.png "image_tooltip")
+
+
 ### Implementing Loginradius SDK in JAVA
 
 Loginradius offers an already done for you Loginradius JAVA-SDK kit that can be used to implement basic features such as user authorization and registration for your app easily.
@@ -77,14 +80,28 @@ Locate to the demo folder:
 
 This is the file structure you will get in the Java demo, let's see what each file does
 
--demo folder - Contains all the HTML, CSS, and JS files to create UI for the test application.
+- **demo folder** - Contains all the HTML, CSS, and JS files to create UI for the test application.
 
--static folder - Contains all the CSS and JS files to create UI for the test application.
+- **static folder** - Contains all the CSS and JS files to create UI for the test application.
 
--java folder - Contains server-side code and routing API to be used in the demo
+- **java folder** - Contains server-side code and routing API to be used in the demo
 
--templates folder - contains the HTML template for Login and profile page
+- **templates folder** - contains the HTML template for Login and profile page
 
+```
+.project
+pom.xml
+README.md
+src
+| -- main
+| -- |--- |java/
+| -- |--- |resources/
+| -- |--- |-- application.properties
+| -- |--- |-- static
+| -- |--- |-- templates
+| -- |--- |-- --- index.html
+| -- |--- |-- --- profile.html
+```
 
 
 You need to add your LoginRadius credentials in the demo app to communicate with LoginRadius SDK
