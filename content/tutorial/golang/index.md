@@ -12,13 +12,11 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Golang? Check out [this reference](https://golang.org/doc/).
 
----
-
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
-
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
 
 Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Golang application.
+
+> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 ## Choose Theme
 
@@ -42,13 +40,13 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 This implementation uses the `github.com/julienschmidt/httprouter` router module to create Golang API.
 
-* Create a empty project and run the following command in the command line:
+* Create an empty project and run the following command in the command line:
 
   `go mod init golang-sdk-tutorial`
 
   > Upon completion, it will add a `go.mod` and `go.sum` file in the project folder.
 
-* Add the project dependency of router 
+* Add the project dependency of router. 
   
   `go get github.com/julienschmidt/httprouter`
 
