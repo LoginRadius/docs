@@ -117,7 +117,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 **Where:**
 
 * **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
-* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
+* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
