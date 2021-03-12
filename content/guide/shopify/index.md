@@ -14,11 +14,11 @@ This integration makes use of the LoginRadius JavaScript Interfaces along with t
 
 This section covers the required configurations that you need to perform to enable Multipass in Shopify. 
 
-> Note: (This feature is only available to [Shopify Plus](https://www.shopify.com/plus?utm_source=shopify&utm_medium=docs&utm_campaign=multipass&shpxid=1aeec13b-8DEC-47D9-7438-EA80690DF230) customers)
+> Note: (This feature is only available to Shopify Plus customers)
 
 1. Log in to your Shopify account to configure Multipass under:
 
-[Settings ➔ Checkout](https://accounts.shopify.com/store-login?redirect=settings%2Fcheckout%3Fshpxid%3D1aeec13b-8DEC-47D9-7438-EA80690DF230) ➔ (scroll to **Customer accounts**) 
+**Settings ➔ Checkout** ➔ (scroll to **Customer accounts**) 
 
 2. Set the configuration to **Accounts are required.**
 
