@@ -162,6 +162,11 @@ const Middle = () => {
                   icon: "images/java.svg",
                   text: "ASP.NET Core MVC",
                 },
+                {
+                  link: "/tutorial/golang",
+                  icon: "images/java.svg",
+                  text: "Golang",
+                },
               ]}
             />
           </div>
