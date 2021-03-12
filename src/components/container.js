@@ -167,6 +167,11 @@ const Middle = () => {
                   icon: "images/java.svg",
                   text: "Golang",
                 },
+                {
+                  link: "/tutorial/python",
+                  icon: "images/java.svg",
+                  text: "Python",
+                },
               ]}
             />
           </div>
