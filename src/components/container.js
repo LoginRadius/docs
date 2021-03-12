@@ -298,6 +298,11 @@ const Middle = () => {
                   <span>SMTP provider settings</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/manage-team-members">
+                  <span>Manage Team Members</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Explore user managment options*/}
