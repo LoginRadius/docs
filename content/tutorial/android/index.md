@@ -54,15 +54,11 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
   LoginRadiusSDK.Initialize init = new LoginRadiusSDK.Initialize();
   init.setApiKey("<apikey>");
   init.setSiteName("<sitename>");
-  init.setSott("<sott>");
-
-
   ```
 
 - Replace the following placeholders in the above :
 
   - apiKey: **API Key** obtained in the [Get Credential](#getcredentials) step.
-  - sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
   - siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
 
 - Add the following permissions in your app's `manifests/AndroidManifest.xml` :
@@ -76,6 +72,15 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
   <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
   ```
+- Add the following dependency in your app's `build.gradle`:
+
+```
+implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+implementation 'com.google.code.gson:gson:2.8.5'
+implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+```
 
 ## Implement Registration
 
@@ -112,6 +117,8 @@ Add the following code to implement registration:
           }
 
 ```
+- sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
+
 
 ## Implement Login
 
