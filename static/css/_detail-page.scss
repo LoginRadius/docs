@@ -222,6 +222,10 @@
     // detail page image alignment
     .gatsby-resp-image-wrapper {
       margin-left: 0 !important;
+      img {
+        border-radius: 5px;
+        border: 1px solid #e8e9ea;
+      }
     }
     ul:not(.breadcrumbs) {
       margin: 0 0 2rem 1.2rem;
