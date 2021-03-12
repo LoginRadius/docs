@@ -12,7 +12,10 @@ Setting up an SMS provider allows you to send and receive text messages to and f
 To setup your SMS Provider, you should follow the below steps.
 
 ###Step 1:Navigation
-1.  Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. Click the down arrow or anywhere within the section and then select the **SMS Provider Settings** section as highlighted in the below screen:
+
+1.  Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+2. From the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. 
+3. Click the down arrow or anywhere within the section and then select the **SMS Provider Settings** section as highlighted in the below screen.
 
 ![alt_text](images/sms-provider.png "image_tooltip")
 
@@ -27,6 +30,5 @@ Provide the following default supported Twilio SMS provider details:
 4.  **Twilio Number**: Enter the Twilio registered number.
 
 ###Step 3:Save
-Save the settings by clicking the **Save** button.
 
-SMS provider settings are now configured
+Save the settings by clicking the **Save** button.
