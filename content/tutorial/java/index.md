@@ -14,18 +14,20 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
 
-Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Node.js application.
+Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your JAVA application.
 
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to to select a design theme for your login page, or further customize the content displayed:
+In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
 
 
-To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
+To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. 
+
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
 
 
 ## Get Credentials
@@ -47,7 +49,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 Next, we can either install Eclipse or VSCode (available from their respective websites) as an IDE to run our JAVA project. For this project, we are choosing Visual Studio Code. For Eclipse, refer [here](https://medium.com/how-to-start-developing-java-applications/simple-hello-world-application-in-java-using-eclipse-1ebae99d9fcf).
 
 
-Once you have both JDK and VSCode installed, we can follow [this guide] (https://medium.com/@tariqul.islam.rony/learning-java-and-spring-boot-with-visual-studio-code-vscode-part-1-54073f2fa264) to setup a JAVA environment in Visual Studio Code.
+Once you have both JDK and VSCode installed, we can follow [this guide](https://medium.com/@tariqul.islam.rony/learning-java-and-spring-boot-with-visual-studio-code-vscode-part-1-54073f2fa264) to setup a JAVA environment in Visual Studio Code.
 
 ### Set up a server for the JAVA project
 
@@ -58,7 +60,7 @@ Install the Spring boot Extensions Pack for getting Spring boot Development Envi
 
 ### Implementing Loginradius SDK in JAVA
 
-Loginradius offers an already done for you java-SDK kit that can be used to implement user authorization and registration for your app easily.
+Loginradius offers an already done for you Loginradius JAVA-SDK kit that can be used to implement basic features such as user authorization and registration for your app easily.
 
 For this, you'll be needing Git for VSCode, which if not already setup can be done so by following [this guide](https://www.jcchouinard.com/install-git-in-vscode/).
 
