@@ -12,13 +12,12 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Python? Check out [this reference](https://www.python.org/about/).
 
----
-
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
 
 Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your python application.
+
+> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 ## Choose Theme
 
@@ -40,23 +39,25 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ## Setup Virtualenv
 
-* Check if pip package manager is installed by running the following command
+* Check if pip package manager is installed by running the following command:
 
     `pip -h`
 
-* Install virutalenv
+* Install virutalenv by running the following command:
 
     `pip install virtualenv`
     
-* Create the virtual environment
+* Create the virtual environment by running the following command:
     
     `virtualenv python_demo`
 
-* Activate the virtualenv
-1. For MacOS/Linux: `source python_demo/bin/activate`
-2. For Windows: `python_demo\Scripts\activate`
+* Activate the virtualenv, the following are the commands for MacOS/Linux and Windows:
+
+  * For MacOS/Linux: `source python_demo/bin/activate`
+  * For Windows: `python_demo\Scripts\activate`
 
 ## Setup Project
+
 This implementation uses the flask framework to create Python API.
 
 * Install flask by running the following command:
@@ -65,7 +66,7 @@ This implementation uses the flask framework to create Python API.
 
 * Create a requirement file `pip freeze > requirements.txt`.
 
-* Create a new file name `app.py`.
+* Create a new file name `app.py` and add the following code snippet:
 
   ```
   from flask import Flask
@@ -78,7 +79,8 @@ This implementation uses the flask framework to create Python API.
   if __name__ == "__main__":
    app.run()
   ```
-We can then try running our new Flask application with the command python app.py. You can then open http://localhost:5000 in your browser, and you should see the “Hello World!” response.
+
+Now, try running new Flask application with the command `python app.py`. Open http://localhost:5000 in your browser, and you should see the “Hello World!” response.
 
 ## Install SDK
 
@@ -125,7 +127,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 **Where:**
 
 * **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
-* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
+* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
