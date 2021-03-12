@@ -48,7 +48,7 @@ This will install the LoginRadius App into your BigCommerce environment. If you 
 
 2.) Provide any name for the API Account and do the following configuration and save the changes
 
-![alt_text](images/bigcommerce-setup-create-account.png "image_tooltip")
+![alt_text](images/bigcommerce-setup-create-api.png "image_tooltip")
 
 * Change Content, Checkout Content, and Customers to modify
 
