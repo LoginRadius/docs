@@ -70,7 +70,7 @@ To support the BigCommerce SSO flows you will need to handle the following:
 
 Set First and Last Name to Required in your LoginRadius. 
 
-**Step 1:** Log in to your [Darwin Dashboard](https://dev-dashboard.lrinternal.com/) account, and navigate to [Integration](https://dev-dashboard.lrinternal.com/integration)
+**Step 1:** Log in to your [Darwin Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration)
 
 The following screen appear :
 
