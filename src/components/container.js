@@ -303,6 +303,11 @@ const Middle = () => {
                   <span>Manage Team Members</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/sms-provider-settings">
+                  <span>SMS Provider Settings</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Explore user managment options*/}
