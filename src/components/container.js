@@ -404,7 +404,7 @@ const Middle = () => {
                 <a href="#">Google reCAPTCHA </a>
               </li>
               <li>
-                <a href="#">Secure Against Bruteforce </a>
+                <a href="/guide/bruteforce">Secure Against Bruteforce </a>
               </li>
               <li>
                 <a href="#"> Set Strong Password policy</a>
