@@ -104,7 +104,7 @@ If the consumer is not logged into the hosted page, the consumer will be asked t
 
 This section covers the required configurations that you need to perform in the LoginRadius Dashboard for JWT Login.
 
-1. Log in to your [Darwin Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration)
+1. Log in to your [Darwin Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](#)
 
    The following screen appear :
 
