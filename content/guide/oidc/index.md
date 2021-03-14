@@ -205,7 +205,7 @@ e.g.
 }
 ```
 
-Once you have the code you can request an access_token via the [Access token by OpenID Code API](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/openid-connect/access-token-by-openid-code/).
+Once you have the code you can request an access_token via the [Access token by OpenID Code API](#).
 
 ### Implicit Flow
 The implicit flow requests tokens without explicit client authentication, instead of using the redirect URI to verify the client identity. Because of this, refresh tokens are not allowed, nor is this flow suitable for long lived access tokens. From the client application's point of view, this is the simplest to implement, as there is only one round trip to the openid&nonce={Unique Generated nonce}`
@@ -263,15 +263,15 @@ Once you have obtained a code or access_token (depending on the workflow you've 
 
 If you've obtained an authorization code, you're able to exchange it for an access_token.
 
-Use the [Access token by OpenID](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/openid-connect/access-token-by-openid-code/) Code API to get the access_token, JWT Token and the refresh_token.
+Use the [Access token by OpenID](#) Code API to get the access_token, JWT Token and the refresh_token.
 
 #### Refresh Access Token
 
-You can use the [Refresh Access Token API Call](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/openid-connect/openid-revoke-refresh-token/) to expire a Refresh Token.
+You can use the [Refresh Access Token API Call](#) to expire a Refresh Token.
 
 #### Getting the UserInfo
 
-The UserInfo of a logged in user can be retrieved with the [UserInfo by Access Token API](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/openid-connect/userinfo-by-access-token/) call which will return the UserInfo in a JWT Token.
+The UserInfo of a logged in user can be retrieved with the [UserInfo by Access Token API](#) call which will return the UserInfo in a JWT Token.
 
 **Note:** The RSA algorithm is currently the only supported encryption type for the JWT tokens.
 
@@ -281,11 +281,11 @@ Here's some other endpoints you will need in your OpenID workflow.
 
 #### Getting The JSON Web Key Set
 
-Our [JSON Web Key Set API Call](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/openid-connect/json-web-key-set) provides the JWKS that can be used to verify any JWT token with the returned JSON Web Key Set (JWKS).
+Our [JSON Web Key Set API Call](#) provides the JWKS that can be used to verify any JWT token with the returned JSON Web Key Set (JWKS).
 
 #### OIDC Discovery Endpoint
 
-The [OIDC Discovery API Endpoint](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/openid-connect/oidc-discovery/) provides a client with configuration details about the OpenID Connect metadata of Loginradius App.
+The [OIDC Discovery API Endpoint](#) provides a client with configuration details about the OpenID Connect metadata of Loginradius App.
 
 
 URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-known/openid-configuration

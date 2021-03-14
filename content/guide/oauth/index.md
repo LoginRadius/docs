@@ -52,7 +52,7 @@ The access token request will contain the following parameters. Here is an expla
 
 **Step 2: Exchange Code for Access Token**
 
-The authorization code is an intermediate credential, which encodes the authorization obtained at Step 1. To retrieve the access token, the client must submit the code to the authorization server, use the [Access token by OAuth 2 token API](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/oauth-2-0/access-token-by-oauth-2-0-token/) to obtain an access_token.
+The authorization code is an intermediate credential, which encodes the authorization obtained at Step 1. To retrieve the access token, the client must submit the code to the authorization server, use the [Access token by OAuth 2 token API](#) to obtain an access_token.
 
 ```
 https://cloud-api.loginradius.com/sso/oauth/access_token
@@ -71,11 +71,11 @@ Request Body:
 
 Here is an explanation of the Request Body Parameter :
 
-- **client_id:** [LoginRadius API key](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#gettingyourapikeyandsecret0).
+- **client_id:** [LoginRadius API key](#).
 
 - **redirect_uri:** Callback URL of your site where you want to redirect back your customers
 
-- **client_secret:** [LoginRadius API secret](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#gettingyourapikeyandsecret0).
+- **client_secret:** [LoginRadius API secret](#).
 
 - **code:** The parameter received from the Login Dialog redirect above.
 
@@ -94,9 +94,9 @@ API Response containing the access_token:
 
 **Step 3: Use Obtained LoginRadius Access Token**
 
-You can use the obtained access_token with [LoginRadius APIs](https://www.loginradius.com/docs/api/v2/customer-identity-api/overview/) supporting the access_token until the token expires or revokes.
+You can use the obtained access_token with [LoginRadius APIs](#) supporting the access_token until the token expires or revokes.
 
-> **Note:** To include PKCE within this request, refer to this [document](https://www.loginradius.com/docs/single-sign-on/tutorial/federated-sso/pkce-flow/#oauthpkceflow3) for more information.
+> **Note:** To include PKCE within this request, refer to this [document](#) for more information.
 
 ### Implicit 
 
@@ -114,11 +114,11 @@ The access token request will contain the following parameters. Here is an expla
 
 - `https://cloud-api.loginradius.com/sso/oauth/redirect`: The API authorization endpoint.
 
-- **client_id:** The identifier of the customer at the authorization server. Enter the [LoginRadius API key](https://www.loginradius.com/docs/api/v2/customer-identity-api/overview/)
+- **client_id:** The identifier of the customer at the authorization server. Enter the [LoginRadius API key]()
 
 - **Redirect_uri:** Callback URL of your site where you want to redirect back your customers after an authorization code is granted.
 
-  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your [LoginRadius Dashboard](https://adminconsole.loginradius.com/deployment/apps/web-apps). For more information, refer to this [document](https://www.loginradius.com/docs/api/v2/customer-identity-api/overview/).
+  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your [LoginRadius Dashboard](https://dashboard.loginradius.com/configuration). For more information, refer to this [document](#).
 
 - **scope [optional]:** Specifies the scope of the requested token. If omitted, the authorization server may assume some default scope.
 - **state [optional]:** this parameter will be returned as it is, part of the response
@@ -137,7 +137,7 @@ The Resource Owner Password Credentials Grant flow allows you to obtain an acces
 
 **Step 1: Obtain Access Token** 
 
-Use the [Access Token by Account Password](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/oauth-2-0/access-token-by-account-password/) to obtain an access_token.
+Use the [Access Token by Account Password](#) to obtain an access_token.
 
 **POST**
 
@@ -159,8 +159,8 @@ Request Body:
 
 Here is an explanation of the Request Body Parameters:
 
-- **client_id:** [LoginRadius API key](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#gettingyourapikeyandsecret0).
-- **client_secret:** [LoginRadius API secret](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#gettingyourapikeyandsecret0).
+- **client_id:** [LoginRadius API key](#).
+- **client_secret:** [LoginRadius API secret](#).
 - **grant_type:** Value must always be 'password'.
 - **username:** You must provide the customer's email/username/phoneid, depending on how you have configured LoginRadius for authentication.
 
@@ -180,13 +180,13 @@ Here is an explanation of the Request Body Parameters:
 
 **Step 2: Use Obtained LoginRadius Access Token** 
 
-You can use the obtained access_token with [LoginRadius APIs](https://www.loginradius.com/docs/api/v2/customer-identity-api/overview/) supporting the access_token until the token expires or revokes.
+You can use the obtained access_token with [LoginRadius APIs](#) supporting the access_token until the token expires or revokes.
 
 ### Device Code Flow
 
 This section covers use of the Device Code flow with LoginRadius.
 
-First, you need to enable the device code flow feature by raising a support ticket to the [LoginRadius Support](https://adminconsole.loginradius.com/support/tickets) team. You should provide the following details at the time of configuration :
+First, you need to enable the device code flow feature by raising a support ticket to the [LoginRadius Support](https://loginradiusassist.freshdesk.com/customer/login) team. You should provide the following details at the time of configuration :
 
 ```
 "LoginUrl": "< login URL>"// Device will open this URL to get the code and login after authentication in the browser. 
@@ -198,7 +198,7 @@ First, you need to enable the device code flow feature by raising a support tick
 ```
 **Step 1: Obtained Device Code** 
 
-Use the [Request Device Code](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/oauth-2-0/request-device-code/) API to request a new device code, user code from the Device Code Endpoint.
+Use the [Request Device Code](#) API to request a new device code, user code from the Device Code Endpoint.
 
 ```
 Post: https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device
@@ -214,7 +214,7 @@ Request Body
 
 Here is an explanation of the Request Parameters:
 
-- **client_id:** [LoginRadius API key](https://www.loginradius.com/docs/api/v2/customer-identity-api/overview/)
+- **client_id:** [LoginRadius API key](#)
 ).
 - **Scope:** Optional parameter(e.g email profile)
 
@@ -237,7 +237,7 @@ By using the following endpoint: **/sso/oauth/{OAuthName}/device/confirm**, cons
 
 Here is an explanation of the Request Parameter:
 
-- **client_id:** [LoginRadius API key]((https://www.loginradius.com/docs/api/v2/customer-identity-api/overview/)).
+- **client_id:** [LoginRadius API key](#).
 
 - **user_code:** User code received in response of Request Device Code API (mentioned in step 1)
 
@@ -251,7 +251,7 @@ return_url=URLENCODE(https://cloud-api.lrinternal.com/sso/oauth/device/callback?
 ```
 **Step 3: Accept Authorization Request** 
 
-Use the [Request Token API](https://www.loginradius.com/docs/api/v2/single-sign-on/federated-sso/oauth-2-0/request-tokens/) to accept the authorization request.
+Use the [Request Token API](#) to accept the authorization request.
 
 ```
  https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token
@@ -337,9 +337,9 @@ Once you have obtained an **access_token**, you can use the Refresh Access Token
 
 Here is an explanation of the Request Body Parameter:
 
-* **client_id:** [LoginRadius API key](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#gettingyourapikeyandsecret0). 
+* **client_id:** [LoginRadius API key](#). 
 
-* **client_secret:** [LoginRadius API secret](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#gettingyourapikeyandsecret0).
+* **client_secret:** [LoginRadius API secret](#).
 
 * **grant_type:** The grant_type needs to be refresh_token.
 
