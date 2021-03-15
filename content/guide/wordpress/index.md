@@ -1,0 +1,57 @@
+# Get Started - WordPress
+The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your WordPress application.
+> Note:[Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+You can access the WordPress LoginRadius CIAM Plugin [here](#https://wordpress.org/plugins/loginradius-customer-identity-and-access-management/).
+## Get Credentials
+Before using LoginRadius WordPress Plugin, you need to get your App Name, API Key, and API Secret.
+In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
+>Note: Whitelist your application domain as explained in the Domain Whitelisting (#domain-whitelisting)section.
+## Setup WordPress Plugin
+Log in to an existing WordPress site as an administrator.
+Go to **Plugins > Add New** in the admin menu on the left.
+Search for **"LoginRadius CIAM"** and click the **Install Now** button.
+![alt_text](images/wordpress-plugin.png "image_tooltip")
+To activate the plugin, navigate to **WordPress Admin Panel > CIAM > Activation** and enter your **API Key**, and **API Secret** obtained from the [Get Credentials] (#get-credentials) step.
+![alt_text](images/plugin-activation.png "image_tooltip")
+Click the **Save Settings** button.
+## Implement Registration and Login
+To enable authentication settings, navigate to  ** Wordpress Admin Panel > CIAM > Authentication**, the following screen will appear:
+![alt_text](images/ciam-user-registration.png "image_tooltip")
+ 
+### User Registration Tab
+** Auto Generate Authentication Page**
+
+To allow the plugin to auto-generate the pages for login, registration, forgot password and reset password enable 'Auto Generate Authentication Page'.
+> Note: You can also generate traditional/social login and registration interface on the desired page using the shortcodes provided in the ShortCodes tab, If you don’t wish to enable **Auto Generate Authentication Page**.
+ 
+![alt_text](images/auto-generate-auth-page.png "image_tooltip")
+
+
+**Redirection After Login**
+You can set the redirection of the consumer after login to one of the following options that displayed in the screen:
+![alt_text](images/redirect-to-custom-url.png "image_tooltip")
+Below is the example of passing the Redirect To URL with the login URL
+http://www.example.com/login/?redirect_to=http:%2F%2Fwww.example1.com
+> **Note:** redirect_to parameter will have a URL in the encoded format.
+## # Authentication Tab
+Email templates can be added/modified in **LoginRadius Dashboard** which will be displayed in the WP-Admin authentication page.
+![alt_text](images/auth-email-template.png "image_tooltip")
+ 
+> Refer to [this document](#https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
+### Short Codes Tab
+You can select shortcodes that can be used on page or post to display the respective interface. 
+## Run and See Result
+** Registration Page **
+Open the registration page created from the plugin authentication tab from the admin panel, it will appear as given below. 
+![alt_text](images/register.png "image_tooltip")
+
+** Login Page **
+Login interfaces can be used from the login page created from the plugin authentication tab from the admin panel.
+![alt_text](images/login.png "image_tooltip")
+## Domain Whitelisting
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+ 
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+ 
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
