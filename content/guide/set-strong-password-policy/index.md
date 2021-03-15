@@ -8,47 +8,45 @@ description: "This is a guide for configuring Strong Password Policy."
 # Set Strong Password Policy
 The **Password Policy** feature allows you to enhance authentication security by defining the password rules. This guide will help you in setting a Password Policy using various password scales.
 
-## Navigation
-1. To set a Password Policy, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account
+## Access Password Policy Section
+
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
 2. From the left navigation panel, click **Security** and then navigate to the **Password Policy** section.
+3. Click the down arrow, the **Password Policy** screen will appear:
 
-Click the down arrow or anywhere within the section, the **Password Policy** screen will appear:
-
-![alt_text](/images/main.png "image_tooltip")
+   ![alt_text](images/main.png "image_tooltip")
 
 
-LoginRadius allows you to set up password strength from Weak to Very Strong with a set of predefined rules, or you can set your custom rules for the password.
+LoginRadius allows you to set up password strength from **Weak** to **Very Strong** with a set of predefined rules explained below, or you can set  [**Custom Rules**](#set-custom-password-policy) for the password.
 
-## Set of Rules
+## Choose Password Policy
 
-LoginRadius provides a predefined list of rules for your ease, or you can select the Custom option to set the desired policy rules. The following explains what each rule offers:
+LoginRadius provides the following predefined list of rules for your ease:
 
-1. **Weak**
-Allows your consumers to set passwords from min length 6 to max length 20 with alphanumeric characters.
+> For ease, you can apply one of the following for your consumers. If desired, you can [configure custom password rules](#set-custom-password-policy) as per your business requirements:
 
-2 **Medium**
-Allows your consumers to set passwords from min length 6 to max length 20 with at least 1 uppercase character, 1 special character and 1 digit required. Commonly used passwords will not be allowed to be set as passwords.
+1. **Weak**: Allows your consumers to set passwords from min length 6 to max length 20 with alphanumeric characters.
 
-3. **Strong**
-Allows your consumers to set passwords from min length 6 to max length 20 with at least 1 uppercase character, 1 special character and 1 digit required. Commonly used passwords, dictionary words, profile words will not be allowed to set as passwords. Also, the consumers cannot use the last 3 passwords again for their account.
+2. **Medium**: Allows your consumers to set passwords from min length 6 to max length 20 with at least 1 uppercase character, 1 special character, and 1 digit required. Commonly used passwords will not be allowed to be set as passwords.
 
-4. **Very Strong**
-Allows your consumers to set passwords from min length 6 to max length 20 with at least 1 uppercase character, 1 special character and 1 digit required. Commonly used passwords, dictionary words, profile words will not be allowed to set as passwords. Also, the consumers cannot use the last 3 passwords again and must change passwords each month.
+3. **Strong**: Allows your consumers to set passwords from min length 6 to max length 20 with at least 1 uppercase character, 1 special character, and 1 digit required. Commonly used passwords, dictionary words, profile words will not be allowed to set as passwords. Also, the consumers cannot use the last 3 passwords again for their accounts.
 
-## Setup Custom Password Policy
+4. **Very Strong**: Allows your consumers to set passwords from min length 6 to max length 20 with at least 1 uppercase character, 1 special character, and 1 digit required. Commonly used passwords, dictionary words, profile words will not be allowed to set as passwords. Also, the consumers cannot use the last 3 passwords again and must change passwords each month.
 
-To set up a custom password policy ruleset, click anywhere on the Custom scale. The **Custom Password Policy** screen will appear:
+## Set Custom Password Policy
+
+To set up a custom password policy ruleset, click anywhere on the **Custom** scale. The **Custom Password Policy** screen will appear:
 
 ![alt_text](/images/custom.png "image_tooltip")
 
 
-Enter or select the following configuration details:
+Enter or select the following details:
 
-1.   **Password Validation**: The Password Validation allows you to set the length (6 to 32 ) and type of the password (alphabet, alphanumeric or Most used combination).
+1.  **Password Validation**: Password Validation allows you to set the length (6 to 32 ) and type of the password (alphabet, alphanumeric, or Most used combination).
 
 >   Note: Most used combinations contain at least 1 uppercase character, 1 special character, one number.
 
-![alt_text](/images/password-type.png "image_tooltip")
+    ![alt_text](/images/password-type.png "image_tooltip")
        
 
 2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of [common passwords](/docs/developer/general/common-passwords/) is maintained by LoginRadius and gets updated regularly.
