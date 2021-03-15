@@ -208,10 +208,10 @@ const Middle = () => {
             <h3 className="title">CMS App</h3>
             <ul>
               <li>
-                <a href="#">
+              <Link to="/guide/wordpress">
                   <img src="images/wordpress.svg" width={20} />
-                  <span>WordPress</span>
-                </a>
+                  <span>WordPress </span>
+                </Link>
               </li>
               <li>
                 <a href="#">
