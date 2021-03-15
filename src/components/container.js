@@ -354,7 +354,7 @@ const Middle = () => {
                 <a href="#">Web SSO </a>
               </li>
               <li>
-                <a href="#">Federated SSO </a>
+                <a href="/guide/fed-sso">Federated SSO </a>
               </li>
             </ul>
           </div>
