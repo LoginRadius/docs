@@ -20,11 +20,17 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Get Credentials
 
-Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
+Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name** (when you signed up for the LoginRadius account, it created an app for you), **API Key**, and **SOTT**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+- In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your App Name and API Key:
 
-![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
+
+- Now click the the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
+
+  ![alt_text](images/sott.png "image_tooltip")
+
+- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
 ## Setup Ionic 
 
@@ -83,6 +89,8 @@ Replace the following placeholders in the above :
 
 - apiKey: **API Key** obtained in the [Get Credential](#getcredentials) step.
 - siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
+- sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
+
 
 ## Configure Registration and Page
 
