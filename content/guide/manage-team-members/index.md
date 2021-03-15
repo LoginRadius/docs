@@ -5,66 +5,75 @@ description: "This is a guide for Managing Team Members."
 ---
 
 
-#Manage Team Members
+# Manage Team Members
 This section helps view and manage your authorized Team Members who can manage your LoginRadius site.
 
 Team Management screen has the following options:
 
-1. Manage Team Member
-2. Add Team Member
-3. Audit Logs
+* [Manage Team Member](#manage-team-member)
+* [Add Team Member](#add-team-member)
+* [Audit Logs](#activity-logs)
 
-##Navigation
-1. To access Team Management, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
-2. From the left navigation panel, click **Teams**. The **Team Management** screen will appear.
+## Access Team Management Section
 
-![alt_text](images//team-management.png "image_tooltip")
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+2. From the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
+
+   ![alt_text](images/team-management.png "image_tooltip")
 
 
-##Manage Team Member
+## Manage Team Member
 
-This section shows the complete list of team members that have access to your LoginRadius site. List of management tasks that can be performed on your team members includes:
+This section displays the complete list of team members that have access to your LoginRadius site. List of management tasks that can be performed on your team members includes:
 
-1. *   Edit their roles
-2. *   Send them a password reset email
-3. *   Delete their account
+* **Edit Member Access**: You can manage access by editing their roles.
+* **Resent Password Send**: You can send them a password reset email.
+* **Remove Member**: You can remove them from the team members list, which results in deleting their accounts.
 
-Roles assigned to a team member can be changed under the Team Management section by editing a team member. Click on the vertical ellipsis (three dots) to select the available action for a team member.
+> You can access these options for a team member by clicking the vertical ellipsis (three dots) available next to a team member's name:
+>
+> ![alt_text](images/teams-action.png "image_tooltip")
 
-##Add Team Member
+
+## Add Team Member
 
 From this section, you can add a new team member to your LoginRadius Site by providing the member's details and assigning the desired Role.
 
-* Click the **ADD MEMBER** button to add a new team member to your LoginRadius Site and the following pop-up will appear.
+To add a new team member to your LoginRadius Site, click the **Add Member** button, and the following pop-up will appear.
 
 ![alt_text](images/add-member.png "image_tooltip")
 
-
-You need to provide following details:
+You need to provide the following details:
 
 1. **Email Address(es):** Enter the team member’s email address.
 
-2. **App(s):** Select the App for which you are adding team members. If you have multiple LoginRadius App(s), you can find the list in dropdown.
+2. **App(s):** Select the App for which you are adding team members. If you have multiple LoginRadius App(s), you can find the list in the dropdown.
 
 3. **Role(s):** Select the team member’s Role.
 
     Available Role(s) are:
 
-    *   **Admin:** Allow Add/Update permissions
-    *   **Reader:** Allow Read only permissions
+    * **Admin:** Allow Add/Update permissions
+    * **Reader:** Allow Read only permissions
 
-##Activity Logs
+## Activity Logs
 
 Activity Logs contain records of all recent account activities. You can view the records of your LoginRadius site.
 
-* Click the **VIEW ACTIVITY LOGS** button to view the all recent activity details in your account and the following screen appear.
+To view all recent activity details in your account, click the **View Activity Logs** link from the Team Management screen, and the following screen will appear:
 
 ![alt_text](images/activity.png "image_tooltip")
 
-The details include:
+The activity logs details include:
 
-1.   **Email Address:** displays the Email Address of the user who did the particular change.
+*  **Email Address:** Displays the Email Address of the user who performed the particular activity.
 
-2.  **Activity:** which displays the short description of the activity.
+*  **Activity:** Displays the short description of the activity.
 
-3.   **TimeStamp:** which displays the time at which the activity happened.
+*  **TimeStamp:** Displays the time of the activity.
+
+You can perform the following actions on this screen:
+
+* Add a new team member by clicking the **Add Member** button given at the bottom-left of the screen.
+
+* Navigate back to the Team Management screen by clicking the **Back to Team Management** link given at the top-right of the screen.
