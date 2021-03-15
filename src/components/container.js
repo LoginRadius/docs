@@ -293,8 +293,8 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/guide/smtp-provider-settings">
-                  <span>SMTP provider settings</span>
+                <Link to="/guide/setup-your-smtp-provider">
+                  <span>Setup Your SMTP Provider</span>
                 </Link>
               </li>
               <li>
@@ -303,8 +303,8 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/guide/sms-provider-settings">
-                  <span>SMS Provider Settings</span>
+                <Link to="/guide/setup-sms-provider">
+                  <span>Setup SMS Provider</span>
                 </Link>
               </li>
             </ul>
@@ -407,7 +407,7 @@ const Middle = () => {
                 <a href="/guide/bruteforce">Secure Against Bruteforce </a>
               </li>
               <li>
-                <a href="#"> Set Strong Password policy</a>
+              <Link to="/guide/set-strong-password-policy">Set Strong Password Policy</Link>
               </li>
               <li>
                 <Link to="/guide/mfa"> Multi Factor Authentication</Link>

@@ -1,10 +1,10 @@
 ---
-title: "SMTP Provider Settings"
-tags: ["SMTP", "provider","settings"]
+title: "Setup Your SMTP Provider"
+tags: ["SMTP", "Provider","settings","Setup"]
 description: "This is a guide for configuring SMTP Provider Settings."
 ---
 
-# Setup SMTP Provider
+# Setup Your SMTP Provider
 
 Setting up the SMTP server in LoginRadius allows the system to send out all email correspondences directly through your SMTP provider. It enables you to get deliverability stats and analytics and also optimize your email messaging. 
 
