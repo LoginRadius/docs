@@ -6,8 +6,8 @@ description: "This is a guide for integrating and configuring Shopify e-commerce
 
 # Shopify
 
-
 LoginRadius provides you with a Shopify Multipass Hosted Plugin to integrate LoginRadius features and functionalities into your Shopify site. 
+
 This integration makes use of the LoginRadius JavaScript Interfaces along with the LoginRadius Hosted Plugin feature, refer below for instructions on setting up this integration.
 
 ## Multipass Configuration
@@ -18,47 +18,45 @@ This section covers the required configurations that you need to perform to enab
 
 1. Log in to your Shopify account to configure Multipass under:
 
-**Settings ➔ Checkout** ➔ (scroll to **Customer accounts**) 
+   **Settings > Checkout** > (scroll to **Customer accounts**) 
 
 2. Set the configuration to **Accounts are required.**
 
-3. Under Enable Multipass login click on Enable Multipass and not down the generated secret as it will be required into LoginRadius Admin Console Configurations.
+3. Under Enable Multipass login, click the **Enable Multipass** and note down the generated secret as it will be required in the [LoginRadius Dashboard Configurations](#loginradius-dashboard-configurations).
 
 4. As you have your Shopify configured for Multipass connections, you will need to configure Multipass in your LoginRadius Admin Console as well. Refer to the below section for the same.
 
-## LoginRadius Darwin Dashboard Configurations
+## LoginRadius Dashboard Configurations
 
-**Step 1:** Log in to your [Darwin Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration)
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration). The following screen will appear:
 
-The following screen appear :
+   ![alt_text](images/shopify-integration.png "image_tooltip")
 
-![alt_text](/images/shopify-integration.png "image_tooltip")
+2. Click **Add** button for adding a new Shopify app. The following configuration options will appear: 
 
-**Step 2:** Click **Add** option for adding a new Shopify app. The following configuration options will appear: 
-
-
-![alt_text](/images/shopify-available-integrations.png "image_tooltip")
+   ![alt_text](images/shopify-available-integrations.png "image_tooltip")
 
 
-Step 3: Either search for Shopify in the search bar or go to the **Select Category** dropdown and selected **E-Commerce**. Locate **Shopify** and click on **Add me**. Select Enable.
+3. Either search for **Shopify** in the search bar or go to the **Select Category** dropdown and select **E-Commerce**category. Locate **Shopify** and click the **Add Me** option.
 
-![alt_text](/images/shopify-integration-search.png "image_tooltip")
+   ![alt_text](images/shopify-integration-search.png "image_tooltip")
 
-![alt_text](/images/shopify-enable.png "image_tooltip")
+4. The following pop-up will appear, click the **Enable** button.
 
-After this configuration, the app is available in **Available Integrations**. There, click on **Configure Me** under JWT.
-You need to provide or select the following values to add the APP.
+   ![alt_text](images/shopify-enable.png "image_tooltip")
 
-![alt_text](/images/shopify-configuration-fields.png "image_tooltip")
+5. The Shopify app is now available in the **Available Integrations**. There, click the **Configure Me** under the Shopify box. The following screen will appear:
 
+   ![alt_text](images/shopify-configuration-fields.png "image_tooltip")
 
+6. Enter or select the following details to configure your shopify app:
 
-* In the **Store Name** field, enter the name of your store.
-* In the **Store Url** field, enter the URL: https://.myshopify.com.
-* In the **Store Login Url** field, enter the URL: https://.myshopify.com/account/login/.
-* In the **Access Token** (optional) field, enter the Shopify Access Token.
-* In the **Multipass Secret** (Optional) field, enter the **Multipass Secret** obtained from the above Shopify configurations. You can find that under the Shopify Admin Panel: **Settings> Checkout > (Enable Multipass login).**
-* In the **Mapping** field, map the Shopify fields under **Key** with the LoginRadius fields under **Value**. Refer to the below table for the simple mapping examples. You can map the multiple fields by clicking on the **Add Row** button.
+   * In the **Store Name** field, enter the name of your store.
+   * In the **Store Url** field, enter the URL: https://.myshopify.com.
+   * In the **Store Login Url** field, enter the URL: https://.myshopify.com/account/login/.
+   * In the **Access Token** (optional) field, enter the Shopify Access Token.
+   * In the **Multipass Secret** (Optional) field, enter the **Multipass Secret** obtained from the above Shopify configurations. You can find that under the Shopify Admin Panel: **Settings> Checkout > (Enable Multipass login).**
+   * In the **Mapping** field, map the Shopify fields under **Key** with the LoginRadius fields under **Value**. Refer to the below table for the simple mapping examples. You can map the multiple fields by clicking the **Add Row** button.
 
 
 
@@ -71,22 +69,22 @@ You need to provide or select the following values to add the APP.
 | email | Email[0].Value |
 | | |
 
-Now, click on the Add button to save your configurations.
+Now, click the **Add** button to save your configurations.
 
-## Getting Started
-This integration requires editing .liquid files, which can be done through the Shopify theme editor. Simply follow the instructions below:
 
-1. Login to your Shopify admin Panel.
-2. Click on Online Store on the left side menu.
-3. Click on Theme in the left side menu.
-4. Select the desired theme and click on the Actions and select the Edit Code option.
-5. After opening the theme editor, refer to the below section to implement LoginRadius in Shopify.
+> Crucial Information: This integration requires editing `.liquid files`, which can be done through the Shopify theme editor. Simply follow the instructions below:
+> 
+> 1. Login to your Shopify Admin Panel.
+> 2. Click the **Online Store** from the left navigation.
+> 3. Click the **Theme** in the left navigation.
+> 4. Select the desired theme, click the **Actions** and select the **Edit Code** option.
+> 5. After opening the theme editor, refer to the [below section](#upload-assets) to implement LoginRadius in Shopify.
 
-## Upload Assets
+## Upload Assets 
 
-This section covers the LoginRadius Shopify Plugin integration under the Shopify Admin Console. To integrate it, you need to extract the Shopify plugin zip file, which you can get it from [LoginRadius Github](https://github.com/LoginRadius/shopify-identity-plugin).
+This section covers the LoginRadius Shopify Plugin integration under the Shopify Admin Console. To integrate it, you need to extract the Shopify plugin zip file, which you can get from [LoginRadius Github](https://github.com/LoginRadius/shopify-identity-plugin).
 
-1. After extracting the above file, upload the Javascript and CSS files into your theme refer to the following JavaScript and CSS files. 
+1. After extracting the above file, upload the Javascript and CSS files into your theme, refer to the following JavaScript and CSS files. 
 
 **Content:**
 
@@ -100,26 +98,28 @@ This section covers the LoginRadius Shopify Plugin integration under the Shopify
 
 2. Extract **Shopify.Assets**, inside the folder, there are several files you are going to use for your LoginRadius Shopify Implementation.
 
-3. Expand **Assets** option in your Shopify theme editor and click on **Add a new assets** in the Shopify theme editor.
+3. Expand **Assets** option in your Shopify theme editor and click the **Add a new assets** in the Shopify theme editor.
 
 4. Select both files and upload them.
 
 5. If you are going to use the default social icon theme, you will need to upload two image files inside the same folder iconsprite.svg and iconsprite32.png.
 
 ## Edit 'theme.liquid' file
-In the left side theme editor menu, there is a theme file explorer, this expands the **Layouts** option, click on the **theme.liquid** file.
 
-## Add LoginRadius core JS file and theme CSS
-Add the following tags just before the (closing head tag) tag
+In the left side theme editor menu, there is a theme file explorer, this expands the **Layouts** option, click the **theme.liquid** file.
+
+### Add LoginRadius Core JS File and Theme CSS
+Add the following tags just before the (closing head tag) tag:
 
 ```
 {{ 'lr-raas-style.css' | asset_url | stylesheet_tag }}
 {{ '//auth.lrcontent.com/v2/js/LoginRadiusV2.js' | script_tag }}
 {{ '//code.jquery.com/jquery-latest.min.js' | script_tag }}
 ```
-## Initialize the LoginRadius User Registration options
+### Initialize LoginRadius User Registration Options
 
-The LoginRadius User Registration interfaces require the following options: `apiKey`, `appName` and also a SOTT token (unless you prefer to use Google ReCaptcha), add the following script just before the (closing body tag) and make sure to replace and with the LoginRadius API KEY and Site Name respectively provided in your LoginRadius site settings page. Also, add the SOTT token if you want to use SOTT for registration.
+The LoginRadius User Registration interfaces require the following options: `apiKey`, `appName` and also a SOTT token (unless you prefer to use Google ReCaptcha), add the following script just before the (closing body tag) and make sure to replace and with the LoginRadius API KEY and Site Name. Also, add the SOTT token if you want to use SOTT for registration.
+
 ```
 <script type="text/javascript">
 var raasoption = {};
@@ -134,16 +134,16 @@ var lrshopifystore = <Name Of Your Shopify Store>
 </script>
 ```
 
-## Add LoginRadius User Registration Shopify extension library
+### Add LoginRadius User Registration Shopify Extension library
 
-Add the following tag just after the 'Options initialization script'
+Add the following tag just after the 'Options initialization script':
 ```
  {{ 'raas-settings.js' | asset_url | script_tag }}
  ```
 
-## Add SSO code
+### Add SSO Code
 
-For best practice with LoginRadius Single-Sign-On (SSO), simply add the following two code blocks to each page where Single Sign-On is required. You need to add this to your theme.liquid file. The first code block is for the scenario when your user is not logged into Shopify but your user is logged in from other SSO family sites. The second one is used after your user is logged into Shopify, but has been logged out from other SSO family sites. Put it just after the 'raassettings. js' script tag from the above steps.
+For best practice with LoginRadius Single-Sign-On (SSO), simply add the following two code blocks to each page where Single Sign-On is required. You need to add this to your theme.liquid file. The first code block is for the scenario when your consumer is not logged into Shopify but your consumer is logged in from other SSO family sites. The second one is used after your consumer is logged into Shopify, but has been logged out from other SSO family sites. Put it just after the 'raassettings. js' script tag from the above steps.
 ```
 {% if customer %}
  <script type = "text/javascript">
@@ -151,7 +151,7 @@ For best practice with LoginRadius Single-Sign-On (SSO), simply add the followin
  var check_options= {};
  check_options.onError = function(response) {
  // On Error
- // If the user is not log in then this function will execute. 
+ // If the consumer is not log in then this function will execute. 
  window.location = 'https://{{ shop.domain }}/account/logout'; 
  }; 
  LRObject.util.ready(function() {
@@ -188,16 +188,22 @@ For best practice with LoginRadius Single-Sign-On (SSO), simply add the followin
 ## Login
 
 Expand the templates option under directory **Template**, select **customers/login.liquid** option, select all and then delete everything on this page.
-**Important:** On this page you need to make sure jQuery is properly imported as it varies on different themes if jQuery loads perfectly then it’s good else you can import the latest version manually by adding the following line at the top of your page.
+
+> **Crucial Information:** On this page, you need to make sure jQuery is properly imported as it varies on different themes. If jQuery loads perfectly then it’s good, else you can import the latest version manually by adding the following line at the top of your page.
+
 {{ '//code.jquery.com/jquery-latest.min.js' | script_tag }}
-Then copy and paste the code from the file 'login.liquid' from the zip folder. This file contains the interface and control for all the LoginRadius User Registration modules, it contains side-by-side social and traditional login interfaces, a message span to show the message, a link for 'forget the password, and handles for 'forget password' and 'email verification'.
+
+Then copy and paste the code from the file 'login.liquid' from the zip folder. This file contains the interface and control for all the LoginRadius User Registration modules, it contains side-by-side social and email/password login interfaces, a message span to show the message, a link for 'forget the password, and handles for 'forget password' and 'email verification'.
 
 ## Registration
-Expand the templates option and click on **customers/register.liquid**. To implement the registration form on the Shopify Register page select everything in the file and replace it with the file 'registration.liquid' in the zip folder.
-It will generate the user registration form for you with validation logic. All the fields are customizable when the form is being submitted, a verification email will be sent out to the email address that has been just filled in. The user will be officially registered after the verification link has been clicked.
+
+Expand the templates option and click the **customers/register.liquid**. To implement the registration form on the Shopify Register page, select everything in the file and replace it with the file 'registration.liquid' in the zip folder.
+
+It will generate the user registration form for you with validation logic. All the fields are customizable when the form is being submitted, a verification email will be sent out to the email address that has been just filled in. The consumer will be officially registered after the verification link has been clicked.
 
 ## Customizations
-This implementation requires the LoginRadius JavaScript Interface, if you want to customize the look and feel or even make some functionality changes, refer to our LoginRadius JavaScript Interface documentation.
+
+This implementation requires the LoginRadius JavaScript Interface, if you want to customize the look and feel or make some functionality changes, refer to our LoginRadius JavaScript Interface documentation.
 
 
 
