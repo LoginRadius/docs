@@ -196,7 +196,7 @@ const Middle = () => {
               <li>
                 <Link to="/tutorial/ionic">
                   <img src="images/ionic.svg" width={20} />
-                  <span>Ionic</span>
+                  <span>Ionic </span>
                 </Link>
               </li>
             </ul>
