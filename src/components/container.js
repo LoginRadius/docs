@@ -194,10 +194,10 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">
+              <Link to="/tutorial/ionic">
                   <img src="images/adobephonegap.svg" width={20} />
                   <span>PhoneGap</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
