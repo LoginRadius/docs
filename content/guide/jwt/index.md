@@ -43,7 +43,7 @@ The JWT will be encrypted with an algorithm. The decrypted JWT contains the Head
 
   ```
   {
-  "iss": "https://<lrSiteName>.hub.loginradius.com/",
+  "iss": "https://<your-app-name>.hub.loginradius.com/",
   "sub": "{uid}",
   "jti": "unique string",
    Key1: value1, 
@@ -83,19 +83,19 @@ The following flow chart shows how JWT flow works between IDP and SP, where IDP 
 
 ![alt_text](../../guide/jwt/images/jwt-sso-flow.png "image_tooltip")
 
-LoginRadius supports a delegated redirect SSO flow through which you can redirect your consumer to [LoginRadius Identity Experience Framework](https://www.loginradius.com/docs/libraries/identity-experience-framework/overview/), where your consumer can do account management actions.
+LoginRadius supports a delegated redirect SSO flow through which you can redirect your consumer to [LoginRadius Auth Page (IDX)](https://lr-developer-docs.netlify.app/guide/customize-auth-page), where your consumer can do account management actions.
 
 Upon successful login or social login, the consumer will be redirected to the return URL along with the JWT for this authentication session. Here is the step by step instruction for setting JWT SSO flow:
 
-1. First of all, configure a JWT app in your LoginRadius Dashboard. Refer to the JWT Darwin Dashboard Configuration section for how to configure JWT in the LoginRadius Dashboard.
+1. First of all, configure a JWT app in your LoginRadius Dashboard. Refer to the JWT LoginRadius Dashboard Configuration(#loginradius-dashboard-configuration) section for how to configure JWT in the LoginRadius Dashboard.
 
-2. Whitelist the service provider URL in the LoginRadius Dashboard. Follow [this](#domain-whitelisting) for information on how to whitelist URLs in the LoginRadius Dashboard.
+2. Whitelist the service provider URL in the LoginRadius Dashboard. Follow [this](#whitelist-domain) for information on how to whitelist URLs in the LoginRadius Dashboard.
 
 3. The following is the LoginRadius JWT SSO URL: `https://cloud-api.loginradius.com/sso/jwt/redirect/token?apikey=<LRapikey>&jwtapp=<jwtAppName>&return_url=<encode(service provider url)>`
 
 4. If a consumer is not logged in on your service provider app then direct it to the LoginRadius JWT SSO URL `(https://cloud-api.loginradius.com/sso/jwt/redirect/token?apikey=&jwtapp=&return_url=)`
 
-5. The JWT SSO URL will redirect to your LoginRadius Identity Experience Framework hosted page `(https://<LRsitename>.hub.loginradius.com)`
+5. The JWT SSO URL will redirect to your LoginRadius Auth Page(IDX) `(https://<your-app-name>.hub.loginradius.com)`
 
 If the consumer is not logged into the hosted page, the consumer will be asked to log in. After authentication, the consumer will be redirected back to the return URL with the JWT as a query parameter.
 
@@ -104,9 +104,9 @@ If the consumer is not logged into the hosted page, the consumer will be asked t
 
 This section covers the required configurations that you need to perform in the LoginRadius Dashboard for JWT Login.
 
-1. Log in to your [Darwin Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration)
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration).
 
-   The following screen appear :
+   The following screen will appear:
 
    ![alt_text](../../guide/jwt/images/jwt-integration.png "image_tooltip")
 
