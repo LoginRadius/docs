@@ -149,27 +149,27 @@ const Middle = () => {
                 },
                 {
                   link: "/tutorial/dotnet-webforms",
-                  icon: "images/node-dot-js.svg",
+                  icon: "images/visualstudio.svg",
                   text: "ASP.NET Web Forms",
                 },
                 {
                   link: "/tutorial/dotnetcore-razor",
-                  icon: "images/php.svg",
+                  icon: "images/visualstudio.svg",
                   text: "ASP.NET Core Razor Pages",
                 },
                 {
                   link: "/tutorial/dotnetcore-mvc",
-                  icon: "images/java.svg",
+                  icon: "images/visualstudio.svg",
                   text: "ASP.NET Core MVC",
                 },
                 {
                   link: "/tutorial/golang",
-                  icon: "images/java.svg",
+                  icon: "images/golang.svg",
                   text: "Golang",
                 },
                 {
                   link: "/tutorial/python",
-                  icon: "images/java.svg",
+                  icon: "images/python.svg",
                   text: "Python",
                 },
               ]}
@@ -267,7 +267,6 @@ const Middle = () => {
                   <span>Passwordless Login</span>
                 </Link>
               </li>
-              
             </ul>
           </div>
           {/*Login Methods we offer*/}
@@ -337,7 +336,7 @@ const Middle = () => {
                 <a href="#">Add Fields to Registartion</a>
               </li>
               <li>
-              <Link to="/guide/customize-domain">
+                <Link to="/guide/customize-domain">
                   <span>Setup custom domain (IDX)</span>
                 </Link>
               </li>
@@ -367,11 +366,11 @@ const Middle = () => {
             </div>
             <h3 className="title">Third Parties Integration</h3>
             <ul>
-            <li>
-            <Link to='/guide/webhook'> Setup Web Hooks</Link>
+              <li>
+                <Link to="/guide/webhook"> Setup Web Hooks</Link>
               </li>
               <li>
-              <Link to='/guide/web-sso'> Enable Web SSO</Link>
+                <Link to="/guide/web-sso"> Enable Web SSO</Link>
               </li>
               <li>
                 <a href="#">Connect SAML App </a>
@@ -411,15 +410,17 @@ const Middle = () => {
                 <a href="#"> Set Strong Password policy</a>
               </li>
               <li>
-                <Link to='/guide/mfa'> Multi Factor Authentication</Link>
+                <Link to="/guide/mfa"> Multi Factor Authentication</Link>
               </li>
               <li>
-                <Link to='/guide/change-session-lifetime'> Change Session Lifetime </Link>
+                <Link to="/guide/change-session-lifetime">
+                  {" "}
+                  Change Session Lifetime{" "}
+                </Link>
               </li>
               <li>
-                <Link to='guide/enable-force-logout'>Enable Force Logout</Link>
+                <Link to="guide/enable-force-logout">Enable Force Logout</Link>
               </li>
-              
             </ul>
           </div>
           {/*Secure Authentication*/}
