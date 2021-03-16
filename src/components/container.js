@@ -406,7 +406,7 @@ const Middle = () => {
             <h3 className="title">Secure Authentication</h3>
             <ul>
               <li>
-                <a href="#">Google reCAPTCHA </a>
+                <a href="/guide/captcha">Google reCAPTCHA </a>
               </li>
               <li>
                 <a href="/guide/bruteforce">Secure Against Bruteforce </a>
