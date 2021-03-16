@@ -39,7 +39,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 - Now click the the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
 
-  ![alt_text](images/sott.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/sott.png "image_tooltip")
 
 - Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
