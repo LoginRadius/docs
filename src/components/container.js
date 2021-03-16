@@ -356,7 +356,7 @@ const Middle = () => {
             <h3 className="title">Single Sign On</h3>
             <ul>
               <li>
-                <a href="#">Web SSO </a>
+              <Link to="/guide/web-sso"> Web SSO</Link>
               </li>
               <li>
                 <a href="/guide/fed-sso">Federated SSO </a>
@@ -452,7 +452,7 @@ const Middle = () => {
             <h3 className="title">Concepts</h3>
             <ul>
               <li>
-                <a href="#">IDX</a>
+                <a href="concepts/idx">IDX</a>
               </li>
             </ul>
           </div>
@@ -465,10 +465,10 @@ const Middle = () => {
             <h3 className="title">References</h3>
             <ul>
               <li>
-                <a href="#">SDKs </a>
+                <a href="references/sdk">SDKs </a>
               </li>
               <li>
-                <a href="#">APIs</a>
+                <a href="references/api">APIs</a>
               </li>
             </ul>
           </div>
