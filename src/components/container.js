@@ -1,6 +1,6 @@
 import React from "react"
 import Modal from "react-modal"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
 
 const Middle = () => {
@@ -86,19 +86,19 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/tutorial/angular">
+                <Link href={withPrefix("/tutorial/angular")}>
                   <img src="images/angular.svg" width={20} />
                   <span>Angular</span>
                 </Link>
               </li>
               <li>
-                <a href="/tutorial/vue">
+                <a href={withPrefix("/tutorial/vue")}>
                   <img src="images/vue-dot-js.svg" width={20} />
                   <span>VueJs</span>
                 </a>
               </li>
               <li>
-                <a href="/tutorial/html-and-js-tutorial">
+                <a href={withPrefix("/tutorial/html-and-js-tutorial")}>
                   <img src="images/html5.svg" width={20} />
                   <span>HTML and JS</span>
                 </a>
@@ -356,7 +356,7 @@ const Middle = () => {
             <h3 className="title">Single Sign On</h3>
             <ul>
               <li>
-              <Link to="/guide/web-sso"> Web SSO</Link>
+                <Link to="/guide/web-sso"> Web SSO</Link>
               </li>
               <li>
                 <a href="/guide/fed-sso">Federated SSO </a>
@@ -476,7 +476,7 @@ const Middle = () => {
         </div>
       </section>
       {/*Section Comprehensive Resources*/}
-    </main>
+    </main >
   )
 }
 
