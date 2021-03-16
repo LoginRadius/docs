@@ -64,8 +64,6 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
     <?php
     define('LR_API_KEY', '{{YOUR API KEY}}');
     define('LR_API_SECRET', '{{YOUR API SECRET}}');  // Pass API Secret Key
-    define('API_REQUEST_SIGNING', ''); // Pass true/false for enable/disable
-    define('AUTH_FLOW', '');   // Pass optional/disabled, if email verification flow optional or disabled, no need to mention if required flow
 
     //If you have Custom API Domain, then define 'API_DOMAIN' then replaced it with your custom API domain,
     //otherwise no need to define these options in configuration.
@@ -96,10 +94,11 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
     require_once "./src/LoginRadiusSDK/CustomerRegistration/Advanced/CustomRegistrationDataAPI.php";
     require_once "./src/LoginRadiusSDK/CustomerRegistration/Social/NativeSocialAPI.php";
     require_once "./src/LoginRadiusSDK/CustomerRegistration/Social/SocialAPI.php";
+    ?>
     ```
 
    - Replace the following placeholder in the above code:
-    {{YOUR API KEY}} and {{YOUR API SECRET}}: API Key and Secret obtained in the [Get Credentials](#get-credentials) step. Also, enter a value for `API_REQUEST_SIGNING` as well as `AUTH_FLOW`.
+    {{YOUR API KEY}} and {{YOUR API SECRET}}: API Key and Secret obtained in the [Get Credentials](#get-credentials) step.
 
 
 - Now we can create a simple `index.php` file with simple HTML to act as the landing page:
@@ -237,7 +236,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 - The server should be up at this point. To verify, navigate to http://localhost/lr-php-demo, and you should see a "PHP Demo Landing Page" header. This is the landing page we created previously.
 
-- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost:4200/login`. It will display the following screen:
+- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost/lr-php-demo/login.php`. It will display the following screen:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
