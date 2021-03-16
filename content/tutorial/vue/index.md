@@ -75,7 +75,7 @@ Once your project is generated, type `cd hello-world`. Wait for the app to compi
 
 This section explains the steps included in the setup of the Vue.JS demo and how to run the demo.
 
-1. Clone the Vue demo from GitHub Repo [here](https://github.com/LoginRadius/demo/tree/v2-vue-demo)
+1. Clone the Vue demo from GitHub Repo [here](/download/vue-js-demo.zip)
 
 2. Install the dependencies by typing `npm install` on your command-line interface.
 

@@ -3,9 +3,10 @@ title: "Get started with HTML and JS"
 tags: ["HTML5", "CSS", "JS", "GetStarted"]
 description: "This is a tutorial with IDX and HTML5 SDK implementation."
 ---
-# HTML AND JS Tutorial
+# HTML and JS Tutorial
 
 **HTML** is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. JavaScript is a programming language, it enables interactive web pages and is an essential part of web applications.
+
 This demo will help you with a quick implementation of the LoginRadius platform with HTML and JS demo.
 
 
@@ -23,43 +24,36 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
 
+To preview your login page's theme, click the **Go to your Login Page** link as highlighted on the above screen. 
 
-To preview your login page's theme, click **Go to your Login Page** link as highlighted on the above screen. 
-
-> Features like Email and Password login, User registration, Forgot password, and Remember me are already implemented on your Auth Page(IDX).
-
-
-## Whitelist Domain
-
-For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
-
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
-
-![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
-
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).
 
 
 ## Get Credentials
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+- In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your App Name and API Key:
+
+  ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
+
+- Now click the the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
+
+  ![alt_text](images/sott.png "image_tooltip")
+
+- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
 
-
-![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
-
-
-## Setting up HTML project 
-
-
+## Set Up HTML Project 
 
 > **Prerequisites :** <li> The web server needs to be set up. Refer the guides [here](https://www.maketecheasier.com/setup-local-web-server-all-platforms/) to set up web server locally. You can also set up a small GitHub webserver [here](https://www.maketecheasier.com/setup-local-web-server-all-platforms/).<li> Basic knowledge of HTML and JS.
-## Getting Started
 
 - Download our HTML and JS demo project from Github [here](https://github.com/LoginRadius/demo), and put it in the root directory of your server.
-- Open the option.js file and add LoginRadius [API Key](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/), [Sitename](https://www.loginradius.com/docs/api/v2/admin-console/deployment/get-site-app-name/), and [SOTT](https://www.loginradius.com/docs/api/v2/customer-identity-api/sott-usage/#staticsott4) in it. Also, if you want to generate a dynamic SOTT refer to the guide [here](https://www.loginradius.com/docs/api/v2/customer-identity-api/sott-usage/).
 
+- Open the `option.js` file and add the following:
+  * LoginRadius API Key as obtained from [Get Cedentials](#get-credentials) step.
+  * LoginRadius App Name as obtained from [Get Cedentials](#get-credentials) step.
+  * SOTT as generated in [Get Cedentials](#get-credentials) step.
 
 ```
 var commonOptions = {};
@@ -75,9 +69,14 @@ var LRObject= new LoginRadiusV2(commonOptions);
 - After configuring the above options, go to your web browser and type in the root directory URL that your server is hosting.
 - Now, you can start the demo and play with the available features in it.
 
-> **Note :** You can edit the registration scheme from LoginRadius [Admin Console](https://adminconsole.loginradius.com/platform-configuration/authentication-configuration/standard-login/data-schema) and you can also configure social logins from [here](https://www.loginradius.com/docs/api/v2/customer-identity-api/social-login/getting-started/).
 
+## Whitelist Domain
 
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 
 

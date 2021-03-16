@@ -26,7 +26,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
   ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
-- Now click the the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
+- Now click the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
 
   ![alt_text](images/sott.png "image_tooltip")
 
@@ -34,45 +34,46 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 ## Setup Ionic 
 
-- Create an empty project and run the following command in the command line:
+1. Create an empty project and run the following command in the command line:
 
-```
-  ionic start demoApp blank --type=ionic1 --cordova
-```
-- We also require an additional plugin:
+  ```
+    ionic start demoApp blank --type=ionic1 --cordova
+  ```
+2. Install the following additional plugins:
 
-- Before you can add SDK, you must install the [Apache Cordova InAppBrowser](https://cordova.apache.org/docs/en/8.x/reference/cordova-plugin-inappbrowser/index.html#page-toc-source) into your current. Run the following command in the command line: :
-```
-cd demoApp
-cordova plugin add cordova-plugin-inappbrowser
-```
-- You must install the [Apache Cordova Whitelist](https://cordova.apache.org/docs/en/8.x/reference/cordova-plugin-whitelist/index.html) into your current project for Network Request.run the following command in the command line:
-```
-cordova plugin add cordova-plugin-whitelist
-```
+   - Before you can add SDK, you must install the [Apache Cordova InAppBrowser](https://cordova.apache.org/docs/en/8.x/reference/cordova-plugin-inappbrowser/index.html#page-toc-source) into your current project. Run the following command in the command line: :
+     ```
+     cd demoApp
+     cordova plugin add cordova-plugin-inappbrowser
+     ```
+  - You must install the [Apache Cordova Whitelist](https://cordova.apache.org/docs/en/8.x/reference/cordova-plugin-whitelist/index.html) into your current project for Network Request. Run the following command in the command line:
+  
+     ```
+     cordova plugin add cordova-plugin-whitelist
+     ```
 
 ## Install SDK
 
-- Download the LoginRadius SDK from [github](https://github.com/LoginRadius/ionic-sdk/tree/master/sdk) 
+1. Download the LoginRadius SDK from [github](https://github.com/LoginRadius/ionic-sdk/tree/master/sdk) 
 
-- Include this file in your project's `demoApp\www\js` folder.
+2. Include this file in your project's `demoApp\www\js` folder.
 
-- Include the reference on the page `demoApp\www\index.html`:
+3. Include the reference on the page `demoApp\www\index.html`:
 
-```html
-<script src="js/sdkservices.js"></script>
-<script src="https://auth.lrcontent.com/v2/js/LoginRadiusV2.js"></script>
-
-```
+  ```html
+  <script src="js/sdkservices.js"></script>
+  <script src="https://auth.lrcontent.com/v2/js/LoginRadiusV2.js"></script>
+  
+  ```
 
 ## Configure Project
 
-In the `index.html` file, initialize the LoginRadius User registration Object For Interface.
+In the `index.html` file, initialize the LoginRadius registration object for interface using the following code snippet:
 
 ```
  var commonOptions = {};
 commonOptions.apiKey = "<your loginradius api key>";
-commonOptions.appName = "<LoginRadius site name>";
+commonOptions.appName = "<LoginRadius app name>";
 commonOptions.hashTemplate = true;
 commonOptions.accessTokenResponse = true;
 commonOptions.phoneLogin = false;
@@ -88,22 +89,22 @@ var LRObject= new LoginRadiusV2(commonOptions);
 Replace the following placeholders in the above :
 
 - apiKey: **API Key** obtained in the [Get Credential](#getcredentials) step.
-- siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
+- appName: **App Name** obtained in the [Get Credential](#getcredentials) step.
 - sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
 
 
-## Configure Registration and Page
+## Configure Registration and Login Page
 
-Create  `controllers.js` file in your `demoApp\www\js` folder.
+1. Create  `controllers.js` file in your `demoApp\www\js` folder.
  
-You must be add some dependency injection in your `controllers.js`:
+2. Add this dependency injection in your `controllers.js`:
 
- ```
- .controller("ExampleController",[ '$scope','SDKService', function ($scope,SDKService) {
-}]);
+    ```
+    .controller("ExampleController",[ '$scope','SDKService', function ($scope,SDKService) {
+    }]);
 
- ```
-When we click on the button they initialize the LoginRadius User registration Object in `controllers.js`:
+    ```
+3. Add the following function to your `controllers.js`. This is used initialize the LoginRadius registration object, when user clicks on the Registration or Login button:
 
 ```js
 var lroptions = {};
@@ -129,12 +130,7 @@ break;
 
 ```
 
-### Activation
-Finally, setup elements to trigger the functions that will direct your users to the relevant hosted interface.
-
-
-#### Registration
-Triggers the Registration interface and will return with an action of "registration" to the callback function.
+4. Add the following code snippet to `Index.html` file or wherever you want to use **Registration Interface**. It triggers the registration interface and will return with an action of "registration" to the callback function.
 
 ```js
 lr.register()
@@ -162,13 +158,13 @@ For Example -
     </ion-view>
   </script> 
 ```
-#### Login
-Triggers the Login interface and will return with an action of "login" to the callback function.
+
+5. Add the following code snippet to `Index.html` file or wherever you want to use **Login Interface**. It triggers the login interface and will return with an action of "login" to the callback function.
 
 ```js
 lr.login()
 ```
-For traditional login to add div for Login interface
+For email/password login to add div for Login interface
 
 ```html
 <div id="login-container"></div>
@@ -176,9 +172,9 @@ For traditional login to add div for Login interface
 
 ## Retrieve User Data using Access Token
 
-After successful login user can start any HTML file where to call API and get data.So Create a `Profile.html` file in `demoApp\www\` folder.
+1. Create a HTML file to call API and get data. For exmaple- create a `Profile.html` file in `demoApp\www\` folder.
 
-Add the following code for handle the login and registration action:
+2. In the created HTML file (`Profile.html`), add the following code for handle the login and registration action:
 
 ```html
 
@@ -211,13 +207,15 @@ break;
 
 ``` 
 
-After redirection in `Profile.Html` file, the user can easy call API and get all data.when a user comes `Profile.html` file then starting a directives `ng-init` and call a function for getting the user profile.
+> Note: Redirecting the user to the `Profile.html` file upon successful login.
+
+3. Add the following code to the `Profile.html` file for getting the user profile:
 
 ```
 <ion-content ng-controller="ExampleController" padding="true" ng-init="loadUserprofile()">
 ```
+4. Add the following code snippet to `controllers.js` file function for getting user profile data:
 
-Directives call `controllers.js` file function for getting user profile data.
 ```js
 $scope.loadUserprofile = function() {
 $scope.lrapi.getUserprofile(function(userprofile) {
@@ -233,32 +231,12 @@ document.getElementById('profileurl').innerHTML = userprofile.ProfileUrl;
  }
 ```
 
-## Logout
-
-We can implement a button for logout,when you click logout button that calls​ logout function those store in the `controllers.js` file.
-
-```html
-<div class="col text-center">
-<button class="button button-assertive"  ng-click ="Logout()">
-Logout
-</button>
-```
-Logout function in `controllers.js` file
-
-```
- $scope.Logout = function() {
-window.location = "index.html";
- $scope.lr.sdkLogout();
-}
-```
-
-
 ## Run and See Result
 
 * Run the application by executing the following command in the command line:
   [`ionic serve`]
 
-* Register a user here and then log in. Upon successful login. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
+* Register a user here and then log in. Upon successful login, in response, you will get a user profile in JSON format. The following displays a sample JSON response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 

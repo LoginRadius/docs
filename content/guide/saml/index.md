@@ -35,7 +35,7 @@ Before going into the in-depth detail of SAML, let's first see what are the adva
 
 SAML framework consists of three sets of components: [assertions](#assertions3), [protocols](#protocols4), and [bindings](#bindings5). Find the detail of these components in the section below.
 
-#### 1. Assertions
+#### Assertions
 
 A SAML assertion is a package of data produced by a SAML authority. Alternatively, you can say that a SAML Assertion is the XML document containing the user authorization that the identity provider sends to the service provider.
 
@@ -45,20 +45,25 @@ SAML specifies three types of assertions:
 2.  **Attribute Assertion:** It is a characteristic or trait of a user that describes the user. It is a name: value pair. An attribute assertion conveys user information from Cloud Identity to the service provider.
 3.  **Authorization Decision Assertion:** It indicates whether a request to access a resource by the subject has been approved or declined.
 
-#### 2. Protocols
+#### Protocols
 
 SAML protocols describe how certain SAML elements (including assertions) are packaged within request and response elements, and give the processing rules that SAML entities must follow when producing or consuming these elements.
 
 SAML defines several request/response protocols. The protocol is encoded in an XML schema as a set of request-response pairs. The protocols are defined as follows:
 
 1.  **Assertion Query and Request Protocol:** It defines a set of queries by which existing SAML assertions may be obtained. The query can be based on a reference, subject, or the statement type.
+
 2.  **Authentication Request Protocol:** It defines a message that causes a response to be returned containing one or more assertions. The flow begins at the service provider who issues an explicit authentication request to the identity provider. A Service Provider issues the response with the Identity Provider returning the message to enable the Web SSO workflow.
+
 3.  **Artifact Protocol:** It provides a mechanism to obtain a previously created assertion by providing a reference. The reference is called an artifact. Thus, a SAML protocol can refer to an assertion by an artifact, and when a service provider obtains the artifact, it can use the artifact Protocol to obtain the actual assertion using this protocol.
+
 4.  **Name Identifier Management Protocol:** It provides mechanisms to change the name of a user's value or format. The issuer of the request can be either the Service Provider or the Identity Provider. This protocol also provides a mechanism to terminate an association of a name between an Identity Provider and Service Provider.
+
 5.  **Single Logout Protocol:** It defines a request that allows the simultaneous log out of all sessions associated with a user. The logout can be directly initiated by the Principal or due to a session timeout.
+
 6.  **Name Identifier Mapping Protocol:** It provides a mechanism to enable account linking. Refer to the subsequent sections on the Federation.
 
-#### 3. Bindings
+#### Bindings
 
 SAML bindings describe how a SAML message must be mapped on non-SAML messaging formats and communication protocols. For example, SAML requests can be bound to interactions using different application protocols, including:
 
@@ -80,7 +85,7 @@ Below are some examples of Bindings that are supported by SAML.
 
 5.  **HTTP Artifact Binding:** It defines how a reference to a SAML request or response (i.e., an artifact) is transported by HTTP. It defines two mechanisms, either an HTML form control or a query string in the URL.
 
-### LoginRadius as an Identity Provider
+### LoginRadius as Identity Provider
 
 LoginRadius supports both SAML 1.1 and SAML 2.0 flows. LoginRadius Dashboard lets you do SAML configurations by allowing you to customize the assertions, keys, and endpoints to match any SAML provider requirements.
 
@@ -93,7 +98,7 @@ The following are some key points providing better clarity about LoginRadius act
 
 4.  LoginRadius does not support HTTP Artifact.
 
-#### 1. Identity Provider Initiated Login
+#### Identity Provider Initiated Login
 
 For the IDP initiated login, a consumer is logged on to the LoginRadius site and attempts to access a protected SP resource. LoginRadius redirects the consumer to LoginRadius SAML IDP initiated URL. The SAML IDP initiated URL automatically posts a SAML response to the SP. Then SP verifies the response. The login URL for this process is
 
@@ -106,7 +111,7 @@ The following sequence diagram summarizes the steps while proceeding with IDP In
 
 ![alt_text](/images/sequence_IDP.png "image_tooltip")
 
-#### 2. Service Provider Initiated Login
+#### Service Provider Initiated Login
 
 In the Service Provider initiated login, a consumer attempts to access a protected resource directly on an SP Website without logging on. The SP sends an authentication SAML request as a string query parameter in the HTTP GET or HTTP POST parameter (after it has been deflated, base64 encoded, and URL encoded) depending on the binding configuration to the SP initiated LoginRadius URL.
 

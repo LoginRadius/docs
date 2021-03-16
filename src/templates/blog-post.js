@@ -14,7 +14,7 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <div className="global-wrapper">
       <div id="root">
-        <Header />
+        <Header  searchIndex={data.siteSearchIndex.index}/>
         <Layout location={location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
@@ -121,6 +121,10 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
+    siteSearchIndex {
+      index
+    }
+
     site {
       siteMetadata {
         title

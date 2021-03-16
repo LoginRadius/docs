@@ -3,7 +3,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 > Note:[Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
-You can access the WordPress LoginRadius CIAM Plugin [here](#https://wordpress.org/plugins/loginradius-customer-identity-and-access-management/).
+You can access the WordPress LoginRadius CIAM Plugin [here](https://wordpress.org/plugins/loginradius-customer-identity-and-access-management/).
 
 ## Get Credentials
 
@@ -65,7 +65,7 @@ Email templates can be added/modified in **LoginRadius Dashboard** which will be
 
 ![alt_text](images/auth-email-template.png "image_tooltip")
  
-> Refer to [this document](#https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
+> Refer to [this document](https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
 
 ### Short Codes Tab
 

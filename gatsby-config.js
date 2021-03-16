@@ -27,7 +27,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,   
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
@@ -41,7 +41,7 @@ module.exports = {
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
-          },          
+          },
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
@@ -86,7 +86,7 @@ module.exports = {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
-        fields: [`title`, `tags`,`description`],
+        fields: [`title`, `tags`, `description`],
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
@@ -99,6 +99,7 @@ module.exports = {
         // Optional filter to limit indexed nodes
         filter: (node, getNode) => node.frontmatter.tags !== "exempt",
       },
-    }, 
+    },
   ],
+  pathPrefix: `/docs/developer/beta`,
 }
