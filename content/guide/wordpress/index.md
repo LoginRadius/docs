@@ -65,7 +65,7 @@ Email templates can be added/modified in **LoginRadius Dashboard** which will be
 
 ![alt_text](images/auth-email-template.png "image_tooltip")
  
-> Refer to [this document](#https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
+> Refer to [this document](https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
 
 ### Short Codes Tab
 
