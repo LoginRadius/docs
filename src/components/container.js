@@ -373,7 +373,7 @@ const Middle = () => {
                 <Link to="/guide/web-sso"> Enable Web SSO</Link>
               </li>
               <li>
-                <a href="#">Connect SAML App </a>
+                <Link to="/guide/saml" >Connect SAML App </Link>
               </li>
               <li>
                 <a href="/guide/jwt"> Connect JWT App</a>
