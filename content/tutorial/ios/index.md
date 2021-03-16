@@ -61,7 +61,11 @@ pod 'LoginRadiusSDK', '~> 5.4.2'
 end
 
 ```
+Install `pod` by running the following command in terminal:
 
+```
+$ pod install
+```
 ## Configuration
 
 1. Create a new File `LoginRadius.plist` and add it to your App.
