@@ -78,7 +78,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 **Where:**
 
 - **LoginRadius App Name** is the name of your app as mentioned in Get Credential step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-your-domain) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. In the case of this tutorial, this would be the page in your web application where you will process the received access token and retrieve the LoginRadius user profile.
 
@@ -213,11 +213,11 @@ namespace RazorPagesDemoApplication.Pages
 
   ![alt_text](images/example.png "image_tooltip")
 
-## Domain Whitelisting
+## Whitelist Your Domain
 
 For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

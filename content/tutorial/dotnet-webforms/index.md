@@ -103,7 +103,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 **Where:**
 
 - **LoginRadius App Name** is the name of your app as mentioned in [Get Credential](#get-credentials) step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-your-domain) if you are not using Local Domain for this tutorial.
 
 > For your Web Forms application, this will likely be a static page that requires data from your logged in user. However, the return_url can be anything from a static page to a backend server endpoint.
 
@@ -343,11 +343,11 @@ From here, you can use JQuery or Vanilla JavaScript to populate your web page wi
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
 
-## Whitelist Domain
+## Whitelist Your Domain
 
 For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
