@@ -118,13 +118,13 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/tutorial/php">
+                <Link href={withPrefix("/tutorial/php")}>
                   <img src="images/php.svg" width={20} />
                   <span>PHP</span>
                 </Link>
               </li>
               <li>
-                <a href="/tutorial/java">
+                <a href={withPrefix("/tutorial/java")}>
                   <img src="images/java.svg" width={20} />
                   <span>JAVA</span>
                 </a>
@@ -359,7 +359,7 @@ const Middle = () => {
                 <Link to="/guide/web-sso"> Web SSO</Link>
               </li>
               <li>
-                <a href="/guide/fed-sso">Federated SSO </a>
+                <a href={withPrefix("/guide/fed-sso")}>Federated SSO </a>
               </li>
             </ul>
           </div>
@@ -381,19 +381,19 @@ const Middle = () => {
                 <Link to="/guide/saml" >Connect SAML App </Link>
               </li>
               <li>
-                <a href="/guide/jwt"> Connect JWT App</a>
+                <a href={withPrefix("/guide/jwt")}> Connect JWT App</a>
               </li>
               <li>
-                <a href="/guide/oauth"> Connect OAuth App</a>
+                <a href={withPrefix("/guide/oauth")}> Connect OAuth App</a>
               </li>
               <li>
-                <a href="/guide/oidc">Connect OIDC App </a>
+                <a href={withPrefix("/guide/oidc")}>Connect OIDC App </a>
               </li>
               <li>
-                <a href="/guide/big-commerce">Integrate BigCommerce</a>
+                <a href={withPrefix("/guide/big-commerce")}>Integrate BigCommerce</a>
               </li>
               <li>
-                <a href="/guide/shopify">Integrate Shopify</a>
+                <a href={withPrefix("/guide/shopify")}>Integrate Shopify</a>
               </li>
             </ul>
           </div>
@@ -406,10 +406,10 @@ const Middle = () => {
             <h3 className="title">Secure Authentication</h3>
             <ul>
               <li>
-                <a href="/guide/captcha">Google reCAPTCHA </a>
+                <a href={withPrefix("/guide/captcha")}>Google reCAPTCHA </a>
               </li>
               <li>
-                <a href="/guide/bruteforce">Secure Against Bruteforce </a>
+                <a href={withPrefix("/guide/bruteforce")}>Secure Against Bruteforce </a>
               </li>
               <li>
                 <Link to="/guide/set-strong-password-policy">
@@ -452,7 +452,7 @@ const Middle = () => {
             <h3 className="title">Concepts</h3>
             <ul>
               <li>
-                <a href="concepts/idx">IDX</a>
+                <a href={withPrefix("concepts/idx")}>IDX</a>
               </li>
             </ul>
           </div>
@@ -465,10 +465,10 @@ const Middle = () => {
             <h3 className="title">References</h3>
             <ul>
               <li>
-                <a href="references/sdk">SDKs </a>
+                <a href={withPrefix("references/sdk")}>SDKs </a>
               </li>
               <li>
-                <a href="references/api">APIs</a>
+                <a href={withPrefix("references/api")}>APIs</a>
               </li>
             </ul>
           </div>
