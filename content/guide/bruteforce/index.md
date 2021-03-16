@@ -22,7 +22,7 @@ Enter or select the following configuration details:
 2. **Lockout Type:** Select the lockout type you wish to trigger when the threshold limit is reached. The following screen displays the available lockout type options:
 
 
-![alt_text](/mages/lockout-type.png "image_tooltip")
+![alt_text](/images/lockout-type.png "image_tooltip")
 
 3. **Suspend:** Select this option to prevent the customer from logging in for a specified amount of time (Suspend Effective Period), once the account is suspended.
 
