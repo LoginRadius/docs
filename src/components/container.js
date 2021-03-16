@@ -86,10 +86,10 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="/tutorial/angular">
+                <Link href="/tutorial/angular">
                   <img src="images/angular.svg" width={20} />
                   <span>Angular</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/tutorial/vue">
@@ -118,10 +118,10 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">
+                <Link href="/tutorial/php">
                   <img src="images/php.svg" width={20} />
                   <span>PHP</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/tutorial/java">
@@ -208,7 +208,7 @@ const Middle = () => {
             <h3 className="title">CMS App</h3>
             <ul>
               <li>
-              <Link to="/guide/wordpress">
+                <Link to="/guide/wordpress">
                   <img src="images/wordpress.svg" width={20} />
                   <span>WordPress </span>
                 </Link>
@@ -407,7 +407,7 @@ const Middle = () => {
                 <a href="/guide/bruteforce">Secure Against Bruteforce </a>
               </li>
               <li>
-              <Link to="/guide/set-strong-password-policy">Set Strong Password Policy</Link>
+                <Link to="/guide/set-strong-password-policy">Set Strong Password Policy</Link>
               </li>
               <li>
                 <Link to="/guide/mfa"> Multi Factor Authentication</Link>

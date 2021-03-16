@@ -1,3 +1,9 @@
+---
+title: "Get started with Angular"
+tags: ["Angular", "GetStarted", "Node", "JavaScript"]
+description: "This is a tutorial with IDX and Angular basic implementation."
+---
+
 # Get Started - Angular
 
 The tutorial lets you implement LoginRadius user registration, login, and view profile on your Angular application. 
