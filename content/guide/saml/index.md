@@ -311,34 +311,69 @@ Download the metadata for SAML configuration
 ### 2. Configuring LoginRadius Dashboard
 
 #### Step 1:Navigation
-1.  Log in to your LoginRadius account.
+1.  Log in to your LoginRadius dashboard.
 
-2.  Navigate to your team management section in LoginRadius Dashboard from [here](https://adminconsole.loginradius.com/account/team).
+2.  From the left Navigation panel enter the **Integration** section and click **Add** in **Configured Integration** section
 
-3.  Click on SAML under the **Single Sign-On** tab.
+3.  Search and Select **SAML**
 
-#### Step 2:Configure Dashboard 
-Fill in the below form as:
+#### Step 2:Add SAML App
 
-1. Select any flow from **Login Flow**.
+1. Add SAML app by clicking **ADD APP** or **Add fron Metadata File**
 
-2. In **ID Provider Binding value** from the Identity Provider metadata file.
+![alt_text](/images/samloptions.png "image_tooltip")
 
-3. In **ID Provider Location** enter the **IdP-Initiated Login URL** which you will get from the SAML supported app dashboard or metadata file.
-    
-    ![alt_text](/images/SAML.png "image_tooltip")
-    
-4. **ID Provider Certificate**: Certificate of SAML supported app working as identity Provider in this case.
+If the **Add from Metadata File** option is selected then add the metadata file of the SAML file to connect with SSO
 
-5. Enter LoginRadius' Certificate and Key in **SERVICE PROVIDER CERTIFICATE** and **SERVICE PROVIDER CERTIFICATE**.
+![alt_text](/images/samlmeta.png "image_tooltip")
+
+The below steps are if the **ADD APP** option is selected.
+
+#### Step 3:Configure SAML App details
+
+1. Select SAML version, Loginflow(SP or IDP) and add the SAML App name.
+
+![alt_text](/images/loginflow.png "image_tooltip")
+
+2. Enter LoginRadius' Certificate and Key in **ID PROVIDER CERTIFICATE** and **SERVICE PROVIDER CERTIFICATE KEY**.
+
+![alt_text](/images/certificates.png "image_tooltip")
+
+**ID Provider Certificate**: Certificate of SAML supported app working as identity Provider in this case.
 
 > **Note:** Certificate and Key can be generated using online tools, for an example. with Bits and Digest Algorithm 2056, SHA256 respectively.
 
-6. For **DATA MAPPING** select the LoginRadius' fields (SP fields) and enter the corresponding SAML supported app fields (IdP fields)e.g.
+3. Add the key-value pairs in the **Attibutes** section(optional).
 
-![alt_text](/images/table.png "image_tooltip")
+![alt_text](/images/attributes.png "image_tooltip")
 
-7. Once all the required fields are completed, **scroll down** and hit **Add**.
+4. Select the Name Id format from the Dropdown
+
+    Default is **urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified**
+
+5. Enter the URLs of the page that users will be redirected to for authentication in **Login URl** and **After Logout URL** 
+
+    ![alt_text](/images/url.png "image_tooltip")
+
+6. Enter the Service Provider endpoints and settings that Login Radius will communicate with to establish a SAML session in the **Service Provider Details** section
+
+    In **Assertion Consumer Service Location** enter the **IdP-Initiated Login URL** which you will get from the SAML supported app dashboard or metadata file.
+    
+    ![alt_text](/images/serviceprovider.png "image_tooltip")
+    
+7. In the **Audiences** section, add the intended recipients of the assertions issued.(optional)
+
+    ![alt_text](/images/audience.png "image_tooltip")
+
+8. Select the SSO method from the dropdown list, default is **None**.
+
+    The other methods are: 
+
+    **HTTP Post**
+
+    **HTTP Artifact**
+
+9. Once all the required fields are completed, **scroll down** and click **Save**.
 
 > **Note:**
 > 1.  Please see [ADFS](/docs/api/v2/admin-console/team-management/sso-connectors/adfs-setup-in-admin-console), [Azure AD](/docs/api/v2/admin-console/team-management/setup-azure-ad), salesforce for specific examples for implementing SSO in Loginraius Dashboard using SAML.
