@@ -88,10 +88,10 @@ export default class Header extends Component {
               </form>
             </div>
             <div className="authentication-buttons">
-              <a href="#" className="btn btn-secondary">
+              <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login" target="_blank"  className="btn btn-secondary">
                 Login
               </a>
-              <a href="#" className="btn btn-primary">
+              <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank"  className="btn btn-primary">
                 Free Sign Up
               </a>
             </div>
@@ -111,7 +111,6 @@ export default class Header extends Component {
   search = evt => {
     const query = evt.target.value
     this.index = this.getOrCreateIndex()
-
     this.setState({
       query,
       // Query the index with search string to get an [] of IDs
