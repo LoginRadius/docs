@@ -23,7 +23,7 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 
 
 
-To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
+To preview your login page's theme, click the **Go to your Login Page** link highlighted on the above screen. 
 
 > Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).
 
@@ -33,7 +33,6 @@ To preview your login page's theme, click **Go to your Login Page** link highlig
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
 In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
-
 
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
@@ -47,7 +46,7 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
 
     `curl -sS https://getcomposer.org/installer | php`
 
-    Next, run the Composer command to install the latest stable version of library:
+    Next, run the Composer command to install the latest stable version of the library:
 
     `composer require loginradius/php-sdk:11.0.0`
 
@@ -55,11 +54,11 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
 
 <br>
 
-- Once you finish downloading/installing the SDK, we can begin setting up the directory for our sample project. Create a separate folder from the SDK folder and name it `lr-php-demo`.
+   - Once you finish downloading/installing the SDK, we can begin setting up the directory for our sample project. Create a separate folder from the SDK folder and name it `lr-php-demo`.
 
-- Browse the SDK folder and copy the `src` folder from SDK into `lr-php-demo` folder.
+   - Browse the SDK folder and copy the `src` folder from SDK into `lr-php-demo` folder.
 
-- Next, create a new file in `lr-php-demo` named `config.php`. Populate the file with the code below. This file will supply required configurations and import the LoginRadius SDK into the project:
+   - Next, create a new file in `lr-php-demo` named `config.php`. Populate the file with the code below. This file will supply required configurations and import the LoginRadius SDK into the project:
 
     ```PHP
     <?php
@@ -68,8 +67,8 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
     define('API_REQUEST_SIGNING', ''); // Pass true/false for enable/disable
     define('AUTH_FLOW', '');   // Pass optional/disabled, if email verification flow optional or disabled, no need to mention if required flow
 
-    //If you have Custom API Domain then define 'API_DOMAIN' then replaced it with your custom API domain,
-    //otherwise no need to define these option in configuration.
+    //If you have Custom API Domain, then define 'API_DOMAIN' then replaced it with your custom API domain,
+    //otherwise no need to define these options in configuration.
     // define('API_DOMAIN', 'https://api.loginradius.com'); 
 
     require_once "./src/LoginRadiusSDK/Utility/Functions.php";
@@ -99,8 +98,8 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
     require_once "./src/LoginRadiusSDK/CustomerRegistration/Social/SocialAPI.php";
     ```
 
-- Replace the following placeholder in the above code:
-  {{YOUR API KEY}} and {{YOUR API SECRET}} : API Key and Secret obtained in the [Get Credentials](#get-credentials) step. Also enter value for `API_REQUEST_SIGNING` as well as `AUTH_FLOW`.
+   - Replace the following placeholder in the above code:
+    {{YOUR API KEY}} and {{YOUR API SECRET}}: API Key and Secret obtained in the [Get Credentials](#get-credentials) step. Also, enter a value for `API_REQUEST_SIGNING` as well as `AUTH_FLOW`.
 
 
 - Now we can create a simple `index.php` file with simple HTML to act as the landing page:
@@ -130,7 +129,7 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
 
 ## Configure Registration and Login URLs
 
-> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality  is already implemented. 
+> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented. 
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -144,7 +143,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 - **LoginRadius App Name** is the name of your app as mentioned in [Get Credentials](#get-credentials) step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial. 
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial. 
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token. 
 
@@ -224,7 +223,7 @@ Navigate your Register or Login links or buttons to the following URLs:
     ![alt_text](images/image3.png "image_tooltip")
 
 
-- Once the `/login` route is implemented, set the `return_url` to point to the `/login` subdomain of your application. For example, in the local PHP server  instance that will be introduced in the subsequent section, it can point to `http://localhost/lr-php-demo/login.php`. This way, after logging in through the Auth Page (IDX), your user will be redirected to the `/login` route that we just implemented.
+- Once the `/login` route is implemented, set the `return_url` to point to the `/login` subdomain of your application. For example, in the local PHP server instance that will be introduced in the subsequent section, it can point to `http://localhost/lr-php-demo/login.php`. This way, after logging in through the Auth Page (IDX), your user will be redirected to the `/login` route that we just implemented.
 
 ## Run and See Result
 
@@ -236,7 +235,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
     ![alt_text](images/image2.png "image_tooltip")
 
-- The server should be up at this point. To verify, navigate to http://localhost/lr-php-demo and you should see a "PHP Demo Landing Page" header. This is the landing page we created previously.
+- The server should be up at this point. To verify, navigate to http://localhost/lr-php-demo, and you should see a "PHP Demo Landing Page" header. This is the landing page we created previously.
 
 - Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost:4200/login`. It will display the following screen:
 
@@ -260,7 +259,7 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ##  Explore PHP Demo/SDK
 
-The tutorial above walks through a quick PHP implementation to import the SDK and leverage it to process user data from LoginRadius in the frontend. For a more structured example of a PHP server, check out the demo as well as SDK references from our LoginRadius repository.
+The tutorial above walks through a quick PHP implementation to import the SDK and leverage it to process user data from LoginRadius in the frontend. For a more structured example of a PHP server, check out the demo and SDK references from our LoginRadius repository.
 
 **[GitHub Demo/SDK Link](https://github.com/LoginRadius/php-sdk)**   |   **[Download Demo](https://github.com/LoginRadius/php-sdk/archive/master.zip)**   
 
