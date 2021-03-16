@@ -219,6 +219,11 @@ Navigate your Register or Login links or buttons to the following URLs:
 </html>
 ```
 
+- The complete folder structure of `lr-php-demo` should now look like this:
+
+    ![alt_text](images/image3.png "image_tooltip")
+
+
 - Once the `/login` route is implemented, set the `return_url` to point to the `/login` subdomain of your application. For example, in the local PHP server  instance that will be introduced in the subsequent section, it can point to `http://localhost/lr-php-demo/login.php`. This way, after logging in through the Auth Page (IDX), your user will be redirected to the `/login` route that we just implemented.
 
 ## Run and See Result
