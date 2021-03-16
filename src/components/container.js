@@ -172,6 +172,11 @@ const Middle = () => {
                   icon: "images/python.svg",
                   text: "Python",
                 },
+                {
+                  link: "/tutorial/ror",
+                  icon: "images/ruby.svg",
+                  text: "Ruby",
+                },
               ]}
             />
           </div>
@@ -407,7 +412,9 @@ const Middle = () => {
                 <a href="/guide/bruteforce">Secure Against Bruteforce </a>
               </li>
               <li>
-                <Link to="/guide/set-strong-password-policy">Set Strong Password Policy</Link>
+                <Link to="/guide/set-strong-password-policy">
+                  Set Strong Password Policy
+                </Link>
               </li>
               <li>
                 <Link to="/guide/mfa"> Multi Factor Authentication</Link>

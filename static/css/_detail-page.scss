@@ -119,6 +119,7 @@
     @media (max-width: 768px) {
       padding-left: 0;
       width: 100%;
+      border-left: 0;
     }
     .breadcrumbs {
       display: flex;
@@ -165,6 +166,10 @@
       margin-bottom: 24px;
       font-weight: 600;
       font-size: 30px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 36px;
+      }
       & + blockquote {
         margin-top: 24px;
       }
@@ -273,6 +278,10 @@
     .gatsby-resp-iframe-wrapper {
       max-width: 75%;
       margin: 2rem 0;
+      @media (max-width: 768px) {
+        max-width: 100%;
+        width: 100%;
+      }
     }
     b,
     strong {
