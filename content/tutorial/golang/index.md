@@ -44,7 +44,7 @@ This implementation uses the `github.com/julienschmidt/httprouter` router module
 
   `go mod init golang-sdk-tutorial`
 
-  > Upon completion, it will add a `go.mod` and `go.sum` file in the project folder.
+  > Upon completion, it will add a `go.mod` file in the project folder.
 
 * Add the project dependency of router. 
   
