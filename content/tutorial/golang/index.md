@@ -8,7 +8,7 @@ description: "This is a tutorial with IDX and Golang sdk implementation."
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Golang based application.
 
-> You must have Go installed, and the minimum supported version is 1.13.0
+> **Note:** You must have Go installed, and the minimum supported version is 1.13.0
 >
 > New to Golang? Check out [this reference](https://golang.org/doc/).
 
@@ -16,7 +16,7 @@ When you signed up for the LoginRadius account, it created an app for you. This 
 
 Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Golang application.
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> **Note:** [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 ## Choose Theme
 
@@ -26,7 +26,7 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 
 To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
 
-> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
+> **Note:** Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
 
 ## Get Credentials
 
@@ -72,6 +72,7 @@ This implementation uses the `github.com/julienschmidt/httprouter` router module
   }
 
   ```
+  >**Note:** Make sure you add further code (given in steps below) in place of **// your LR API implementation goes here** text mentioned in the above file.
 
 ## Install SDK
 
