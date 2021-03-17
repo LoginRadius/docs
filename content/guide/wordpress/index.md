@@ -1,9 +1,16 @@
 # Get Started - WordPress
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your WordPress application.
 
-> Note:[Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> **Note:** [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 You can access the WordPress LoginRadius CIAM Plugin [here](https://wordpress.org/plugins/loginradius-customer-identity-and-access-management/).
+
+Watch this video to get started, or refer to the section below for the text-based guide.
+
+<figure class="video_container">
+<iframe width="560" height="315" src="https://youtu.be/Njxtvu7KBMg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+
+---
 
 ## Get Credentials
 
@@ -13,7 +20,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
->Note: Whitelist your application domain as explained in the [Domain Whitelisting](#whitelist-domain)section.
+> **Note:** Whitelist your application domain as explained in the [Domain Whitelisting](#whitelist-domain)section.
 
 ## Setup WordPress Plugin
 
@@ -43,7 +50,7 @@ To enable authentication settings, navigate to **Wordpress Admin Panel > CIAM > 
 
 To allow the plugin to auto-generate the pages for login, registration, forgot password, and reset password enable 'Auto Generate Authentication Page'.
 
-> Note: You can also generate email/social login and registration interface on the desired page using the shortcodes provided in the ShortCodes tab, If you don’t wish to enable **Auto Generate Authentication Page**.
+> **Note:** You can also generate email/social login and registration interface on the desired page using the shortcodes provided in the ShortCodes tab, If you don’t wish to enable **Auto Generate Authentication Page**.
  
 ![alt_text](images/auto-generate-auth-page.png "image_tooltip")
 
@@ -65,7 +72,7 @@ Email templates can be added/modified in **LoginRadius Dashboard** which will be
 
 ![alt_text](images/auth-email-template.png "image_tooltip")
  
-> Refer to [this document](https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
+> **Note:** Refer to [this document](https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
 
 ### Short Codes Tab
 
