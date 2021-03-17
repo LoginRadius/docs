@@ -21,9 +21,9 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 2. Go to **Plugins > Add New** in the admin menu on the left.
 
-3. Search for **"LoginRadius CIAM"** and click the **Install Now** button.
+3. Search for **"LoginRadius"** and click the **Install Now** button given next to the **Authentication and SSO by LoginRadius** plugin highlighted in the following screen.
 
-   ![alt_text](images/wordpress-plugin.png "image_tooltip")
+   ![alt_text](images/Wordpress-plugin-install.png "image_tooltip")
 
 4. To activate the plugin, navigate to **WordPress Admin Panel > CIAM > Activation** and enter your **API Key**, and **API Secret** obtained from the [Get Credentials](#get-credentials) step.
 
