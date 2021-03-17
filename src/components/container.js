@@ -22,10 +22,10 @@ const Middle = () => {
               to third-party applications using 30+ Integration options.
             </p>
             <div className="btn-group">
-              <a href="#" className="btn btn-primary">
+              <a href="https://www.youtube.com/watch?v=ANlOdnzfCb0" className="btn btn-primary">
                 Try 5 Minute Setup Guide
               </a>
-              <a href="#" className="btn btn-outline">
+              <a href="/guide/html-and-js-tutorial" className="btn btn-outline">
                 Curious How It Works?
               </a>
             </div>

@@ -30,8 +30,6 @@ Have questions or issues with our product?
 
 [Support for Developer Plans](https://loginradiusassist.freshdesk.com/customer/login)
 
-[Support for Enterprise Plan](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket)
-
 
 #### Careers
 
