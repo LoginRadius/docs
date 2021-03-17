@@ -40,7 +40,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 This implementation uses the `github.com/julienschmidt/httprouter` router module to create Golang API.
 
-* Create an empty project and run the following command in the command line:
+* Create an empty project with name `golang-sdk-tutorial` and run the following command in the command line:
 
   `go mod init golang-sdk-tutorial`
 
@@ -84,6 +84,12 @@ Upon installation, you will find LoginRadius Golang SDK in the go.mod. The follo
 ![alt_text](images/project-structure.png "image_tooltip")
 
 ## Configure Project
+
+Add the LoginRadius dependency in the import section
+```
+"github.com/LoginRadius/go-sdk"
+"github.com/LoginRadius/go-sdk/api/authentication"
+```
 
 Add the following config object in the `main.go` file:
 
