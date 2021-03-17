@@ -69,6 +69,10 @@ var LRObject= new LoginRadiusV2(commonOptions);
 - After configuring the above options, go to your web browser and type in the root directory URL that your server is hosting.
 - Now, you can start the demo and play with the available features in it.
 
+## Run and See Result
+
+1. Try executing the index.html file in your browser
+2. 
 
 ## Whitelist Domain
 
