@@ -76,9 +76,11 @@ This implementation uses the `github.com/julienschmidt/httprouter` router module
 
 ## Install SDK
 
-Add project dependency of LoginRadius SDK by running the following command in the command line:
+Add project dependency of LoginRadius SDK by running the following commands in the command line:
 
 `go get github.com/LoginRadius/go-sdk`
+
+`go get golang.org/x/crypto/pbkdf2`
 
 Upon installation, you will find LoginRadius Golang SDK in the go.mod. The following displays the project structure:
 
