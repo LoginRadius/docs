@@ -86,7 +86,7 @@ Upon installation, you will find LoginRadius Golang SDK in the go.mod. The follo
 
 ## Configure Project
 
-Add the LoginRadius dependency in the import section
+Add the LoginRadius dependency in the import section of the `main.go` file:
 ```
 "github.com/LoginRadius/go-sdk"
 "github.com/LoginRadius/go-sdk/api/authentication"
