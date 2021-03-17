@@ -8,7 +8,7 @@ description: "This is a tutorial with IDX and node.js sdk implmentation."
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Node.js based application.
 
-> You must have Node.js installed, and the minimum supported version is 10.0.0.
+> **Note:** You must have Node.js installed, and the minimum supported version is 10.0.0.
 >
 > New to Node.Js? Check out [this reference](https://nodejs.org/en/about/).
 
@@ -19,7 +19,7 @@ Watch this video to get started, or refer to the section below for the text-base
 
 ---
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> **Note:** [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
 
@@ -33,7 +33,7 @@ In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navi
 
 To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
 
-> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
+> **Note:** Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
 
 ## Get Credentials
 
@@ -72,6 +72,7 @@ This implementation uses the express framework to create Node.js API.
   app.listen(PORT, () => console.log('App can be accessed at localhost:' + PORT ));
 
   ```
+>**Note:** Make sure you add further code (given in steps below) in place of **// your LR API implementation goes here** text mentioned in the above file.
 
 ## Install SDK
 
@@ -112,7 +113,7 @@ Replace the placeholders in the above config object with the following values:
 * apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
 * siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
-> Pass the proxy configurations if you want to set HTTP Server Proxy Configuration through your Node.js SDK. In this case, host and port are required, while username and password are optional.
+> **Note:** Pass the proxy configurations if you want to set HTTP Server Proxy Configuration through your Node.js SDK. In this case, host and port are required, while username and password are optional.
 
 ## Configure Registration and Login URLs
 
@@ -131,13 +132,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 **Where:**
 
 * **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
-* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#domain-whitelisting) if you are not using Local Domain for this tutorial.
+* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
 ## Retrieve User Data using Access Token
 
-> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Node.js backend API with query parameter (access token).
+> **Note:** Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Node.js backend API with query parameter (access token).
 >
 > The following is an example of the access token in the query string with the Return URL:
 >
