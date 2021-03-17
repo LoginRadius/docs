@@ -8,7 +8,8 @@ You can access the WordPress LoginRadius CIAM Plugin [here](https://wordpress.or
 Watch this video to get started, or refer to the section below for the text-based guide.
 
 <figure class="video_container">
-<iframe width="560" height="315" src="https://youtu.be/Njxtvu7KBMg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Njxtvu7KBMg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+
 
 ---
 
