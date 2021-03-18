@@ -8,9 +8,9 @@ description: "This is a tutorial with Ionic sdk implementation."
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Ionic based application.
 
-> You must have Ionic installed.
+> You must have Ionic and [cordova](https://cordova.apache.org/docs/en/3.1.0/guide/cli/index.html) installed.
 >
-> New to Ionic? Check out [this reference](https://ionicframework.com/docs/cli/commands/start).
+> New to Ionic? Check out [this reference](https://ionicframework.com/docs/intro/cli).
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
 
@@ -36,9 +36,9 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 1. Create an empty project and run the following command in the command line:
 
-  ```
+    ```
     ionic start demoApp blank --type=ionic1 --cordova
-  ```
+    ```
 2. Install the following additional plugins:
 
    - Before you can add SDK, you must install the [Apache Cordova InAppBrowser](https://cordova.apache.org/docs/en/8.x/reference/cordova-plugin-inappbrowser/index.html#page-toc-source) into your current project. Run the following command in the command line: :
@@ -70,21 +70,21 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 In the `index.html` file, initialize the LoginRadius registration object for interface using the following code snippet:
 
-```
- var commonOptions = {};
-commonOptions.apiKey = "<your loginradius api key>";
-commonOptions.appName = "<LoginRadius app name>";
-commonOptions.hashTemplate = true;
-commonOptions.accessTokenResponse = true;
-commonOptions.phoneLogin = false;
-commonOptions.sott ="<Get_Sott>";
-commonOptions.verificationUrl = "https://auth.lrcontent.com/mobile/verification/index.html    ";
-commonOptions.callbackUrl = 'DemoApp://';
-commonOptions.isMobile =true;
-commonOptions.formValidationMessage=true;
-var LRObject= new LoginRadiusV2(commonOptions);
+  ```
+  var commonOptions = {};
+  commonOptions.apiKey = "<your loginradius api key>";
+  commonOptions.appName = "<LoginRadius app name>";
+  commonOptions.hashTemplate = true;
+  commonOptions.accessTokenResponse = true;
+  commonOptions.phoneLogin = false;
+  commonOptions.sott ="<Get_Sott>";
+  commonOptions.verificationUrl = "https://auth.lrcontent.com/mobile/verification/index.html    ";
+  commonOptions.callbackUrl = 'DemoApp://';
+  commonOptions.isMobile =true;
+  commonOptions.formValidationMessage=true;
+  var LRObject= new LoginRadiusV2(commonOptions);
 
-```
+  ```
 
 Replace the following placeholders in the above :
 
@@ -99,137 +99,108 @@ Replace the following placeholders in the above :
  
 2. Add this dependency injection in your `controllers.js`:
 
-    ```
-    .controller("ExampleController",[ '$scope','SDKService', function ($scope,SDKService) {
-    }]);
+  ```js
+  .controller("ExampleController",[ '$scope','SDKService', function ($scope,SDKService) {
+  
+  // initialize the LoginRadius registration object here
+
+  }]);
 
     ```
 3. Add the following function to your `controllers.js`. This is used initialize the LoginRadius registration object, when user clicks on the Registration or Login button:
 
-```js
-var lroptions = {};
-$scope.lr = SDKService.getSDKContext(lroptions);
-$scope.lrapi = SDKService.getAPIContext();
-lroptions.callback = function(params) {
-//Handle the actions for: sociallogin, login, registration, and forgotpassword
-switch (params.action) {
-//Login returns an accesstoken which can be used to pull user details for APIs calls.
-case "login":
-//handle Email and Password Functionality
-break;
-//Registration returns and email message and status which you can use to display messaging to your user.
-case "registration":
-//Handle successful registration messaging
-break;
-//Forgot password returns and email message and status which you can use to display messaging to your user.
-default:
-alert('action not defined');
-break;
-}
-};
+  ```js
 
-```
+  var lroptions = {};
+
+  $scope.lr = SDKService.getSDKContext(lroptions);
+  $scope.lrapi = SDKService.getAPIContext();
+
+  lroptions.callback = function(params) {
+
+  //Handle the actions for: login, registration
+  switch (params.action) {
+  //Login returns an accesstoken which can be used to pull user details for APIs calls.
+  case "login":
+  if (params.response.access_token != null) {
+  sessionStorage.setItem('LRTokenKey', params.response.access_token);
+  //window.location = "#/afterloginredirection";
+  } else {
+  alert(JSON.stringify(params.response));
+  }
+  break;
+  //Registration returns and email message and status which you can use to display messaging to your user.
+  case "registration":
+  alert(JSON.stringify(params.response));
+  break;
+  default:
+  break;
+    }
+  };
+
+  ``` 
 
 4. Add the following code snippet to `Index.html` file or wherever you want to use **Registration Interface**. It triggers the registration interface and will return with an action of "registration" to the callback function.
 
-```js
-lr.register()
-```
+  ```js
+  lr.register()
+  ```
 You must add an HTML div for Registration interface.
 
-```html
-<div id="registration-container"></div>
-```
+  ```html
+  <div id="registration-container"></div>
+  ```
 
 For Example -
-```html
+  ```html
+  <div ng-app="starter" ng-controller="ExampleController" id="loginradius-ionic">
+
     <script id="register.html" type="text/ng-template">
     <ion-view>
      <ion-header-bar align-title="center" class="bar-positive">
-  <div class="buttons">
+    <div class="buttons">
      <div id="div" class="fa fa-chevron-left" ng-click="onBackKeyDown()" style="font-size:25px;color:#fff;margin: 5px;"></div>
   </div>
   <h1 class="title">Register</h1>
  
-</ion-header-bar>      
+    </ion-header-bar>      
       <ion-content has-header="true" padding="true" ng-init="lr.register()">
        <div id="registration-container"  style="margin-bottom:4%"></div>
       </ion-content>
     </ion-view>
-  </script> 
-```
+    </script>   
+  ```
 
 5. Add the following code snippet to `Index.html` file or wherever you want to use **Login Interface**. It triggers the login interface and will return with an action of "login" to the callback function.
 
-```js
-lr.login()
-```
+  ```js
+  lr.login()
+  ```
 For email/password login to add div for Login interface
 
-```html
-<div id="login-container"></div>
-```
+  ```html
+  <div id="login-container"></div>
+  ```
 
 ## Retrieve User Data using Access Token
 
 1. Create a HTML file to call API and get data. For exmaple- create a `Profile.html` file in `demoApp\www\` folder.
 
-2. In the created HTML file (`Profile.html`), add the following code for handle the login and registration action:
+2. Add the following code to the `Profile.html` file for getting the user profile:
 
-```html
+  ```html
+  <ion-content ng-controller="ExampleController" padding="true" ng-init="loadUserprofile()">
+  ```
+3. Add the following code snippet to `controllers.js` file function for getting user profile data:
 
-var lroptions = {};
-
-$scope.lr = SDKService.getSDKContext(lroptions);
-$scope.lrapi = SDKService.getAPIContext();
-
-lroptions.callback = function(params) {
-
-//Handle the actions for: login, registration
-switch (params.action) {
-//Login returns an accesstoken which can be used to pull user details for APIs calls.
-case "login":
- if (params.response.access_token != null) {
- sessionStorage.setItem('LRTokenKey', params.response.access_token);
- window.location = "#/afterloginredirection";
- } else {
- alert(JSON.stringify(params.response));
-}
-break;
-//Registration returns and email message and status which you can use to display messaging to your user.
-case "registration":
-alert(JSON.stringify(params.response));
-break;
-default:
-break;
-}
-};
-
-``` 
-
+  ```js
+  $scope.loadUserprofile = function() {
+  $scope.lrapi.getUserprofile(function(userprofile) {
+    alert(JSON.stringify(userprofile));
+  });
+  }
+  ```
 > Note: Redirecting the user to the `Profile.html` file upon successful login.
-
-3. Add the following code to the `Profile.html` file for getting the user profile:
-
-```
-<ion-content ng-controller="ExampleController" padding="true" ng-init="loadUserprofile()">
-```
-4. Add the following code snippet to `controllers.js` file function for getting user profile data:
-
-```js
-$scope.loadUserprofile = function() {
-$scope.lrapi.getUserprofile(function(userprofile) {
-document.getElementById('userimage').src = userprofile.ImageUrl;
-document.getElementById('ID').innerHTML = userprofile.ID;
-document.getElementById('Provider').innerHTML = userprofile.Provider;
-document.getElementById('username').innerHTML = (userprofile.FirstName || '') + ' ' + (userprofile.MiddleName || '') + ' ' + (userprofile.LastName || '');
-document.getElementById('emailid').innerHTML = userprofile.Email && userprofile.Email.length > 0 ? userprofile.Email[0].Value : '';
-document.getElementById('birthdate').innerHTML = userprofile.BirthDate;
-document.getElementById('gender').innerHTML = userprofile.Gender;
-document.getElementById('profileurl').innerHTML = userprofile.ProfileUrl;
- });
- }
-```
 
 ## Run and See Result
 
