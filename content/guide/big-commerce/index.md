@@ -40,7 +40,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
    ![alt_text](images/bigcommerce-lrinstallconfig.png "image_tooltip")
 
-This will install the LoginRadius App into your BigCommerce environment. If you receive any errors or have not previously spoken with the [LoginRadius Support Team](https://loginradiusassist.freshdesk.com/support/home) to configure your BigCommerce integration reach out via the LoginRadius support channels to get access to the BigCommerce integration.
+This will install the LoginRadius App into your BigCommerce environment. If you receive any errors, contact [LoginRadius Support Team](https://loginradiusassist.freshdesk.com/support/home).
 
 
 ## BigCommerce Setup
