@@ -58,6 +58,7 @@
             margin-bottom: 0;
             color: $gray-dark;
             font-size: 16px;
+            line-height: 24px;
             a {
               font-weight: 400;
             }
@@ -179,6 +180,17 @@
       margin-top: 48px;
       margin-bottom: 24px;
       font-size: 24px;
+      font-weight: 600;
+      & + blockquote,
+      & + h4 {
+        margin-top: 24px;
+      }
+    }
+    h4 {
+      position: relative;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      font-size: 20px;
       font-weight: 600;
       & + blockquote {
         margin-top: 24px;
