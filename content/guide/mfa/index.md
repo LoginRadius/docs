@@ -19,13 +19,20 @@ You can implement the 2FA in two following ways:
 * **Google Authenticator**: Consumer needs to enter the verification code from Google Authenticator linked account. Upon verification, the consumer will be logged in. 
 
 
-## Step 1: Choose 2FA Method  
+## Step 1: Enable Two Factor Authentication  
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Security** and then navigate to the **Two Factor Authentication** section. Click the down arrow, the **Two Factor Authentication** screen will appear:
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Security** and then navigate to the **Two Factor Authentication** section. Click on the switch to enable the Two Factor Authentication Add-On.
 
-   ![alt_text](images/2fa.png "image_tooltip")
+   ![alt_text](images/addon-switch.png "image_tooltip")
 
-2. Choose the desired Two-Factor Authentication methods from **SMS Passcode** and **Google Authenticator**, and whether it is going to be optional or required for the consumers:
+2. When the Add-On dialog appears, click **Enable**
+
+   ![alt_text](images/addon-dialog.png "image_tooltip")
+
+
+## Step 2: Choose 2FA Method 
+
+1. Choose the desired Two-Factor Authentication methods from **SMS Passcode** and **Google Authenticator**, and whether it is going to be optional or required for the consumers:
 
    ![alt_text](images/main.png "image_tooltip")
 
@@ -34,7 +41,7 @@ You can implement the 2FA in two following ways:
     * **Required**: Consumers will be required to authenticate themself using the enabled 2FA option in addition to the initial authentication for login.
 
 
-## Step 2: Configure 2FA Templates
+## Step 3: Configure 2FA Templates
 
 ### SMS Passcode
 
@@ -66,7 +73,7 @@ To enable two-factor authentication with Google Authenticator, you need to confi
 
 The two-factor authentication is now configured.
 
-### Step 3: Check Auth Page (IDX)
+## Step 4: Check Auth Page (IDX)
 
 **SMS Passcode**
 
