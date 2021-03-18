@@ -454,6 +454,9 @@ const Middle = () => {
               <li>
                 <a href={withPrefix("concepts/idx")}>IDX</a>
               </li>
+              <li>
+                <a href={withPrefix("concepts/common-passwords")}>Common Passwords</a>
+              </li>
             </ul>
           </div>
           {/*Concepts*/}
