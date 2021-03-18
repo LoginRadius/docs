@@ -42,7 +42,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 
 
-### Setup a JAVA project
+## Setup a JAVA project
 
 
 
@@ -51,7 +51,7 @@ Next, we can either install Eclipse or VSCode (available from their respective w
 
 Once you have both JDK and VSCode installed, we can follow [this guide](https://medium.com/@tariqul.islam.rony/learning-java-and-spring-boot-with-visual-studio-code-vscode-part-1-54073f2fa264) to setup a JAVA environment in Visual Studio Code.
 
-### Set up a server for the JAVA project
+## Set up a server for the JAVA project
 
 Usually, web applications require a server for setting up, for this we will be needing SpringBoot. To set up spring-boot:
 
@@ -61,7 +61,7 @@ Install the Spring boot Extensions Pack for getting Spring boot Development Envi
 ![alt_text](/images/springboot-setup.png "image_tooltip")
 
 
-### Implementing Loginradius SDK in JAVA
+## Implementing Loginradius SDK in JAVA
 
 Loginradius offers an already done for you Loginradius JAVA-SDK kit that can be used to implement basic features such as user authorization and registration for your app easily.
 
@@ -72,7 +72,7 @@ After setting up git, run this command in your VSCode terminal:
 `git clone https://github.com/LoginRadius/java-sdk.git`
 
 
-### Exploring JAVA demo
+## Configure Project
 
 Locate to the demo folder:
 
@@ -122,24 +122,101 @@ commonOptions.appName = "<App Name>"; //Add app name
 ```
 
 
-Once the repo is created, we can run the server by running the Application.java file from our VSCode. For that:
-
-Locate Application.java file in VSCode file explorer:
-
-`java-sdk/demo/src/main/java/com/demo/Application.java`
-
-
-
-From there press the F5 key (or fn+F5 if on MAC) to run the application. This will set up the application on your system, on the terminal you can see the port number on which your app will be hosted.
 
 Visit http://localhost:8080 (8080 is the default port for hosting the web page, you can check out the port number from within the terminal after execution is finished and the web page is set up) in your browser.
 
+## Configure Registration and Login URLs
+
+> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
+
+Navigate your Register or Login links or buttons to the following URLs:
+
+**Registration Page URL:**
+
+`https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`
+
+**Login Page URL:**
+
+`https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
+
+**Where:**
+
+* **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
+* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
+
+> return_url can be your website, frontend app, or backend server url where you are handling the access token.
+
+## Retrieve User Data using Access Token
+
+> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Golang backend API with query parameter (access token).
+>
+> The following is an example of the access token in the query string with the Return URL:
+>
+> `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
+>
+> If return_url is of frontend, pass the token to backend JAVA API (eg: http://localhost:8080) from the application. Or you can use the path of the back end API as the return_url.
+
+Add the following API snippet to `LoginRadiusService.java`to get the user profile using the access token:
+
+```
+public String getUserProfileByAccessToken(HttpServletRequest request) {
+String accessToken = "<accessToken>"; //Required
+
+AuthenticationApi authenticationApi = new AuthenticationApi();
+authenticationApi.getAccessTokenInfo(accessToken ,  new AsyncHandler<TokenInfoResponseModel> (){
+
+@Override
+ public void onFailure(ErrorResponse errorResponse) {
+ System.out.println(errorResponse.getDescription());
+ }
+ @Override
+ public void onSuccess(TokenInfoResponseModel response) {
+  System.out.println(response.getAccess_Token());
+ }
+});
+}
+
+```
+
+and this route configuration to `LoginRadiusController.java`:
+
+```
+ @RequestMapping(value="/getUserInfoByAccessToken", method=RequestMethod.GET)
+    public String getUserProfileByAccessToken(){
+        return "index";
+    }
+
+```
+
+## Run and See Result
+
+* Run the API Server by executing the following command in the command line:
+  [`mvn spring-boot:run`] 
+
+  > NOTE: If you don't have Maven already installed, you can install it from [here](https://maven.apache.org)
+
+* Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+
+  ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
+
+* Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
+
+  ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
+
+Similarly, you can implement more features using JAVA SDK.
+
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+
+## Explore JAVA Demo
+
+* **[Refer to GitHub Demo](https://github.com/LoginRadius/java-sdk)**  to know how to implement various LoginRadius features using SDK Functions.
+
+## Recommended Next Steps
+
+## JAVA SDK Reference
 
 
-### Recommended next steps
-
-
-### API Reference
+## API Reference
 
 
 
