@@ -70,7 +70,8 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 In the `index.html` file, initialize the LoginRadius registration object for interface using the following code snippet:
 
-  ```
+  ```html
+  <script type="text/javascript">
   var commonOptions = {};
   commonOptions.apiKey = "<your loginradius api key>";
   commonOptions.appName = "<LoginRadius app name>";
@@ -83,6 +84,7 @@ In the `index.html` file, initialize the LoginRadius registration object for int
   commonOptions.isMobile =true;
   commonOptions.formValidationMessage=true;
   var LRObject= new LoginRadiusV2(commonOptions);
+  </script>
 
   ```
 
@@ -106,7 +108,7 @@ Replace the following placeholders in the above :
 
   }]);
 
-    ```
+  ```
 3. Add the following function to your `controllers.js`. This is used initialize the LoginRadius registration object, when user clicks on the Registration or Login button:
 
   ```js
