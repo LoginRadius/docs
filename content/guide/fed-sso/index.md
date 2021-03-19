@@ -37,7 +37,7 @@ The LoginRadius Dashboard allows you to configure the SAML app by customizing th
 
 For more information, refer to the following documents:
 
-* [LoginRadius SAML Docs](../../guide/saml)
+* [LoginRadius SAML Document](../../guide/saml)
 
 * [SAML Specs Document](http://saml.xml.org/saml-specifications)
 
@@ -57,13 +57,13 @@ LoginRadius Identity Platform can function as either an OAuth 2 Identity Provide
 
 LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
-* [LoginRadius OAuth Documentation](../../guide/oauth)
+* [LoginRadius OAuth Document](../../guide/oauth)
 * [OAuth 2 RFC 6749](https://tools.ietf.org/html/rfc6749)
 
 ### OpenID
 
 LoginRadius Identity Platform provides a way to integrate your OpenID client with our APIs by following the standards. LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
-* [LoginRadius OpenID Connect Documentation](../../guide/oidc)
+* [LoginRadius OpenID Connect Document](../../guide/oidc)
 * [OpenID Connect Specs](https://openid.net/specs/openid-authentication-2_0.html)
 
