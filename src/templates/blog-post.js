@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import * as containerStyles from "./blog-post.module.css"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -14,13 +15,13 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <div className="global-wrapper">
       <div id="root">
-        <Header  searchIndex={data.siteSearchIndex.index}/>
+        <Header searchIndex={data.siteSearchIndex.index} />
         <Layout location={location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <section className="detail-page py-72">
+          <section className={`detail-page py-72 ${containerStyles.container}`}>
             <div>
               <div className="sidebar">
                 <div className="headings">Web APP</div>
