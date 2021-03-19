@@ -148,7 +148,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 ## Retrieve User Data using Access Token
 
-> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Golang backend API with query parameter (access token).
+> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the JAVA backend API with query parameter (access token).
 >
 > The following is an example of the access token in the query string with the Return URL:
 >
