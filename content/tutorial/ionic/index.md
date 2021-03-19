@@ -58,7 +58,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 2. Include this file in your project's `demoApp\www\js` folder.
 
-3. Include the reference on the page `demoApp\www\index.html`:
+3. Include the SDK reference on the page `demoApp\www\index.html`:
 
   ```html
   <script src="js/sdkservices.js"></script>
@@ -68,7 +68,7 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 ## Configure Project
 
-In the `index.html` file, initialize the LoginRadius registration object for interface using the following code snippet:
+In the `index.html` file, initialize the LoginRadius registration interface using the following code snippet:
 
   ```html
   <script type="text/javascript">
@@ -109,7 +109,7 @@ Replace the following placeholders in the above :
   }]);
 
   ```
-3. Add the following function to your `controllers.js`. This is used initialize the LoginRadius registration object, when user clicks on the Registration or Login button:
+3. Add the following function to your `controllers.js`,this is used initialize the LoginRadius registration object, when user clicks on the Registration or Login button:
 
   ```js
 
