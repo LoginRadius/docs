@@ -219,10 +219,10 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="/guide/drupal">
                   <img src="images/drupal.svg" width={20} />
                   <span>Drupal </span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#">

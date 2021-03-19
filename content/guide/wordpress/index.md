@@ -1,3 +1,9 @@
+---
+title: "WordPress"
+tags: ["WordPress"]
+description: "This is a guide for integrating LoginRadius services with Wordpress application."
+---
+
 # Get Started - WordPress
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your WordPress application.
 
