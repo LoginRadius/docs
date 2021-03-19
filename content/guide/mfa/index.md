@@ -79,6 +79,7 @@ The two-factor authentication is now configured.
 
 In case of SMS Passcode, upon validating the login credentials, the consumer will get an SMS with verification OTP. Upon verifying with OTP, the consumer will be logged in. 
 
+![alt_text](images/sms-otp.png "image_tooltip")
 
 **Google Authenticator**
 
