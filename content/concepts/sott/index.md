@@ -8,29 +8,32 @@ description: "This is a document detailing the concept of the Secure One Time To
 
 The LoginRadius Registration APIs require an API key and a Secure One Time Token to authenticate requests. This SOTT acts as a layer for you to control your consumer's access to register in your app.
 
-An SOTT combines data from your API secret, your API key, and a defined timestamp (with a start and end time) into an encrypted string that will be validated when registration requests are made to the LoginRadius Registration API. The aim of this token is to ensure that only you (using your API secret) can grant access to consumers to register in your app.
+A SOTT combines data from your API secret, your API key, and a defined timestamp (with a start and end time) into an encrypted string that will be validated when registration requests are made to the LoginRadius Registration API. The aim of this token is to ensure that only you (using your API secret) can grant access to consumers to register in your app.
 
 ## Generating Your SOTT
 
 You can choose to either [generate static SOTTs](#generate-sott-in-your-dashboard) using the LoginRadius Dashboard, or generate dynamic SOTTs in your application using [the provided algorithm](#generate-sott-manually), or [our SDKs](#generate-sott-using-sdks).
 
-### Generate SOTT in your Dashboard
+### Generate SOTT in LoginRadius Dashboard
 
 To generate SOTTs in your dashboard, log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
 Click the **Secure Mobile OTP Token** sub-section, and the **Generate SOTT** screen will appear:
 
-  ![alt_text](../../assets/blog-common/sott.png "image_tooltip")
+![alt_text](../../assets/blog-common/sott.png "image_tooltip")
 
-If you have already generated an SOTT, you can generate additional tokens by clicking the **Generate SOTT** button available at the bottom right of the screen as highlighted below:
+If you have already generated a SOTT, you can generate additional tokens by clicking the **Generate SOTT** button available at the bottom right of the screen as highlighted below:
 
-  ![alt_text](images/generate-sott.png "image_tooltip")
+![alt_text](images/generate-sott.png "image_tooltip")
 
 Enter the required details in each respective field in the form provided, and click the **Generate** button to generate your SOTT.
 
-  ![alt_text](images/generate-sott-form.png "image_tooltip")
+![alt_text](images/generate-sott-form.png "image_tooltip")
 
-These are the fields that you will find in the **Generate SOTT** form, and their descriptions:
+
+> **Note:** When your SOTT is generated, be sure to save this somewhere, as this will not be saved in your dashboard.
+
+These are the fields that you will find in the **Generate SOTT** form and their descriptions:
 
   * **Select Technology**: Select an option to be associated with this SOTT. The option you choose has no effect on your generated SOTT.
 
@@ -38,15 +41,14 @@ These are the fields that you will find in the **Generate SOTT** form, and their
 
   * **Select Token Validity**: Select the date range for which this SOTT will remain valid. Your consumer will not be able to register using an expired SOTT.
 
-> Note: When your SOTT is generated, be sure to save this somewhere as this will not be saved in your dashboard.
 
-> Note: We recommend that you dynamically generate SOTTs, as static SOTTs will usually have be valid for long periods of time.
+> **Note:** We recommend that you dynamically generate SOTTs, as static SOTTs will usually have be valid for long periods of time.
 
-### Generate SOTT manually
+### Generate SOTT Manually
 
-To dynamically generate SOTTs, the algorithm is provided below.
+The algorithm is provided below to dynamically generate SOTTs.
 
-#### Generate PBKDF2 key
+#### Generate PBKDF2 Key
 
 The key used to encrypt the token string is generated using PBKDF2 using the following inputs:
 
@@ -74,11 +76,11 @@ For example, your string could look like the following:
 
 Using 256 bit AES encryption with mode CBC (aes-256-cbc), the string value `tu89geji340t89u2` as your initialization vector, and the PBKDF2 derived key, encrypt the formatted string. Your result should be a base64 encoded string.
 
-#### Generate Hash of the Encrypted String
+#### Generate Hash of Encrypted String
 
 Using the MD5 algorithm, generate a hash of the encrypted string. Your result should be a base16 (hex) encoded string.
 
-#### Combine the Encrypted String with the MD5 Hash
+#### Combine Encrypted String with MD5 Hash
 
 Combine both the encrypted string with the MD5 hash in the following format:
 
@@ -90,7 +92,7 @@ This is your SOTT that you can use to register your consumers with.
 
 #### Example Implementation
 
-Here is an example function in Node.js that will generate an SOTT for you:
+Here is an example function in Node.js that will generate a SOTT for you:
 
 ```js
 const crypto = require("crypto");
@@ -150,7 +152,7 @@ function formatSott(encryptedString, encryptedStringHash) {
 
 You can also use our provided SDKs to dynamically generate SOTTs. Our SDKs implement the same algorithm described above.
 
-For example, using the Java SDK, you can generate an SOTT using the following method:
+For example, using the Java SDK, you can generate a SOTT using the following method:
 
 ```java
 Sott sott = new Sott();
