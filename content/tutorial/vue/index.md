@@ -66,7 +66,7 @@ Use arrow keys to select `default` and press **enter/return**:
 
 ![alt_text](images/vue-cli-preset.png "image_tooltip")
 
-Once your project is generated, type `cd hello-world`. Wait for the app to compile, and navigate to URL shown on terminal. You should see following:
+Once your project is generated, type `cd hello-world`. Run `npm run serve`. Wait for the app to compile, and navigate to URL shown on terminal. You should see following:
 
 ![alt_text](images/vue-browser.png "image_tooltip")
 
@@ -95,6 +95,13 @@ Below is the list of features that are included in this demo.
 3. Resend Email Verification
 4. Social Login
 
+## Whitelist Domain
+
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 
 
