@@ -51,7 +51,7 @@ Next, we can either install Eclipse or VSCode (available from their respective w
 
 Once you have both JDK and VSCode installed, we can follow [this guide](https://medium.com/@tariqul.islam.rony/learning-java-and-spring-boot-with-visual-studio-code-vscode-part-1-54073f2fa264) to setup a JAVA environment in Visual Studio Code.
 
-## Set up a server for the JAVA project
+## Setting up Spring Boot for server in the JAVA project
 
 Usually, web applications require a server for setting up, for this we will be needing SpringBoot. To set up spring-boot:
 
@@ -63,7 +63,7 @@ Install the Spring boot Extensions Pack for getting Spring boot Development Envi
 
 ## Implementing Loginradius SDK in JAVA
 
-Loginradius offers an already done for you Loginradius JAVA-SDK kit that can be used to implement basic features such as user authorization and registration for your app easily.
+Loginradius offers an already-done-for-you **Loginradius JAVA-SDK kit** that can be used to implement basic features such as user authorization and registration for your app easily.
 
 For this, you'll be needing Git for VSCode, which if not already setup can be done so by following [this guide](https://www.jcchouinard.com/install-git-in-vscode/).
 
@@ -74,9 +74,9 @@ After setting up git, run this command in your VSCode terminal:
 
 ## Configure Project
 
-Locate to the demo folder:
+Locate to the this folder:
 
-`java-sdk/demo`
+`java-sdk/LoginRadius-JavaSDK`
 
 This is the file structure you will get in the Java demo, let's see what each file does
 
@@ -190,7 +190,7 @@ and this route configuration to `LoginRadiusController.java`:
 
 ## Run and See Result
 
-* Run the API Server by executing the following command in the command line:
+* First navigate to `java-sdk/demo` folder. Run the API Server by executing the following command in the command line:
   [`mvn spring-boot:run`] 
 
   > NOTE: If you don't have Maven already installed, you can install it from [here](https://maven.apache.org)
