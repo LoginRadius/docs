@@ -71,8 +71,21 @@ var LRObject= new LoginRadiusV2(commonOptions);
 
 ## Run and See Result
 
-1. Try executing the index.html file in your browser
-2. 
+1. Fill in your LoginRadius credentials in options.js as described in sections above
+
+2. Execute the index.html file in your browser
+
+3. Create a user by clicking on **Register Here**, upon successful user creation you'll be redirected to Login page
+
+![alt_text](/images/loginscreen.png "image_tooltip")
+
+![alt_text](/images/registration.png "image_tooltip")
+
+4. Log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. Open **Developer Tools** in your browser, navigate to **Console** and you'll find a JSON response. The following displays a sample JSON response:
+
+
+
+![alt_text](/images/jsonresponse.png "image_tooltip")
 
 ## Whitelist Domain
 
@@ -82,6 +95,9 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
+## Explore Demo
+
+* **[Refer to GitHub Demo](/download/html5-sdk-demo.zip)**  to know how to implement various LoginRadius features using SDK Functions.
 
 
 [Go Back to Home Page](https://lr-developer-docs.netlify.app)
