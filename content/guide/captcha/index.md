@@ -27,6 +27,9 @@ This section covers the required configurations that you need to perform to impl
 
 1. Log in to your Google account, navigate to https://www.google.com/recaptcha/intro/v3.html, and select **Admin console** on the top right, as highlighted in the following screen:
 
+![alt_text](images/google-recaptcha.png "image_tooltip")
+
+
    You will be redirected to the reCAPTCHA's configuration section.
 
 2. Click the **+ (create)** button, as highlighted in the following screen:
@@ -35,28 +38,14 @@ This section covers the required configurations that you need to perform to impl
 
     ![alt_text](images/add-site.png "image_tooltip")
 
-3. Enter the name/label for the reCAPTCHA configuration (you can use your application’s name) and select the version of the reCAPTCHA you would like to use.
+3. Enter the name/label for the reCAPTCHA configuration (you can use your application’s name) and select the version of the reCAPTCHA you would like to use. 
 
-   Upon selecting the reCAPTCHA type, the following screen will appear:
+4. Under the **Domain**, enter your website’s domain (where this reCAPTCHA will be used). If you are implementing in your development environment, enter `localhost`. The purpose is to whitelist your application domain.
 
-   ![alt_text](images/keys.png "image_tooltip")
+5. Click the **Submit** button and you will get the Public and Private Key. Use these Public and Private keys in to configure Google reCAPTCHA for your LoginRadius app
 
-4. Enter the domain where this reCAPTCHA will be used. The purpose is to whitelist your application domain. If you are implementing in your development environment, enter **localhost**.
+![alt_text](images/keys.png "image_tooltip")
 
-5. Accept the reCaptcha terms of service and then click the **Register** button, as highlighted in the following screen:
-term and condition
-
-   ![alt_text](images/register.png "image_tooltip")
-
-6. Upon registration, reCAPTCHA credentials will be generated, as highlighted in the following screen.
-
-   > Note: Make a note of these credentials for configuring reCAPTCHA in the LoginRadius Identity Platform.
-
-7. Log in to your Darwin Dashboard account and navigate to **Security > CAPTCHA** setting. The following screen will appear:
-
-   ![alt_text](images/credentials.png "image_tooltip")
-
-8. In the **Google ReCAPTCHA2 Settings** tab, enter the Google reCAPTCHA credentials obtained from **Step 6** and click the **Save** button.
 
 ## Step 2: CAPTCHA Deployment
 
