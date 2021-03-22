@@ -4,31 +4,20 @@ tags: ["Auth Page IDX", "Concepts"]
 description: "An Overview about Auth Page (Identity Experience Framework)."
 ---
 
-# IDX 
+# Auth Page (IDX)
 
 **Auth Page (IDX)** is a ready-to-use web page available on a dedicated instance in LoginRadius and allows you to setup a centralized authentication page. It is a set of registration, login, and related web pages such as forgot password, profile.
 
 There are a few predefined layouts that can be further customized via your LoginRadius Dashboard under [Auth Page Customization](https://dashboard.loginradius.com/auth-page).
 
-Go through the [Auth Page (IDX) customization](#customization) for more details.
+Go through the [Auth Page (IDX) customization](https://lr-developer-docs.netlify.app/guide/customize-auth-page) for more details.
 
-## Key Benefits
-
-Auth Page (IDX) is useful for authentication needs, you can direct your users to Auth Page (IDX) and after successful authentication or registration, direct back to your domain.
-
-- Centralized - You will be able to handle multiple sites' Login and Registration flows in a single location and service multiple properties with a single set of styles and configurations.
-
-- Customizable - you can choose predefined awesome themes and further customize the look and feel of your Auth Page (IDX) framework.
-
-- Cut down on UI/UX design time - Utilize the classic login screen layout without the fuss.
-
-- Less complexity - Using LoginRadius Auth Page (IDX) means, don't need to handle authentication, new users registration, forgot password etc.
 
 ## Actions
 
-All the available actions such as Login, Registration, Forgot password, Profile page, logout with the Identity Experience Framework, can be utilized as per your needs.
+All the available actions such as Login, Registration, Forgot password, Profile page, logout with the Auth Page (IDX), can be utilized as per your needs.
 
-Below is a list of the available actions with the LoginRadius Identity Experience Framework:
+Below is a list of the available actions with the Auth Page(IDX):
 
 ### Login
 
@@ -64,7 +53,7 @@ https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=forgotpasswo
 
 ### Profile Page
 
-To display the User Profile interface, direct your customers to this URL:
+To display the Consumer/User Profile interface, direct your customers to this URL:
 
 ```
 https://<LoginRadius APP Name>.hub.loginradius.com/profile.aspx
@@ -73,7 +62,7 @@ https://<LoginRadius APP Name>.hub.loginradius.com/profile.aspx
 
 ### Logout
 
-To display the User Profile interface, direct your customers to this URL:
+To display the Consumer/User Profile interface, direct your customers to this URL:
 
 ```
 https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return_url=<Return URL>
@@ -85,18 +74,17 @@ https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return
 
 ## Customization
 
-Go through this section for Auth Page (IDX) customization
+Go through [this document](https://lr-developer-docs.netlify.app/guide/customize-auth-page) for Auth Page (IDX) customization.
 
-<details>
-<summary>
-<a>Click here to view details  
-</a>
-</summary>
+## Key Benefits
 
+Auth Page (IDX) is useful for authentication needs, you can direct your consumers to Auth Page (IDX), and after successful authentication or registration, direct them back to your domain.
 
-<iframe
-  src="/guide/customize-auth-page/"
-height='800px' width='750px'
-></iframe>
-</details>
+- Centralized: You will be able to handle multiple sites' Login and Registration flows in a single location and service multiple properties with a single set of styles and configurations.
+
+- Customizable: You can choose predefined awesome themes and further customize the look and feel of your Auth Page (IDX).
+
+- Cut down on UI/UX design time: Utilize the classic login screen layout without the fuss.
+
+- Less Complexity: Using LoginRadius Auth Page (IDX) means, don't need to handle authentication, new consumers registration, forgot password, etc.
 
