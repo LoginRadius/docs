@@ -156,7 +156,9 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > If return_url is of frontend, pass the token to backend JAVA API (eg: http://localhost:8080) from the application. Or you can use the path of the back end API as the return_url.
 
-Add the following API snippet to `LoginRadiusService.java`to get the user profile using the access token:
+Navigate to this directory `java-sdk/demo/src/main/java/com/demo`
+
+There, locate following file `LoginRadiusService.java` and add the following API snippet to get the user profile using the access token:
 
 ```
 public String getUserProfileByAccessToken(HttpServletRequest request) {
@@ -178,7 +180,7 @@ authenticationApi.getAccessTokenInfo(accessToken ,  new AsyncHandler<TokenInfoRe
 
 ```
 
-and this route configuration to `LoginRadiusController.java`:
+and in the same directory, locate `LoginRadiusController.java` and add following snippet for route configuration :
 
 ```
  @RequestMapping(value="/getUserInfoByAccessToken", method=RequestMethod.GET)
