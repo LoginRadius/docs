@@ -56,22 +56,29 @@ NodeJS is successfully installed and now we'll use `npm` (Node packet manager) t
 
  `npm install -g @vue/cli`
 
-### Generate Vue.js Project
+## Configure Registration and Login URLs
 
-Navigate to the directory where you'd like to set up your Vue JS project and run following command:
+> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
-`vue create hello-world`
+Navigate your Register or Login links or buttons to the following URLs:
 
-Use arrow keys to select `default` and press **enter/return**:
+**Registration Page URL:**
 
-![alt_text](images/vue-cli-preset.png "image_tooltip")
+`https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`
 
-Once your project is generated, type `cd hello-world`. Run `npm run serve`. Wait for the app to compile, and navigate to URL shown on terminal. You should see following:
+**Login Page URL:**
 
-![alt_text](images/vue-browser.png "image_tooltip")
+`https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
+
+**Where:**
+
+* **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
+* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
+
+> return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
 
-## Run Vue.js LoginRadius SDK Demo
+## Run Vue.js LoginRadius SDK Demo and See Results
 
 This section explains the steps included in the setup of the Vue.JS demo and how to run the demo.
 
@@ -81,9 +88,28 @@ This section explains the steps included in the setup of the Vue.JS demo and how
 
 3. Configure your LoginRadius Credentials in `"/src/assets/options.js"`
 
+![alt_text](/images/options.png "image_tooltip")
+
+
 4. Run the demo on localhost port 8080 by typing `npm run dev` into your command-line interface.
 
 5. This will open your demo on your default browser.
+
+![alt_text](/images/landing-page.png "image_tooltip")
+
+6. Create a user by clicking on **Register Here**, upon successful user creation you'll be redirected to Login page
+
+
+
+![alt_text](/images/registration.png "image_tooltip")
+
+7. Log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. Open **Developer Tools** in your browser, navigate to **Console** and you'll find a JSON response. The following displays a sample JSON response:
+
+![alt_text](/images/loginscreen.png "image_tooltip")
+
+
+![alt_text](/images/jsonresponse.png "image_tooltip")
+
 
 
 ## Features Implemented in the Demo
