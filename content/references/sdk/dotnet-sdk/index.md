@@ -13,7 +13,7 @@ This document describes how to start using the LoginRadius ASP&#46;NET SDK and i
 
 > You must have &#46;NET 4.0 / &#46;NetStandard 1.3 or later installed.
 
-For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core [MVC](/tutorial/dotnetcore-mvc) or [Razor](/tutorial/dotnetcore-razor) guide.
+For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core [MVC](/tutorial/dotnetcore-mvc) or [Razor](/tutorial/dotnetcore-razor) tutorial.
 
 ## SDK Installation and Configuration
 
@@ -787,7 +787,7 @@ List of APIs in this section:
 
 #### MFA Email Login (POST)
 
-Logs in by Email ID on a Multi Factor Authentication enabled LoginRadius app.
+Logs in by Email ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
 
 ```csharp
 var password = "<Password>"; //Required
@@ -803,7 +803,7 @@ var apiResponse = new MultiFactorAuthenticationApi().MFALoginByEmail(email, pass
 
 #### MFA Phone Login (POST)
 
-Logs in by Phone ID on a Multi Factor Authentication enabled LoginRadius app.
+Logs in by Phone ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
 
 ```csharp
 var password = "<Password>"; //Required
@@ -1175,7 +1175,6 @@ var apiResponse = new RoleApi().DeleteRole(role);
 Removes permissions from a specified Role.
 
 ```csharp
-
 PermissionsModel permissionsModel = new PermissionsModel{
   Permissions = new List<String>{"<Permission>"}
 }; //Required
