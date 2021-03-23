@@ -458,6 +458,9 @@ const Middle = () => {
                 <a href={withPrefix("concepts/common-passwords")}>Common Passwords</a>
               </li>
               <li>
+                <a href={withPrefix("concepts/token-handle")}>Handle Token</a>
+              </li>
+              <li>
                 <Link to="/concepts/sott">Secure One Time Token (SOTT)</Link>
               </li>
             </ul>
