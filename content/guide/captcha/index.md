@@ -27,16 +27,13 @@ This section covers the required configurations that you need to perform to impl
 
 1. Log in to your Google account, navigate to https://www.google.com/recaptcha/intro/v3.html, and select **Admin console** on the top right, as highlighted in the following screen:
 
-![alt_text](images/google-recaptcha.png "image_tooltip")
-
+   ![alt_text](images/google-recaptcha.png "image_tooltip")
 
    You will be redirected to the reCAPTCHA's configuration section.
 
-2. Click the **+ (create)** button, as highlighted in the following screen:
+2. Click the **+ (create)** button, the following screen will appear:
 
-    The following screen will appear:
-
-    ![alt_text](images/add-site.png "image_tooltip")
+   ![alt_text](images/add-site.png "image_tooltip")
 
 3. Enter the name/label for the reCAPTCHA configuration (you can use your application’s name) and select the version of the reCAPTCHA you would like to use. 
 
@@ -44,7 +41,7 @@ This section covers the required configurations that you need to perform to impl
 
 5. Click the **Submit** button and you will get the Public and Private Key. Use these Public and Private keys in to configure Google reCAPTCHA for your LoginRadius app
 
-![alt_text](images/keys.png "image_tooltip")
+   ![alt_text](images/keys.png "image_tooltip")
 
 
 ## Step 2: CAPTCHA Deployment
