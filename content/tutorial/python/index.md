@@ -184,4 +184,4 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ## Python SDK Reference
 
-* **[Python SDK](https://github.com/LoginRadius/python-sdk)**
+[Python SDK](/references/sdk/python)
