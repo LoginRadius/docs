@@ -1,7 +1,7 @@
 ---
-title: Handle Token
+title: "Handle Token"
+tags: ["Handle Token", "Token"]
 description: "This guide will explain everything about token handling."
-summary: "This guide will explain everything about token handling."
 ---
 
 > Access tokens are used to retrieve profile data and handle other user functionality. A client passes the access token to the server, and the server uses this token to decide whether the client is authorized to access the resource or not.
@@ -17,15 +17,17 @@ https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return
 
 Upon registration or login, the user is redirected to the specified return URL with a token appended. The following is an example: 
 
-` <Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
+`<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
 
 Check out our [Auth Page (IDX)](/concepts/idx-overview/) for more information about available actions and key benefits.
+
 ## Access Token Lifetime
+
 Access tokens have a default expiration time in the LoginRadius Identity Platform, and you can change it as per the business requirements. For example, access tokens should quickly expire in banking applications for security reasons.
 
-
 Check out our [Session Management](/security/session-management/) document for more details about the access token lifetime.
+
 ## Token Handling
 
 Once your application receives an access token, store this token client-side/server-side and use it further for API calls or via our SDKs by passing this as a **Bearer** credentials in HTTP **Authorization header**.
@@ -131,4 +133,4 @@ AuthenticationAPI.authInstance().login(withPayload:parameter as? [AnyHashable : 
 ```
 
 
-> You can check out our GitHub repository for [developer authentication demos](https://github.com/LoginRadius/developer-authentication-demos) using IDX in multiple languages.
+> You can check out our GitHub repository for [developer authentication demos](https://github.com/LoginRadius/developer-authentication-demos) using Auth Page (IDX) in multiple languages.
