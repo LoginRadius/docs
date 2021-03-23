@@ -8,26 +8,20 @@ description: "A guide to impliment LoginRadius SDK in a Node.js application."
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-LoginRadius Combined Node SDK features a combined SDK set to encompass Social Login, User Registration.
 
-
-This document contains information and examples regarding the LoginRadius Node.js SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google and Twitter. 
-You can get the SDK from [here](http://github.com/LoginRadius/node-js-sdk) 
+This document describes how to start using the LoginRadius Node.js SDK and its various features. You can get the SDK from [here](http://github.com/LoginRadius/node-js-sdk).
 
 > Note: The latest version(10.0.0) of Node js SDK works with LoginRadius V2 APIs.
 
 For a more hands-on tutorial to set up the SDK and a Node.js server and start making LoginRadius API calls, check out the [Node.js Tutorial.](/tutorial/node-js)
 
-## Installation <br/>
+## SDK Installation and Configuration <br/>
 
 ```
 npm install loginradius-sdk
 ```
 
-## Configuration
-
-
-Create `var config` in project
+In your project, create `var config` file:
 
 ```
   var config = {
@@ -54,10 +48,9 @@ Require the loginradius-sdk package and pass the config object
 
 For more details check [API Refrence Here](#)
 
-## API Details
+## API Methods
 
 ### Authentication API
-
 
 List of APIs in this Section:
  
