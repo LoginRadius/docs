@@ -4,13 +4,18 @@ tags: ["ASP.NET", "SDK"]
 description: "This is a document detailing the LoginRadius ASP.NET SDK Library."
 ---
 
-# ASP&#46;NET Library
+# ASP&#46;NET SDK
 
-This document describes how to start using the LoginRadius ASP&#46;NET SDK and its various features.
+>**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
+
+This document describes how to start using the LoginRadius ASP&#46;NET SDK and its various features. You can get the SDK from [here](https://github.com/LoginRadius/dot-net-sdk).
+
 
 > You must have &#46;NET 4.0 / &#46;NetStandard 1.3 or later installed.
 
-## SDK Installation
+For a more hands-on tutorial to set up the SDK and a ASP.NET server and start making LoginRadius API calls, check out the [ASP.NET Tutorial.](/tutorial/dotnet-webforms)
+
+## SDK Installation and Configuration
 
 Run the following command in the NuGet Package Manager Console in your project:
 
