@@ -161,31 +161,37 @@ Navigate to this directory `java-sdk/demo/src/main/java/com/demo`
 There, locate following file `LoginRadiusService.java` and add the following API snippet to get the user profile using the access token:
 
 ```
-public String getUserProfileByAccessToken(HttpServletRequest request) {
-String accessToken = "<accessToken>"; //Required
+public String getUserProfile(HttpServletRequest request) {
+		AuthenticationApi auth = new AuthenticationApi();
+		auth.getProfileByAccessToken(request.getParameter("token"), null, new AsyncHandler<Identity>() {
+			@Override
+			public void onSuccess(Identity arg0) {
+				// TODO Auto-generated method stub
+				resp = gson.toJson(arg0);
+			}
 
-AuthenticationApi authenticationApi = new AuthenticationApi();
-authenticationApi.getAccessTokenInfo(accessToken ,  new AsyncHandler<TokenInfoResponseModel> (){
+			@Override
+			public void onFailure(ErrorResponse error) {
+				// TODO Auto-generated method stub
+				resp = error.getDescription();
+			}
 
-@Override
- public void onFailure(ErrorResponse errorResponse) {
- System.out.println(errorResponse.getDescription());
- }
- @Override
- public void onSuccess(TokenInfoResponseModel response) {
-  System.out.println(response.getAccess_Token());
- }
-});
-}
+		});
+		return resp;
+	}
 
 ```
 
 and in the same directory, locate `LoginRadiusController.java` and add following snippet for route configuration :
 
 ```
- @RequestMapping(value="/getUserInfoByAccessToken", method=RequestMethod.GET)
-    public String getUserProfileByAccessToken(){
-        return "index";
+ @RequestMapping(value="/user", method=RequestMethod.GET)
+    @ResponseBody
+    public String getUserProfile(HttpServletRequest request){
+            String result = service.getUserProfile(request);
+            System.out.println("UserController.getUserProfile::" + result);
+            return result;
+
     }
 
 ```
