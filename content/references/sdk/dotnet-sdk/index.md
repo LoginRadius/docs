@@ -13,7 +13,7 @@ This document describes how to start using the LoginRadius ASP&#46;NET SDK and i
 
 > You must have &#46;NET 4.0 / &#46;NetStandard 1.3 or later installed.
 
-For a more hands-on tutorial to set up the SDK and a ASP.NET server and start making LoginRadius API calls, check out the [ASP.NET Tutorial.](/tutorial/dotnet-webforms)
+For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core [MVC](/tutorial/dotnetcore-mvc) or [Razor](/tutorial/dotnetcore-razor) guide.
 
 ## SDK Installation and Configuration
 
