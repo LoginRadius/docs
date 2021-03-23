@@ -235,9 +235,9 @@ How to implement Phone Login
 
 How to implement Passwordless Login
 
-## &#46;NET SDK Reference
+## ASP&#46;NET SDK Reference
 
-< Link to HTML SDK doc >
+[ASP&#46;NET SDK](/references/sdk/dotnet-sdk)
 
 ## API Reference
 
