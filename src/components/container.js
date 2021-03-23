@@ -22,12 +22,14 @@ const Middle = () => {
               to third-party applications using 30+ Integration options.
             </p>
             <div className="btn-group">
-              <a href="https://www.youtube.com/watch?v=ANlOdnzfCb0" className="btn btn-primary">
+              <a href="#myModal" className="btn btn-primary">
                 Try 5 Minute Setup Guide
               </a>
-              <a href="/guide/html-and-js-tutorial" className="btn btn-outline">
+             
+              <a href={withPrefix("/tutorial/html-and-js-tutorial")} className="btn btn-outline">
                 Curious How It Works?
               </a>
+              
             </div>
           </div>
           <div className="wrapper">
@@ -452,7 +454,7 @@ const Middle = () => {
             <h3 className="title">Concepts</h3>
             <ul>
               <li>
-                <a href={withPrefix("concepts/idx")}>IDX</a>
+                <a href={withPrefix("concepts/idx")}>Auth Page (IDX)</a>
               </li>
               <li>
                 <a href={withPrefix("concepts/common-passwords")}>Common Passwords</a>
