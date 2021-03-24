@@ -26,9 +26,9 @@ const Middle = () => {
                 Try 5 Minute Setup Guide
               </a>
              
-              <a href={withPrefix("/tutorial/html-and-js-tutorial")} className="btn btn-outline">
+              <Link to="/tutorial/html-and-js-tutorial" className="btn btn-outline">
                 Curious How It Works?
-              </a>
+              </Link>
               
             </div>
           </div>
@@ -88,22 +88,22 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link href={withPrefix("/tutorial/angular")}>
+                <Link to="/tutorial/angular">
                   <img src="images/angular.svg" width={20} />
                   <span>Angular</span>
                 </Link>
               </li>
               <li>
-                <a href={withPrefix("/tutorial/vue")}>
+                <Link to="/tutorial/vue">
                   <img src="images/vue-dot-js.svg" width={20} />
                   <span>VueJs</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={withPrefix("/tutorial/html-and-js-tutorial")}>
+                <Link to="/tutorial/html-and-js-tutorial">
                   <img src="images/html5.svg" width={20} />
                   <span>HTML and JS</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,16 +120,16 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link href={withPrefix("/tutorial/php")}>
+                <Link to="/tutorial/php">
                   <img src="images/php.svg" width={20} />
                   <span>PHP</span>
                 </Link>
               </li>
               <li>
-                <a href={withPrefix("/tutorial/java")}>
+                <Link to="/tutorial/java">
                   <img src="images/java.svg" width={20} />
                   <span>JAVA</span>
-                </a>
+                </Link>
               </li>
             </ul>
             <PopUp
@@ -361,7 +361,7 @@ const Middle = () => {
                 <Link to="/guide/web-sso"> Web SSO</Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/fed-sso")}>Federated SSO </a>
+                <Link to="/guide/fed-sso">Federated SSO</Link>
               </li>
             </ul>
           </div>
@@ -383,19 +383,19 @@ const Middle = () => {
                 <Link to="/guide/saml" >Connect SAML App </Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/jwt")}> Connect JWT App</a>
+                <Link to="/guide/jwt"> Connect JWT App</Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/oauth")}> Connect OAuth App</a>
+                <Link to="/guide/oauth"> Connect OAuth App</Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/oidc")}>Connect OIDC App </a>
+                <Link to="/guide/oidc">Connect OIDC App </Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/big-commerce")}>Integrate BigCommerce</a>
+                <Link to="/guide/big-commerce">Integrate BigCommerce</Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/shopify")}>Integrate Shopify</a>
+                <Link to="/guide/shopify">Integrate Shopify</Link>
               </li>
             </ul>
           </div>
@@ -408,10 +408,10 @@ const Middle = () => {
             <h3 className="title">Secure Authentication</h3>
             <ul>
               <li>
-                <a href={withPrefix("/guide/captcha")}>Google reCAPTCHA </a>
+                <Link to="/guide/captcha">Google reCAPTCHA </Link>
               </li>
               <li>
-                <a href={withPrefix("/guide/bruteforce")}>Secure Against Bruteforce </a>
+                <Link to="/guide/bruteforce">Secure Against Bruteforce </Link>
               </li>
               <li>
                 <Link to="/guide/set-strong-password-policy">
@@ -454,13 +454,13 @@ const Middle = () => {
             <h3 className="title">Concepts</h3>
             <ul>
               <li>
-                <a href={withPrefix("concepts/idx")}>Auth Page (IDX)</a>
+                <Link to="concepts/idx">Auth Page (IDX)</Link>
               </li>
               <li>
-                <a href={withPrefix("concepts/common-passwords")}>Common Passwords</a>
+                <Link to="concepts/common-passwords">Common Passwords</Link>
               </li>
               <li>
-                <a href={withPrefix("concepts/token-handle")}>Handle Token</a>
+                <Link to="concepts/token-handle">Handle Token</Link>
               </li>
               <li>
                 <Link to="/concepts/sott">Secure One Time Token (SOTT)</Link>
@@ -476,10 +476,10 @@ const Middle = () => {
             <h3 className="title">References</h3>
             <ul>
               <li>
-                <a href={withPrefix("references/sdk")}>SDKs </a>
+                <Link to="references/sdk">SDKs </Link>
               </li>
               <li>
-                <a href={withPrefix("references/api")}>APIs</a>
+                <Link to="references/api">APIs</Link>
               </li>
             </ul>
           </div>

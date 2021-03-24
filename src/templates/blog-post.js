@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
   const pathArray = location.pathname.split("/")
+
   return (
     <div className="global-wrapper">
       <div id="root">
@@ -53,7 +54,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
               <div className="content">
                 <ul className="breadcrumbs">
-                  {pathArray.map(e => (e ? <li> {e} </li> : null))}
+                  {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))}
                 </ul>
                 <div
                   dangerouslySetInnerHTML={{ __html: post.html }}
