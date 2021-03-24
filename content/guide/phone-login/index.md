@@ -110,10 +110,8 @@ for (var i = 0; i < viewerSchema.length; i++) {
 
 ```javascript
 for (var i = 0; i < viewerSchema.length; i++) {
-   if (viewerSchema[i].name == "emailid") {
+   if (viewerSchema[i].name == "emailid" || (viewerSchema[i].name == "phoneid" && viewerSchema[i].value)) {
       $("#profile-editor-container").prepend('<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">'+viewerSchema[i].display+'</label><input type="text" name="" id="" class="loginradius-string" disabled value="'+viewerSchema[i].value+'"></div>');
-   } else if (viewerSchema[i].name == "phoneid") {
-      $("#profile-editor-container").prepend(`<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">${viewerSchema[i].display}</label><input type="text" name="" id="" class="loginradius-string" disabled value="${viewerSchema[i].value ? viewerSchema[i].value : ""}"></div>`);
    }
 
    renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
