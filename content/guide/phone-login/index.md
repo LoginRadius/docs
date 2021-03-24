@@ -81,6 +81,51 @@ To verify that the Phone Login method has been enabled, open your **Auth Page (I
 
 ![alt_text](../../assets/blog-common/idx-phone-login.png "image_tooltip")
 
+## Adding Phone ID to the Auth Page (IDX) Profile Page
+
+The login page of your Auth Page (IDX) handles the Phone ID input fields automatically. However, you'd like your consumer's Phone ID to appear in the profile page editor, you'll have to manually make some modifications in your Auth Page (IDX)'s Advanced Editor.
+
+1. Navigate to your profile page's before-script file editor. For more details regarding how to activate, or access your Advanced Editor, refer to the guide document [here](/guide/auth-page-advanced-editor).
+
+   ![alt_text](images/before-script-editor.png "image_tooltip")
+
+2. Look for the line that declares the array `registrationFormSchema` for the LoginRadius JavaScript library. Add the following object into the array:
+
+`{ "type": "string", "name": "phoneid", "display": "Phone ID", "rules": "", "options": null, "permission": "r" }`
+
+3. Look inside the callback function for the LoginRadius hook event `renderProfileEditorHook`, specifically at the `viewerSchema` for loop:
+
+```javascript
+for (var i = 0; i < viewerSchema.length; i++) {
+   if(viewerSchema[i].name == "emailid") {
+      $("#profile-editor-container").prepend('<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">'+viewerSchema[i].display+'</label><input type="text" name="" id="" class="loginradius-string" disabled value="'+viewerSchema[i].value+'"></div>');
+      renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
+   } else {
+      renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
+   }
+}
+```
+
+4. Replace the code block with the following:
+
+```javascript
+for (var i = 0; i < viewerSchema.length; i++) {
+   if (viewerSchema[i].name == "emailid") {
+      $("#profile-editor-container").prepend('<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">'+viewerSchema[i].display+'</label><input type="text" name="" id="" class="loginradius-string" disabled value="'+viewerSchema[i].value+'"></div>');
+   } else if (viewerSchema[i].name == "phoneid") {
+      $("#profile-editor-container").prepend(`<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">${viewerSchema[i].display}</label><input type="text" name="" id="" class="loginradius-string" disabled value="${viewerSchema[i].value ? viewerSchema[i].value : ""}"></div>`);
+   }
+
+   renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
+}
+```
+
+5. Save your changes and verify by checking your profile page:
+
+   ![alt_text](images/profile-phoneid.png "image_tooltip")
+
+   ![alt_text](images/profile-editor-phoneid.png "image_tooltip")
+
 ## Placeholder Tags
 
 These tags are used to define where LoginRadius retrieved data will appear in your SMS.
