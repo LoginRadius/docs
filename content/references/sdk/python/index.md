@@ -2,6 +2,7 @@
 title: "Python SDK Library"
 tags: ["Python", "SDK"]
 description: "This is a document detailing the LoginRadius Python SDK Library."
+path: "/references/sdk/python"
 ---
 
 # Python SDK
