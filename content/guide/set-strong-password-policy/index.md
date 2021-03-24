@@ -46,7 +46,7 @@ Enter or select the following details:
 
 >   Note: Most used combinations contain at least 1 uppercase character, 1 special character, one number.
 
-    ![alt_text](/images/password-type.png "image_tooltip")
+![alt_text](/images/password-type.png "image_tooltip")
        
 
 2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of [common passwords](/docs/developer/general/common-passwords/) is maintained by LoginRadius and gets updated regularly.
