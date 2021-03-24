@@ -13,7 +13,7 @@ This document describes how to start using the LoginRadius Node.js SDK and its v
 
 > Note: The latest version(10.0.0) of Node js SDK works with LoginRadius V2 APIs.
 
-For a more hands-on tutorial to set up the SDK and a Node.js server and start making LoginRadius API calls, check out the [Node.js Tutorial.](/tutorial/node-js)
+For a more hands-on tutorial on setting up the SDK and using it in a Node.js application to make LoginRadius API calls, check out our [Node.js Tutorial.](/tutorial/node-js)
 
 ## SDK Installation and Configuration <br/>
 

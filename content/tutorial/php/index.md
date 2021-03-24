@@ -278,10 +278,9 @@ How to implement Phone Login
 How to implement Passwordless Login
 
 
-<!-- # Node.js SDK Reference
+# PHP SDK Reference
 
-< Link to Node.js SDK doc > -->
-
+[PHP SDK](/references/sdk/php)
 
 # API Reference
 
