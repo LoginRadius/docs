@@ -73,13 +73,12 @@ export default class Header extends Component {
                   id={"search"}
                 />
                 <a onClick={this._toggleSearch}></a>
-
                 {results.length ? (
                   <ul>
                     {results.slice(0, 4).map(page => (
                       <li key={page.id}>
                         <div>
-                          <Link to={"/" + page.path}>{page.title}</Link>
+                          <Link to={page.path}>{page.title}</Link>
                         </div>
                       </li>
                     ))}

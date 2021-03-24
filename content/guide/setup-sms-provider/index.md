@@ -2,6 +2,7 @@
 title: "Setup SMS Provider"
 tags: ["SMS", "Provider","Settings","Setup"]
 description: "This is a guide for configuring SMS provider settings."
+path: "/guide/setup-sms-provider"
 ---
 
 # Setup SMS Provider

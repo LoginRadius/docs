@@ -2,6 +2,7 @@
 title: "Manage Roles"
 tags: ["Manage Roles", "Role Management", "Roles"]
 description: "This is a guide for managing roles in the LoginRadius Identity Platform."
+path: "/guide/manage-roles"
 ---
 
 # Manage Roles

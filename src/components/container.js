@@ -340,7 +340,7 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Add Fields to Registartion</a>
+                <a href="#">Add Fields to Registration</a>
               </li>
               <li>
                 <Link to="/guide/customize-domain">

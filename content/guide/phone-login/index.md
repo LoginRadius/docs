@@ -2,6 +2,7 @@
 title: "Manage Phone Login"
 tags: ["Login"]
 description: "This is a guide for managing the Phone Login method in LoginRadius."
+path: "/guide/phone-login"
 ---
 
 # Manage Phone Login

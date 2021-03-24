@@ -2,6 +2,7 @@
 title: "Manage Users"
 tags: ["User Management", "Manage Users"]
 description: "This is a guide for managing users in the LoginRadius Identity Platform."
+path: "/guide/manage-users"
 ---
 
 # Manage Users

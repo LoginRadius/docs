@@ -2,6 +2,7 @@
 title: "Get started with Vue"
 tags: ["Vue", "GetStarted"]
 description: "This is a tutorial with IDX and Vuejs basic implementation."
+path: "/tutorial/vue"
 ---
 
 # Get Started - Vue.js

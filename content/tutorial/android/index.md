@@ -2,6 +2,7 @@
 title: "Get started with Android"
 tags: ["Android", "GetStarted"]
 description: "This is a tutorial with IDX and Android."
+path: "/tutorial/android"
 ---
 
 # Get Started - Android

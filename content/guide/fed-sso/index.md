@@ -2,6 +2,7 @@
 title: "Guide to Federated SSO "
 tags: ["FedSSO", "GetStarted"]
 description: "This document covers the Federated SSO introduction and its protocols supported by the LoginRadius Identity Platform."
+path: "/guide/fed-sso"
 ---
 
 

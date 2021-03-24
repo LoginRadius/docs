@@ -2,6 +2,7 @@
 title: "WordPress"
 tags: ["WordPress"]
 description: "This is a guide for integrating LoginRadius services with Wordpress application."
+path: "/guide/wordpress"
 ---
 
 # Get Started - WordPress

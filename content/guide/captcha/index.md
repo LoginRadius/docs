@@ -2,6 +2,7 @@
 title: "Implementing Captcha"
 tags: ["Captcha"]
 description: "This is a guide for implementing Captcha in the LoginRadius Identity Platform."
+path: "/guide/captcha"
 ---
 # Implementing Captcha with LoginRadius
 

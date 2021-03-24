@@ -2,6 +2,7 @@
 title: "Get started with Ruby On Rails"
 tags: ["Ruby on Rails", "ROR", "GetStarted"]
 description: "This is a tutorial with IDX and ROR basic implementation."
+path: "/tutorial/ror"
 ---
 
 # Get Started - ROR

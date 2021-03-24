@@ -2,6 +2,7 @@
 title: "Secure One Time Token"
 tags: ["SOTT", "Secure One Time Token"]
 description: "This is a document detailing the concept of the Secure One Time Token."
+path: "/concepts/sott"
 ---
 
 # Secure One Time Token

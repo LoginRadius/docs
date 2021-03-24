@@ -2,6 +2,7 @@
 title: "Enable Force Logout"
 tags: ["Enable", "Force","Logout","Remember"]
 description: "This is a guide for Enabling Force Logout."
+path: "/guide/enable-force-logout"
 ---
 #Enable Force Logout
  

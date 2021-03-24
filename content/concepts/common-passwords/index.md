@@ -2,6 +2,7 @@
 title: "Common Passwords"
 tags: ["Common Passwords", "Security"]
 description: "Common Passwords"
+path: "/concepts/common-passwords"
 ---
 
 # Common Passwords

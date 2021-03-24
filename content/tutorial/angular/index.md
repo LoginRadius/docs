@@ -2,6 +2,7 @@
 title: "Get started with Angular"
 tags: ["Angular", "GetStarted", "Node", "JavaScript"]
 description: "This is a tutorial with IDX and Angular basic implementation."
+path: "/tutorial/angular"
 ---
 
 # Get Started - Angular

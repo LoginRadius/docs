@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `LoginRadius Developer Docs`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `LoginRadius`,
+      summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `LoginRadius Developer Docs`,
+    siteUrl: `https://www.loginradius.com/`
   },
   plugins: [
     {
@@ -54,6 +51,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-use-frontmatter-path`
         ],
       },
     },
@@ -94,6 +92,7 @@ module.exports = {
             title: node => node.frontmatter.title,
             tags: node => node.frontmatter.tags,
             description: node => node.frontmatter.description,
+            path: node => node.frontmatter.path
           },
         },
         // Optional filter to limit indexed nodes

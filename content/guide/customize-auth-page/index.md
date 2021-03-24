@@ -2,6 +2,7 @@
 title: "Customize Auth Page (IDX)"
 tags: ["Login Page", "Auth Page", "IDX", "Basic Editor"]
 description: "This is a guide for customizing the design of your Auth Page (IDX)."
+path: "/guide/customize-auth-page"
 ---
 
 # Customize Auth Page (IDX)

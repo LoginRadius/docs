@@ -2,6 +2,7 @@
 title: "Multi Factor Authentication"
 tags: ["2FA", "MFA"]
 description: "This is a guide for setting up Multifactor Authentication."
+path: "/guide/mfa"
 ---
 
 # Implement Two-Factor Authentication (2FA)

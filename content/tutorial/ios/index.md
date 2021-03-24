@@ -2,6 +2,7 @@
 title: "Get started with IOS"
 tags: ["IOS", "GetStarted"]
 description: "This is a tutorial with IDX and IOS implmentation."
+path: "/tutorial/ios"
 ---
 
 # Get Started - iOS

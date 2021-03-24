@@ -2,6 +2,7 @@
 title: "Manage Team Members"
 tags: ["Manage", "Team","Members","Activity"]
 description: "This is a guide for Managing Team Members."
+path: "/guide/manage-team-members"
 ---
 
 

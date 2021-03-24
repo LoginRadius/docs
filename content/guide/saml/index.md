@@ -2,6 +2,7 @@
 title: "Connect SAML App"
 tags: ["Connect","SAML","app","IDP","SP","SSO"]
 description: "This is a guide for connecting SAML app."
+path: "/guide/saml"
 ---
 
 # Connect SAML App 

@@ -2,6 +2,7 @@
 title: "OpenID connect"
 tags: ["OIDC", "OpenID Connect", "OAuth2.0"]
 description: "This is a guide for implementing OpenID Connect flow in the LoginRadius Identity Platform."
+path: "/guide/oidc"
 ---
 # OpenID Connect
 

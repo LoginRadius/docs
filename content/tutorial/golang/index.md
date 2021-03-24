@@ -2,6 +2,7 @@
 title: "Get started with Golang"
 tags: ["Golang", "GetStarted"]
 description: "This is a tutorial with IDX and Golang sdk implementation."
+path: "/tutorial/golang"
 ---
 
 # Get Started - Golang

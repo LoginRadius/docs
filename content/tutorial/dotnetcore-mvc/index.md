@@ -2,6 +2,7 @@
 title: "Get started with Dot Net Core MVC"
 tags: ["MVC", ".NET", "Dot Net", "GetStarted"]
 description: "This is a tutorial with IDX and .NET Core MVC implmentation."
+path: "/tutorial/dotnetcore-mvc"
 ---
 
 # Get Started - ASP&#46;NET Core MVC

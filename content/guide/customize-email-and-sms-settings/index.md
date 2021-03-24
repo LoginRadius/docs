@@ -2,6 +2,7 @@
 title: "Customize Email and SMS Settings"
 tags: ["Email Settings", "SMS Settings"]
 description: "This is a guide for customizing behaviors for sending event-based emails and SMSes."
+path: "/guide/customize-email-and-sms-settings"
 ---
 
 # Customize Email and SMS Settings

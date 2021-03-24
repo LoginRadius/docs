@@ -2,6 +2,7 @@
 title: "Get started with Nodejs"
 tags: ["NodeJs", "GetStarted"]
 description: "This is a tutorial with IDX and node.js sdk implmentation."
+path: "/tutorial/node-js"
 ---
 
 # Get Started - Node.js

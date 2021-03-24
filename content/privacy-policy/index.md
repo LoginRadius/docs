@@ -2,6 +2,7 @@
 title: "Privacy Policy"
 tags: ["Privacy Policy"]
 description: "Privacy Policy."
+path: "/privacy-policy"
 ---
 
 # LoginRadius Privacy Policy

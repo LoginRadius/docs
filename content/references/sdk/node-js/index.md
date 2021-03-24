@@ -2,6 +2,7 @@
 title: "Node.js SDK"
 tags: ["Node.js", "Node", "JavaScript", "JS", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a Node.js application."
+path: "/references/node-js"
 ---
 
 # Node.js SDK

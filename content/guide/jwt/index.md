@@ -2,6 +2,7 @@
 title: "Guide to connecting JWT"
 tags: ["JWT", "GetStarted"]
 description: "This is a tutorial with JWT implementation."
+path: "/guide/jwt"
 ---
 
 # JWT

@@ -2,6 +2,7 @@
 title: "Advanced Editor"
 tags: ["Login Page", "Auth Page", "IDX", "Advanced Editor"]
 description: "This is a guide for customizing the HTML, scripts, and CSS of your Auth Page (IDX)."
+path: "/guide/auth-page-advanced-editor"
 ---
 
 # Advanced Editor

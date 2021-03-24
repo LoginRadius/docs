@@ -2,6 +2,7 @@
 title: "Setup Your SMTP Provider"
 tags: ["SMTP", "Provider","settings","Setup"]
 description: "This is a guide for configuring SMTP Provider Settings."
+path: "/guide/setup-your-smtp-provider"
 ---
 
 # Setup Your SMTP Provider

@@ -2,6 +2,7 @@
 title: "Migrate User Data"
 tags: ["Data Migration", "Migrate Users"]
 description: "This is a guide for migrating users into the LoginRadius Identity Platform."
+path: "/guide/migrate-user-data"
 ---
 
 # Migrate User Data

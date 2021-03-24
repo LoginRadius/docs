@@ -2,6 +2,7 @@
 title: "Get started with React"
 tags: ["React", "GetStarted"]
 description: "This is a tutorial with IDX and React basic implementation."
+path: "/tutorial/react"
 ---
 
 # Get Started - React.js

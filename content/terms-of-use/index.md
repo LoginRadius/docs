@@ -2,6 +2,7 @@
 title: "Terms Of Use"
 tags: ["Terms Of Use"]
 description: "Terms Of Use." 
+path: "/terms-of-use"
 ---
 
 # Terms

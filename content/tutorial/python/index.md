@@ -2,6 +2,7 @@
 title: "Get started with Python"
 tags: ["Python", "GetStarted"]
 description: "This is a tutorial with IDX and python sdk implmentation."
+path: "/tutorial/python"
 ---
 
 # Get Started - Python

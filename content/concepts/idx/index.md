@@ -2,6 +2,7 @@
 title: "Auth Page IDX concepts"
 tags: ["Auth Page IDX", "Concepts"]
 description: "An Overview about Auth Page (Identity Experience Framework)."
+path: "/concepts/idx"
 ---
 
 # Auth Page (IDX)

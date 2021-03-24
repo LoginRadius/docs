@@ -2,6 +2,7 @@
 title: Enable Web SSO
 description: "A guide on how to implement web sso in any web application."
 summary: "A guide on how to implement web sso in any web application"
+path: "/guide/web-sso"
 ---
 
 # Enable Web SSO

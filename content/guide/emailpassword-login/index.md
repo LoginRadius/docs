@@ -2,6 +2,7 @@
 title: "Customize Email for Email/Password Login"
 tags: ["Login"]
 description: "This is a guide for managing the email content for the Email and Password Login method in LoginRadius."
+path: "/guide/emailpassword-login"
 ---
 
 # Customize Email for Email/Password Login

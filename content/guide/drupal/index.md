@@ -2,6 +2,7 @@
 title: "Drupal"
 tags: ["Drupal"]
 description: "This is a guide for integrating Loginradius services with Drupal Application."
+path: "/guide/drupal"
 ---
 
 # Get Started - Drupal

@@ -2,6 +2,7 @@
 title: "Setup Custom Domain"
 tags: ["Setup", "Custom", "Domain", "Custom Domain"]
 description: "Configure your Custom Domain settings, which will replace LoginRadius unique URL with your customized unique domain URL."
+path: "/guide/customize-domain"
 ---
 
 ## Setup Custom Domain

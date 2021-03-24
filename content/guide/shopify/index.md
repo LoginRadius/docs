@@ -2,6 +2,7 @@
 title: "Integrating Shopify"
 tags: ["Shopify","E-commerce"]
 description: "This is a guide for integrating and configuring Shopify e-commerce CMS in the LoginRadius Identity Platform."
+path: "/guide/shopify"
 ---
 
 # Shopify

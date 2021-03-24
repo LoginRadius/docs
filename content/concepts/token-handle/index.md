@@ -2,6 +2,7 @@
 title: "Handle Token"
 tags: ["Handle Token", "Token"]
 description: "This guide will explain everything about token handling."
+path: "/concepts/token-handle"
 ---
 
 > Access tokens are used to retrieve profile data and handle other user functionality. A client passes the access token to the server, and the server uses this token to decide whether the client is authorized to access the resource or not.

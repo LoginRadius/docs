@@ -2,6 +2,7 @@
 title: "how to implement Social login"
 tags: ["social", "login","implement"]
 description: "step by step guide to implement social login."
+path: "/guide/social-login"
 ---
 
 #Implement Social Login

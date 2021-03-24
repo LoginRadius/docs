@@ -2,6 +2,7 @@
 title: "Connect OAuth app with LoginRadius SDK"
 tags: ["OAuth", "GetStarted"]
 description: "This is a guide for OAuth2.0 implementation."
+path: "/guide/oauth"
 ---
 
 # Connect OAuth App

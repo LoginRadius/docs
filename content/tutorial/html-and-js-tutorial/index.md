@@ -2,6 +2,7 @@
 title: "Get started with HTML and JS"
 tags: ["HTML5", "CSS", "JS", "GetStarted"]
 description: "This is a tutorial with IDX and HTML5 SDK implementation."
+path: "/tutorial/html-and-js-tutorial"
 ---
 # HTML and JS Tutorial
 

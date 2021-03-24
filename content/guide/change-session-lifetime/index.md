@@ -2,6 +2,7 @@
 title: "Change Session Lifetime"
 tags: ["Token", "Session","Lifetime","Change"]
 description: "This is a guide for Changing Session Lifetime."
+path: "/guide/change-session-lifetime"
 ---
 
 # Change Session Lifetime

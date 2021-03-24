@@ -2,6 +2,7 @@
 title: "Get started with JAVA"
 tags: ["JAVA", "GetStarted"]
 description: "This is a tutorial with IDX and JAVA SDK implementation."
+path: "/tutorial/java"
 ---
 
 # Get Started - JAVA

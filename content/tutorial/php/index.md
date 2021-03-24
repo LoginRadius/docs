@@ -2,6 +2,7 @@
 title: "Get started with PHP"
 tags: ["PHP", "GetStarted"]
 description: "This is a tutorial with IDX and PHP basic implementation."
+path: "/tutorial/php"
 ---
 
 # Get Started - PHP

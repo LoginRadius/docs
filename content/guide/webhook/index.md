@@ -2,6 +2,7 @@
 title: "how to configure Webhook"
 tags: ["webhook", "configure","Setup"]
 description: "step by step guide to configure webhook."
+path: "/guide/webhook"
 ---
 
 # Setup Webhooks

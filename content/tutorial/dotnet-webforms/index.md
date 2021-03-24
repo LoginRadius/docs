@@ -2,6 +2,7 @@
 title: "Get started with Dot Net WebForms"
 tags: ["WebForms", ".NET", "Dot Net", "GetStarted"]
 description: "This is a tutorial with IDX and .NET WebForms implementation."
+path: "/tutorial/dotnet-webforms"
 ---
 
 # Get Started - ASP&#46;NET Web Forms

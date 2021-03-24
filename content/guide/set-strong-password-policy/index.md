@@ -2,6 +2,7 @@
 title: "Setup Strong Password Policy"
 tags: ["Setup", "Strong","Password","Policy"]
 description: "This is a guide for configuring Strong Password Policy."
+path: "/guide/set-strong-password-policy"
 ---
 
 

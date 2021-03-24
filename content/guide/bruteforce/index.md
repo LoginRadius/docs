@@ -2,6 +2,7 @@
 title: "Guide to securing app against Bruteforce"
 tags: ["Bruteforce", "Lockout", "Security"]
 description: "This is a tutorial for bruteforce lockout."
+path: "/guide/bruteforce"
 ---
 # Bruteforce Lockout
 

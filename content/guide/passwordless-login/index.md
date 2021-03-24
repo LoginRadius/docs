@@ -2,6 +2,7 @@
 title: "Manage Passwordless Login"
 tags: ["Login"]
 description: "This is a guide for managing the Passwordless Login method in LoginRadius."
+path: "/guide/passwordless-login"
 ---
 
 # Manage Passwordless Login

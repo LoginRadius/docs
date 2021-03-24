@@ -2,6 +2,7 @@
 title: "Get started with Ionic"
 tags: ["Ionic", "GetStarted"]
 description: "This is a tutorial with Ionic sdk implementation."
+path: "/tutorial/ionic"
 ---
 
 # Get Started - Ionic

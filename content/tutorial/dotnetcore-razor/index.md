@@ -2,6 +2,7 @@
 title: "Get started with Dot Net Razor"
 tags: ["Razor", ".NET", "Dot Net", "GetStarted"]
 description: "This is a tutorial with IDX and .NET Razor implmentation."
+path: "/tutorial/dotnetcore-razor"
 ---
 
 # Get Started - ASP&#46;NET Core Razor Pages
