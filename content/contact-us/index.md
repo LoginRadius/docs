@@ -85,10 +85,10 @@ Yes. LoginRadius provides 24/7 support, the LoginRadius Support Team will always
 
 * Click **Support Tickets** under the **Support** tab on your LoginRadius Dashboard, you will be redirected to support tickets, and the below screen will appear:
 
-![alt_text](images/freshdesk.png "image_tooltip")
+   ![alt_text](images/freshdesk.png "image_tooltip")
 
-*   **New Support Ticket**: You can create a new support ticket.
-*   **Check Ticket Status**: Check the status of the existing ticket you submitted earlier.
+* **New Support Ticket**: You can create a new support ticket.
+* **Check Ticket Status**: Check the status of the existing ticket you submitted earlier.
 
 ### What is the Email ID for raising a support query?
 
