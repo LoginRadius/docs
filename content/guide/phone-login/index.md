@@ -82,7 +82,8 @@ To verify that the Phone Login method has been enabled, open your **Auth Page (I
 
 ![alt_text](../../assets/blog-common/idx-phone-login.png "image_tooltip")
 
-## Adding Phone ID to the Auth Page (IDX) Profile Page
+
+## Adding Phone ID to Auth Page (IDX) Profile Page
 
 The login page of your Auth Page (IDX) handles the Phone ID input fields automatically. However, you'd like your consumer's Phone ID to appear in the profile page editor, you'll have to manually make some modifications in your Auth Page (IDX)'s Advanced Editor.
 
@@ -92,7 +93,7 @@ The login page of your Auth Page (IDX) handles the Phone ID input fields automat
 
 2. Look for the line that declares the array `registrationFormSchema` for the LoginRadius JavaScript library. Add the following object into the array:
 
-`{ "type": "string", "name": "phoneid", "display": "Phone ID", "rules": "", "options": null, "permission": "r" }`
+   `{ "type": "string", "name": "phoneid", "display": "Phone ID", "rules": "", "options": null, "permission": "r" }`
 
 3. Look inside the callback function for the LoginRadius hook event `renderProfileEditorHook`, specifically at the `viewerSchema` for loop:
 
@@ -124,6 +125,7 @@ for (var i = 0; i < viewerSchema.length; i++) {
    ![alt_text](images/profile-phoneid.png "image_tooltip")
 
    ![alt_text](images/profile-editor-phoneid.png "image_tooltip")
+
 
 ## Placeholder Tags
 
