@@ -85,7 +85,7 @@ To verify that the Phone Login method has been enabled, open your **Auth Page (I
 
 ## Adding Phone ID to Auth Page (IDX) Profile Page
 
-The login page of your Auth Page (IDX) handles the Phone ID input fields automatically. However, you'd like your consumer's Phone ID to appear in the profile page editor, you'll have to manually make some modifications in your Auth Page (IDX)'s Advanced Editor.
+The login page of your Auth Page (IDX) handles the Phone ID input fields automatically. However, if you'd like your consumer's Phone ID to appear in the profile page editor, you'll have to manually make some modifications in your Auth Page (IDX)'s Advanced Editor.
 
 1. Navigate to your profile page's before-script file editor. For more details regarding how to activate, or access your Advanced Editor, refer to the guide document [here](/guide/auth-page-advanced-editor).
 
