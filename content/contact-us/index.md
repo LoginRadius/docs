@@ -10,95 +10,95 @@ path: "/contact-us"
 Contact our support team for any questions you might have.
 
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 Find answers to any questions you might have about pricing and other aspects of our dashboard.
 
 LoginRadius support team is available 24/7, and you can reach them through the:
 
-*   Email Support
-*   Raise Support ticket
-*   Live Chat
-*   Support documentation
+*  [Email Support](#what-is-the-email-id-for-raising-a-support-query)
+*  [Raise Support Ticket](https://loginradiusassist.freshdesk.com/support/home)
+*  [Live Chat](#how-do-i-contact-loginradius-support)
+*  [Support Document](https://www.loginradius.com/docs/developer/)
 
-#### 1. How to Retrieve API key and secret?
+### How to Retrieve API key and secret?
 
 * Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
-* Click the down arrow or anywhere within the section and the **API Credentials** screen will appear:
+* Click the down arrow and the **API Credentials** screen will appear:
 
-![alt_text](/images/api-credentails.png "image_tooltip")
+  ![alt_text](images/api-credentails.png "image_tooltip")
 
 * Click **API Key And Secret** to get your unique credentials as displayed in the following screen:
 
-![alt_text](/images/key-secret.png "image_tooltip")
+  ![alt_text](images/key-secret.png "image_tooltip")
 
 * The API key and secret are used to interact with LoginRadius' APIs. You can copy the APP Name and API Key by clicking the respective **Copy** button.
 
-#### 2. How to view the API Secret?
+### How to view the API Secret?
 
 * Click the **eye** button given next to the API Secret field. The API secret is not displayed by default for security reasons.
 
-![alt_text](/images/api-secret-eye.png "image_tooltip")
+  ![alt_text](images/api-secret-eye.png "image_tooltip")
 
-#### 3. How to reset the API Secret?
+### How to reset the API Secret?
 
 * Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
-* Click the **API Key And Secret** or anywhere within the section and the below screen will appear:
+* Click the **API Key And Secret** and the below screen will appear:
 
-![alt_text](/images/key-secret.png "image_tooltip")
+  ![alt_text](images/key-secret.png "image_tooltip")
 
 * You can reset the API Secret by clicking the respective **reset** button.
 
-#### 4. How to access the LoginRadius Support section?
+### How to access the LoginRadius Support section?
 
-* To access the LoginRadius Support section, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the top header panel, click the **SUPPORT** as displayed in the below screen.
+* To access the LoginRadius Support section, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the top header panel, click the **Support** as displayed in the below screen.
 
-![alt_text](/images/support.png "image_tooltip")
+  ![alt_text](images/support.png "image_tooltip")
 
 * Apart from this, you can also check out the **Report An Issue** section available at the bottom of getting started page as displayed in the below screen:
 
-![alt_text](/images/need-help.png "image_tooltip")
+  ![alt_text](images/need-help.png "image_tooltip")
 
 
-#### 5. How do I contact LoginRadius Support?
+### How do I contact LoginRadius Support?
 
-* For quick, general, or verification-type questions, you can chat with a LoginRadius Support Team member by clicking on the blue chat icon on the dashboard’s bottom right.
+* For quick, general, or verification-type questions, you can chat with a LoginRadius Support Team member by clicking the blue chat icon on the dashboard’s bottom right.
 
-![alt_text](/images/live-chat.png "image_tooltip")
+  ![alt_text](images/live-chat.png "image_tooltip")
 
 * Otherwise, submit a [Support Ticket](https://loginradiusassist.freshdesk.com/customer/login), located under the **Support** tab in the header panel. In the support ticket, please include any relevant code snippets and screenshots that can help our Support Team better understand your concern.
 
-![alt_text](/images/support.png "image_tooltip")
+   ![alt_text](images/support.png "image_tooltip")
 
 
-#### 6. How does LoginRadius handle support tickets?
+### How does LoginRadius handle support tickets?
 
 Once a support ticket is submitted, you will receive a confirmation email about ticket creation. A LoginRadius technician is then assigned based on the request urgency level, and you will receive updates on the ticket via email once the technician starts working on it.
 
-#### 7. Do you provide support in our time zone?
+### Do you provide support in our time zone?
 
 Yes. LoginRadius provides 24/7 support, the LoginRadius Support Team will always be available to help you regardless of your time zone.
 
-#### 8. How do I create/review support tickets?
+### How do I create/review support tickets?
 
 * Click **Support Tickets** under the **Support** tab on your LoginRadius Dashboard, you will be redirected to support tickets, and the below screen will appear:
 
-![alt_text](/images/freshdesk.png "image_tooltip")
+![alt_text](images/freshdesk.png "image_tooltip")
 
 *   **New Support Ticket**: You can create a new support ticket.
 *   **Check Ticket Status**: Check the status of the existing ticket you submitted earlier.
 
-#### 9. What is the Email ID for raising a support query?
+### What is the Email ID for raising a support query?
 
 * Reach out to us at **help@loginradius.com**
 
-#### 10. How do I retrieve the provider access token?
+### How do I retrieve the provider access token?
 
 With the extended profile data set, which you can view on the [LoginRadius datapoints page](https://www.loginradius.com/datapoints/), you can retrieve the access token that is generated by the social provider. You have access to the provider-generated access token through the data point "**Provider Access Credential**". You can use this token with direct API requests using the specific social providers' APIs.
 
-#### 11. What is the token lifetime for Facebook, Google and Twitter?
+### What is the token lifetime for Facebook, Google and Twitter?
 
 **Facebook**: By default, the lifetime for the Facebook API token is 2 hours.
 
@@ -110,19 +110,20 @@ With the extended profile data set, which you can view on the [LoginRadius datap
 
 **Twitter**: The lifetime for the Twitter API token never expires unless someone rejects your app in their account
 
-#### 12. How do I resolve the "Invalid Scopes" error when logging in with Facebook?
+### How do I resolve the "Invalid Scopes" error when logging in with Facebook?
 
-On login with Facebook, the error message shown below is sometimes displayed to developer or admin users:
+Upon login with Facebook, the error message shown below is sometimes displayed to developer or admin users:
 
-![alt_text](/images/invalid_scopes.png "image_tooltip")
+![alt_text](images/invalid_scopes.png "image_tooltip")
 
 This is caused by the Facebook API v 2.0 release, which has deprecated certain scopes. LoginRadius has handled all of these changes within our system.
 
-#### 13. What do I do if Facebook is not returning all of the requested data or posting status updates is not working?
+### What to do if Facebook is not returning all of the requested data or posting status updates is not working?
 
 If you have correctly configured your LoginRadius account to request the correct permissions for extended profile data and Post messaging(push notifications), and it is working for other providers but the correct dataset and posting features do not seem to be available on Facebook, then you have most likely not verified your Facebook app. Facebook mandates an app review and approval process for apps requesting access to extended data points and features like posting messages to a user's wall.
 
-#### 14. Supported Browsers
+### Supported Browsers
+
 This is the list of browsers that are supported by LoginRadius, including the different browser variants that are also supported.
 
 * Web Browsers
@@ -164,21 +165,21 @@ This is the list of browsers that are supported by LoginRadius, including the di
 | Android Default Browser | Yes       | All including Latest one |
 
 
-### Pricing, Billing and Licensing
+## Pricing, Billing and Licensing
 
-Ask about products, implementation, use cases, and more—we are ready to help!
+Ask about products, implementation, use cases, and more— we are ready to help!
 
-[Get in Touch](https://www.loginradius.com/contact-sales/)
+[Get In Touch](https://www.loginradius.com/contact-sales/)
 
 
-### Technical Support
+## Technical Support
 
 Have questions or issues with our product?
 
 [Support for Developer Plans](https://loginradiusassist.freshdesk.com/customer/login)
 
 
-### Careers
+## Careers
 
 Want to work with us? We are always looking for talented people.
 
