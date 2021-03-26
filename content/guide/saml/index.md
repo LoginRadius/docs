@@ -34,9 +34,6 @@ For the IDP initiated login, a consumer is logged on to the LoginRadius site and
 
 `https://cloud-api.loginradius.com/sso/saml/loginService?apiKey=<LoginRadiusApiKey>&appName=<SAMLAppName>`
 
-
-For implementing IDP Initiated Login using LoginRadius Identity Platform, refer to [this document](/docs/single-sign-on/tutorial/federated-sso/saml/idp-initiated/).
-
 The following sequence diagram summarizes the steps while proceeding with IDP Initiated Login:
 
 ![alt_text](images/sequence_IDP.png "image_tooltip")
@@ -44,8 +41,6 @@ The following sequence diagram summarizes the steps while proceeding with IDP In
 ### Service Provider Initiated Login
 
 In the Service Provider initiated login, a consumer attempts to access a protected resource directly on an SP Website without logging on. The SP sends an authentication SAML request as a string query parameter in the HTTP GET or HTTP POST parameter (after it has been deflated, base64 encoded, and URL encoded) depending on the binding configuration to the SP initiated LoginRadius URL.
-
-For implementing SP Initiated Login using LoginRadius Identity Platform, refer to [this document](/docs/single-sign-on/tutorial/federated-sso/saml/sp-initiated/).
 
 The following sequence diagram summarizes the steps while proceeding with SP Initiated Login:
 
