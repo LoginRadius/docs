@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react"
+import React, { useState, useEffect } from "react"
 import useActiveHash from "./use-active-hash"
 
 const TableOfContents = ({ html }) => {
@@ -15,7 +15,7 @@ const TableOfContents = ({ html }) => {
     return val
   }
 
-  const [headerIds, setHeaderIds] = useState(getHeaderIds);
+  const [headerIds] = useState(getHeaderIds);
   const activeHash = useActiveHash(headerIds)
 
   useEffect(() => {
