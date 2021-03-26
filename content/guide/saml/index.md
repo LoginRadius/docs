@@ -22,7 +22,7 @@ The following are some key points providing better clarity about LoginRadius act
 
 1.  LoginRadius acts as an identity provider (IDP), which means that LoginRadius can authorize your app, and your app will act as a service provider (SP).
 
-2.  LoginRadius supports both [Identity Provider Initiated Login](#identityproviderinitiatedlogin7) and [Service Provider Initiated](#serviceproviderinitiatedlogin8) login flows.
+2.  LoginRadius supports both [Identity Provider Initiated Login](#identity-provider-initiated-login) and [Service Provider Initiated](#service-provider-initiated-login) login flows.
 
 3.  LoginRadius supports Single Logout (SLO).
 
