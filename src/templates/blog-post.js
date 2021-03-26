@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import TableOfContents from "../components/table-of-contents"
 import * as containerStyles from "./blog-post.module.css"
 
 const BlogPostTemplate = ({ data, location }) => {
@@ -26,9 +27,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <div>
               <div className="sidebar">
                 <div className="headings">Web APP</div>
-                <div
-                  dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
-                />
+                <TableOfContents html={post.tableOfContents} />
                 <div className="get-in-touch">
                   <div className="headings">Get in Touch</div>
                   <ul>
