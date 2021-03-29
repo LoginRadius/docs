@@ -2,6 +2,7 @@
 title: "JAVA SDK"
 tags: ["JAVA", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a JAVA application."
+path: "/references/sdk/java"
 ---
 
 # JAVA SDK
