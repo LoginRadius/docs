@@ -8,8 +8,8 @@ path: "/references/sdk/html5"
 
 # HTML5 SDK
 
-> Disclaimer: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
-This document contains information and examples regarding the LoginRadius HTML5 SDK. It provides guidance for working with social authentication, user profile data, and login with a variety of social networks such as Facebook, Google, Twitter etc. You can get the SDK from here
+> Disclaimer: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open-source library, which means you are free to download and customize the library functions based on your specific application needs.
+This document contains information and examples regarding the LoginRadius HTML5 SDK. It guides working with social authentication, user profile data, and log in with a variety of social networks such as Facebook, Google, Twitter, etc. You can get the SDK from here
 
 ## Setup Your Dashboard
 
@@ -26,7 +26,7 @@ To communicate with LoginRadius you will need some details about the application
 
 ### API Credentials
 
-The API key and API Secret are used to interact with LoginRadius' APIs. To access API credentials, login to your LoginRadius Dashboard account, from the left navigation panel, click Configuration and then navigate to the API Credentials section.
+The API key and API Secret are used to interact with LoginRadius' APIs. To access API credentials, log in to your LoginRadius Dashboard account, from the left navigation panel, click Configuration and then navigate to the API Credentials section.
 
 Click the down arrow or anywhere within the section and the API Credentials screen will appear:
 
@@ -36,19 +36,19 @@ Click on the API Key And Secret to get your unique credentials as displayed in t
 
 Key Secret
 
-The APP Name is unique for each application in LoginRadius. The Auth Page URL is created using your app name.
+The APP name is unique for each application in LoginRadius. The Auth Page URL is created using your app name.
 
 > For eg: If App Name is myapp then your Auth Page URL will be https://myapp.hub.loginradius.com/auth.aspx.
 
 ### Mobile SOTT
 
-To avoid spam automated registrations, in the request header, LoginRadius supports an additional token - SOTT (Secure One Time Token) along with API key. Check out Work with SOTT document for more details.
+To avoid spam automated registrations, in the request header, LoginRadius supports an additional token - SOTT (Secure One Time Token) along with an API key. Check out the Work with SOTT document for more details.
 
 ## Whitelist Your Domain
 
 This section allows you to add and manage the domain(s). LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To add the application domain, login to your LoginRadius Dashboard account, from the left navigation panel, click Configuration and then navigate to the Whitelist Your Domain section.
+To add the application domain, log in to your LoginRadius Dashboard account, from the left navigation panel, click Configuration and then navigate to the Whitelist Your Domain section.
 
 Click the down arrow or anywhere within the section and the Whitelist Your Domain screen will appear:
 
@@ -61,12 +61,12 @@ Click the down arrow or anywhere within the section and the Whitelist Your Domai
 
 ## Installation
 
-In order to utilize the HTML5/JS SDK, you will need to initialize the SDK with your API Key:
+To utilize the HTML5/JS SDK, you will need to initialize the SDK with your API Key:
 
 
 Copy
 var sdkoptions = {
-  "apiKey": "{{YOUR API KEY}}"
+ "apiKey": "{{YOUR API KEY}}"
 }
 
 LoginRadiusSDK.initSDK(sdkoptions);
@@ -121,7 +121,7 @@ var accessToken = "<accessToken>"; //Required
 var userProfileUpdateModel ={ 
 "firstName" : "<firstName>",
 "lastName" : "<lastName>"
-};  //Required
+}; //Required
 var emailTemplate = "<emailTemplate>"; //Optional
 var fields = null; //Optional
 var nullSupport = true; //Optional
@@ -129,18 +129,18 @@ var smsTemplate = "<smsTemplate>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.authenticationApi.updateProfileByAccessToken(accessToken, userProfileUpdateModel, emailTemplate, fields, nullSupport, smsTemplate, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Auth Verify Email By OTP (PUT)
 
-This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
+This API is used to verify the email of the user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
 
 
 ```html
@@ -149,17 +149,17 @@ This API is used to verify the email of user when the OTP Email verification flo
 var emailVerificationByOtpModel ={ 
 "email" : "<email>",
 "otp" : "<otp>"
-};  //Required
+}; //Required
 var fields = null; //Optional
 var url = "<url>"; //Optional
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.verifyEmailByOTP(emailVerificationByOtpModel, fields, url, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -175,21 +175,21 @@ This API is used to set a new password for the specified account.
 var resetPasswordByResetTokenModel ={ 
 "password" : "<password>",
 "resetToken" : "<resetToken>"
-};  //Required
+}; //Required
 
 LoginRadiusSDK.authenticationApi.resetPasswordByResetToken(resetPasswordByResetTokenModel, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Auth Change Password (PUT)
 
-This API is used to change the accounts password based on the previous password
+This API is used to change the account's password based on the previous password
 
 
 ```html
@@ -199,11 +199,11 @@ var newPassword = "<newPassword>"; //Required
 var oldPassword = "<oldPassword>"; //Required
 
 LoginRadiusSDK.authenticationApi.changePassword(accessToken, newPassword, oldPassword, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -220,11 +220,11 @@ var emailTemplate = "<emailTemplate>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.authenticationApi.authResendEmailVerification(email, emailTemplate, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -243,11 +243,11 @@ var emailTemplate = "<emailTemplate>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.authenticationApi.addEmail(accessToken, email, type, emailTemplate, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -263,25 +263,25 @@ This API retrieves a copy of the user data based on the Email
 var emailAuthenticationModel ={ 
 "email" : "<email>",
 "password" : "<password>"
-};  //Required
+}; //Required
 var emailTemplate = "<emailTemplate>"; //Optional
 var fields = null; //Optional
 var loginUrl = "<loginUrl>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.authenticationApi.loginByEmail(emailAuthenticationModel, emailTemplate, fields, loginUrl, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Auth Forgot Password (POST)
 
-This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'
+This API is used to send the reset password URL to a specified account. Note: If you have the UserName workflow-enabled, you may replace the 'email' parameter with 'username'
 
 
 ```html
@@ -291,11 +291,11 @@ var resetPasswordUrl = "<resetPasswordUrl>"; //Required
 var emailTemplate = "<emailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.forgotPassword(email, resetPasswordUrl, emailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -309,14 +309,14 @@ This API creates a user in the database as well as sends a verification email to
 
 
 var authUserRegistrationModel ={ 
-"email" : [   { 
-"type" : "<type>"  ,
-"value" : "<value>"   
-}  ] ,
+"email" : [ { 
+"type" : "<type>" ,
+"value" : "<value>" 
+} ] ,
 "firstName" : "<firstName>",
 "lastName" : "<lastName>",
 "password" : "<password>"
-};  //Required
+}; //Required
 var sott = "<sott>"; //Required
 var emailTemplate = "<emailTemplate>"; //Optional
 var fields = null; //Optional
@@ -325,11 +325,11 @@ var verificationUrl = "<verificationUrl>"; //Optional
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.userRegistrationByEmail(authUserRegistrationModel, sott, emailTemplate, fields, options, verificationUrl, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -343,15 +343,15 @@ This API creates a user in the database as well as sends a verification email to
 
 
 var authUserRegistrationModelWithCaptcha ={ 
-"email" : [   { 
-"type" : "<type>"  ,
-"value" : "<value>"   
-}  ] ,
+"email" : [ { 
+"type" : "<type>" ,
+"value" : "<value>" 
+} ] ,
 "firstName" : "<firstName>",
 "g-recaptcha-response" : "<g-recaptcha-response>",
 "lastName" : "<lastName>",
 "password" : "<password>"
-};  //Required
+}; //Required
 var emailTemplate = "<emailTemplate>"; //Optional
 var fields = null; //Optional
 var options = "<options>"; //Optional
@@ -360,18 +360,18 @@ var verificationUrl = "<verificationUrl>"; //Optional
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.userRegistrationByCaptcha(authUserRegistrationModelWithCaptcha, emailTemplate, fields, options, smsTemplate, verificationUrl, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Auth Validate Access token (GET)
 
-This api validates access token, if valid then returns a response with its expiry otherwise error.
+This API validates the access token, if valid then returns a response with its expiry otherwise error.
 
 
 ```html
@@ -379,18 +379,18 @@ This api validates access token, if valid then returns a response with its expir
 var accessToken = "<accessToken>"; //Required
 
 LoginRadiusSDK.authenticationApi.authValidateAccessToken(accessToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Access Token Invalidate (GET)
 
-This api call invalidates the active access token or expires an access token's validity.
+This API call invalidates the active access token or expires an access token's validity.
 
 
 ```html
@@ -399,18 +399,18 @@ var accessToken = "<accessToken>"; //Required
 var preventRefresh = true; //Optional
 
 LoginRadiusSDK.authenticationApi.authInValidateAccessToken(accessToken, preventRefresh, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Access Token Info (GET)
 
-This api call provide the active access token Information
+This API call provides the active access token Information
 
 
 ```html
@@ -418,11 +418,11 @@ This api call provide the active access token Information
 var accessToken = "<accessToken>"; //Required
 
 LoginRadiusSDK.authenticationApi.getAccessTokenInfo(accessToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -438,11 +438,11 @@ var accessToken = "<accessToken>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.authenticationApi.getProfileByAccessToken(accessToken, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -458,11 +458,11 @@ var accessToken = "<accessToken>"; //Required
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.sendWelcomeEmail(accessToken, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -477,11 +477,11 @@ This API is used to delete an account by passing it a delete token.
 var deletetoken = "<deletetoken>"; //Required
 
 LoginRadiusSDK.authenticationApi.deleteAccountByDeleteToken(deletetoken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -496,18 +496,18 @@ This API is used to check the email exists or not on your site.
 var email = "<email>"; //Required
 
 LoginRadiusSDK.authenticationApi.checkEmailAvailability(email, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Auth Verify Email (GET)
 
-This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
+This API is used to verify the email of the user. Note: This API will only return the full profile if you have 'Enable auto-login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
 
 
 ```html
@@ -518,11 +518,11 @@ var url = "<url>"; //Optional
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.verifyEmail(verificationToken, fields, url, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -538,11 +538,11 @@ var accessToken = "<accessToken>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.authenticationApi.getSocialIdentity(accessToken, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -558,11 +558,11 @@ var accessToken = "<accessToken>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.authenticationApi.acceptPrivacyPolicy(accessToken, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -579,11 +579,11 @@ var deleteUrl = "<deleteUrl>"; //Optional
 var emailTemplate = "<emailTemplate>"; //Optional
 
 LoginRadiusSDK.authenticationApi.deleteAccountWithEmailConfirmation(accessToken, deleteUrl, emailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -599,11 +599,11 @@ var accessToken = "<accessToken>"; //Required
 var email = "<email>"; //Required
 
 LoginRadiusSDK.authenticationApi.removeEmail(accessToken, email, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -644,24 +644,24 @@ This API is used to update the information of existing accounts in your Cloud St
 var accountUserProfileUpdateModel ={ 
 "firstName" : "<firstName>",
 "lastName" : "<lastName>"
-};  //Required
+}; //Required
 var uid = "<uid>"; //Required
 var fields = null; //Optional
 var nullSupport = true; //Optional
 
 LoginRadiusSDK.accountApi.updateAccountByUid(accountUserProfileUpdateModel, uid, fields, nullSupport, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Update Phone ID by UID (PUT)
 
-This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
+This API is used to update the PhoneId by using the Uid's. Admin can update the phone for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
 
 
 ```html
@@ -671,11 +671,11 @@ var uid = "<uid>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.updatePhoneIDByUid(phone, uid, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -691,11 +691,11 @@ var password = "<password>"; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.accountApi.setAccountPasswordByUid(password, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -712,18 +712,18 @@ var emailTemplate = "<emailTemplate>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.accountApi.invalidateAccountEmailVerification(uid, emailTemplate, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Reset phone ID verification (PUT)
 
-This API Allows you to reset the phone no verification of an end user’s account.
+This API allows you to reset the phone with no verification of an end user’s account.
 
 
 ```html
@@ -732,44 +732,44 @@ var uid = "<uid>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.accountApi.resetPhoneIDVerificationByUid(uid, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Upsert Email (PUT)
 
-This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.
+This API is used to add/upsert another email in the account profile by different-different email types. If the email type is the same then it will simply update the existing email, otherwise, it will add a new email in the Email array.
 
 
 ```html
 
 var upsertEmailModel ={ 
-"email" : [   { 
-"type" : "<type>"  ,
-"value" : "<value>"   
-}  ] 
-};  //Required
+"email" : [ { 
+"type" : "<type>" ,
+"value" : "<value>" 
+} ] 
+}; //Required
 var uid = "<uid>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.upsertEmail(upsertEmailModel, uid, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Update UID (PUT)
 
-This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.
+This API is used to update a user's Uid. It will update all profiles, custom objects, and consent management logs associated with the Uid.
 
 
 ```html
@@ -777,15 +777,15 @@ This API is used to update a user's Uid. It will update all profiles, custom obj
 
 var updateUidModel ={ 
 "newUid" : "<newUid>"
-};  //Required
+}; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.accountApi.accountUpdateUid(updateUidModel, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -794,36 +794,36 @@ LoginRadiusSDK.accountApi.accountUpdateUid(updateUidModel, uid, function(error, 
 
 This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user.
 
-In order to use this API, you need to format a JSON request body with all of the mandatory fields
+To use this API, you need to format a JSON request body with all of the mandatory fields
 
 
 ```html
 
 
 var accountCreateModel ={ 
-"email" : [   { 
-"type" : "<type>"  ,
-"value" : "<value>"   
-}  ] ,
+"email" : [ { 
+"type" : "<type>" ,
+"value" : "<value>" 
+} ] ,
 "firstName" : "<firstName>",
 "lastName" : "<lastName>",
 "password" : "<password>"
-};  //Required
+}; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.createAccount(accountCreateModel, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Forgot Password token (POST)
 
-This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.
+This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow-enabled, you may replace the 'email' parameter with 'username' in the body.
 
 
 ```html
@@ -834,11 +834,11 @@ var resetPasswordUrl = "<resetPasswordUrl>"; //Optional
 var sendEmail = true; //Optional
 
 LoginRadiusSDK.accountApi.getForgotPasswordToken(email, emailTemplate, resetPasswordUrl, sendEmail, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -853,11 +853,11 @@ This API Returns an Email Verification token.
 var email = "<email>"; //Required
 
 LoginRadiusSDK.accountApi.getEmailVerificationToken(email, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -873,11 +873,11 @@ var email = "<email>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.getAccountProfileByEmail(email, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -893,11 +893,11 @@ var phone = "<phone>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.getAccountProfileByPhone(phone, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -913,18 +913,18 @@ var uid = "<uid>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.getAccountProfileByUid(uid, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Account Password (GET)
 
-This API use to retrive the hashed password of a specified account in Cloud Storage.
+This API is used to retrieve the hashed password of a specified account in Cloud Storage.
 
 
 ```html
@@ -932,18 +932,18 @@ This API use to retrive the hashed password of a specified account in Cloud Stor
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.accountApi.getAccountPasswordHashByUid(uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Access Token based on UID or User impersonation API (GET)
 
-The API is used to get LoginRadius access token based on UID.
+The API is used to get a LoginRadius access token based on UID.
 
 
 ```html
@@ -951,11 +951,11 @@ The API is used to get LoginRadius access token based on UID.
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.accountApi.getAccessTokenByUid(uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -963,7 +963,7 @@ LoginRadiusSDK.accountApi.getAccessTokenByUid(uid, function(error, data){
 
 #### Account Identities by Email (GET)
 
-Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
+Note: This is intended for specific workflows where an email may be associated with multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
 
 
 ```html
@@ -972,18 +972,18 @@ var email = "<email>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.getAccountIdentitiesByEmail(email, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Account Delete (DELETE)
 
-This API deletes the Users account and allows them to re-register for a new account.
+This API deletes the User's account and allows them to re-register for a new account.
 
 
 ```html
@@ -991,11 +991,11 @@ This API deletes the Users account and allows them to re-register for a new acco
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.accountApi.deleteAccountByUid(uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1012,11 +1012,11 @@ var uid = "<uid>"; //Required
 var fields = null; //Optional
 
 LoginRadiusSDK.accountApi.removeEmail(email, uid, fields, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1031,11 +1031,11 @@ This API is used to delete all user profiles associated with an Email.
 var email = "<email>"; //Required
 
 LoginRadiusSDK.accountApi.accountDeleteByEmail(email, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1068,14 +1068,14 @@ var resetPasswordByOTPModel ={
 "otp" : "<otp>",
 "password" : "<password>",
 "phone" : "<phone>"
-};  //Required
+}; //Required
 
 LoginRadiusSDK.phoneAuthenticationApi.resetPasswordByPhoneOTP(resetPasswordByOTPModel, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1092,18 +1092,18 @@ var fields = null; //Optional
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.phoneVerificationByOTP(otp, phone, fields, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Phone Verification OTP by Token (PUT)
 
-This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
+This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in bypassing the user's access token.
 
 
 ```html
@@ -1113,11 +1113,11 @@ var otp = "<otp>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.phoneVerificationOTPByAccessToken(accessToken, otp, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1134,11 +1134,11 @@ var phone = "<phone>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.updatePhoneNumber(accessToken, phone, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1154,17 +1154,17 @@ This API retrieves a copy of the user data based on the Phone
 var phoneAuthenticationModel ={ 
 "password" : "<password>",
 "phone" : "<phone>"
-};  //Required
+}; //Required
 var fields = null; //Optional
 var loginUrl = "<loginUrl>"; //Optional
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.loginByPhone(phoneAuthenticationModel, fields, loginUrl, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1180,11 +1180,11 @@ var phone = "<phone>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.forgotPasswordByPhoneOTP(phone, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1200,11 +1200,11 @@ var phone = "<phone>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.phoneResendVerificationOTP(phone, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1221,11 +1221,11 @@ var phone = "<phone>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.phoneResendVerificationOTPByToken(accessToken, phone, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1243,7 +1243,7 @@ var authUserRegistrationModel ={
 "lastName" : "<lastName>",
 "password" : "<password>",
 "phoneId" : "<phoneId>"
-};  //Required
+}; //Required
 var sott = "<sott>"; //Required
 var fields = null; //Optional
 var options = "<options>"; //Optional
@@ -1252,11 +1252,11 @@ var verificationUrl = "<verificationUrl>"; //Optional
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.phoneAuthenticationApi.userRegistrationByPhone(authUserRegistrationModel, sott, fields, options, smsTemplate, verificationUrl, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1271,11 +1271,11 @@ This API is used to check the Phone Number exists or not on your site.
 var phone = "<phone>"; //Required
 
 LoginRadiusSDK.phoneAuthenticationApi.checkPhoneNumberAvailability(phone, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1290,11 +1290,11 @@ This API is used to delete the Phone ID on a user's account via the access token
 var accessToken = "<accessToken>"; //Required
 
 LoginRadiusSDK.phoneAuthenticationApi.removePhoneIDByAccessToken(accessToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1327,16 +1327,16 @@ var accessToken = "<accessToken>"; //Required
 
 var multiFactorAuthModelByGoogleAuthenticatorCode ={ 
 "googleAuthenticatorCode" : "<googleAuthenticatorCode>"
-};  //Required
+}; //Required
 var fields = null; //Optional
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaUpdateByAccessToken(accessToken, multiFactorAuthModelByGoogleAuthenticatorCode, fields, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1353,18 +1353,18 @@ var phoneNo2FA = "<phoneNo2FA>"; //Required
 var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaUpdatePhoneNumberByToken(accessToken, phoneNo2FA, smsTemplate2FA, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### MFA Validate Google Auth Code (PUT)
 
-This API is used to login via Multi-factor-authentication by passing the google authenticator code.
+This API is used to log in via Multi-factor-authentication by passing the google authenticator code.
 
 
 ```html
@@ -1375,11 +1375,11 @@ var fields = null; //Optional
 var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaValidateGoogleAuthCode(googleAuthenticatorCode, secondFactorAuthenticationToken, fields, smsTemplate2FA, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1396,18 +1396,18 @@ var secondFactorAuthenticationToken = "<secondFactorAuthenticationToken>"; //Req
 var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaUpdatePhoneNumber(phoneNo2FA, secondFactorAuthenticationToken, smsTemplate2FA, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### MFA Email Login (POST)
 
-This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.
+This API can be used to login by email id on a Multi-factor authentication enabled LoginRadius site.
 
 
 ```html
@@ -1422,11 +1422,11 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaLoginByEmail(email, password, emailTemplate, fields, loginUrl, smsTemplate, smsTemplate2FA, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1448,11 +1448,11 @@ var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaLoginByPhone(password, phone, emailTemplate, fields, loginUrl, smsTemplate, smsTemplate2FA, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1468,11 +1468,11 @@ var accessToken = "<accessToken>"; //Required
 var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaConfigureByAccessToken(accessToken, smsTemplate2FA, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1488,11 +1488,11 @@ var secondFactorAuthenticationToken = "<secondFactorAuthenticationToken>"; //Req
 var smsTemplate2FA = "<smsTemplate2FA>"; //Optional
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaResendOTP(secondFactorAuthenticationToken, smsTemplate2FA, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1508,11 +1508,11 @@ var accessToken = "<accessToken>"; //Required
 var googleauthenticator = true; //Required
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaResetGoogleAuthByToken(accessToken, googleauthenticator, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1528,11 +1528,11 @@ var accessToken = "<accessToken>"; //Required
 var otpauthenticator = true; //Required
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaResetSMSAuthByToken(accessToken, otpauthenticator, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1548,11 +1548,11 @@ var otpauthenticator = true; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaResetSMSAuthenticatorByUid(otpauthenticator, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1568,11 +1568,11 @@ var googleauthenticator = true; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.multiFactorAuthenticationApi.mfaResetGoogleAuthenticatorByUid(googleauthenticator, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1598,16 +1598,16 @@ This API verifies an account by OTP and allows the customer to login.
 var passwordLessLoginOtpModel ={ 
 "otp" : "<otp>",
 "phone" : "<phone>"
-};  //Required
+}; //Required
 var fields = null; //Optional
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.passwordLessLoginApi.passwordlessLoginPhoneVerification(passwordLessLoginOtpModel, fields, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1623,11 +1623,11 @@ var phone = "<phone>"; //Required
 var smsTemplate = "<smsTemplate>"; //Optional
 
 LoginRadiusSDK.passwordLessLoginApi.passwordlessLoginByPhone(phone, smsTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1644,11 +1644,11 @@ var passwordLessLoginTemplate = "<passwordLessLoginTemplate>"; //Optional
 var verificationUrl = "<verificationUrl>"; //Optional
 
 LoginRadiusSDK.passwordLessLoginApi.passwordlessLoginByEmail(email, passwordLessLoginTemplate, verificationUrl, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1665,11 +1665,11 @@ var fields = null; //Optional
 var welcomeEmailTemplate = "<welcomeEmailTemplate>"; //Optional
 
 LoginRadiusSDK.passwordLessLoginApi.passwordlessLoginVerification(verificationToken, fields, welcomeEmailTemplate, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1701,16 +1701,16 @@ This API is used to assign your desired roles to a given user.
 ```html
 
 var accountRolesModel ={ 
-"roles" : [  "roles" ] 
-};  //Required
+"roles" : [ "roles" ] 
+}; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.assignRolesByUid(accountRolesModel, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1724,21 +1724,21 @@ This API creates a Context with a set of Roles
 
 
 var accountRoleContextModel ={ 
-"roleContext" : [   { 
+"roleContext" : [ { 
  "additionalPermissions" : ["<additionalPermissions>" ] ,
-"context" : "<context>"  ,
-"expiration" : "<expiration>"  ,
- "roles" : ["<roles>" ]  
-}  ] 
-};  //Required
+"context" : "<context>" ,
+"expiration" : "<expiration>" ,
+ "roles" : ["<roles>" ] 
+} ] 
+}; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.updateRoleContextByUid(accountRoleContextModel, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1752,16 +1752,16 @@ This API is used to add permissions to a given role.
 
 
 var permissionsModel ={ 
-"permissions" : [  "permissions" ] 
-};  //Required
+"permissions" : [ "permissions" ] 
+}; //Required
 var role = "<role>"; //Required
 
 LoginRadiusSDK.roleApi.addRolePermissions(permissionsModel, role, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1775,18 +1775,18 @@ This API creates a role with permissions.
 
 
 var rolesModel ={ 
-"roles" : [   { 
-"name" : "<name>"  ,
-"permissions" : {"Permission_name":true}  
-}  ] 
-};  //Required
+"roles" : [ { 
+"name" : "<name>" ,
+"permissions" : {"Permission_name":true} 
+} ] 
+}; //Required
 
 LoginRadiusSDK.roleApi.createRoles(rolesModel, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1801,11 +1801,11 @@ API is used to retrieve all the assigned roles of a particular User.
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.getRolesByUid(uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1820,11 +1820,11 @@ This API Gets the contexts that have been configured and the associated roles an
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.getRoleContextByUid(uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1839,11 +1839,11 @@ The API is used to retrieve role context by the context name.
 var contextName = "<contextName>"; //Required
 
 LoginRadiusSDK.roleApi.getRoleContextByContextName(contextName, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1857,11 +1857,11 @@ This API retrieves the complete list of created roles with permissions of your a
 
 
 LoginRadiusSDK.roleApi.getRolesList(, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1875,16 +1875,16 @@ This API is used to unassign roles from a user.
 
 
 var accountRolesModel ={ 
-"roles" : [  "roles" ] 
-};  //Required
+"roles" : [ "roles" ] 
+}; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.unassignRolesByUid(accountRolesModel, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1900,11 +1900,11 @@ var contextName = "<contextName>"; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.deleteRoleContextByUid(contextName, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1919,16 +1919,16 @@ This API Deletes the specified Role from a Context.
 var contextName = "<contextName>"; //Required
 
 var roleContextRemoveRoleModel ={ 
-"roles" : [  "roles" ] 
-};  //Required
+"roles" : [ "roles" ] 
+}; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.deleteRolesFromRoleContextByUid(contextName, roleContextRemoveRoleModel, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1943,16 +1943,16 @@ This API Deletes Additional Permissions from Context.
 var contextName = "<contextName>"; //Required
 
 var roleContextAdditionalPermissionRemoveRoleModel ={ 
-"additionalPermissions" : [  "additionalPermissions" ] 
-};  //Required
+"additionalPermissions" : [ "additionalPermissions" ] 
+}; //Required
 var uid = "<uid>"; //Required
 
 LoginRadiusSDK.roleApi.deleteAdditionalPermissionFromRoleContextByUid(contextName, roleContextAdditionalPermissionRemoveRoleModel, uid, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1967,11 +1967,11 @@ This API is used to delete the role.
 var role = "<role>"; //Required
 
 LoginRadiusSDK.roleApi.deleteRole(role, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -1985,16 +1985,16 @@ API is used to remove permissions from a role.
 
 
 var permissionsModel ={ 
-"permissions" : [  "permissions" ] 
-};  //Required
+"permissions" : [ "permissions" ] 
+}; //Required
 var role = "<role>"; //Required
 
 LoginRadiusSDK.roleApi.removeRolePermissions(permissionsModel, role, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2015,11 +2015,11 @@ This API allows you to generate SOTT with a given expiration time.
 var timeDifference = 0; //Optional
 
 LoginRadiusSDK.sottApi.generateSott(timeDifference, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2045,11 +2045,11 @@ The API is used to get LoginRadius access token by sending Facebook's access tok
 var fbAccessToken = "<fbAccessToken>"; //Required
 
 LoginRadiusSDK.nativeSocialApi.getAccessTokenByFacebookAccessToken(fbAccessToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2065,11 +2065,11 @@ var twAccessToken = "<twAccessToken>"; //Required
 var twTokenSecret = "<twTokenSecret>"; //Required
 
 LoginRadiusSDK.nativeSocialApi.getAccessTokenByTwitterAccessToken(twAccessToken, twTokenSecret, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2086,11 +2086,11 @@ var clientId = "<clientId>"; //Optional
 var refreshToken = "<refreshToken>"; //Optional
 
 LoginRadiusSDK.nativeSocialApi.getAccessTokenByGoogleAccessToken(googleAccessToken, clientId, refreshToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2105,11 +2105,11 @@ This API is used to Get LoginRadius Access Token using google jwt id token for g
 var idToken = "<idToken>"; //Required
 
 LoginRadiusSDK.nativeSocialApi.getAccessTokenByGoogleJWTAccessToken(idToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2124,11 +2124,11 @@ The API is used to get LoginRadius access token by sending Linkedin's access tok
 var lnAccessToken = "<lnAccessToken>"; //Required
 
 LoginRadiusSDK.nativeSocialApi.getAccessTokenByLinkedinAccessToken(lnAccessToken, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2143,11 +2143,11 @@ The API is used to get LoginRadius access token by sending Google's AuthCode. It
 var googleAuthcode = "<googleAuthcode>"; //Required
 
 LoginRadiusSDK.nativeSocialApi.getAccessTokenByGoogleAuthCode(googleAuthcode, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2163,7 +2163,7 @@ List of APIs in this Section:
 
 #### Webhook Subscribe (POST)
 
-API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
+API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe to your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on a unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
 
 
 ```html
@@ -2172,21 +2172,21 @@ API can be used to configure a WebHook on your LoginRadius site. Webhooks also w
 var webHookSubscribeModel ={ 
 "event" : "<event>",
 "targetUrl" : "<targetUrl>"
-};  //Required
+}; //Required
 
 LoginRadiusSDK.webHookApi.webHookSubscribe(webHookSubscribeModel, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
 
 #### Webhook Subscribed URLs (GET)
 
-This API is used to fatch all the subscribed URLs, for particular event
+This API is used to fetch all the subscribed URLs, for a particular event
 
 
 ```html
@@ -2194,11 +2194,11 @@ This API is used to fatch all the subscribed URLs, for particular event
 var event = "<event>"; //Required
 
 LoginRadiusSDK.webHookApi.getWebHookSubscribedURLs(event, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2212,11 +2212,11 @@ API can be used to test a subscribed WebHook.
 
 
 LoginRadiusSDK.webHookApi.webhookTest(, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
@@ -2233,14 +2233,14 @@ API can be used to unsubscribe a WebHook configured on your LoginRadius site.
 var webHookSubscribeModel ={ 
 "event" : "<event>",
 "targetUrl" : "<targetUrl>"
-};  //Required
+}; //Required
 
 LoginRadiusSDK.webHookApi.webHookUnsubscribe(webHookSubscribeModel, function(error, data){
-   if(error){
-     console.log(error);
-	  return;
-	}
-	console.log(data);
+ if(error){
+ console.log(error);
+ return;
+ }
+ console.log(data);
 });
 
 ```
