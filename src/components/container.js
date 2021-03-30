@@ -25,11 +25,11 @@ const Middle = () => {
               <a href="#myModal" className="btn btn-primary">
                 Try 5 Minute Setup Guide
               </a>
-             
+
               <Link to="/tutorial/html-and-js-tutorial" className="btn btn-outline">
                 Curious How It Works?
               </Link>
-              
+
             </div>
           </div>
           <div className="wrapper">
@@ -461,6 +461,9 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="concepts/token-handle">Handle Token</Link>
+              </li>
+              <li>
+                <Link to="concepts/localization">Localization</Link>
               </li>
               <li>
                 <Link to="/concepts/sott">Secure One Time Token (SOTT)</Link>
