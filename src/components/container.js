@@ -515,7 +515,7 @@ const Middle = () => {
             <h3 className="title">APIs</h3>
             <ul>
               <li>
-                <Link to="references/api">example</Link>
+                <Link to="references/api/jwt">JWT</Link>
               </li>
             </ul>
           </div>
