@@ -9,8 +9,6 @@ path: "/references/api/oidc"
 
 ## Access Token by OpenID code
 
-
-
 This API allows you to exchange your OpenID code for a LoginRadius access_token.
 
 
@@ -38,6 +36,16 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token
 
 
 The following displays the sample  request body code:
+
+```json
+{
+  "access_token": "********-****-****-*****************",
+  "token_type": "access_token",
+  "expires_in": 394,
+  "refresh_token": "********-****-****-*****************",
+  "id_token": "eyJhbG**********4NiIsInR5cCI*****VCJ9.eyJpc3**********czy****udGVybmFsL"
+}
+```
 
 ### Remarks
 
@@ -75,6 +83,16 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token
 
 The following displays the sample  request body code:
 
+```json
+{
+  "access_token": "********-****-****-*****************",
+  "token_type": "access_token",
+  "expires_in": 394,
+  "refresh_token": "********-****-****-*****************",
+  "Id_token": "eyJhbG**********4NiIsInR5cCI*****VCJ9.eyJpc3**********czy****udGVybmFsL***********WIubG9n"
+}
+```
+
 ### Remarks
 
 #### Error Codes
@@ -108,6 +126,10 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token/revoke
 
 
 The following displays the sample  request body code:
+
+```json
+{}
+```
 
 ### Remarks
 
@@ -143,6 +165,10 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/userinfo
 
 The following displays the sample  request body code:
 
+```json
+{"eyJhbGciOiJSUzI1NiIsImtpZCI6IjIwMSIsInR5cCI6IkpXVCJ9.eyJVaWQiOiI3MjNiMDVmODBjNjQ0NjcyYjM0OTZhMjFiN2NmMzNkYyIsImFkZHJlc3MiOnsiY291bnRyeSI6bnVsbCwibG9jYWxpdHkiOm51bGwsInBvc3RhbF9jb2RlIjpudWxsLCJyZWdpb24iOm51bGwsInN0cmVldF9hZGRyZXNzIjpudWxsfSwiYXNkYXMiOlt7IlR5cGUiOiJQcmltYXJ5IiwiVmFsdWUiOiJhc2Rhc0BtYWlsNy5pbyJ9XSwiYXVkIjoiOTRjMzk1YjEtZDU3OS00NGNlLThiY2QtNDMwY2U0NjIwMzc1IiwiYmlydGhkYXRlIjpudWxsLCJlbWFpbCI6ImFzZGFzQG1haWw3LmlvIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJleHAiOjE2MDE0Njc0NzIsImZhbWlseV9uYW1lIjpudWxsLCJnZW5kZXIiOm51bGwsImdpdmVuX25hbWUiOm51bGwsImlhdCI6MTYwMTQ2Njg3MiwiaXNzIjoiaHR0cHM6Ly9jbG91ZC1hcGkubG9naW5yYWRpdXMuY29tL3Nzby9vaWRjL3YyL2ludGVybmFsLWFwZWtzaGEvdGVzdCIsImp0aSI6ImYzMTk3YjQwLTJkY2QtNDQyMi04NzY1LWM0MDg0NmY2MGZiNCIsImxvY2FsZSI6bnVsbCwibWlkZGxlX25hbWUiOm51bGwsIm5hbWUiOm51bGwsIm5iZiI6MTYwMTQ2Njg3Miwibmlja25hbWUiOm51bGwsIm5vbmNlIjoidGVzdG1vdW5jZSIsInBob25lX251bWJlciI6bnVsbCwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6bnVsbCwicHJlZmVycmVkX3VzZXJuYW1lIjpudWxsLCJwcm9maWxlIjpudWxsLCJzdWIiOiI3MjNiMDVmODBjNjQ0NjcyYjM0OTZhMjFiN2NmMzNkYyIsInVwZGF0ZWRfYXQiOjE2MDAyODg5NDYsIndlYnNpdGUiOm51bGwsInpvbmVpbmZvIjpudWxsfQ.SvMXwBqsVUt1P5qHXIfTh90UW6__Gte6sBqHaRGG52xQYSQQvvL66yzBY9Hwfui_I6s4-9W10cQJiaY1voV48rE1S9Fo_IMw_khwPxzPbWIg6EXrSReFd-jg4l-1NJ1YxnervOOkxrG5vvReU9uL3cAYcB7YpeO_ybQnUMj-TZyWFbI7L3sagrv239iXJc2zGuMxw4Kp1H8pjiu7L7-cx8ZsfVkgk6ZCO2Z8Ze46NBlXwGvsTPHh0qdoafi5ISB8DKnCiyU-CTZPYr91_1gJMG-1x98UDjiKy6vV4290W0HQXlrN2Y4Rxhnwlmyzs-5t38wgohvEyxvCy6Zvmxws-Q" }
+```
+
 ### Remarks
 
 #### Error Codes
@@ -171,6 +197,21 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/jwks
 
 
 The following displays the sample  request body code:
+
+```json
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "kid": "206",
+      "n": "nvJHvAs6aEq9w6Cb793lk9-METOxd9mEDY4a5YKj74lg5EuNy0j1FP...",
+      "e": "AQAB"
+    }
+  ]
+}
+```
 
 ### Remarks
 
@@ -201,6 +242,51 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-kno
 
 
 The following displays the sample  request body code:
+
+```json
+{
+  "issuer": "https://cloud-api.loginradius.com/sso/oidc/v2/{site-name}/{oidcappname}",
+  "authorization_endpoint": "https://cloud-api.loginradius.com/sso/oidc/authorize",
+  "token_endpoint": "https://cloud-api.loginradius.com/sso/oidc/token",
+  "revocation_endpoint": "https://cloud-api.loginradius.com/sso/oidc/revoke",
+  "userinfo_endpoint": "https://cloud-api.loginradius.com/sso/oidc/userinfo",
+  "jwks_uri": "https://cloud-api.loginradius.com/sso/oidc/app-name/app-name/jwks",
+  "scopes_supported": [
+    "openid"
+  ],
+  "response_types_supported": [
+    "code",
+    "token",
+    "id_token",
+    "code token",
+    "code id_token",
+    "token id_token",
+    "code token id_token"
+  ],
+  "response_modes_supported": [
+    "query",
+    "form_post"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "claims_supported": [
+    "Email",
+    "FirstName",
+    "LastName",
+    "UserName",
+    "Country",
+    "Favicon"
+  ]
+}
+
+```
 
 ### Remarks
 
