@@ -5,11 +5,15 @@ summary: "A guide to impliment LoginRadius SDK in a Android application"
 path: "/references/sdk/ios-sdk"
 ---
 
-This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in an iOS app.
+# iOS SDK
+
 
 > **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-## Installation
+This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in an iOS app. You can download the iOS SDK from [here](https://github.com/LoginRadius/ios-sdk).
+
+## SDK Installation
+
 We recommend using CocoaPods for installing the library in a project.
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
