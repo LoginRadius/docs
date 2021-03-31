@@ -8,12 +8,11 @@ path: "/references/sdk/ruby-sdk"
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-LoginRadius Combined Node SDK features a combined SDK set to encompass Social Login, User Registration.
+This document contains information and examples regarding the LoginRadius ruby-on-rails SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter.You can get the SDK from [here](https://github.com/LoginRadius/ruby-on-rails-sdk).
 
+For a more hands-on tutorial on setting up the SDK and using it in a Ruby application to make LoginRadius API calls, check out our Ruby [tutorial](https://lr-developer-docs.netlify.app/tutorial/ror).
 
-This document contains information and examples regarding the LoginRadius ruby-on-rails SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter.You can get the SDK from [here](https://github.com/LoginRadius/ruby-on-rails-sdk) 
-
-## Installation <br/>
+## SDK Installation <br/>
 
 Add this line to your application's Gemfile:
 
