@@ -4,6 +4,7 @@ description: "A guide to impliment LoginRadius SDK in a Ruby on Rails applicatio
 summary: "A guide to impliment LoginRadius SDK in a Ruby on Rails application"
 path: "/references/sdk/ruby-sdk"
 ---
+# Ruby SDK
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
@@ -83,7 +84,7 @@ require 'login_radius'
 
 For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
 
-## API Details
+## API Methods
 
 ### Authentication API
 
