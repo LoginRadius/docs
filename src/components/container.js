@@ -1,24 +1,15 @@
-import React, { useEffect } from "react"
+import React,{ useEffect, useState }  from "react"
 import Modal from "react-modal"
 import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
 
+
 const Middle = () => {
+<<<<<<< HEAD
   const apiRef = React.createRef()
 
   useEffect(() => {
-    if (window && window.location && window.location.hash) {
-      if (window.location.hash !== "" && window.location.hash === "#api") {
-        window.history.scrollRestoration = "manual"
-        apiRef.current.scrollIntoView({ block: "start" });
-      }
-    }
-  })
-
-  return (
-    <main>
       {/*Hero section*/}
-      <section className="hero py-72">
         <div className="grid-50 d-flex align-items-center">
           <div>
             <h1>LoginRadius Documentation</h1>
@@ -33,9 +24,41 @@ const Middle = () => {
               to third-party applications using 30+ Integration options.
             </p>
             <div className="btn-group">
-              <a href="#myModal" className="btn btn-primary">
+              <a onClick={() => setDisplay(true)} className="btn btn-primary">
                 Try 5 Minute Setup Guide
               </a>
+             <Modal isOpen={display} ariaHideApp={false}>
+             <div  className="card no-shadow p-0">
+          <div className="popup-header">
+            <h3 className="title">Try this 5 Minute Setup Guide</h3>
+            <a onClick={() => setDisplay(false)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-x"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </a>
+          </div>
+          
+          <figure class="video_container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ANlOdnzfCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            </figure>
+            
+
+        </div>
+
+             </Modal>
 
               <Link
                 to="/tutorial/html-and-js-tutorial"
