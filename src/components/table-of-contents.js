@@ -12,13 +12,21 @@ const TableOfContents = ({ html }) => {
       val.push(a.hash.replace("#", ""))
     })
 
+    if (val.length <= 0) {
+      return null
+    }
+
     return val
   }
 
-  const [headerIds] = useState(getHeaderIds);
+  const [headerIds, setHeaderIds] = useState([]);
   const activeHash = useActiveHash(headerIds)
 
   useEffect(() => {
+    if (headerIds !== null && !headerIds.length) {
+      setHeaderIds(getHeaderIds);
+    }
+
     const tableOfContentLinks = document.querySelectorAll(".table-of-contents a")
 
     tableOfContentLinks.forEach(a => {

@@ -471,25 +471,77 @@ const Middle = () => {
             </ul>
           </div>
           {/*Concepts*/}
-          {/*References*/}
+          {/*SDKs*/}
           <div className="card">
             <div className="icon">
               <img src="images/references.svg" />
             </div>
-            <h3 className="title">References</h3>
+            <h3 className="title">SDKs</h3>
             <ul>
               <li>
-                <Link to="references/sdk">SDKs </Link>
+                <Link to="references/sdk/android-sdk">Android</Link>
               </li>
               <li>
-                <Link to="references/api">APIs</Link>
+                <Link to="references/sdk/dotnet-sdk">ASP.NET</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/html5-sdk">HTML5</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/ios-sdk">iOS</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/java">Java</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/node-js">Node.js</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/php">PHP</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/python">Python</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/ruby">Ruby</Link>
               </li>
             </ul>
           </div>
-          {/*References*/}
+          {/*APIs*/}
+          <div className="card">
+            <div className="icon">
+              <img src="images/references.svg" />
+            </div>
+            <h3 className="title">APIs</h3>
+            <ul>
+              <li>
+                <Link to="references/api">example</Link>
+              </li>
+            </ul>
+          </div>
+          {/*APIs*/}
+          <div className="card">
+            <div className="icon">
+              <img src="images/references.svg" />
+            </div>
+            <h3 className="title">JavaScript Library</h3>
+            <ul>
+              <li>
+                <Link to="references/javascript-library/getting-started">Getting Started</Link>
+              </li>
+              <li>
+                <Link to="references/javascript-library/hooks">Hooks</Link>
+              </li>
+              <li>
+                <Link to="references/javascript-library/advanced-customizations">Advanced Customizations</Link>
+              </li>
+              <li>
+                <Link to="references/javascript-library/form-library">Form Library</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-      {/*Section Comprehensive Resources*/}
     </main >
   )
 }

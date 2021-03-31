@@ -1,3 +1,10 @@
+---
+title: "Localization"
+tags: ["Language customization", "Localization"]
+description: "This is a document detailing how to localize your website."
+path: "/concepts/localization"
+---
+
 # Localization
 
 This document takes you through the various ways in which LoginRadius can help you localize your website according to a country or region.
