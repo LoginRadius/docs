@@ -7,21 +7,18 @@ path: "/references/sdk/golang-sdk"
 
 # Golang SDK
 
-## SDK Installation
-
 > **Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-LoginRadius Combined Golang SDK features a combined SDK set to encompass Social Login, User Registration.
 
 This document contains information and examples regarding the LoginRadius Golang SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google, Twitter, Yahoo, LinkedIn, and more. You can get the SDK from [here](https://github.com/LoginRadius/go-sdk)
 
-> Note: Before starting, install Golang and setup the proper paths. Find the instructions [here](https://golang.org/doc/install).
+## SDK Installation
 
+> Note: Before starting, install Golang and setup the proper paths. Find the instructions [here](https://golang.org/doc/install).
 
 ```
    go get github.com/loginradius/go-sdk
 ```
-
 
 
 ## Setup Your Dashboard
