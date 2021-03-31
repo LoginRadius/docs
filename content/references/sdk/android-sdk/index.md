@@ -5,12 +5,14 @@ summary: "A guide to implement LoginRadius SDK in a Android application"
 path: "/references/sdk/android-sdk"
 ---
 
-This guide covers the various authentication types and features supported by the LoginRadius Identity Platform’s developer plan.
+# Android SDK 
 
 > **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
+This document describes the various authentication types and features supported by the LoginRadius Identity Platform’s. You can get the SDK from [here](https://github.com/LoginRadius/android-sdk).
 
-## Installation
+
+## SDK Installation
 
 * To download the SDK, please go to the LoginRadius **Github** repository.
 * For Gradle based installation, add the following dependency in your app's build.gradle:
@@ -157,8 +159,6 @@ private void doLogin() {
     });
    }
 ```
-
-
 
 
 ## Integrate Registration Service
