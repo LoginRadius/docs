@@ -111,18 +111,6 @@ The following displays the sample  response body code:
 
 ```
 
-
-### Remarks
-
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
-
-
-
-
-
-
 ## JWT Token by Username
 
 ```ruby
@@ -237,14 +225,6 @@ This is what response sample code looks like:
 }
 
 ```
-
-### Remarks
-
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
-
-
 
 
 ## JWT Token by Email
@@ -363,11 +343,7 @@ This is what response sample code looks like:
 
 ```
 
-### Remarks
 
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
 
 
 
@@ -484,9 +460,5 @@ This is what response sample code looks like:
 }
 
 ```
-### Remarks
 
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
 
