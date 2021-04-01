@@ -11,12 +11,12 @@ This document takes you through the various ways in which LoginRadius can help y
 
 **This document will cover below topics:**
 
-- [Form contents customization](#form-contents-customization)
+- [Form Contents Customization](#form-contents-customization)
 - [Email and SMS Template Customization](#email-and-sms-template-customization)
-- [Toggle between multiple Languages](#toggle-between-multiple-languages)
+- [Toggle between Multiple Languages](#toggle-between-multiple-languages)
 - [Google Recaptcha Customization](#google-recaptcha-customization)
 
-## Form contents customization
+## Form Contents Customization
 
 For language customization related to labels, placeholders, validation messages, and error messages, our JS library provides a hook for localization.
 
@@ -137,7 +137,7 @@ The `language` variable contains the name of the current language.
 
 > **Note**: Above code should be added before initializing LRObject, i.e. `"var LRObject = new LoginRadiusV2(commonOptions);"`
 
-## Common options for various email templates:
+### Common Options for Email Templates
 
 | Email Template Name | Common option |
 | --- | --- |
@@ -148,7 +148,7 @@ The `language` variable contains the name of the current language.
 | Add Email | addEmailTemplate(String) |
 | One Touch Login | onetouchLoginEmailTemplate(String) |
 
-## Common option for various SMS templates:
+### Common Option for SMS Templates
 
 | SMS Template Name | Common option |
 | ---  | --- |
@@ -158,7 +158,7 @@ The `language` variable contains the name of the current language.
 | Welcome SMS | smsTemplateWelcome (String) |
 | One Touch Login | smsTemplateOneTouchLogin |
 
-## Toggle between multiple Languages
+## Toggle between Multiple Languages
 
 In the case of a **multilingual website** where the customer needs to switch between the languages to generate the form accordingly, create the **toggle** and on every switch you need to reload the page as given below and detect the language, based on language detected it will display the form in the respective language.
 
