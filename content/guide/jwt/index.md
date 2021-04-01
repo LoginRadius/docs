@@ -152,10 +152,10 @@ Similarly, by clicking the Add Row button, you can map multiple attributes.
 
 If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
-* [JWT Token](#): This GET API is used to exchange access token with your JWT.
-* [JWT Token by Email](#): This API is used to get a JWT by Email and Password.
-* [JWT Token by Username](#): This API is used to get JWT by Username and password.
-* [JWT Token by Phone](#): This API is used to get JWT by Phone and password.
+* [JWT Token](../../references/api/jwt): This GET API is used to exchange access token with your JWT.
+* [JWT Token by Email](../../references/api/jwt): This API is used to get a JWT by Email and Password.
+* [JWT Token by Username](../../references/api/jwt): This API is used to get JWT by Username and password.
+* [JWT Token by Phone](../../references/api/jwt): This API is used to get JWT by Phone and password.
 
 The response from the above APIs will look like this:
 
