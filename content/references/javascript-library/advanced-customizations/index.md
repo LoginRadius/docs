@@ -21,7 +21,7 @@ LRObject.version
 
 ## Email Verification
 
-To verify a consumers's email address, use the `LRObject.init` method with the **verifyEmail** action. The following code example can be used for reference:
+To verify a consumer's email address, use the `LRObject.init` method with the **verifyEmail** action. The following code example can be used for reference:
 
 ```javascript
 var verifyemail_options = {};
@@ -324,7 +324,7 @@ The following are the two different ways to implement Account Linking:
 
   **Sample Code**:
 
-  Refer to the following code exmaple to implement Account linking using APIs:
+  Refer to the following code example to implement Account linking using APIs:
 
   ```html
   <!DOCTYPE html>
@@ -419,7 +419,7 @@ When the Profile Editor is initialized, it loads all of the fields specified in 
 
 ## Two-Factor Authentication
 
-> Note: 2FA will not work with Social Login
+> Note: 2FA will not work with Social Login.
 
 To implement the Two-Factor Authentication interface, use the `LRObject.init` method with the **createTwoFactorAuthentication** action. The following code example can be used for reference:
 
