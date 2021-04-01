@@ -36,7 +36,7 @@ https://auth.lrcontent.com/v2/LoginRadius-v3.10.0.js
 > Note:
 > * LoginRadius may retroactively push urgent security updates to previous versions of LoginRadiusV2.js.
 
-## Instantiating the LoginRadius Object
+## Instantiating LoginRadius Object
 
 After adding the reference to the page, make sure to include the fallback JS for instantiation of LoginRadiusV2 singleton. It can be instantiated by defining the commonOptions parameter and calling creating a new instance of the LoginRadiusV2 Object.
 
@@ -376,7 +376,7 @@ You have complete control over how the custom template will look, feel, and beha
 
   * [Available Parameters](#custom-interface-parameters)
   * [Setting Custom Icons](#setting-custom-icons)
-  * [Setting Custom CSS Classses](#adding-custom-css-classes)
+  * [Setting Custom CSS Classes](#adding-custom-css-classes)
   * [Browser Specific Templates](#handling-browser-specific-redirects)
   * [Programmatic Link Creation](#programmatic-link-creation)
 
