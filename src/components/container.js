@@ -50,8 +50,8 @@ const Middle = () => {
             </a>
           </div>
           
-          <figure class="video_container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ANlOdnzfCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <figure class="video_container">
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/ANlOdnzfCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;">
             </iframe>
             </figure>
             
@@ -102,6 +102,8 @@ const Middle = () => {
       </section>
       {/*Hero section*/}
       {/*Tutorials section*/}
+
+      
       <section className="tutorials py-72">
         <div className="section-header">
           <h2>Ready To Start Building?</h2>
