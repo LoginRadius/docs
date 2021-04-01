@@ -28,7 +28,7 @@ Click the **Add** button from the above screen, and you will find the list of al
 
 ![alt_text](./images/available-integration.png "image_tooltip")
 
-Click the **Add** button from the Webhook tile on the above screen. The Webhook screen will appear.
+Click the **Add Me** button from the Webhook tile on the above screen and then **Enable** button from the appeared pop-up. The Webhook tile will now display **Let's Configure** option. Click this option and follow step 3.
 
 ### Step 3: Configure Webhook
 
