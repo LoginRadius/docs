@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85.01" height="73.5" viewBox="0 0 85.01 73.5">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-1 {
+        stroke: #008ecf;
+      }
+
+      .cls-2 {
+        stroke: #09263c;
+      }
+    </style>
+  </defs>
+  <title>api-docs--on-light</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="icons">
+      <g>
+        <g>
+          <g>
+            <g>
+              <path id="Shape_1054" data-name="Shape 1054" class="cls-1" d="M7.29,71.26,4.57,66.55a2.72,2.72,0,0,1,1-3.71l7.06-4.07,5.43,9.41-7,4.07A2.71,2.71,0,0,1,7.29,71.26Z"/>
+              <path id="Shape_1055" data-name="Shape 1055" class="cls-1" d="M5.93,68.91l-5.18,3"/>
+              <path id="Shape_1056" data-name="Shape 1056" class="cls-1" d="M13.53,60.34l4.7-2.72"/>
+              <path id="Shape_1057" data-name="Shape 1057" class="cls-1" d="M17.15,66.61l4.7-2.72"/>
+            </g>
+            <g>
+              <path id="Shape_1054-2" data-name="Shape 1054" class="cls-1" d="M39.83,6.73h5.43A2.72,2.72,0,0,1,48,9.45V17.6H37.11V9.45A2.72,2.72,0,0,1,39.83,6.73Z"/>
+              <path id="Shape_1055-2" data-name="Shape 1055" class="cls-1" d="M42.55,6.73v-6"/>
+              <path id="Shape_1056-2" data-name="Shape 1056" class="cls-1" d="M46.17,17.6V23"/>
+              <path id="Shape_1057-2" data-name="Shape 1057" class="cls-1" d="M38.93,17.6V23"/>
+            </g>
+            <g>
+              <path id="Shape_1054-3" data-name="Shape 1054" class="cls-1" d="M77.72,71.39l2.72-4.7a2.71,2.71,0,0,0-1-3.71L72.39,58.9,67,68.31,74,72.39A2.72,2.72,0,0,0,77.72,71.39Z"/>
+              <path id="Shape_1055-3" data-name="Shape 1055" class="cls-1" d="M79.08,69l5.18,3"/>
+              <path id="Shape_1056-3" data-name="Shape 1056" class="cls-1" d="M71.48,60.47l-4.7-2.72"/>
+              <path id="Shape_1057-3" data-name="Shape 1057" class="cls-1" d="M67.86,66.74,63.16,64"/>
+            </g>
+          </g>
+          <circle class="cls-1" cx="42.55" cy="48.42" r="21.86"/>
+        </g>
+        <g id="Interface-Essential_Paragraphs_paragraph-justified-align" data-name="Interface-Essential / Paragraphs / paragraph-justified-align">
+          <g id="Group_504" data-name="Group 504">
+            <g id="paragraph-justified-align">
+              <path id="Shape_2492" data-name="Shape 2492" class="cls-2" d="M31.46,58.06H47.85"/>
+              <path id="Shape_2493" data-name="Shape 2493" class="cls-2" d="M31.46,38.77H53.64"/>
+              <path id="Shape_2494" data-name="Shape 2494" class="cls-2" d="M31.46,43.59H53.64"/>
+              <path id="Shape_2495" data-name="Shape 2495" class="cls-2" d="M31.46,48.42H53.64"/>
+              <path id="Shape_2496" data-name="Shape 2496" class="cls-2" d="M31.46,53.24H53.64"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

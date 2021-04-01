@@ -36,10 +36,12 @@ const Middle = () => {
                 Try 5 Minute Setup Guide
               </a>
 
-              <Link to="/tutorial/html-and-js-tutorial" className="btn btn-outline">
+              <Link
+                to="/tutorial/html-and-js-tutorial"
+                className="btn btn-outline"
+              >
                 Curious How It Works?
               </Link>
-
             </div>
           </div>
           <div className="wrapper">
@@ -390,7 +392,7 @@ const Middle = () => {
                 <Link to="/guide/web-sso"> Enable Web SSO</Link>
               </li>
               <li>
-                <Link to="/guide/saml" >Connect SAML App </Link>
+                <Link to="/guide/saml">Connect SAML App </Link>
               </li>
               <li>
                 <Link to="/guide/jwt"> Connect JWT App</Link>
@@ -484,7 +486,7 @@ const Middle = () => {
           {/*SDKs*/}
           <div className="card">
             <div className="icon">
-              <img src="images/references.svg" />
+              <img src="images/sdks-icon.svg" />
             </div>
             <h3 className="title">SDKs</h3>
             <ul>
@@ -526,7 +528,7 @@ const Middle = () => {
           {/*APIs*/}
           <div ref={apiRef} className="card">
             <div className="icon">
-              <img src="images/references.svg" />
+              <img src="images/api-icon.svg" />
             </div>
             <h3 className="title">APIs</h3>
             <ul>
@@ -579,22 +581,28 @@ const Middle = () => {
             <h3 className="title">JavaScript Library</h3>
             <ul>
               <li>
-                <Link to="references/javascript-library/getting-started">Getting Started</Link>
+                <Link to="references/javascript-library/getting-started">
+                  Getting Started
+                </Link>
               </li>
               <li>
                 <Link to="references/javascript-library/hooks">Hooks</Link>
               </li>
               <li>
-                <Link to="references/javascript-library/advanced-customizations">Advanced Customizations</Link>
+                <Link to="references/javascript-library/advanced-customizations">
+                  Advanced Customizations
+                </Link>
               </li>
               <li>
-                <Link to="references/javascript-library/form-library">Form Library</Link>
+                <Link to="references/javascript-library/form-library">
+                  Form Library
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </section>
-    </main >
+    </main>
   )
 }
 
