@@ -2,7 +2,7 @@
 title: "Golang SDK Library"
 tags: ["Golang", "SDK"]
 description: "This is a document detailing the LoginRadius Golang SDK Library."
-path: "/references/sdk/golang-sdk"
+path: "/references/sdk/golang"
 ---
 
 # Golang SDK

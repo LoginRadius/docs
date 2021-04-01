@@ -2,7 +2,7 @@
 title: "React Native SDK Library"
 tags: ["React", "Native","SDK"]
 description: "This is a document detailing the LoginRadius React Native SDK Library."
-path: "/references/sdk/react-native-sdk"
+path: "/references/sdk/react-native"
 ---
 
 # React-Native SDK Library

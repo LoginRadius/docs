@@ -505,6 +505,12 @@ const Middle = () => {
               <li>
                 <Link to="references/sdk/ruby">Ruby</Link>
               </li>
+              <li>
+                <Link to="references/sdk/react-native">React Native</Link>
+              </li>
+              <li>
+                <Link to="references/sdk/golang">Golang</Link>
+              </li>
             </ul>
           </div>
           {/*APIs*/}
