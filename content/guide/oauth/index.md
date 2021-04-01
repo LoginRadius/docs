@@ -216,7 +216,6 @@ Request Body
 Here is an explanation of the Request Parameters:
 
 - **client_id:** [LoginRadius API key](#get-credentials)
-).
 - **Scope:** Optional parameter(e.g email profile)
 
 **Response containing the user code and device code:**
