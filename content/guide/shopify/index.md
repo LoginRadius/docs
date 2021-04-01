@@ -46,7 +46,7 @@ This section covers the required configurations that you need to perform to enab
 
    ![alt_text](images/shopify-enable.png "image_tooltip")
 
-5. The Shopify app is now available in the **Available Integrations**. There, click the **Configure Me** under the Shopify box. The following screen will appear:
+5. The Shopify app is now available in the **Available Integrations**. There, click the **Let's Configure** under the Shopify box. The following screen will appear:
 
    ![alt_text](images/shopify-configuration-fields.png "image_tooltip")
 
