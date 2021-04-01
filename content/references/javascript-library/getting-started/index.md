@@ -33,8 +33,7 @@ Here, each letter represents the type of change. For example, X, Y, and Z are Ma
 https://auth.lrcontent.com/v2/LoginRadius-v3.10.0.js
 ```
 
-> Note:
-> * LoginRadius may retroactively push urgent security updates to previous versions of LoginRadiusV2.js.
+> Note: LoginRadius may retroactively push urgent security updates to previous versions of LoginRadiusV2.js.
 
 ## Instantiating LoginRadius Object
 
