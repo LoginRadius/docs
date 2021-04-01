@@ -58,7 +58,7 @@ The JWT will be encrypted with an algorithm. The decrypted JWT contains the Head
 
   The payload can be fully customized to include data mapping for any LoginRadius normalized user profile fields. It can be configured directly from the LoginRadius Dashboard to control the data mapping as well as the encryption algorithm.
 
-* **Secret/Public Key:** It should be the same value as you have configured in the JWT app in the LoginRadius Dashboard.
+* [**Secret/Public Key:**](#get-credentials) It should be the same value as you have configured in the JWT app in the LoginRadius Dashboard.
 
   > **Note:** LoginRadius provides custom attributes, so it is possible to customize the JWT response. The following is a sample attribute:
 
@@ -128,7 +128,7 @@ You need to provide or select the following values to add the APP.
 
 * **AppName:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
 
-* **Secret Key:** A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
+* [**Secret Key:**](#get-credentials) A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
 
 * **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
 
@@ -200,6 +200,13 @@ We've had a look at the basic structure and encryption of JWT now we can have a 
 
 It is recommended to use the Asymmetric algorithm when signing the JWT token. Asymmetric key signatures in JWT are produced by the sender with the private key and the receiver verify it via the public key. The receiver is provided only with the public key which happens **out_of_band** (i.e. through another means of communication than the one you use to exchange the secured data).
 
+## Get Credentials
+
+Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
+
+In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+
+![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 ## Whitelist Domain
 
