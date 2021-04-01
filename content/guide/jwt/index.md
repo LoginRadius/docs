@@ -115,13 +115,13 @@ This section covers the required configurations that you need to perform in the 
 
    ![alt_text](../../guide/jwt/images/jwt-configuration.png "image_tooltip")
 
-3. Either search for JWT in the search bar or go to the **Select Category** dropdown and selected **Federation**. Locate **JWT** and click the **Add me**. Select Enable.
+3. Either search for JWT in the search bar or go to the **Select Category** dropdown and selected **Federation**. Locate **JWT** and click the **Add Me**. Select Enable.
 
    ![alt_text](../../guide/jwt/images/jwt-federation-option.png "image_tooltip")
 
    ![alt_text](../../guide/jwt/images/jwt-enable.png "image_tooltip")
 
-After this configuration, the app is available in **Available Integrations**. There, click the **Configure Me** under JWT.
+After this configuration, the app is available in **Available Integrations**. There, click the **Let's Configure** under JWT.
 You need to provide or select the following values to add the APP.
 
 ![alt_text](../../guide/jwt/images/jwt-configure-me.png "image_tooltip")
