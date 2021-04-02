@@ -38,7 +38,7 @@ Format:
 
 `LRObject.api.login(data, onSuccess, onError);`
 
-  * **data**: Data is an object that represents the data required for login. For details on what information you can provide [click here](). Typically it should have the properties **emailid** for the provided email and **password** for the provided password.
+  * **data**: Data is an object that represents the data required for login. <!--For details on what information you can provide [click here]().-->Typically it should have the properties **emailid** for the provided email and **password** for the provided password.
 
   * **onSuccess**: Pass in a function you would like to use as a callback for a successful login.
 
@@ -75,7 +75,7 @@ Format:
 
   * **schema**: The schema for the fields being provided. You can leave schema as an empty array unless you're updating complex arrays.
 
-  * **data**: Data is an object that represents the consumer profile that you are creating, you can refer to our [detailed datapoints]() doc for more information on which fields can be updated. Using this API you cannot specify complex array fields directly within this object without using the schema.
+  * **data**: Data is an object that represents the consumer profile that you are creating<!--, you can refer to our [detailed datapoints]() doc for more information on which fields can be updated-->. Using this API you cannot specify complex array fields directly within this object without using the schema.
 
   * **onSuccess**: Pass in a function you would like to use as a callback for a successful registration.
 
@@ -122,7 +122,7 @@ Format:
 
   * **schema**: The schema for the fields being provided. You can leave schema as an empty array unless you're updating complex arrays.
 
-  * **data**: Data is an object that represents the fields and their values of the profile that you are updating. You can refer to our [detailed datapoints]() doc for more information on which fields can be updated. Please note that when using this library you cannot specify complex array fields.
+  * **data**: Data is an object that represents the fields and their values of the profile that you are updating. <!--You can refer to our [detailed datapoints]() doc for more information on which fields can be updated.--> Please note that when using this library you cannot specify complex array fields.
 
   * **token**: The access_token of the consumer.
 
@@ -138,7 +138,7 @@ Format:
 
 `LRObject.api.forgotPassword(data, onSuccess, onError);`
 
-  * **data**: Data is an object that contains the object details for the [Auth Forgot Password API](), this object requires the email of the consumer.
+  * **data**: Data is an object that contains the object details for the [Auth Forgot Password API](/references/api/authentication#auth-forgot-password), this object requires the email of the consumer.
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the email was successfully sent.
 
@@ -200,7 +200,7 @@ Alternatively, in the LoginRadius Dashboard in your verification email template,
 
 For more details on email verification, we recommend reading our documentation on [Email Workflow Settings](/guide/customize-email-and-sms-settings#email-settings) and on [Email Template Management](/guide/emailpassword-login#step-2-configure-email-templates).
 
-> Note: This function leverages the [Auth Verify Email API](). Review this API if you need details on parameters that can be provided in the **Data** object.
+> Note: This function leverages the [Auth Verify Email API](/references/api/authentication#auth-verify-email). Review this API if you need details on parameters that can be provided in the **Data** object.
 
 Format:
 
@@ -266,7 +266,7 @@ LRObject.api.socialLogin({
 
 To resend email verification, you can call `LRObject.api.resendEmailVerification` with the consumers' email address.
 
-> Note: This function leverages the [Auth Resend Email Verification API]().
+> Note: This function leverages the [Auth Resend Email Verification API](/references/api/authentication#auth-resend-email-verification).
 
 Format:
 
@@ -298,7 +298,7 @@ This section deals with enabling login by sending a One Time Passcode to your co
 
 To get a One Time Password (OTP), call `LRObject.api.otpLogin` with the consumer's `phone` number.
 
-> Note: This API is based on the [Phone Send One time Passcode API]().
+> Note: This API is based on the [Phone Send One time Passcode API](/references/api/passwordless-login#passwordless-login-by-phone).
 
 Format:
 
@@ -331,7 +331,7 @@ LRObject.api.otpLogin(
 
 ### Verify OTP
 
-The Verify OTP Login function leverages the [Phone Verification by OTP API]() to verify a consumer's provided phone number via the One Time Passcode.
+The Verify OTP Login function leverages the [Phone Verification by OTP API](/references/api/phone-authentication#phone-verification-otp) to verify a consumer's provided phone number via the One Time Passcode.
 
 Format:
 
@@ -358,7 +358,7 @@ LRObject.api.verifyOTP(
 
 ### Resend OTP
 
-The resendOTP function is used to resend the One Time Passcode to a consumer's phone. It is based on the [Phone Resend Verification OTP API]().
+The resendOTP function is used to resend the One Time Passcode to a consumer's phone. It is based on the [Phone Resend Verification OTP API](/references/api/phone-authentication#phone-resend-verification-otp).
 
 Format:
 
@@ -420,7 +420,7 @@ LRObject.api.updatePhone(
 
 > Note: This function is intended for flows that interact with the Passwordless Login APIs.
 
-The Verify OTP Login function leverages the [Phone Login Using One Time Passcode API]() which is part of the Passwordless Login APIs to log in a consumer instantly by returning an **access_token** along with the consumer's profile if the token is valid.
+The Verify OTP Login function leverages the [Phone Login Using One Time Passcode API](/references/api/passwordless-login#passwordless-login-phone-verification) which is part of the Passwordless Login APIs to log in a consumer instantly by returning an **access_token** along with the consumer's profile if the token is valid.
 
 Format:
 
@@ -459,7 +459,7 @@ The Two-Factor Authentication set of functions are specifically designed to help
 
 ### Two-Factor Authentication Login
 
-This function allows you to initiate a traditional login if you have 2FA (Two-Factor Authentication) enabled in your LoginRadius Dashboard. This function leverages the [MFA Email Login API]().
+This function allows you to initiate a traditional login if you have 2FA (Two-Factor Authentication) enabled in your LoginRadius Dashboard. This function leverages the [2FA Email Login API](/references/api/two-factor-authentication#2fa-email-login).
 
 Format:
 
@@ -473,13 +473,13 @@ Format:
 
 ### Two-Factor Authentication Update Phone
 
-The `twoFAUpdatePhone` function leverages the [MFA Update Phone Number API]() which is used to update the phone number used to log in using Two-Factor Authentication by consumers.
+The `twoFAUpdatePhone` function leverages the [2FA Update Phone Number API](/references/api/two-factor-authentication#2fa-update-phone-number-by-token) which is used to update the phone number used to log in using Two-Factor Authentication by consumers.
 
 Format:
 
 `LRObject.api.twoFAUpdatePhone(data, onSuccess, onError);`
 
-  * **data**: Should be an object which contains all of the parameters required to update the phone number in the [MFA Update Phone Number API]().
+  * **data**: Should be an object which contains all of the parameters required to update the phone number in the [2FA Update Phone Number API](/references/api/two-factor-authentication#2fa-update-phone-number-by-token).
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the consumer has passed successfully updated the phone number.
 
@@ -503,13 +503,13 @@ LRObject.api.twoFAUpdatePhone(
 
 ### Two-Factor Authentication Verify OTP
 
-This function leverages the [MFA Validate OTP API]() and is used to log in via Two-Factor Authentication.
+This function leverages the [2FA Validate OTP API]() and is used to log in via Two-Factor Authentication.
 
 Format:
 
 `LRObject.api.twoFAVerifyOTP(data, onSuccess, onError);`
 
-  * **data**: Should be an object which contains all of the parameters required to verify the OTP, you can refer to the [MFA Validate OTP API]() for details.
+  * **data**: Should be an object which contains all of the parameters required to verify the OTP, you can refer to the [2FA Validate OTP API]() for details.
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the consumer has been successfully logged in.
 
@@ -1039,9 +1039,9 @@ LRObject.api.validateToken(
 );
 ```
 
-## Get Social Data
+<!-- ## Get Social Data
 
-The Get Social Data function is used to call any API from the [Social APIs]() that require the **GET** method.
+The Get Social Data function is used to call any API from the [Social APIs](/references/api/social) that require the **GET** method.
 
 To implement get social data, call `LRObject.api.getSocialData` with the access token, the success function, error function, the endpoint, and paramQueryString.
 
@@ -1073,9 +1073,9 @@ LRObject.api.getSocialData(
   "<endpoint>",
   "<paramQueryString>"
 );
-```
+``` -->
 
-## Post Social Data
+<!-- ## Post Social Data
 
 The Post Social Data function is used to call any API from the [Social APIs]() that require the **POST** method.
 
@@ -1112,9 +1112,9 @@ LRObject.api.postSocialData(
   "<paramQueryString>",
   postBodyJson
 );
-```
+``` -->
 
-## Smart Login
+<!-- ## Smart Login
 
 To implement Smart Login, call `LRObject.api.smartLogin` with emailid/username, success function and error function.
 
@@ -1140,4 +1140,4 @@ LRObject.api.smartLogin(
     alert(JSON.stringify(errors));
   }
 );
-```
+``` -->

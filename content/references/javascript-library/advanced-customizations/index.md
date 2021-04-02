@@ -233,9 +233,10 @@ This section covers the different scenarios of account linking:
 
 ### Implementation Flow
 
-The following are the two different ways to implement Account Linking:
+You can implement Account Linking and Unlinking functionality by utilizing our JS Interfaces:
+<!-- The following are the two different ways to implement Account Linking: -->
 
-**Method 1: Add Account Linking/Unlinking JS Interfaces**
+<!-- **Method 1: Add Account Linking/Unlinking JS Interfaces** -->
 
   1. Load the JavaScript Interface script:
 
@@ -318,7 +319,7 @@ The following are the two different ways to implement Account Linking:
 
   > Note: The template code uses the variable **isLinked** to conditionally display the linked or unlinked account.
 
-**Method 2: REST APIs for Account Linking and Unlinking**
+<!-- **Method 2: REST APIs for Account Linking and Unlinking**
 
   You can alternatively utilize the [Link Social Identities API]() and [Unlink Social Identities API]() to link and unlink accounts respectively.
 
@@ -386,7 +387,7 @@ The following are the two different ways to implement Account Linking:
       </script>
     </body>
   </html>
-  ```
+  ``` -->
 
 ## Profile Editor
 

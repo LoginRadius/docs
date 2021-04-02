@@ -379,7 +379,7 @@ You have complete control over how the custom template will look, feel, and beha
   * [Browser Specific Templates](#handling-browser-specific-redirects)
   * [Programmatic Link Creation](#programmatic-link-creation)
 
-#### Custom Interface Parameters
+<!---#### Custom Interface Parameters
 
 Additional parameters can be appended to the url in the Custom Interface template as a query parameter
 
@@ -395,7 +395,7 @@ Additional parameters can be appended to the url in the Custom Interface templat
 
 #### Using LoginRadius SocialLogin library functions
 
-#### Using Programmatic Link
+#### Using Programmatic Link--->
 
 ## Forgot Password
 

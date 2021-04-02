@@ -1,4 +1,18 @@
-.container table{
+.container table {
   width: 75% !important;
   max-width: 75% !important;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    position: fixed !important;
+    overflow-y: scroll;
+    height: 65%;
+    top: 18% !important;
+  }
+
+  .content {
+    margin-left: 280px;
+    border-left: 0px !important;
+  }
 }

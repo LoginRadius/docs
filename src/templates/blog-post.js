@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
           />
           <section className={`detail-page py-72 ${containerStyles.container}`}>
             <div>
-              <div className="sidebar">
+              <div className={`sidebar ${containerStyles.sidebar}`}>
                 <div className="headings">Web APP</div>
                 <TableOfContents html={post.tableOfContents} />
                 <div className="get-in-touch">
@@ -50,7 +50,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 </div>
               </div>
 
-              <div className="content">
+              <div className={`content ${containerStyles.content}`}>
                 <ul className="breadcrumbs">
                   {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))}
                 </ul>

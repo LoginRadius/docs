@@ -368,8 +368,8 @@ How to implement Passwordless Login
 
 ## HTML SDK Reference
 
-< Link to HTML SDK doc >
+[HTML SDK](/references/sdk/html5-sdk)
 
 ## API Reference
 
-< Link to API docs >
+[API Reference](/#api)

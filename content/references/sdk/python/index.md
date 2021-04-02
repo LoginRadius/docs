@@ -64,7 +64,7 @@ List of APIs in this section:
 
 * [GET : Access Token Info](#access-token-info-get)
 
-* [GET : Auth Get Profile by Token](#auth-get-profile-by-token-get)
+* [GET : Auth Get Profiles by Token](#auth-get-profiles-by-token-get)
 
 * [GET: Auth Send Welcome Email](#auth-send-welcome-email-get)
 
@@ -108,7 +108,7 @@ result = loginradius.authentication.add_email(access_token, email, type, email_t
 
 #### Auth Login by Email (POST)
 
-Logs in by Email ID.
+Exchanges consumer login details for a copy of their user data and a LoginRadius access token.
 
 ```python
 email_authentication_model = {
@@ -226,7 +226,7 @@ access_token = "<access_token>" #Required
 result = loginradius.authentication.get_access_token_info(access_token)
 ```
 
-#### Auth Get Profile by Token (GET)
+#### Auth Get Profiles by Token (GET)
 
 Retrieves consumer profile data corresponding to the specified access token.
 
@@ -353,7 +353,7 @@ result = loginradius.authentication.reset_password_by_reset_token(reset_password
 
 #### Auth Change Password (PUT)
 
-Changes consumer's password corresponding to the specified Email ID. This also requires the input of the consumer's previous password.
+Changes the consumer's password corresponding to the specified Email ID. This also requires the input of the consumer's previous password.
 
 ```python 
 access_token = "<access_token>" #Required 
@@ -365,7 +365,7 @@ result = loginradius.authentication.change_password(access_token, new_password, 
 
 #### Auth Resend Email Verification (PUT)
 
-Resends verification email to the consumer corresponding to the specified Email ID.
+Resends the verification email to the consumer corresponding to the specified Email ID.
 
 ```python 
 email = "<email>" #Required 
@@ -483,7 +483,7 @@ result = loginradius.account.get_email_verification_token(email)
 
 #### Account Profile by Email (GET)
 
-Retrieves customer profile data corresponding to the specified Email ID.
+Retrieves consumer profile data corresponding to the specified Email ID.
 
 ```python 
 email = "<email>" #Required 
@@ -494,7 +494,7 @@ result = loginradius.account.get_account_profile_by_email(email, fields)
 
 #### Account Profile by Phone ID (GET)
 
-Retrieves customer profile data corresponding to the specified Phone ID.
+Retrieves consumer profile data corresponding to the specified Phone ID.
 
 ```python 
 phone = "<phone>" #Required 
@@ -697,7 +697,7 @@ List of APIs in this section:
 
 #### Phone Login (POST)
 
-Logs in by Phone ID.
+Exchanges consumer login details for a copy of their user data and a LoginRadius access token.
 
 ```python
 phone_authentication_model = { 
@@ -778,7 +778,7 @@ result = loginradius.phone_authentication.check_phone_number_availability(phone)
 
 #### Phone Reset Password by OTP (PUT)
 
-Resets consumer's password using a verification OTP.
+Resets the consumer's password by consuming their verification OTP.
 
 ```python
 reset_password_by_otp_model = { 
@@ -792,7 +792,7 @@ result = loginradius.phone_authentication.reset_password_by_phone_otp(reset_pass
 
 #### Phone Verification OTP (PUT)
 
-Validates verification OTP sent to verify the consumer's Phone ID.
+Validates the verification OTP sent to verify the consumer's Phone ID.
 
 ```python 
 otp = "<otp>" #Required 
@@ -805,7 +805,7 @@ result = loginradius.phone_authentication.phone_verification_by_otp(otp, phone, 
 
 #### Phone Verification OTP by Token (PUT)
 
-Consumes verification OTP sent to verify the consumer's Phone ID when the consumer is already logged in.
+Consumes the verification OTP sent to verify the consumer's Phone ID when the consumer is already logged in.
 
 ```python 
 access_token = "<access_token>" #Required 
@@ -817,7 +817,7 @@ result = loginradius.phone_authentication.phone_verification_otp_by_access_token
 
 #### Phone Number Update (PUT)
 
-Updates Phone ID of the consumer corresponding to the specified access token.
+Updates the Phone ID of the consumer corresponding to the specified access token.
 
 ```python 
 access_token = "<access_token>" #Required 
@@ -829,7 +829,7 @@ result = loginradius.phone_authentication.update_phone_number(access_token, phon
 
 #### Remove Phone ID by Access Token (DELETE)
 
-Deletes Phone ID from the consumer corresponding to the specified access token.
+Deletes the Phone ID from the consumer corresponding to the specified access token.
 
 ```python 
 access_token = "<access_token>" #Required
@@ -849,7 +849,7 @@ List of APIs in this section:
 
 * [GET : MFA Resend OTP](#mfa-resend-otp-get)
 
-* [PUT : Update MFA by Access Token](#update-mfa-by-access-token-put)
+* [PUT : Enable MFA Google Authenticator by Access Token](#enable-mfa-google-authenticator-by-access-token-put)
 
 * [PUT : MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
 
@@ -867,7 +867,7 @@ List of APIs in this section:
 
 #### MFA Email Login (POST)
 
-Logs in by Email ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
+Initiates the login process using Email ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
 
 ```python 
 email = "<email>" #Required 
@@ -884,7 +884,7 @@ result = loginradius.mfa.mfa_login_by_email(email, password, email_template, fie
 
 #### MFA Phone Login (POST)
 
-Logs in by Phone ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
+Initiates the login process using Phone ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
 
 ```python 
 password = "<password>" #Required 
@@ -901,7 +901,7 @@ result = loginradius.mfa.mfa_login_by_phone(password, phone, email_template, fie
 
 #### MFA Validate Access Token (GET)
 
-Validates an access token and start the Multi Factor Authentication (2FA) process. If 2FA is set to optional and the consumer has no second factor authenticators active, the consumer's profile information will be returned instead.
+Validates an access token and starts the Multi Factor Authentication (2FA) process. If 2FA is set to optional and the consumer has no second factor authenticators active, the consumer's profile information will be returned instead.
 
 ```python 
 access_token = "<access_token>" #Required 
@@ -1054,7 +1054,7 @@ result = loginradius.password_less_login.passwordless_login_by_email(email, pass
 
 #### Passwordless Login Verification (GET)
 
-Verifies a Passwordless Login verification link. 
+Verifies a Passwordless Login verification link and exchanges it for user data and a LoginRadius access token.
 
 > Note: If you are using Passwordless Login by Phone, you will need to use the [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put) API.
 
@@ -1068,7 +1068,7 @@ result = loginradius.password_less_login.passwordless_login_verification(verific
 
 #### Passwordless Login Phone Verification (PUT)
 
-Verifies a consumer by OTP, and logs them in.
+Verifies a consumer by OTP, and exchanges it for their user data and a LoginRadius access token.
 
 ```python
 password_less_login_otp_model = { 
@@ -1303,7 +1303,7 @@ List of APIs in this section:
 
 * [GET : Access Token via Google Token](#access-token-via-google-token-get)
 
-* [GET : Access Token using Google JWT Token for Native Mobile Login](#access-token-using-google-jwt-token-for-native-mobile-login-get)
+* [GET : Access Token using Google JWT for Native Mobile Login](#access-token-using-google-jwt-for-native-mobile-login-get)
 
 * [GET : Access Token via LinkedIn Token](#access-token-via-linkedin-token-get)
 
@@ -1342,9 +1342,9 @@ refresh_token = "<refresh_token>" #Optional
 result = loginradius.native_social.get_access_token_by_google_access_token(google_access_token, client_id, refresh_token)
 ```
 
-#### Access Token using Google JWT Token for Native Mobile Login (GET)
+#### Access Token using Google JWT for Native Mobile Login (GET)
 
-Exchanges a Google JWT token for a LoginRadius access token for Google native mobile login/registration.
+Exchanges a Google JWT for a LoginRadius access token for Google native mobile login/registration.
 
 ```python 
 id_token = "<id_token>" #Required

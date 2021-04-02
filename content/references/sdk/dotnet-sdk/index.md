@@ -59,7 +59,7 @@ List of APIs in this section:
 
 * [GET : Access Token Info](#access-token-info-get)
 
-* [GET : Auth Get Profile by Token](#auth-get-profile-by-token-get)
+* [GET : Auth Get Profiles by Token](#auth-get-profiles-by-token-get)
 
 * [GET : Auth Delete Account](#auth-delete-account-get)
 
@@ -98,7 +98,7 @@ var apiResponse = new AuthenticationApi().AddEmail(accessToken, email, type, ema
 
 #### Auth Login by Email (POST)
 
-Logs in by Email ID.
+Exchanges consumer login details for a copy of their user data and a LoginRadius access token.
 
 ```csharp
 EmailAuthenticationModel emailAuthenticationModel = new EmailAuthenticationModel{
@@ -202,7 +202,7 @@ var accessToken = "<Access Token>"; //Required
 var apiResponse = new AuthenticationApi().GetAccessTokenInfo(accessToken);
 ```
 
-#### Auth Get Profile by Token (GET)
+#### Auth Get Profiles by Token (GET)
 
 Retrieves consumer profile data corresponding to the specified access token.
 
@@ -298,7 +298,7 @@ var apiResponse = new AuthenticationApi().ResetPasswordByResetToken(resetPasswor
 
 #### Auth Change Password (PUT)
 
-Changes consumer's password corresponding to the specified Email ID. This also requires the input of the consumer's previous password.
+Changes the consumer's password corresponding to the specified Email ID. This also requires the input of the consumer's previous password.
 
 ```csharp
 var accessToken = "accessToken"; //Required
@@ -309,7 +309,7 @@ var apiResponse = new AuthenticationApi().ChangePassword(accessToken, newPasswor
 
 #### Auth Resend Email Verification (PUT)
 
-Resends verification email to the consumer corresponding to the specified Email ID.
+Resends the verification email to the consumer corresponding to the specified Email ID.
 
 ```csharp
 var email = "<Email ID>"; //Required
@@ -426,7 +426,7 @@ var apiResponse = new AccountApi().GetEmailVerificationToken(email);
 
 #### Account Profile by Email (GET)
 
-Retrieves customer profile data corresponding to the specified Email ID.
+Retrieves consumer profile data corresponding to the specified Email ID.
 
 ```csharp
 var email = "<Email ID>"; //Required
@@ -436,7 +436,7 @@ var apiResponse = new AccountApi().GetAccountProfileByEmail(email, fields);
 
 #### Account Profile by Phone ID (GET)
 
-Retrieves customer profile data corresponding to the specified Phone ID.
+Retrieves consumer profile data corresponding to the specified Phone ID.
 
 ```csharp
 var phone = "<Phone ID>"; //Required
@@ -629,7 +629,7 @@ List of APIs in this section:
 
 #### Phone Login (POST)
 
-Logs in by Phone ID.
+Exchanges consumer login details for a copy of their user data and a LoginRadius access token.
 
 ```csharp
 PhoneAuthenticationModel phoneAuthenticationModel = new PhoneAuthenticationModel{
@@ -704,7 +704,7 @@ var apiResponse = new PhoneAuthenticationApi().CheckPhoneNumberAvailability(phon
 
 #### Phone Reset Password by OTP (PUT)
 
-Resets consumer's password using a verification OTP.
+Resets the consumer's password by consuming their verification OTP.
 
 ```csharp
 ResetPasswordByOTPModel resetPasswordByOTPModel = new ResetPasswordByOTPModel{
@@ -717,7 +717,7 @@ var apiResponse = new PhoneAuthenticationApi().ResetPasswordByPhoneOTP(resetPass
 
 #### Phone Verification OTP (PUT)
 
-Validates verification OTP sent to verify the consumer's Phone ID.
+Validates the verification OTP sent to verify the consumer's Phone ID.
 
 ```csharp
 var otp = "<OTP>"; //Required
@@ -729,7 +729,7 @@ var apiResponse = new PhoneAuthenticationApi().PhoneVerificationByOTP(otp, phone
 
 #### Phone Verification OTP by Token (PUT)
 
-Consumes verification OTP sent to verify the consumer's Phone ID when the consumer is already logged in.
+Consumes the verification OTP sent to verify the consumer's Phone ID when the consumer is already logged in.
 
 ```csharp
 var accessToken = "<Access Token>"; //Required
@@ -740,7 +740,7 @@ var apiResponse = new PhoneAuthenticationApi().PhoneVerificationOTPByAccessToken
 
 #### Phone Number Update (PUT)
 
-Updates Phone ID of the consumer corresponding to the specified access token.
+Updates the Phone ID of the consumer corresponding to the specified access token.
 
 ```csharp
 var accessToken = "<Access Token>"; //Required
@@ -751,7 +751,7 @@ var apiResponse = new PhoneAuthenticationApi().UpdatePhoneNumber(accessToken, ph
 
 #### Remove Phone ID by Access Token (DELETE)
 
-Deletes Phone ID from the consumer corresponding to the specified access token.
+Deletes the Phone ID from the consumer corresponding to the specified access token.
 
 ```csharp
 var accessToken = "<Access Token>"; //Required
@@ -770,7 +770,7 @@ List of APIs in this section:
 
 * [GET : MFA Resend OTP](#mfa-resend-otp-get)
 
-* [PUT : Update MFA by Access Token](#update-mfa-by-access-token-put)
+* [PUT : Enable MFA Google Authenticator by Access Token](#enable-mfa-google-authenticator-by-access-token-put)
 
 * [PUT : MFA Update Phone Number by Token](#mfa-update-phone-number-by-token-put)
 
@@ -788,7 +788,7 @@ List of APIs in this section:
 
 #### MFA Email Login (POST)
 
-Logs in by Email ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
+Initiates the login process using Email ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
 
 ```csharp
 var password = "<Password>"; //Required
@@ -804,7 +804,7 @@ var apiResponse = new MultiFactorAuthenticationApi().MFALoginByEmail(email, pass
 
 #### MFA Phone Login (POST)
 
-Logs in by Phone ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
+Initiates the login process using Phone ID on a Multi Factor Authentication (2FA) enabled LoginRadius app.
 
 ```csharp
 var password = "<Password>"; //Required
@@ -820,7 +820,7 @@ var apiResponse = new MultiFactorAuthenticationApi().MFALoginByPhone(password, p
 
 #### MFA Validate Access Token (GET)
 
-Validates an access token and start the Multi Factor Authentication (2FA) process. If 2FA is set to optional and the consumer has no second factor authenticators active, the consumer's profile information will be returned instead.
+Validates an access token and starts the Multi Factor Authentication (2FA) process. If 2FA is set to optional and the consumer has no second factor authenticators active, the consumer's profile information will be returned instead.
 
 ```csharp
 var accessToken = "<Access Token>"; //Required
@@ -961,7 +961,7 @@ var apiResponse = new PasswordLessLoginApi().PasswordlessLoginByEmail(email, pas
 
 #### Passwordless Login Verification (GET)
 
-Verifies a Passwordless Login verification link. 
+Verifies a Passwordless Login verification link and exchanges it for user data and a LoginRadius access token.
 
 > Note: If you are using Passwordless Login by Phone, you will need to use the [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put) API.
 
@@ -974,7 +974,7 @@ var apiResponse = new PasswordLessLoginApi().PasswordlessLoginVerification(verif
 
 #### Passwordless Login Phone Verification (PUT)
 
-Verifies a consumer by OTP, and logs them in.
+Verifies a consumer by OTP, and exchanges it for their user data and a LoginRadius access token.
 
 ```csharp
 PasswordLessLoginOtpModel passwordLessLoginOtpModel = new PasswordLessLoginOtpModel{
@@ -1208,7 +1208,7 @@ List of APIs in this section:
 
 * [GET : Access Token via Google Token](#access-token-via-google-token-get)
 
-* [GET : Access Token using Google JWT Token for Native Mobile Login](#access-token-using-google-jwt-token-for-native-mobile-login-get)
+* [GET : Access Token using Google JWT for Native Mobile Login](#access-token-using-google-jwt-for-native-mobile-login-get)
 
 * [GET : Access Token via LinkedIn Token](#access-token-via-linkedin-token-get)
 
@@ -1244,9 +1244,9 @@ var refreshToken = "<Refresh Token>"; //Optional
 var apiResponse = new NativeSocialApi().GetAccessTokenByGoogleAccessToken(googleAccessToken, clientId, refreshToken);
 ```
 
-#### Access Token using Google JWT Token for Native Mobile Login (GET)
+#### Access Token using Google JWT for Native Mobile Login (GET)
 
-Exchanges a Google JWT token for a LoginRadius access token for Google native mobile login/registration.
+Exchanges a Google JWT for a LoginRadius access token for Google native mobile login/registration.
 
 ```csharp
 var jwtToken = "<JWT Token>"; //Required

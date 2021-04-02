@@ -242,4 +242,4 @@ How to implement Passwordless Login
 
 ## API Reference
 
-< Link to API docs >
+[API Reference](/#api)

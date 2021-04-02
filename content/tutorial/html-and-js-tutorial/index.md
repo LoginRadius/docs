@@ -100,5 +100,8 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 * **[Refer to GitHub Demo](/download/html5-sdk-demo.zip)**  to know how to implement various LoginRadius features using SDK Functions.
 
+## API Reference
+
+[API Reference](/#api)
 
 [Go Back to Home Page](https://lr-developer-docs.netlify.app)

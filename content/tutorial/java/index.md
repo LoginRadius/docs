@@ -235,7 +235,7 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ## API Reference
 
-
+[API Reference](/#api)
 
 
 

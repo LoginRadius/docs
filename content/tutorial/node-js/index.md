@@ -199,3 +199,5 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 [Node.js SDK](/references/sdk/node-js)
 
 ## API Reference
+
+[API Reference](/#api)

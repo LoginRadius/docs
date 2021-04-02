@@ -512,5 +512,4 @@ init.setResetPasswordUrl("<your-reset-password-url>");
 
 This section helps you to explore various API methods of LoginRadius Android SDK. They can be used to fulfill your identity based needs related to traditional login, registration, social login and many more.
 
-For more details check [API Reference Here](https://www.loginradius.com/docs/developer/api/)
-
+For more details check [API Reference Here](#api)

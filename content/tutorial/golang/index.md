@@ -201,3 +201,5 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ## Golang SDK Reference
 
 ## API Reference
+
+[API Reference](/#api)

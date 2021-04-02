@@ -1,3 +1,0 @@
-# API Docs
-
-##Coming Soon.....

@@ -186,3 +186,7 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ## Python SDK Reference
 
 [Python SDK](/references/sdk/python)
+
+## API Reference
+
+[API Reference](/#api)

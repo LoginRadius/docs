@@ -1,9 +1,19 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Modal from "react-modal"
 import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
 
 const Middle = () => {
+  const apiRef = React.createRef();
+
+  useEffect(() => {
+    console.log("hash changed!");
+    if (window.location.hash !== "" && window.location.hash === "#api") {
+      window.history.scrollRestoration = "manual";
+      apiRef.current.scrollIntoView({ block: "start" });
+    }
+  }, [window.location.hash]);
+
   return (
     <main>
       {/*Hero section*/}
@@ -514,14 +524,50 @@ const Middle = () => {
             </ul>
           </div>
           {/*APIs*/}
-          <div className="card">
+          <div ref={apiRef} className="card">
             <div className="icon">
               <img src="images/references.svg" />
             </div>
             <h3 className="title">APIs</h3>
             <ul>
               <li>
+                <Link to="references/api/account">Account</Link>
+              </li>
+              <li>
+                <Link to="references/api/authentication">Authentication</Link>
+              </li>
+              <li>
+                <Link to="references/api/configuration">Configuration</Link>
+              </li>
+              <li>
                 <Link to="references/api/jwt">JWT</Link>
+              </li>
+              <li>
+                <Link to="references/api/native-social-login">Native Social Login</Link>
+              </li>
+              <li>
+                <Link to="references/api/oidc">OIDC</Link>
+              </li>
+              <li>
+                <Link to="references/api/passwordless-login">Passwordless Login</Link>
+              </li>
+              <li>
+                <Link to="references/api/phone-authentication">Phone Authentication</Link>
+              </li>
+              <li>
+                <Link to="references/api/roles-management">Roles Management</Link>
+              </li>
+              <li>
+                <Link to="references/api/social">Social</Link>
+              </li>
+              <li>
+                <Link to="references/api/sott">SOTT</Link>
+              </li>
+              <li>
+                <Link to="references/api/two-factor-authentication">Two-Factor Authentication</Link>
+              </li>
+              <li>
+                <Link to="references/api/webhooks">Webhooks</Link>
               </li>
             </ul>
           </div>
