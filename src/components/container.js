@@ -571,6 +571,9 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="references/api/webhooks">Webhooks</Link>
+                </li>
+                <li>
+                <Link to="references/api/OAuth/">OAuth</Link>
               </li>
             </ul>
           </div>
