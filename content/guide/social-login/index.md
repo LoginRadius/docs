@@ -86,3 +86,8 @@ The following are the social providers that LoginRadius supports for the Free, D
 |Free |	Yes |	Yes |	Yes |	No | No
 |Developer	| Yes	| Yes	| Yes	| Yes	| Yes
 |Developer Premium	| Supports| 20+ | Social| ID | Providers| 
+
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
