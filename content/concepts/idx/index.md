@@ -89,3 +89,6 @@ Auth Page (IDX) is useful for authentication needs, you can direct your consumer
 
 - Less Complexity: Using LoginRadius Auth Page (IDX) means, don't need to handle authentication, new consumers registration, forgot password, etc.
 
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+
