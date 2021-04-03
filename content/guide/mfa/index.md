@@ -90,4 +90,8 @@ To verify the 2FA with Google Authenticator on your authentication page, open yo
 
 
 
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+
+
+
 
