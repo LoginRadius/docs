@@ -68,3 +68,7 @@ LoginRadius Identity Platform provides a way to integrate your OpenID client wit
 * [LoginRadius OpenID Connect Document](../../guide/oidc)
 * [OpenID Connect Specs](https://openid.net/specs/openid-authentication-2_0.html)
 
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+
