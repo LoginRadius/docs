@@ -48,3 +48,6 @@ Once LoginRadius verifies your domain, its status will be changed to **verified*
 <img src="images/verificationsuccess.png" alt="Custom Domain Status" />
 
 **Note**: The domain verification might take up to 12 hours.
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
