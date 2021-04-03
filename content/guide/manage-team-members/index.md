@@ -78,3 +78,7 @@ You can perform the following actions on this screen:
 * Add a new team member by clicking the **Add Member** button given at the bottom-left of the screen.
 
 * Navigate back to the Team Management screen by clicking the **Back to Team Management** link given at the top-right of the screen.
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
