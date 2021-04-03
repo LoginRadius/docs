@@ -193,3 +193,6 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+
