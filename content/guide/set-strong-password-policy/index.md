@@ -59,3 +59,7 @@ Enter or select the following details:
 5.   **Password History**: You can configure the number of unique passwords a consumer must set before reusing an old password. This enables you to enhance security by ensuring that old passwords are not reused frequently.
 
 6.   **Password Expiration**: You can set the password expiry configuration to request an updated password from your consumers periodically. This feature allows you to customize how often you want your consumers to reset their passwords.
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
