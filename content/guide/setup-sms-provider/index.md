@@ -31,3 +31,8 @@ Provide the following default supported Twilio SMS provider details:
 > To obtain the **Twilio Account SID**, **Auth Token** and **Number**, sign up for [Twilio](https://www.twilio.com/try-twilio) account.
 
 Save the settings by clicking the **Save** button.
+
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
