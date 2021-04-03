@@ -33,3 +33,6 @@ This time can be managed by the following steps:
    **Use Case**: A token having the expiration at 7.00 will be extended to the configured expiration time if your consumer logged in before the expiry (i.e., 7.00).
 
 2. Click the **Save** button.
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
