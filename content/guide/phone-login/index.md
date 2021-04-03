@@ -137,3 +137,7 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 * **#Email#**: The consumer's email address used to register their account.
 * **#FirstName#**: The consumer's first name as defined in your registration form.
 * **#LastName#**: The consumer's last name as defined in your registration form.
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
