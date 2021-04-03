@@ -100,3 +100,6 @@ window.location="https://<sitename>.hub.loginradius.com/ssologin/setSafariToken?
 }
 ```
 
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
