@@ -53,3 +53,8 @@ Enter or select the following SMTP details:
 
 3. Save the configured SMTP settings by clicking the **Save** button.
 
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+
