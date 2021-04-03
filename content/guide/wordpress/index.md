@@ -103,3 +103,6 @@ For security reasons, LoginRadius processes the API calls that are received from
 To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
  
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
