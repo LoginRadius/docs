@@ -62,3 +62,7 @@ For example, given the configurations set in the image above for the passwordles
 Click the **Reset** button to reset all email configurations to default values. 
 
 Click the **Save** button to save your changes.
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
