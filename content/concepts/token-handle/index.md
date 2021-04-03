@@ -135,3 +135,6 @@ AuthenticationAPI.authInstance().login(withPayload:parameter as? [AnyHashable : 
 
 
 > You can check out our GitHub repository for [developer authentication demos](https://github.com/LoginRadius/developer-authentication-demos) using Auth Page (IDX) in multiple languages.
+
+
+https://gitlab.com/loginradius/product/pioneer/developer-docs/-/merge_requests/282
