@@ -58,8 +58,13 @@ This guide explains how to manage roles and permissions for your registered user
 
 ## Delete Role
 
-1. To delete a role, click the **Delete** button available in its respective **Action** column.
+To delete a role, click the **Delete** button available in its respective **Action** column.
 
-   ![alt_text](images/delete-role-button.png "image_tooltip")
+![alt_text](images/delete-role-button.png "image_tooltip")
 
-   The **Delete Role** confirmation pop-up will appear. Click the **Confirm** button to delete the role.
+The **Delete Role** confirmation pop-up will appear. Click the **Confirm** button to delete the role.
+
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
