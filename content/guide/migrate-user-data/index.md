@@ -73,3 +73,8 @@ In your logs table, you will find the following details for each import request:
 You can download the report for your import request by clicking on the download button available in its respective **Download Report** column. This file is a password-protected CSV containing the records which LoginRadius failed to import, as well as the reason for its failure.
 
 ![alt_text](images/download-report.png "image_tooltip")
+
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
