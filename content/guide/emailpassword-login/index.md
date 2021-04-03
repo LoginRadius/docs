@@ -85,3 +85,7 @@ These tags are specific to the **Forgot Password** email template. The text defi
 * **#FPass \<Content\> FPass#**: This tag defines a section that will appear in cases where the consumer has signed up using a traditional Email and Password. You should typically use this section with the **#Url#** and **#GUID#** placeholder tags to display a link for the consumer to reset their password.
 
 * **#FProv \<Content\> FProv#**: This tag defines a section that will appear in cases where the consumer has signed up using a social provider. You should typically use this section with the **#Providers#** placeholder tag to inform the consumer about the social provider they used for registration.
+
+
+
+[Go Back to Home Page](https://lr-developer-docs.netlify.app)
