@@ -564,3 +564,7 @@ BOOL isUserLoggedIn = [[[LoginRadiusSDK sharedInstance] session] isLoggedIn];
 This section helps you to explore various API methods of LoginRadius IOS SDK. They can be used to fulfill your identity based needs related to traditional login, registration, social login and many more.
 
 For more details check [API Reference Here](/#api)
+
+
+
+[Go Back to Home Page](/)

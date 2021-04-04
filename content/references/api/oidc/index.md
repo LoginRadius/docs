@@ -205,15 +205,6 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token
 |scope|The scope for the Open ID profile, use 'openid profile'. [REQUIRED] | 
 
 
-
-
-### Remarks
-
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
-
-
 ## Revoke Refresh Token
 
 ```ruby
@@ -299,15 +290,6 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token/revoke
 |client_id|Your LoginRadius API Key. [REQUIRED]
 |client_secret|LoginRadius API Secret [REQUIRED] |  
 |token |This is the refresh_token you received when you used the Access Token by OpenID code API call. [REQUIRED] |  
-
-
-
-
-### Remarks
-
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
 
 ## UserInfo by Access Token
 
@@ -395,13 +377,6 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/userinfo
 | ------------ | ------- | -------------------------------------------------------------------------------- | 
 |Authorization |Bearer <ACCESS_TOKEN> (customer's access token) [REQUIRED] |  
 
-
-
-### Remarks
-
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
 
 ## JSON Web Key Set
 
@@ -494,15 +469,6 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/jwks
 |---	    |---	    |---	        |
 | oidcappname    	|  String	    |   The name for the ODIC App you have configured in the LoginRadius Admin Console. [REQUIRED]	        |
 | sitename     	|  String	    |   The name of your LoginRadius SiteName / Environment. [REQUIRED]	        |
-
-
-
-
-### Remarks
-
-#### Error Codes
-
-More Details : [SSO API Error Codes](#)
 
 
 ## OIDC Discovery Endpoint
@@ -626,11 +592,11 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-kno
 
 
 
-### Remarks
 
-#### Error Codes
 
-More Details : [SSO API Error Codes](#)
 
+
+
+[Go Back to Home Page](/)
 
 

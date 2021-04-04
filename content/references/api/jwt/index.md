@@ -343,11 +343,6 @@ This is what response sample code looks like:
 
 ```
 
-
-
-
-
-
 ## JWT Token by Phone
 
 ```ruby
@@ -462,3 +457,10 @@ This is what response sample code looks like:
 ```
 
 
+
+
+
+
+
+
+[Go Back to Home Page](/)

@@ -505,3 +505,8 @@ This API will send a confirmation email for account deletion to the customer's e
      alert(JSON.stringify(handle));
     });
 ```
+
+
+
+
+[Go Back to Home Page](/)
