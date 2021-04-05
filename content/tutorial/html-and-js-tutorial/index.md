@@ -100,6 +100,24 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 * **[Refer to GitHub Demo](/download/html5-sdk-demo.zip)**  to know how to implement various LoginRadius features using SDK Functions.
 
+## Recommended Next Steps
+
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
+
+[How to implement Phone Login](/guide/phone-login)
+
+[How to implement Passwordless Login](/guide/passwordless-login)
+
+## HTML SDK Reference
+
+[HTML SDK](/references/sdk/html5-sdk)
+
 ## API Reference
 
 [API Reference](/#api)

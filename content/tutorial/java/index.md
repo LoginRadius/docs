@@ -230,16 +230,25 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ## Recommended Next Steps
 
-## JAVA SDK Reference
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
 
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
+
+[How to implement Phone Login](/guide/phone-login)
+
+[How to implement Passwordless Login](/guide/passwordless-login)
+
+## Java SDK Reference
+
+[JAVA SDK](/references/sdk/java)
 
 ## API Reference
 
 [API Reference](/#api)
-
-
-
-
 
 [Go Back to Home Page](/)
 

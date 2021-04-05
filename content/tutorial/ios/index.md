@@ -351,25 +351,25 @@ Check out our iOS demo to know how you can implement various LoginRadius feature
 
 ## Recommended Next Steps
 
-How to manage email templates for verification and forgot password
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
 
-How to personalize interfaces and branding of login pages
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
 
-How to configure SMTP settings for sending emails to consumers
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
 
-How to implement Social Login options like Facebook, Google
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
 
-How to implement Phone Login
+[How to implement Phone Login](/guide/phone-login)
 
-How to implement Passwordless Login
+[How to implement Passwordless Login](/guide/passwordless-login)
 
-## iOS SDK Reference
+## IOS SDK Reference
 
-< Link to iOS SDK doc >
+[IOS SDK](/references/sdk/ios-sdk)
 
 ## API Reference
 
 [API Reference](/#api)
 
-
 [Go Back to Home Page](/)
+

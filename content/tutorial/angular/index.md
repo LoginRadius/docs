@@ -256,28 +256,27 @@ As an alternative to handling all API calls in the Angular frontend, you may als
 **[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**   |   **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**   
 
 
-# Recommended Next Steps
+## Recommended Next Steps
 
-How to manage email templates for verification and forgot password
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
 
-How to personalize interfaces and branding of login pages
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
 
-How to configure SMTP settings for sending emails to consumers
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
 
-How to implement Social Login options like Facebook, Google
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
 
-How to implement Phone Login
+[How to implement Phone Login](/guide/phone-login)
 
-How to implement Passwordless Login
+[How to implement Passwordless Login](/guide/passwordless-login)
 
+## Node-js SDK Reference
 
-<!-- # Node.js SDK Reference
+[Node-js SDK](/references/sdk/node-js)
 
-< Link to Node.js SDK doc > -->
-
-
-# API Reference
+## API Reference
 
 [API Reference](/#api)
 
 [Go Back to Home Page](/)
+

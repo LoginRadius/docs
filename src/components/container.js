@@ -353,11 +353,8 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <a href="#">Add Fields to Registration</a>
-              </li>
-              <li>
                 <Link to="/guide/customize-domain">
-                  <span>Setup custom domain (IDX)</span>
+                  <span>Setup Custom Domain (IDX)</span>
                 </Link>
               </li>
             </ul>

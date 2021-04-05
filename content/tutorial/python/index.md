@@ -183,6 +183,20 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 * **[Refer to GitHub Demo](https://github.com/LoginRadius/login-page-demos/tree/master/python-idx-demo/Demo)**  to know how to implement various LoginRadius features using SDK Functions.
 
+## Recommended Next Steps
+
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
+
+[How to implement Phone Login](/guide/phone-login)
+
+[How to implement Passwordless Login](/guide/passwordless-login)
+
 ## Python SDK Reference
 
 [Python SDK](/references/sdk/python)
@@ -190,6 +204,5 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ## API Reference
 
 [API Reference](/#api)
-
 
 [Go Back to Home Page](/)

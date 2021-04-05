@@ -264,28 +264,26 @@ The tutorial above walks through a quick PHP implementation to import the SDK an
 **[GitHub Demo/SDK Link](https://github.com/LoginRadius/php-sdk)**   |   **[Download Demo](https://github.com/LoginRadius/php-sdk/archive/master.zip)**   
 
 
-# Recommended Next Steps
+## Recommended Next Steps
 
-How to manage email templates for verification and forgot password
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
 
-How to personalize interfaces and branding of login pages
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
 
-How to configure SMTP settings for sending emails to consumers
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
 
-How to implement Social Login options like Facebook, Google
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
 
-How to implement Phone Login
+[How to implement Phone Login](/guide/phone-login)
 
-How to implement Passwordless Login
+[How to implement Passwordless Login](/guide/passwordless-login)
 
-
-# PHP SDK Reference
+## PHP SDK Reference
 
 [PHP SDK](/references/sdk/php)
 
-# API Reference
+## API Reference
 
 [API Reference](/#api)
-
 
 [Go Back to Home Page](/)

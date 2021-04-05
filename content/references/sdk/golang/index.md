@@ -12,7 +12,7 @@ path: "/references/sdk/golang"
 
 This document contains information and examples regarding the LoginRadius Golang SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google, Twitter, Yahoo, LinkedIn, and more. You can get the SDK from [here](https://github.com/LoginRadius/go-sdk)
 
-## SDK Installation
+## SDK Installation and Configuration
 
 > Note: Before starting, install Golang and setup the proper paths. Find the instructions [here](https://golang.org/doc/install).
 
@@ -20,12 +20,7 @@ This document contains information and examples regarding the LoginRadius Golang
    go get github.com/loginradius/go-sdk
 ```
 
-
-## Setup Your Dashboard
-
-Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
-
-## Configuration
+* Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
 
 Import the Golang sdk package on the top of the code that calls the SDK.
 
@@ -72,7 +67,7 @@ Alternatively an already-initalized client can be reused like so:
 
 Please be aware of the dangers of using global variables to store individual user's access token if you choose to reuse an already-initalized client.
 
-## Calling an API
+### Calling an API
 
 API calls are separated into separate packages. Each package contains a struct holding the LoginRadius client object as an embedded struct, e.g.:
 

@@ -354,21 +354,21 @@ To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configura
 
 ## Recommended Next Steps
 
-How to manage email templates for verification and forgot password
+[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
 
-How to personalize interfaces and branding of login pages
+[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
 
-How to configure SMTP settings for sending emails to consumers
+[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
 
-How to implement Social Login options like Facebook, Google
+[How to implement Social Login options like Facebook, Google](/guide/social-login)
 
-How to implement Phone Login
+[How to implement Phone Login](/guide/phone-login)
 
-How to implement Passwordless Login
+[How to implement Passwordless Login](/guide/passwordless-login)
 
-## HTML SDK Reference
+## Dotnet SDK Reference
 
-[HTML SDK](/references/sdk/html5-sdk)
+[Dotnet SDK](/references/sdk/dotnet-sdk)
 
 ## API Reference
 

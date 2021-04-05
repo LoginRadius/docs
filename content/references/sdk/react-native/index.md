@@ -10,7 +10,7 @@ This document provides instructions to integrate the LoginRadius User Registrati
 
 > **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-## Installation
+## Installation and Configuration
 
 You need to slightly configure your LoginRadius user account with the following changes.
 
@@ -30,12 +30,8 @@ Click the down arrow or anywhere within the section and Open the **Secure Mobile
 
 ![alt_text](images/sott.png "image_tooltip")
 
-## Setup Your Dashboard
+* Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
 
-Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
-
-
-## Installation
 
 Get a copy of the React Native SDK and demo projects [here](https://github.com/LoginRadius/react-native-sdk) and include in your project.
 
@@ -74,7 +70,7 @@ your must be add in your .js file some dependency injection wheare you want use 
     import LoginRadiusSDK from './LoginRadiusSDK.js';
 ```
 
-## Native Social Login
+### Native Social Login
 
 Supported Devices Currently, only Facebook And Google is supported for native login with our SDK for Android and iOS.
 
