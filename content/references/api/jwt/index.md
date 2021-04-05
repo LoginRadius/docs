@@ -127,13 +127,13 @@ https://api.loginradius.com/sso/jwt/api/login
 ### Query Parameters
 
 
-| Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
-| apikey    |  String     |  none         |   LoginRadius API Key [REQUIRED]          |
-| verificationurl       |String         | none  | Verification URL              |
-| jwtapp      |  String       | none        | JWT App Name [Required]           |  
-|loginurl       |String         |   none            |    Login URL              | 
-|emailtemplate  |String         | none              |Email template Name        |
+| Name      | Type  | Description   |
+|:---        |:---        |:---        |:---            |
+| apikey    |  String               |   LoginRadius API Key [REQUIRED]          |
+| access_token          |String          | Token generated from a successful oauth from social platform [REQUIRED]               |
+| jwtapp        |  String                | JWT App Name [Required]           |   
+
+The following displays the sample  response body code:
 
 ### Body Parameters
 
@@ -145,80 +145,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 ```ruby
 
-require 'uri'
-require 'net/http'
-url = URI('https://cloud-api.loginradius.com/sso/jwt/api/login?apikey=&jwtapp=&verificationurl=&loginurl=&emailtemplate=')
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = false
-request = Net::HTTP::Post.new(url)
-request.body = "{\n  \"username\": \"\",\n  \"password\": \"\"\n}"
-request['content-Type'] = 'application/json'
-response = http.request(request)
-puts response.read_body
-
-
-
-```
-
-```python
-
-import requests
-
-url = "https://cloud-api.loginradius.com/sso/jwt/api/login"
-querystring = {"apikey":"","jwtapp":"","verificationurl":"","loginurl":"","emailtemplate":""}
-payload = "{\n  \"username\": \"\",\n  \"password\": \"\"\n}"
-headers = {
-    'content-Type': 'application/json',
-}
-response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
-print(response.text)
-
-
-```
-
-```shell
-
-wget --quiet \
-    --method POST \
-    --header 'content-Type: application/json' \
-    --body-data "{\n  \"username\": \"\",\n  \"password\": \"\"\n}" \
-    --output-document \
-    - 'https://cloud-api.loginradius.com/sso/jwt/api/login?apikey=&jwtapp=&verificationurl=&loginurl=&emailtemplate='
-
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://cloud-api.loginradius.com/sso/jwt/api/login?apikey=&jwtapp=&verificationurl=&loginurl=&emailtemplate=",
-    "method": "POST",
-    "headers": {
-"content-Type" : "application/json",
-},
-    "data": "{\n  \"username\": \"\",\n  \"password\": \"\"\n}"
-}
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-
-
-
-```
->The sample request body code looks like this:
-
-```json
-  {
-    "apikey": "********-****-****-*****************",
-    "jwtapp": "<app name>",
-    "verificationurl": "<verification-url>",
-    "loginurl": "<login url>",
-    "emailtemplate": "<template name>"
-  }
-
-```
+## JWT Token by Username
 
 
 This is what response sample code looks like:
@@ -245,37 +172,30 @@ https://api.loginradius.com/sso/jwt/api/login
 ### Query Parameters
 
 
-| Name   | Type   | Default   | Description     |
-|---      |---     |---     |---         |
-| apikey    |  String       |  none          |   LoginRadius API Key [REQUIRED]          |
-| jwtapp        |  String      | none         | JWT App Name [Required]         |
-| verificationurl        |String        | none  | Verification URL              |
-|loginurl       |String         |   none            |    Login URL              | 
-|emailtemplate  |String         | none              |Email template Name        |
+| Name    | Type | Description   |
+|:---      |:---      |:---      |:---          |
+| apikey    |  String             |   LoginRadius API Key [REQUIRED]          |
+| verificationurl       |String          | Verification URL              |
+| jwtapp      |  String              | JWT App Name [Required]           |  
+|loginurl       |String                     |    Login URL              | 
+|emailtemplate  |String                      |Email template Name        |
 
 ### Body Parameters
 
 
-| Name   | Type   | Default   | Description     |
-|---      |---     |---     |---         |
-| email  |  String       |  none          |   User's registered email address [REQUIRED]       |
-| password      |String        | none  | User's password[REQUIRED]              |
+| Name    | Type | Description   |
+|:---      |:---      |:---      |:---          |
+|username   |  String             |   User's registered username [REQUIRED]         |
+| password      |String          | User's password[REQUIRED]             |
 
+This is what response sample code looks like:
 
+```
+{
+  "signature": "NTExOTI5ODI3LCJleHAiOjE1MTE5*********.*74bizmpE47oJJmqN00Pzcm******VE5kXzCTkc****"
+}
 
-```ruby
-require 'uri'
-require 'net/http'
-url = URI('https://cloud-api.loginradius.com/sso/jwt/api/login?apikey=&jwtapp=&verificationurl=&loginurl=&emailtemplate=')
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = false
-request = Net::HTTP::Post.new(url)
-request.body = "{\n  \"email\": \"\",\n  \"password\": \"\"\n}"
-request['content-Type'] = 'application/json'
-response = http.request(request)
-puts response.read_body
-
+```
 
 
 ```
@@ -340,6 +260,33 @@ $.ajax(settings).done(function (response) {
 
 ```
 
+Use this API to get JWT token by access token by email
+
+HTTP Request
+
+POST
+https://api.loginradius.com/sso/jwt/api/login
+
+
+### Query Parameters
+
+
+| Name   | Type     | Description     |
+|:---      |:---     |:---     |:---         |
+| apikey    |  String                |   LoginRadius API Key [REQUIRED]          |
+| jwtapp        |  String              | JWT App Name [Required]         |
+| verificationurl        |String         | Verification URL              |
+|loginurl       |String                     |    Login URL              | 
+|emailtemplate  |String                      |Email template Name        |
+
+### Body Parameters
+
+
+| Name   | Type   | Description     |
+|:---      |:---     |:---     |:---         |
+| email  |  String                |   User's registered email address [REQUIRED]       |
+| password      |String         | User's password[REQUIRED]              |
+
 This is what response sample code looks like:
 
 ```
@@ -350,14 +297,6 @@ This is what response sample code looks like:
 ```
 
 ## JWT Token by Phone
-
-Use this API to get JWT token by access token by Phone
-
-HTTP Request
-
-POST
-https://api.loginradius.com/sso/jwt/api/login
-
 
 ```ruby
 require 'uri'
@@ -434,6 +373,32 @@ $.ajax(settings).done(function (response) {
   }
   
 ```
+Use this API to get JWT token by access token by Phone
+
+HTTP Request
+
+POST
+https://api.loginradius.com/sso/jwt/api/login
+
+
+### Query Parameters
+
+
+| Name      | Type  | Description   |
+|:---        |:---        |:---        |:---            |
+| apikey    |  String               |   LoginRadius API Key [REQUIRED]          |
+| jwtapp        |  String                | JWT App Name [Required]        |
+| verificationurl       |String          | Verification URL              |
+|loginurl       |String                     |    Login URL              | 
+|emailtemplate  |String                      |Email template Name        |
+
+### Body Parameters
+
+
+| Name      | Type  | Description   |
+|:---        |:---        |:---        |:---            |
+| phone     |  String               |   User's registered phone number [REQUIRED]       |
+| password      |String          | User's password[REQUIRED]             |
 
 This is what response sample code looks like:
 
