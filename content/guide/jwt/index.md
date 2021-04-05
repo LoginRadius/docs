@@ -121,41 +121,49 @@ This section covers the required configurations that you need to perform in the 
 
    ![alt_text](../../guide/jwt/images/jwt-enable.png "image_tooltip")
 
-After this configuration, the app is available in **Available Integrations**. There, click the **Let's Configure** under JWT.
-You need to provide or select the following values to add the APP.
+   After this configuration, the app is available in **Available Integrations**. 
 
-![alt_text](../../guide/jwt/images/jwt-configure-me.png "image_tooltip")
+   ![alt_text](../../guide/jwt/images/jwt-configure-me.png "image_tooltip")
 
-* **AppName:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
+4. Click the **Let's Configure** under JWT. The following screen will appear:
 
-* [**Secret Key:**](#get-credentials) A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
+   ![alt_text](../../guide/jwt/images/jwt-configure.png "image_tooltip")
 
-* **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
+5. You need to provide or select the following values to configure the JWT App.
 
-* **Algorithms:** Algorithm to sign JWT. LoginRadius supports the following algorithms:
+   * **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
 
-  * HS256
-  * HS384
-  * HS512
-  * RS256
-  * RS384
-  * RS512
+   * [**Secret Key:**](#get-credentials) A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
 
-* **Enter the Key** Specify the Key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
-Enter any value for the key column( left column), these values will be used as keys for claims in the payload.
-Select the desired LoginRadius profile field name in the profile key (right column). The values for these fields from the consumer's profile in LoginRadius will be returned to the JWT payload. 
+   * **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
 
-Similarly, by clicking the Add Row button, you can map multiple attributes.
+   * **Algorithms:** Algorithm to sign JWT. LoginRadius supports the following algorithms:
+
+     * HS256
+     * HS384
+     * HS512
+     * RS256
+     * RS384
+     * RS512
+
+   * **Enter The Key** Specify the Key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
+     * Enter any value for the key column( left column), these values will be used as keys for claims in the payload.
+
+     * Select the desired LoginRadius profile field name in the profile key (right column). The values for these fields from the consumer's profile in LoginRadius will be returned to the JWT payload. 
+
+     Similarly, by clicking the **Add Row** button, you can map multiple attributes.
+
+6. Click the **Save** button.
 
 
 ### JWT LoginRadius APIs
 
 If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
-* [JWT Token](../../references/api/jwt): This GET API is used to exchange access token with your JWT.
-* [JWT Token by Email](../../references/api/jwt): This API is used to get a JWT by Email and Password.
-* [JWT Token by Username](../../references/api/jwt): This API is used to get JWT by Username and password.
-* [JWT Token by Phone](../../references/api/jwt): This API is used to get JWT by Phone and password.
+* [JWT Token](../../references/api/jwt/#jwt-token): This GET API is used to exchange access token with your JWT.
+* [JWT Token by Email](../../references/api/jwt/#jwt-token-by-email): This API is used to get a JWT by Email and Password.
+* [JWT Token by Username](../../references/api/jwt/#jwt-token-by-username): This API is used to get JWT by Username and password.
+* [JWT Token by Phone](../../references/api/jwt/#jwt-token-by-phone): This API is used to get JWT by Phone and password.
 
 The response from the above APIs will look like this:
 
