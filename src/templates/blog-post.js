@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   //const { previous, next } = data
   const pathArray = location.pathname.split("/")
+  const section = pathArray.length >= 2 ? pathArray[1] : undefined;
 
   return (
     <div className="global-wrapper">
@@ -25,7 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <section className={`detail-page py-72 ${containerStyles.container}`}>
             <div>
               <div className={`sidebar ${containerStyles.sidebar}`}>
-                <div className="headings">Web APP</div>
+                <div className="headings">{section}</div>
                 <TableOfContents html={post.tableOfContents} />
                 <div className="get-in-touch">
                   <div className="headings">Get in Touch</div>
