@@ -4,12 +4,26 @@ import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
 
 
-const Middle = () => {
-<<<<<<< HEAD
-  const apiRef = React.createRef()
 
-  useEffect(() => {
-      {/*Hero section*/}
+
+  const Middle = () => {
+    const apiRef = React.createRef()
+    const [display, setDisplay] = useState(false)
+  
+    useEffect(() => {
+      if (window && window.location && window.location.hash) {
+        if (window.location.hash !== "" && window.location.hash === "#api") {
+          window.history.scrollRestoration = "manual"
+          apiRef.current.scrollIntoView({ block: "start" });
+        }
+      }
+    })
+  
+    return (
+      <main>
+        {/*Hero section*/}
+        <section className="hero py-72">
+  
         <div className="grid-50 d-flex align-items-center">
           <div>
             <h1>LoginRadius Documentation</h1>
