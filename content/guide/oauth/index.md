@@ -513,7 +513,7 @@ client_id={LoginRadius API key}
 &code_challenge_method=SHA256
 ```
 
-For more details over the OAuth documentation, refer [here](/docs/single-sign-on/tutorial/federated-sso/oauth-2-0/oauth-2-0-overview/#authorizationcodegrant6).
+For more details over the OAuth documentation, refer [here](#connect-oauth-app).
 
 **Exchange the Authorization Code**
 
@@ -541,7 +541,7 @@ Request body:
 
 The authorization code flow returns an authorization code that can then be exchanged for an identity token and/or access token. This requires client authentication using a client_id and a secret to retrieve tokens from the back end and has the benefit of not exposing tokens to the user agent (i.e. a web browser). This flow allows for long-lived access (through the use of refresh tokens). Clients using this flow must be able to maintain a secret. This flow obtains the authorization code from the authorization endpoint and all tokens are returned from the token endpoint.
 
-For more details refer to the OIDC documentation, [here](/docs/single-sign-on/tutorial/federated-sso/openid-connect/openid-connect-overview/#authorizationcodeflow2).
+For more details refer to the OIDC documentation, [here](/guide/oidc).
 
 `https://cloud-api.loginradius.com/sso/oidc/v2/<OIDC AppName>/authorize`
 
