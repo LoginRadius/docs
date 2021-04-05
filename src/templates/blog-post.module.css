@@ -1,8 +1,6 @@
 .container table {
   width: 75% !important;
   max-width: 75% !important;
-  display: block;
-  table-layout: fixed;
 }
 
 .container table code {

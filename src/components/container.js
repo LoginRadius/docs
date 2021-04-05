@@ -4,15 +4,16 @@ import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
 
 const Middle = () => {
-  const apiRef = React.createRef();
+  const apiRef = React.createRef()
 
   useEffect(() => {
-    console.log("hash changed!");
-    if (window.location.hash !== "" && window.location.hash === "#api") {
-      window.history.scrollRestoration = "manual";
-      apiRef.current.scrollIntoView({ block: "start" });
+    if (window && window.location && window.location.hash) {
+      if (window.location.hash !== "" && window.location.hash === "#api") {
+        window.history.scrollRestoration = "manual"
+        apiRef.current.scrollIntoView({ block: "start" });
+      }
     }
-  }, [window.location.hash]);
+  })
 
   return (
     <main>
