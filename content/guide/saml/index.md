@@ -419,13 +419,8 @@ Below are some examples of Bindings that are supported by SAML.
 
 5.  **HTTP Artifact Binding:** It defines how a reference to a SAML request or response (i.e., an artifact) is transported by HTTP. It defines two mechanisms, either an HTML form control or a query string in the URL.
 
-
-<<<<<<< HEAD
-
 [Go Back to Home Page](/)
-=======
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
->>>>>>> e245784... saml corrections
+
 
 
 
