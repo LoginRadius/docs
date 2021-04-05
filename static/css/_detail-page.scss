@@ -31,6 +31,20 @@
       letter-spacing: 2px;
       margin-bottom: 10px;
     }
+    .table-of-contents {
+      ul {
+        & > li {
+          &:first-child {
+            & > ul {
+              @media (min-width: 769px) {
+                overflow-y: auto;
+                max-height: 50vh;
+              }
+            }
+          }
+        }
+      }
+    }
     ul {
       & > li {
         & > p {
@@ -50,6 +64,7 @@
           }
         }
       }
+
       ul {
         // margin-bottom: 56px;
         li {
@@ -91,7 +106,7 @@
       }
     }
     .get-in-touch {
-      margin-top: 56px;
+      margin-top: 48px;
       li {
         display: flex;
         align-items: center;
@@ -120,6 +135,9 @@
       padding-left: 0;
       width: 100%;
       border-left: 0;
+    }
+    a {
+      word-break: break-all;
     }
     .breadcrumbs {
       display: flex;
@@ -299,4 +317,26 @@
       font-weight: 600;
     }
   }
+}
+// default scroll
+
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  @media (max-width: 768px) {
+    height: 4px;
+    width: 4px;
+  }
+}
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+body ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
 }

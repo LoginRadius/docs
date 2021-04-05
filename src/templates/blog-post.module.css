@@ -7,7 +7,7 @@
   word-break: break-all;
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
   .sidebar {
     position: fixed !important;
     overflow-y: scroll;
@@ -20,4 +20,4 @@
     border-left: 0px !important;
     overflow-x: scroll;
   }
-}
+} */
