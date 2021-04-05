@@ -531,46 +531,55 @@ const Middle = () => {
             <h3 className="title">APIs</h3>
             <ul>
               <li>
-                <Link to="references/api/account">Account</Link>
+              <Link to="references/api/configuration">Configuration</Link>
+               
               </li>
               <li>
                 <Link to="references/api/authentication">Authentication</Link>
               </li>
               <li>
-                <Link to="references/api/configuration">Configuration</Link>
+              <Link to="references/api/account">Account</Link>
               </li>
               <li>
-                <Link to="references/api/jwt">JWT</Link>
+              <Link to="references/api/social">Social</Link>
+                
               </li>
               <li>
                 <Link to="references/api/native-social-login">Native Social Login</Link>
               </li>
               <li>
-                <Link to="references/api/oidc">OIDC</Link>
+              <Link to="references/api/passwordless-login">Passwordless Login</Link>
+                
               </li>
               <li>
-                <Link to="references/api/passwordless-login">Passwordless Login</Link>
+              <Link to="references/api/phone-authentication">Phone Authentication</Link>
+              
               </li>
               <li>
-                <Link to="references/api/phone-authentication">Phone Authentication</Link>
+              <Link to="references/api/two-factor-authentication">Two-Factor Authentication</Link>
+              
               </li>
               <li>
+              
                 <Link to="references/api/roles-management">Roles Management</Link>
               </li>
               <li>
-                <Link to="references/api/social">Social</Link>
+              <Link to="references/api/sott">SOTT</Link>
+              
               </li>
               <li>
-                <Link to="references/api/sott">SOTT</Link>
+              <Link to="references/api/jwt">JWT</Link>  
               </li>
               <li>
-                <Link to="references/api/two-factor-authentication">Two-Factor Authentication</Link>
+              <Link to="references/api/OAuth/">OAuth</Link>
+              
               </li>
               <li>
-                <Link to="references/api/webhooks">Webhooks</Link>
+              <Link to="references/api/oidc">OIDC</Link>
                 </li>
                 <li>
-                <Link to="references/api/OAuth/">OAuth</Link>
+                
+                <Link to="references/api/webhooks">Webhooks</Link>
               </li>
             </ul>
           </div>
