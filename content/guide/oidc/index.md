@@ -16,7 +16,7 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
    ![alt_text](../../guide/oidc/images/OpenID-integration.png "image_tooltip")
 
-2. Click *Add* option for adding a new OpenID app. The following configuration options will appear:
+2. Click **Add** button for adding a new OpenID app. The following configuration options will appear:
 
    ![alt_text](../../guide/oidc/images/OpenID-config.png "image_tooltip")
 
@@ -24,8 +24,9 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
    ![alt_text](../../guide/oidc/images/OpenID-addon.png "image_tooltip")
 
-4. Click the **Enable** button. The OpenID app is available in the **Available Integrations**. 
+4. Click the **Enable** button. The OpenID app is now available in the **Available Integrations**. 
 
+   ![alt_text](../../guide/oidc/images/oidc-configure.png "image_tooltip")
 
 5. Click the **Let's Configure** option under **OpenID** box. The following screen will appear:
 
@@ -37,16 +38,16 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
    - **Secret Key:** You will need to generate an OpenID Connect Secret using RS256 and add it here. You can get the secret key by running the following command on your terminal:
 
-    ```
-    openssl genrsa -out key.pem 2048
+      ```
+      openssl genrsa -out key.pem 2048
 
-    ```
-    Additionally, you can use the following command to generate the **Public key** from the private key that will be used to verify generated JWT id_token.
+      ```
+      Additionally, you can use the following command to generate the **Public key** from the private key that will be used to verify generated JWT id_token.
 
-    ```
-    openssl rsa -in key.pem -outform PEM -pubout -out public.pem
+      ```
+      openssl rsa -in key.pem -outform PEM -pubout -out public.pem
 
-    ```
+      ```
    - **Algorithm:** The algorithm you would like to use for OpenID Connect (RS256 is currently the only algorithm supported).
 
    - **Data Mapping:** Enter your desired fields and how they map out the left column is how they will show up in the OIDC, the right column is the field name in the LoginRadius profile, keep in mind that for some of the profile fields you will need to use dot notation to access them.
