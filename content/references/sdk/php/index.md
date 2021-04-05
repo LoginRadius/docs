@@ -9,11 +9,11 @@ path: "/references/sdk/php"
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document contains information and examples regarding the LoginRadius PHP SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter.You can get the SDK from [here](https://github.com/LoginRadius/php-sdk) 
+This document contains information and examples regarding the LoginRadius PHP SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter. You can get the SDK from [here](https://github.com/LoginRadius/php-sdk) 
 
 For a more hands-on tutorial on setting up the SDK and using it in a PHP application to make LoginRadius API calls, check out our [PHP Tutorial.](/tutorial/php)
 
-## Installation
+## SDK Installation
 
 The recommended way to install is through [Composer](http://getcomposer.org/).
  
@@ -62,7 +62,7 @@ require_once "src/LoginRadiusSDK/CustomerRegistration/Social/SocialAPI.php";
 Modify the config.php file in the SDK to include your LoginRadius Credentials
 
 
-## Configuration
+## SDK Configuration
 
 After successful install, you need to define the following LoginRadius Account info in your project anywhere before using the LoginRadius SDK or in the config file of your project:
 
@@ -157,7 +157,7 @@ For more details check [API Refrence Here](#)
 
 
 
-## API Details
+## API Methods
 
 ### Authentication API
 
