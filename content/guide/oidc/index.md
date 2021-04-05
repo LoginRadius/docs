@@ -311,7 +311,7 @@ URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappnam
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
 
 
 

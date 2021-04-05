@@ -104,4 +104,4 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 [API Reference](/#api)
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

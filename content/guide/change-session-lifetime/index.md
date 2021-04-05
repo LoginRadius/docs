@@ -35,4 +35,4 @@ This time can be managed by the following steps:
 2. Click the **Save** button.
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

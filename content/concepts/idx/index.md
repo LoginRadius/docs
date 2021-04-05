@@ -11,7 +11,7 @@ path: "/concepts/idx"
 
 There are a few predefined layouts that can be further customized via your LoginRadius Dashboard under [Auth Page Customization](https://dashboard.loginradius.com/auth-page).
 
-Go through the [Auth Page (IDX) customization](https://lr-developer-docs.netlify.app/guide/customize-auth-page) for more details.
+Go through the [Auth Page (IDX) customization](/guide/customize-auth-page) for more details.
 
 
 ## Actions
@@ -75,7 +75,7 @@ https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return
 
 ## Customization
 
-Go through [this document](https://lr-developer-docs.netlify.app/guide/customize-auth-page) for Auth Page (IDX) customization.
+Go through [this document](/guide/customize-auth-page) for Auth Page (IDX) customization.
 
 ## Key Benefits
 
@@ -90,5 +90,5 @@ Auth Page (IDX) is useful for authentication needs, you can direct your consumer
 - Less Complexity: Using LoginRadius Auth Page (IDX) means, don't need to handle authentication, new consumers registration, forgot password, etc.
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
 

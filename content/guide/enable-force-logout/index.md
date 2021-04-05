@@ -34,5 +34,5 @@ By enabling this option, a **Remember Me** checkbox will show up on your Auth Pa
 > Note: Remember me token expiry duration will be the same as token lifetime.
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
 

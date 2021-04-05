@@ -122,4 +122,4 @@ These are the supported actions you can perform on each registered user:
   Click the **Delete** button in the pop-up to delete your selected customer.
 
 
-  [Go Back to Home Page](https://lr-developer-docs.netlify.app)
+  [Go Back to Home Page](/)

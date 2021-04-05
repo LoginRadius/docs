@@ -45,7 +45,7 @@ add this snippet in pom.xml
 
 > LoginRadius is now using Maven. The jars are also available [here](https://search.maven.org/search?q=loginradius) on the Maven repository. Select the directory for the latest version and download the jar files.
 
-> For more information on SDK configuration and obtaining API credentials, refer to this [tutorial](https://lr-developer-docs.netlify.app/tutorial/java/).
+> For more information on SDK configuration and obtaining API credentials, refer to this [tutorial](/tutorial/java/).
 
 
 ### API Methods

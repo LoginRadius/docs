@@ -20,3 +20,5 @@ path: "/references/api/sott"
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | TimeDifference | none | The time difference you would like to pass, If you not pass difference then the default value is 10 minutes [**Optional**] |
+
+[Go Back to Home Page](/)

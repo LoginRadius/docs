@@ -102,3 +102,5 @@ path: "/references/api/social"
   | ------------ | ------- | -------------------------------------------------------------------------------- |
   | Access_Token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
+
+[Go Back to Home Page](/)

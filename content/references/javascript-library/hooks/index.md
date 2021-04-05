@@ -593,3 +593,5 @@ LRObject.$hooks.call('setLocaleBasedInfo', options);
 ```
 
 `options` is a JavaScript object containing key-value pairs for customization options (including labels, placeholders, and validation messages). For more information regarding the use of this, refer to our [Localization](/concepts/localization#form-contents-customization) document.
+
+[Go Back to Home Page](/)

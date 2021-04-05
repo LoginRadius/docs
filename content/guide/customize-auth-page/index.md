@@ -116,4 +116,4 @@ Each content field and its corresponding text on your Auth Page (IDX) is illustr
 You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the [Advanced Editor](/guide/auth-page-advanced-editor) document for more information.
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

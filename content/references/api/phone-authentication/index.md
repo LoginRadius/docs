@@ -182,3 +182,5 @@ path: "/references/api/phone-authentication"
   | ------------ | ------- | -------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
+
+[Go Back to Home Page](/)

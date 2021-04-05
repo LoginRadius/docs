@@ -73,5 +73,5 @@ In case of reCAPTCHA v2, the captcha will be available on your Auth Page `<your-
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
 

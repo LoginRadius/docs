@@ -62,4 +62,4 @@ Enter or select the following details:
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

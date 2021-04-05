@@ -77,4 +77,4 @@ You can download the report for your import request by clicking on the download 
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

@@ -2012,5 +2012,4 @@ This is a dynamic common password list maintained by LoginRadius and updated fro
 | 2020         | picher        | priest             | puppy1      | eeeee1       |
 | wookie       | pickup        | pornporn           | qazwsxedc   | eyphed       |
 
-
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

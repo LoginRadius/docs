@@ -71,3 +71,5 @@ path: "/references/api/webhooks"
   | ------------ | ------- | -------------------------------------------------------------------------------- | 
   |Event|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject |
   |TargetUrl|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
+
+[Go Back to Home Page](/)

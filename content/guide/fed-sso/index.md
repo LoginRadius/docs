@@ -70,5 +70,5 @@ LoginRadius Identity Platform provides a way to integrate your OpenID client wit
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
 

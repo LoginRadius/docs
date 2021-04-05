@@ -852,3 +852,5 @@ Following options can be used with **commonOptions** during instantiation of you
   ```javascript
   commonOptions.enableSubmitOnSuccess = true;
   ```
+
+[Go Back to Home Page](/)

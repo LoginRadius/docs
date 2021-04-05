@@ -10,7 +10,7 @@ path: "/references/sdk/ruby-sdk"
 
 This document contains information and examples regarding the LoginRadius ruby-on-rails SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter.You can get the SDK from [here](https://github.com/LoginRadius/ruby-on-rails-sdk).
 
-For a more hands-on tutorial on setting up the SDK and using it in a Ruby application to make LoginRadius API calls, check out our Ruby [tutorial](https://lr-developer-docs.netlify.app/tutorial/ror).
+For a more hands-on tutorial on setting up the SDK and using it in a Ruby application to make LoginRadius API calls, check out our Ruby [tutorial](/tutorial/ror).
 
 ## SDK Installation <br/>
 

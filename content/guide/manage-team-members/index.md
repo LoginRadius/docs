@@ -81,4 +81,4 @@ You can perform the following actions on this screen:
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

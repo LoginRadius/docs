@@ -90,4 +90,4 @@ The following are the social providers that LoginRadius supports for the Free, D
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

@@ -100,3 +100,5 @@ path: "/references/api/native-social-login"
   | ------------ | ------- | -------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | google_authcode | none | Google AuthCode [**Required**] |
+
+[Go Back to Home Page](/)

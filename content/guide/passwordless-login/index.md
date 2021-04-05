@@ -100,4 +100,4 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

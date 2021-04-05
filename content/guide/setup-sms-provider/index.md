@@ -35,4 +35,4 @@ Save the settings by clicking the **Save** button.
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

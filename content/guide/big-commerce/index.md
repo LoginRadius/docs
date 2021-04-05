@@ -267,4 +267,4 @@ If you have installed the LoginRadius BigCommerce App on your BigCommerce Site a
 5. Revert any Customizations made to embedded links and any other pages that you have added a LoginRadius Panel.
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

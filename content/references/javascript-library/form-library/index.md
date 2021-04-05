@@ -164,7 +164,7 @@ Format:
 
 `LRObject.api.resetPassword(data, onSuccess, onError);`
 
-  * **data**: Data is an object that represents the body params for the [Auth Reset Password API]() it requires the following:
+  * **data**: Data is an object that represents the body params for the [Auth Reset Password API](/references/api/authentication#auth-reset-password-by-reset-token) it requires the following:
 
     * **resettoken**: The password reset token the consumer should have received via email when requesting a password reset.
 
@@ -503,13 +503,13 @@ LRObject.api.twoFAUpdatePhone(
 
 ### Two-Factor Authentication Verify OTP
 
-This function leverages the [2FA Validate OTP API]() and is used to log in via Two-Factor Authentication.
+This function leverages the [2FA Validate OTP API](/references/api/two-factor-authentication#2fa-validate-otp) and is used to log in via Two-Factor Authentication.
 
 Format:
 
 `LRObject.api.twoFAVerifyOTP(data, onSuccess, onError);`
 
-  * **data**: Should be an object which contains all of the parameters required to verify the OTP, you can refer to the [2FA Validate OTP API]() for details.
+  * **data**: Should be an object which contains all of the parameters required to verify the OTP, you can refer to the [2FA Validate OTP API](/references/api/two-factor-authentication#2fa-validate-otp) for details.
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the consumer has been successfully logged in.
 
@@ -1141,3 +1141,5 @@ LRObject.api.smartLogin(
   }
 );
 ``` -->
+
+[Go Back to Home Page](/)

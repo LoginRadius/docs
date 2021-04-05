@@ -84,7 +84,7 @@ The following flow chart shows how JWT flow works between IDP and SP, where IDP 
 
 ![alt_text](../../guide/jwt/images/jwt-sso-flow.png "image_tooltip")
 
-LoginRadius supports a delegated redirect SSO flow through which you can redirect your consumer to [LoginRadius Auth Page (IDX)](https://lr-developer-docs.netlify.app/guide/customize-auth-page), where your consumer can do account management actions.
+LoginRadius supports a delegated redirect SSO flow through which you can redirect your consumer to [LoginRadius Auth Page (IDX)](/guide/customize-auth-page), where your consumer can do account management actions.
 
 Upon successful login or social login, the consumer will be redirected to the return URL along with the JWT for this authentication session. Here is the step by step instruction for setting JWT SSO flow:
 
@@ -216,4 +216,4 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

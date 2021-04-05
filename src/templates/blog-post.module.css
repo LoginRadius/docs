@@ -1,6 +1,12 @@
 .container table {
   width: 75% !important;
   max-width: 75% !important;
+  display: block;
+  table-layout: fixed;
+}
+
+.container table code {
+  word-break: break-all;
 }
 
 @media (min-width: 769px) {
@@ -14,5 +20,6 @@
   .content {
     margin-left: 280px;
     border-left: 0px !important;
+    overflow-x: scroll;
   }
 }

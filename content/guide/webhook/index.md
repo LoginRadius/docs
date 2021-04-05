@@ -324,4 +324,4 @@ All webhook request payload contains the configured webhook name, time at which 
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

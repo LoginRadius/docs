@@ -54,7 +54,7 @@ Two-Factor Authentication with SMS Passcode will be the default option for the c
 
 2. To edit the template used for the SMS Passcode method, click the Edit icon given in the action bar highlighted in the previous step.
 
-   >  Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in. [Phone Login](https://lr-developer-docs.netlify.app/guide/phone-login) should be enabled for your application to use this 2FA method.
+   >  Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in. [Phone Login](/guide/phone-login) should be enabled for your application to use this 2FA method.
 
 ### Google Authenticator
 
@@ -90,7 +90,7 @@ To verify the 2FA with Google Authenticator on your authentication page, open yo
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
 
 
 

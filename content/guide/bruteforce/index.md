@@ -32,7 +32,7 @@ The Brute Force Lockout feature allows you to restrict account access based on f
 
      * **Captcha:** Select this option to prompt the customer to complete a CAPTCHA to log in when the maximum failed login attempt is reached.
 
-       > Pre-requisites: You must have [Google reCAPTCHA V2](https://lr-developer-docs.netlify.app/guide/captcha/) configured in your LoginRadius Identity Platform to display captcha on lockout. 
+       > Pre-requisites: You must have [Google reCAPTCHA V2](/guide/captcha/) configured in your LoginRadius Identity Platform to display captcha on lockout. 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

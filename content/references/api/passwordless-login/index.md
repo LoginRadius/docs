@@ -70,3 +70,5 @@ path: "/references/api/passwordless-login"
   | ------------ | ------- | -------------------------------------------------------------------------------- | 
   |Otp|The Verification Code
   |Phone|New Phone Number | Model Class containing Definition of payload for PasswordLessLoginOtpModel API [**Required**] 
+
+[Go Back to Home Page](/)

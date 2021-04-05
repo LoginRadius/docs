@@ -445,3 +445,5 @@ LRObject.init("resetPassword", resetpassword_options);
 ```html
 <div id="resetpassword-container"></div>
 ```
+
+[Go Back to Home Page](/)

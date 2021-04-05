@@ -80,7 +80,7 @@ Email templates can be added/modified in **LoginRadius Dashboard** which will be
 
 ![alt_text](images/auth-email-template.png "image_tooltip")
  
-> **Note:** Refer to [this document](https://lr-developer-docs.netlify.app/guide/emailpassword-login) for managing email templates for Email/Password Login.
+> **Note:** Refer to [this document](/guide/emailpassword-login) for managing email templates for Email/Password Login.
 
 ### Short Codes Tab
 
@@ -105,4 +105,4 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

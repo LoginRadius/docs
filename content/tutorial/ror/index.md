@@ -209,4 +209,4 @@ How to implement Passwordless Login
 
 [API Reference](/#api)
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)

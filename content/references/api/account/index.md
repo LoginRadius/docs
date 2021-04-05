@@ -305,3 +305,5 @@ path: "/references/api/account"
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Email | none | Email of the user [**Required**] |
+
+[Go Back to Home Page](/)

@@ -246,6 +246,26 @@ path: "/references/api/authentication"
   |FirstName|user's first name
   |LastName|user's last name | Model Class containing Definition of payload for User Profile update API [**Required**] 
 
+## Auth Reset Password by Reset Token
+
+  Sets a new password for the consumer corresponding to the specified reset token.
+
+  ### Endpoint
+  `PUT` `https://api.loginradius.com/identity/v2/auth/password/reset`
+
+  ### Query Parameters
+  | Parameter    | Default | Description |
+  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | apikey | none | LoginRadius API Key [**Required**] |
+
+  ### Body Attributes
+  | Attribute | Description 
+  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | resettoken | The reset token received in the forgot password email. [**Required**]
+  | password | The new password for the consumer's account. [**Required**]
+  | welcomeemailtemplate | Welcome email template. [**Optional**]
+  | resetpasswordemailtemplate | Reset password email template. [**Optional**]
+
 ## Auth Resend Email Verification
 
   Resends the verification email to the consumer corresponding to the specified Email ID.
@@ -288,3 +308,4 @@ path: "/references/api/authentication"
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
 
+[Go Back to Home Page](/)

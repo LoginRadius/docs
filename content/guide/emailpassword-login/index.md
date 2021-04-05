@@ -88,4 +88,4 @@ These tags are specific to the **Forgot Password** email template. The text defi
 
 
 
-[Go Back to Home Page](https://lr-developer-docs.netlify.app)
+[Go Back to Home Page](/)
