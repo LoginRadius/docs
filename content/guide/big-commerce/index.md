@@ -253,7 +253,7 @@ The LoginRadius mapping of BigCommerce `customer_id` to ExternalIds also support
 
 2. If you are using a customizable Checkout Page, you can directly include the auth component and apply custom styling to bring this in line with your Checkout page branding.
 
-3. If you want to display user profile details such as a user's first name or other data stored in LoginRadius directly from the LoginRadius session, you can utilize the LoginRadius HTML SDK to retrieve this data clientside and display it as required (See the documentation for [HTML/js SDK](references/sdk/html5-sdk/) but please take care, if you are using V2JS then no need to use HTML SDK (See the documentation for [LoginRadius V2JS](/references/javascript-library/getting-started/).
+3. If you want to display user profile details such as a user's first name or other data stored in LoginRadius directly from the LoginRadius session, you can utilize the LoginRadius HTML SDK to retrieve this data clientside and display it as required (See the documentation for [HTML/js SDK](/references/sdk/html5-sdk/) but please take care, if you are using V2JS then no need to use HTML SDK (See the documentation for [LoginRadius V2JS](/references/javascript-library/getting-started/).
 
 4. If you are migrating users from an existing BigCommerce site and need to preserve the user's passwords. Reach out to the [LoginRadius Support Team](https://loginradiusassist.freshdesk.com/support/home) for details on how to configure this.
 
