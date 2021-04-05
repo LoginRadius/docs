@@ -128,7 +128,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name      | Type  | Description   |
-|:---        |:---        |:---        |:---            |
+|:---        |:---               |:---            |
 | apikey    |  String               |   LoginRadius API Key [REQUIRED]          |
 | access_token          |String          | Token generated from a successful oauth from social platform [REQUIRED]               |
 | jwtapp        |  String                | JWT App Name [Required]           |   
@@ -173,7 +173,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name    | Type | Description   |
-|:---      |:---      |:---      |:---          |
+|:---      |:---           |:---          |
 | apikey    |  String             |   LoginRadius API Key [REQUIRED]          |
 | verificationurl       |String          | Verification URL              |
 | jwtapp      |  String              | JWT App Name [Required]           |  
@@ -184,7 +184,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name    | Type | Description   |
-|:---      |:---      |:---      |:---          |
+|:---      |:---          |:---          |
 |username   |  String             |   User's registered username [REQUIRED]         |
 | password      |String          | User's password[REQUIRED]             |
 
@@ -272,7 +272,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name   | Type     | Description     |
-|:---      |:---     |:---     |:---         |
+|:---      |:---         |:---         |
 | apikey    |  String                |   LoginRadius API Key [REQUIRED]          |
 | jwtapp        |  String              | JWT App Name [Required]         |
 | verificationurl        |String         | Verification URL              |
@@ -283,7 +283,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name   | Type   | Description     |
-|:---      |:---     |:---     |:---         |
+|:---      |:---         |:---         |
 | email  |  String                |   User's registered email address [REQUIRED]       |
 | password      |String         | User's password[REQUIRED]              |
 
@@ -385,7 +385,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name      | Type  | Description   |
-|:---        |:---        |:---        |:---            |
+|:---        |:---              |:---            |
 | apikey    |  String               |   LoginRadius API Key [REQUIRED]          |
 | jwtapp        |  String                | JWT App Name [Required]        |
 | verificationurl       |String          | Verification URL              |
@@ -396,7 +396,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name      | Type  | Description   |
-|:---        |:---        |:---        |:---            |
+|:---        |:---            |:---            |
 | phone     |  String               |   User's registered phone number [REQUIRED]       |
 | password      |String          | User's password[REQUIRED]             |
 
