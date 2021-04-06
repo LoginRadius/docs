@@ -147,9 +147,9 @@ This section covers the required configurations that you need to perform in the 
      * RS512
 
    * **Enter The Key** Specify the Key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
-     * Enter any value for the key column( left column), these values will be used as keys for claims in the payload.
+       * Enter any value for the key column( left column), these values will be used as keys for claims in the payload.
 
-     * Select the desired LoginRadius profile field name in the profile key (right column). The values for these fields from the consumer's profile in LoginRadius will be returned to the JWT payload. 
+       * Select the desired LoginRadius profile field name in the profile key (right column). The values for these fields from the consumer's profile in LoginRadius will be returned to the JWT payload. 
 
      Similarly, by clicking the **Add Row** button, you can map multiple attributes.
 
