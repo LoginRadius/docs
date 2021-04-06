@@ -20,8 +20,6 @@ This document contains information and examples regarding the LoginRadius Golang
    go get github.com/loginradius/go-sdk
 ```
 
-* Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
-
 Import the Golang sdk package on the top of the code that calls the SDK.
 
 
@@ -42,7 +40,7 @@ Import the Golang sdk package on the top of the code that calls the SDK.
 ```
 
 
-Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from [here](https://dashboard.loginradius.com/dashboard)
+Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from [here](https://dashboard.loginradius.com/dashboard). Also, whitelist your application domain as explained in [this document](/tutorial/golang/#whitelist-domain).
 
 Many API calls included in this SDK must be completed with an access token, which can be obtained after calling the Authentication Login API and reading the token from the response or from generating an access token through the UID in the Accounts API.
 
@@ -67,7 +65,7 @@ Alternatively an already-initalized client can be reused like so:
 
 Please be aware of the dangers of using global variables to store individual user's access token if you choose to reuse an already-initalized client.
 
-### Calling an API
+## Calling an API
 
 API calls are separated into separate packages. Each package contains a struct holding the LoginRadius client object as an embedded struct, e.g.:
 
