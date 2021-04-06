@@ -45,7 +45,7 @@ The access token request will contain the following parameters. Here is an expla
 - `https://cloud-api.loginradius.com/sso/oauth/redirect:` The API authorization endpoint.
 - **client_id:** The identifier of the customer at the authorization server. Enter the LoginRadius API key
 - **Redirect_uri:** Callback URL of your site where you want to redirect back your customers after an authorization code is granted.
-  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your LoginRadius Dashboard. For more information, refer to this document.
+  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your LoginRadius Dashboard. For more information, refer to this [section](#whitelist-domain).
 - **scope: [optional]** Specifies the scope of the requested token. If omitted, the authorization server may assume some default scope.
 - **state: [optional]** This parameter will be returned as it is, part of the response
 - **Response_type:** Set to code to indicate an authorization code flow. Find responses below:
@@ -95,9 +95,9 @@ API Response containing the access_token:
 
 **Step 3: Use Obtained LoginRadius Access Token**
 
-You can use the obtained access_token with [LoginRadius APIs](references/api/oauth/#user-registration-overview) supporting the access_token until the token expires or revokes.
+You can use the obtained access_token with [LoginRadius APIs](/#api) supporting the access_token until the token expires or revokes.
 
-> **Note:** To include PKCE within this request, refer to this [document](../../references/api/oauth/#proof-of-key-for-code-exchange) for more information.
+> **Note:** To include PKCE within this request, refer to this [section](#proof-of-key-for-code-exchange) for more information.
 
 ### Implicit 
 
@@ -119,7 +119,7 @@ The access token request will contain the following parameters. Here is an expla
 
 - **Redirect_uri:** Callback URL of your site where you want to redirect back your customers after an authorization code is granted.
 
-  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your [LoginRadius Dashboard](https://dashboard.loginradius.com/configuration). For more information, refer to this [document](#whitelist-domain).
+  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your [LoginRadius Dashboard](https://dashboard.loginradius.com/configuration). For more information, refer to this [section](#whitelist-domain).
 
 - **scope [optional]:** Specifies the scope of the requested token. If omitted, the authorization server may assume some default scope.
 - **state [optional]:** this parameter will be returned as it is, part of the response
@@ -512,7 +512,7 @@ client_id={LoginRadius API key}
 &code_challenge_method=SHA256
 ```
 
-For more details over the OAuth documentation, refer [here](#connect-oauth-app).
+For more details over the OAuth, refer to this [section](#connect-oauth-app).
 
 **Exchange the Authorization Code**
 
@@ -540,7 +540,7 @@ Request body:
 
 The authorization code flow returns an authorization code that can then be exchanged for an identity token and/or access token. This requires client authentication using a client_id and a secret to retrieve tokens from the back end and has the benefit of not exposing tokens to the user agent (i.e. a web browser). This flow allows for long-lived access (through the use of refresh tokens). Clients using this flow must be able to maintain a secret. This flow obtains the authorization code from the authorization endpoint and all tokens are returned from the token endpoint.
 
-For more details refer to the OIDC documentation, [here](/guide/oidc).
+For more details to this [section](#openid-connect).
 
 `https://cloud-api.loginradius.com/sso/oidc/v2/<OIDC AppName>/authorize`
 
