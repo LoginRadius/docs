@@ -15,7 +15,7 @@ This integration makes use of the LoginRadius JavaScript Interfaces along with t
 
 This section covers the required configurations that you need to perform to enable Multipass in Shopify. 
 
-> Note: (This feature is only available to Shopify Plus customers)
+> **Note:** This feature is only available to Shopify Plus customers.
 
 1. Log in to your Shopify account to configure Multipass under:
 
@@ -60,20 +60,19 @@ This section covers the required configurations that you need to perform to enab
    * In the **Mapping** field, map the Shopify fields under **Key** with the LoginRadius fields under **Value**. Refer to the below table for the simple mapping examples. You can map the multiple fields by clicking the **Add Row** button.
 
 
-
-| Key | Value |
-| :-------------: |-------------|
-| first_name | FirstName |
-| |
-| last_name | LastName |
-| | |
-| email | Email[0].Value |
-| | |
+    | Key | Value |
+    | :-------------: |-------------|
+    | first_name | FirstName |
+    | |
+    | last_name | LastName |
+    | | |
+    | email | Email[0].Value |
+    | | |
 
 Now, click the **Add** button to save your configurations.
 
 
-> Crucial Information: This integration requires editing `.liquid files`, which can be done through the Shopify theme editor. Simply follow the instructions below:
+> **Crucial Information:** This integration requires editing `.liquid files`, which can be done through the Shopify theme editor. Simply follow the instructions below:
 > 
 > 1. Login to your Shopify Admin Panel.
 > 2. Click the **Online Store** from the left navigation.
@@ -87,15 +86,15 @@ This section covers the LoginRadius Shopify Plugin integration under the Shopify
 
 1. After extracting the above file, upload the Javascript and CSS files into your theme, refer to the following JavaScript and CSS files. 
 
-**Content:**
+   **Content:**
 
-- **raas-settings.js** - The javascript file that handles the LoginRadius initializations and functionality. More details on how the various calls in this file work can be found here. 
+    - **raas-settings.js** - The javascript file that handles the LoginRadius initializations and functionality. More details on how the various calls in this file work can be found here. 
 
-- **lr-raas-style.css** - The default Styles applied to the LoginRadius Interfaces. 
+    - **lr-raas-style.css** - The default Styles applied to the LoginRadius Interfaces. 
 
-- **register.liquid** - A sample Register .liquid file. 
+    - **register.liquid** - A sample Register .liquid file. 
 
-- **login.liquid** - A sample Login .liquid file.
+    - **login.liquid** - A sample Login .liquid file.
 
 2. Extract **Shopify.Assets**, inside the folder, there are several files you are going to use for your LoginRadius Shopify Implementation.
 
