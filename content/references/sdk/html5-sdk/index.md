@@ -9,77 +9,38 @@ path: "/references/sdk/html5"
 # HTML5 SDK
 
 > Disclaimer: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open-source library, which means you are free to download and customize the library functions based on your specific application needs.
-This document contains information and examples regarding the LoginRadius HTML5 SDK. It guides working with social authentication, user profile data, and log in with a variety of social networks such as Facebook, Google, Twitter, etc. You can get the SDK from here
 
-## Setup Your Dashboard
+This document contains information and examples regarding the LoginRadius HTML5 SDK. It guides working with social authentication, user profile data, and log in with a variety of social networks such as Facebook, Google, Twitter, etc. 
 
-Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
-
-<details>
-<summary>
-<a> Click here for more details</a>
-</summary>
+You can get the SDK from [here](https://github.com/LoginRadius/html5-sdk).
 
 To communicate with LoginRadius you will need some details about the application. These details are required for setup and initiate the implementation of LoginRadius.
 
-## Getting Credentials
-
-### API Credentials
-
-The API key and API Secret are used to interact with LoginRadius' APIs. To access API credentials, log in to your LoginRadius Dashboard account, from the left navigation panel, click Configuration and then navigate to the API Credentials section.
-
-Click the down arrow or anywhere within the section and the API Credentials screen will appear:
-
-![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
-
-Click on the API Key And Secret to get your unique credentials as displayed in the following screen:
-
-Key Secret
-
-The APP name is unique for each application in LoginRadius. The Auth Page URL is created using your app name.
-
-> For eg: If App Name is myapp then your Auth Page URL will be https://myapp.hub.loginradius.com/auth.aspx.
-
-### Mobile SOTT
-
-To avoid spam automated registrations, in the request header, LoginRadius supports an additional token - SOTT (Secure One Time Token) along with an API key. Check out the Work with SOTT document for more details.
-
-## Whitelist Your Domain
-
-This section allows you to add and manage the domain(s). LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
-
-To add the application domain, log in to your LoginRadius Dashboard account, from the left navigation panel, click Configuration and then navigate to the Whitelist Your Domain section.
-
-Click the down arrow or anywhere within the section and the Whitelist Your Domain screen will appear:
-
-> If you are implementing the SSO, make sure to whitelist the respective application domains. Check out enable web sso document for more details.
-
-![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
-
-</details> 
+* **API Credentials**: Refer to [this document](/tutorial/html-and-js-tutorial/#get-credentals) for getting API Key and Secrect
+* **Mobile SOTT**: Refer to [this document](/tutorial/html-and-js-tutorial/#get-credentals) for getting Mobile SOTT.
+* **Whitelist Domain**: Refer to [this document](/tutorial/html-and-js-tutorial/#whitelist-domain) to whitelist your domain. 
 
 
-## Installation
+## SDK Installation and Configuration
 
-To utilize the HTML5/JS SDK, you will need to initialize the SDK with your API Key:
+1. To utilize the HTML5/JS SDK, you will need to initialize the SDK with your API Key:
+   ```
+   var sdkoptions = {
+    "apiKey": "{{YOUR API KEY}}"
+   }
+   
+   LoginRadiusSDK.initSDK(sdkoptions);
+   ```
 
+2. Download the SDK from [Github](https://github.com/LoginRadius/html5-sdk).
 
-Copy
-var sdkoptions = {
- "apiKey": "{{YOUR API KEY}}"
-}
+3. Include the SDK javascript file on your website.
 
-LoginRadiusSDK.initSDK(sdkoptions);
+   ```
+   <script src="LoginRadiusV2SDK.10.0.0.js" type="text/javascript"></script>
+   ```
 
-## Configuration
-
-Download the SDK from Github.
-Include the SDK javascript file on your website.
-
-Copy
-<script src="LoginRadiusV2SDK.10.0.0.js" type="text/javascript"></script>
-
-## API Details
+## API Methods
 
 ### Authentication API
 
