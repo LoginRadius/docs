@@ -34,9 +34,9 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
 6. Enter or select the following to configure the OpenID app:
 
-   - [**App Name:**](#get-credentials) Enter the name of your OpenID Connect App.
+   - **App Name:** Enter the name for your OpenID Connect App.
 
-   - [**Secret Key:**](#get-credentials) You will need to generate an OpenID Connect Secret using RS256 and add it here. You can get the secret key by running the following command on your terminal:
+   - **Secret Key:** You will need to generate an OpenID Connect Secret using RS256 and add it here. You can get the secret key by running the following command on your terminal:
 
       ```
       openssl genrsa -out key.pem 2048
@@ -184,10 +184,10 @@ Redirect your user to the following URL to get the login prompt:
 
 - **client_id:** [Loginradius API key](#get-credentials)
 - **redirect_uri:** Callback URL of your site where you want to redirect back your users
-- **response_type:** possible value is only 'code' to specify that you are doing the Authorization Code flow.
-- **state:** random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
-- **scope:** should be set to one of the values, e.g. openid
-- **nonce:** a unique generated nounce.
+- **response_type:** Possible value is only 'code' to specify that you are doing the Authorization Code flow.
+- **state:** Random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
+- **scope:** Should be set to one of the values, e.g. openid
+- **nonce:** A unique generated nonce.
 
 #### Receive Code
 
@@ -216,12 +216,12 @@ The implicit flow requests tokens without explicit client authentication, instea
 
 **Available Query Parameters**
 
-- **client_id:**[Loginradius API key](#get-credentials) 
+- **client_id:** [Loginradius API key](#get-credentials) 
 - **redirect_uri:** Callback URL of your site where you want to redirect back your users
-- **response_type :** possible values are token, id_token or token id_token.
-- **state:** random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
-- **scope:** should be set to one of the values, e.g. openid
-- **nonce:** a unique generated nounce.
+- **response_type :** Possible values are token, id_token or token id_token.
+- **state:** Random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
+- **scope:** Should be set to one of the values, e.g. openid
+- **nonce:** A unique generated nonce.
 
 #### Receive Tokens
 
@@ -245,12 +245,12 @@ Redirect your user to the following URL to get the login prompt:
 
 `https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/authorize?client_id={LoginRadius API key}&redirect_uri={Callback URL}&scope={Scope}&response_type={one of the response_types available}&state={random long string}&scope=openid&nonce={Unique Generated nonce} `
 
-- **client_id:**[Loginradius API key](#get-credentials) 
+- **client_id:** [Loginradius API key](#get-credentials) 
 - **redirect_uri:** Callback URL of your site where you want to redirect back your users
-- **response_type :** possible values are token, id_token or token id_token.
-- **state:** random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
-- **scope:** should be set to one of the values, e.g. openid
-- **nonce:** a unique generated nounce.
+- **response_type :** Possible values are token, id_token or token id_token.
+- **state:** Random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
+- **scope:** Should be set to one of the values, e.g. openid
+- **nonce:** A unique generated nonce.
 
 
 
@@ -270,11 +270,11 @@ Once you have obtained a code or access_token (depending on the workflow you've 
 
 If you've obtained an authorization code, you're able to exchange it for an access_token.
 
-Use the [Access token by OpenID](../../references/api/oidc/#access-token-by-openid-code). Code API to get the access_token, JWT Token, and the refresh_token.
+Use the [Access token by OpenID Code](../../references/api/oidc/#access-token-by-openid-code) API to get the access_token, JWT Token, and the refresh_token.
 
 ### Refresh Access Token
 
-You can use the [Refresh Access Token API Call](../../references/api/oidc/#refresh-access-token). to expire a Refresh Token.
+You can use the [Refresh Access Token API Call](../../references/api/oidc/#refresh-access-token) to expire a Refresh Token.
 
 ### Get UserInfo
 
