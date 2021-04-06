@@ -21,7 +21,7 @@ Upon registration or login, the user is redirected to the specified return URL w
 `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
 
 
-Check out our [Auth Page (IDX)](/concepts/idx-overview/) for more information about available actions and key benefits.
+Check out our [Auth Page (IDX)](/concepts/idx) for more information about available actions and key benefits.
 
 ## Access Token Lifetime
 

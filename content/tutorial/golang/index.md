@@ -13,7 +13,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Golang? Check out [this reference](https://golang.org/doc/).
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](https://www.loginradius.com/docs/developer/concepts/idx-overview/).
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](/concepts/idx).
 
 Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Golang application.
 

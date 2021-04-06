@@ -1,4 +1,4 @@
-import React,{ useEffect, useState }  from "react"
+import React, { useEffect, useState } from "react"
 import Modal from "react-modal"
 import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
@@ -6,24 +6,24 @@ import PopUp from "./modal.js"
 
 
 
-  const Middle = () => {
-    const apiRef = React.createRef()
-    const [display, setDisplay] = useState(false)
-  
-    useEffect(() => {
-      if (window && window.location && window.location.hash) {
-        if (window.location.hash !== "" && window.location.hash === "#api") {
-          window.history.scrollRestoration = "manual"
-          apiRef.current.scrollIntoView({ block: "start" });
-        }
+const Middle = () => {
+  const apiRef = React.createRef()
+  const [display, setDisplay] = useState(false)
+
+  useEffect(() => {
+    if (window && window.location && window.location.hash) {
+      if (window.location.hash !== "" && window.location.hash === "#api") {
+        window.history.scrollRestoration = "manual"
+        apiRef.current.scrollIntoView({ block: "start" });
       }
-    })
-  
-    return (
-      <main>
-        {/*Hero section*/}
-        <section className="hero py-72">
-  
+    }
+  })
+
+  return (
+    <main>
+      {/*Hero section*/}
+      <section className="hero py-72">
+
         <div className="grid-50 d-flex align-items-center">
           <div>
             <h1>LoginRadius Documentation</h1>
@@ -41,38 +41,38 @@ import PopUp from "./modal.js"
               <a onClick={() => setDisplay(true)} className="btn btn-primary">
                 Try 5 Minute Setup Guide
               </a>
-             <Modal isOpen={display} ariaHideApp={false}>
-             <div  className="card no-shadow p-0">
-          <div className="popup-header">
-            <h3 className="title">Try this 5 Minute Setup Guide</h3>
-            <a onClick={() => setDisplay(false)}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </a>
-          </div>
-          
-        <figure class="video_container">
-          <iframe width="100%" height="300" src="https://www.youtube.com/embed/ANlOdnzfCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;">
-            </iframe>
-            </figure>
-            
+              <Modal isOpen={display} ariaHideApp={false}>
+                <div className="card no-shadow p-0">
+                  <div className="popup-header">
+                    <h3 className="title">Try this 5 Minute Setup Guide</h3>
+                    <a onClick={() => setDisplay(false)}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-x"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </a>
+                  </div>
 
-        </div>
+                  <figure class="video_container">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/ANlOdnzfCb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;">
+                    </iframe>
+                  </figure>
 
-             </Modal>
+
+                </div>
+
+              </Modal>
 
               <Link
                 to="/tutorial/html-and-js-tutorial"
@@ -117,7 +117,7 @@ import PopUp from "./modal.js"
       {/*Hero section*/}
       {/*Tutorials section*/}
 
-      
+
       <section className="tutorials py-72">
         <div className="section-header">
           <h2>Ready To Start Building?</h2>
@@ -278,12 +278,12 @@ import PopUp from "./modal.js"
                   <span>Drupal </span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">
                   <img src="images/joomla.svg" width={20} />
                   <span>Joomla</span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -570,54 +570,54 @@ import PopUp from "./modal.js"
             <h3 className="title">APIs</h3>
             <ul>
               <li>
-              <Link to="references/api/configuration">Configuration</Link>
-               
+                <Link to="references/api/configuration">Configuration</Link>
+
               </li>
               <li>
                 <Link to="references/api/authentication">Authentication</Link>
               </li>
               <li>
-              <Link to="references/api/account">Account</Link>
+                <Link to="references/api/account">Account</Link>
               </li>
               <li>
-              <Link to="references/api/social">Social</Link>
-                
+                <Link to="references/api/social">Social</Link>
+
               </li>
               <li>
                 <Link to="references/api/native-social-login">Native Social Login</Link>
               </li>
               <li>
-              <Link to="references/api/passwordless-login">Passwordless Login</Link>
-                
+                <Link to="references/api/passwordless-login">Passwordless Login</Link>
+
               </li>
               <li>
-              <Link to="references/api/phone-authentication">Phone Authentication</Link>
-              
+                <Link to="references/api/phone-authentication">Phone Authentication</Link>
+
               </li>
               <li>
-              <Link to="references/api/two-factor-authentication">Two-Factor Authentication</Link>
-              
+                <Link to="references/api/two-factor-authentication">Two-Factor Authentication</Link>
+
               </li>
               <li>
-              
+
                 <Link to="references/api/roles-management">Roles Management</Link>
               </li>
               <li>
-              <Link to="references/api/sott">SOTT</Link>
-              
+                <Link to="references/api/sott">SOTT</Link>
+
               </li>
               <li>
-              <Link to="references/api/jwt">JWT</Link>  
+                <Link to="references/api/jwt">JWT</Link>
               </li>
               <li>
-              <Link to="references/api/OAuth/">OAuth</Link>
-              
+                <Link to="references/api/OAuth/">OAuth</Link>
+
               </li>
               <li>
-              <Link to="references/api/oidc">OIDC</Link>
-                </li>
-                <li>
-                
+                <Link to="references/api/oidc">OIDC</Link>
+              </li>
+              <li>
+
                 <Link to="references/api/webhooks">Webhooks</Link>
               </li>
             </ul>
