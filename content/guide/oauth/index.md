@@ -584,7 +584,7 @@ Request body:
 > **Important Note: The `client_secret":{Loginradius app api secret}` is an optional parameter, you may or may not use this for validation purpose.**
 
 
-[Go Back to Home Page](/)
+
 
 ## Get Credentials
 
@@ -605,4 +605,4 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 
 
-
+[Go Back to Home Page](/)
