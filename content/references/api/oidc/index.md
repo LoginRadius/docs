@@ -26,6 +26,7 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token
 | oidcappname    	|  String	    |   The name for the ODIC App you have configured in the LoginRadius Admin Console. [REQUIRED]	        |
 
 ### Body Attributes
+
 | Attribute | Description 
 | ------------ | ------- | -------------------------------------------------------------------------------- | 
 |grant_type|This is the grant type to be used, you should provide 'authorization_code' [REQUIRED]
@@ -34,6 +35,10 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token
 |response_type|If used, needs to be 'token' |  
 |code|The authorization_code obtained during the Authorization process. [REQUIRED] | 
 
+
+This is sample API code:
+
+- **Ruby**
 
 ```ruby
 require 'uri'
@@ -48,6 +53,8 @@ request['content-Type'] = 'application/json'
 response = http.request(request)
 puts response.read_body
 ```
+
+- **Python**
 
 ```python
 import requests
@@ -64,6 +71,8 @@ response = requests.request("POST", url, data=payload, headers=headers, params=q
 print(response.text)
 ```
 
+- **Shell**
+
 ```shell
 curl -X POST \
  'https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token' \
@@ -71,6 +80,8 @@ curl -X POST \
  -H 'content-Type: application/json' \
  -d  "{ "grant_type" : "<grant_type>","client_id" : "<client_id>","client_secret" : "<client_secret>","response_type" : "<response_type>","code" : "<code>"  }"
 ```
+
+- **Javascript**
 
 ```javascript
 var settings = {
@@ -89,7 +100,7 @@ $.ajax(settings).done(function (response) {
 ```
 
 
-> The following displays the sample  request body code:
+> The following displays the sample response code:
 
 ```json
 {
@@ -130,6 +141,9 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token
 |refresh_token|this is the refresh_token you received when you used the 'Access Token by OpenID Connect code' API call [REQUIRED] | 
 |scope|The scope for the Open ID profile, use 'openid profile'. [REQUIRED] | 
 
+This is sample API code:
+
+- **Ruby**
 
 ```ruby
 require 'uri'
@@ -145,6 +159,8 @@ response = http.request(request)
 puts response.read_body
 ```
 
+- **Python** 
+
 ```python
 import requests
 
@@ -159,6 +175,7 @@ headers = {
 response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
 print(response.text)
 ```
+- **Shell**
 
 ```shell
 curl -X POST \
@@ -167,6 +184,7 @@ curl -X POST \
  -H 'content-Type: application/json' \
  -d  "{ "grant_type" : "<grant_type>","client_id" : "<client_id>","client_secret" : "<client_secret>","response_type" : "<response_type>","refresh_token" : "<refresh_token>","scope" : "<scope>"  }"
 ```
+- **Javascript**
 
 ```javascript
 var settings = {
@@ -222,7 +240,7 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token/revoke
 |client_secret|LoginRadius API Secret [REQUIRED] |  
 |token |This is the refresh_token you received when you used the Access Token by OpenID code API call. [REQUIRED] |  
 
-
+- **Ruby**
 
 ```ruby
 require 'uri'
@@ -237,6 +255,8 @@ request['content-Type'] = 'application/json'
 response = http.request(request)
 puts response.read_body
 ```
+
+- **Python**
 
 ```python
 import requests
@@ -253,6 +273,8 @@ response = requests.request("POST", url, data=payload, headers=headers, params=q
 print(response.text)
 ```
 
+- **Shell**
+
 ```shell
 curl -X POST \
  'https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token/revoke' \
@@ -260,6 +282,8 @@ curl -X POST \
  -H 'content-Type: application/json' \
  -d  "{ "client_id" : "<client_id>","client_secret" : "<client_secret>","token " : "<token >"  }"
 ```
+
+- **Javascript** 
 
 ```javascript
 var settings = {
@@ -311,6 +335,10 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/userinfo
 | ------------ | ------- | -------------------------------------------------------------------------------- | 
 |Authorization |Bearer <ACCESS_TOKEN> (customer's access token) [REQUIRED] |  
 
+This is sample API code
+
+- **Ruby**
+
 ```ruby
 require 'uri'
 require 'net/http'
@@ -325,6 +353,9 @@ request['Authorization'] = 'Bearer '
 response = http.request(request)
 puts response.read_body
 ```
+
+- **Python**
+
 ```python
 import requests
 
@@ -340,6 +371,8 @@ response = requests.request("GET", url, data=payload, headers=headers, params=qu
 print(response.text)
 ```
 
+- **Shell**
+
 ```shell
 curl -X GET \
  'https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/userinfo' \
@@ -348,6 +381,8 @@ curl -X GET \
  -H 'Authorization: Bearer ' \
 
 ```
+
+- **Javascript**
 
 ```javascript
 var settings = {
@@ -397,6 +432,7 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/jwks
 | ------------ | ------- | -------------------------------------------------------------------------------- | 
 |Authorization |Bearer <ACCESS_TOKEN> (customer's access token) [REQUIRED] |  
 
+- **Ruby** 
 
 ```ruby
 require 'uri'
@@ -411,6 +447,9 @@ request['content-Type'] = 'application/json'
 response = http.request(request)
 puts response.read_body
 ```
+
+- **Python** 
+
 ```python
 import requests
 
@@ -425,6 +464,7 @@ headers = {
 response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
 print(response.text)
 ```
+- **Shell**
 
 ```shell
 curl -X GET \
@@ -434,6 +474,7 @@ curl -X GET \
  
 
 ```
+- **Javascript**
 
 ```javascript
 var settings = {
@@ -451,7 +492,7 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
-> The following displays the sample  request body code:
+> The following displays the sample  response body code:
 
 ```json
 {
@@ -492,7 +533,9 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-kno
 | oidcappname    	|  String	    |   The name for the ODIC App you have configured in the LoginRadius Admin Console. [REQUIRED]	        |
 | sitename     	|  String	    |   The name of your LoginRadius SiteName / Environment. [REQUIRED]	        |
 
+This is sample API code
 
+- **Ruby**
 
 ```ruby
 require 'uri'
@@ -507,6 +550,9 @@ request['content-Type'] = 'application/json'
 response = http.request(request)
 puts response.read_body
 ```
+
+- **Python**
+
 ```python
 import requests
 
@@ -521,6 +567,7 @@ headers = {
 response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
 print(response.text)
 ```
+- **Shell** 
 
 ```shell
 curl -X GET \
@@ -530,6 +577,8 @@ curl -X GET \
  
 
 ```
+- **Javascript**
+
 
 ```javascript
 var settings = {
@@ -547,7 +596,7 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
-> The following displays the sample  request body code:
+> The following displays the sample  response body code:
 
 ```json
 {
