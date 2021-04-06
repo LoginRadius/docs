@@ -361,23 +361,6 @@ Here is an explanation of the Request Body Parameter:
 
 ```
 
-
-## Get Credentials
-
-Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
-
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
-
-![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
-
-## Whitelist Domain
-
-For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
-
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
-
-![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
-
 ## Proof of Key for Code Exchange
 
 **PKCE** is an extension to the Authorization Code flow to prevent certain attacks and to be able to securely perform the OAuth/OIDC exchange from public clients. It is primarily used by mobile and JavaScript apps, but the technique can be applied to any client as well.
@@ -400,7 +383,7 @@ First, you need to generate and store a secret **code_verifier** and **code_chal
 
 Use the below code in your relevant SDK to generate the **code_verifier** and **code_challenge**.
 
-#### For Node.js:
+#### For Node.js
 
 ```
 var crypto = require("crypto")
@@ -426,7 +409,7 @@ function sha256(buffer) {
 ```
 
 
-#### For Golang:
+#### For Golang
 
 ```
 package main
@@ -582,7 +565,6 @@ Request body:
 
 
 > **Important Note: The `client_secret":{Loginradius app api secret}` is an optional parameter, you may or may not use this for validation purpose.**
-
 
 
 
