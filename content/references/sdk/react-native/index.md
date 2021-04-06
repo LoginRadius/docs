@@ -6,34 +6,35 @@ path: "/references/sdk/react-native"
 ---
 
 # React-Native SDK Library
+
 This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in a React Native app.
 
 > **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-## Installation and Configuration
+## SDK Installation and Configuration
 
-You need to slightly configure your LoginRadius user account with the following changes.
+You need to configure your LoginRadius user account with the following changes.
 
-1.  Under Identity Providers, add an `apikey` parameter to the default links in the Verification Email and Forgot Password Email Templates.
+1.  Under Login Methods, click edit icon given next to the Email/Password Login option and add an `apikey` parameter to the default links in the Verification Email and Forgot Password Email Templates.
 
-Verification Email Template: "#Url#?vtype=emailverification&vtoken=#GUID#&apikey="
+    * Verification Email Template: "#Url#?vtype=emailverification&vtoken=#GUID#&apikey="
 
-Forgot Password Email Template: "#Url#?vtype=reset&vtoken=#GUID#&apikey="
+    * Forgot Password Email Template: "#Url#?vtype=reset&vtoken=#GUID#&apikey="
 
-![alt_text](images/email-template.png "image_tooltip")
+    ![alt_text](images/email-template.png "image_tooltip")
 
-1.  Generate SOTT: You will need to pass a SOTT value at the time of registration. You can generate this in the [Configuration](https://dashboard.loginradius.com/configuration) section of your Dashboard.
+2.  Generate SOTT: You will need to pass a SOTT value at the time of registration. You can generate this in the [Configuration](https://dashboard.loginradius.com/configuration) section of your Dashboard.
 
-To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section.
+   To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section.
 
-Click the down arrow or anywhere within the section and Open the **Secure Mobile OTP Token** subsection, the below screen will appear:
+    Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 
-![alt_text](images/sott.png "image_tooltip")
+    ![alt_text](images/sott.png "image_tooltip")
 
-* Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
+3. Get your [API credentials](https://dashboard.loginradius.com/configuration) to initialize SDK and whitelist your application domain as explained [here](/tutorial/react/#whitelist-your-domain).
 
 
-Get a copy of the React Native SDK and demo projects [here](https://github.com/LoginRadius/react-native-sdk) and include in your project.
+Get a copy of the React Native SDK and demo projects from [here](https://github.com/LoginRadius/react-native-sdk) and include in your project.
 
 
 ```
@@ -55,15 +56,15 @@ In the app.json file, initialize the LoginRadius User registration Object.
 
 The above initialization requires options object with the following parameter:
 
-| NAME             | REQUIRED }DESCRIPTION |                                                                                                                                     |
+| NAME             | REQUIRED              |DESCRIPTION                                                                                                                                      |
 |------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | apiKey           | yes                   | Set to your LoginRadius API Key which you can get here.                                                                             |
 | appName          | yes                   | Set to your LoginRadius site name, this is required for User Registration to work with Single Sign On API.                          |
-| sott             | yes                   | Secure One-time Token. Get token from Admin Console Note: While generating SOTT from Loginradius Admin Console, enable Encode SOTT. |
+| sott             | yes                   | Secure One-time Token. Get token from Admin Console Note: While generating SOTT from Loginradius Dashboard, enable Encode SOTT. |
 | verificationUrl  | yes                   | Set dynamic URL for email verification (Default URL: https://auth.lrcontent.com/mobile/verification/index.html)                     |
 | resetPasswordUrl | yes                   | Set dynamic URL for reset password.                                                                                                 |
 
-your must be add in your .js file some dependency injection wheare you want use lgoinradius SDK.
+In your .js file, you must add some dependency injection wheare you want use lgoinradius SDK.
 
 
 ```
@@ -72,9 +73,9 @@ your must be add in your .js file some dependency injection wheare you want use 
 
 ### Native Social Login
 
-Supported Devices Currently, only Facebook And Google is supported for native login with our SDK for Android and iOS.
+Currently, only Facebook And Google is supported for native login with our SDK for Android and iOS.
 
-### Facebook Native Login
+#### Facebook Native Login
 
 Before you can implement native login, you should have a look at the necessary instructions. This [link](https://developers.facebook.com/docs/react-native/getting-started) will help you regarding the same.
 
@@ -109,7 +110,7 @@ If the following dependency exists in app's build.gradle,
     compile('com.facebook.android:facebook-android-sdk:+')
 ```
 
-then replace it with the following:
+Then replace it with the following:
 
 ```
     dependencies {
@@ -117,7 +118,7 @@ then replace it with the following:
     }
 ```
 
-**The SDK has not been initialized :**
+**The SDK has not been initialized:**
 
 If you're getting the above error in Android,then add the following code in MainApplication.java
 
@@ -128,7 +129,7 @@ If you're getting the above error in Android,then add the following code in Main
     }
 ```
 
-#### Sample Code
+**Sample Code**
 
 ```
     const FBSDK = require('react-native-fbsdk');
@@ -179,13 +180,13 @@ If you're getting the above error in Android,then add the following code in Main
      }
 ```
 
-The above code snippet helps you to get token from Facebook. Then, this token can be used to get the LoginRadius access_token which can be used to authenticate user.
+The above code snippet helps you to get token from Facebook. Then, this token can be used to get the LoginRadius access_token, which can be used to authenticate user.
 
-*   Facebook Configuration for Facebook Native Login
+**Facebook Configuration for Facebook Native Login**
 
 Create a new Facebook App on the Facebook Developer site. You will need to create an Android application and get a Facebook Application ID: [https://developers.facebook.com/](https://developers.facebook.com/)
 
-#### Android
+##### Android
 
 *   Create a Development Key Hash
 
@@ -211,12 +212,12 @@ Facebook uses the key hash to authenticate interactions between your app and the
 *   After the creation of App, Click on setting into left panel, Select Add Plateform and choose Android
 *   After generating KeyHash successfully, you need to setup below setting and fill the required fields e.g. Package Name & Class Name.
 
-![alt_text](images/facebook-native-android.png"image_tooltip")
+![alt_text](images/facebook-native-android.png "image_tooltip")
 
 
 #### iOS
 
-*   After the creation of App, Click on setting into left panel, Select Add Plateform and choose iOS.
+*   After the creation of App, click the **Setting** from left panel, select **Add Plateform** and choose **iOS**.
 *   Pass your project bundle ID, iPhone store ID and iPad store ID.
 
 ![alt_text](images/facebook-native-ios.png "image_tooltip")
@@ -309,9 +310,9 @@ Make sure that you're Android SDK is completely up to date (see the list posted 
 
 Finally, make sure that the SHA1 you used to set up in the developer's console is the same one that ionic is using when it builds your app. If it's not, log in will not work.
 
-For more details check API Refrence [Here](https://www.loginradius.com/docs/developer/api/)
+For more details, check API Refrence [here](/#api).
 
-## API Details
+## API Methods
 
 ### Authentication API
 
