@@ -204,6 +204,15 @@ footer {
 }
 
 // Modal popup
+#setup-guide-video {
+  max-width: 640px;
+  iframe {
+    vertical-align: bottom;
+  }
+  .popup-content {
+    max-height: 400px;
+  }
+}
 .ReactModal__Body--open {
   overflow: hidden;
   .ReactModal__Overlay {
