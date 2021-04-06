@@ -432,6 +432,8 @@ https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/jwks
 | ------------ | ------- | -------------------------------------------------------------------------------- | 
 |Authorization |Bearer <ACCESS_TOKEN> (customer's access token) [REQUIRED] |  
 
+This is sample API code
+
 - **Ruby** 
 
 ```ruby
