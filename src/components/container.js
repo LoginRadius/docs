@@ -555,7 +555,7 @@ const Middle = () => {
                 <Link to="references/sdk/python">Python</Link>
               </li>
               <li>
-                <Link to="references/sdk/ruby">Ruby</Link>
+                <Link to="references/sdk/ruby-sdk">Ruby</Link>
               </li>
               <li>
                 <Link to="references/sdk/react-native">React Native</Link>
