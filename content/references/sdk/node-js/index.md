@@ -38,16 +38,17 @@ In your project, create `var config` file:
      }
   }
   ```
-Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from [here](https://dashboard.loginradius.com/configuration) 
+Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from [here](https://dashboard.loginradius.com/configuration).
 
 Pass the proxy configurations if you want to set Http Server Proxy Configuration through your Node.js SDK. Host and port are required to set Http Server Proxy configuration (username and password are optional).
 
-Require the loginradius-sdk package and pass the config object
+Require the loginradius-sdk package and pass the config object:
+
 ```PHP
   var lrv2 = require('loginradius-sdk')(config);
  ```
 
-For more details check [API Refrence Here](#)
+For more details check [API Refrence Here](/#api).
 
 ## API Methods
 
@@ -80,8 +81,9 @@ List of APIs in this Section:
 
 
 
-##### Auth Update Profile by Token (PUT)
- This API is used to update the user's profile by passing the access token.
+#### Auth Update Profile by Token (PUT)
+
+This API is used to update the user's profile by passing the access token.
 
  
  
@@ -111,8 +113,9 @@ lrv2.authenticationApi.updateProfileByAccessToken(accessToken, userProfileUpdate
   
   
  
-##### Auth Verify Email By OTP (PUT)
- This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
+#### Auth Verify Email By OTP (PUT)
+
+This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.
 
  
  
@@ -139,8 +142,9 @@ lrv2.authenticationApi.verifyEmailByOTP(emailVerificationByOtpModel, fields, url
   
   
  
-##### Auth Reset Password by Reset Token (PUT)
- This API is used to set a new password for the specified account.
+#### Auth Reset Password by Reset Token (PUT)
+
+This API is used to set a new password for the specified account.
 
  
  
@@ -164,8 +168,9 @@ lrv2.authenticationApi.resetPasswordByResetToken(resetPasswordByResetTokenModel)
   
   
  
-##### Auth Change Password (PUT)
- This API is used to change the accounts password based on the previous password
+#### Auth Change Password (PUT)
+
+This API is used to change the accounts password based on the previous password
 
  
  
@@ -187,8 +192,9 @@ lrv2.authenticationApi.changePassword(accessToken, newPassword, oldPassword).the
   
   
  
-##### Auth Resend Email Verification (PUT)
- This API resends the verification email to the user.
+#### Auth Resend Email Verification (PUT)
+
+This API resends the verification email to the user.
 
  
  
@@ -210,8 +216,9 @@ lrv2.authenticationApi.authResendEmailVerification(email, emailTemplate, verific
   
   
  
-##### Auth Add Email (POST)
- This API is used to add additional emails to a user's account.
+#### Auth Add Email (POST)
+
+This API is used to add additional emails to a user's account.
 
  
  
@@ -235,8 +242,9 @@ lrv2.authenticationApi.addEmail(accessToken, email, type, emailTemplate, verific
   
   
  
-##### Auth Login by Email (POST)
- This API retrieves a copy of the user data based on the Email
+#### Auth Login by Email (POST)
+
+This API retrieves a copy of the user data based on the Email
 
  
  
@@ -264,8 +272,9 @@ lrv2.authenticationApi.loginByEmail(emailAuthenticationModel, emailTemplate, fie
   
   
  
-##### Auth Forgot Password (POST)
- This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'
+#### Auth Forgot Password (POST)
+
+This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'
 
  
  
@@ -287,8 +296,9 @@ lrv2.authenticationApi.forgotPassword(email, resetPasswordUrl, emailTemplate).th
   
   
  
-##### Auth User Registration by Email (POST)
- This API creates a user in the database as well as sends a verification email to the user.
+#### Auth User Registration by Email (POST)
+
+This API creates a user in the database as well as sends a verification email to the user.
 
  
  
@@ -323,8 +333,9 @@ lrv2.authenticationApi.userRegistrationByEmail(authUserRegistrationModel, sott, 
   
   
  
-##### Auth User Registration By Captcha (POST)
- This API creates a user in the database as well as sends a verification email to the user.
+#### Auth User Registration By Captcha (POST)
+
+This API creates a user in the database as well as sends a verification email to the user.
 
  
  
@@ -360,8 +371,9 @@ lrv2.authenticationApi.userRegistrationByCaptcha(authUserRegistrationModelWithCa
   
   
  
-##### Auth Validate Access token (GET)
- This api validates access token, if valid then returns a response with its expiry otherwise error.
+#### Auth Validate Access token (GET)
+
+This api validates access token, if valid then returns a response with its expiry otherwise error.
 
  
  
@@ -381,8 +393,9 @@ lrv2.authenticationApi.authValidateAccessToken(accessToken).then((response) => {
   
   
  
-##### Access Token Invalidate (GET)
- This api call invalidates the active access token or expires an access token's validity.
+#### Access Token Invalidate (GET)
+
+This api call invalidates the active access token or expires an access token's validity.
 
  
  
@@ -403,8 +416,9 @@ lrv2.authenticationApi.authInValidateAccessToken(accessToken, preventRefresh).th
   
   
  
-##### Access Token Info (GET)
- This api call provide the active access token Information
+#### Access Token Info (GET)
+
+This api call provide the active access token Information
 
  
  
@@ -424,8 +438,8 @@ lrv2.authenticationApi.getAccessTokenInfo(accessToken).then((response) => {
   
   
  
-##### Auth Read all Profiles by Token (GET)
- This API retrieves a copy of the user data based on the access token.
+#### Auth Read all Profiles by Token (GET)
+This API retrieves a copy of the user data based on the access token.
 
  
  
@@ -446,8 +460,9 @@ lrv2.authenticationApi.getProfileByAccessToken(accessToken, fields).then((respon
   
   
  
-##### Auth Send Welcome Email (GET)
- This API sends a welcome email
+#### Auth Send Welcome Email (GET)
+
+This API sends a welcome email.
 
  
  
@@ -468,8 +483,9 @@ lrv2.authenticationApi.sendWelcomeEmail(accessToken, welcomeEmailTemplate).then(
   
   
  
-##### Auth Delete Account (GET)
- This API is used to delete an account by passing it a delete token.
+#### Auth Delete Account (GET)
+
+This API is used to delete an account by passing it a delete token.
 
  
  
@@ -489,8 +505,9 @@ lrv2.authenticationApi.deleteAccountByDeleteToken(deletetoken).then((response) =
   
   
  
-##### Auth Check Email Availability (GET)
- This API is used to check the email exists or not on your site.
+#### Auth Check Email Availability (GET)
+
+This API is used to check the email exists or not on your site.
 
  
  
@@ -510,8 +527,9 @@ lrv2.authenticationApi.checkEmailAvailability(email).then((response) => {
   
   
  
-##### Auth Verify Email (GET)
- This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
+#### Auth Verify Email (GET)
+
+This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.
 
  
  
@@ -534,8 +552,9 @@ lrv2.authenticationApi.verifyEmail(verificationToken, fields, url, welcomeEmailT
   
   
  
-##### Auth Social Identity (GET)
- This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
+#### Auth Social Identity (GET)
+
+This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
 
  
  
@@ -556,8 +575,9 @@ lrv2.authenticationApi.getSocialIdentity(accessToken, fields).then((response) =>
   
   
  
-##### Auth Privacy Policy Accept (GET)
- This API is used to update the privacy policy stored in the user's profile by providing the access token of the user accepting the privacy policy
+#### Auth Privacy Policy Accept (GET)
+
+This API is used to update the privacy policy stored in the user's profile by providing the access token of the user accepting the privacy policy
 
  
  
@@ -578,8 +598,9 @@ lrv2.authenticationApi.acceptPrivacyPolicy(accessToken, fields).then((response) 
   
   
  
-##### Auth Delete Account with Email Confirmation (DELETE)
- This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token
+#### Auth Delete Account with Email Confirmation (DELETE)
+
+This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token
 
  
  
@@ -601,8 +622,9 @@ lrv2.authenticationApi.deleteAccountWithEmailConfirmation(accessToken, deleteUrl
   
   
  
-##### Auth Remove Email (DELETE)
- This API is used to remove additional emails from a user's account.
+#### Auth Remove Email (DELETE)
+
+This API is used to remove additional emails from a user's account.
 
  
  
@@ -621,8 +643,7 @@ lrv2.authenticationApi.removeEmail(accessToken, email).then((response) => {
  ```
  
   
-  
- 
+
  
 
 ### Account API
@@ -652,8 +673,9 @@ List of APIs in this Section:
 
 
 
-##### Account Update (PUT)
- This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
+#### Account Update (PUT)
+
+This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
 
  
  
@@ -680,8 +702,9 @@ lrv2.accountApi.updateAccountByUid(accountUserProfileUpdateModel, uid, fields, n
   
   
  
-##### Update Phone ID by UID (PUT)
- This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
+#### Update Phone ID by UID (PUT)
+
+This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.
 
  
  
@@ -703,8 +726,9 @@ lrv2.accountApi.updatePhoneIDByUid(phone, uid, fields).then((response) => {
   
   
  
-##### Account Set Password (PUT)
- This API is used to set the password of an account in Cloud Storage.
+#### Account Set Password (PUT)
+
+This API is used to set the password of an account in Cloud Storage.
 
  
  
@@ -725,8 +749,9 @@ lrv2.accountApi.setAccountPasswordByUid(password, uid).then((response) => {
   
   
  
-##### Account Invalidate Verification Email (PUT)
- This API is used to invalidate the Email Verification status on an account.
+#### Account Invalidate Verification Email (PUT)
+
+This API is used to invalidate the Email Verification status on an account.
 
  
  
@@ -748,8 +773,9 @@ lrv2.accountApi.invalidateAccountEmailVerification(uid, emailTemplate, verificat
   
   
  
-##### Reset phone ID verification (PUT)
- This API Allows you to reset the phone no verification of an end user’s account.
+#### Reset phone ID verification (PUT)
+
+This API Allows you to reset the phone no verification of an end user’s account.
 
  
  
@@ -770,8 +796,9 @@ lrv2.accountApi.resetPhoneIDVerificationByUid(uid, smsTemplate).then((response) 
   
   
  
-##### Upsert Email (PUT)
- This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.
+#### Upsert Email (PUT)
+
+This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.
 
  
  
@@ -799,8 +826,9 @@ lrv2.accountApi.upsertEmail(upsertEmailModel, uid, fields).then((response) => {
   
   
  
-##### Update UID (PUT)
- This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.
+#### Update UID (PUT)
+
+This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.
 
  
  
@@ -824,8 +852,9 @@ lrv2.accountApi.accountUpdateUid(updateUidModel, uid).then((response) => {
   
   
  
-##### Account Create (POST)
- This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
+#### Account Create (POST)
+
+This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
  
  In order to use this API, you need to format a JSON request body with all of the mandatory fields
 
@@ -857,8 +886,9 @@ lrv2.accountApi.createAccount(accountCreateModel, fields).then((response) => {
   
   
  
-##### Forgot Password token (POST)
- This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.
+#### Forgot Password token (POST)
+
+This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.
 
  
  
@@ -881,8 +911,9 @@ lrv2.accountApi.getForgotPasswordToken(email, emailTemplate, resetPasswordUrl, s
   
   
  
-##### Email Verification token (POST)
- This API Returns an Email Verification token.
+#### Email Verification token (POST)
+
+This API Returns an Email Verification token.
 
  
  
@@ -902,8 +933,9 @@ lrv2.accountApi.getEmailVerificationToken(email).then((response) => {
   
   
  
-##### Account Profiles by Email (GET)
- This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.
+#### Account Profiles by Email (GET)
+
+This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.
 
  
  
@@ -924,8 +956,9 @@ lrv2.accountApi.getAccountProfileByEmail(email, fields).then((response) => {
   
   
  
-##### Account Profile by Phone ID (GET)
- This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.
+#### Account Profile by Phone ID (GET)
+
+This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.
 
  
  
@@ -946,8 +979,9 @@ lrv2.accountApi.getAccountProfileByPhone(phone, fields).then((response) => {
   
   
  
-##### Account Profiles by UID (GET)
- This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.
+#### Account Profiles by UID (GET)
+
+This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.
 
  
  
@@ -968,8 +1002,9 @@ lrv2.accountApi.getAccountProfileByUid(uid, fields).then((response) => {
   
   
  
-##### Account Password (GET)
- This API use to retrive the hashed password of a specified account in Cloud Storage.
+#### Account Password (GET)
+
+This API use to retrive the hashed password of a specified account in Cloud Storage.
 
  
  
@@ -989,8 +1024,9 @@ lrv2.accountApi.getAccountPasswordHashByUid(uid).then((response) => {
   
   
  
-##### Access Token based on UID or User impersonation API (GET)
- The API is used to get LoginRadius access token based on UID.
+#### Access Token based on UID or User impersonation API (GET)
+
+The API is used to get LoginRadius access token based on UID.
 
  
  
@@ -1010,8 +1046,9 @@ lrv2.accountApi.getAccessTokenByUid(uid).then((response) => {
   
   
  
-##### Account Identities by Email (GET)
- Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
+#### Account Identities by Email (GET)
+
+Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.
 
  
  
@@ -1032,8 +1069,9 @@ lrv2.accountApi.getAccountIdentitiesByEmail(email, fields).then((response) => {
   
   
  
-##### Account Delete (DELETE)
- This API deletes the Users account and allows them to re-register for a new account.
+#### Account Delete (DELETE)
+
+This API deletes the Users account and allows them to re-register for a new account.
 
  
  
@@ -1053,8 +1091,9 @@ lrv2.accountApi.deleteAccountByUid(uid).then((response) => {
   
   
  
-##### Account Remove Email (DELETE)
- Use this API to Remove emails from a user Account
+#### Account Remove Email (DELETE)
+
+Use this API to Remove emails from a user Account
 
  
  
@@ -1076,8 +1115,9 @@ lrv2.accountApi.removeEmail(email, uid, fields).then((response) => {
   
   
  
-##### Delete User Profiles By Email (DELETE)
- This API is used to delete all user profiles associated with an Email.
+#### Delete User Profiles By Email (DELETE)
+
+This API is used to delete all user profiles associated with an Email.
 
  
  
@@ -1118,8 +1158,9 @@ List of APIs in this Section:
 
 
 
-##### Phone Reset Password by OTP (PUT)
- This API is used to reset the password
+#### Phone Reset Password by OTP (PUT)
+
+This API is used to reset the password.
 
  
  
@@ -1144,8 +1185,9 @@ lrv2.phoneAuthenticationApi.resetPasswordByPhoneOTP(resetPasswordByOTPModel).the
   
   
  
-##### Phone Verification OTP (PUT)
- This API is used to validate the verification code sent to verify a user's phone number
+#### Phone Verification OTP (PUT)
+
+This API is used to validate the verification code sent to verify a user's phone number
 
  
  
@@ -1168,8 +1210,9 @@ lrv2.phoneAuthenticationApi.phoneVerificationByOTP(otp, phone, fields, smsTempla
   
   
  
-##### Phone Verification OTP by Token (PUT)
- This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
+#### Phone Verification OTP by Token (PUT)
+
+This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
 
  
  
@@ -1191,8 +1234,9 @@ lrv2.phoneAuthenticationApi.phoneVerificationOTPByAccessToken(accessToken, otp, 
   
   
  
-##### Phone Number Update (PUT)
- This API is used to update the login Phone Number of users
+#### Phone Number Update (PUT)
+
+This API is used to update the login Phone Number of users
 
  
  
@@ -1214,8 +1258,9 @@ lrv2.phoneAuthenticationApi.updatePhoneNumber(accessToken, phone, smsTemplate).t
   
   
  
-##### Phone Login (POST)
- This API retrieves a copy of the user data based on the Phone
+#### Phone Login (POST)
+
+This API retrieves a copy of the user data based on the Phone
 
  
  
@@ -1242,8 +1287,9 @@ lrv2.phoneAuthenticationApi.loginByPhone(phoneAuthenticationModel, fields, login
   
   
  
-##### Phone Forgot Password by OTP (POST)
- This API is used to send the OTP to reset the account password.
+#### Phone Forgot Password by OTP (POST)
+
+This API is used to send the OTP to reset the account password.
 
  
  
@@ -1264,8 +1310,9 @@ lrv2.phoneAuthenticationApi.forgotPasswordByPhoneOTP(phone, smsTemplate).then((r
   
   
  
-##### Phone Resend Verification OTP (POST)
- This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input
+#### Phone Resend Verification OTP (POST)
+
+This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input
 
  
  
@@ -1286,8 +1333,9 @@ lrv2.phoneAuthenticationApi.phoneResendVerificationOTP(phone, smsTemplate).then(
   
   
  
-##### Phone Resend Verification OTP By Token (POST)
- This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists
+#### Phone Resend Verification OTP By Token (POST)
+
+This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists
 
  
  
@@ -1309,8 +1357,9 @@ lrv2.phoneAuthenticationApi.phoneResendVerificationOTPByToken(accessToken, phone
   
   
  
-##### Phone User Registration by SMS (POST)
- This API registers the new users into your Cloud Storage and triggers the phone verification process.
+#### Phone User Registration by SMS (POST)
+
+This API registers the new users into your Cloud Storage and triggers the phone verification process.
 
  
  
@@ -1342,8 +1391,9 @@ lrv2.phoneAuthenticationApi.userRegistrationByPhone(authUserRegistrationModel, s
   
   
  
-##### Phone Number Availability (GET)
- This API is used to check the Phone Number exists or not on your site.
+#### Phone Number Availability (GET)
+
+This API is used to check the Phone Number exists or not on your site.
 
  
  
@@ -1363,8 +1413,9 @@ lrv2.phoneAuthenticationApi.checkPhoneNumberAvailability(phone).then((response) 
   
   
  
-##### Remove Phone ID by Access Token (DELETE)
- This API is used to delete the Phone ID on a user's account via the access token
+#### Remove Phone ID by Access Token (DELETE)
+
+This API is used to delete the Phone ID on a user's account via the access token
 
  
  
@@ -1406,8 +1457,9 @@ List of APIs in this Section:
 
 
 
-##### Update MFA by Access Token (PUT)
- This API is used to Enable Multi-factor authentication by access token on user login
+#### Update MFA by Access Token (PUT)
+
+This API is used to Enable Multi-factor authentication by access token on user login
 
  
  
@@ -1433,8 +1485,9 @@ lrv2.multiFactorAuthenticationApi.mfaUpdateByAccessToken(accessToken, multiFacto
   
   
  
-##### MFA Update Phone Number by Token (PUT)
- This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number
+#### MFA Update Phone Number by Token (PUT)
+
+This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number
 
  
  
@@ -1456,8 +1509,9 @@ lrv2.multiFactorAuthenticationApi.mfaUpdatePhoneNumberByToken(accessToken, phone
   
   
  
-##### MFA Validate Google Auth Code (PUT)
- This API is used to login via Multi-factor-authentication by passing the google authenticator code.
+#### MFA Validate Google Auth Code (PUT)
+
+This API is used to login via Multi-factor-authentication by passing the google authenticator code.
 
  
  
@@ -1480,8 +1534,9 @@ lrv2.multiFactorAuthenticationApi.mfaValidateGoogleAuthCode(googleAuthenticatorC
   
   
  
-##### MFA Update Phone Number (PUT)
- This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number
+#### MFA Update Phone Number (PUT)
+
+This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number
 
  
  
@@ -1503,8 +1558,9 @@ lrv2.multiFactorAuthenticationApi.mfaUpdatePhoneNumber(phoneNo2FA, secondFactorA
   
   
  
-##### MFA Email Login (POST)
- This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.
+#### MFA Email Login (POST)
+
+This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.
 
  
  
@@ -1531,8 +1587,9 @@ lrv2.multiFactorAuthenticationApi.mfaLoginByEmail(email, password, emailTemplate
   
   
  
-##### MFA Phone Login (POST)
- This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.
+#### MFA Phone Login (POST)
+
+This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.
 
  
  
@@ -1559,8 +1616,9 @@ lrv2.multiFactorAuthenticationApi.mfaLoginByPhone(password, phone, emailTemplate
   
   
  
-##### MFA Validate Access Token (GET)
- This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.
+#### MFA Validate Access Token (GET)
+
+This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.
 
  
  
@@ -1581,8 +1639,9 @@ lrv2.multiFactorAuthenticationApi.mfaConfigureByAccessToken(accessToken, smsTemp
   
   
  
-##### MFA Resend Otp (GET)
- This API is used to resending the verification OTP to the provided phone number
+#### MFA Resend Otp (GET)
+
+This API is used to resending the verification OTP to the provided phone number
 
  
  
@@ -1603,8 +1662,9 @@ lrv2.multiFactorAuthenticationApi.mfaResendOTP(secondFactorAuthenticationToken, 
   
   
  
-##### MFA Reset Google Authenticator by Token (DELETE)
- This API Resets the Google Authenticator configurations on a given account via the access token
+#### MFA Reset Google Authenticator by Token (DELETE)
+
+This API Resets the Google Authenticator configurations on a given account via the access token
 
  
  
@@ -1625,8 +1685,9 @@ lrv2.multiFactorAuthenticationApi.mfaResetGoogleAuthByToken(accessToken, googlea
   
   
  
-##### MFA Reset SMS Authenticator by Token (DELETE)
- This API resets the SMS Authenticator configurations on a given account via the access token.
+#### MFA Reset SMS Authenticator by Token (DELETE)
+
+This API resets the SMS Authenticator configurations on a given account via the access token.
 
  
  
@@ -1647,8 +1708,9 @@ lrv2.multiFactorAuthenticationApi.mfaResetSMSAuthByToken(accessToken, otpauthent
   
   
  
-##### MFA Reset SMS Authenticator By UID (DELETE)
- This API resets the SMS Authenticator configurations on a given account via the UID.
+#### MFA Reset SMS Authenticator By UID (DELETE)
+
+This API resets the SMS Authenticator configurations on a given account via the UID.
 
  
  
@@ -1669,8 +1731,9 @@ lrv2.multiFactorAuthenticationApi.mfaResetSMSAuthenticatorByUid(otpauthenticator
   
   
  
-##### MFA Reset Google Authenticator By UID (DELETE)
- This API resets the Google Authenticator configurations on a given account via the UID.
+#### MFA Reset Google Authenticator By UID (DELETE)
+
+This API resets the Google Authenticator configurations on a given account via the UID.
 
  
  
@@ -1705,8 +1768,9 @@ List of APIs in this Section:
 
 
 
-##### Passwordless Login Phone Verification (PUT)
- This API verifies an account by OTP and allows the customer to login.
+#### Passwordless Login Phone Verification (PUT)
+
+This API verifies an account by OTP and allows the customer to login.
 
  
  
@@ -1732,8 +1796,9 @@ lrv2.passwordLessLoginApi.passwordlessLoginPhoneVerification(passwordLessLoginOt
   
   
  
-##### Passwordless Login by Phone (GET)
- API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID
+#### Passwordless Login by Phone (GET)
+
+API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID
 
  
  
@@ -1754,8 +1819,9 @@ lrv2.passwordLessLoginApi.passwordlessLoginByPhone(phone, smsTemplate).then((res
   
   
  
-##### Passwordless Login By Email (GET)
- This API is used to send a Passwordless Login verification link to the provided Email ID
+#### Passwordless Login By Email (GET)
+
+This API is used to send a Passwordless Login verification link to the provided Email ID
 
  
  
@@ -1777,8 +1843,9 @@ lrv2.passwordLessLoginApi.passwordlessLoginByEmail(email, passwordLessLoginTempl
   
   
  
-##### Passwordless Login Verification (GET)
- This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API
+#### Passwordless Login Verification (GET)
+
+This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API
 
  
  
@@ -1824,8 +1891,9 @@ List of APIs in this Section:
 
 
 
-##### Assign Roles by UID (PUT)
- This API is used to assign your desired roles to a given user.
+#### Assign Roles by UID (PUT)
+
+This API is used to assign your desired roles to a given user.
 
  
  
@@ -1849,8 +1917,9 @@ lrv2.roleApi.assignRolesByUid(accountRolesModel, uid).then((response) => {
   
   
  
-##### Upsert Context (PUT)
- This API creates a Context with a set of Roles
+#### Upsert Context (PUT)
+
+This API creates a Context with a set of Roles
 
  
  
@@ -1879,8 +1948,9 @@ lrv2.roleApi.updateRoleContextByUid(accountRoleContextModel, uid).then((response
   
   
  
-##### Add Permissions to Role (PUT)
- This API is used to add permissions to a given role.
+#### Add Permissions to Role (PUT)
+
+This API is used to add permissions to a given role.
 
  
  
@@ -1904,8 +1974,9 @@ lrv2.roleApi.addRolePermissions(permissionsModel, role).then((response) => {
   
   
  
-##### Roles Create (POST)
- This API creates a role with permissions.
+#### Roles Create (POST)
+
+This API creates a role with permissions.
 
  
  
@@ -1931,8 +2002,9 @@ lrv2.roleApi.createRoles(rolesModel).then((response) => {
   
   
  
-##### Roles by UID (GET)
- API is used to retrieve all the assigned roles of a particular User.
+#### Roles by UID (GET)
+
+API is used to retrieve all the assigned roles of a particular User.
 
  
  
@@ -1952,8 +2024,9 @@ lrv2.roleApi.getRolesByUid(uid).then((response) => {
   
   
  
-##### Get Context with Roles and Permissions (GET)
- This API Gets the contexts that have been configured and the associated roles and permissions.
+#### Get Context with Roles and Permissions (GET)
+
+This API Gets the contexts that have been configured and the associated roles and permissions.
 
  
  
@@ -1973,8 +2046,9 @@ lrv2.roleApi.getRoleContextByUid(uid).then((response) => {
   
   
  
-##### Role Context profile (GET)
- The API is used to retrieve role context by the context name.
+#### Role Context profile (GET)
+
+The API is used to retrieve role context by the context name.
 
  
  
@@ -1994,8 +2068,9 @@ lrv2.roleApi.getRoleContextByContextName(contextName).then((response) => {
   
   
  
-##### Roles List (GET)
- This API retrieves the complete list of created roles with permissions of your app.
+#### Roles List (GET)
+
+This API retrieves the complete list of created roles with permissions of your app.
 
  
  
@@ -2014,8 +2089,9 @@ lrv2.roleApi.getRolesList().then((response) => {
   
   
  
-##### Unassign Roles by UID (DELETE)
- This API is used to unassign roles from a user.
+#### Unassign Roles by UID (DELETE)
+
+This API is used to unassign roles from a user.
 
  
  
@@ -2039,8 +2115,9 @@ lrv2.roleApi.unassignRolesByUid(accountRolesModel, uid).then((response) => {
   
   
  
-##### Delete Role Context (DELETE)
- This API Deletes the specified Role Context
+#### Delete Role Context (DELETE)
+
+This API Deletes the specified Role Context
 
  
  
@@ -2061,8 +2138,9 @@ lrv2.roleApi.deleteRoleContextByUid(contextName, uid).then((response) => {
   
   
  
-##### Delete Role from Context (DELETE)
- This API Deletes the specified Role from a Context.
+#### Delete Role from Context (DELETE)
+
+This API Deletes the specified Role from a Context.
 
  
  
@@ -2087,8 +2165,9 @@ lrv2.roleApi.deleteRolesFromRoleContextByUid(contextName, roleContextRemoveRoleM
   
   
  
-##### Delete Additional Permission from Context (DELETE)
- This API Deletes Additional Permissions from Context.
+#### Delete Additional Permission from Context (DELETE)
+
+This API Deletes Additional Permissions from Context.
 
  
  
@@ -2113,8 +2192,9 @@ lrv2.roleApi.deleteAdditionalPermissionFromRoleContextByUid(contextName, roleCon
   
   
  
-##### Account Delete Role (DELETE)
- This API is used to delete the role.
+#### Account Delete Role (DELETE)
+
+This API is used to delete the role.
 
  
  
@@ -2134,8 +2214,9 @@ lrv2.roleApi.deleteRole(role).then((response) => {
   
   
  
-##### Remove Permissions (DELETE)
- API is used to remove permissions from a role.
+#### Remove Permissions (DELETE)
+
+API is used to remove permissions from a role.
 
  
  
@@ -2170,8 +2251,9 @@ List of APIs in this Section:
 
 
 
-##### Generate SOTT (GET)
- This API allows you to generate SOTT with a given expiration time.
+#### Generate SOTT (GET)
+
+This API allows you to generate SOTT with a given expiration time.
 
  
  
@@ -2207,8 +2289,9 @@ List of APIs in this Section:
 
 
 
-##### Access Token via Facebook Token (GET)
- The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.
+#### Access Token via Facebook Token (GET)
+
+The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.
 
  
  
@@ -2228,8 +2311,9 @@ lrv2.nativeSocialApi.getAccessTokenByFacebookAccessToken(fbAccessToken).then((re
   
   
  
-##### Access Token via Twitter Token (GET)
- The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.
+#### Access Token via Twitter Token (GET)
+
+The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.
 
  
  
@@ -2250,8 +2334,9 @@ lrv2.nativeSocialApi.getAccessTokenByTwitterAccessToken(twAccessToken, twTokenSe
   
   
  
-##### Access Token via Google Token (GET)
- The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.
+#### Access Token via Google Token (GET)
+
+The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.
 
  
  
@@ -2273,8 +2358,9 @@ lrv2.nativeSocialApi.getAccessTokenByGoogleAccessToken(googleAccessToken, client
   
   
  
-##### Access Token using google JWT token for Native Mobile Login (GET)
- This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.
+#### Access Token using google JWT token for Native Mobile Login (GET)
+
+This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.
 
  
  
@@ -2294,8 +2380,9 @@ lrv2.nativeSocialApi.getAccessTokenByGoogleJWTAccessToken(idToken).then((respons
   
   
  
-##### Access Token via Linkedin Token (GET)
- The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.
+#### Access Token via Linkedin Token (GET)
+
+The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.
 
  
  
@@ -2315,8 +2402,9 @@ lrv2.nativeSocialApi.getAccessTokenByLinkedinAccessToken(lnAccessToken).then((re
   
   
  
-##### Access Token via Google AuthCode (GET)
- The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.
+#### Access Token via Google AuthCode (GET)
+
+The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.
 
  
  
@@ -2350,8 +2438,9 @@ List of APIs in this Section:
 
 
 
-##### Webhook Subscribe (POST)
- API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
+#### Webhook Subscribe (POST)
+
+API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.
 
  
  
@@ -2375,8 +2464,9 @@ lrv2.webHookApi.webHookSubscribe(webHookSubscribeModel).then((response) => {
   
   
  
-##### Webhook Subscribed URLs (GET)
- This API is used to fatch all the subscribed URLs, for particular event
+#### Webhook Subscribed URLs (GET)
+
+This API is used to fatch all the subscribed URLs, for particular event
 
  
  
@@ -2396,8 +2486,9 @@ lrv2.webHookApi.getWebHookSubscribedURLs(event).then((response) => {
   
   
  
-##### Webhook Test (GET)
- API can be used to test a subscribed WebHook.
+#### Webhook Test (GET)
+
+API can be used to test a subscribed WebHook.
 
  
  
@@ -2416,8 +2507,9 @@ lrv2.webHookApi.webhookTest().then((response) => {
   
   
  
-##### WebHook Unsubscribe (DELETE)
- API can be used to unsubscribe a WebHook configured on your LoginRadius site.
+#### WebHook Unsubscribe (DELETE)
+
+API can be used to unsubscribe a WebHook configured on your LoginRadius site.
 
  
  
