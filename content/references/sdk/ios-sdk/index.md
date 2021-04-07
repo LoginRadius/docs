@@ -51,22 +51,6 @@ $ pod install
 [OS X](http://www.apple.com/macos/sierra/), [Xcode](https://developer.apple.com/xcode/) and iOS 9 or higher.
 
 
-import {
-  ExpansionPanel,
-  ExpansionPanelList,
-  ExpansionPanelListItem
-} from 'gatsby-theme-apollo-docs';
-
-import Setup from "../howto/dashboard-setup"
-
-## Setup Your Dashboard
-
-Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
-
-<ExpansionPanel title="Click here to view details">
-<Setup />
-</ExpansionPanel>
-
 ## Initialize SDK
 
 1. Create a new File `LoginRadius.plist` and add it to your App
@@ -82,6 +66,8 @@ Get your API credentials to initialize SDK and whitelist your application domain
 |customDomain    |String  |Optional, (Default URL: `https://api.loginradius.com/`)                               |
 
 <sub><sup>useKeychain needs to enable keychain sharing to work properly, to see visually how to enable it see [here](#singlesignon11)</sup></sub>
+
+> **Note**: You can get API Key and Site/App Name from the [Configuration](#https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
 
 
 3. Import the module in your source code.
@@ -147,7 +133,8 @@ Call this to handle URL's for social login to work properly in your `AppDelegate
 
 
 ## Integrate Registration Service
-Registration service supports traditional registration and login methods.
+
+Registration service supports email/password (traditional) registration and login methods.
 
 Registration Service is done through the Authentication API.
 
@@ -185,8 +172,9 @@ For all the possible payload fields, please check the Auth User Registration by 
 
 
 
-## Integrate Traditional Login
-Following code can be used for implementation of traditional login:
+## Integrate Email/Password (Traditional) Login
+
+Following code can be used for implementation of email/password (traditional) login:
 
 **Login by Email:**
 
@@ -534,7 +522,7 @@ Call the function to start Authentication using TouchID.
 }];
 ```
 This way on logout the access token and user profile are conserved, and the TouchID UI appears.
-You can use the TouchID authentication to go to the profile page. You can only do this if the user logged in once using social login or traditional login.
+You can use the TouchID authentication to go to the profile page. You can only do this if the user logged in once using social login or email/password (traditional) login.
 
 ## Logout
 Log out the user.
@@ -561,7 +549,7 @@ BOOL isUserLoggedIn = [[[LoginRadiusSDK sharedInstance] session] isLoggedIn];
 
 ## LoginRadius API Showcase
 
-This section helps you to explore various API methods of LoginRadius IOS SDK. They can be used to fulfill your identity based needs related to traditional login, registration, social login and many more.
+This section helps you to explore various API methods of LoginRadius IOS SDK. They can be used to fulfill your identity based needs related to email/password (traditional) login, registration, social login and many more.
 
 For more details check [API Reference Here](/#api)
 
