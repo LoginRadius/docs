@@ -7,7 +7,7 @@ path: "/references/api/OAuth"
 # OAuth Code
 
 ## Request Tokens
-This API enables you to request via a new access token from the Device code Endpoint
+This API enables you to request a new access token from the Device code Endpoint
 
 HTTP request
 
