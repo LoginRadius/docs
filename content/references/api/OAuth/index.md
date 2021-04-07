@@ -166,6 +166,7 @@ https://cloud-api.loginradius.com/sso/oauth/access_token/refresh
 
 ### Response
 
+This is what a sample reponse looks like:
 ```
 {
   "access_token": "********-****-****-*****************",
