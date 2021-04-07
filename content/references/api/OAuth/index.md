@@ -35,7 +35,7 @@ Grant-Type :Value should be used as urn:ietf:params:oauth:grant-type:device_code
 
 ### Response
 
-This is what a sample reponse looks like:
+This is what a sample response looks like:
 ```
 {
   "access_token": "b8cb84c9-dff7-401a-94c1-7cd44ebf80a0",
@@ -66,7 +66,7 @@ https://cloud-api.loginradius.com/sso/oauth/access_token
 
 ### Response
 
-This is what a sample reponse looks like:
+This is what a sample response looks like:
 ```
 {
   "access_token": "********-****-****-*****************",
@@ -98,7 +98,7 @@ https://cloud-api.loginradius.com/sso/oauth/access_token
 
 ### Response
 
-This is what a sample reponse looks like:
+This is what a sample response looks like:
 ```
 {
   "access_token": "********-****-****-*****************",
@@ -134,7 +134,7 @@ https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device
 
 ### Response
 
-This is what a sample reponse looks like:
+This is what a sample response looks like:
 ```
 {
   "device_code": "af2a4121179546c1b121995414cc4530",
@@ -166,7 +166,7 @@ https://cloud-api.loginradius.com/sso/oauth/access_token/refresh
 
 ### Response
 
-This is what a sample reponse looks like:
+This is what a sample response looks like:
 ```
 {
   "access_token": "********-****-****-*****************",
