@@ -53,7 +53,6 @@ In the app.json file, initialize the LoginRadius User registration Object.
     "resetPasswordUrl":"https://auth.lrcontent.com/mobile/verification/index.html"
 ```
 
-
 The above initialization requires options object with the following parameter:
 
 | NAME             | REQUIRED              |DESCRIPTION                                                                                                                                      |

@@ -46,6 +46,8 @@ Before using any of the functions available in the library, its corresponding mo
   API_REQUEST_SIGNING: "false"
 ```
 
+> **Note:** You can get the API Key, API Secret and App/Site Name from the [Configuration > API Credentials](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+
 After define the configuration key details, its corresponding module must first be instantiated:
 
 Create login_radius.rb in /config/initializers:
