@@ -67,7 +67,7 @@ const Middle = () => {
                   <div class="popup-content">
                     <iframe
                       width="100%"
-                      height="260"
+                      height="400"
                       src="https://www.youtube.com/embed/ANlOdnzfCb0"
                       title="YouTube video player"
                       frameborder="0"

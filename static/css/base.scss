@@ -205,12 +205,12 @@ footer {
 
 // Modal popup
 #setup-guide-video {
-  max-width: 640px;
+  max-width: 767px;
   iframe {
     vertical-align: bottom;
   }
   .popup-content {
-    max-height: 400px;
+    max-height: 560px;
   }
 }
 .ReactModal__Body--open {
