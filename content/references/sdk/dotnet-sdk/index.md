@@ -36,6 +36,7 @@ In your ASP&#46;NET project, go to the `appsettings.json` file and add the follo
     "domainName" : "https://api.loginradius.com/"
 }
 ```
+> **Note:** You can get the API Key, API Secret and App Name from the [Configuration > API Credentials](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
 
 ## API Methods
 
