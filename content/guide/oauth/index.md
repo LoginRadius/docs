@@ -523,7 +523,7 @@ Request body:
 
 The authorization code flow returns an authorization code that can then be exchanged for an identity token and/or access token. This requires client authentication using a client_id and a secret to retrieve tokens from the back end and has the benefit of not exposing tokens to the user agent (i.e. a web browser). This flow allows for long-lived access (through the use of refresh tokens). Clients using this flow must be able to maintain a secret. This flow obtains the authorization code from the authorization endpoint and all tokens are returned from the token endpoint.
 
-For more details to this [section](#openid-connect).
+For more details, refer to this [section](#connect-oauth-app).
 
 `https://cloud-api.loginradius.com/sso/oidc/v2/<OIDC AppName>/authorize`
 
