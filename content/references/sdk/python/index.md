@@ -35,6 +35,7 @@ LoginRadius.API_KEY = API_KEY
 LoginRadius.API_SECRET = API_SECRET
 loginradius = LoginRadius()   
 ```
+> **Note:** You can get the API Key and Secret from the [Configuration > API Credentials](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
 
 Import the library's functions by importing `lr.py` in your scripts:
 
