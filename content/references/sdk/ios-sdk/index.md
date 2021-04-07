@@ -247,7 +247,7 @@ Social Login can be done in two ways.
   Login is done natively, utilizing the respective provider SDK's.
 
 
-#### Web Social Login
+### Web Social Login
 Social Login with the given provider. Call this function in the view controller you have set up for the button views.
 
 To integrate Web Social Login. Follow the steps
@@ -268,7 +268,7 @@ To integrate Web Social Login. Follow the steps
     }];
 ```
 
-#### Native Social Login
+### Native Social Login
 
 **Facebook native login**
 
@@ -315,7 +315,7 @@ Call the function to start Facebook Native Login.
     }];
 ```
 
-**Twitter native login**
+**Twitter Native Login**
 
 As of iOS 11, Twitter Native Login is done through the TwitterKit Library. The TwitterKit library works to perform native login on previous iOS versions.
 
@@ -332,7 +332,7 @@ You can follow the original guide over at Twitter's [documentation](https://dev.
 
 Or follow these steps:
 
-1) Instantiate the TwitterKit in `AppDelegate` during app launch
+1. Instantiate the TwitterKit in `AppDelegate` during app launch
 
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -342,7 +342,7 @@ Or follow these steps:
       //Your other Library that needs instantiation, e.g. LoginRadiusSDK
   }
 ```
-2) Add these in your `Info.plist`
+2. Add these in your `Info.plist`
 
 ```XML
 
@@ -363,7 +363,7 @@ Or follow these steps:
 
 ```
 
-3) Linking your UIButton to Twitter Native Login link it with LoginRadius on success
+3. Linking your UIButton to Twitter Native Login link it with LoginRadius on success
 
 ```objectiveC
 //This is the function call linked to a UIButton, you can add IBAction in here to link with the storyboard
@@ -385,7 +385,7 @@ Or follow these steps:
   }
 ```
 
-4) Add these code to handle Twitter's URL Redirection in `AppDelegate`
+4. Add these code to handle Twitter's URL Redirection in `AppDelegate`
 ```objectiveC
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
       BOOL canOpen = NO;
@@ -399,7 +399,7 @@ Or follow these steps:
 ```
 
 
-5) As the final step, handle Twitter log out
+5. As the final step, handle Twitter log out
 
 ```objectiveC
 - (void)logoutPressed:(id)sender {
@@ -425,7 +425,7 @@ Or follow these steps:
 
 We suggest you to OBFUSCATE YOUR KEYS.
 
-**Google native login**
+**Google Native Login**
 
 Google Native Login is done through Google SignIn Library since this is a static library and has problems when you are using CocoaPods with `uses_frameworks!`, you have to manually install the SDK.
 
@@ -469,7 +469,7 @@ Follow these steps:
     }
 ```
 
-8) You have to exchange the Google token with LoginRadius Token. Call the following function in the SignIn delegate method after successful sign in.
+8. You have to exchange the Google token with LoginRadius Token. Call the following function in the SignIn delegate method after successful sign in.
 
 ```objectiveC
 - (void)signIn:(GIDSignIn *)signIn
@@ -495,7 +495,7 @@ Follow these steps:
 }
 ```
 
-9) As the final step, add the google native signOut on your logout button.
+9. As the final step, add the google native signOut on your logout button.
 
 ```objectiveC
 - (IBAction)logoutPressed:(id)sender {
