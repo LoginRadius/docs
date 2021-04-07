@@ -1,7 +1,7 @@
 ---
 title: iOS Library
-description: "A guide to impliment LoginRadius SDK in a Android application."
-summary: "A guide to impliment LoginRadius SDK in a Android application"
+description: "A guide to implement LoginRadius SDK in iOS application."
+summary: "A guide to implement LoginRadius SDK in iOS application"
 path: "/references/sdk/ios-sdk"
 ---
 
@@ -62,10 +62,9 @@ $ pod install
 |apiKey          |String  |Yes                                                                                |
 |siteName        |String  |Yes                                                                                |
 |verificationUrl |String  |Optional, (Default URL: `https://auth.lrcontent.com/mobile/verification/index.html`)  |
-|useKeychain\*   |Boolean |Optional, No by default                                                            |
+|useKeychain\*   |Boolean |Optional, No by default (it is used to maintin session, if set to false then user detail will be saved in user defaults)                                                            |
 |customDomain    |String  |Optional, (Default URL: `https://api.loginradius.com/`)                               |
 
-<sub><sup>useKeychain needs to enable keychain sharing to work properly, to see visually how to enable it see [here](#singlesignon11)</sup></sub>
 
 > **Note**: You can get API Key and Site/App Name from the [Configuration](#https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
 
@@ -99,7 +98,7 @@ __Application to listen your URL__
 You need to configure your Custom URL Scheme for this library to work.
 
 1. In Xcode, right-click on your project's .plist file and select Open As -> Source Code.**Default plist is usually your Info.plist file**
-2. Insert the following XML snippet into the body of your file just before the final element. Replace **{your-sitename}** with your LoginRadius Site Name. And then Replace **{your-app-bundle-identifier}** with your app's bundle identifier. If you don't know where is your app bundle identifier, see 2a.
+2. Insert the following XML snippet into the body of your file just before the final element. Replace **{your-sitename}** with your LoginRadius Site Name. And then Replace **{your-app-bundle-identifier}** with your app's bundle identifier. If you don't know where your app bundle identifier is, see point 3.
 
 ```XML
 <key>CFBundleURLTypes</key>
