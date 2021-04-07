@@ -1,7 +1,7 @@
 ---
 title: Ruby Library
-description: "A guide to impliment LoginRadius SDK in a Ruby on Rails application."
-summary: "A guide to impliment LoginRadius SDK in a Ruby on Rails application"
+description: "A guide to implement LoginRadius SDK in a Ruby on Rails application."
+summary: "A guide to implement LoginRadius SDK in a Ruby on Rails application"
 path: "/references/sdk/ruby-sdk"
 ---
 # Ruby SDK
@@ -12,7 +12,7 @@ This document contains information and examples regarding the LoginRadius ruby-o
 
 For a more hands-on tutorial on setting up the SDK and using it in a Ruby application to make LoginRadius API calls, check out our Ruby [tutorial](/tutorial/ror).
 
-## SDK Installation <br/>
+## SDK Installation and Configuration
 
 Add this line to your application's Gemfile:
 
@@ -36,19 +36,7 @@ import {
 
 import Setup from "../howto/dashboard-setup"
 
-## Setup Your Dashboard
-
-Get your API credentials to initialize SDK and whitelist your application domain as explained in this section.
-
-<ExpansionPanel title="Click here to view details">
-<Setup />
-</ExpansionPanel>
-
-
-## Configuration
-
-
-- Before using any of the functions available in the library, its corresponding module must first define the global constant in `config/application.yml`:
+Before using any of the functions available in the library, its corresponding module must first define the global constant in `config/application.yml`:
 
 ```yml
   SITE_NAME: "<site name>"
@@ -57,7 +45,8 @@ Get your API credentials to initialize SDK and whitelist your application domain
   CUSTOM_API_DOMAIN: "<custom-domain-url-if-any>"
   API_REQUEST_SIGNING: "false"
 ```
-- After define the configuration key details, its corresponding module must first be instantiated:
+
+After define the configuration key details, its corresponding module must first be instantiated:
 
 Create login_radius.rb in /config/initializers:
 
@@ -81,7 +70,7 @@ require 'login_radius'
 
 ```
 
-For more details check [API Refrence Here](https://www.loginradius.com/docs/developer/api/)
+For more details check API Reference [here](/#api)
 
 ## API Methods
 
@@ -115,8 +104,9 @@ List of APIs in this Section:
 
 
 
-##### Auth Update Profile by Token (PUT)
- This API is used to update the user's profile by passing the access token.   
+#### Auth Update Profile by Token (PUT)
+
+This API is used to update the user's profile by passing the access token.   
 
  
  
@@ -141,8 +131,9 @@ response = AuthenticationApi.update_profile_by_access_token(access_token, user_p
   
   
  
-##### Auth Verify Email By OTP (PUT)
- This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.   
+#### Auth Verify Email By OTP (PUT)
+
+This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled.   
 
  
  
@@ -164,8 +155,9 @@ response = AuthenticationApi.verify_email_by_otp(email_verification_by_otp_model
   
   
  
-##### Auth Reset Password by Reset Token (PUT)
- This API is used to set a new password for the specified account.   
+#### Auth Reset Password by Reset Token (PUT)
+
+This API is used to set a new password for the specified account.   
 
  
  
@@ -184,8 +176,9 @@ response = AuthenticationApi.reset_password_by_reset_token(reset_password_by_res
   
   
  
-##### Auth Change Password (PUT)
- This API is used to change the accounts password based on the previous password   
+#### Auth Change Password (PUT)
+
+This API is used to change the accounts password based on the previous password   
 
  
  
@@ -203,8 +196,9 @@ response = AuthenticationApi.change_password(access_token, new_password, old_pas
   
   
  
-##### Auth Resend Email Verification (PUT)
- This API resends the verification email to the user.   
+#### Auth Resend Email Verification (PUT)
+
+This API resends the verification email to the user.   
 
  
  
@@ -222,8 +216,9 @@ response = AuthenticationApi.auth_resend_email_verification(email, email_templat
   
   
  
-##### Auth Add Email (POST)
- This API is used to add additional emails to a user's account.   
+#### Auth Add Email (POST)
+
+This API is used to add additional emails to a user's account.   
 
  
  
@@ -243,8 +238,9 @@ response = AuthenticationApi.add_email(access_token, email, type, email_template
   
   
  
-##### Auth Login by Email (POST)
- This API retrieves a copy of the user data based on the Email   
+#### Auth Login by Email (POST)
+
+This API retrieves a copy of the user data based on the Email   
 
  
  
@@ -267,8 +263,9 @@ response = AuthenticationApi.login_by_email(email_authentication_model, email_te
   
   
  
-##### Auth Forgot Password (POST)
- This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'   
+#### Auth Forgot Password (POST)
+
+This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username'   
 
  
  
@@ -286,8 +283,9 @@ response = AuthenticationApi.forgot_password(email, reset_password_url, email_te
   
   
  
-##### Auth User Registration by Email (POST)
- This API creates a user in the database as well as sends a verification email to the user.   
+#### Auth User Registration by Email (POST)
+
+This API creates a user in the database as well as sends a verification email to the user.   
 
  
  
@@ -314,8 +312,9 @@ response = AuthenticationApi.user_registration_by_email(auth_user_registration_m
   
   
  
-##### Auth User Registration By Captcha (POST)
- This API creates a user in the database as well as sends a verification email to the user.   
+#### Auth User Registration By Captcha (POST)
+
+This API creates a user in the database as well as sends a verification email to the user.   
 
  
  
@@ -343,8 +342,9 @@ response = AuthenticationApi.user_registration_by_captcha(auth_user_registration
   
   
  
-##### Auth Validate Access token (GET)
- This api validates access token, if valid then returns a response with its expiry otherwise error.   
+#### Auth Validate Access token (GET)
+
+This api validates access token, if valid then returns a response with its expiry otherwise error.   
 
  
  
@@ -360,8 +360,9 @@ response = AuthenticationApi.auth_validate_access_token(access_token)
   
   
  
-##### Access Token Invalidate (GET)
- This api call invalidates the active access token or expires an access token's validity.   
+#### Access Token Invalidate (GET)
+
+This api call invalidates the active access token or expires an access token's validity.   
 
  
  
@@ -378,8 +379,9 @@ response = AuthenticationApi.auth_in_validate_access_token(access_token, prevent
   
   
  
-##### Access Token Info (GET)
- This api call provide the active access token Information   
+#### Access Token Info (GET)
+
+This api call provides the active access token Information.  
 
  
  
@@ -395,8 +397,9 @@ response = AuthenticationApi.get_access_token_info(access_token)
   
   
  
-##### Auth Read all Profiles by Token (GET)
- This API retrieves a copy of the user data based on the access token.   
+#### Auth Read all Profiles by Token (GET)
+
+This API retrieves a copy of the user data based on the access token.   
 
  
  
@@ -413,8 +416,9 @@ response = AuthenticationApi.get_profile_by_access_token(access_token, fields)
   
   
  
-##### Auth Send Welcome Email (GET)
- This API sends a welcome email   
+#### Auth Send Welcome Email (GET)
+
+This API sends a welcome email.
 
  
  
@@ -431,8 +435,9 @@ response = AuthenticationApi.send_welcome_email(access_token, welcome_email_temp
   
   
  
-##### Auth Delete Account (GET)
- This API is used to delete an account by passing it a delete token.   
+#### Auth Delete Account (GET)
+
+This API is used to delete an account by passing it a delete token.   
 
  
  
@@ -448,8 +453,9 @@ response = AuthenticationApi.delete_account_by_delete_token(deletetoken)
   
   
  
-##### Auth Check Email Availability (GET)
- This API is used to check the email exists or not on your site.   
+#### Auth Check Email Availability (GET)
+
+This API is used to check if the email exists or not on your site.   
 
  
  
@@ -465,8 +471,9 @@ response = AuthenticationApi.check_email_availability(email)
   
   
  
-##### Auth Verify Email (GET)
- This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.   
+#### Auth Verify Email (GET)
+
+This API is used to verify the email of user. Note: This API will only return the full profile if you have 'Enable auto login after email verification' set in your LoginRadius Admin Console's Email Workflow settings under 'Verification Email'.   
 
  
  
@@ -485,8 +492,9 @@ response = AuthenticationApi.verify_email(verification_token, fields, url, welco
   
   
  
-##### Auth Social Identity (GET)
- This API is called just after account linking API and it prevents the raas profile of the second account from getting created.   
+#### Auth Social Identity (GET)
+
+This API is called just after account linking API and it prevents the raas profile of the second account from getting created.   
 
  
  
@@ -503,8 +511,9 @@ response = AuthenticationApi.get_social_identity(access_token, fields)
   
   
  
-##### Auth Privacy Policy Accept (GET)
- This API is used to update the privacy policy stored in the user's profile by providing the access token of the user accepting the privacy policy   
+#### Auth Privacy Policy Accept (GET)
+
+This API is used to update the privacy policy stored in the user's profile by providing the access token of the user accepting the privacy policy   
 
  
  
@@ -521,8 +530,9 @@ response = AuthenticationApi.accept_privacy_policy(access_token, fields)
   
   
  
-##### Auth Delete Account with Email Confirmation (DELETE)
- This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token   
+#### Auth Delete Account with Email Confirmation (DELETE)
+
+This API will send a confirmation email for account deletion to the customer's email when passed the customer's access token   
 
  
  
@@ -540,8 +550,9 @@ response = AuthenticationApi.delete_account_with_email_confirmation(access_token
   
   
  
-##### Auth Remove Email (DELETE)
- This API is used to remove additional emails from a user's account.   
+#### Auth Remove Email (DELETE)
+
+This API is used to remove additional emails from a user's account.   
 
  
  
@@ -587,8 +598,9 @@ List of APIs in this Section:
 
 
 
-##### Account Update (PUT)
- This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.   
+#### Account Update (PUT)
+
+This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.   
 
  
  
@@ -610,8 +622,9 @@ response = AccountApi.update_account_by_uid(account_user_profile_update_model, u
   
   
  
-##### Update Phone ID by UID (PUT)
- This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.   
+#### Update Phone ID by UID (PUT)
+
+This API is used to update the PhoneId by using the Uid's. Admin can update the PhoneId's for both the verified and unverified profiles. It will directly replace the PhoneId and bypass the OTP verification process.   
 
  
  
@@ -629,8 +642,9 @@ response = AccountApi.update_phone_id_by_uid(phone, uid, fields)
   
   
  
-##### Account Set Password (PUT)
- This API is used to set the password of an account in Cloud Storage.   
+#### Account Set Password (PUT)
+
+This API is used to set the password of an account in Cloud Storage.   
 
  
  
@@ -647,8 +661,9 @@ response = AccountApi.set_account_password_by_uid(password, uid)
   
   
  
-##### Account Invalidate Verification Email (PUT)
- This API is used to invalidate the Email Verification status on an account.   
+#### Account Invalidate Verification Email (PUT)
+
+This API is used to invalidate the Email Verification status on an account.   
 
  
  
@@ -666,8 +681,9 @@ response = AccountApi.invalidate_account_email_verification(uid, email_template,
   
   
  
-##### Reset phone ID verification (PUT)
- This API Allows you to reset the phone no verification of an end user’s account.   
+#### Reset phone ID verification (PUT)
+
+This API Allows you to reset the phone number verification of an end user’s account.   
 
  
  
@@ -684,8 +700,9 @@ response = AccountApi.reset_phone_id_verification_by_uid(uid, sms_template)
   
   
  
-##### Upsert Email (PUT)
- This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.   
+#### Upsert Email (PUT)
+
+This API is used to add/upsert another emails in account profile by different-different email types. If the email type is same then it will simply update the existing email, otherwise it will add a new email in Email array.   
 
  
  
@@ -705,8 +722,9 @@ response = AccountApi.upsert_email(upsert_email_model, uid, fields)
   
   
  
-##### Update UID (PUT)
- This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.   
+#### Update UID (PUT)
+
+This API is used to update a user's Uid. It will update all profiles, custom objects and consent management logs associated with the Uid.   
 
  
  
@@ -725,10 +743,11 @@ response = AccountApi.account_update_uid(update_uid_model, uid)
   
   
  
-##### Account Create (POST)
- This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user. 
+#### Account Create (POST)
+
+This API is used to create an account in Cloud Storage. This API bypasses the normal email verification process and manually creates the user. 
  
- In order to use this API, you need to format a JSON request body with all of the mandatory fields   
+In order to use this API, you need to format a JSON request body with all of the mandatory fields   
 
  
  
@@ -750,8 +769,9 @@ response = AccountApi.create_account(account_create_model, fields)
   
   
  
-##### Forgot Password token (POST)
- This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.   
+#### Forgot Password token (POST)
+
+This API Returns a Forgot Password Token it can also be used to send a Forgot Password email to the customer. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' in the body.   
 
  
  
@@ -770,8 +790,9 @@ response = AccountApi.get_forgot_password_token(email, email_template, reset_pas
   
   
  
-##### Email Verification token (POST)
- This API Returns an Email Verification token.   
+#### Email Verification token (POST)
+
+This API Returns an Email Verification token.   
 
  
  
@@ -787,8 +808,9 @@ response = AccountApi.get_email_verification_token(email)
   
   
  
-##### Account Profiles by Email (GET)
- This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.   
+#### Account Profiles by Email (GET)
+
+This API is used to retrieve all of the profile data, associated with the specified account by email in Cloud Storage.   
 
  
  
@@ -805,8 +827,9 @@ response = AccountApi.get_account_profile_by_email(email, fields)
   
   
  
-##### Account Profile by Phone ID (GET)
- This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.   
+#### Account Profile by Phone ID (GET)
+
+This API is used to retrieve all of the profile data, associated with the account by phone number in Cloud Storage.   
 
  
  
@@ -823,8 +846,9 @@ response = AccountApi.get_account_profile_by_phone(phone, fields)
   
   
  
-##### Account Profiles by UID (GET)
- This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.   
+#### Account Profiles by UID (GET)
+
+This API is used to retrieve all of the profile data, associated with the account by uid in Cloud Storage.   
 
  
  
@@ -841,8 +865,9 @@ response = AccountApi.get_account_profile_by_uid(uid, fields)
   
   
  
-##### Account Password (GET)
- This API use to retrive the hashed password of a specified account in Cloud Storage.   
+#### Account Password (GET)
+
+This API is used to retrieve the hashed password of a specified account in Cloud Storage.   
 
  
  
@@ -858,8 +883,9 @@ response = AccountApi.get_account_password_hash_by_uid(uid)
   
   
  
-##### Access Token based on UID or User impersonation API (GET)
- The API is used to get LoginRadius access token based on UID.   
+#### Access Token based on UID or User impersonation API (GET)
+
+The API is used to get LoginRadius access token based on UID.   
 
  
  
@@ -875,8 +901,9 @@ response = AccountApi.get_access_token_by_uid(uid)
   
   
  
-##### Account Identities by Email (GET)
- Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.   
+#### Account Identities by Email (GET)
+
+Note: This is intended for specific workflows where an email may be associated to multiple UIDs. This API is used to retrieve all of the identities (UID and Profiles), associated with a specified email in Cloud Storage.   
 
  
  
@@ -893,8 +920,9 @@ response = AccountApi.get_account_identities_by_email(email, fields)
   
   
  
-##### Account Delete (DELETE)
- This API deletes the Users account and allows them to re-register for a new account.   
+#### Account Delete (DELETE)
+
+This API deletes the Users account and allows them to re-register for a new account.   
 
  
  
@@ -910,8 +938,9 @@ response = AccountApi.delete_account_by_uid(uid)
   
   
  
-##### Account Remove Email (DELETE)
- Use this API to Remove emails from a user Account   
+#### Account Remove Email (DELETE)
+
+Use this API to Remove emails from a user Account   
 
  
  
@@ -929,8 +958,9 @@ response = AccountApi.remove_email(email, uid, fields)
   
   
  
-##### Delete User Profiles By Email (DELETE)
- This API is used to delete all user profiles associated with an Email.   
+#### Delete User Profiles By Email (DELETE)
+
+This API is used to delete all user profiles associated with an Email.   
 
  
  
@@ -967,8 +997,9 @@ List of APIs in this Section:
 
 
 
-##### Phone Reset Password by OTP (PUT)
- This API is used to reset the password   
+#### Phone Reset Password by OTP (PUT)
+
+This API is used to reset the password   
 
  
  
@@ -988,8 +1019,9 @@ response = PhoneAuthenticationApi.reset_password_by_phone_otp(reset_password_by_
   
   
  
-##### Phone Verification OTP (PUT)
- This API is used to validate the verification code sent to verify a user's phone number   
+#### Phone Verification OTP (PUT)
+
+This API is used to validate the verification code sent to verify a user's phone number   
 
  
  
@@ -1008,8 +1040,9 @@ response = PhoneAuthenticationApi.phone_verification_by_otp(otp, phone, fields, 
   
   
  
-##### Phone Verification OTP by Token (PUT)
- This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.   
+#### Phone Verification OTP by Token (PUT)
+
+This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.   
 
  
  
@@ -1027,8 +1060,9 @@ response = PhoneAuthenticationApi.phone_verification_otp_by_access_token(access_
   
   
  
-##### Phone Number Update (PUT)
- This API is used to update the login Phone Number of users   
+#### Phone Number Update (PUT)
+
+This API is used to update the login Phone Number of users   
 
  
  
@@ -1046,8 +1080,9 @@ response = PhoneAuthenticationApi.update_phone_number(access_token, phone, sms_t
   
   
  
-##### Phone Login (POST)
- This API retrieves a copy of the user data based on the Phone   
+#### Phone Login (POST)
+
+This API retrieves a copy of the user data based on the Phone   
 
  
  
@@ -1069,8 +1104,9 @@ response = PhoneAuthenticationApi.login_by_phone(phone_authentication_model, fie
   
   
  
-##### Phone Forgot Password by OTP (POST)
- This API is used to send the OTP to reset the account password.   
+#### Phone Forgot Password by OTP (POST)
+
+This API is used to send the OTP to reset the account password.   
 
  
  
@@ -1087,8 +1123,9 @@ response = PhoneAuthenticationApi.forgot_password_by_phone_otp(phone, sms_templa
   
   
  
-##### Phone Resend Verification OTP (POST)
- This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input   
+#### Phone Resend Verification OTP (POST)
+
+This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input   
 
  
  
@@ -1105,8 +1142,9 @@ response = PhoneAuthenticationApi.phone_resend_verification_otp(phone, sms_templ
   
   
  
-##### Phone Resend Verification OTP By Token (POST)
- This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists   
+#### Phone Resend Verification OTP By Token (POST)
+
+This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists   
 
  
  
@@ -1124,8 +1162,9 @@ response = PhoneAuthenticationApi.phone_resend_verification_otp_by_token(access_
   
   
  
-##### Phone User Registration by SMS (POST)
- This API registers the new users into your Cloud Storage and triggers the phone verification process.   
+#### Phone User Registration by SMS (POST)
+
+This API registers the new users into your Cloud Storage and triggers the phone verification process.   
 
  
  
@@ -1152,8 +1191,9 @@ response = PhoneAuthenticationApi.user_registration_by_phone(auth_user_registrat
   
   
  
-##### Phone Number Availability (GET)
- This API is used to check the Phone Number exists or not on your site.   
+#### Phone Number Availability (GET)
+
+This API is used to check if the Phone Number exists or not on your site.   
 
  
  
@@ -1169,8 +1209,9 @@ response = PhoneAuthenticationApi.check_phone_number_availability(phone)
   
   
  
-##### Remove Phone ID by Access Token (DELETE)
- This API is used to delete the Phone ID on a user's account via the access token   
+#### Remove Phone ID by Access Token (DELETE)
+
+This API is used to delete the Phone ID on a user's account via the access token   
 
  
  
@@ -1208,8 +1249,9 @@ List of APIs in this Section:
 
 
 
-##### Update MFA by Access Token (PUT)
- This API is used to Enable Multi-factor authentication by access token on user login   
+#### Update MFA by Access Token (PUT)
+
+This API is used to Enable Multi-factor authentication by access token on user login   
 
  
  
@@ -1230,8 +1272,9 @@ response = MultiFactorAuthenticationApi.mfa_update_by_access_token(access_token,
   
   
  
-##### MFA Update Phone Number by Token (PUT)
- This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number   
+#### MFA Update Phone Number by Token (PUT)
+
+This API is used to update the Multi-factor authentication phone number by sending the verification OTP to the provided phone number   
 
  
  
@@ -1249,8 +1292,9 @@ response = MultiFactorAuthenticationApi.mfa_update_phone_number_by_token(access_
   
   
  
-##### MFA Validate Google Auth Code (PUT)
- This API is used to login via Multi-factor-authentication by passing the google authenticator code.   
+#### MFA Validate Google Auth Code (PUT)
+
+This API is used to login via Multi-factor-authentication by passing the google authenticator code.   
 
  
  
@@ -1269,8 +1313,9 @@ response = MultiFactorAuthenticationApi.mfa_validate_google_auth_code(google_aut
   
   
  
-##### MFA Update Phone Number (PUT)
- This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number   
+#### MFA Update Phone Number (PUT)
+
+This API is used to update (if configured) the phone number used for Multi-factor authentication by sending the verification OTP to the provided phone number   
 
  
  
@@ -1288,8 +1333,9 @@ response = MultiFactorAuthenticationApi.mfa_update_phone_number(phone_no_2fa, se
   
   
  
-##### MFA Email Login (POST)
- This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.   
+#### MFA Email Login (POST)
+
+This API can be used to login by emailid on a Multi-factor authentication enabled LoginRadius site.   
 
  
  
@@ -1312,8 +1358,9 @@ response = MultiFactorAuthenticationApi.mfa_login_by_email(email, password, emai
   
   
  
-##### MFA Phone Login (POST)
- This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.   
+#### MFA Phone Login (POST)
+
+This API can be used to login by Phone on a Multi-factor authentication enabled LoginRadius site.   
 
  
  
@@ -1336,8 +1383,9 @@ response = MultiFactorAuthenticationApi.mfa_login_by_phone(password, phone, emai
   
   
  
-##### MFA Validate Access Token (GET)
- This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.   
+#### MFA Validate Access Token (GET)
+
+This API is used to configure the Multi-factor authentication after login by using the access token when MFA is set as optional on the LoginRadius site.   
 
  
  
@@ -1354,8 +1402,9 @@ response = MultiFactorAuthenticationApi.mfa_configure_by_access_token(access_tok
   
   
  
-##### MFA Resend Otp (GET)
- This API is used to resending the verification OTP to the provided phone number   
+#### MFA Resend Otp (GET)
+
+This API is used to resending the verification OTP to the provided phone number   
 
  
  
@@ -1372,8 +1421,9 @@ response = MultiFactorAuthenticationApi.mfa_resend_otp(second_factor_authenticat
   
   
  
-##### MFA Reset Google Authenticator by Token (DELETE)
- This API Resets the Google Authenticator configurations on a given account via the access token   
+#### MFA Reset Google Authenticator by Token (DELETE)
+
+This API Resets the Google Authenticator configurations on a given account via the access token   
 
  
  
@@ -1390,8 +1440,9 @@ response = MultiFactorAuthenticationApi.mfa_reset_google_auth_by_token(access_to
   
   
  
-##### MFA Reset SMS Authenticator by Token (DELETE)
- This API resets the SMS Authenticator configurations on a given account via the access token.   
+#### MFA Reset SMS Authenticator by Token (DELETE)
+
+This API resets the SMS Authenticator configurations on a given account via the access token.   
 
  
  
@@ -1408,8 +1459,9 @@ response = MultiFactorAuthenticationApi.mfa_reset_sms_auth_by_token(access_token
   
   
  
-##### MFA Reset SMS Authenticator By UID (DELETE)
- This API resets the SMS Authenticator configurations on a given account via the UID.   
+#### MFA Reset SMS Authenticator By UID (DELETE)
+
+This API resets the SMS Authenticator configurations on a given account via the UID.   
 
  
  
@@ -1426,8 +1478,9 @@ response = MultiFactorAuthenticationApi.mfa_reset_sms_authenticator_by_uid(otpau
   
   
  
-##### MFA Reset Google Authenticator By UID (DELETE)
- This API resets the Google Authenticator configurations on a given account via the UID.   
+#### MFA Reset Google Authenticator By UID (DELETE)
+
+This API resets the Google Authenticator configurations on a given account via the UID.   
 
  
  
@@ -1458,8 +1511,9 @@ List of APIs in this Section:
 
 
 
-##### Passwordless Login Phone Verification (PUT)
- This API verifies an account by OTP and allows the customer to login.   
+#### Passwordless Login Phone Verification (PUT)
+
+This API verifies an account by OTP and allows the customer to login.   
 
  
  
@@ -1480,8 +1534,9 @@ response = PasswordLessLoginApi.passwordless_login_phone_verification(password_l
   
   
  
-##### Passwordless Login by Phone (GET)
- API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID   
+#### Passwordless Login by Phone (GET)
+
+This API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID.   
 
  
  
@@ -1498,8 +1553,9 @@ response = PasswordLessLoginApi.passwordless_login_by_phone(phone, sms_template)
   
   
  
-##### Passwordless Login By Email (GET)
- This API is used to send a Passwordless Login verification link to the provided Email ID   
+#### Passwordless Login By Email (GET)
+
+This API is used to send a Passwordless Login verification link to the provided Email ID.   
 
  
  
@@ -1517,8 +1573,11 @@ response = PasswordLessLoginApi.passwordless_login_by_email(email, password_less
   
   
  
-##### Passwordless Login Verification (GET)
- This API is used to verify the Passwordless Login verification link. Note: If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API   
+#### Passwordless Login Verification (GET)
+
+This API is used to verify the Passwordless Login verification link. 
+
+> **Note:** If you are using Passwordless Login by Phone you will need to use the Passwordless Login Phone Verification API.
 
  
  
@@ -1560,8 +1619,9 @@ List of APIs in this Section:
 
 
 
-##### Assign Roles by UID (PUT)
- This API is used to assign your desired roles to a given user.   
+#### Assign Roles by UID (PUT)
+
+This API is used to assign your desired roles to a given user.   
 
  
  
@@ -1580,8 +1640,9 @@ response = RoleApi.assign_roles_by_uid(account_roles_model, uid)
   
   
  
-##### Upsert Context (PUT)
- This API creates a Context with a set of Roles   
+#### Upsert Context (PUT)
+
+This API creates a Context with a set of Roles   
 
  
  
@@ -1600,8 +1661,9 @@ response = RoleApi.update_role_context_by_uid(account_role_context_model, uid)
   
   
  
-##### Add Permissions to Role (PUT)
- This API is used to add permissions to a given role.   
+#### Add Permissions to Role (PUT)
+
+This API is used to add permissions to a given role.   
 
  
  
@@ -1620,8 +1682,9 @@ response = RoleApi.add_role_permissions(permissions_model, role)
   
   
  
-##### Roles Create (POST)
- This API creates a role with permissions.   
+#### Roles Create (POST)
+
+This API creates a role with permissions.   
 
  
  
@@ -1639,8 +1702,9 @@ response = RoleApi.create_roles(roles_model)
   
   
  
-##### Roles by UID (GET)
- API is used to retrieve all the assigned roles of a particular User.   
+#### Roles by UID (GET)
+
+This API is used to retrieve all the assigned roles of a particular User.   
 
  
  
@@ -1656,8 +1720,9 @@ response = RoleApi.get_roles_by_uid(uid)
   
   
  
-##### Get Context with Roles and Permissions (GET)
- This API Gets the contexts that have been configured and the associated roles and permissions.   
+#### Get Context with Roles and Permissions (GET)
+
+This API gets the contexts that have been configured and the associated roles and permissions.   
 
  
  
@@ -1673,8 +1738,9 @@ response = RoleApi.get_role_context_by_uid(uid)
   
   
  
-##### Role Context profile (GET)
- The API is used to retrieve role context by the context name.   
+#### Role Context profile (GET)
+
+This API is used to retrieve role context by the context name.   
 
  
  
@@ -1690,8 +1756,9 @@ response = RoleApi.get_role_context_by_context_name(context_name)
   
   
  
-##### Roles List (GET)
- This API retrieves the complete list of created roles with permissions of your app.   
+#### Roles List (GET)
+
+This API retrieves the complete list of created roles with permissions of your app.   
 
  
  
@@ -1706,8 +1773,9 @@ response = RoleApi.get_roles_list()
   
   
  
-##### Unassign Roles by UID (DELETE)
- This API is used to unassign roles from a user.   
+#### Unassign Roles by UID (DELETE)
+
+This API is used to unassign roles from a user.   
 
  
  
@@ -1726,8 +1794,9 @@ response = RoleApi.unassign_roles_by_uid(account_roles_model, uid)
   
   
  
-##### Delete Role Context (DELETE)
- This API Deletes the specified Role Context   
+#### Delete Role Context (DELETE)
+
+This API Deletes the specified Role Context.  
 
  
  
@@ -1744,8 +1813,9 @@ response = RoleApi.delete_role_context_by_uid(context_name, uid)
   
   
  
-##### Delete Role from Context (DELETE)
- This API Deletes the specified Role from a Context.   
+#### Delete Role from Context (DELETE)
+
+This API Deletes the specified Role from a Context.   
 
  
  
@@ -1765,8 +1835,9 @@ response = RoleApi.delete_roles_from_role_context_by_uid(context_name, role_cont
   
   
  
-##### Delete Additional Permission from Context (DELETE)
- This API Deletes Additional Permissions from Context.   
+#### Delete Additional Permission from Context (DELETE)
+
+This API deletes additional permissions from Context.   
 
  
  
@@ -1786,8 +1857,9 @@ response = RoleApi.delete_additional_permission_from_role_context_by_uid(context
   
   
  
-##### Account Delete Role (DELETE)
- This API is used to delete the role.   
+#### Account Delete Role (DELETE)
+
+This API is used to delete the role.   
 
  
  
@@ -1803,8 +1875,9 @@ response = RoleApi.delete_role(role)
   
   
  
-##### Remove Permissions (DELETE)
- API is used to remove permissions from a role.   
+#### Remove Permissions (DELETE)
+
+This API is used to remove permissions from a role.   
 
  
  
@@ -1834,8 +1907,9 @@ List of APIs in this Section:
 
 
 
-##### Generate SOTT (GET)
- This API allows you to generate SOTT with a given expiration time.   
+#### Generate SOTT (GET)
+
+This API allows you to generate SOTT with a given expiration time.   
 
  
  
@@ -1867,8 +1941,9 @@ List of APIs in this Section:
 
 
 
-##### Access Token via Facebook Token (GET)
- The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.   
+#### Access Token via Facebook Token (GET)
+
+The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -1884,8 +1959,9 @@ response = NativeSocialApi.get_access_token_by_facebook_access_token(fb_access_t
   
   
  
-##### Access Token via Twitter Token (GET)
- The API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.   
+#### Access Token via Twitter Token (GET)
+
+This API is used to get LoginRadius access token by sending Twitter's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -1902,8 +1978,9 @@ response = NativeSocialApi.get_access_token_by_twitter_access_token(tw_access_to
   
   
  
-##### Access Token via Google Token (GET)
- The API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.   
+#### Access Token via Google Token (GET)
+
+This API is used to get LoginRadius access token by sending Google's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -1921,8 +1998,9 @@ response = NativeSocialApi.get_access_token_by_google_access_token(google_access
   
   
  
-##### Access Token using google JWT token for Native Mobile Login (GET)
- This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.   
+#### Access Token using google JWT token for Native Mobile Login (GET)
+
+This API is used to Get LoginRadius Access Token using google jwt id token for google native mobile login/registration.   
 
  
  
@@ -1938,8 +2016,9 @@ response = NativeSocialApi.get_access_token_by_google_j_w_t_access_token(id_toke
   
   
  
-##### Access Token via Linkedin Token (GET)
- The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.   
+#### Access Token via Linkedin Token (GET)
+
+The API is used to get LoginRadius access token by sending Linkedin's access token. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -1955,8 +2034,9 @@ response = NativeSocialApi.get_access_token_by_linkedin_access_token(ln_access_t
   
   
  
-##### Access Token via Google AuthCode (GET)
- The API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.   
+#### Access Token via Google AuthCode (GET)
+
+This API is used to get LoginRadius access token by sending Google's AuthCode. It will be valid for the specific duration of time specified in the response.   
 
  
  
@@ -1986,8 +2066,9 @@ List of APIs in this Section:
 
 
 
-##### Webhook Subscribe (POST)
- API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.   
+#### Webhook Subscribe (POST)
+
+This API can be used to configure a WebHook on your LoginRadius site. Webhooks also work on subscribe and notification model, subscribe your hook and get a notification. Equivalent to RESThook but these provide security on basis of signature and RESThook work on unique URL. Following are the events that are allowed by LoginRadius to trigger a WebHook service call.   
 
  
  
@@ -2006,8 +2087,9 @@ response = WebHookApi.web_hook_subscribe(web_hook_subscribe_model)
   
   
  
-##### Webhook Subscribed URLs (GET)
- This API is used to fatch all the subscribed URLs, for particular event   
+#### Webhook Subscribed URLs (GET)
+
+This API is used to fetch all the subscribed URLs, for particular event   
 
  
  
@@ -2023,8 +2105,9 @@ response = WebHookApi.get_web_hook_subscribed_u_r_ls(event)
   
   
  
-##### Webhook Test (GET)
- API can be used to test a subscribed WebHook.   
+#### Webhook Test (GET)
+
+This API can be used to test a subscribed WebHook.   
 
  
  
@@ -2039,8 +2122,9 @@ response = WebHookApi.webhook_test()
   
   
  
-##### WebHook Unsubscribe (DELETE)
- API can be used to unsubscribe a WebHook configured on your LoginRadius site.   
+#### WebHook Unsubscribe (DELETE)
+
+This API can be used to unsubscribe a WebHook configured on your LoginRadius site.   
 
  
  
