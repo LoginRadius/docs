@@ -5,7 +5,7 @@ path: "/references/api/jwt"
 ---
 
 
-# JWT code
+# JWT 
 
 ## JWT Token
 

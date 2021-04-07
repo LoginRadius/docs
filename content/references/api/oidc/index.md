@@ -5,7 +5,7 @@ path: "/references/api/oidc"
 ---
 
 
-# OpenID code
+# OpenID Connect
 
 ## Access Token by OpenID code
 

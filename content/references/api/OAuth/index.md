@@ -4,7 +4,7 @@ description: Addition to user registration systems is the ability to define role
 path: "/references/api/OAuth"
 ---
 
-# OAuth Code
+# OAuth 2.0
 
 ## Request Tokens
 This API enables you to request a new access token from the Device code Endpoint
