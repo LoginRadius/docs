@@ -7,7 +7,7 @@ path: "/references/api/OAuth"
 # OAuth Code
 
 ## Request Tokens
-This API allows you to requests a new device code, user code from the Device code Endpoint
+This API enables you to request via a new access token from the Device code Endpoint
 
 HTTP request
 
@@ -144,6 +144,57 @@ This is what a sample reponse looks like:
   "expires_in": 1800
 }
 ```
+
+## Refresh Access Token
+
+This API allows to refresh an access_token
+
+
+HTTP request
+
+POST
+https://cloud-api.loginradius.com/sso/oauth/access_token/refresh
+
+
+### Body Params
+| Name    | Type    | Default   | Description   |
+|---      |---      |---      |---          |
+| client_id   |  String     |  none         | LoginRadius API Key [REQUIRED] |
+| client_secret    |  String     |  none         | LoginRadius Secret Key [REQUIRED] |
+| grant_type   |  String     |  none         | The grant_type, needs to be refresh_token [REQUIRED] |
+| refresh_token |  String     |  none         | this is the refresh_token you received when you used the 'Access token by OAuth 2 token' and 'Access Token by Account Password' API call [REQUIRED]|
+
+### Response
+
+```
+{
+  "access_token": "********-****-****-*****************",
+  "token_type": "access_token",
+  "expires_in": 394,
+  "refresh_token": "********-****-****-*****************"
+}
+```
+
+## Revoke Refresh Token
+
+This API is used to revoke the refresh token access and that revoked token can not be used further to refresh access token.
+
+HTTP request
+
+POST
+https://cloud-api.loginradius.com/sso/oauth/refresh_token/revoke
+
+
+### Body Params
+| Name    | Type    | Default   | Description   |
+|---      |---      |---      |---          |
+| client_id   |  String     |  none         | LoginRadius API Key [REQUIRED] |
+| client_secret    |  String     |  none         | LoginRadius Secret Key [REQUIRED] |
+| refresh_token |  String     |  none         | this is the refresh_token you received when you used the 'Access token by OAuth 2 token' or 'Access Token by Account Password' API calls [REQUIRED] |
+
+### Response
+
+The server successfully processed the request, and is not returning any content.(HTTP status code 200)
 
 
 

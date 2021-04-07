@@ -219,6 +219,7 @@ Facebook uses the key hash to authenticate interactions between your app and the
 *   After the creation of App, click the **Setting** from left panel, select **Add Plateform** and choose **iOS**.
 *   Pass your project bundle ID, iPhone store ID and iPad store ID.
 
+
 ![alt_text](images/facebook-native-ios.png "image_tooltip")
 
 
@@ -235,8 +236,6 @@ If you're getting the above error,then you need to specify version of the react-
     npm install react-native-google-signin@0.12 --save
     react-native link react-native-google-signin
 
-
-*   Google Configuration for Google Native Login
 
 #### Android
 
