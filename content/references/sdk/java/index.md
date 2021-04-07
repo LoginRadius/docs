@@ -7,11 +7,13 @@ path: "/references/sdk/java"
 
 # JAVA SDK
 
-This document describes how to start using JAVA SDK and its various features.
+>**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
+
+This document describes how to start using JAVA SDK and its various features. You can get the SDK from [here](https://github.com/LoginRadius/java-sdk).
 
 > **Note:** You must have JAVA JDK 8 or JDK 11 installed on your system.
 
-## SDK Installation
+## SDK Installation and Configuration
 
 Download the JAVA SDK from [here](https://github.com/LoginRadius/java-sdk).
 
@@ -32,7 +34,7 @@ src
 | -- |--- |-- --- profile.html
 ```
 
-add this snippet in pom.xml
+Add this snippet in pom.xml
 
 ```
 <dependency>
@@ -48,7 +50,7 @@ add this snippet in pom.xml
 > For more information on SDK configuration and obtaining API credentials, refer to this [tutorial](/tutorial/java/).
 
 
-### API Methods
+## API Methods
 
 Similar to the above example, you can use other API Methods to implement more features.
 
