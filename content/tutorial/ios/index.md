@@ -13,6 +13,11 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
 
+Watch this video to get started, or refer to the section below for the text-based guide.
+
+<figure class="video_container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-3zZSRiOAZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+
 ## Get Credentials
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name** (when you signed up for the LoginRadius account, it created an app for you), **API Key**, and **SOTT**.
