@@ -482,6 +482,10 @@ const Middle = () => {
               <li>
                 <Link to="guide/enable-force-logout">Enable Force Logout</Link>
               </li>
+              <li>
+                <Link to="guide/block-disposable-email">Block disposable Email</Link>
+              </li>
+              
             </ul>
           </div>
           {/*Secure Authentication*/}
