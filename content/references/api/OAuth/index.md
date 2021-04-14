@@ -9,16 +9,14 @@ path: "/references/api/OAuth"
 ## Request Tokens
 This API enables you to request a new access token from the Device code Endpoint
 
-HTTP request
+### Endpoint
 
-POST
-https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token
-
+`POST` `https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token`
 
 ### Template Params
 
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | Oauthappname   |  String     |  none         | The name for the OAuth App you have configured in the LoginRadius Dashboard. [REQUIRED]           |
 
 
@@ -28,7 +26,7 @@ device_code :Enter the device code [REQUIRED]
 Grant-Type :Value should be used as urn:ietf:params:oauth:grant-type:device_code [REQUIRED]
 
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | client_id  |  String     |  none         | Your application's Client ID. [REQUIRED] |
 | device_code  |  String     |  none         | device_code :Enter the device code [REQUIRED] |
 | Grant-Type |  String     |  none         | Value should be used as urn:ietf:params:oauth:grant-type:device_code [REQUIRED] |
@@ -49,15 +47,14 @@ This is what a sample response looks like:
 
 This API allows get a LoginRadius access_token from an OAuth 2.0 Token.
 
-HTTP request
+### Endpoint
 
-POST
-https://cloud-api.loginradius.com/sso/oauth/access_token
+`POST` `https://cloud-api.loginradius.com/sso/oauth/access_token`
 
 ### Body Params
 
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | client_id   |  String     |  none         | LoginRadius API Key [REQUIRED] |
 | client_secret    |  String     |  none         | LoginRadius Secret Key [REQUIRED] |
 | redirect_uri   |  String     |  none         | Redirection URI [REQUIRED] |
@@ -82,14 +79,13 @@ This is what a sample response looks like:
 
 This API allows you to obtain a LoginRadius access_token by passing in the customer's account password along with their email/username/phoneid as part of the Resource Owner Password Credential Flow.
 
-HTTP request
+### Endpoint
 
-POST
-https://cloud-api.loginradius.com/sso/oauth/access_token
+`POST` `https://cloud-api.loginradius.com/sso/oauth/access_token`
 
 ### Body Params
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | client_id   |  String     |  none         | LoginRadius API Key [REQUIRED] |
 | client_secret    |  String     |  none         | LoginRadius Secret Key [REQUIRED] |
 | grant_type   |  String     |  none         | Needs to be 'password' [REQUIRED] |
@@ -113,21 +109,20 @@ This is what a sample response looks like:
 This API allows you to requests a new device code, user code from the Device code Endpoint
 
 
-HTTP request
+### Endpoint
 
-POST
-https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device
+`POST` `https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device`
 
 ### Template Params
 
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | Oauthappname   |  String     |  none         | The name for the OAuth App you have configured in the LoginRadius Dashboard. [REQUIRED]           |
 
 ### Body Params
 
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | client_id |  String     |  none         | Your application's Client ID. [REQUIRED] |
 | scope |  String     |  none         | The scope for this is email profile. |
 
@@ -150,15 +145,14 @@ This is what a sample response looks like:
 This API allows to refresh an access_token
 
 
-HTTP request
+### Endpoint
 
-POST
-https://cloud-api.loginradius.com/sso/oauth/access_token/refresh
+`POST` `https://cloud-api.loginradius.com/sso/oauth/access_token/refresh`
 
 
 ### Body Params
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | client_id   |  String     |  none         | LoginRadius API Key [REQUIRED] |
 | client_secret    |  String     |  none         | LoginRadius Secret Key [REQUIRED] |
 | grant_type   |  String     |  none         | The grant_type, needs to be refresh_token [REQUIRED] |
@@ -180,15 +174,13 @@ This is what a sample response looks like:
 
 This API is used to revoke the refresh token access and that revoked token can not be used further to refresh access token.
 
-HTTP request
+### Endpoint
 
-POST
-https://cloud-api.loginradius.com/sso/oauth/refresh_token/revoke
-
+`POST` `https://cloud-api.loginradius.com/sso/oauth/refresh_token/revoke`
 
 ### Body Params
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 | client_id   |  String     |  none         | LoginRadius API Key [REQUIRED] |
 | client_secret    |  String     |  none         | LoginRadius Secret Key [REQUIRED] |
 | refresh_token |  String     |  none         | this is the refresh_token you received when you used the 'Access token by OAuth 2 token' or 'Access Token by Account Password' API calls [REQUIRED] |

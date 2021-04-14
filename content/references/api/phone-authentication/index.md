@@ -16,7 +16,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
   | LoginUrl | none | Url where the user is logging from [**Optional**] |
@@ -24,7 +24,7 @@ path: "/references/api/phone-authentication"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |password|Password for the email
   |phone|New Phone Number | Model Class containing Definition of payload for PhoneAuthenticationModel API [**Required**]
  
@@ -37,7 +37,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
  
@@ -50,7 +50,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
  
@@ -63,7 +63,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
@@ -77,7 +77,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | sott | none | LoginRadius Secured One Time Token [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -88,7 +88,7 @@ path: "/references/api/phone-authentication"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |FirstName|user's first name
   |LastName|user's last name
   |Password|Password for the email
@@ -103,7 +103,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Phone | none | The Registered Phone Number [**Required**] |
  
@@ -116,12 +116,12 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |otp|The Verification Code
   |password|Password for the email
   |Phone|New Phone Number | Model Class containing Definition of payload for ResetPasswordByOTP API [**Required**] 
@@ -135,7 +135,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Otp | none | The Verification Code [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -150,7 +150,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Otp | none | The Verification Code [**Required**] |
@@ -165,7 +165,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
@@ -179,7 +179,7 @@ path: "/references/api/phone-authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
 

@@ -16,7 +16,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
@@ -31,7 +31,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -40,7 +40,7 @@ path: "/references/api/authentication"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |email|user's email
   |password|Password for the email | Model Class containing Definition of payload for Email Authentication API [**Required**] 
  
@@ -53,7 +53,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | ResetPasswordUrl | none | Url to which user should get re-directed to for resetting the password [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
@@ -67,7 +67,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | sott | none | LoginRadius Secured One Time Token [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
@@ -78,7 +78,7 @@ path: "/references/api/authentication"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Email|boolean type value, default is true
   |FirstName|user's first name
   |LastName|user's last name
@@ -93,7 +93,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -104,7 +104,7 @@ path: "/references/api/authentication"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Email|boolean type value, default is true
   |FirstName|user's first name
   |g-recaptcha-response|The acknowledgement received by Google in Google recaptcha authorisation process.
@@ -120,7 +120,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
  
@@ -133,7 +133,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | PreventRefresh | none | Boolean value that when set as true, in addition of the access token being invalidated, it will no longer have the capability of being refreshed. [**Optional**] |
@@ -147,7 +147,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
  
@@ -160,7 +160,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -174,7 +174,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | deletetoken | none | Delete token received in the email [**Required**] |
  
@@ -187,7 +187,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Email | none | Email of the user [**Required**] |
   
@@ -200,7 +200,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | VerificationToken | none | Verification token received in the email [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -216,7 +216,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -231,7 +231,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
@@ -242,7 +242,7 @@ path: "/references/api/authentication"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |FirstName|user's first name
   |LastName|user's last name | Model Class containing Definition of payload for User Profile update API [**Required**] 
 
@@ -255,12 +255,12 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   | resettoken | The reset token received in the forgot password email. [**Required**]
   | password | The new password for the consumer's account. [**Required**]
   | welcomeemailtemplate | Welcome email template. [**Optional**]
@@ -275,7 +275,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | emailTemplate | none | Email template name [**Optional**] |
   | verificationUrl | none | Email verification url [**Optional**] |
@@ -289,7 +289,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | DeleteUrl | none | Url of the site [**Optional**] |
@@ -304,7 +304,7 @@ path: "/references/api/authentication"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
 

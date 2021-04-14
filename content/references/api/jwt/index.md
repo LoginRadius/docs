@@ -7,129 +7,13 @@ path: "/references/api/jwt"
 
 # JWT 
 
-## JWT Token
-
-Use this API to get JWT token by access token.
-
-HTTP Request
-
-GET
-https://api.loginradius.com/sso/jwt/api/token
-
-
-### Query Parameters
-
-
-| Name      | Type      | Default   | Description   |
-|---        |---        |---        |---            |
-| apikey    |  String       |  none         |   LoginRadius API Key [REQUIRED]          |
-| access_token          |String         | none  | Token generated from a successful oauth from social platform [REQUIRED]               |
-| jwtapp        |  String       | none          | JWT App Name [Required]           |   
-
-
-This is sample API code:
-
-- **Ruby**
-
-```ruby
-
-require 'uri'
-require 'net/http'
-url = URI('https://cloud-api.loginradius.com/sso/jwt/api/token?apikey=&jwtapp=&access_token=')
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = false
-request = Net::HTTP::Get.new(url)
-request['content-Type'] = 'application/x-www-form-urlencoded'
-response = http.request(request)
-puts response.read_body
-
-
-
-```
-
-- **Python**
-
-```python
-
-import requests
-
-url = "https://cloud-api.loginradius.com/sso/jwt/api/token"
-querystring = {"apikey":"","jwtapp":""}
-headers = {
-    'content-Type': 'application/x-www-form-urlencoded',
-}
-response = requests.request("GET", url, headers=headers, params=querystring)
-print(response.text)
-
-
-
-```
-- **Shell** 
-
-```shell
-wget --quiet \
-    --method GET \
-    --header 'content-Type: application/x-www-form-urlencoded' \
-    --output-document \
-    - 'https://cloud-api.loginradius.com/sso/jwt/api/token?apikey=&jwtapp=&access_token='
-
-
-```
-
-- **Javascript**
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://cloud-api.loginradius.com/sso/jwt/api/token?apikey=&jwtapp=&access_token=",
-    "method": "GET",
-    "headers": {
-"content-Type" : "application/x-www-form-urlencoded",
-},
-}
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-
-
-
-```
-
-
-> This is sample request body code :
-
-```json
-
-{
-    "apikey": "********-****-****-*****************",
-    "jwtapp": "dev-dummy-app",
-    "access_token": "********-****-****-*****************",
-    
-}
-
-```
-
-> The following displays the sample  response body code:
-
-```
-{
-    "signature": "vZ2lucmFkaXVzLmNvbSIsImlhdCI6MTUxMTkyOTgyNy**********NTExOTI5ODI3LCJleHAiOjE1MTE5"
-}
-
-```
-
 ## JWT Token by Username
-
 
 Use this API to get JWT token by access token by Username.
 
-HTTP Request
+### Endpoint
 
-POST
-https://api.loginradius.com/sso/jwt/api/login
-
+`POST` `https://api.loginradius.com/sso/jwt/api/login`
 
 ### Query Parameters
 
@@ -146,7 +30,7 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 | Name    | Type    | Default   | Description   |
-|---      |---      |---      |---          |
+|:---      |:---      |:---      |:---          |
 |username   |  String     |  none         |   User's registered username [REQUIRED]         |
 | password      |String         | none  | User's password[REQUIRED]             |
 
@@ -255,10 +139,9 @@ $.ajax(settings).done(function (response) {
 
 Use this API to get JWT token by access token by email
 
-HTTP Request
+### Endpoint
 
-POST
-https://api.loginradius.com/sso/jwt/api/login
+`POST` `https://api.loginradius.com/sso/jwt/api/login`
 
 
 ### Query Parameters
@@ -381,11 +264,9 @@ $.ajax(settings).done(function (response) {
 
 Use this API to get JWT token by access token by Phone
 
-HTTP Request
+### Endpoint
 
-POST
-https://api.loginradius.com/sso/jwt/api/login
-
+`POST` `https://api.loginradius.com/sso/jwt/api/login`
 
 ### Query Parameters
 
@@ -400,7 +281,6 @@ https://api.loginradius.com/sso/jwt/api/login
 
 
 ### Body Parameters
-
 
 | Name      | Type  | Description   |
 |:---        |:---            |:---            |
@@ -505,10 +385,116 @@ $.ajax(settings).done(function (response) {
 ```
 
 
+## JWT Token
+
+Use this API to get JWT token by access token.
+
+### Endpoint
+
+`GET` `https://api.loginradius.com/sso/jwt/api/token`
+
+### Query Parameters
+
+
+| Name      | Type      | Default   | Description   |
+|:---        |:---        |:---        |:---            |
+| apikey    |  String       |  none         |   LoginRadius API Key [REQUIRED]          |
+| access_token          |String         | none  | Token generated from a successful oauth from social platform [REQUIRED]               |
+| jwtapp        |  String       | none          | JWT App Name [Required]           |   
+
+
+This is sample API code:
+
+- **Ruby**
+
+```ruby
+
+require 'uri'
+require 'net/http'
+url = URI('https://cloud-api.loginradius.com/sso/jwt/api/token?apikey=&jwtapp=&access_token=')
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = false
+request = Net::HTTP::Get.new(url)
+request['content-Type'] = 'application/x-www-form-urlencoded'
+response = http.request(request)
+puts response.read_body
 
 
 
+```
 
+- **Python**
+
+```python
+
+import requests
+
+url = "https://cloud-api.loginradius.com/sso/jwt/api/token"
+querystring = {"apikey":"","jwtapp":""}
+headers = {
+    'content-Type': 'application/x-www-form-urlencoded',
+}
+response = requests.request("GET", url, headers=headers, params=querystring)
+print(response.text)
+
+
+
+```
+- **Shell** 
+
+```shell
+wget --quiet \
+    --method GET \
+    --header 'content-Type: application/x-www-form-urlencoded' \
+    --output-document \
+    - 'https://cloud-api.loginradius.com/sso/jwt/api/token?apikey=&jwtapp=&access_token='
+
+
+```
+
+- **Javascript**
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://cloud-api.loginradius.com/sso/jwt/api/token?apikey=&jwtapp=&access_token=",
+    "method": "GET",
+    "headers": {
+"content-Type" : "application/x-www-form-urlencoded",
+},
+}
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+
+
+
+```
+
+
+> This is sample request body code :
+
+```json
+
+{
+    "apikey": "********-****-****-*****************",
+    "jwtapp": "dev-dummy-app",
+    "access_token": "********-****-****-*****************",
+    
+}
+
+```
+
+> The following displays the sample  response body code:
+
+```
+{
+    "signature": "vZ2lucmFkaXVzLmNvbSIsImlhdCI6MTUxMTkyOTgyNy**********NTExOTI5ODI3LCJleHAiOjE1MTE5"
+}
+
+```
 
 
 [Go Back to Home Page](/)

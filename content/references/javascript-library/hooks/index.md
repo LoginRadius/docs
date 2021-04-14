@@ -528,7 +528,8 @@ LRObject.$hooks.call('addEventOnElement', {
 
 ### Password Strength Customization Hook
 
-This hook allows you to customize the color and message scheme used for the different evaluation cases for the consumer entered password. For more details regarding activating password strength in the JavaScript library, refer to the [Password Strength]() section of our [Advanced JS Customizations]() document.
+This hook allows you to customize the color and message scheme used for the different evaluation cases for the consumer entered password.
+<!--For more details regarding activating password strength in the JavaScript library, refer to the [Password Strength]() section of our [Advanced JS Customizations]() document.-->
 
 ```javascript
 LRObject.$hooks.call(

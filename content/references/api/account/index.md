@@ -18,14 +18,14 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Email|boolean type value, default is true
   |FirstName|user's first name
   |LastName|user's last name
@@ -40,7 +40,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
@@ -56,7 +56,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
@@ -69,7 +69,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Email | none | Email of the user [**Required**] |
@@ -84,7 +84,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Phone | none | The Registered Phone Number [**Required**] |
@@ -99,7 +99,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -113,7 +113,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
@@ -126,7 +126,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Uid | none | UID, the unified identifier for each user account [**Required**] |
@@ -142,7 +142,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Email | none | Email of the user [**Required**] |
@@ -157,7 +157,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -165,7 +165,7 @@ path: "/references/api/account"
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |FirstName|user's first name
   |LastName|user's last name | Model Class containing Definition of payload for Account Update API [**Required**]
 
@@ -178,7 +178,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -192,7 +192,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
@@ -205,7 +205,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | EmailTemplate | none | Email template name [**Optional**] |
@@ -220,7 +220,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
@@ -234,14 +234,14 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Email|user's email | Model Class containing Definition of payload for UpsertEmail Property [**Required**]
 
 ## Update UID
@@ -253,14 +253,14 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Key [**Required**] |
   | Uid | none | UID, the unified identifier for each user account [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |NewUid|New Uid | Payload containing Update UID [**Required**] 
 
 ## Account Delete
@@ -273,7 +273,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
@@ -287,7 +287,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -301,7 +301,7 @@ path: "/references/api/account"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | Email | none | Email of the user [**Required**] |

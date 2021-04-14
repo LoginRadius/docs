@@ -109,5 +109,4 @@ Any additional JavaScript files that you would like to import for your page can 
 
 The head tags for your page are located here. HTML elements added here will appear inside your page's `<head></head>` element.
 
-
-https://gitlab.com/loginradius/product/pioneer/developer-docs/-/merge_requests/282
+[Go Back to Home Page](/)

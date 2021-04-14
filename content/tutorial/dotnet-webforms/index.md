@@ -103,7 +103,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 
-- **LoginRadius App Name** is the name of your app as mentioned in [Get Credential](#get-credentials) step.
+- **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
 - **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-your-domain) if you are not using Local Domain for this tutorial.
 
 > For your Web Forms application, this will likely be a static page that requires data from your logged in user. However, the return_url can be anything from a static page to a backend server endpoint.
@@ -342,7 +342,7 @@ From here, you can use JQuery or Vanilla JavaScript to populate your web page wi
   }
   ```
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](/concepts/idx) for more information.
 
 ## Whitelist Your Domain
 

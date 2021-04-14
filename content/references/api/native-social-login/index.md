@@ -16,7 +16,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Fb_Access_Token | none | Facebook Access Token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
  
@@ -29,7 +29,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Key | none | LoginRadius API Key [**Required**] |
   | Tw_Access_Token | none | Twitter Access Token [**Required**] |
   | Tw_Token_Secret | none | Twitter Token Secret [**Required**] |
@@ -43,7 +43,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Google_Access_Token | none | Google Access Token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
   | client_id | none | Google Client ID [**Optional**] |
@@ -58,7 +58,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Id_Token | none | Google JWT id_token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
  
@@ -71,7 +71,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Key | none | LoginRadius API Key [**Required**] |
   | Ln_Access_Token | none | Linkedin Access Token [**Required**] |
 
@@ -84,7 +84,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Fs_Access_Token | none | Foursquare Access Token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
  
@@ -97,7 +97,7 @@ path: "/references/api/native-social-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | google_authcode | none | Google AuthCode [**Required**] |
 

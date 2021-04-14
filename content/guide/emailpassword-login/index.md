@@ -48,7 +48,7 @@ In the above screen, you will see that the Email/Password method is enabled by d
 
 * Edit template content.
 * Reset the template to its default content.
-* Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in [SMTP Configuration]().
+* Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in [SMTP Configuration](/guide/setup-your-smtp-provider).
 
 These actions are available in the action bar highlighted in the image below:
 

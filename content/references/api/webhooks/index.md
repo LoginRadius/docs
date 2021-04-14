@@ -16,13 +16,13 @@ path: "/references/api/webhooks"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Event|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject|
   |TargetUrl|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
 
@@ -35,7 +35,7 @@ path: "/references/api/webhooks"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | event | none | Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject [**Required**] |
@@ -49,7 +49,7 @@ path: "/references/api/webhooks"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -62,13 +62,13 @@ path: "/references/api/webhooks"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Event|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject |
   |TargetUrl|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
 

@@ -16,13 +16,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for Roles API [**Required**] 
  
 ## Roles by UID
@@ -34,7 +34,7 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -47,7 +47,7 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -60,7 +60,7 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -73,7 +73,7 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -86,13 +86,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for Create Role API [**Required**] 
  
 ## Upsert Context
@@ -104,13 +104,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |RoleContext|Array of RoleContext object, see body tab for structure | Model Class containing Definition of RoleContext payload [**Required**] 
 
 ## Add Permissions to Role
@@ -122,13 +122,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Permissions|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**] 
 
 ## Unassign Roles by UID
@@ -140,13 +140,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for Create Role API [**Required**] 
  
 ## Delete Role Context
@@ -158,7 +158,7 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -171,13 +171,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for RoleContextRemoveRole API [**Required**] 
  
 ## Delete Additional Permission from Context
@@ -189,13 +189,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |AdditionalPermissions|Array of String, which represents the additional permissions | Model Class containing Definition of payload for RoleContextAdditionalPermissionRemoveRole API [**Required**] 
  
 ## Account Delete Role
@@ -207,7 +207,7 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
  
@@ -220,13 +220,13 @@ path: "/references/api/roles-management"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Permissions|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**] 
 
 [Go Back to Home Page](/)

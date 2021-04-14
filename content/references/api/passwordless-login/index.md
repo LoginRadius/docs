@@ -16,7 +16,7 @@ path: "/references/api/passwordless-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Phone | none | The Registered Phone Number [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
@@ -30,7 +30,7 @@ path: "/references/api/passwordless-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Email | none | Email of the user [**Required**] |
   | PasswordLessLoginTemplate | none | Passwordless Login Template Name [**Optional**] |
@@ -45,7 +45,7 @@ path: "/references/api/passwordless-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | VerificationToken | none | Verification token received in the email [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
@@ -60,14 +60,14 @@ path: "/references/api/passwordless-login"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
 
   ### Body Attributes
   | Attribute | Description 
-  | ------------ | ------- | -------------------------------------------------------------------------------- | 
+  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |Otp|The Verification Code
   |Phone|New Phone Number | Model Class containing Definition of payload for PasswordLessLoginOtpModel API [**Required**] 
 

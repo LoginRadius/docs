@@ -16,7 +16,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Secret | none | LoginRadius API Secret [**Required**] |
   | Token | none | Token generated from a successful oauth from social platform [**Required**] |
  
@@ -29,7 +29,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
@@ -43,7 +43,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
@@ -57,7 +57,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
   | Token | none | Token generated from a successful oauth from social platform [**Required**] |
@@ -71,7 +71,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | AccountId | none | UID, the unified identifier for each user account [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
@@ -85,7 +85,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Key | none | LoginRadius API Key [**Required**] |
   | ProfileId | none | Social Provider Id [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
@@ -99,7 +99,7 @@ path: "/references/api/social"
 
   ### Query Parameters
   | Parameter    | Default | Description |
-  | ------------ | ------- | -------------------------------------------------------------------------------- |
+  | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Access_Token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
