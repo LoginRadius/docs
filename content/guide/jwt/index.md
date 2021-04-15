@@ -192,7 +192,7 @@ We've had a look at the basic structure and encryption of JWT now we can have a 
 
 * Validate All Claims
 
-  * iss -The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a StringOrURI value. The "iss" value should match to "https://.hub.loginradius.com/" to verify the JWT is issued by LoginRadius.
+  * iss -The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a StringOrURI value. The "iss" value should match to "https://<your-app-name>.hub.loginradius.com/" to verify the JWT is issued by LoginRadius.
 
   * iat - The "iat" (issued at) claim identifies the time at which the JWT was issued. This claim can be used to determine the age of the JWT. This can be used to reject tokens that seem too old.
 
