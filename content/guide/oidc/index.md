@@ -12,7 +12,7 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
 ## OpenID Configurations in LoginRadius Dashboard
 
-1. Log in to your LoginRadius Dashboard account, and navigate to **Integration**, the following screen will appear:
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, and navigate to **Integration**, the following screen will appear:
 
    ![alt_text](/images/OpenID-integration.png "image_tooltip")
 
