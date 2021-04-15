@@ -5,10 +5,12 @@ description: "This guide will explain everything about token handling."
 path: "/concepts/token-handle"
 ---
 
+# Handle Token 
+
 > Access tokens are used to retrieve profile data and handle other user functionality. A client passes the access token to the server, and the server uses this token to decide whether the client is authorized to access the resource or not.
 
 
-On successful authentication on the Auth Page (IDX), LoginRadius’s default script sends an access token in the query string as a token parameter with the return_url that you specified in the action URL. 
+On successful authentication on the [Auth Page (IDX)](/concepts/idx), LoginRadius’s default script sends an access token in the query string as a token parameter with the return_url that you specified in the action URL. 
 
 Below is the access URL for Login Action:
 
@@ -27,7 +29,7 @@ Check out our [Auth Page (IDX)](/concepts/idx) for more information about availa
 
 Access tokens have a default expiration time in the LoginRadius Identity Platform, and you can change it as per the business requirements. For example, access tokens should quickly expire in banking applications for security reasons.
 
-Check out our [Session Management](/security/session-management/) document for more details about the access token lifetime.
+Check out our [Session Management](/guide/change-session-lifetime) document for more details about the access token lifetime.
 
 ## Token Handling
 
@@ -35,7 +37,7 @@ Once your application receives an access token, store this token client-side/ser
 
 ### Web SDKs
 
-Following are the examples of [Web SDKs](/sdk-libraries/overview/) utilizing multiple languages to identify this token and retrieve user data.
+Following are the examples of [Web SDKs](/#sdk) utilizing multiple languages to identify this token and retrieve user data.
 
 PHP
 ```PHP
@@ -96,7 +98,7 @@ view:
 
 ### Mobile SDKs
 
-Following are the examples of utilizing Android and iOS [SDKs](/mobile-sdk-libraries/android-library/) to identify this token and retrieve user data.
+Following are the examples of utilizing Android and iOS [SDKs](/#sdk) to identify this token and retrieve user data.
 
 Android
 
@@ -137,4 +139,4 @@ AuthenticationAPI.authInstance().login(withPayload:parameter as? [AnyHashable : 
 > You can check out our GitHub repository for [developer authentication demos](https://github.com/LoginRadius/developer-authentication-demos) using Auth Page (IDX) in multiple languages.
 
 
-https://gitlab.com/loginradius/product/pioneer/developer-docs/-/merge_requests/282
+[Go Back to Home Page](/)
