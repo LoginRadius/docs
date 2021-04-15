@@ -11,14 +11,14 @@ Webhooks allow you to build or set up integrations that subscribe to certain eve
 
 >**Note:** Upon submitting the request to the configured Webhook URL, LoginRadius does not track payload deliverability.
 
-This guide explains how to configure webhook in LoginRadius Dashboard.
+This guide explains how to configure webhook in [LoginRadius Dashboard](https://dashboard.loginradius.com/).
 
 
 
 ## Configuration
 
 ### Step 1: Visit Integration Section 
-Login to your LoginRadius Dashboard account, from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
+Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
 ![alt_text](./images/configureintegration.png "image_tooltip")
 
