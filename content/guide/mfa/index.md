@@ -11,7 +11,7 @@ The LoginRadius Identity Platform provides Two-Factor Authentication to add an e
 You can keep 2FA optional or required for the users as per your business requirement. This guide explains how to configure the Two-Factor Authentication for your consumers. 
 
 
-> Note: When both [Passwordless Login](/docs/developer/howto/manage-passwordless-login/) and Two Factor Authentication (2FA) are implemented for your application, the consumer will not be prompted for 2FA, if they choose to authenticate with the Passwordless Login method.
+> Note: When both [Passwordless Login](/guide/passwordless-login/) and Two Factor Authentication (2FA) are implemented for your application, the consumer will not be prompted for 2FA, if they choose to authenticate with the Passwordless Login method.
 
 You can implement the 2FA in two following ways:
 
