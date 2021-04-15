@@ -26,7 +26,7 @@ The following are the list of Federated SSO Protocols supported by LoginRadius I
 
 [JWT](#jwt)
 
-[OAuth 2.0](#oauth-2.0)
+[OAuth 2.0](#oauth)
 
 [OpenID Connect](#openid-connect)
 
@@ -59,13 +59,15 @@ LoginRadius Identity Platform can function as either an OAuth 2 Identity Provide
 LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
 * [LoginRadius OAuth Document](../../guide/oauth)
+
 * [OAuth 2 RFC 6749](https://tools.ietf.org/html/rfc6749)
 
-### OpenID
+### OpenID Connect
 
 LoginRadius Identity Platform provides a way to integrate your OpenID client with our APIs by following the standards. LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
 * [LoginRadius OpenID Connect Document](../../guide/oidc)
+
 * [OpenID Connect Specs](https://openid.net/specs/openid-authentication-2_0.html)
 
 
