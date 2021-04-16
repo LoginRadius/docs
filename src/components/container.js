@@ -5,13 +5,17 @@ import PopUp from "./modal.js"
 
 const Middle = () => {
   const apiRef = React.createRef()
+  const sdkRef = React.createRef()
   const [display, setDisplay] = useState(false)
 
   useEffect(() => {
-    if (window && window.location && window.location.hash) {
-      if (window.location.hash !== "" && window.location.hash === "#api") {
+    if (window && window.location && window.location.hash && window.location.hash !== "") {
+      if (window.location.hash === "#api") {
         window.history.scrollRestoration = "manual"
         apiRef.current.scrollIntoView({ block: "start" })
+      } else if (window.location.hash === "#sdk") {
+        window.history.scrollRestoration = "manual"
+        sdkRef.current.scrollIntoView({ block: "start" })
       }
     }
   })
@@ -35,7 +39,7 @@ const Middle = () => {
             </p>
             <div className="btn-group">
               <a onClick={() => setDisplay(true)} className="btn btn-primary">
-                Try 5 Minute Setup Guide
+                Try 4 Minute Setup Guide
               </a>
               <Modal
                 id="setup-guide-video"
@@ -44,7 +48,7 @@ const Middle = () => {
               >
                 <div className="card no-shadow p-0">
                   <div className="popup-header">
-                    <h3 className="title">Try this 5 Minute Setup Guide</h3>
+                    <h3 className="title">Try this 4 Minute Setup Guide</h3>
                     <a onClick={() => setDisplay(false)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,7 @@ const Middle = () => {
                     <iframe
                       width="100%"
                       height="400"
-                      src="https://www.youtube.com/embed/ANlOdnzfCb0"
+                      src="https://www.youtube.com/embed/wgkT2x2khV4"
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -528,7 +532,7 @@ const Middle = () => {
           </div>
           {/*Concepts*/}
           {/*SDKs*/}
-          <div className="card">
+          <div ref={sdkRef} className="card">
             <div className="icon">
               <img src="images/sdks-icon.svg" />
             </div>
@@ -630,7 +634,7 @@ const Middle = () => {
               </li>
             </ul>
           </div>
-          {/*APIs*/}
+          {/*Javascript references*/}
           <div className="card">
             <div className="icon">
               <img src="images/references.svg" />

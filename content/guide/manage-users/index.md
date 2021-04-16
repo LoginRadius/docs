@@ -105,7 +105,7 @@ These are the supported actions you can perform on each registered user:
 
 * **Unblock User**
 
-  > Note: This action is only available in the [Blocked Users](#viewing-blocked-users) table.
+  > Note: This action is only available in the [Blocked Users](#view-blocked-users) table.
 
   Unblocks your user. Once unblocked, your user will be able to log in to your application. Clicking **Unblock User** will show a confirmation pop-up as displayed below:
 

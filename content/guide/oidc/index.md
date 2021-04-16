@@ -231,7 +231,7 @@ Upon successful consumer authentication, the tokens will be returned as follows:
 2. **Response of login dialog if **response_type=id_token** `REDIRECT_URI?id_token={JWT token}&state={Same value which is passed in request}`
 3. **Response of login dialog if response_type=token id_token** `REDIRECT_URI?{unique code}&token={LoginRadius access token}&id_token={JWT token}&state={Same value which is passed in request}`
 
-### Hybrid Flows
+### Hybrid Flow
 
 The hybrid flow is a combination of aspects from the previous two. This flow allows the client to make immediate use of an identity token and retrieve an authorization code via one round trip to the authentication server. This can be used for long lived access (again, through the use of refresh tokens). Clients using this flow must be able to maintain a secret.
 

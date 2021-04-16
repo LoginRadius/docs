@@ -91,9 +91,9 @@ In the `index.html` file, initialize the LoginRadius registration interface usin
 
 Replace the following placeholders in the above :
 
-- apiKey: **API Key** obtained in the [Get Credential](#getcredentials) step.
-- appName: **App Name** obtained in the [Get Credential](#getcredentials) step.
-- sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
+- apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
+- appName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
+- sott: **SOTT** obtained in the [Get Credentials](#get-credentials) step.
 
 
 ## Configure Registration and Login Page

@@ -618,7 +618,8 @@ List of APIs in this Section:
 
 *   GET : [Access Token via Facebook Token](#access-token-via-facebook-token-get)
 *   GET : [Access Token via Twitter Token](#access-token-via-twitter-token-get)
-Access Token via Facebook Token (GET)
+
+#### Access Token via Facebook Token (GET)
 
 The API is used to get LoginRadius access token by sending Facebook's access token. It will be valid for the specific duration of time specified in the response.
 

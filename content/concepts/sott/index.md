@@ -13,7 +13,7 @@ A SOTT combines data from your API secret, your API key, and a defined timestamp
 
 ## Generating Your SOTT
 
-You can choose to either [generate static SOTTs](#generate-sott-in-your-dashboard) using the LoginRadius Dashboard, or generate dynamic SOTTs in your application using [the provided algorithm](#generate-sott-manually), or [our SDKs](#generate-sott-using-sdks).
+You can choose to either [generate static SOTTs](#generate-sott-in-loginradius-dashboard) using the LoginRadius Dashboard, or generate dynamic SOTTs in your application using [the provided algorithm](#generate-sott-manually), or [our SDKs](#generate-sott-using-sdks).
 
 ### Generate SOTT in LoginRadius Dashboard
 

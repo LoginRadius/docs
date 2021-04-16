@@ -59,8 +59,8 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
 
 - Replace the following placeholders in the above :
 
-  - apiKey: **API Key** obtained in the [Get Credential](#getcredentials) step.
-  - siteName: **App Name** obtained in the [Get Credential](#getcredentials) step.
+  - apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
+  - siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 - Add the following permissions in your app's `manifests/AndroidManifest.xml` :
 
@@ -118,7 +118,7 @@ Add the following code to implement registration:
           }
 
 ```
-- sott: **SOTT** obtained in the [Get Credential](#getcredentials) step.
+- sott: **SOTT** obtained in the [Get Credentials](#get-credentials) step.
 
 
 ## Implement Login

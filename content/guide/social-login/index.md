@@ -18,9 +18,9 @@ Watch this video for step by step information, or refer to the section below for
 
 ---
 
-##Configuration
+## Configuration
 
-###Step 1: Choose Login Method 
+### Step 1: Choose Login Method 
 
 1. Login to your LoginRadius Dashboard account, from the left navigation panel, click **Configuration** and then navigate to the ** Add a Login Method** section.
 
@@ -38,7 +38,7 @@ Watch this video for step by step information, or refer to the section below for
 
    > The list of [supported social providers](#supported-social-providers) varies based on your plan. 
 
-###Step 2: Configure Social Login 
+### Step 2: Configure Social Login 
 
 1. Follow the step by step guide displayed on the LoginRadius Dashboard screen for configuration. For example, the following screen displays the configuration steps for configuring Google as social login option:
 
@@ -57,7 +57,7 @@ The steps for configuring each social provider will be different and displayed a
 
    ![alt_text](./images/configuresave.png "image_tooltip")
 
-###Step 3: Whitelist Domain
+### Step 3: Whitelist Domain
 
 Whitelist your application domain to allow the LoginRadius API access.
 
@@ -68,7 +68,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelistin
 > Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
 
-###Step 4: Check Auth Page (IDX)
+### Step 4: Check Auth Page (IDX)
 
 Open your **Auth Page (IDX)** (https://</your-app-name/>.hub.loginradius.com/auth.aspx ) and it will display the social icon for the configured social provider:
 
@@ -76,7 +76,7 @@ Open your **Auth Page (IDX)** (https://</your-app-name/>.hub.loginradius.com/aut
 
 > The Social Login is now configured and functioning on your Auth Page (IDX). If you are not using Auth Page (IDX) for authentication, use LoginRadius SDK or APIs to utilize the configured Social Login in your application.
 
-##Supported Social Providers
+## Supported Social Providers
 
 The following are the social providers that LoginRadius supports for the Free, Developer, and Developer Premium plans.
 

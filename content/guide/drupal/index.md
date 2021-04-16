@@ -35,7 +35,7 @@ You can install LoginRadius  Drupal Plugin [manually](#install-manually) or via 
 
 4. Click the **Extend** tab and you'll see the **CIAM LoginRadius** module in the modules list in your site's admin account. **Do not enable** the module immediately, the required LoginRadius PHP SDK library needs to be installed.
 
-5. The PHP SDK needs to be updated before enabling the **CIAM LoginRadius** module. This can be done in the following ways: [Manually](#manual-steps-to -install-php-sdk) or [Through Composer](#install-via-composer).
+5. The PHP SDK needs to be updated before enabling the **CIAM LoginRadius** module. This can be done in the following ways: [Manually](#manual-steps-to -install-php-sdk) or [Through Composer](#via-composer).
 
 6. Enable the **Customer Identity Modules** and click the **Save Configuration**.
 

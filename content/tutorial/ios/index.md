@@ -94,8 +94,8 @@ $ pod install
 
    Replace the following placeholders in the above :
 
-   - apiKey: **API Key** obtained in the [Get Credentials](#getcredentials) step.
-   - siteName: **App Name** obtained in the [Get Credentials](#getcredentials) step.
+   - apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
+   - siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 3. Import the SDK with `import LoginRadiusSDK` and Initialize with your API key and Site name in your `AppDelegate.swift` as below.
 
@@ -148,7 +148,7 @@ AuthenticationAPI.authInstance().userRegistration(withSott:sott,payload:paramete
 })
 ```
 
-- sott: **SOTT** obtained in the [Get Credential](#getcredential) step.
+- sott: **SOTT** obtained in the [Get Credentials](#get-credentials) step.
 
 ## Implement Login
 
