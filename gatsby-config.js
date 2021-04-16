@@ -101,5 +101,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: `/docs/developer/beta`,
+  pathPrefix: `/docs/developer`,
 }
