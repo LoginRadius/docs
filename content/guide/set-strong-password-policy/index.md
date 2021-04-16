@@ -50,7 +50,7 @@ Enter or select the following details:
 ![alt_text](/images/password-type.png "image_tooltip")
        
 
-2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of [common passwords](/docs/developer/general/common-passwords/) is maintained by LoginRadius and gets updated regularly.
+2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of [common passwords](/concepts/common-passwords/) is maintained by LoginRadius and gets updated regularly.
 
 3.   **Profile Password Prevention**: Profile Password Prevention enables you to prevent your consumers from using the profile data for the account password. For example, the values of consumer profile fields like username, email id, first name, etc cannot be used as an account password.
 
