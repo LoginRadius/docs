@@ -51,7 +51,7 @@ List of APIs in this Section:
 * PUT : [Auth Reset Password by Reset Token](#auth-reset-password-by-reset-token-put)
 * PUT : [Auth Change Password](#auth-change-password-put)
 * PUT : [Auth Resend Email Verification](#auth-resend-email-verification-put)
-* POST : [Auth Add Email](#auth-resend-email-verification-post)
+* POST : [Auth Add Email](#auth-add-email-post)
 * POST : [Auth Login by Email](#auth-login-by-email-post)
 * POST : [Auth Forgot Password](#auth-forgot-password-post)
 * POST : [Auth User Registration by Email](#auth-user-registration-by-email-post)
@@ -1275,7 +1275,7 @@ List of APIs in this Section:
 * DELETE : [MFA Reset Google Authenticator by Token](#mfa-reset-google-authenticator-by-token-delete)
 * DELETE : [MFA Reset SMS Authenticator by Token](#mfa-reset-sms-authenticator-by-token-delete)
 * DELETE : [MFA Reset SMS Authenticator By UID](#mfa-reset-sms-authenticator-by-uid-delete)
-* DELETE : [MFA Reset Google Authenticator By UID](#mfa-reset-google-authenticator-by-uid)
+* DELETE : [MFA Reset Google Authenticator By UID](#mfa-reset-google-authenticator-by-uid-delete)
 
 #### Update MFA by Access Token (PUT)
 
@@ -1542,7 +1542,7 @@ LoginRadiusSDK.multiFactorAuthenticationApi.mfaResetGoogleAuthenticatorByUid(goo
 
 List of APIs in this Section:
 
-* PUT : [Passwordless Login Phone Verification](#passwordless-login-phone-verifcation-put)
+* PUT : [Passwordless Login Phone Verification](#passwordless-login-phone-verification-put)
 * GET : [Passwordless Login by Phone](#passwordless-login-by-phone-get)
 * GET : [Passwordless Login By Email](#passwordless-login-by-email-get)
 * GET : [Passwordless Login Verification](#passwordless-login-verification-get)
