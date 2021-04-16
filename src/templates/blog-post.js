@@ -47,6 +47,23 @@ const BlogPostTemplate = ({ data, location }) => {
                         <a href="#">Ask on StackOverflow</a>
                       </span>
                     </li>
+                    <li>
+                      <span className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-10zhkrl">
+                          <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.725 6.775a4.95 4.95 0 1 1 0 9.9 4.95 4.95 0 0 1 0-9.9z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.725 1C17.648 1 22.45 5.801 22.45 11.725c0 5.923-4.802 10.725-10.725 10.725S1 17.648 1 11.725 5.801 1 11.725 1z">
+                            </path>
+                            <path d="M15.29 8.16l4.213-4.213M8.16 15.29l-4.213 4.213M15.29 15.29l4.213 4.213M8.16 8.16L3.947 3.947">
+                            </path>
+                          </g>
+                        </svg>
+                      </span>
+                      <span>
+                        <a href="https://loginradiusassist.freshdesk.com/customer/login">Support Ticket</a>
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>

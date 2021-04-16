@@ -371,7 +371,7 @@ Check out our Android demo to know how you can implement various LoginRadius fea
 
 ## API Reference
 
-[API Reference](/#api)
+[APIs](/#api)
 
 [Go Back to Home Page](/)
 
