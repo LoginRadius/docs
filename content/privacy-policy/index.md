@@ -87,7 +87,7 @@ We may update this Privacy Policy by posting a new version on our website. If we
 If you have any questions about this Privacy Policy, please contact our email at: [privacy@loginradius.com](mailto:privacy@loginradius.com)
 
 **Additional Terms of Service**  
-If you are a Customer of LoginRadius, your use of the LoginRadius Service is subject to LoginRadius Terms of Service, available at [www.loginradius.com/terms.](/terms/)  
+If you are a Customer of LoginRadius, your use of the LoginRadius Service is subject to LoginRadius Terms of Service, available at [www.loginradius.com/terms.](https://www.loginradius.com/terms)  
 Address: General Counsel,  
 c/o LoginRadius Inc.  
 815 West Hastings Street  

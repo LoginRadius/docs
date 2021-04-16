@@ -23,7 +23,7 @@ The Website is based upon proprietary LoginRadius technology and includes the Co
 The LoginRadius Website contains links to external websites that are not owned or controlled by us. LoginRadius assumes no responsibility for the content, privacy policies or practices of any external websites. In addition, LoginRadius will not and cannot censor or edit the content of any external website. By using the Website or the Service, you expressly relieve LoginRadius from any and all liabilities arising from your use of any external websites.
 
 **Privacy**  
-Your use of the Website is subject to the LoginRadius Privacy Policy, available at [https://www.loginradius.com/privacy-policy/](/privacy-policy/).
+Your use of the Website is subject to the LoginRadius Privacy Policy, available at [https://www.loginradius.com/privacy-policy/](https://www.loginradius.com/privacy-policy).
 
 **Modification**  
 LoginRadius reserves the right to modify these terms at any time without giving you prior notice. Your use of the Website following any such modification constitutes your agreement to follow and be bound by these Terms of Website Use as modified.
