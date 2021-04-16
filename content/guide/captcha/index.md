@@ -10,7 +10,7 @@ LoginRadius Identity Platform provides you the feature to add another layer of s
 
 > Note: CAPTCHA is mainly used as a security check to ensure only humans can pass through. Generally, bots are not capable of solving a captcha.
 
-As a part of your Login and Registration flows, LoginRadius CAPTCHA settings allow you to enable [Google reCaptcha](#step-1-google-reCAPTCHA-configuration), which is a service from Google that protects web applications from spam and abuse. It is easy for humans to solve, but hard for “bots” and other malicious software to figure out.
+As a part of your Login and Registration flows, LoginRadius CAPTCHA settings allow you to enable [Google reCaptcha](#step-1-google-recaptcha-configuration), which is a service from Google that protects web applications from spam and abuse. It is easy for humans to solve, but hard for “bots” and other malicious software to figure out.
 
 Currently, LoginRadius supports two different versions of the Google reCAPTCHA.
 
@@ -59,7 +59,7 @@ This section covers the required configurations that you need to perform to impl
    * Public Key: Enter the Public Key provided by Google reCAPTCHA.
    * Private Key: Enter the Private Key provided by Google reCAPTCHA.
 
-   > **Note:** Check the [Step 1](#step-1-google-reCAPTCHA-configuration) to get the Public and Private key and to register for Google reCAPTCHA.
+   > **Note:** Check the [Step 1](#step-1-google-recaptcha-configuration) to get the Public and Private key and to register for Google reCAPTCHA.
 
 4. Click the **Save** button.
 
