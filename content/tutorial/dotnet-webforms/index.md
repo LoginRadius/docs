@@ -372,6 +372,6 @@ To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configura
 
 ## API Reference
 
-[API Reference](/#api)
+[APIs](/#api)
 
 [Go Back to Home Page](/)

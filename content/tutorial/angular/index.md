@@ -276,7 +276,7 @@ As an alternative to handling all API calls in the Angular frontend, you may als
 
 ## API Reference
 
-[API Reference](/#api)
+[APIs](/#api)
 
 [Go Back to Home Page](/)
 

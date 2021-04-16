@@ -284,6 +284,6 @@ The tutorial above walks through a quick PHP implementation to import the SDK an
 
 ## API Reference
 
-[API Reference](/#api)
+[APIs](/#api)
 
 [Go Back to Home Page](/)

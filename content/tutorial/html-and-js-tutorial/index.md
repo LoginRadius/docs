@@ -120,6 +120,6 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 ## API Reference
 
-[API Reference](/#api)
+[APIs](/#api)
 
 [Go Back to Home Page](/)

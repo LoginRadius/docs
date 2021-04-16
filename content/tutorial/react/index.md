@@ -243,6 +243,6 @@ As an alternative to handling all API calls in the React frontend, you may also 
 
 ## API Reference
 
-[API Reference](/#api)
+[APIs](/#api)
 
 [Go Back to Home Page](/)
