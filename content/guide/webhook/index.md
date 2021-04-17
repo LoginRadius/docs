@@ -18,7 +18,7 @@ This guide explains how to configure webhook in [LoginRadius Dashboard](https://
 ## Configuration
 
 ### Step 1: Visit Integration Section 
-Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
+Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
 ![alt_text](./images/configureintegration.png "image_tooltip")
 
@@ -40,7 +40,7 @@ Enter or select the following details on the Webhook screen:
   | PLAN | ALLOWED EVENTS |
   |----|----|
   | **Developer**	|Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification
-  | **Developer Premium**	| Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext
+  | **Developer Pro**	| Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext
 
 - **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
 

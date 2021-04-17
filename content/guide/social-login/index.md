@@ -78,14 +78,14 @@ Open your **Auth Page (IDX)** (https://</your-app-name/>.hub.loginradius.com/aut
 
 ## Supported Social Providers
 
-The following are the social providers that LoginRadius supports for the Free, Developer, and Developer Premium plans.
+The following are the social providers that LoginRadius supports for the Free, Developer, and Developer Pro plans.
 
 
 |PLAN |	FACEBOOK |	GOOGLE |	TWITTER |	LINKEDIN |	GITHUB
 |:---|:---|:---|:---|:---|:---|:
 |Free |	Yes |	Yes |	Yes |	No | No
 |Developer	| Yes	| Yes	| Yes	| Yes	| Yes
-|Developer Premium	| Supports| 20+ | Social| ID | Providers| 
+|Developer Pro	| Supports| 20+ | Social| ID | Providers| 
 
 
 

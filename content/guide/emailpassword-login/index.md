@@ -22,7 +22,7 @@ Watch this video's step-by-step information, or refer to the section below for t
 
 ### Step 1: Choose Login Method
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
 
 2. Click the down caret, and the **Add a Login Method** screen will appear:
 

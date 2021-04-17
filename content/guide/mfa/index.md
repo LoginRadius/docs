@@ -22,7 +22,7 @@ You can implement the 2FA in two following ways:
 
 ## Step 1: Enable Two Factor Authentication  
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Security** and then navigate to the **Two Factor Authentication** section. Click on the switch to enable the Two Factor Authentication Add-On.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click **Security** and then navigate to the **Two Factor Authentication** section. Click on the switch to enable the Two Factor Authentication Add-On.
 
    ![alt_text](images/addon-switch.png "image_tooltip")
 

@@ -23,7 +23,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to Retrieve API key and secret?
 
-* Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
 * Click the down arrow and the **API Credentials** screen will appear:
 
@@ -43,7 +43,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to reset the API Secret?
 
-* Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
 * Click the **API Key And Secret** and the below screen will appear:
 
@@ -53,7 +53,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to access the LoginRadius Support section?
 
-* To access the LoginRadius Support section, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the top header panel, click the **Support** as displayed in the below screen.
+* To access the LoginRadius Support section, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the top header panel, click **Support** as displayed in the below screen.
 
   ![alt_text](images/support.png "image_tooltip")
 

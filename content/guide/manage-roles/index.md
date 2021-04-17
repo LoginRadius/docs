@@ -9,12 +9,12 @@ path: "/guide/manage-roles"
 
 This guide explains how to manage roles and permissions for your registered users using the LoginRadius Dashboard.
 
-> Note: You must have a **Developer Premium** plan subscription to access the **Manage Roles** section in the LoginRadius Dashboard.
+> Note: You must have a **Developer Pro** plan subscription to access the **Manage Roles** section in the LoginRadius Dashboard.
 
 
 ## Access Manage Roles Section
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **User Management** and then navigate to the **Manage Roles** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **User Management** and then navigate to the **Manage Roles** section.
 
 2. Click the down caret, and the **Manage Roles** screen will appear:
 

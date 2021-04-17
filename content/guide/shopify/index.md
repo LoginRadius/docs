@@ -29,7 +29,7 @@ This section covers the required configurations that you need to perform to enab
 
 ## LoginRadius Dashboard Configurations
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration). The following screen will appear:
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and navigate to [Integration](https://dashboard.loginradius.com/integration). The following screen will appear:
 
    ![alt_text](images/shopify-integration.png "image_tooltip")
 

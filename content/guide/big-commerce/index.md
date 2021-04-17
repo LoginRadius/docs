@@ -73,7 +73,7 @@ This will install the LoginRadius App into your BigCommerce environment. If you 
 To support the BigCommerce SSO flows, you will need to handle the following:
 
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, and navigate to [Integration](https://dashboard.loginradius.com/integration)
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and then navigate to the [Integration](https://dashboard.loginradius.com/integration) section.
 
    The following screen will appear:
 

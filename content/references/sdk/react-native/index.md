@@ -25,7 +25,7 @@ You need to configure your LoginRadius user account with the following changes.
 
 2.  Generate SOTT: You will need to pass a SOTT value at the time of registration. You can generate this in the [Configuration](https://dashboard.loginradius.com/configuration) section of your Dashboard.
 
-   To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section.
+   To access **Secure Mobile OTP Token configuration**, log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section.
 
     Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 
