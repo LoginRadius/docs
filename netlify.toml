@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/faq/api-credentials/"
+  to = "/contact-us/#how-to-retrieve-api-key-and-secret"
+
+  [[redirects]]
+  from = "/docs/developer/howto/work-with-sott/"
+  to = "/docs/developer/concepts/sott"
