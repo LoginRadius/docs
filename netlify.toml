@@ -1,103 +1,103 @@
 [[redirects]]
-  from = "/howto/dashboard-setup/"
+  from = "/docs/developer/howto/dashboard-setup/"
   to = "https://youtu.be/wgkT2x2khV4"
 
 [[redirects]]
-  from = "/faq/api-credentials/"
-  to = "/contact-us/#how-to-retrieve-api-key-and-secret"
+  from = "/docs/developer/faq/api-credentials/"
+  to = "/docs/developer/contact-us/#how-to-retrieve-api-key-and-secret"
 
 [[redirects]]
-  from = "/howto/work-with-sott/"
-  to = "/concepts/sott"
+  from = "/docs/developer/howto/work-with-sott/"
+  to = "/docs/developer/concepts/sott"
 
 [[redirects]]
-  from = "/howto/setup-login-methods/"
-  to = "#loginmethods"
+  from = "/docs/developer/howto/setup-login-methods/"
+  to = "/docs/developer/#loginmethods"
 
 [[redirects]]
-  from = "/howto/web-sso/"
-  to = "/guide/web-sso"
+  from = "/docs/developer/howto/web-sso/"
+  to = "/docs/developer/guide/web-sso"
 
 [[redirects]]
-  from = "/howto/manage-communication-settings/"
-  to = "/guide/setup-your-smtp-provider/"
+  from = "/docs/developer/howto/manage-communication-settings/"
+  to = "/docs/developer/guide/setup-your-smtp-provider/"
 
 [[redirects]]
-  from = "/howto/authentication-theme/"
-  to = "/guide/customize-auth-page"
+  from = "/docs/developer/howto/authentication-theme/"
+  to = "/docs/developer/guide/customize-auth-page"
 
 [[redirects]]
-  from = "/howto/user-management/"
-  to = "/guide/manage-users"
+  from = "/docs/developer/howto/user-management/"
+  to = "/docs/developer/guide/manage-users"
 
 [[redirects]]
-  from = "/api/account-api"
+  from = "/docs/developer/api/account-api"
   to = "/references/api/account"
 
 [[redirects]]
-  from = "/customize-domain/"
-  to = "/guide/customize-domain"
+  from = "/docs/developer/customize-domain/"
+  to = "/docs/developer/guide/customize-domain"
 
 [[redirects]]
-  from = "/howto/manage-role/"
-  to = "/guide/manage-roles"
+  from = "/docs/developer/howto/manage-role/"
+  to = "/docs/developer/guide/manage-roles"
 
 [[redirects]]
-  from = "/howto/setup-team-management/"
-  to = "/guide/manage-team-members/"
+  from = "/docs/developer/howto/setup-team-management/"
+  to = "/docs/developer/guide/manage-team-members/"
 
 [[redirects]]
-  from = "/security/google-recaptcha/"
-  to = "/guide/captcha"
+  from = "/docs/developer/security/google-recaptcha/"
+  to = "/docs/developer/guide/captcha"
 
 [[redirects]]
-  from = "/security/brute-force-lockout/"
-  to = "/guide/bruteforce/"
+  from = "/docs/developer/security/brute-force-lockout/"
+  to = "/docs/developer/guide/bruteforce/"
 
 [[redirects]]
-  from = "/security/password-policy/"
-  to = "/guide/set-strong-password-policy/"
+  from = "/docs/developer/security/password-policy/"
+  to = "/docs/developer/guide/set-strong-password-policy/"
 
 [[redirects]]
-  from = "/security/two-factor-authentication/"
-  to = "/guide/mfa/"
+  from = "/docs/developer/security/two-factor-authentication/"
+  to = "/docs/developer/guide/mfa/"
 
 [[redirects]]
-  from = "/security/session-management/"
-  to = "/guide/change-session-lifetime/"
+  from = "/docs/developer/security/session-management/"
+  to = "/docs/developer/guide/change-session-lifetime/"
 
 [[redirects]]
-  from = "/integrations/webhook/"
-  to = "/guide/webhook/"
+  from = "/docs/developer/integrations/webhook/"
+  to = "/docs/developer/guide/webhook/"
 
 [[redirects]]
-  from = "/sdk-libraries/golang-library/"
-  to = "/tutorial/golang/"
+  from = "/docs/developer/sdk-libraries/golang-library/"
+  to = "/docs/developer/tutorial/golang/"
 
 [[redirects]]
-  from = "/sdk-libraries/node-js-library/"
-  to = "/tutorial/node-js/"
+  from = "/docs/developer/sdk-libraries/node-js-library/"
+  to = "/docs/developer/tutorial/node-js/"
 
 [[redirects]]
-  from = "/sdk-libraries/html5-library/"
-  to = "/tutorial/html-and-js-tutorial"
+  from = "/docs/developer/sdk-libraries/html5-library/"
+  to = "/docs/developer/tutorial/html-and-js-tutorial"
 
 [[redirects]]
-  from = "/guides/web-php/"
-  to = "/tutorial/php/"
+  from = "/docs/developer/guides/web-php/"
+  to = "/docs/developer/tutorial/php/"
 
 [[redirects]]
-  from = "/sdk-libraries/asp-net-library/"
-  to = "/tutorial/dotnetcore-mvc/"
+  from = "/docs/developer/sdk-libraries/asp-net-library/"
+  to = "/docs/developer/tutorial/dotnetcore-mvc/"
 
 [[redirects]]
-  from = "/sdk-libraries/java-library/"
-  to = "/tutorial/java/"
+  from = "/docs/developer/sdk-libraries/java-library/"
+  to = "/docs/developer/tutorial/java/"
 
 [[redirects]]
-  from = "/mobile-sdk-libraries/android-library/"
-  to = "/tutorial/android/"
+  from = "/docs/developer/mobile-sdk-libraries/android-library/"
+  to = "/docs/developer/tutorial/android/"
 
 [[redirects]]
-  from = "/mobile-sdk-libraries/ios-library/"
-  to = "/tutorial/ios/"
+  from = "/docs/developer/mobile-sdk-libraries/ios-library/"
+  to = "/docs/developer/tutorial/ios/"
