@@ -491,7 +491,7 @@ const Middle = () => {
                 <Link to="guide/enable-force-logout">Enable Force Logout</Link>
               </li>
               <li>
-                <Link to="guide/block-disposable-email">Block disposable Email</Link>
+                <Link to="guide/block-disposable-email">Block Disposable Email</Link>
               </li>
               
             </ul>

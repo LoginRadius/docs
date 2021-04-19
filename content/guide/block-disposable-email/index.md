@@ -6,7 +6,7 @@ path: "/guide/block-disposable-email"
 ---
 
 # Block Disposable Email
-The Block Disposable Email feature allows you to preventing disposable registrations on your application, providing only authentic user logins.
+The Block Disposable Email feature allows you to prevent disposable registrations on your application, providing only authentic user logins.
 
 ## LoginRadius Configuration
 

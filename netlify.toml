@@ -101,3 +101,7 @@
 [[redirects]]
   from = "/docs/developer/mobile-sdk-libraries/ios-library/"
   to = "/docs/developer/tutorial/ios/"
+
+  [[redirects]]
+  from = "/docs/developer/api/"
+  to = "/docs/developer/#api"
