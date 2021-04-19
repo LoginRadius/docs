@@ -1,0 +1,103 @@
+[[redirects]]
+  from = "/howto/dashboard-setup/"
+  to = "https://youtu.be/wgkT2x2khV4"
+
+[[redirects]]
+  from = "/faq/api-credentials/"
+  to = "/contact-us/#how-to-retrieve-api-key-and-secret"
+
+[[redirects]]
+  from = "/howto/work-with-sott/"
+  to = "/concepts/sott"
+
+[[redirects]]
+  from = "/howto/setup-login-methods/"
+  to = "#loginmethods"
+
+[[redirects]]
+  from = "/howto/web-sso/"
+  to = "/guide/web-sso"
+
+[[redirects]]
+  from = "/howto/manage-communication-settings/"
+  to = "/guide/setup-your-smtp-provider/"
+
+[[redirects]]
+  from = "/howto/authentication-theme/"
+  to = "/guide/customize-auth-page"
+
+[[redirects]]
+  from = "/howto/user-management/"
+  to = "/guide/manage-users"
+
+[[redirects]]
+  from = "/api/account-api"
+  to = "/references/api/account"
+
+[[redirects]]
+  from = "/customize-domain/"
+  to = "/guide/customize-domain"
+
+[[redirects]]
+  from = "/howto/manage-role/"
+  to = "/guide/manage-roles"
+
+[[redirects]]
+  from = "/howto/setup-team-management/"
+  to = "/guide/manage-team-members/"
+
+[[redirects]]
+  from = "/security/google-recaptcha/"
+  to = "/guide/captcha"
+
+[[redirects]]
+  from = "/security/brute-force-lockout/"
+  to = "/guide/bruteforce/"
+
+[[redirects]]
+  from = "/security/password-policy/"
+  to = "/guide/set-strong-password-policy/"
+
+[[redirects]]
+  from = "/security/two-factor-authentication/"
+  to = "/guide/mfa/"
+
+[[redirects]]
+  from = "/security/session-management/"
+  to = "/guide/change-session-lifetime/"
+
+[[redirects]]
+  from = "/integrations/webhook/"
+  to = "/guide/webhook/"
+
+[[redirects]]
+  from = "/sdk-libraries/golang-library/"
+  to = "/tutorial/golang/"
+
+[[redirects]]
+  from = "/sdk-libraries/node-js-library/"
+  to = "/tutorial/node-js/"
+
+[[redirects]]
+  from = "/sdk-libraries/html5-library/"
+  to = "/tutorial/html-and-js-tutorial"
+
+[[redirects]]
+  from = "/guides/web-php/"
+  to = "/tutorial/php/"
+
+[[redirects]]
+  from = "/sdk-libraries/asp-net-library/"
+  to = "/tutorial/dotnetcore-mvc/"
+
+[[redirects]]
+  from = "/sdk-libraries/java-library/"
+  to = "/tutorial/java/"
+
+[[redirects]]
+  from = "/mobile-sdk-libraries/android-library/"
+  to = "/tutorial/android/"
+
+[[redirects]]
+  from = "/mobile-sdk-libraries/ios-library/"
+  to = "/tutorial/ios/"
