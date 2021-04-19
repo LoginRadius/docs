@@ -6,6 +6,7 @@ import PopUp from "./modal.js"
 const Middle = () => {
   const apiRef = React.createRef()
   const sdkRef = React.createRef()
+  const gotQRef = React.createRef()
   const [display, setDisplay] = useState(false)
 
   useEffect(() => {
@@ -16,6 +17,9 @@ const Middle = () => {
       } else if (window.location.hash === "#sdk") {
         window.history.scrollRestoration = "manual"
         sdkRef.current.scrollIntoView({ block: "start" })
+      }else if (window.location.hash === "#loginmethods") {
+        window.history.scrollRestoration = "manual"
+        gotQRef.current.scrollIntoView({ block: "start" })
       }
     }
   })
@@ -298,7 +302,7 @@ const Middle = () => {
       {/*Tutorials section*/}
       {/*Section Recommended Resources*/}
       <section className="resources py-72">
-        <div className="section-header">
+        <div ref={gotQRef}  className="section-header">
           <h2>Got Questions?</h2>
           <p>
             Find common use cases and answers to your how-to and next-step
