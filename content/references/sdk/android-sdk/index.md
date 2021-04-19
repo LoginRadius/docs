@@ -30,7 +30,7 @@ To get your app supported by LoginRadius Android SDK, you need to configure your
 
 You will need to pass a SOTT value for user registration. You can generate this in the [Configuration](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
 
-To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section. 
+To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section. 
 
 Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 

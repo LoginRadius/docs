@@ -240,7 +240,7 @@ Download the metadata for SAML configuration.
 
 1.  Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/).
 
-2.  From the left Navigation panel, click the **Integration** section and click **Add** in **Configured Integration** section
+2.  Select your app, then from the left Navigation panel, click the **Integration** section and click **Add** in **Configured Integration** section
 
 3.  Search **SAML** in the searchbar.
 
@@ -335,7 +335,7 @@ The below steps are if the **Add App** option is selected.
 
 9. Once all the required fields are completed, **scroll down** and click **Save**.
 
-> **Note:** The consumer should have an account with the same email address in your SAML application as well as in LoginRadius before using your SAML application to login to the [LoginRadius Dashboard](https://dashboard.loginradius.com/).
+> **Note:** The consumer should have an account with the same email address in your SAML application as well as in LoginRadius before using your SAML application to log in to the [LoginRadius Dashboard](https://dashboard.loginradius.com/).
 
 ## SAML
 

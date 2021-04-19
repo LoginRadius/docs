@@ -11,7 +11,7 @@ This guide explains how to manage your registered users using the LoginRadius Da
 
 ## Access Manage Users Section
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **User Management** and then navigate to the **Manage Users** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **User Management** and then navigate to the **Manage Users** section.
 
 2. Click the down caret, and the **Manage Users** screen will appear:
 
@@ -79,7 +79,7 @@ Refer to the [Migrate User Data](/guide/migrate-user-data) document for more inf
 
 ## Supported Actions
 
-> Note: You must have a **Developer Premium** plan subscription to access these actions in the LoginRadius Dashboard. You can otherwise utilize our APIs to manage your users.
+> Note: You must have a **Developer Pro** plan subscription to access these actions in the LoginRadius Dashboard. You can otherwise utilize our APIs to manage your users.
 
 To access available actions for a registered user, find the user record of the target user and click the vertical ellipsis button (three dots) contained in the **Action** column of your user table:
 

@@ -25,13 +25,13 @@ You can implement the Passwordless Login method in two following ways:
 
 ### Step 1: Choose Login Method
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
 2. To enable the Passwordless Login method for your application, click the **Add Method** dropdown and select the **Passwordless** login method.
 
-   > Note: You will need to be subscribed to the **Developer Premium** plan to enable this login method.
+   > Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
 
    ![alt_text](images/add-passwordless-method.png "image_tooltip")
 

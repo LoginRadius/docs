@@ -66,7 +66,7 @@ $ pod install
 |customDomain    |String  |Optional, (Default URL: `https://api.loginradius.com/`)                               |
 
 
-> **Note**: You can get API Key and Site/App Name from the [Configuration](#https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+> **Note**: You can get API Key and Site/App Name from the [Configuration](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
 
 
 3. Import the module in your source code.

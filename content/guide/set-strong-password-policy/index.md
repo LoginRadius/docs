@@ -11,8 +11,8 @@ The **Password Policy** feature allows you to enhance authentication security by
 
 ## Access Password Policy Section
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
-2. From the left navigation panel, click **Security** and then navigate to the **Password Policy** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+2. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Password Policy** section.
 3. Click the down arrow, the **Password Policy** screen will appear:
 
    ![alt_text](images/main.png "image_tooltip")

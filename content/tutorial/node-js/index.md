@@ -28,7 +28,7 @@ Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, select the **Auth Page (IDX)** from the left navigation and then click the **Theme Customization** to select a design theme for your login page, or further customize the content displayed:
+In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page (IDX)** section located in the left navigation bar and click the **Theme Customization** section. There you can select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 

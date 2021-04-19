@@ -17,8 +17,8 @@ Team Management screen has the following options:
 
 ## Access Team Management Section
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
-2. From the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+2. Select your app, then from the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
 
    ![alt_text](images/team-management.png "image_tooltip")
 

@@ -17,7 +17,7 @@ When you signed up for a LoginRadius account, an app was created for you. This a
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, navigate to the **Auth Page (IDX)** section located in the left navigation bar and click the **Theme Customization** section. There you can select a design theme for your login page, or further customize the content displayed:
+In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page (IDX)** section located in the left navigation bar and click the **Theme Customization** section. There you can select a design theme for your login page, or further customize the content displayed:
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 

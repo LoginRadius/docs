@@ -12,8 +12,8 @@ Setting up an SMS provider allows you to send and receive text messages to and f
 
 ## Step 1: Access SMS Provider Settings
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
-2. From the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. 
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+2. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. 
 3. Click the down arrow and select the **SMS Provider Settings** section as highlighted in the below screen.
 
    ![alt_text](images/sms-provider.png "image_tooltip")

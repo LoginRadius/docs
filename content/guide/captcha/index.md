@@ -47,7 +47,7 @@ This section covers the required configurations that you need to perform to impl
 
 ## Step 2: CAPTCHA Deployment
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the left navigation panel, click **Security** and then navigate to the **CAPTCHA Setting** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **CAPTCHA Setting** section.
 
 2. Click the down arrow and the **CAPTCHA Setting** screen will appear:
 

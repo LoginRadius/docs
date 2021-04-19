@@ -10,7 +10,7 @@ Force Logout enables you to expire all active sessions of the consumer account o
 
 ## Step 1: Access Force Logout Section
 
-1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
+1. Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
 
 2. Click the down arrow, and the **Session Management** screen will appear.
 
