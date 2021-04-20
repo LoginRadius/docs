@@ -110,4 +110,7 @@ to = "/docs/developer/#api"
 from = "/docs/developer/howto/customize-domain/"
 to = "/docs/developer/guide/customize-auth-page/"
 
-  
+[[redirects]]
+from = "/docs/developer/howto/manage-passwordless-login/"
+to = "/docs/developer/guide/passwordless-login/"
+
