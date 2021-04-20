@@ -102,6 +102,12 @@
   from = "/docs/developer/mobile-sdk-libraries/ios-library/"
   to = "/docs/developer/tutorial/ios/"
 
-  [[redirects]]
-  from = "/docs/developer/api/"
-  to = "/docs/developer/#api"
+[[redirects]]
+from = "/docs/developer/api/"
+to = "/docs/developer/#api"
+
+[[redirects]]
+from = "/docs/developer/howto/customize-domain/"
+to = "/docs/developer/guide/customize-auth-page/"
+
+  
