@@ -32,7 +32,7 @@
 
 [[redirects]]
   from = "/docs/developer/api/account-api"
-  to = "/references/api/account"
+  to = "/docs/developer/references/api/account"
 
 [[redirects]]
   from = "/docs/developer/customize-domain/"
