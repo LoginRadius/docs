@@ -114,3 +114,25 @@ to = "/docs/developer/guide/customize-auth-page/"
 from = "/docs/developer/howto/manage-passwordless-login/"
 to = "/docs/developer/guide/passwordless-login/"
 
+[[redirects]]
+from = "/docs/developer/howto/manage-email-password-login/"
+to = "/docs/developer/guide/emailpassword-login"
+
+[[redirects]]
+from = "/docs/developer/sdk-libraries/overview/"
+to = "/docs/developer/#sdk"
+
+[[redirects]]
+from = "/docs/developer/howto/social-login/"
+to = "/docs/developer/guide/social-login"
+
+
+
+
+
+
+
+
+
+
+
