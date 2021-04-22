@@ -377,6 +377,11 @@ const Middle = () => {
                   <span>Setup SMS Provider</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/view-subscription-logs">
+                  <span>View Subscription Logs</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Explore user managment options*/}
