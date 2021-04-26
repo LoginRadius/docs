@@ -126,13 +126,42 @@ to = "/docs/developer/#sdk"
 from = "/docs/developer/howto/social-login/"
 to = "/docs/developer/guide/social-login"
 
+[[redirects]]
+from = "/docs/developer/guides/web-nodejs/"
+to = "/docs/developer/tutorial/node-js"
 
+[[redirects]]
+from = "/docs/developer/sdk-libraries/python-library/"
+to = "/docs/developer/references/sdk/python"
 
+[[redirects]]
+from = "/docs/developer/guides/web-python/"
+to = "/docs/developer/tutorial/python"
 
+[[redirects]]
+from = "/docs/developer/sdk-libraries/php-library/"
+to = "/docs/developer/references/sdk/php"
 
+[[redirects]]
+from = "/docs/developer/guides/web-ror/"
+to = "/docs/developer/tutorial/ror"
 
+[[redirects]]
+from = "/docs/developer/sdk-libraries/ruby-library/"
+to = "/docs/developer/references/sdk/ruby-sdk"
 
+[[redirects]]
+from = "/docs/developer/guides/web-golang/"
+to = "/docs/developer/tutorial/golang"
 
+[[redirects]]
+from = "/docs/developer/guides/web-java/"
+to = "/docs/developer/tutorial/java"
 
+[[redirects]]
+from = "/docs/developer/guides/mobile-ios/"
+to = "/docs/developer/tutorial/ios"
 
-
+[[redirects]]
+from = "/docs/developer/plugin/wordpress/"
+to = "/docs/developer/guide/wordpress"
