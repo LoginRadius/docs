@@ -462,6 +462,9 @@ const Middle = () => {
               <li>
                 <Link to="/guide/shopify">Integrate Shopify</Link>
               </li>
+              <li>
+                <Link to="/guide/3rd-party-all-integrations">Available Integrations</Link>
+              </li>
             </ul>
           </div>
           {/*Integrate Third Parties*/}
