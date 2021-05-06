@@ -47,6 +47,7 @@ module.exports = {
               className: "table-of-contents"
             },
           },
+          `gatsby-remark-component`,
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,

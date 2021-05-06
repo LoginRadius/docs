@@ -1,0 +1,21 @@
+.try-me-out {
+  margin-bottom: 20px;
+}
+
+.try-me-out .try-me-out-button {
+  font-size: 1.1rem;
+  padding: 0 0.75rem;
+}
+
+.try-me-out .try-me-out-client h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+
+}
