@@ -20,6 +20,7 @@ path: "/references/api/configuration"
   | apikey | none | LoginRadius API Key [**Required**] |
   | TimeDifference | none | The time difference you would like to pass, If you not pass difference then the default value is 10 minutes [**Optional**] |
 
-  <try-me-out endpoint="https://api.loginradius.com/identity/v2/serverinfo" method="GET" params='{"queryParams": ["apiKey", "timeDifference"], "headers": ["content-type"]}'></try-me-out>
+  ### Try Me Out
+  <try-me-out id="get-server-time" endpoint="https://api.loginradius.com/identity/v2/serverinfo" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"timeDifference","default":""}]}'></try-me-out>
 
 [Go Back to Home Page](/)
