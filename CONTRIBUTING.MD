@@ -21,9 +21,12 @@
 Please follow the below format while writing commit messages
 
 ```
-  title: One line description about your change
-  <Blank Line>
+  title: Title of the document
+  tags: [<Related comma separated tags>]
   description: An optional description of your changes.
+  path: "Path of the document under content folder"
 ```
+
+
 
 Thanks for your contributions!
