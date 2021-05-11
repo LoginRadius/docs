@@ -212,22 +212,24 @@ export default class TryMeOut extends React.Component {
               </div>
               <a className={` btn btn-primary`} onClick={this.onRequestSubmitClick}>Send Request</a>
             </div>
-            <div className={styles.queryParams}>
-              <h4>Query Params</h4>
-              {params.queryParams.map((param, index) => {
-                return (
-                  <label key={`queryParam_${index}`}>
-                    {param.key}
-                    <input
-                      name={param.key}
-                      type="text"
-                      onChange={this.handleQueryChange}
-                      value={clientState.query[param.key] || ""}
-                    />
-                  </label>
-                );
-              })}
-            </div>
+            {params.queryParams ? (
+              <div className={styles.queryParams}>
+                <h4>Query Params</h4>
+                {params.queryParams.map((param, index) => {
+                  return (
+                    <label key={`queryParam_${index}`}>
+                      {param.key}
+                      <input
+                        name={param.key}
+                        type="text"
+                        onChange={this.handleQueryChange}
+                        value={clientState.query[param.key] || ""}
+                      />
+                    </label>
+                  );
+                })}
+              </div>
+            ) : ""}
             {params.templateParams ? (
               <div className={styles.templateParams}>
                 <h4>Template Params</h4>
@@ -258,7 +260,7 @@ export default class TryMeOut extends React.Component {
                         type="text"
                         onChange={this.handleHeaderChange}
                         value={clientState.headers[header.key] || ""}
-                        readOnly
+                        readOnly={header.key === "Content-Type"}
                       />
                     </label>
                   );

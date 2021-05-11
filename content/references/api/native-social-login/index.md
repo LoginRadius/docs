@@ -17,8 +17,11 @@ path: "/references/api/native-social-login"
   ### Query Parameters
   | Parameter    | Default | Description |
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
-  | Fb_Access_Token | none | Facebook Access Token [**Required**] |
+  | Fb\_Access\_Token | none | Facebook Access Token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-via-facebook-token" endpoint="https://api.loginradius.com/api/v2/access_token/facebook" method="GET" params='{"queryParams":[{"key":"fb_access_token","default":""},{"key":"key","default":""}]}'></try-me-out>
  
 ## Access Token via Twitter Token
 
@@ -31,8 +34,11 @@ path: "/references/api/native-social-login"
   | Parameter    | Default | Description |
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Key | none | LoginRadius API Key [**Required**] |
-  | Tw_Access_Token | none | Twitter Access Token [**Required**] |
-  | Tw_Token_Secret | none | Twitter Token Secret [**Required**] |
+  | Tw\_Access\_Token | none | Twitter Access Token [**Required**] |
+  | Tw\_Token\_Secret | none | Twitter Token Secret [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-via-twitter-token" endpoint="https://api.loginradius.com/api/v2/access_token/twitter" method="GET" params='{"queryParams":[{"key":"tw_access_token","default":""},{"key":"tw_token_secret"},{"key":"key","default":""}]}'></try-me-out>
  
 ## Access Token via Google Token
 
@@ -44,10 +50,13 @@ path: "/references/api/native-social-login"
   ### Query Parameters
   | Parameter    | Default | Description |
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
-  | Google_Access_Token | none | Google Access Token [**Required**] |
+  | Google\_Access\_Token | none | Google Access Token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
   | client_id | none | Google Client ID [**Optional**] |
   | refresh_token | none | LoginRadius refresh token [**Optional**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-via-google-token" endpoint="https://api.loginradius.com/api/v2/access_token/google" method="GET" params='{"queryParams":[{"key":"google_access_token","default":""},{"key":"key"},{"key":"client_id","default":""},{"key":"refresh_token"}]}'></try-me-out>
  
 ## Access Token using Google JWT for Native Mobile Login
 
@@ -61,6 +70,9 @@ path: "/references/api/native-social-login"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Id_Token | none | Google JWT id_token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-using-google-jwt-for-native-mobile-login" endpoint="https://api.loginradius.com/api/v2/access_token/googlejwt" method="GET" params='{"queryParams":[{"key":"id_token","default":""},{"key":"key"}]}'></try-me-out>
  
 ## Access Token via Linkedin Token
 
@@ -73,7 +85,10 @@ path: "/references/api/native-social-login"
   | Parameter    | Default | Description |
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Key | none | LoginRadius API Key [**Required**] |
-  | Ln_Access_Token | none | Linkedin Access Token [**Required**] |
+  | Ln\_Access\_Token | none | Linkedin Access Token [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-via-linkedin-token" endpoint="https://api.loginradius.com/api/v2/access_token/linkedin" method="GET" params='{"queryParams":[{"key":"key","default":""},{"key":"ln_access_token"}]}'></try-me-out>
 
 ## Access Token via Foursquare Access Token
 
@@ -85,8 +100,11 @@ path: "/references/api/native-social-login"
   ### Query Parameters
   | Parameter    | Default | Description |
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
-  | Fs_Access_Token | none | Foursquare Access Token [**Required**] |
+  | Fs\_Access\_Token | none | Foursquare Access Token [**Required**] |
   | Key | none | LoginRadius API Key [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-via-foursquare-access-token" endpoint="https://api.loginradius.com/api/v2/access_token/foursquare" method="GET" params='{"queryParams":[{"key":"key","default":""},{"key":"fs_access_token"}]}'></try-me-out>
  
 ## Access Token via Google Auth Code
 
@@ -100,5 +118,8 @@ path: "/references/api/native-social-login"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | google_authcode | none | Google AuthCode [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token-via-google-auth-code" endpoint="https://api.loginradius.com/api/v2/access_token/google" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"google_authcode"}]}'></try-me-out>
 
 [Go Back to Home Page](/)
