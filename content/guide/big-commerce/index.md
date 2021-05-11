@@ -116,6 +116,7 @@ To support the BigCommerce SSO flows, you will need to handle the following:
    * Client Secret: Enter the Client Secret that was generated along with the access token.
 
    * Mapping: Map the following required fields to pass the respective values into BigCommerce. 
+   
      | Key | Value | |
      |----|----|-----|
      |first_name| FirstName| |
