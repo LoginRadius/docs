@@ -152,56 +152,60 @@ It is recommended that you backup your theme before making any modifications if 
    * `option.askEmailForUnverifiedProfileAlways`: You can leave this `true` if you want consumers to verify their email id. Change it to `false` for consumers to proceed without email verification. 
 
    * Add the following schema next to the `var LRObject= new LoginRadiusV2(option);`
-     ```LRObject.registrationFormSchema = [
-{
-"Checked": true,
-"DataSource": null,
-"Parent": null,
-"ParentDataSource": null,
-"display": "First Name",
-"name": "firstname",
-"options": null,
-"permission": "w",
-"rules": "required",
-"type": "string"
-},
-{
-"Checked": true,
-"DataSource": null,
-"Parent": null,
-"ParentDataSource": null,
-"display": "Last Name",
-"name": "lastname",
-"options": null,
-"permission": "w",
-"rules": "required",
-"type": "string"
-},
-{
-"Checked": true,
-"DataSource": null,
-"Parent": null,
-"ParentDataSource": null,
-"display": "Email Id",
-"name": "emailid",
-"options": null,
-"permission": "w",
-"rules": "valid_email",
-"type": "string"
-},
-{
-"Checked": true,
-"DataSource": null,
-"Parent": null,
-"ParentDataSource": null,
-"display": "Password",
-"name": "password",
-"options": null,
-"permission": "w",
-"rules": "min_length[6]|max_length[32]|required",
-"type": "password"
-}
-]```
+
+   
+     ```
+     LRObject.registrationFormSchema = [
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "First Name",
+         "name": "firstname",
+         "options": null,
+         "permission": "w",
+         "rules": "required",
+         "type": "string"
+         },
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "Last Name",
+         "name": "lastname",
+         "options": null,
+         "permission": "w",
+         "rules": "required",
+         "type": "string"
+         },
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "Email Id",
+         "name": "emailid",
+         "options": null,
+         "permission": "w",
+         "rules": "valid_email",
+         "type": "string"
+         },
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "Password",
+         "name": "password",
+         "options": null,
+         "permission": "w",
+         "rules": "min_length[6]|max_length[32]|required",
+         "type": "password"
+         }
+      ]
+```
 
 4. Include the reference files for LoginRadius in your header section by including the following code in your **theme > templates > components > common > header.html** just before the closing tag:
 
