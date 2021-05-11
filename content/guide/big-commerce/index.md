@@ -115,7 +115,15 @@ To support the BigCommerce SSO flows, you will need to handle the following:
 
    * Client Secret: Enter the Client Secret that was generated along with the access token.
 
-   * Mapping: Map any fields you would like to be passed into BigCommerce. E.g.: `first_name: FirstName`, `last_name: LastName`, `email: Email[0].Value.`
+   * Mapping: Map the following required fields to pass the respective values into BigCommerce. 
+     | Key | Value | |
+     |----|----|-----|
+     |first_name| FirstName| |
+     |last_name| LastName |  |
+     |email | Other|Enter value  `Email[0].Value`|
+     
+     > Note: These are required fields for BigCommerce integration and you should use Key Values in the format given above.
+
 
 ## Stencil Theme Setup
 
@@ -133,14 +141,71 @@ It is recommended that you backup your theme before making any modifications if 
 
 2. Copy the contents of the **components** folder from the LoginRadius theme into your theme's **templates > components** folder.
 
-3. Open the `config.js` in your **theme > assets > loginradius >assets > js** and and update the LoginRadius options object with the following:
+3. Open the `config.js` in your **theme > assets > loginradius >assets > js** and update the LoginRadius options object with the following:
 
-   * storeName: Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`  , then your store name value should be `pqshk245fh`
+   * `storeName`: Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`  , then your store name value should be `pqshk245fh`
 
-   * option.apiKey: Add your LoginRadius API Key.
-   * option.appName: Add your LoginRadius App Name.
-   * option.sott: Add a valid LoginRadius Sott.
-   * option.verificationUrl: You can leave this default unless you want to direct users to a specific location to validate the emails. This is required if you are using the Email add/remove the panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list here.
+   * `option.apiKey`: Add your LoginRadius [API Key](#get-credentials).
+   * `option.appName`: Add your LoginRadius [App Name](#get-credentials).
+   * `option.sott`: Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott).
+   * `option.verificationUrl`: You can leave this default unless you want to direct users to a specific location to validate the emails. This is required if you are using the Email add/remove the panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list here.
+   * `option.askEmailForUnverifiedProfileAlways`: You can leave this `true` if you want consumers to verify their email id. Change it to `false` for consumers to proceed without email verification. 
+
+   * Add the following schema next to the `var LRObject= new LoginRadiusV2(option);`
+
+   
+     ```
+     LRObject.registrationFormSchema = [
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "First Name",
+         "name": "firstname",
+         "options": null,
+         "permission": "w",
+         "rules": "required",
+         "type": "string"
+         },
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "Last Name",
+         "name": "lastname",
+         "options": null,
+         "permission": "w",
+         "rules": "required",
+         "type": "string"
+         },
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "Email Id",
+         "name": "emailid",
+         "options": null,
+         "permission": "w",
+         "rules": "valid_email",
+         "type": "string"
+         },
+         {
+         "Checked": true,
+         "DataSource": null,
+         "Parent": null,
+         "ParentDataSource": null,
+         "display": "Password",
+         "name": "password",
+         "options": null,
+         "permission": "w",
+         "rules": "min_length[6]|max_length[32]|required",
+         "type": "password"
+         }
+      ]
+```
 
 4. Include the reference files for LoginRadius in your header section by including the following code in your **theme > templates > components > common > header.html** just before the closing tag:
 
