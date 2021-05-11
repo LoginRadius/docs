@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Modal from "react-modal"
 import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
-import LogoVideo from "../../public/images/logovideo.svg"
+import LogoVideo from "../../static/images/logovideo.svg"
 const Middle = () => {
   const apiRef = React.createRef()
   const sdkRef = React.createRef()
