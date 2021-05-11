@@ -217,7 +217,7 @@ footer {
   overflow: hidden;
   .ReactModal__Overlay {
     background-color: rgba(0, 0, 0, 0.36) !important;
-    z-index: 1;
+    z-index: 3;
     .ReactModal__Content {
       padding: 0 !important;
       border: 0 !important;
