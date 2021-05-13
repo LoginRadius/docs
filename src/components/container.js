@@ -33,7 +33,7 @@ const Middle = () => {
     <main>
       {/*Hero section*/}
       <section className="hero py-72">
-        <div className="grid-50 d-flex align-items-center justify-content-between">
+        <div className="grid-50 d-flex align-items-end justify-content-between">
           <div>
             <h1>LoginRadius Documentation</h1>
             <p>
