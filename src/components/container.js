@@ -78,7 +78,7 @@ const Middle = () => {
                   <path
                     d="M29.75 24.8087L50 36.5L29.75 48.1913L29.75 24.8087Z"
                     stroke="#008ECF"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                 </svg>
               </a>
@@ -96,9 +96,9 @@ const Middle = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       class="feather feather-x"
                     >
                       <line x1="18" y1="6" x2="6" y2="18"></line>

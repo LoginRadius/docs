@@ -269,6 +269,6 @@ path: "/references/api/roles-management"
   |Permissions|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**]
 
   ### Try Me Out
-  <try-me-out id="remove-permissions" endpoint="https://api.loginradius.com/identity/v2/manage/role/{role}/permission" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"templateParams":[{"key":"role"}]},"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"permissions":["permission_name1"]}'></try-me-out>
+  <try-me-out id="remove-permissions" endpoint="https://api.loginradius.com/identity/v2/manage/role/{role}/permission" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"templateParams":[{"key":"role"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"permissions":["permission_name1"]}}'></try-me-out>
 
 [Go Back to Home Page](/)

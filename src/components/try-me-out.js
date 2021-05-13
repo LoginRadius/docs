@@ -103,7 +103,7 @@ export default class TryMeOut extends React.Component {
   }
 
   onTryMeOutClick = () => {
-    const { isExpanded, params, endpoint } = this.state
+    const { isExpanded, params } = this.state
     const templateObj = {}
     const queryObj = {}
     const headerObj = {}
@@ -204,13 +204,15 @@ export default class TryMeOut extends React.Component {
           <div className={`${styles.tryMeOutClient}`}>
             <div className={styles.requestUrl}>
               <h4>Request URL</h4>
-              <div>
-                {method}
+              <div className={styles.requestUrlRow}>
+                <div className={styles.method}>
+                  {method}
+                </div>
+                <div className={styles.endpoint}>
+                  {endpoint}
+                </div>
+                <a className={`${styles.requestBtn} btn btn-primary`} onClick={this.onRequestSubmitClick}>Send Request</a>
               </div>
-              <div>
-                {endpoint}
-              </div>
-              <a className={` btn btn-primary`} onClick={this.onRequestSubmitClick}>Send Request</a>
             </div>
             {params.queryParams ? (
               <div className={styles.queryParams}>
@@ -218,7 +220,7 @@ export default class TryMeOut extends React.Component {
                 {params.queryParams.map((param, index) => {
                   return (
                     <label key={`queryParam_${index}`}>
-                      {param.key}
+                      <div>{param.key}</div>
                       <input
                         name={param.key}
                         type="text"
@@ -236,7 +238,7 @@ export default class TryMeOut extends React.Component {
                 {params.templateParams.map((param, index) => {
                   return (
                     <label key={`templateParam_${index}`}>
-                      {param.key}
+                      <div>{param.key}</div>
                       <input
                         name={param.key}
                         type="text"
@@ -254,7 +256,7 @@ export default class TryMeOut extends React.Component {
                 {params.headers.map((header, index) => {
                   return (
                     <label key={`header_${index}`}>
-                      {header.key}
+                      <div>{header.key}</div>
                       <input
                         name={header.key}
                         type="text"
@@ -268,15 +270,23 @@ export default class TryMeOut extends React.Component {
               </div>
             ) : ""}
             {params.body ? (
-              <div className={`${styles.body} ${params.body ? styles.show : styles.hide}`}>
+              <div className={styles.body}>
                 <h4>Body</h4>
-                <textarea name="body" rows="15" cols="50" onChange={this.handleBodyChange} value={clientState.body || ""} />
+                <div className={styles.bodyEditor}>
+                  <textarea name="body" rows="15" onChange={this.handleBodyChange} value={clientState.body || ""} />
+                </div>
               </div>
             ) : ""}
             <div className={styles.response}>
-              <h4>Response</h4>
-              <div>{clientState.response.status ? clientState.response.status : ""}</div>
-              <textarea readOnly name="responseBody" rows="10" cols="50" value={clientState.response.body || ""} />
+              <div className={styles.responseHeader}>
+                <h4>Response</h4>
+                <div className={styles.statusCode}>
+                  {clientState.response.status ? clientState.response.status : ""}
+                </div>
+              </div>
+              <div className={styles.responseBody}>
+                <textarea readOnly name="responseBody" rows="15" value={clientState.response.body || ""} />
+              </div>
             </div>
           </div>
         )
