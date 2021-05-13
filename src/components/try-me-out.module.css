@@ -1,0 +1,121 @@
+.try-me-out {
+  margin-bottom: 20px;
+}
+
+.try-me-out .try-me-out-button {
+  font-size: 1.1rem;
+  padding: 0 0.75rem;
+}
+
+.try-me-out .try-me-out-client h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.request-url .request-url-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.request-url .request-url-row .request-btn {
+  font-size: 1rem;
+  padding: 0 0.75rem;
+}
+
+.request-url .method {
+  font-weight: 700;
+  font-size: 1rem;
+  width: 125px;
+}
+
+
+.request-url .endpoint {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.request-url .request-url-row div {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px 0 10px 0;
+  color: #41484e;
+}
+
+.query-params, .templateParams, .headers {
+  display: flex;
+  flex-direction: column;
+}
+
+.query-params label, .templateParams label, .headers label {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: -1px;
+}
+
+.query-params div, .templateParams div, .headers div {
+  color: #41484e;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 125px;
+  text-align: left;
+  padding: 10px 0 10px 0;
+}
+
+.query-params input, .templateParams input, .headers input {
+  flex-grow: 1;
+  padding: 5px 10px 5px 10px;
+  color: #41484e;
+  font-size: 1rem;
+  border: 1px solid #d1d3d4;
+  border-radius: 0;
+}
+
+.query-params input:focus, .templateParams input:focus, .headers input:focus {
+  outline: none;
+}
+
+.query-params input:read-only, .templateParams input:read-only, .headers input:read-only {
+  background-color: #fafafa;
+}
+
+.body .bodyEditor {
+  display: flex;
+}
+
+.body .bodyEditor textarea {
+  flex-grow: 1;
+  padding: 15px 20px 15px 20px;
+  color: #41484e;
+  font-size: 0.95rem;
+  border: 1px solid #d1d3d4;
+  resize: none;
+}
+
+.body .bodyEditor textarea:focus {
+  outline: none;
+}
+
+.response .response-header h4 {
+  display: inline-block;
+}
+
+.response .response-header .status-code {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.response .responseBody {
+  display: flex;
+}
+
+.response .responseBody textarea {
+  flex-grow: 1;
+  padding: 15px 20px 15px 20px;
+  color: #41484e;
+  font-size: 0.95rem;
+  border: 1px solid #d1d3d4;
+  background-color: #fafafa;
+  resize: none;
+}

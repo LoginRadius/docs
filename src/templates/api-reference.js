@@ -1,16 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
+import rehypeReact from "rehype-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import TableOfContents from "../components/table-of-contents"
-import * as containerStyles from "./blog-post.module.css"
+import TryMeOut from "../components/try-me-out"
 
-const BlogPostTemplate = ({ data, location }) => {
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { "try-me-out": TryMeOut }
+}).Compiler
+
+const ApiReferenceTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  //const { previous, next } = data
   const pathArray = location.pathname.split("/")
   const section = pathArray.length >= 2 ? pathArray[1] : undefined;
 
@@ -23,9 +28,9 @@ const BlogPostTemplate = ({ data, location }) => {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <section className={`detail-page py-72 ${containerStyles.container}`}>
+          <section className={`detail-page py-72 container`}>
             <div>
-              <div className={`sidebar ${containerStyles.sidebar}`}>
+              <div className={`sidebar`}>
                 <div className="headings">{section}</div>
                 <TableOfContents html={post.tableOfContents} />
                 <div className="get-in-touch">
@@ -68,14 +73,15 @@ const BlogPostTemplate = ({ data, location }) => {
                 </div>
               </div>
 
-              <div className={`content ${containerStyles.content}`}>
+              <div className={`content`}>
                 <ul className="breadcrumbs">
                   {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))}
                 </ul>
-                <div
+                {/* <div
                   dangerouslySetInnerHTML={{ __html: post.html }}
                   itemProp="articleBody"
-                />
+                /> */}
+                {renderAst(post.htmlAst)}
               </div>
             </div>
           </section>
@@ -86,10 +92,10 @@ const BlogPostTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default ApiReferenceTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query ApiReferenceBySlug(
     $id: String!
     $previousPostId: String
     $nextPostId: String
@@ -106,7 +112,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

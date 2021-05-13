@@ -19,6 +19,9 @@ path: "/references/api/social"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Secret | none | LoginRadius API Secret [**Required**] |
   | Token | none | Token generated from a successful oauth from social platform [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="access-token" endpoint="https://api.loginradius.com/api/v2/access_token" method="GET" params='{"queryParams":[{"key":"secret","default":""},{"key":"token","default":""}]}'></try-me-out>
  
 ## Token Validate
 
@@ -34,6 +37,9 @@ path: "/references/api/social"
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
 
+  ### Try Me Out
+  <try-me-out id="token-validate" endpoint="https://api.loginradius.com/api/v2/access_token/Validate" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"key","default":""},{"key":"secret"}]}'></try-me-out>
+
 ## Access Token Invalidate
 
   This api invalidates the active access token or expires an access token validity.
@@ -48,6 +54,9 @@ path: "/references/api/social"
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
 
+  ### Try Me Out
+  <try-me-out id="access-token-invalidate" endpoint="https://api.loginradius.com/api/v2/access_token/inValidate" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"key","default":""},{"key":"secret"}]}'></try-me-out>
+
 ## Get Active Session Details
 
   This api is use to get all active session by Access Token.
@@ -61,6 +70,9 @@ path: "/references/api/social"
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
   | Token | none | Token generated from a successful oauth from social platform [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="get-active-session-details" endpoint="https://api.loginradius.com/api/v2/access_token/activeSession" method="GET" params='{"queryParams":[{"key":"key","default":""},{"key":"secret","default":""},{"key":"token"}]}'></try-me-out>
  
 ## Get Active Session By Account Id
 
@@ -76,6 +88,9 @@ path: "/references/api/social"
   | Key | none | LoginRadius API Key [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
 
+  ### Try Me Out
+  <try-me-out id="get-active-session-by-account-id" endpoint="https://api.loginradius.com/api/v2/access_token/activeSession" method="GET" params='{"queryParams":[{"key":"accountId","default":""},{"key":"key","default":""},{"key":"secret"}]}'></try-me-out>
+
 ## Get Active Session By Profile Id
 
   This api is used to get all active sessions by ProfileId.
@@ -89,6 +104,9 @@ path: "/references/api/social"
   | Key | none | LoginRadius API Key [**Required**] |
   | ProfileId | none | Social Provider Id [**Required**] |
   | Secret | none | LoginRadius API Secret [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="get-active-session-by-profile-id" endpoint="https://api.loginradius.com/api/v2/access_token/activeSession" method="GET" params='{"queryParams":[{"key":"profileId","default":""},{"key":"key","default":""},{"key":"secret"}]}'></try-me-out>
  
 ## User Profile
 
@@ -102,5 +120,8 @@ path: "/references/api/social"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | Access_Token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
+
+  ### Try Me Out
+  <try-me-out id="user-profile" endpoint="https://api.loginradius.com/api/v2/userprofile" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"fields","default":""}]}'></try-me-out>
 
 [Go Back to Home Page](/)

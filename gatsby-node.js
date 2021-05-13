@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const apiReference = path.resolve(`./src/templates/api-reference.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -44,16 +45,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+      const path = post.fields.slug
+      const splitPath = path.split("/")
 
-      createPage({
-        path: post.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-        },
-      })
+      if (
+        splitPath[1] &&
+        splitPath[2] &&
+        splitPath[1] === "references" &&
+        splitPath[2] === "api"
+      ) {
+        createPage({
+          path: path,
+          component: apiReference,
+          context: {
+            id: post.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      } else {
+        createPage({
+          path: path,
+          component: blogPost,
+          context: {
+            id: post.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      }
     })
   }
 }
