@@ -203,7 +203,6 @@ A detailed table for the **actions** parameter from above:
 | [deleteUser](/references/javascript-library/advanced-customizations#delete-user) | String | Send delete consumer email. |
 | [deleteUserConfirm](/references/javascript-library/advanced-customizations#confirm-delete-user) | String | Confirm delete consumer functionality. |
 | [updatePhone](/references/javascript-library/advanced-customizations#update-phone) | String | Perform update phone action. |
-<!--| [changeUsername]() | String | Perform change username action when the consumer is logged in. |-->
 | [resendVerificationEmail](/references/javascript-library/advanced-customizations#resend-email-verification) | String | Perform resend email verification action. |
 | [addEmail](/references/javascript-library/advanced-customizations#add-email) | String | Perform add email action when the consumer is logged in. |
 | [removeEmail](/references/javascript-library/advanced-customizations#remove-email) | String | Perform remove email action when the consumer is logged in. |

@@ -702,6 +702,11 @@ const Middle = () => {
                   Form Library
                 </Link>
               </li>
+              <li>
+                <Link to="references/javascript-library/customizing-your-registration-schema">
+                  Customizing Your Registration Schema
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
