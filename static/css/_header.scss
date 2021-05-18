@@ -3,7 +3,7 @@ header {
   border-bottom: 1px solid $gray-light;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   @media (max-width: 768px) {
     padding-top: 24px;
     padding-bottom: 24px;

@@ -27,6 +27,9 @@ path: "/references/api/phone-authentication"
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |password|Password for the email
   |phone|New Phone Number | Model Class containing Definition of payload for PhoneAuthenticationModel API [**Required**]
+
+  ### Try Me Out
+  <try-me-out id="phone-login" endpoint="https://api.loginradius.com/identity/v2/auth/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"fields","default":""},{"key":"loginUrl"},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}'></try-me-out>
  
 ## Phone Forgot Password by OTP
 
@@ -40,6 +43,9 @@ path: "/references/api/phone-authentication"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
+
+  ### Try Me Out
+  <try-me-out id="phone-forgot-password-by-otp" endpoint="https://api.loginradius.com/identity/v2/auth/password/otp" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":""}}'></try-me-out>
  
 ## Phone Resend Verification OTP
 
@@ -53,6 +59,9 @@ path: "/references/api/phone-authentication"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
+
+  ### Try Me Out
+  <try-me-out id="phone-resend-verification-otp" endpoint="https://api.loginradius.com/identity/v2/auth/phone/otp" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":""}}'></try-me-out>
  
 ## Phone Resend Verification OTP by Token
 
@@ -67,6 +76,9 @@ path: "/references/api/phone-authentication"
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
+
+  ### Try Me Out
+  <try-me-out id="phone-resend-verification-otp-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/phone/otp" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"access_token"},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":""}}'></try-me-out>
 
 ## Phone User Registration by SMS
 
@@ -92,7 +104,10 @@ path: "/references/api/phone-authentication"
   |FirstName|user's first name
   |LastName|user's last name
   |Password|Password for the email
-  |PhoneId|Phone ID (Unique Phone Number Identifier of the user) | Model Class containing Definition of payload for Auth User Registration API [**Required**] 
+  |PhoneId|Phone ID (Unique Phone Number Identifier of the user) | Model Class containing Definition of payload for Auth User Registration API [**Required**]
+
+  ### Try Me Out
+  <try-me-out id="phone-user-registration-by-sms" endpoint="https://api.loginradius.com/identity/v2/auth/register" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"sott"},{"key":"fields"},{"key":"options"},{"key":"smsTemplate"},{"key":"verificationUrl"},{"key":"welcomeEmailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"FirstName":"","LastName":"","Password":"","PhoneId":""}}'></try-me-out>
  
 ## Phone Number Availability
 
@@ -106,6 +121,9 @@ path: "/references/api/phone-authentication"
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | apikey | none | LoginRadius API Key [**Required**] |
   | Phone | none | The Registered Phone Number [**Required**] |
+
+  ### Try Me Out
+  <try-me-out id="phone-number-availability" endpoint="https://api.loginradius.com/identity/v2/auth/phone" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"phone"}]}'></try-me-out>
  
 ## Phone Reset Password by OTP
 
@@ -124,7 +142,10 @@ path: "/references/api/phone-authentication"
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
   |otp|The Verification Code
   |password|Password for the email
-  |Phone|New Phone Number | Model Class containing Definition of payload for ResetPasswordByOTP API [**Required**] 
+  |Phone|New Phone Number | Model Class containing Definition of payload for ResetPasswordByOTP API [**Required**]
+  
+  ### Try Me Out
+  <try-me-out id="phone-reset-password-by-otp" endpoint="https://api.loginradius.com/identity/v2/auth/password/otp" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"otp":"", "password":"","phone":""}}'></try-me-out>
 
 ## Phone Verification OTP
 
@@ -140,13 +161,16 @@ path: "/references/api/phone-authentication"
   | Otp | none | The Verification Code [**Required**] |
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
+  
+  ### Try Me Out
+  <try-me-out id="phone-verification-otp" endpoint="https://api.loginradius.com/identity/v2/auth/phone/otp" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"otp"},{"key":"fields"},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":""}}'></try-me-out>
 
 ## Phone Verification OTP by Token
 
   Consumes the verification OTP sent to verify the consumer's Phone ID when the consumer is already logged in.
 
   ### Endpoint
-  `PUT` `https://api.loginradius.com/identity/v2/auth/phone/otp?access_token=&apikey=&Otp=&SmsTemplate=`
+  `PUT` `https://api.loginradius.com/identity/v2/auth/phone/otp`
 
   ### Query Parameters
   | Parameter    | Default | Description |
@@ -155,6 +179,9 @@ path: "/references/api/phone-authentication"
   | apikey | none | LoginRadius API Key [**Required**] |
   | Otp | none | The Verification Code [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
+  
+  ### Try Me Out
+  <try-me-out id="phone-verification-otp-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/phone/otp" method="PUT" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"},{"key":"otp"},{"key":"smsTemplate"}]}'></try-me-out>
 
 ## Phone Number Update
 
@@ -169,18 +196,24 @@ path: "/references/api/phone-authentication"
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
   | SmsTemplate | none | SMS Template name [**Optional**] |
+  
+  ### Try Me Out
+  <try-me-out id="phone-number-update" endpoint="https://api.loginradius.com/identity/v2/auth/phone" method="PUT" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":""}}'></try-me-out>
 
 ## Remove Phone ID by Access Token
 
   Deletes the Phone ID from the consumer corresponding to the specified access token.
 
   ### Endpoint
-  `Delete /identity/v2/auth/phone`
+  `DELETE` `https://api.loginradius.com/identity/v2/auth/phone`
 
   ### Query Parameters
   | Parameter    | Default | Description |
   | :------------ | :------- | :-------------------------------------------------------------------------------- |
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
+  
+  ### Try Me Out
+  <try-me-out id="remove-phone-id-by-access-token" endpoint="https://api.loginradius.com/identity/v2/auth/phone" method="PUT" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"}]}'></try-me-out>
 
 [Go Back to Home Page](/)

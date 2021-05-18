@@ -21,4 +21,7 @@ path: "/references/api/sott"
   | apisecret | none | LoginRadius API Secret [**Required**] |
   | TimeDifference | none | The time difference you would like to pass, If you not pass difference then the default value is 10 minutes [**Optional**] |
 
+  ### Try Me Out
+  <try-me-out id="generate-sott" endpoint="https://api.loginradius.com/identity/v2/manage/account/sott" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"timeDifference"}]}'></try-me-out>
+
 [Go Back to Home Page](/)

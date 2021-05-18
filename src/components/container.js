@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Modal from "react-modal"
 import { Link, withPrefix } from "gatsby"
 import PopUp from "./modal.js"
-
+import LogoVideo from "../../static/images/logovideo.svg"
 const Middle = () => {
   const apiRef = React.createRef()
   const sdkRef = React.createRef()
@@ -10,14 +10,19 @@ const Middle = () => {
   const [display, setDisplay] = useState(false)
 
   useEffect(() => {
-    if (window && window.location && window.location.hash && window.location.hash !== "") {
+    if (
+      window &&
+      window.location &&
+      window.location.hash &&
+      window.location.hash !== ""
+    ) {
       if (window.location.hash === "#api") {
         window.history.scrollRestoration = "manual"
         apiRef.current.scrollIntoView({ block: "start" })
       } else if (window.location.hash === "#sdk") {
         window.history.scrollRestoration = "manual"
         sdkRef.current.scrollIntoView({ block: "start" })
-      }else if (window.location.hash === "#loginmethods") {
+      } else if (window.location.hash === "#loginmethods") {
         window.history.scrollRestoration = "manual"
         gotQRef.current.scrollIntoView({ block: "start" })
       }
@@ -28,7 +33,7 @@ const Middle = () => {
     <main>
       {/*Hero section*/}
       <section className="hero py-72">
-        <div className="grid-50 d-flex align-items-center">
+        <div className="grid-50 d-flex align-items-end justify-content-between">
           <div>
             <h1>LoginRadius Documentation</h1>
             <p>
@@ -42,59 +47,82 @@ const Middle = () => {
               to third-party applications using 30+ Integration options.
             </p>
             <div className="btn-group">
-              <a onClick={() => setDisplay(true)} className="btn btn-primary">
-                Try 4 Minute Setup Guide
-              </a>
-              <Modal
-                id="setup-guide-video"
-                isOpen={display}
-                ariaHideApp={false}
-              >
-                <div className="card no-shadow p-0">
-                  <div className="popup-header">
-                    <h3 className="title">Try this 4 Minute Setup Guide</h3>
-                    <a onClick={() => setDisplay(false)}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-x"
-                      >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
-                    </a>
-                  </div>
-
-                  <div class="popup-content">
-                    <iframe
-                      width="100%"
-                      height="400"
-                      src="https://www.youtube.com/embed/wgkT2x2khV4"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allow="fullscreen;"
-                    ></iframe>
-                  </div>
-                </div>
-              </Modal>
-
               <Link
                 to="/tutorial/html-and-js-tutorial"
                 className="btn btn-outline"
               >
                 Curious How It Works?
               </Link>
+              <a
+                onClick={() => setDisplay(true)}
+                className="btn btn-primary show-mobile"
+              >
+                Try 4 Minute Setup Guide
+              </a>
             </div>
           </div>
-          <div className="wrapper">
+          <div className="video-thumbnail">
+            <div className="video-logo">
+              <img src={LogoVideo} title="LoginRadius" alt="LoginRadius" />
+            </div>
+            <div className="play-icon">
+              <a onClick={() => setDisplay(true)}>
+                <svg
+                  width="72"
+                  height="72"
+                  viewBox="0 0 72 72"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="36" cy="36" r="36" fill="white" />
+                  <path
+                    d="M29.75 24.8087L50 36.5L29.75 48.1913L29.75 24.8087Z"
+                    stroke="#008ECF"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div className="footer-text">Try 4 Minute Setup Guide</div>
+            <Modal id="setup-guide-video" isOpen={display} ariaHideApp={false}>
+              <div className="card no-shadow p-0">
+                <div className="popup-header">
+                  <h3 className="title">Try this 4 Minute Setup Guide</h3>
+                  <a onClick={() => setDisplay(false)}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      class="feather feather-x"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="popup-content">
+                  <iframe
+                    width="100%"
+                    height="400"
+                    src="https://www.youtube.com/embed/wgkT2x2khV4"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="fullscreen;"
+                  ></iframe>
+                </div>
+              </div>
+            </Modal>
+          </div>
+
+          {/* <div className="wrapper">
             <div className="steps" id="steps">
               <div className="step step1">
                 <div className="number">
@@ -123,7 +151,7 @@ const Middle = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/*Hero section*/}
@@ -302,7 +330,7 @@ const Middle = () => {
       {/*Tutorials section*/}
       {/*Section Recommended Resources*/}
       <section className="resources py-72">
-        <div ref={gotQRef}  className="section-header">
+        <div ref={gotQRef} className="section-header">
           <h2>Got Questions?</h2>
           <p>
             Find common use cases and answers to your how-to and next-step
@@ -463,7 +491,9 @@ const Middle = () => {
                 <Link to="/guide/shopify">Integrate Shopify</Link>
               </li>
               <li>
-                <Link to="/guide/3rd-party-all-integrations">Available Integrations</Link>
+                <Link to="/guide/3rd-party-all-integrations">
+                  Available Integrations
+                </Link>
               </li>
             </ul>
           </div>
@@ -499,9 +529,10 @@ const Middle = () => {
                 <Link to="guide/enable-force-logout">Enable Force Logout</Link>
               </li>
               <li>
-                <Link to="guide/block-disposable-email">Block Disposable Email</Link>
+                <Link to="guide/block-disposable-email">
+                  Block Disposable Email
+                </Link>
               </li>
-              
             </ul>
           </div>
           {/*Secure Authentication*/}

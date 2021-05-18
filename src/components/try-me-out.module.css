@@ -1,0 +1,199 @@
+.try-me-out {
+  margin-bottom: 20px;
+}
+
+.try-me-out .try-me-out-button {
+  font-size: 1.1rem;
+  padding: 0 0.75rem;
+}
+
+.try-me-out .try-me-out-client h4 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.request-url .request-url-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-bottom: 24px;
+}
+
+.request-url .request-url-row .request-btn {
+  font-size: 1rem;
+  padding: 0 0.75rem;
+}
+
+.request-url .method {
+  width: 125px;
+}
+
+.request-url .endpoint {
+  flex-grow: 1;
+}
+
+.query-params,
+.templateParams,
+.headers {
+  display: flex;
+  flex-direction: column;
+}
+
+.query-params label,
+.templateParams label,
+.headers label {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: -1px;
+}
+
+.query-params div,
+.templateParams div,
+.headers div {
+  color: #09263c;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 225px;
+  text-align: left;
+  padding: 12px 24px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.query-params input,
+.templateParams input,
+.headers input {
+  flex-grow: 1;
+  padding: 5px 10px 5px 10px;
+  color: #09263c;
+  font-size: 1rem;
+  border: 1px solid #d1d3d4;
+  border-radius: 0;
+}
+
+.query-params input:focus,
+.templateParams input:focus,
+.headers input:focus {
+  outline: none;
+}
+
+.query-params input:read-only,
+.templateParams input:read-only,
+.headers input:read-only {
+  background-color: #fafafa;
+}
+
+.body .bodyEditor {
+  display: flex;
+}
+
+.body .bodyEditor textarea,
+.response .responseBody textarea {
+  flex-grow: 1;
+  padding: 15px 20px 15px 20px;
+  border: 1px solid #d1d3d4;
+  resize: none;
+  background-color: #09263c;
+  color: #fff;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.body .bodyEditor textarea:focus {
+  outline: none;
+}
+
+.response .response-header h4 {
+  display: inline-block;
+}
+
+.response .response-header .status-code {
+  padding: 2px 8px;
+  background: #f6830b;
+  color: #fff;
+  border-radius: 5px;
+}
+.response .response-header .status-code:empty {
+  padding: 0;
+}
+.response .responseBody {
+  display: flex;
+}
+
+.request-url {
+  background-color: #09263c;
+  color: #fff;
+  padding: 24px 24px 0 24px;
+  margin-top: 24px;
+}
+.methodname {
+  width: 85px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-radius: 17px;
+  border: 2px solid #fff;
+  margin-bottom: 24px;
+}
+.method {
+  background-color: #09263c;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #fff;
+  line-height: 28px;
+  border: solid 1px #fff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.endpoint {
+  background-color: #fafafa;
+  color: #020b13;
+  margin-right: 8px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-left: 8px;
+  line-height: 2;
+  font-size: 0.9rem;
+}
+.request-url-body {
+  border: 1px solid #d1d3d4;
+  padding: 0 24px 24px;
+}
+.request-url-body h4 {
+  font-weight: 500 !important;
+}
+.query-params label:last-child > div,
+.templateParams label:last-child > div,
+.headers label:last-child > div {
+  border-bottom: 1px solid #ccc;
+}
+.response-header {
+  width: 100%;
+  padding: 12px 24px;
+  color: #020b13;
+  background: #f4f4f4;
+  margin-top: 40px;
+  border: 1px solid #d1d3d4;
+  border-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.response-header h4 {
+  margin: 0 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}

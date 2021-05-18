@@ -32,13 +32,13 @@
       margin-bottom: 10px;
     }
     .table-of-contents {
-      ul {
+      & > ul {
         & > li {
           &:first-child {
             & > ul {
               @media (min-width: 769px) {
                 overflow-y: auto;
-                max-height: 50vh;
+                max-height: 40vh;
               }
             }
           }
@@ -79,7 +79,7 @@
           }
           a {
             color: $gray-dark;
-            padding: 8px 0 8px 24px;
+            padding: 8px 8px 8px 24px;
             display: block;
             border-left: 2px solid #e8e9ea;
             &.active,
@@ -114,6 +114,9 @@
           svg {
             fill: $blue;
           }
+        }
+        span {
+          display: flex;
         }
       }
       span {
@@ -338,5 +341,5 @@ body ::-webkit-scrollbar-thumb {
 }
 body ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 0;
+  border-radius: 5px;
 }

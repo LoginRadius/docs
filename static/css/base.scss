@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
 @import "variable", "button", "link", "grid", "header", "landing", "detail-page",
   "footer";
 *,
@@ -5,6 +6,7 @@
 *:after {
   box-sizing: border-box;
 }
+
 html {
   font-size: 16px;
   line-height: 1.5;
@@ -137,6 +139,9 @@ input[type="button"] {
 .align-items-center {
   align-items: center;
 }
+.align-items-end {
+  align-items: flex-end;
+}
 .justify-content-between {
   justify-content: space-between;
 }
@@ -217,7 +222,7 @@ footer {
   overflow: hidden;
   .ReactModal__Overlay {
     background-color: rgba(0, 0, 0, 0.36) !important;
-    z-index: 1;
+    z-index: 3;
     .ReactModal__Content {
       padding: 0 !important;
       border: 0 !important;
