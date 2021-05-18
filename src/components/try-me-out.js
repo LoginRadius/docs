@@ -9,14 +9,14 @@ export default class TryMeOut extends React.Component {
   // }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       endpoint: this.props.endpoint || null,
       method: this.props.method || null,
       params: JSON.parse(this.props.params),
       isExpanded: false,
-  
+
       clientState: {
         query: {},
         template: {},
@@ -24,16 +24,16 @@ export default class TryMeOut extends React.Component {
         body: "",
         response: {
           status: null,
-          body: null
-        }
-      }
+          body: null,
+        },
+      },
     }
   }
 
-  handleTemplateChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+  handleTemplateChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
 
     this.setState(prevState => {
       return {
@@ -41,17 +41,17 @@ export default class TryMeOut extends React.Component {
           ...prevState.clientState,
           template: {
             ...prevState.clientState.template,
-            [name]: value
-          }
-        }
+            [name]: value,
+          },
+        },
       }
     })
   }
 
-  handleQueryChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+  handleQueryChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
 
     this.setState(prevState => {
       return {
@@ -59,17 +59,17 @@ export default class TryMeOut extends React.Component {
           ...prevState.clientState,
           query: {
             ...prevState.clientState.query,
-            [name]: value
-          }
-        }
+            [name]: value,
+          },
+        },
       }
     })
   }
 
-  handleHeaderChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+  handleHeaderChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
 
     this.setState(prevState => {
       return {
@@ -77,23 +77,23 @@ export default class TryMeOut extends React.Component {
           ...prevState.clientState,
           headers: {
             ...prevState.clientState.headers,
-            [name]: value
-          }
-        }
+            [name]: value,
+          },
+        },
       }
     })
   }
 
-  handleBodyChange = (event) => {
-    const target = event.target;
-    const value = target.value;
+  handleBodyChange = event => {
+    const target = event.target
+    const value = target.value
 
     this.setState(prevState => {
       return {
         clientState: {
           ...prevState.clientState,
-          body: value
-        }
+          body: value,
+        },
       }
     })
   }
@@ -128,7 +128,7 @@ export default class TryMeOut extends React.Component {
 
     if (isExpanded) {
       return this.setState({
-        isExpanded: false
+        isExpanded: false,
       })
     }
 
@@ -141,15 +141,15 @@ export default class TryMeOut extends React.Component {
         headers: headerObj,
         response: {
           status: null,
-          body: null
-        }
-      }
+          body: null,
+        },
+      },
     })
   }
 
   onRequestSubmitClick = () => {
     const { endpoint, method, clientState } = this.state
-    let requestUrl = endpoint;
+    let requestUrl = endpoint
 
     Object.entries(clientState.query).forEach(([key, value], index) => {
       if (value) {
@@ -165,7 +165,7 @@ export default class TryMeOut extends React.Component {
       method: method,
       cache: "no-cache",
       headers: clientState.headers,
-      body: clientState.body || undefined
+      body: clientState.body || undefined,
     })
       .then(response => {
         return Promise.all([response.json(), response.status])
@@ -177,120 +177,141 @@ export default class TryMeOut extends React.Component {
               ...prevState.clientState,
               response: {
                 status: status,
-                body: JSON.stringify(data, undefined, 2)
-              }
-            }
+                body: JSON.stringify(data, undefined, 2),
+              },
+            },
           }
         })
       })
   }
 
   render() {
-    const { id } = this.props;
-    const { 
-      isExpanded,
-      params,
-      endpoint,
-      method,
-      clientState
-    } = this.state;
+    const { id } = this.props
+    const { isExpanded, params, endpoint, method, clientState } = this.state
 
     return (
       <div id={id} className={`${styles.tryMeOut}`}>
-        <a className={`${styles.tryMeOutButton} btn btn-primary`} onClick={this.onTryMeOutClick}>
+        <a
+          className={`${styles.tryMeOutButton} btn btn-primary`}
+          onClick={this.onTryMeOutClick}
+        >
           {!isExpanded ? "Show" : "Hide"}
         </a>
         {isExpanded ? (
           <div className={`${styles.tryMeOutClient}`}>
             <div className={styles.requestUrl}>
-              <h4>Request URL</h4>
+              <div className={styles.methodname}>{method}</div>
               <div className={styles.requestUrlRow}>
-                <div className={styles.method}>
-                  {method}
-                </div>
-                <div className={styles.endpoint}>
-                  {endpoint}
-                </div>
-                <a className={`${styles.requestBtn} btn btn-primary`} onClick={this.onRequestSubmitClick}>Send Request</a>
+                <div className={styles.method}>Request URL</div>
+                <div className={styles.endpoint}>{endpoint}</div>
+                <a
+                  className={`${styles.requestBtn} btn btn-primary btn-sm`}
+                  onClick={this.onRequestSubmitClick}
+                >
+                  Send Request
+                </a>
               </div>
             </div>
-            {params.queryParams ? (
-              <div className={styles.queryParams}>
-                <h4>Query Params</h4>
-                {params.queryParams.map((param, index) => {
-                  return (
-                    <label key={`queryParam_${index}`}>
-                      <div>{param.key}</div>
-                      <input
-                        name={param.key}
-                        type="text"
-                        onChange={this.handleQueryChange}
-                        value={clientState.query[param.key] || ""}
-                      />
-                    </label>
-                  );
-                })}
-              </div>
-            ) : ""}
-            {params.templateParams ? (
-              <div className={styles.templateParams}>
-                <h4>Template Params</h4>
-                {params.templateParams.map((param, index) => {
-                  return (
-                    <label key={`templateParam_${index}`}>
-                      <div>{param.key}</div>
-                      <input
-                        name={param.key}
-                        type="text"
-                        onChange={this.handleTemplateChange}
-                        value={clientState.template[param.key] || ""}
-                      />
-                    </label>
-                  );
-                })}
-              </div>
-            ) : ""}
-            {params.headers ? (
-              <div className={styles.headers}>
-                <h4>Headers</h4>
-                {params.headers.map((header, index) => {
-                  return (
-                    <label key={`header_${index}`}>
-                      <div>{header.key}</div>
-                      <input
-                        name={header.key}
-                        type="text"
-                        onChange={this.handleHeaderChange}
-                        value={clientState.headers[header.key] || ""}
-                        readOnly={header.key === "Content-Type"}
-                      />
-                    </label>
-                  );
-                })}
-              </div>
-            ) : ""}
-            {params.body ? (
-              <div className={styles.body}>
-                <h4>Body</h4>
-                <div className={styles.bodyEditor}>
-                  <textarea name="body" rows="15" onChange={this.handleBodyChange} value={clientState.body || ""} />
+            <div className={styles.requestUrlBody}>
+              {params.queryParams ? (
+                <div className={styles.queryParams}>
+                  <h4>Query Params</h4>
+                  {params.queryParams.map((param, index) => {
+                    return (
+                      <label key={`queryParam_${index}`}>
+                        <div>{param.key}</div>
+                        <input
+                          name={param.key}
+                          type="text"
+                          onChange={this.handleQueryChange}
+                          value={clientState.query[param.key] || ""}
+                        />
+                      </label>
+                    )
+                  })}
                 </div>
-              </div>
-            ) : ""}
-            <div className={styles.response}>
-              <div className={styles.responseHeader}>
-                <h4>Response</h4>
-                <div className={styles.statusCode}>
-                  {clientState.response.status ? clientState.response.status : ""}
+              ) : (
+                ""
+              )}
+              {params.templateParams ? (
+                <div className={styles.templateParams}>
+                  <h4>Template Params</h4>
+                  {params.templateParams.map((param, index) => {
+                    return (
+                      <label key={`templateParam_${index}`}>
+                        <div>{param.key}</div>
+                        <input
+                          name={param.key}
+                          type="text"
+                          onChange={this.handleTemplateChange}
+                          value={clientState.template[param.key] || ""}
+                        />
+                      </label>
+                    )
+                  })}
                 </div>
-              </div>
-              <div className={styles.responseBody}>
-                <textarea readOnly name="responseBody" rows="15" value={clientState.response.body || ""} />
+              ) : (
+                ""
+              )}
+              {params.headers ? (
+                <div className={styles.headers}>
+                  <h4>Headers</h4>
+                  {params.headers.map((header, index) => {
+                    return (
+                      <label key={`header_${index}`}>
+                        <div>{header.key}</div>
+                        <input
+                          name={header.key}
+                          type="text"
+                          onChange={this.handleHeaderChange}
+                          value={clientState.headers[header.key] || ""}
+                          readOnly={header.key === "Content-Type"}
+                        />
+                      </label>
+                    )
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+              {params.body ? (
+                <div className={styles.body}>
+                  <h4>Body</h4>
+                  <div className={styles.bodyEditor}>
+                    <textarea
+                      name="body"
+                      rows="15"
+                      onChange={this.handleBodyChange}
+                      value={clientState.body || ""}
+                    />
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+              <div className={styles.response}>
+                <div className={styles.responseHeader}>
+                  <h4>Response</h4>
+                  <div className={styles.statusCode}>
+                    {clientState.response.status
+                      ? clientState.response.status
+                      : ""}
+                  </div>
+                </div>
+                <div className={styles.responseBody}>
+                  <textarea
+                    readOnly
+                    name="responseBody"
+                    rows="15"
+                    value={clientState.response.body || ""}
+                  />
+                </div>
               </div>
             </div>
           </div>
-        )
-        : ""}
+        ) : (
+          ""
+        )}
       </div>
     )
   }

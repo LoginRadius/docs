@@ -19,6 +19,12 @@
   border: 1px solid $cta;
   min-height: 48px;
   white-space: nowrap;
+  &.btn-sm {
+    height: 30px;
+    font-size: 0.875rem !important;
+    line-height: 1;
+    min-height: 30px;
+  }
   &.btn-primary {
     background-color: $cta;
     color: $white;
