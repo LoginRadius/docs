@@ -22,7 +22,13 @@ A schema object is defined using the following format:
 }
 ```
 
-  * **type**: The type of field to display. This key supports `string` or `password` as possible values. `string` will display the consumer's input normally. `password` will hide the consumer's input.
+  * **type**: The type of field to display. This key supports `string`, `password`, `checkbox`, `option`, `hidden`, `email` and `text` as possible values.
+    * `string`: displays the consumer's input normally.
+    * `password`: hides the consumer's input.
+    * `checkbox`: displays a checkbox.
+    * `option`: displays a dropdown select field.
+    * `hidden`: hides the input.
+    * `text`: displays an expandable textarea.
 
   * **name**: The name of the field to be added. This links the data entered in the field to a supported attribute in your app's user object. This key supports `firstname`, `lastname` and `company`.
 
@@ -34,32 +40,34 @@ A schema object is defined using the following format:
 
 As mentioned in the JavaScript Library [Getting Started](/references/javascript-library/getting-started#registration) document, the registration schema objects are contained in the `LRObject.registrationFormSchema` array object.
 
-You can add to the default schema by utilizing the [Process Start Hook](/references/javascript-library/hooks#process-start-hook) and concatenating additional schema objects to the `LRObject.registrationFormSchema` array object.
+You can add to the default schema by utilizing the [Process Start Hook](/references/javascript-library/hooks#process-start-hook) for the `registrationSchema` event and concatenating additional schema objects to the `LRObject.registrationFormSchema` array object.
 
 For example, here we are adding schemas utilizing the `company`, `firstname` and `lastname` data fields to `LRObject.registrationFormSchema`.
 
 ```javascript
-  LRObject.$hooks.register("startProcess", function () {
-    LRObject.registrationFormSchema = LRObject.registrationFormSchema.concat([
-      {
-        "type": "string",
-        "name": "company",
-        "display": "Your Company Name",
-        "rules": "min_length[1]|max_length[15]"
-      },
-      {
-        "type": "string",
-        "name": "firstname",
-        "display": "Your First Name",
-        "rules": "required|min_length[1]|max_length[32]"
-      },
-      {
-        "type": "string",
-        "name": "lastname",
-        "display": "Password",
-        "rules": "required|min_length[1]|max_length[32]"
-      }
-    ])
+  LRObject.$hooks.register("startProcess", function (name) {
+    if (name === "registrationSchema") {
+      LRObject.registrationFormSchema = LRObject.registrationFormSchema.concat([
+        {
+          "type": "string",
+          "name": "company",
+          "display": "Your Company Name",
+          "rules": "min_length[1]|max_length[15]"
+        },
+        {
+          "type": "string",
+          "name": "firstname",
+          "display": "Your First Name",
+          "rules": "required|min_length[1]|max_length[32]"
+        },
+        {
+          "type": "string",
+          "name": "lastname",
+          "display": "Your Last Name",
+          "rules": "required|min_length[1]|max_length[32]"
+        }
+      ]);
+    }
   });
 ```
 
@@ -67,15 +75,14 @@ For example, here we are adding schemas utilizing the `company`, `firstname` and
 
 You can define the rules that will validate your consumer's input for a given field by using the `rules` key in your schema object. These should be entered as a string. If multiple rules are required, they should be delimited with the `|` pipe character.
 
-For example, in the following schema, we have defined the `phoneid` field to validate that the consumer input contains only numerical characters, has a minimum and maximum character length of 7 and 15 respectively:
+For example, in the following schema, we have defined the `firstname` field to validate that the consumer input contains only alphabetical characters, and has a minimum and maximum character length of 7 and 15 respectively:
 
 ```javascript
 {
   "type": "string",
   "name": "phoneid",
   "display": "Phone ID",
-  "rules": "numeric|min_length[7]|max_length[15]",
-  "permission": "w"
+  "rules": "alpha|min_length[7]|max_length[15]"
 }
 ```
 
