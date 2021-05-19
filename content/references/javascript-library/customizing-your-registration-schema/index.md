@@ -80,8 +80,8 @@ For example, in the following schema, we have defined the `firstname` field to v
 ```javascript
 {
   "type": "string",
-  "name": "phoneid",
-  "display": "Phone ID",
+  "name": "firstname",
+  "display": "Your First Name",
   "rules": "alpha|min_length[7]|max_length[15]"
 }
 ```
