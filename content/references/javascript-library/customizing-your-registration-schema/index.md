@@ -75,10 +75,31 @@ The array of options to provide as selectable to the consumer. This key is only 
 
   * `value`: The value to be saved corresponding to the text your consumer selects.
 
-  * **options**: The array of options to provide as selectable to the consumer. This key is only applicable to schemas of type `option`, and is required.
+  * `option`: Displays a dropdown select field. The `options` key is also required for an input of this type.
 
-    * `text`: The display text to be displayed to your consumer.
-    * `value`: The value to be saved corresponding to the text your consumer selects.
+  * `email`: Displays an input of type email. This specifically creates an HTML input tag with the attribute `type` set to `email`. This will be automatically validated by supported browsers.
+
+  * `text`: Displays an expandable textarea.
+
+### name
+
+The name of the field to be added. This links the data entered in the field to a supported attribute in your app's user object. This key supports `firstname`, `lastname` and `company`.
+
+### display
+
+The text to display for your field in the registration form. You can enter any value here.
+
+### rules
+
+The validation rules to be used for this field. Refer to the [Validation Rules](#validation-rules) section for more information.
+
+### options
+
+The array of options to provide as selectable to the consumer. This key is only applicable to schemas of type `option`, and is required.
+
+  * `text`: The display text to be displayed to your consumer.
+
+  * `value`: The value to be saved corresponding to the text your consumer selects.
 
 ## Adding Fields
 
