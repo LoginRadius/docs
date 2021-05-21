@@ -11,7 +11,7 @@ Your application follows a configured schema which populates the registration fo
 
 ## Schema Format
 
-A schema object is defined using the following format:
+A schema object is typically defined using the following format:
 
 ```js
 {
@@ -22,19 +22,42 @@ A schema object is defined using the following format:
 }
 ```
 
-  * **type**: The type of field to display. This key supports `string`, `password`, `checkbox`, `option`, `hidden`, `email` and `text` as possible values.
-    * `string`: displays the consumer's input normally.
-    * `password`: hides the consumer's input.
-    * `checkbox`: displays a checkbox.
-    * `option`: displays a dropdown select field.
-    * `hidden`: hides the input.
-    * `text`: displays an expandable textarea.
+A schema object with type `option` is defined using the following format:
+
+```js
+{
+  "type": "",
+  "name": "",
+  "display": "",
+  "rules": "",
+  "options": [
+    {
+      "text": "",
+      "value": ""
+    }
+  ]
+}
+```
+
+  * **type**: The type of field to display. This key supports `string`, `password`, `multi`, `option`, `email` and `text` as possible values.
+
+    * `string`: Displays the consumer's input normally.
+    * `password`: Hides the consumer's input.
+    * `multi`: Displays a checkbox.
+    * `option`: Displays a dropdown select field. The `options` key is also required for an input of this type.
+    * `email`: Displays an input of type email. This specifically creates an HTML input tag with the attribute `type` set to `email`. This will be automatically validated by supported browsers.
+    * `text`: Displays an expandable textarea.
 
   * **name**: The name of the field to be added. This links the data entered in the field to a supported attribute in your app's user object. This key supports `firstname`, `lastname` and `company`.
 
   * **display**: The text to display for your field in the registration form. You can enter any value here.
 
   * **rules**: The validation rules to be used for this field. Refer to the [Validation Rules](#validation-rules) section for more information.
+
+  * **options**: The array of options to provide as selectable to the consumer. This is a required key when defining a schema of type `option`.
+
+    * `text`: The display text to be displayed to your consumer.
+    * `value`: The value to be saved corresponding to the text your consumer selects.
 
 ## Adding Fields
 
