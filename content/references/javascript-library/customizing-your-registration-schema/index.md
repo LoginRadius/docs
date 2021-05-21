@@ -75,6 +75,11 @@ The array of options to provide as selectable to the consumer. This key is only 
 
   * `value`: The value to be saved corresponding to the text your consumer selects.
 
+  * **options**: The array of options to provide as selectable to the consumer. This is a required key when defining a schema of type `option`.
+
+    * `text`: The display text to be displayed to your consumer.
+    * `value`: The value to be saved corresponding to the text your consumer selects.
+
 ## Adding Fields
 
 As mentioned in the JavaScript Library [Getting Started](/references/javascript-library/getting-started#registration) document, the registration schema objects are contained in the `LRObject.registrationFormSchema` array object.
