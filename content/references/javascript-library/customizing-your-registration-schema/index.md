@@ -54,7 +54,7 @@ A schema object with type `option` is defined using the following format:
 
   * **rules**: The validation rules to be used for this field. Refer to the [Validation Rules](#validation-rules) section for more information.
 
-  * **options**: The array of options to provide as selectable to the consumer. This is a required key when defining a schema of type `option`.
+  * **options**: The array of options to provide as selectable to the consumer. This key is only applicable to schemas of type `option`, and is required.
 
     * `text`: The display text to be displayed to your consumer.
     * `value`: The value to be saved corresponding to the text your consumer selects.
