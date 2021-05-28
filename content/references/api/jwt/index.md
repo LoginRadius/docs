@@ -1,6 +1,7 @@
 ---
 title: JWT code
-description: Addition to user registration systems is the ability to define roles for your users and restrict access to portions of your site based on user permissions.
+tags: ["JWT"]
+description: "This is a document detailing the LoginRadius JWT APIs."
 path: "/references/api/jwt"
 ---
 

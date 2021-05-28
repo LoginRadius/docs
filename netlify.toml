@@ -165,3 +165,11 @@ to = "/docs/developer/tutorial/ios"
 [[redirects]]
 from = "/docs/developer/plugin/wordpress/"
 to = "/docs/developer/guide/wordpress"
+
+[[redirects]]
+  from = "docs/developer/api/webhooks-api/"
+  to = "/docs/developer/references/api/webhooks"
+
+[[redirects]]
+  from = "docs/developer/faq/loginradius-support/"
+  to = "docs/developer/contact-us/#how-do-i-contact-loginradius-support"
