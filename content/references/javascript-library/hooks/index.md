@@ -1,7 +1,7 @@
 ---
 title: "Hooks"
-tags: ["LoginRadiusV2.js", "JavaScript Library", "Hooks"]
-description: "This is a document detailing basic info for the LoginRadius V2 JavaScript SDK."
+tags: ["LoginRadiusV2.js", "Hooks"]
+description: "This is a document detailing Hooks guide for the LoginRadius V2 JavaScript SDK."
 path: "/references/javascript-library/hooks"
 ---
 
