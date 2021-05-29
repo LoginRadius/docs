@@ -14,7 +14,7 @@ This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-o
 
 1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and navigate to **Integration**, the following screen will appear:
 
-   ![alt_text](/images/OpenID-integration.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
 2. Click **Add** button for adding a new OpenID app. The following configuration options will appear:
 
@@ -310,7 +310,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

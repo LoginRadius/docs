@@ -19,7 +19,7 @@ During login, the consumer will need to provide both the Phone Number and Passwo
 
 ### Step 1: Choose Login Method
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Add A Login Method** section.
+1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 

@@ -525,9 +525,9 @@ const Middle = () => {
                   Change Session Lifetime{" "}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="guide/enable-force-logout">Enable Force Logout</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="guide/block-disposable-email">
                   Block Disposable Email
