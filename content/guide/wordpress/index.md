@@ -28,7 +28,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
-> **Note:** Whitelist your application domain as explained in the [Domain Whitelisting](#whitelist-domain)section.
+> **Note:** Whitelist your application domain as explained in the [Whitelist Domain](#whitelist-domain) section.
 
 ## Setup WordPress Plugin
 
@@ -100,7 +100,7 @@ You can select shortcodes that can be used on the page or post to display the re
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
  
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
  
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

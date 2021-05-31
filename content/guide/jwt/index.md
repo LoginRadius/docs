@@ -109,7 +109,7 @@ This section covers the required configurations that you need to perform in the 
 
    The following screen will appear:
 
-   ![alt_text](../../guide/jwt/images/jwt-integration.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
 2. Click **Add** option for adding a new JWT app. The following configuration options will appear: 
 
@@ -220,7 +220,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

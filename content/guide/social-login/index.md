@@ -22,12 +22,12 @@ Watch this video for step by step information, or refer to the section below for
 
 ### Step 1: Choose Login Method 
 
-1. Login to your LoginRadius Dashboard account, from the left navigation panel, click **Configuration** and then navigate to the ** Add a Login Method** section.
+1. Login to your LoginRadius Dashboard account, from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
-   ![alt_text](./images/addaloginmethod.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
 
-2. Click the down arrow, and the **Add a Login Method** section will expand.
+2. Click the down arrow, and the **Login Methods** section will expand.
 
 3. Click the **Add Method** drop-down and select your desired social provider from the available providers’ list as displayed in the following screen:
 
@@ -61,9 +61,9 @@ The steps for configuring each social provider will be different and displayed a
 
 Whitelist your application domain to allow the LoginRadius API access.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > Domain Whitelisting](https://dashboard.loginradius.com/configuration)** and add your domain name:
+In your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
 
-![alt_text](./images/whitelistingdomain.png "image_tooltip")
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 > Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
@@ -81,10 +81,10 @@ Open your **Auth Page (IDX)** (https://</your-app-name/>.hub.loginradius.com/aut
 The following are the social providers that LoginRadius supports for the Free, Developer, and Developer Pro plans.
 
 
-|PLAN |	FACEBOOK |	GOOGLE |	TWITTER |	LINKEDIN |	GITHUB
-|:---|:---|:---|:---|:---|:---|:
-|Free |	Yes |	Yes |	Yes |	No | No
-|Developer	| Yes	| Yes	| Yes	| Yes	| Yes
+|PLAN |	FACEBOOK |	GOOGLE |	TWITTER |	LINKEDIN |	GITHUB  |
+|:---|:---|:---|:---|:---|:---|:---|
+|Free |	Yes |	Yes |	Yes |	No | No |
+|Developer	| Yes	| Yes	| Yes	| Yes	| Yes |
 |Developer Pro	| Supports| 20+ | Social| ID | Providers| 
 
 

@@ -31,7 +31,8 @@ This section covers the required configurations that you need to perform to enab
 
 1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and navigate to [Integration](https://dashboard.loginradius.com/integration). The following screen will appear:
 
-   ![alt_text](images/shopify-integration.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
+
 
 2. Click **Add** button for adding a new Shopify app. The following configuration options will appear: 
 

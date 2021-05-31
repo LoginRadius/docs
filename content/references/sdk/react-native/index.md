@@ -29,7 +29,7 @@ You need to configure your LoginRadius user account with the following changes.
 
     Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 
-![alt_text](images/sott.png "image_tooltip")
+  ![alt_text](../../../assets/blog-common/sott.png "image_tooltip")
 
 3. Get your [API credentials](https://dashboard.loginradius.com/configuration) to initialize SDK and whitelist your application domain as explained [here](/tutorial/react/#whitelist-your-domain).
 
