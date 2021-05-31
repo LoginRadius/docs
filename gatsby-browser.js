@@ -5,7 +5,7 @@ import "typeface-merriweather"
 import "./src/normalize.css"
 // custom CSS styles
 //import "./src/style.css"
-import "./assets/css/base.min.css"
+import "./static/css/base.min.css"
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"

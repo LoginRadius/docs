@@ -264,6 +264,34 @@
         border: 1px solid #e8e9ea;
       }
     }
+    .third-party {
+      text-align: center;
+      .third-party-logos {
+        .card {
+          position: relative;
+          margin-bottom: 24px;
+          a {
+            display: block;
+            &:before {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .gatsby-resp-image-wrapper {
+        img {
+          border-radius: 0;
+          border: 0;
+        }
+      }
+    }
     ul:not(.breadcrumbs) {
       margin: 0 0 2rem 1.2rem;
       list-style-type: disc;
@@ -342,4 +370,11 @@ body ::-webkit-scrollbar-thumb {
 body ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+}
+
+#advertising {
+  & ~ table {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
