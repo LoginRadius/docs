@@ -13,7 +13,7 @@ See below for a comprehensive list of integrations that are available within Log
 
 |![alt_text](images/adroll-logo.png "image_tooltip")   	|![alt_text](images/appnexus.png "image_tooltip")	    |![alt_text](images/blueshift.png "image_tooltip")   	|![alt_text](images/facebook-ads.png "image_tooltip")   	|
 | ---	| ---	| ---	| ---	|
-|[AdRoll](https://www.loginradius.com/integrations/adroll/) 	    |[AdRoll](https://www.loginradius.com/integrations/appnexus/)   	|[BlueShift](https://www.loginradius.com/integrations/blueshift/)   	|[FacebookAds](https://www.loginradius.com.integrations/facebook-ads/)   	|
+|[AdRoll](https://www.loginradius.com/integrations/adroll/) 	    |[Appnexus](https://www.loginradius.com/integrations/appnexus/)   	|[BlueShift](https://www.loginradius.com/integrations/blueshift/)   	|[FacebookAds](https://www.loginradius.com.integrations/facebook-ads/)   	|
 |![alt_text](images/wayin.png "image_tooltip")  	|   	|   	|  	|
 |[Wayin](https://www.loginradius.com/integrations/wayin/)     	|   	|   	|   	|
 
@@ -31,7 +31,7 @@ See below for a comprehensive list of integrations that are available within Log
 | [Chartio](https://www.loginradius.com/integrations/chartio/)  	| [IBM Cognos](https://www.loginradius.com/integrations/ibm-cognos-analytics/)    	| [Looker](https://www.loginradius.com/integrations/looker/)  	| [Microsoft Power BI](https://www.loginradius.com/integrations/microsoft-power-bi/)    	|
 | ![alt_text](images/MicroStrategy.png "image_tooltip")  	|   ![alt_text](images/Qlik.png "image_tooltip")	|  	|  	|
 |[MicroStrategy](https://www.loginradius.com/integrations/microstrategy/)   	|[Qlik](https://www.loginradius.com/integrations/qlik/)   	|  	|  	|
-| ![alt_text](images/tableau.png "image_tooltip")  	|![alt_text](images/tibco-spotfire.png "image_tooltip")   	| ![alt_text](images/SAP-Business-Objects.png "image_tooltip")    	| ![alt_text](images/SAP-Business-Objects.png "image_tooltip")   	|
+| ![alt_text](images/tableau.png "image_tooltip")  	|![alt_text](images/tibco-spotfire.png "image_tooltip")   	| ![alt_text](images/redash.png "image_tooltip")    	| ![alt_text](images/SAP-Business-Objects.png "image_tooltip")   	|
 |[Tableau](https://www.loginradius.com/integrations/tableau/)   	|[TIBCO Spotfire](https://www.loginradius.com/integrations/tibco-spotfire/)   	| [Redash](https://www.loginradius.com/integrations/redash/) | [SAP Business Objects](https://www.loginradius.com/integrations/sap-business-objects/) 
 
 
@@ -40,7 +40,7 @@ See below for a comprehensive list of integrations that are available within Log
 | ![alt_text](images/adobe-experience-manager.png "image_tooltip")   	|  ![alt_text](images/microsoft-adxstudio.png "image_tooltip")  	| ![alt_text](images/dotnetnuke.png "image_tooltip")  	|  ![alt_text](images/drupal.png "image_tooltip")  	|
 |---	|---	|---	|---	|
 |[Adobe Experience Manager](https://www.loginradius.com/integrations/adobe-experience-manager/)   	|[AdxStudio](https://www.loginradius.com/integrations/adxstudio/)   	|[DotNetDuke](https://www.loginradius.com/integrations/dotnetnuke/)   	| [Drupal](https://www.loginradius.com/integrations/drupal/)  	|
-| ![alt_text](images/joomla.png "image_tooltip")  	| ![alt_text](images/jive-x.png "image_tooltip")  	| ![alt_text](images/jive-x.png "image_tooltip")   	|  ![alt_text](images/libercus.png "image_tooltip")  	|
+| ![alt_text](images/joomla.png "image_tooltip")  	| ![alt_text](images/jive-x.png "image_tooltip")  	| ![alt_text](images/libercus.png "image_tooltip")   	|  ![alt_text](images/microsoft-sharepoint.png "image_tooltip")  	|
 | [Joomla](https://www.loginradius.com/integrations/joomla/)  	| [Jive-x](https://www.loginradius.com/integrations/jive-x/)  	| [Libercus](https://www.loginradius.com/integrations/libercus/)  	| [Microsoft Sharepoint](https://www.loginradius.com/integrations/microsoft-sharepoint/)  	|
 |  ![alt_text](images/pagesuite.png "image_tooltip")  	|  ![alt_text](images/simplydigi.png "image_tooltip")  	|   ![alt_text](images/sitecore.png "image_tooltip") 	|   ![alt_text](images/sitefinity.png "image_tooltip") 	|
 | [Page Suite](https://www.loginradius.com/integrations/pagesuite/)  	| [Simpy Digi](https://www.loginradius.com/integrations/simplydigi/)  	| [Sitecore](https://www.loginradius.com/integrations/sitecore/) 	| [SiteFinity](https://www.loginradius.com/integrations/sitefinity/)   	|
@@ -53,12 +53,12 @@ See below for a comprehensive list of integrations that are available within Log
 |  ![alt_text](images/hubspot.png "image_tooltip")   	|  ![alt_text](images/infusionsoft.png "image_tooltip")   	|   ![alt_text](images/microsoft-dynamics.png "image_tooltip")  	|   ![alt_text](images/netsuite.png "image_tooltip")  	|
 |---	|---	|---	|---	|
 |[HubSpot](https://www.loginradius.com/integrations/hubspot/)	|[InfusionSoft](https://www.loginradius.com/integrations/infusionsoft/)   	|  [Microsoft Dyanmic 365](https://www.loginradius.com/integrations/microsoft-dynamics-365/) 	| [NetSuite](https://www.loginradius.com/integrations/netsuite/)  	|
-|  ![alt_text](images/salesforce.png "image_tooltip")  	|   ![alt_text](images/zoho.png "image_tooltip") 	| ![alt_text](images/sugarcrm.png "image_tooltip")   	|  [alt_text](images/freshsales_logo-1222222_292105f612d22f139a1.03212460.png "image_tooltip") 	|
+|  ![alt_text](images/salesforce.png "image_tooltip")  	|   ![alt_text](images/zoho.png "image_tooltip") 	|  ![alt_text](images/sugarcrm.png "image_tooltip")   |  ![alt_text](images/freshsales_logo.png "image_tooltip") 	|
 | [Salesforce](https://www.loginradius.com/integrations/salesforce/)  	|  [Zoho](https://www.loginradius.com/integrations/zoho/) 	|  [SugarCRM](https://www.loginradius.com/integrations/sugarcrm/) 	| [FreshSales](https://www.loginradius.com/integrations/freshsales/)  	|
 
 ## Customer Communication
 
-| ![alt_text](images/Atlassian.png "image_tooltip")   	| ![alt_text](images/customer-dot-io.png "image_tooltip")   	|   	| ![alt_text](images/desk.png "image_tooltip")  	| ![alt_text](images/freshdesk.png "image_tooltip")
+| ![alt_text](images/Atlassian.png "image_tooltip")   	| ![alt_text](images/customer-dot-io.png "image_tooltip")  | ![alt_text](images/desk.png "image_tooltip")  	|      ![alt_text](images/freshdesk.png "image_tooltip")
 |---	|---	|---	|---	|
 | [Atlassian](https://www.loginradius.com/integrations/atlassian/)  	| [Customer.io](https://customer.io)  	|  [Desk](https://www.loginradius.com/integrations/desk/) 	|  [FreshDesk](https://www.loginradius.com/integrations/freshdesk/) 	|
 | ![alt_text](images/intercom.png "image_tooltip")   	|  ![alt_text](images/zendesk.png "image_tooltip")  	|   	|   	|
@@ -111,7 +111,7 @@ See below for a comprehensive list of integrations that are available within Log
 |  ![alt_text](images/doximity.png "image_tooltip") 	| ![alt_text](images/higherlogic.png "image_tooltip")  	| ![alt_text](images/ibm-cloud-video.png "image_tooltip")  	| ![alt_text](images/jira.png "image_tooltip")  	|
 |---	|---	|---	|---	|
 |[Doximity](https://www.loginradius.com/integrations/doximity/)   	| [HigherLogic](https://www.loginradius.com/integrations/higher-logic/)  	|[IBM Cloud Video](https://www.loginradius.com/integrations/ibm-cloud-video/)   	|  [Atlassian](https://www.loginradius.com/integrations/atlassian/) 	|
-| ![alt_text](images/Litmos.png "image_tooltip")  	|![alt_text](images/perfectmind.png "image_tooltip")   	|![alt_text](images/https://www.loginradius.com/integrations/rics.png "image_tooltip")   	|   	|
+| ![alt_text](images/Litmos.png "image_tooltip")  	|![alt_text](images/perfectmind.png "image_tooltip")   	|![alt_text](images/rics-1.png "image_tooltip")   	|   	|
 | [Litmos](https://www.loginradius.com/integrations/sap-litmos/)  	|  [PerfectMind](https://www.loginradius.com/integrations/perfectmind/) 	| [RICS](https://www.loginradius.com/integrations/rics/)  	|   	|
 
 
@@ -129,13 +129,13 @@ See below for a comprehensive list of integrations that are available within Log
 |  [Amazon AWS IAM](https://www.loginradius.com/integrations/amazon-aws-iam/) 	|  [Bitium](https://www.loginradius.com/integrations/bitium/) 	|   [CA Tech Identity](https://www.loginradius.com/integrations/ca-identity-manager/)	|[Centrify](https://www.loginradius.com/integrations/centrify/)   	|
 |    ![alt_text](images/Google-Cloud-IAM.png "image_tooltip") 	| ![alt_text](images/google-identity.png "image_tooltip")    	|   	 ![alt_text](images/microsoft-active-directory.png "image_tooltip") |  ![alt_text](images/microsoft-azure-ad.png "image_tooltip")   	|
 |   [Google Cloud IAM](https://www.loginradius.com/integrations/google-cloud-iam/)	| [Google Identity](https://www.loginradius.com/integrations/google-identity-platform/)  	|  [Microsoft Active Directory](https://www.loginradius.com/integrations/microsoft-active-directory/) 	|  [Microsoft Azure AD](https://www.loginradius.com/integrations/microsoft-azure-ad/) 	|
-|    ![alt_text](images/okta.png "image_tooltip") 	| ![alt_text](images/OneLogin.png "image_tooltip")    	| ![alt_text](images/ping-identity.png "image_tooltip")    	| ![alt_text](images/salesforce-identity.png "image_tooltip")    	|
+|    ![alt_text](images/okta.png "image_tooltip") 	| ![alt_text](images/OneLogin.png "image_tooltip")    	| ![alt_text](images/oracle-identity.png "image_tooltip")    	| ![alt_text](images/ping-identity.png "image_tooltip")    	|
 |  [Okta](https://www.loginradius.com/integrations/okta/) 	| [One Login](https://www.loginradius.com/integrations/onelogin/)  	|   [Oracle Identity](https://www.loginradius.com/integrations/oracle-identity-management/)	|  [Ping Identity](https://www.loginradius.com/integrations/ping-identity/) 	| [Salesforce Identity](https://www.loginradius.com/integrations/salesforce-identity/)
 
 
 ## Event and Log Management
 
-|   ![alt_text](images/AlertLogic.png "image_tooltip") 	|    ![alt_text](images/hp-arcSight.png "image_tooltip")	|  ![alt_text](images/ibm-qradar.png "image_tooltip")  	|  ![alt_text](images/logstash.png "image_tooltip")  	|
+|   ![alt_text](images/AlertLogic.png "image_tooltip") 	|    ![alt_text](images/hp-arcSight.png "image_tooltip")	|  ![alt_text](images/ibm-qradar.png "image_tooltip")  	|  ![alt_text](images/loggly.png "image_tooltip")  	|
 |---	|---	|---	|---	|
 | [Alert Logic](https://www.loginradius.com/integrations/alertlogic/)  	|  [HP ArcSight](https://www.loginradius.com/integrations/hp-arcsight/) 	|  [IBM QRada](https://www.loginradius.com/integrations/ibm-qradar/) 	|  [Loggly](https://www.loginradius.com/integrations/solarwinds-loggly/) 	|
 |    ![alt_text](images/New-Relic.png "image_tooltip")	| ![alt_text](images/solarwinds.png "image_tooltip")   	|   ![alt_text](images/splunk.png "image_tooltip") 	|   	|
@@ -153,7 +153,7 @@ See below for a comprehensive list of integrations that are available within Log
 | [IBM Campaign](https://www.loginradius.com/integrations/ibm-campaign/)  	| [IBM Silverpop](https://www.loginradius.com/integrations/ibm-digital-marketing-silverpop/)  	| [Marketo](https://www.loginradius.com/integrations/marketo/)  	|  [Monetate](https://www.loginradius.com/integrations/monetate/) 	|
 |![alt_text](images/salesforce-marketing-cloud.png "image_tooltip")   	| ![alt_text](images/salesforce-pardot.png "image_tooltip")  	|![alt_text](images/sap-hybris.png "image_tooltip")   	| ![alt_text](images/selligent.png "image_tooltip")  	|
 |  [Salesforce Marketing Cloud](https://www.loginradius.com/integrations/salesforce-marketing-cloud/) 	|[Salesforce Pardot](https://www.loginradius.com/integrations/salesforce-pardot/)   	|[SAP Hybris](https://www.loginradius.com/integrations/sap-hybris/)   	|  [Selligent](https://www.loginradius.com/integrations/selligent-marketing-cloud/) 	|
-|![alt_text](images/sendgrid.png "image_tooltip")   	|![alt_text](images/5d63266ce44b7_resizeDown1200px525px16_226185f6128d1838c05.71481052.png "image_tooltip")   	|![alt_text](images/sendgrid.png "image_tooltip")   	|![alt_text](images/5d63266ce44b7_resizeDown1200px525px16_226185f6128d1838c05.71481052.png "image_tooltip")   	|
+|![alt_text](images/sendgrid.png "image_tooltip")   	|![alt_text](images/5d63266ce44b7_resizeDown1200px525px16_226185f6128d1838c05.71481052.png "image_tooltip")   	|
 |  [Sendgrid](https://www.loginradius.com/integrations/sendgrid/) 	| [Sendinblue](https://www.loginradius.com/integrations/Sendinblue/)  	|   	|   	|
 |![alt_text](images/kaltura.png "image_tooltip")   	|![alt_text](images/klaviyo.png "image_tooltip")   	|   ![alt_text](images/mailchimp.png "image_tooltip")	| ![alt_text](images/mandrill.png "image_tooltip")  	|
 |   [Kaltura](https://www.loginradius.com/integrations/kaltura/)	|[Klaviyo](https://www.loginradius.com/integrations/klaviyo/)   	|[MailChimp](https://www.loginradius.com/integrations/mailchimp/)   	| [Mandrill](https://www.loginradius.com/integrations/mandrill/)  	|
@@ -172,20 +172,20 @@ See below for a comprehensive list of integrations that are available within Log
 ## Personalisation
 
 
-|  ![alt_text](images/amazon-payment.png "image_tooltip") 	|  ![alt_text](images/paypal.png "image_tooltip") 	|   ![alt_text](images/recurly.png "image_tooltip")	| ![alt_text](images/stripe.png "image_tooltip")  	|
+|  ![alt_text](images/kaltura.png "image_tooltip") 	|  ![alt_text](images/lytics.png "image_tooltip") 	|   ![alt_text](images/monetate.png "image_tooltip")	| ![alt_text](images/optimizely.png "image_tooltip")  	|
 |---	|---	|---	|---	|
 | [Kaltura](https://www.loginradius.com/integrations/kaltura/)  	| [Lytics](https://www.loginradius.com/integrations/lytics/)  	| [Monetate](https://www.loginradius.com/integrations/monetate/ )  	| [Optimizely](https://www.loginradius.com/integrations/optimizely/)  	|
-| ![alt_text](images/syncronex.png "image_tooltip")  	|   	|   	|   	|
-| [RichRevelance](https://www.loginradius.com/docs/integrations/available-integrations/#available-integrations)  	|   	|   	|   	|
+| ![alt_text](images/RichRelevance.png "image_tooltip")  	|   	|   	|   	|
+| [RichRelevance](https://www.loginradius.com/integrations/richrelevance/)  	|   	|   	|   	|
 
 
 ## Security and Fraud
 
-|  ![alt_text](images/amazon-payment.png "image_tooltip") 	|  ![alt_text](images/paypal.png "image_tooltip") 	|   ![alt_text](images/recurly.png "image_tooltip")	| ![alt_text](images/stripe.png "image_tooltip")  	|
+|  ![alt_text](images/Age-Verification.png "image_tooltip") 	|  ![alt_text](images/castle-dot-io.png "image_tooltip") 	|   ![alt_text](images/face-id.png "image_tooltip")	| ![alt_text](images/sms-gateway.png "image_tooltip")  	|
 |---	|---	|---	|---	|
 | [Age Verification](https://www.loginradius.com/integrations/age-verification/)  	| [Castle.io](https://www.loginradius.com/integrations/castle-dot-io/)  	| [Face ID](https://www.loginradius.com/integrations/face-id/)  	| [SMS Gateway](https://www.loginradius.com/integrations/sms-gateway/)  	|
-| ![alt_text](images/syncronex.png "image_tooltip")  	|   	|   	|   	|
-| [Touch ID](https://www.loginradius.com/integrations/touch-id/)  	| [Trulioo](https://www.loginradius.com/integrations/trulioo/)  	|   	|   	|
+| ![alt_text](images/touch-id.png "image_tooltip")  	|      ![alt_text](images/trulioo.png "image_tooltip")  	
+| [Touch ID](https://www.loginradius.com/integrations/touch-id/)  	|    [Trulioo](https://www.loginradius.com/integrations/trulioo/)
 
 
 ## Social Add-Ons
