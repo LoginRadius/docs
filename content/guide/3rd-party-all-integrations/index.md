@@ -52,13 +52,21 @@ See below for a comprehensive list of integrations that are available within Log
   <div class="third-party-logos grid-25">
     <div class="card">
       <a href="https://www.loginradius.com/integrations/adobe-analytics/">
-        <img src="images/adobe-analytics.png" alt="Adobe Analytics" title="Adobe Analytics" />
+        <img
+          src="images/adobe-analytics.png"
+          alt="Adobe Analytics"
+          title="Adobe Analytics"
+        />
         <span>Adobe Analytics</span>
       </a>
     </div>
     <div class="card">
       <a href="https://www.loginradius.com/integrations/google-analytics/">
-        <img src="images/google-analytics.png" alt="Google Analytics" title="Google Analytics" />
+        <img
+          src="images/google-analytics.png"
+          alt="Google Analytics"
+          title="Google Analytics"
+        />
         <span>Google Analytics</span>
       </a>
     </div>
