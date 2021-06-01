@@ -110,20 +110,25 @@
       li {
         display: flex;
         align-items: center;
-        &:hover {
-          svg {
-            fill: $blue;
-          }
-        }
-        span {
+        a {
           display: flex;
-        }
-      }
-      span {
-        &.icon {
-          svg {
-            width: 24px;
-            margin-right: 1rem;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            svg {
+              fill: $blue;
+              path {
+                stroke: $blue;
+              }
+            }
+          }
+          span {
+            &.icon {
+              svg {
+                transition: 0.2s ease-in-out;
+                width: 24px;
+                margin-right: 1rem;
+              }
+            }
           }
         }
       }
@@ -272,6 +277,7 @@
           margin-bottom: 24px;
           a {
             display: block;
+            word-break: break-word;
             &:before {
               position: absolute;
               content: "";
@@ -289,6 +295,8 @@
         img {
           border-radius: 0;
           border: 0;
+          max-width: 176px;
+          max-height: 160px;
         }
       }
     }
