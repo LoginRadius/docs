@@ -161,8 +161,7 @@ const Middle = () => {
         <div className="section-header">
           <h2>Ready To Start Building?</h2>
           <p>
-            Choose your application type and implement authentication in a few
-            minutes
+          Choose your application type and implement authentication in a few minutes. Or refer to <a href="#api">APIs</a> if your application type doesn’t fall into the ones mentioned below.
           </p>
         </div>
         <div className="grid-25">
@@ -331,10 +330,9 @@ const Middle = () => {
       {/*Section Recommended Resources*/}
       <section className="resources py-72">
         <div ref={gotQRef} className="section-header">
-          <h2>Got Questions?</h2>
+          <h2>Explore Features and Use Cases</h2>
           <p>
-            Find common use cases and answers to your how-to and next-step
-            questions
+          Learn about features and how to customize them as per your requirements. Also, find the vast list of third-party integrations to utilize for your application.
           </p>
         </div>
         <div className="grid-50">
@@ -343,7 +341,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/login-methods.svg" />
             </div>
-            <h3 className="title">Login Methods</h3>
+            <h3 className="title">Add Login Methods</h3>
             <ul>
               <li>
                 <Link to="/guide/emailpassword-login">
@@ -373,7 +371,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/user-managment.svg" />
             </div>
-            <h3 className="title">User Management Options</h3>
+            <h3 className="title">Manage Users with LoginRadius</h3>
             <ul>
               <li>
                 <Link to="/guide/manage-users">
@@ -418,7 +416,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/branding.svg" />
             </div>
-            <h3 className="title">Interfaces and Branding Personalization</h3>
+            <h3 className="title">Personalize Your Login Interface and Branding</h3>
             <ul>
               <li>
                 <Link to="/guide/customize-auth-page">
@@ -448,7 +446,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/sso.svg" />
             </div>
-            <h3 className="title">Single Sign On</h3>
+            <h3 className="title">Implement Sign Sign-On</h3>
             <ul>
               <li>
                 <Link to="/guide/web-sso"> Web SSO</Link>
@@ -464,7 +462,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/intigration.svg" />
             </div>
-            <h3 className="title">Third Parties Integration</h3>
+            <h3 className="title">Integrate Third Parties</h3>
             <ul>
               <li>
                 <Link to="/guide/webhook"> Setup Web Hooks</Link>
@@ -503,7 +501,7 @@ const Middle = () => {
             <div className="icon">
               <img src="images/secure-authentication.svg" />
             </div>
-            <h3 className="title">Secure Authentication</h3>
+            <h3 className="title">Utilize Secure Authentication</h3>
             <ul>
               <li>
                 <Link to="/guide/captcha">Google reCAPTCHA </Link>
@@ -544,8 +542,7 @@ const Middle = () => {
         <div className="section-header">
           <h2>Comprehensive Resources</h2>
           <p>
-            Understand LoginRadius Identity Platform concepts, and work with
-            SDKs and APIs
+          Understand concepts of LoginRadius Identity Platform to fully utilize the offered features. Also, work with JavaScript Library, SDKs, and APIs to implement and customize features as per your application requirements.
           </p>
         </div>
         <div className="grid-50">
