@@ -161,7 +161,9 @@ const Middle = () => {
         <div className="section-header">
           <h2>Ready To Start Building?</h2>
           <p>
-          Choose your application type and implement authentication in a few minutes. Or refer to <a href="#api">APIs</a> if your application type doesn’t fall into the ones mentioned below.
+            Choose your application type and implement authentication in a few
+            minutes. Or refer to <a href="#api">APIs</a> if your application
+            type doesn’t fall into the ones mentioned below.
           </p>
         </div>
         <div className="grid-25">
@@ -332,7 +334,9 @@ const Middle = () => {
         <div ref={gotQRef} className="section-header">
           <h2>Explore Features and Use Cases</h2>
           <p>
-          Learn about features and how to customize them as per your requirements. Also, find the vast list of third-party integrations to utilize for your application.
+            Learn about features and how to customize them as per your
+            requirements. Also, find the vast list of third-party integrations
+            to utilize for your application.
           </p>
         </div>
         <div className="grid-50">
@@ -416,7 +420,9 @@ const Middle = () => {
             <div className="icon">
               <img src="images/branding.svg" />
             </div>
-            <h3 className="title">Personalize Your Login Interface and Branding</h3>
+            <h3 className="title">
+              Personalize Your Login Interface and Branding
+            </h3>
             <ul>
               <li>
                 <Link to="/guide/customize-auth-page">
@@ -493,6 +499,28 @@ const Middle = () => {
                   Available Integrations
                 </Link>
               </li>
+              <li>
+                <div className="read-more mt-0">
+                  <a href="/guide/3rd-party-all-integrations/">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#008ecf"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-plus"
+                    >
+                      <line x1={12} y1={5} x2={12} y2={19} />
+                      <line x1={5} y1={12} x2={19} y2={12} />
+                    </svg>
+                    <span>More</span>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
           {/*Integrate Third Parties*/}
@@ -542,7 +570,10 @@ const Middle = () => {
         <div className="section-header">
           <h2>Comprehensive Resources</h2>
           <p>
-          Understand concepts of LoginRadius Identity Platform to fully utilize the offered features. Also, work with JavaScript Library, SDKs, and APIs to implement and customize features as per your application requirements.
+            Understand concepts of LoginRadius Identity Platform to fully
+            utilize the offered features. Also, work with JavaScript Library,
+            SDKs, and APIs to implement and customize features as per your
+            application requirements.
           </p>
         </div>
         <div className="grid-50">
