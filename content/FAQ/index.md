@@ -1,11 +1,11 @@
 ---
-title: "Contact Us"
-tags: ["Contact Us"]
-description: "Contact Us."
-path: "/contact-us"
+title: "FAQ"
+tags: ["FAQ"]
+description: "Frequently asked Questions"
+path: "/FAQ"
 ---
 
-# Contact Us
+# FAQ
 
 Contact our support team for any questions you might have.
 

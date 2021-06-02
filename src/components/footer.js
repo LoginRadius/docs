@@ -9,7 +9,7 @@ const Footer =() => {
   <div>Copyright 2021 LoginRadius Inc.</div>
   <div>
     <Link to="/terms-of-use">Terms of use</Link> | <Link to="/privacy-policy">Privacy Policy</Link> |
-    <Link to="/contact-us">Contact us</Link>
+    <Link to="/FAQ">FAQ</Link>
   </div>
 </div>
 </footer> )
