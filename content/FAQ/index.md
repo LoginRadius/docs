@@ -183,5 +183,5 @@ Have questions or issues with our product?
 
 Want to work with us? We are always looking for talented people.
 
-[Explore Our Jobs](https://www.loginradius.com/careers/)
+<a href="https://www.loginradius.com/careers/" target="_blank">Explore Our Jobs</a>
 
