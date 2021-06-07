@@ -56,9 +56,9 @@ Any Personal Information you provide us is securely stored in a database that on
 
 ## EU-US and Swiss-US Privacy Shield  
 
-LoginRadius complies with the EU-U.S. Privacy Shield Framework and Swiss-U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of Personal Information transferred from the European Union and Switzerland to the United States. LoginRadius has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. This also applies to the Personal Information gathered from our prospective and current employees who are citizens of European Union and Switzerland. If there is any conflict between the terms in this Privacy Policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit [https://www.privacyshield.gov/](https://www.privacyshield.gov/).
+LoginRadius complies with the EU-U.S. Privacy Shield Framework and Swiss-U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of Personal Information transferred from the European Union and Switzerland to the United States. LoginRadius has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. This also applies to the Personal Information gathered from our prospective and current employees who are citizens of European Union and Switzerland. If there is any conflict between the terms in this Privacy Policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit <a href="https://www.privacyshield.gov/" target="_blank">https://www.privacyshield.gov/</a>.
 
-In compliance with the Privacy Shield Principles, LoginRadius commits to resolve complaints about our collection or use of your Personal Information. EU and Swiss individuals with inquiries or complaints regarding our Privacy Shield policy should direct any inquiries or complaints concerning our Privacy Shield compliance to legal@loginradius.com. LoginRadius will respond within 45 days. If we fail to respond within that time, or if our response does not address your concern, you may contact the International Centre for Dispute Resolution, the international division of the American Arbitration Association (ICDR/AAA), which provides an independent third-party dispute resolution body based in the United States, [here](http://go.adr.org/privacyshield.html). ICDR/AAA has committed to respond to complaints and to provide appropriate recourse at no cost to you.
+In compliance with the Privacy Shield Principles, LoginRadius commits to resolve complaints about our collection or use of your Personal Information. EU and Swiss individuals with inquiries or complaints regarding our Privacy Shield policy should direct any inquiries or complaints concerning our Privacy Shield compliance to legal@loginradius.com. LoginRadius will respond within 45 days. If we fail to respond within that time, or if our response does not address your concern, you may contact the International Centre for Dispute Resolution, the international division of the American Arbitration Association (ICDR/AAA), which provides an independent third-party dispute resolution body based in the United States, <a href="http://go.adr.org/privacyshield.html" target="_blank">here</a>. ICDR/AAA has committed to respond to complaints and to provide appropriate recourse at no cost to you.
 
 LoginRadius responsibility includes processing of received Personal Information, under each Privacy Shield Framework, and transfer it to designated third-party agent acting on our behalf.
 
@@ -66,7 +66,7 @@ LoginRadius is compliant with the Privacy Shield Principles for transfer of Pers
 
 For complaints from EU and Swiss data subjects that cannot be resolved with LoginRadius directly, LoginRadius has committed to cooperate with the panel established by the EU data protection authorities (DPAs) and the Swiss Federal Data Protection and Information Commissioner (FDPIC). If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please contact the EU DPAs and the Swiss FDPIC for more information or to file a complaint.
 
-In case of lawful requests by public authorities or law enforcement or national security, LoginRadius may disclose Personal Information as required. You can invoke binding arbitration as outlined on [https://www.privacyshield.gov/article?id=How-to-Submit-a-Complaint](https://www.privacyshield.gov/article?id=How-to-Submit-a-Complaint) if other dispute resolution procedures are exhausted.
+In case of lawful requests by public authorities or law enforcement or national security, LoginRadius may disclose Personal Information as required. You can invoke binding arbitration as outlined on <a href="https://www.privacyshield.gov/article?id=How-to-Submit-a-Complaint" target="_blank">https://www.privacyshield.gov/article?id=How-to-Submit-a-Complaint</a> if other dispute resolution procedures are exhausted.
 
 ## Your Rights  
 
@@ -102,7 +102,7 @@ If you have any questions about this Privacy Policy, please contact our email at
 
 ## Additional Terms of Service 
  
-If you are a Customer of LoginRadius, your use of the LoginRadius Service is subject to LoginRadius Terms of Service, available at [www.loginradius.com/terms.](https://www.loginradius.com/terms)  
+If you are a Customer of LoginRadius, your use of the LoginRadius Service is subject to LoginRadius Terms of Service, available at <a href="https://www.loginradius.com/terms" target="_blank">www.loginradius.com/terms.</a>
 Address: General Counsel,  
 c/o LoginRadius Inc.  
 815 West Hastings Street  
