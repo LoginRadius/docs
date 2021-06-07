@@ -9,13 +9,13 @@ path: "/guide/drupal"
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Drupal application.
 
-> **Note:** [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> **Note:** <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register">Create an account</a> to get started if you don't have one yet!
 
 ## Get Credentials
 
 Before using LoginRadius Drupal Plugin, you need to get your App Name, API Key, and API Secret.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">**Configuration > API Credentials**</a> and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -27,7 +27,7 @@ You can install LoginRadius  Drupal Plugin [manually](#install-manually) or via 
 
 ### Install Manually
 
-1. Download the [Drupal v8.x](https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-8/package/customer_identity_and_access_management.tar) or [Drupal v9.x](https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-9/package/customer_identity_and_access_management.tar) Customer Identity module.
+1. Download the <a href="(https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-8/package/customer_identity_and_access_management.tar" target="_blank">Drupal v8.x</a> or <a href="https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-9/package/customer_identity_and_access_management.tar" target="_blank">Drupal v9.x</a> Customer Identity module.
 
 2. Unarchive the module and upload the module folder to your Drupal installation's modules directory.
 
@@ -42,7 +42,7 @@ You can install LoginRadius  Drupal Plugin [manually](#install-manually) or via 
 
 ### Install via Web Interface
 
-1. Download the [Drupal v8.x](https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-8/package/customer_identity_and_access_management.tar) or [Drupal v9.x](https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-9/package/customer_identity_and_access_management.tar) Customer Identity module.
+1. Download the <a href="https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-8/package/customer_identity_and_access_management.tar" target="_blank">Drupal v8.x</a> or <a href="https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-9/package/customer_identity_and_access_management.tar" target="_blank">Drupal v9.x</a> Customer Identity module.
 
 2. Login to the Drupal Admin Panel.
 
@@ -56,14 +56,14 @@ You can install LoginRadius  Drupal Plugin [manually](#install-manually) or via 
 
 7. Enable the Customer Identity Modules and click the **Save Configuration**.
 
-> **Note:** Make sure you should clear the website's cache. For more information on clearing the cache, [click here](https://www.drupal.org/node/326504).
-For more details related to installation instructions, [click here](https://www.drupal.org/docs/extending-drupal/installing-modules).
+> **Note:** Make sure you should clear the website's cache. For more information on clearing the cache, <a href="https://www.drupal.org/node/326504">click here<a>.
+For more details related to installation instructions, <a href="https://www.drupal.org/docs/extending-drupal/installing-modules" target="_blank">click here</a>.
 
 ## Install LoginRadius PHP SDK
 
 ### Manually
 
-You should be using PHP SDK available at [Github](https://github.com/LoginRadius/php-sdk).
+You should be using PHP SDK available at <a href="https://github.com/LoginRadius/php-sdk" target="_blank">Github</a>.
 The following are the instructions to upload PHP SDK manually:
 1. Go to the root directory of your drupal installation.
 
@@ -167,7 +167,7 @@ Navigate to the **Authentication** tab and there you can choose an option from t
 
 ![alt_text](images/drupalauthentication.png "image_tooltip")
 
-You can select applicable email templates. The templates can be added/modified in **LoginRadius Dashboard(https://dashboard.loginradius.com/)**, which will be displayed in the drupal admin authentication page.
+You can select applicable email templates. The templates can be added/modified in <a href="https://dashboard.loginradius.com/" target="_blank">**LoginRadius Dashboard(https://dashboard.loginradius.com/)**</a>, which will be displayed in the drupal admin authentication page.
 
 ![alt_text](images/drupalverification.png "image_tooltip")
 
@@ -189,7 +189,7 @@ The CIAM plugin will generate the following login form:
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

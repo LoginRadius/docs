@@ -10,7 +10,7 @@ The Block Disposable Email feature allows you to prevent disposable registration
 
 ## LoginRadius Configuration
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **Block Disposable Email** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard]</a> account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **Block Disposable Email** section.
 
 2. Toggle the **Block Disposable Email** option.
    ![Block Disposable](block-disposable.png "image_tooltip")
