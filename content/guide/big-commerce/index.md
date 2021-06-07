@@ -14,7 +14,7 @@ This document provides instructions for installing the LoginRadius CIAM Plugin f
 
 Before configuring the LoginRadius app in the Bigcommerce environment, you need to get your **API Key** and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")

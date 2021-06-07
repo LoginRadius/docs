@@ -11,7 +11,7 @@ The Brute Force Lockout feature allows you to restrict account access based on f
 
 ## LoginRadius Configuration
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **Brute Force Lockout** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard]</a> account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **Brute Force Lockout** section.
 
 2. Click the down arrow, the Brute Force Lockout screen will appear:
 
@@ -32,7 +32,7 @@ The Brute Force Lockout feature allows you to restrict account access based on f
 
      * **Captcha:** Select this option to prompt the customer to complete a CAPTCHA to log in when the maximum failed login attempt is reached.
 
-       > Pre-requisites: You must have [Google reCAPTCHA V2](/guide/captcha/) configured in your LoginRadius Identity Platform to display captcha on lockout. 
+       > Pre-requisites: You must have <a href="/guide/captcha/" target="_blank">Google reCAPTCHA V2</a> configured in your LoginRadius Identity Platform to display captcha on lockout. 
 
 
 [Go Back to Home Page](/)
