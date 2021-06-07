@@ -23,7 +23,7 @@ For example: Your LoginRadius domain is `https://<your-app-name>.hub.loginradius
 
 ### Step 2: Access Domain Customization Section
 
-To access the **Domain Customization**, log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click the **Auth Page (IDX)** and then navigate to the **Domain Customization** section. 
+To access the **Domain Customization**, log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click the **Auth Page (IDX)** and then navigate to the **Domain Customization** section. 
 
 Click the down arrow and the **Domain Customization** screen will appear:
 
