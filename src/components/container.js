@@ -495,13 +495,8 @@ const Middle = () => {
                 <Link to="/guide/shopify">Integrate Shopify</Link>
               </li>
               <li>
-                <Link to="/guide/3rd-party-all-integrations">
-                  Available Integrations
-                </Link>
-              </li>
-              <li>
                 <div className="read-more mt-0">
-                  <a href="/guide/3rd-party-all-integrations/">
+                  <Link to="/guide/3rd-party-all-integrations/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -518,7 +513,7 @@ const Middle = () => {
                       <line x1={5} y1={12} x2={19} y2={12} />
                     </svg>
                     <span>More</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ul>
