@@ -295,7 +295,7 @@ See below for a comprehensive list of integrations that are available within Log
     </div>
     <div class="card">
       <a href="https://www.loginradius.com/integrations/freshsales">
-        <img src="images/freshsales_logo.png" alt="FreshSales" title="FreshSales" />
+        <img src="images/freshsales_logo_new.png" alt="FreshSales" title="FreshSales" />
         <span>FreshSales</span>
       </a>
     </div>
@@ -742,7 +742,7 @@ See below for a comprehensive list of integrations that are available within Log
     </div>
     <div class="card">
       <a href="https://www.loginradius.com/integrations/solarwinds-loggly/">
-        <img src="images/loggly.png" alt="Loggly" title="Loggly" />
+        <img src="images/loggly_new.png" alt="Loggly" title="Loggly" />
         <span>Loggly</span>
       </a>
     </div>
