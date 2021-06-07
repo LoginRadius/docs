@@ -496,7 +496,7 @@ const Middle = () => {
               </li>
               <li>
                 <div className="read-more mt-0">
-                  <Link href="/guide/3rd-party-all-integrations/">
+                  <Link to="/guide/3rd-party-all-integrations/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
