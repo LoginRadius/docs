@@ -28,7 +28,7 @@ The LoginRadius Website contains links to external websites that are not owned o
 
 ## Privacy  
 
-Your use of the Website is subject to the LoginRadius Privacy Policy, available at [https://www.loginradius.com/privacy-policy/](https://www.loginradius.com/privacy-policy).
+Your use of the Website is subject to the LoginRadius Privacy Policy, available at [] <a href="https://www.loginradius.com/privacy-policy" target="_blank">https://www.loginradius.com/privacy-policy/</a>.
 
 ## Modification  
 

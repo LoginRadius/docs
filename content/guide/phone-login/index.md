@@ -13,13 +13,13 @@ During login, the consumer will need to provide both the Phone Number and Passwo
 
 > Note: The **Passwordless Login** method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP, which they can use to log in without a password. 
 > 
-> The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login](/guide/passwordless-login) document.
+> The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the [Manage Passwordless Login] href/guide/passwordless-login) document.
 
 ## Configuration
 
 ### Step 1: Choose Login Method
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
@@ -34,7 +34,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 2: Configure Phone Login Templates
 
-1. Similarly to the [Email/Password Login](/guide/emailpassword-login) and [Passwordless Login](/guide/passwordless-login) methods, you can perform the following actions:
+1. Similarly to the <a href="/guide/emailpassword-login" target="_blank">Email/Password Login</a> and <a href="/guide/passwordless-login" target="_blank">Passwordless Login</a> methods, you can perform the following actions:
 
    * Edit templates associated with this login method.
 
@@ -87,7 +87,7 @@ To verify that the Phone Login method has been enabled, open your **Auth Page (I
 
 The login page of your Auth Page (IDX) handles the Phone ID input fields automatically. However, if you'd like your consumer's Phone ID to appear in the profile page editor, you'll have to manually make some modifications in your Auth Page (IDX)'s Advanced Editor.
 
-1. Navigate to your profile page's before-script file editor. For more details regarding how to activate, or access your Advanced Editor, refer to the guide document [here](/guide/auth-page-advanced-editor).
+1. Navigate to your profile page's before-script file editor. For more details regarding how to activate, or access your Advanced Editor, refer to the guide document <a href="/guide/auth-page-advanced-editor" target="_blank">here</a>.
 
    ![alt_text](images/before-script-editor.png "image_tooltip")
 
