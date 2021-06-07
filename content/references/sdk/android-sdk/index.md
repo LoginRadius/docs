@@ -34,7 +34,7 @@ To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius 
 
 Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 
-  ![alt_text](images/sott.png "image_tooltip")
+  ![alt_text](../../../assets/blog-common/sott.png "image_tooltip")
 
 Generate SOTT, copy and save the SOTT value.
 

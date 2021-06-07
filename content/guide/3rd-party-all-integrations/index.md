@@ -11,192 +11,1076 @@ See below for a comprehensive list of integrations that are available within Log
 
 ## Advertising
 
-|![alt_text](images/adroll-logo.png "image_tooltip")   	|![alt_text](images/appnexus.png "image_tooltip")	    |![alt_text](images/blueshift.png "image_tooltip")   	|![alt_text](images/facebook-ads.png "image_tooltip")   	|
-| ---	| ---	| ---	| ---	|
-|[AdRoll](https://www.loginradius.com/integrations/adroll/) 	    |[Appnexus](https://www.loginradius.com/integrations/appnexus/)   	|[BlueShift](https://www.loginradius.com/integrations/blueshift/)   	|[FacebookAds](https://www.loginradius.com.integrations/facebook-ads/)   	|
-|![alt_text](images/wayin.png "image_tooltip")  	|   	|   	|  	|
-|[Wayin](https://www.loginradius.com/integrations/wayin/)     	|   	|   	|   	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/adroll/">
+        <img src="images/adroll-logo.png" alt="AdRoll" title="AdRoll" />
+        <span>AdRoll</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/appnexus/">
+        <img src="images/appnexus.png" alt="AdRoll" title="AdRoll" />
+        <span>Appnexus</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/blueshift/">
+        <img src="images/blueshift.png" alt="AdRoll" title="AdRoll" />
+        <span>Blue Shift</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/facebook-ads/">
+        <img src="images/facebook-ads.png" alt="AdRoll" title="AdRoll" />
+        <span>Facebook Ads</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/wayin/">
+        <img src="images/wayin.png" alt="AdRoll" title="AdRoll" />
+        <span>Wayin</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Analytics
 
-
-| ![alt_text](images/adobe-analytics.png "image_tooltip")  	| ![alt_text](images/google-analytics.png "image_tooltip")   	|![alt_text](images/mixpanel.png "image_tooltip")    	|![alt_text](images/webtrends.png "image_tooltip")    	|
-|---	|---	|---	|---	|
-|[Adobe Analytics](https://www.loginradius.com/integrations/adobe-analytics/)   	|[Google Analytics](https://www.loginradius.com/integrations/google-analytics/)   	|[Mixpanel](https://www.loginradius.com/integrations/mixpanel/)   	|[Webtrends](https://www.loginradius.com/integrations/webtrends/)   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/adobe-analytics/">
+        <img src="images/adobe-analytics.png" alt="Adobe Analytics" title="Adobe Analytics" />
+        <span>Adobe Analytics</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/google-analytics/">
+        <img src="images/google-analytics.png" alt="Google Analytics" title="Google Analytics" />
+        <span>Google Analytics</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/mixpanel/">
+        <img src="images/mixpanel.png" alt="Mixpanel" title="Mixpanel" />
+        <span>Mixpanel</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/webtrends/">
+        <img src="images/webtrends.png" alt="Webtrends" title="Webtrends" />
+        <span>Webtrends</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Business Intelligence Tools
-| ![alt_text](images/chartio.png "image_tooltip")  	| ![alt_text](images/ibm-cognos.png "image_tooltip")  	| ![alt_text](images/looker.png "image_tooltip")   	|![alt_text](images/microsoft-power-bi.png "image_tooltip")   	|
-|---	|---	|---	|---	|
-| [Chartio](https://www.loginradius.com/integrations/chartio/)  	| [IBM Cognos](https://www.loginradius.com/integrations/ibm-cognos-analytics/)    	| [Looker](https://www.loginradius.com/integrations/looker/)  	| [Microsoft Power BI](https://www.loginradius.com/integrations/microsoft-power-bi/)    	|
-| ![alt_text](images/MicroStrategy.png "image_tooltip")  	|   ![alt_text](images/Qlik.png "image_tooltip")	|  	|  	|
-|[MicroStrategy](https://www.loginradius.com/integrations/microstrategy/)   	|[Qlik](https://www.loginradius.com/integrations/qlik/)   	|  	|  	|
-| ![alt_text](images/tableau.png "image_tooltip")  	|![alt_text](images/tibco-spotfire.png "image_tooltip")   	| ![alt_text](images/redash.png "image_tooltip")    	| ![alt_text](images/SAP-Business-Objects.png "image_tooltip")   	|
-|[Tableau](https://www.loginradius.com/integrations/tableau/)   	|[TIBCO Spotfire](https://www.loginradius.com/integrations/tibco-spotfire/)   	| [Redash](https://www.loginradius.com/integrations/redash/) | [SAP Business Objects](https://www.loginradius.com/integrations/sap-business-objects/) 
 
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/chartio/">
+        <img
+          src="images/chartio.png"
+          alt="Chartio"
+          title="Chartio"
+        />
+        <span>Chartio</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ibm-cognos-analytics/">
+        <img
+          src="images/ibm-cognos.png"
+          alt="IBM Cognos"
+          title="IBM Cognos"
+        />
+        <span>IBM Cognos</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/looker/">
+        <img src="images/looker.png" alt="Looker" title="Looker" />
+        <span>Looker</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/microsoft-power-bi">
+        <img src="images/microsoft-power-bi.png" alt="Microsoft Power BI" title="Microsoft Power BI" />
+        <span>Microsoft Power BI</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/microstrategy">
+        <img src="images/MicroStrategy.png" alt="Micro Strategy" title="Micro Strategy" />
+        <span>Micro Strategy</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/qlik">
+        <img src="images/Qlik.png" alt="Qlik" title="Qlik" />
+        <span>Qlik</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/tableau">
+        <img src="images/tableau.png" alt="Tableau" title="Tableau" />
+        <span>Tableau</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/tibco-spotfire">
+        <img src="images/tibco-spotfire.png" alt="TIBCO Spotfire" title="TIBCO Spotfire" />
+        <span>TIBCO Spotfire</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/redash">
+        <img src="images/redash.png" alt="Redash" title="Redash" />
+        <span>Redash</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sap-business-objects">
+        <img src="images/SAP-Business-Objects.png" alt="SAP Business Objects" title="SAP Business Objects" />
+        <span>SAP Business Objects</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Content Management Systems (CMS)
 
-| ![alt_text](images/adobe-experience-manager.png "image_tooltip")   	|  ![alt_text](images/microsoft-adxstudio.png "image_tooltip")  	| ![alt_text](images/dotnetnuke.png "image_tooltip")  	|  ![alt_text](images/drupal.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-|[Adobe Experience Manager](https://www.loginradius.com/integrations/adobe-experience-manager/)   	|[AdxStudio](https://www.loginradius.com/integrations/adxstudio/)   	|[DotNetDuke](https://www.loginradius.com/integrations/dotnetnuke/)   	| [Drupal](https://www.loginradius.com/integrations/drupal/)  	|
-| ![alt_text](images/joomla.png "image_tooltip")  	| ![alt_text](images/jive-x.png "image_tooltip")  	| ![alt_text](images/libercus.png "image_tooltip")   	|  ![alt_text](images/microsoft-sharepoint.png "image_tooltip")  	|
-| [Joomla](https://www.loginradius.com/integrations/joomla/)  	| [Jive-x](https://www.loginradius.com/integrations/jive-x/)  	| [Libercus](https://www.loginradius.com/integrations/libercus/)  	| [Microsoft Sharepoint](https://www.loginradius.com/integrations/microsoft-sharepoint/)  	|
-|  ![alt_text](images/pagesuite.png "image_tooltip")  	|  ![alt_text](images/simplydigi.png "image_tooltip")  	|   ![alt_text](images/sitecore.png "image_tooltip") 	|   ![alt_text](images/sitefinity.png "image_tooltip") 	|
-| [Page Suite](https://www.loginradius.com/integrations/pagesuite/)  	| [Simpy Digi](https://www.loginradius.com/integrations/simplydigi/)  	| [Sitecore](https://www.loginradius.com/integrations/sitecore/) 	| [SiteFinity](https://www.loginradius.com/integrations/sitefinity/)   	|
-|  ![alt_text](images/wordpress.png "image_tooltip") 	|![alt_text](images/wordpress-vip.png "image_tooltip")   	| ![alt_text](images/zimbra.png "image_tooltip")  	|   	|
-|  [WordPress](https://www.loginradius.com/integrations/wordpress/) 	| [Wordpress VIP](https://www.loginradius.com/integrations/wordpress-vip/)  	| [Zimbra](https://www.loginradius.com/integrations/zimbra/)  	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/adobe-experience-manager/">
+        <img
+          src="images/adobe-experience-manager.png"
+          alt="Adobe Experience Manager"
+          title="Adobe Experience Manager"
+        />
+        <span>Adobe Experience Manager</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/adxstudio">
+        <img src="images/microsoft-adxstudio.png" alt="AdxStudio" title="AdxStudio" />
+        <span>AdxStudio</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/dotnetnuke">
+        <img src="images/dotnetnuke.png" alt="AdxStudio" title="AdxStudio" />
+        <span>DotNetDuke</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/joomla">
+        <img src="images/joomla.png" alt="Joomla" title="Joomla" />
+        <span>Joomla</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/jive-x">
+        <img src="images/jive-x.png" alt="Jive-x" title="Jive-x" />
+        <span>Jive-x</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/libercus">
+        <img src="images/libercus.png" alt="Libercus" title="Libercus" />
+        <span>Libercus</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/microsoft-sharepoint">
+        <img src="images/microsoft-sharepoint.png" alt="Microsoft Sharepoint" title="Microsoft Sharepoint" />
+        <span>Microsoft Sharepoint</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/pagesuite">
+        <img src="images/pagesuite.png" alt="Page Suite" title="Page Suite" />
+        <span>Page Suite</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/simplydigi">
+        <img src="images/simplydigi.png" alt="Simpy Digi" title="Simpy Digi" />
+        <span>Simpy Digi</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sitecore">
+        <img src="images/sitecore.png" alt="Sitecore" title="Sitecore" />
+        <span>Sitecore</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sitefinity">
+        <img src="images/sitefinity.png" alt="SiteFinity" title="SiteFinity" />
+        <span>SiteFinity</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/wordpress">
+        <img src="images/wordpress.png" alt="WordPress" title="WordPress" />
+        <span>WordPress</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/wordpress-vip">
+        <img src="images/wordpress-vip.png" alt="Wordpress VIP" title="Wordpress VIP" />
+        <span>Wordpress VIP</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/zimbra">
+        <img src="images/zimbra.png" alt="Zimbra" title="Zimbra" />
+        <span>Zimbra</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Custom Relationship Management(CRM)
 
-|  ![alt_text](images/hubspot.png "image_tooltip")   	|  ![alt_text](images/infusionsoft.png "image_tooltip")   	|   ![alt_text](images/microsoft-dynamics.png "image_tooltip")  	|   ![alt_text](images/netsuite.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-|[HubSpot](https://www.loginradius.com/integrations/hubspot/)	|[InfusionSoft](https://www.loginradius.com/integrations/infusionsoft/)   	|  [Microsoft Dyanmic 365](https://www.loginradius.com/integrations/microsoft-dynamics-365/) 	| [NetSuite](https://www.loginradius.com/integrations/netsuite/)  	|
-|  ![alt_text](images/salesforce.png "image_tooltip")  	|   ![alt_text](images/zoho.png "image_tooltip") 	|  ![alt_text](images/sugarcrm.png "image_tooltip")   |  ![alt_text](images/freshsales_logo.png "image_tooltip") 	|
-| [Salesforce](https://www.loginradius.com/integrations/salesforce/)  	|  [Zoho](https://www.loginradius.com/integrations/zoho/) 	|  [SugarCRM](https://www.loginradius.com/integrations/sugarcrm/) 	| [FreshSales](https://www.loginradius.com/integrations/freshsales/)  	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/hubspot/">
+        <img src="images/hubspot.png" alt="HubSpot" title="HubSpot" />
+        <span>HubSpot</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/infusionsoft/">
+        <img src="images/infusionsoft.png" alt="Infusion Soft" title="Infusion Soft" />
+        <span>Infusion Soft</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/microsoft-dynamics-365/">
+        <img src="images/microsoft-dynamics.png" alt="Microsoft Dyanmic 365" title="Microsoft Dyanmic 365" />
+        <span>Microsoft Dyanmic 365</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/netsuite">
+        <img src="images/netsuite.png" alt="NetSuite" title="NetSuite" />
+        <span>NetSuite</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce">
+        <img src="images/salesforce.png" alt="Salesforce" title="Salesforce" />
+        <span>Salesforce</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/zoho">
+        <img src="images/zoho.png" alt="Zoho" title="Zoho" />
+        <span>Zoho</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sugarcrm">
+        <img src="images/sugarcrm.png" alt="SugarCRM" title="SugarCRM" />
+        <span>SugarCRM</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/freshsales">
+        <img src="images/freshsales_logo_new.png" alt="FreshSales" title="FreshSales" />
+        <span>FreshSales</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Customer Communication
 
-| ![alt_text](images/Atlassian.png "image_tooltip")   	| ![alt_text](images/customer-dot-io.png "image_tooltip")  | ![alt_text](images/desk.png "image_tooltip")  	|      ![alt_text](images/freshdesk.png "image_tooltip")
-|---	|---	|---	|---	|
-| [Atlassian](https://www.loginradius.com/integrations/atlassian/)  	| [Customer.io](https://customer.io)  	|  [Desk](https://www.loginradius.com/integrations/desk/) 	|  [FreshDesk](https://www.loginradius.com/integrations/freshdesk/) 	|
-| ![alt_text](images/intercom.png "image_tooltip")   	|  ![alt_text](images/zendesk.png "image_tooltip")  	|   	|   	|
-|  [Intercom](https://www.loginradius.com/integrations/intercom/) 	| [ZenDesk](https://www.loginradius.com/integrations/zendesk/)  	|   	|   	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/atlassian/">
+        <img src="images/Atlassian.png" alt="Atlassian" title="Atlassian" />
+        <span>Atlassian</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/customer/">
+        <img src="images/customer-dot-io.png" alt="Customer.io" title="Customer.io" />
+        <span>Customer.io</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/desk/">
+        <img src="images/desk.png" alt="Desk" title="Desk" />
+        <span>Desk</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/freshdesk/">
+        <img src="images/freshdesk.png" alt="FreshDesk" title="FreshDesk" />
+        <span>FreshDesk</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/intercom/">
+        <img src="images/intercom.png" alt="Intercom" title="Intercom" />
+        <span>Intercom</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/zendesk/">
+        <img src="images/zendesk.png" alt="ZenDesk" title="ZenDesk" />
+        <span>ZenDesk</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Data Management Platform (DMP)
 
-|  ![alt_text](images/adobe-analytics.png "image_tooltip") 	| ![alt_text](images/blueconic.png "image_tooltip")  	|   ![alt_text](images/cxense.png "image_tooltip")	|  ![alt_text](images/lotame.png "image_tooltip") 	|
-|---	|---	|---	|---	|
-| [Adobe Analytics](https://www.loginradius.com/integrations/adobe-audience-manager/)  	|  [BlueConic](https://www.loginradius.com/integrations/blueconic/) 	| [Cxense](https://www.loginradius.com/integrations/cxense/)  	| [Lotame](https://www.loginradius.com/integrations/lotame/)  	|
-|  ![alt_text](images/krux.png "image_tooltip") 	|   	|   	|   	|
-|   [Krux](https://www.loginradius.com/integrations/salesforce-dmp-krux/)	|   	|   	|   	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/adobe-audience-manager/">
+        <img src="images/adobe-analytics.png" alt="Adobe Analytics" title="Adobe Analytics" />
+        <span>Adobe Analytics</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/blueconic/">
+        <img src="images/blueconic.png" alt="BlueConic" title="BlueConic" />
+        <span>BlueConic</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/cxense/">
+        <img src="images/cxense.png" alt="Cxense" title="Cxense" />
+        <span>Cxense</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/lotame/">
+        <img src="images/lotame.png" alt="Lotame" title="Lotame" />
+        <span>Lotame</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce-dmp-krux/">
+        <img src="images/krux.png" alt="Krux" title="Krux" />
+        <span>Krux</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Data Warehouses
 
-| ![alt_text](images/webhooks.png "image_tooltip")  	| ![alt_text](images/redshift.png "image_tooltip")  	| ![alt_text](images/hadoop.png "image_tooltip")  	|  ![alt_text](images/webhooks.png "image_tooltip")	|
-|---	|---	|---	|---	|
-|[BigQuery](https://www.loginradius.com/integrations/bigquery/)   	| [Amazon Redshift](https://www.loginradius.com/integrations/amazon-redshift/)  	| [Hadoop](https://www.loginradius.com/integrations/apache-hadoop/)  	|  [Webhooks](https://www.loginradius.com/integrations/webhooks/) 	|
-| ![alt_text](images/oracle-bluekai.png "image_tooltip")   	|   	|   	|   	|
-| [Oracle BlueKai](https://www.loginradius.com/integrations/oracle-bluekai/)  	|   	|   	|   	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+  <div class="card">
+      <a href="https://www.loginradius.com/integrations/webhooks/">
+        <img src="images/webhooks.png" alt="BigQuery" title="BigQuery" />
+        <span>BigQuery</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/amazon-redshift/">
+        <img src="images/redshift.png" alt="Amazon Redshift]" title="Amazon Redshift]" />
+        <span>Amazon Redshift]</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/apache-hadoop/">
+        <img src="images/hadoop.png" alt="Hadoop" title="Hadoop" />
+        <span>Hadoop</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/webhooks/">
+        <img src="images/webhooks.png" alt="Webhooks" title="Webhooks" />
+        <span>Webhooks</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/oracle-bluekai/">
+        <img src="images/oracle-bluekai.png" alt="Oracle BlueKai" title="Oracle BlueKai" />
+        <span>Oracle BlueKai</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## E-Commerce
 
-| ![alt_text](images/bigcommerce.png "image_tooltip")   	| ![alt_text](images/ibm-websphere.png "image_tooltip")    	|  ![alt_text](images/magento.png "image_tooltip")  	| ![alt_text](images/oracle-atg-web-commerce.png "image_tooltip")   	|
-|---	|---	|---	|---	|
-| [BigCommerce](https://www.loginradius.com/integrations/bigcommerce/)  	|   [IBM Websphere](https://www.loginradius.com/integrations/ibm-websphere/)	| [Magento](https://www.loginradius.com/integrations/magento/)  	|  [Oracle ATG Web Commerce](https://www.loginradius.com/integrations/oracle-atg-web-commerce/) 	|
-|  ![alt_text](images/micros.png "image_tooltip")  	|  ![alt_text](images/piano.png "image_tooltip")  	|   	|   	|
-| [Oracle Micros](https://www.loginradius.com/integrations/oracle-micros/)  	|   [Piano.io](https://www.loginradius.com/integrations/piano-io/)	|   	|   	|
-| ![alt_text](images/prestashop.png "image_tooltip")   	| ![alt_text](images/salesforce-commerce-cloud.png "image_tooltip")   	|  ![alt_text](images/sap-hybris.png "image_tooltip")  	| ![alt_text](images/shopify.png "image_tooltip")   	|
-|   [PrestaShop](https://www.loginradius.com/integrations/prestashop/)	|  [Salesforce Demandware](https://www.loginradius.com/integrations/salesforce-commerce-cloud/) 	|   [SAP Hybris](https://www.loginradius.com/integrations/sap-hybris/)	| [Shopify](https://www.loginradius.com/integrations/shopify/)  	|
-|  ![alt_text](images/wordpress-vip.png "image_tooltip")  	|   	|   	|   	|
-|     [WordPress VIP](https://www.loginradius.com/integrations/wordpress-vip/)              |                   |               |
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/bigcommerce/">
+        <img src="images/bigcommerce.png" alt="BigCommerce" title="BigCommerce" />
+        <span>BigCommerce</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ibm-websphere/">
+        <img src="images/ibm-websphere.png" alt="IBM Websphere" title="IBM Websphere" />
+        <span>IBM Websphere</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/magento/">
+        <img src="images/magento.png" alt="Magento" title="Magento" />
+        <span>Magento</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/oracle-atg-web-commerce/">
+        <img src="images/oracle-atg-web-commerce.png" alt="Oracle ATG Web Commerce" title="Oracle ATG Web Commerce" />
+        <span>Oracle ATG Web Commerce</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/oracle-micros/">
+        <img src="images/micros.png" alt="Micros" title="Micros" />
+        <span>Micros</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/piano.io/">
+        <img src="images/piano.png" alt="Piano.io" title="Piano.io" />
+        <span>Piano.io</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/prestashop/">
+        <img src="images/prestashop.png" alt="Prestashop" title="Prestashop" />
+        <span>Prestashop</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce-commerce-cloud/">
+        <img src="images/salesforce-commerce-cloud.png" alt="Salesforce Demandware" title="Salesforce Demandware" />
+        <span>Salesforce Demandware</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sap-hybris/">
+        <img src="images/sap-hybris.png" alt="SAP Hybris" title="SAP Hybris" />
+        <span>SAP Hybris</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/shopify/">
+        <img src="images/shopify.png" alt="Shopify" title="Shopify" />
+        <span>Shopify</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/wordpress-vip/">
+        <img src="images/wordpress-vip.png" alt="WordPress VIP" title="WordPress VIP" />
+        <span>WordPress VIP</span>
+      </a>
+    </div>
+  </div>
+</div>
 
-   
 ## Email Marketing
 
-|  ![alt_text](images/amazon-ses.png "image_tooltip")  	|    ![alt_text](images/sendgrid.png "image_tooltip")	| ![alt_text](images/bronto.png "image_tooltip") 	| ![alt_text](images/constant-contact.png "image_tooltip") |
-|---	|---	|---	|---	|
-| [Amazon SES](https://www.loginradius.com/integrations/amazon-ses/)  	| [SendGrid](https://www.loginradius.com/integrations/sendgrid/)  	| [Bronto](https://www.loginradius.com/integrations/bronto/)  	| [ConstantContact](https://www.loginradius.com/integrations/constant-contact/)  	|
-|   ![alt_text](images/klaviyo.png "image_tooltip") 	|  ![alt_text](images/litmus.png "image_tooltip")  	|   	|    	| 
-|  [Klaviyo](https://www.loginradius.com/integrations/klaviyo/) 	| [Litmus](https://www.loginradius.com/integrations/litmus/)  	|   	|   	|
-|  ![alt_text](images/mailchimp.png "image_tooltip")  	|   ![alt_text](images/mailgun.png "image_tooltip") 	|      ![alt_text](images/mandrill.png "image_tooltip")	| ![alt_text](images/Responsys.png "image_tooltip")	| 
-| [MailChimp](https://www.loginradius.com/integrations/mailchimp/)  	| [Mailgun](https://www.loginradius.com/integrations/mailgun/)  	| [Mandrill](https://www.loginradius.com/integrations/mandrill/)  	| [Responsys](https://www.loginradius.com/integrations/responsys/)  	|
-|  ![alt_text](images/salesforce-marketing-cloud.png "image_tooltip")  	|  ![alt_text](images/upaknee.png "image_tooltip")  	|   	|    	| 
-| [Salesforce Marketing Cloud](https://www.loginradius.com/integrations/salesforce-marketing-cloud/)  	|   [Upaknee](https://www.loginradius.com/integrations/upaknee/)	|   	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/amazon-ses/">
+        <img src="images/amazon-ses.png" alt="Amazon SES" title="Amazon SES" />
+        <span>Amazon SES</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sendgrid/">
+        <img src="images/sendgrid.png" alt="SendGrid" title="SendGrid" />
+        <span>SendGrid</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/bronto/">
+        <img src="images/bronto.png" alt="Bronto" title="Bronto" />
+        <span>Bronto</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/constant-contact/">
+        <img src="images/constant-contact.png" alt="onstant Contact" title="onstant Contact" />
+        <span>Constant Contact</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/klaviyo/">
+        <img src="images/klaviyo.png" alt="klaviyo" title="klaviyo" />
+        <span>klaviyo</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/litmus/">
+        <img src="images/litmus.png" alt="Litmus" title="Litmus" />
+        <span>Litmus</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/mailchimp/">
+        <img src="images/mailchimp.png" alt="Mailchimp" title="Mailchimp" />
+        <span>Mailchimp</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/mailgun/">
+        <img src="images/mailgun.png" alt="Mailgun" title="Mailgun" />
+        <span>Mailgun</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/mandrill/">
+        <img src="images/mandrill.png" alt="Mandrill" title="Mandrill" />
+        <span>Mandrill</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/responsys/">
+        <img src="images/Responsys.png" alt="Responsys" title="Responsys" />
+        <span>Responsys</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce-marketing-cloud/">
+        <img src="images/salesforce-marketing-cloud.png" alt="Salesforce Marketing Cloud" title="Salesforce Marketing Cloud" />
+        <span>Salesforce Marketing Cloud</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/upaknee/">
+        <img src="images/upaknee.png" alt="Upaknee" title="Upaknee" />
+        <span>Upaknee</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Federation
 
-|  ![alt_text](images/doximity.png "image_tooltip") 	| ![alt_text](images/higherlogic.png "image_tooltip")  	| ![alt_text](images/ibm-cloud-video.png "image_tooltip")  	| ![alt_text](images/jira.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-|[Doximity](https://www.loginradius.com/integrations/doximity/)   	| [HigherLogic](https://www.loginradius.com/integrations/higher-logic/)  	|[IBM Cloud Video](https://www.loginradius.com/integrations/ibm-cloud-video/)   	|  [Atlassian](https://www.loginradius.com/integrations/atlassian/) 	|
-| ![alt_text](images/Litmos.png "image_tooltip")  	|![alt_text](images/perfectmind.png "image_tooltip")   	|![alt_text](images/rics-1.png "image_tooltip")   	|   	|
-| [Litmos](https://www.loginradius.com/integrations/sap-litmos/)  	|  [PerfectMind](https://www.loginradius.com/integrations/perfectmind/) 	| [RICS](https://www.loginradius.com/integrations/rics/)  	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/doximity/">
+        <img src="images/doximity.png" alt="Doximity" title="Doximity" />
+        <span>Doximity</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/higher-logic/">
+        <img src="images/higherlogic.png" alt="Higher Logic" title="Higher Logic" />
+        <span>Higher Logic</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ibm-cloud-video/">
+        <img src="images/ibm-cloud-video.png" alt="IBM Cloud Video" title="IBM Cloud Video" />
+        <span>IBM Cloud Video</span>
+      </a>
+    </div>    
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/atlassian/">
+        <img src="images/jira.png" alt="Atlassian" title="Atlassian" />
+        <span>Atlassian</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/litmus/">
+        <img src="images/litmus.png" alt="Litmus" title="Litmus" />
+        <span>Litmus</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/perfectmind/">
+        <img src="images/perfectmind.png" alt="Perfectmind" title="Perfectmind" />
+        <span>Perfectmind</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/rics/">
+        <img src="images/rics-1.png" alt="RICS" title="RICS" />
+        <span>RICS</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Gamification
 
-|  ![alt_text](images/badgeville.png "image_tooltip")  	| ![alt_text](images/bunchball.png "image_tooltip")   	|   	|   	|
-|---	|---	|---	|---	|
-|  [Badgeville](https://www.loginradius.com/integrations/badgeville/) 	|   [Bunchball](https://www.loginradius.com/integrations/bunchball/)	|   	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/badgeville/">
+        <img src="images/badgeville.png" alt="Badgeville" title="Badgeville" />
+        <span>Badgeville</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/bunchball/">
+        <img src="images/bunchball.png" alt="Bunchball" title="Bunchball" />
+        <span>Bunchball</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Internal IAM
 
-|  ![alt_text](images/amazon-aws-iam.png "image_tooltip")   	| ![alt_text](images/bitium.png "image_tooltip")    	|   	 ![alt_text](images/ca-tech-identity.png "image_tooltip") | ![alt_text](images/centrify.png "image_tooltip")    	|
-|---	|---	|---	|---	|
-|  [Amazon AWS IAM](https://www.loginradius.com/integrations/amazon-aws-iam/) 	|  [Bitium](https://www.loginradius.com/integrations/bitium/) 	|   [CA Tech Identity](https://www.loginradius.com/integrations/ca-identity-manager/)	|[Centrify](https://www.loginradius.com/integrations/centrify/)   	|
-|    ![alt_text](images/Google-Cloud-IAM.png "image_tooltip") 	| ![alt_text](images/google-identity.png "image_tooltip")    	|   	 ![alt_text](images/microsoft-active-directory.png "image_tooltip") |  ![alt_text](images/microsoft-azure-ad.png "image_tooltip")   	|
-|   [Google Cloud IAM](https://www.loginradius.com/integrations/google-cloud-iam/)	| [Google Identity](https://www.loginradius.com/integrations/google-identity-platform/)  	|  [Microsoft Active Directory](https://www.loginradius.com/integrations/microsoft-active-directory/) 	|  [Microsoft Azure AD](https://www.loginradius.com/integrations/microsoft-azure-ad/) 	|
-|    ![alt_text](images/okta.png "image_tooltip") 	| ![alt_text](images/OneLogin.png "image_tooltip")    	| ![alt_text](images/oracle-identity.png "image_tooltip")    	| ![alt_text](images/ping-identity.png "image_tooltip")    	|
-|  [Okta](https://www.loginradius.com/integrations/okta/) 	| [One Login](https://www.loginradius.com/integrations/onelogin/)  	|   [Oracle Identity](https://www.loginradius.com/integrations/oracle-identity-management/)	|  [Ping Identity](https://www.loginradius.com/integrations/ping-identity/) 	| [Salesforce Identity](https://www.loginradius.com/integrations/salesforce-identity/)
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/amazon-aws-iam/">
+        <img src="images/amazon-aws-iam.png" alt="Amazon AWS IAM" title="Amazon AWS IAM" />
+        <span>Amazon AWS IAM</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/bitium/">
+        <img src="images/bitium.png" alt="Bitium" title="Bitium" />
+        <span>Bitium</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/centrify/">
+        <img src="images/centrify.png" alt="Centrify" title="Centrify" />
+        <span>Centrify</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/google-cloud-iam/">
+        <img src="images/Google-Cloud-IAM.png" alt="Google Cloud IAM" title="Google Cloud IAM" />
+        <span>Google Cloud IAM</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/google-identity-platform/">
+        <img src="images/google-identity.png" alt="Google Identity" title="Google Identity" />
+        <span>Google Identity</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/microsoft-active-directory/">
+        <img src="images/microsoft-active-directory.png" alt="Bitium" title="Bitium" />
+        <span>Microsoft Active Directory</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/microsoft-azure-ad/">
+        <img src="images/microsoft-azure-ad.png" alt="Microsoft Azure AD" title="Microsoft Azure AD" />
+        <span>Microsoft Azure AD</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/okta/">
+        <img src="images/okta.png" alt="Okta" title="Okta" />
+        <span>Okta</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/onelogin/">
+        <img src="images/OneLogin.png" alt="One Login" title="One Login" />
+        <span>One Login</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/oracle-identity-management/">
+        <img src="images/oracle-identity.png" alt="Oracle Identity" title="Oracle Identity" />
+        <span>Oracle Identity</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ping-identity/">
+        <img src="images/ping-identity.png" alt="Ping Identity" title="Ping Identity" />
+        <span>Ping Identity</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce-identity/">
+        <img src="images/salesforce-identity.png" alt="Salesforce Identity" title="Salesforce Identity" />
+        <span>Salesforce Identity</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Event and Log Management
 
-|   ![alt_text](images/AlertLogic.png "image_tooltip") 	|    ![alt_text](images/hp-arcSight.png "image_tooltip")	|  ![alt_text](images/ibm-qradar.png "image_tooltip")  	|  ![alt_text](images/loggly.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-| [Alert Logic](https://www.loginradius.com/integrations/alertlogic/)  	|  [HP ArcSight](https://www.loginradius.com/integrations/hp-arcsight/) 	|  [IBM QRada](https://www.loginradius.com/integrations/ibm-qradar/) 	|  [Loggly](https://www.loginradius.com/integrations/solarwinds-loggly/) 	|
-|    ![alt_text](images/New-Relic.png "image_tooltip")	| ![alt_text](images/solarwinds.png "image_tooltip")   	|   ![alt_text](images/splunk.png "image_tooltip") 	|   	|
-|   [New Relic](https://www.loginradius.com/integrations/new-relic/)	| [Solar Winds](https://www.loginradius.com/integrations/solarwinds/)  	|  [Splunk](https://www.loginradius.com/integrations/splunk/) 	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/alertlogic/">
+        <img src="images/AlertLogic.png" alt="Alert Logic" title="Alert Logic" />
+        <span>Alert Logic</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/hp-arcsight/">
+        <img src="images/hp-arcSight.png" alt="Alert Logic" title="Alert Logic" />
+        <span>HP ArcSight</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ibm-qradar/">
+        <img src="images/ibm-qradar.png" alt="Alert Logic" title="Alert Logic" />
+        <span>IBM QRada</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/solarwinds-loggly/">
+        <img src="images/loggly_new.png" alt="Loggly" title="Loggly" />
+        <span>Loggly</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/new-relic/">
+        <img src="images/New-Relic.png" alt="New Relic" title="New Relic" />
+        <span>New Relic</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/solarwinds/">
+        <img src="images/solarwinds.png" alt="Solar Winds" title="Solar Winds" />
+        <span>Solar Winds</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/splunk/">
+        <img src="images/splunk.png" alt="Splunk" title="Splunk" />
+        <span>Splunk</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Marketing
 
-|  ![alt_text](images/Adobe-Campaign.png "image_tooltip") 	|![alt_text](images/boomtrain.png "image_tooltip")   	| ![alt_text](images/constant-contact.png "image_tooltip")  	| ![alt_text](images/contactlab.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-|  [Adobe Campaign](https://www.loginradius.com/integrations/adobe-campaign/) 	|  [BoomTrain](https://www.loginradius.com/integrations/zeta-boomtrain/) 	| [Constant Contact](https://www.loginradius.com/integrations/constant-contact/)  	| [Contact Lab](https://www.loginradius.com/integrations/contactlab/)  	|
-|![alt_text](images/dataxu.png "image_tooltip")   	|![alt_text](images/eloqua.png "image_tooltip")   	|![alt_text](images/google-tag-manager.png "image_tooltip")   	|![alt_text](images/hubspot.png "image_tooltip")   	|
-| [Dataxu](https://www.loginradius.com/integrations/dataxu/)  	| [Eloqua](https://www.loginradius.com/integrations/eloqua/)  	|  [Google Tag Manager](https://www.loginradius.com/integrations/google-tag-manager/) 	| [Hubspot](https://www.loginradius.com/integrations/hubspot/)  	|
-|![alt_text](images/ibm-campaign.png "image_tooltip")   	|![alt_text](images/silverpop.png "image_tooltip")   	|   	![alt_text](images/marketo.png "image_tooltip")|  ![alt_text](images/monetate.png "image_tooltip") 	|
-| [IBM Campaign](https://www.loginradius.com/integrations/ibm-campaign/)  	| [IBM Silverpop](https://www.loginradius.com/integrations/ibm-digital-marketing-silverpop/)  	| [Marketo](https://www.loginradius.com/integrations/marketo/)  	|  [Monetate](https://www.loginradius.com/integrations/monetate/) 	|
-|![alt_text](images/salesforce-marketing-cloud.png "image_tooltip")   	| ![alt_text](images/salesforce-pardot.png "image_tooltip")  	|![alt_text](images/sap-hybris.png "image_tooltip")   	| ![alt_text](images/selligent.png "image_tooltip")  	|
-|  [Salesforce Marketing Cloud](https://www.loginradius.com/integrations/salesforce-marketing-cloud/) 	|[Salesforce Pardot](https://www.loginradius.com/integrations/salesforce-pardot/)   	|[SAP Hybris](https://www.loginradius.com/integrations/sap-hybris/)   	|  [Selligent](https://www.loginradius.com/integrations/selligent-marketing-cloud/) 	|
-|![alt_text](images/sendgrid.png "image_tooltip")   	|![alt_text](images/5d63266ce44b7_resizeDown1200px525px16_226185f6128d1838c05.71481052.png "image_tooltip")   	|
-|  [Sendgrid](https://www.loginradius.com/integrations/sendgrid/) 	| [Sendinblue](https://www.loginradius.com/integrations/Sendinblue/)  	|   	|   	|
-|![alt_text](images/kaltura.png "image_tooltip")   	|![alt_text](images/klaviyo.png "image_tooltip")   	|   ![alt_text](images/mailchimp.png "image_tooltip")	| ![alt_text](images/mandrill.png "image_tooltip")  	|
-|   [Kaltura](https://www.loginradius.com/integrations/kaltura/)	|[Klaviyo](https://www.loginradius.com/integrations/klaviyo/)   	|[MailChimp](https://www.loginradius.com/integrations/mailchimp/)   	| [Mandrill](https://www.loginradius.com/integrations/mandrill/)  	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/adobe-campaign/">
+        <img src="images/Adobe-Campaign.png" alt="Adobe Campaign" title="Adobe Campaign" />
+        <span>Adobe Campaign</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/boomtrain/">
+        <img src="images/boomtrain.png" alt="BoomTrain" title="BoomTrain" />
+        <span>BoomTrain</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/constant-contact/">
+        <img src="images/constant-contact.png" alt="Constant Contact" title="Constant Contact" />
+        <span>Constant Contact</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/contactlab/">
+        <img src="images/contactlab.png" alt="Contact Lab" title="Contact Lab" />
+        <span>BoomContact LabTrain</span>
+      </a>
+    </div>    
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/dataxu/">
+        <img src="images/dataxu.png" alt="Dataxu" title="Dataxu" />
+        <span>Dataxu</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/eloqua/">
+        <img src="images/eloqua.png" alt="Eloqua" title="Eloqua" />
+        <span>Eloqua</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/google-tag-manager/">
+        <img src="images/google-tag-manager.png" alt="Google Tag Manager" title="Google Tag Manager" />
+        <span>Google Tag Manager</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/hubspot/">
+        <img src="images/hubspot.png" alt="Hubspot" title="Hubspot" />
+        <span>Hubspot</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ibm-campaign/">
+        <img src="images/ibm-campaign.png" alt="BM Campaign" title="BM Campaign" />
+        <span>IBM Campaign</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ibm-digital-marketing-silverpop/">
+        <img src="images/silverpop.png" alt="IBM Silverpop" title="IBM Silverpop" />
+        <span>IBM Silverpop</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/marketo/">
+        <img src="images/marketo.png" alt="Marketo" title="Marketo" />
+        <span>Marketo</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/monetate/">
+        <img src="images/monetate.png" alt="Monetate" title="Monetate" />
+        <span>Monetate</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce-marketing-cloud/">
+        <img src="images/salesforce-marketing-cloud.png" alt="Salesforce Marketing Cloud" title="Salesforce Marketing Cloud" />
+        <span>Salesforce Marketing Cloud</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/salesforce-pardot/">
+        <img src="images/salesforce-pardot.png" alt="Salesforce Pardot" title="Salesforce Pardot" />
+        <span>Salesforce Pardot</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sap-hybris/">
+        <img src="images/sap-hybris.png" alt="SAP Hybris" title="SAP Hybris" />
+        <span>SAP Hybris</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/selligent-marketing-cloud/">
+        <img src="images/selligent.png" alt="Selligent" title="Selligent" />
+        <span>Selligent</span>
+      </a>
+    </div>    
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/Sendinblue/">
+        <img src="images/5d63266ce44b7_resizeDown1200px525px16_226185f6128d1838c05.71481052.png" alt="Sendinblue" title="Sendinblue" />
+        <span>Sendinblue</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sendgrid/">
+        <img src="images/sendgrid.png" alt="SendGrid" title="SendGrid" />
+        <span>SendGrid</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/kaltura/">
+        <img src="images/kaltura.png" alt="kaltura" title="kaltura" />
+        <span>kaltura</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/klaviyo/">
+        <img src="images/klaviyo.png" alt="klaviyo" title="klaviyo" />
+        <span>klaviyo</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/mailchimp/">
+        <img src="images/mailchimp.png" alt="MailChimp" title="MailChimp" />
+        <span>MailChimp</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/mandrill/">
+        <img src="images/mandrill.png" alt="Mandrill" title="Mandrill" />
+        <span>Mandrill</span>
+      </a>
+    </div>
+  </div>
+</div>
 
+## Mobile
 
-## Mobile 
-
-|  ![alt_text](images/android.png "image_tooltip")  	| ![alt_text](images/ionic.png "image_tooltip")   	|![alt_text](images/ios.png "image_tooltip")    	| ![alt_text](images/ios-swift.png "image_tooltip")   	|
-|---	|---	|---	|---	|
-| [Android](https://www.loginradius.com/integrations/android/)  	| [Ionic](https://www.loginradius.com/integrations/ionic/)  	| [iOS](https://www.loginradius.com/integrations/ios/)  	| [iOS (Swift)](https://www.loginradius.com/integrations/ios-swift/)  	|
-|  ![alt_text](images/messagebird.png "image_tooltip")  	|![alt_text](images/phonegap.png "image_tooltip")    	|![alt_text](images/twilio.png "image_tooltip")    	|![alt_text](images/windows-phone.png "image_tooltip")    	|
-| [MessageBird](https://www.loginradius.com/integrations/messagebird/)  	| [PhoneGap](https://www.loginradius.com/integrations/phonegap/)  	| [Twilio](https://www.loginradius.com/integrations/twilio/)  	| [Windows Phone](https://www.loginradius.com/integrations/windows-phone/ )  	|
-| ![alt_text](images/xamrain.png "image_tooltip")   	|   	|   	|   	|
-| [Xamarin](https://www.loginradius.com/integrations/xamarin/)  	|   	|   	|   	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/android/">
+        <img src="images/android.png" alt="Android" title="Android" />
+        <span>Android</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ionic/">
+        <img src="images/ionic.png" alt="Ionic" title="Ionic" />
+        <span>Ionic</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ios/">
+        <img src="images/ios.png" alt="IOS" title="IOS" />
+        <span>IOS</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/ios-swift/">
+        <img src="images/ios-swift.png" alt="iOS (Swift)" title="iOS (Swift)" />
+        <span>iOS (Swift)</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/messagebird/">
+        <img src="images/messagebird.png" alt="MessageBird" title="MessageBird" />
+        <span>MessageBird</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/phonegap/">
+        <img src="images/phonegap.png" alt="PhoneGap" title="PhoneGap" />
+        <span>PhoneGap</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/twilio/">
+        <img src="images/twilio.png" alt="Twilio" title="Twilio" />
+        <span>Twilio</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/windows-phone/">
+        <img src="images/windows-phone.png" alt="indows Phone" title="indows Phone" />
+        <span>Windows Phone</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/xamarin/">
+        <img src="images/xamrain.png" alt="Xamarin" title="Xamarin" />
+        <span>Xamarin</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Personalisation
 
-
-|  ![alt_text](images/kaltura.png "image_tooltip") 	|  ![alt_text](images/lytics.png "image_tooltip") 	|   ![alt_text](images/monetate.png "image_tooltip")	| ![alt_text](images/optimizely.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-| [Kaltura](https://www.loginradius.com/integrations/kaltura/)  	| [Lytics](https://www.loginradius.com/integrations/lytics/)  	| [Monetate](https://www.loginradius.com/integrations/monetate/ )  	| [Optimizely](https://www.loginradius.com/integrations/optimizely/)  	|
-| ![alt_text](images/RichRelevance.png "image_tooltip")  	|   	|   	|   	|
-| [RichRelevance](https://www.loginradius.com/integrations/richrelevance/)  	|   	|   	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/kaltura/">
+        <img src="images/kaltura.png" alt="kaltura" title="kaltura" />
+        <span>kaltura</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/lytics/">
+        <img src="images/lytics.png" alt="Lytics" title="Lytics" />
+        <span>Lytics</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/monetate/">
+        <img src="images/monetate.png" alt="Monetate" title="Monetate" />
+        <span>Monetate</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/optimizely/">
+        <img src="images/optimizely.png" alt="Optimizely" title="Optimizely" />
+        <span>Optimizely</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/richrelevance/">
+        <img src="images/RichRelevance.png" alt="AndrRichrelevanceoid" title="Richrelevance" />
+        <span>Richrelevance</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Security and Fraud
 
-|  ![alt_text](images/Age-Verification.png "image_tooltip") 	|  ![alt_text](images/castle-dot-io.png "image_tooltip") 	|   ![alt_text](images/face-id.png "image_tooltip")	| ![alt_text](images/sms-gateway.png "image_tooltip")  	|
-|---	|---	|---	|---	|
-| [Age Verification](https://www.loginradius.com/integrations/age-verification/)  	| [Castle.io](https://www.loginradius.com/integrations/castle-dot-io/)  	| [Face ID](https://www.loginradius.com/integrations/face-id/)  	| [SMS Gateway](https://www.loginradius.com/integrations/sms-gateway/)  	|
-| ![alt_text](images/touch-id.png "image_tooltip")  	|      ![alt_text](images/trulioo.png "image_tooltip")  	
-| [Touch ID](https://www.loginradius.com/integrations/touch-id/)  	|    [Trulioo](https://www.loginradius.com/integrations/trulioo/)
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/age-verification/">
+        <img src="images/Age-Verification.png" alt="Age Verification" title="Age Verification" />
+        <span>Age Verification</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/castle-dot-io/">
+        <img src="images/castle-dot-io.png" alt="Castle.io" title="Castle.io" />
+        <span>Castle.io</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/face-id/">
+        <img src="images/face-id.png" alt="Face ID" title="Face ID" />
+        <span>Face ID</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/sms-gateway/">
+        <img src="images/sms-gateway.png" alt="MS Gateway" title="MS Gateway" />
+        <span>MS Gateway</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/touch-id/">
+        <img src="images/touch-id.png" alt="Touch ID" title="Touch ID" />
+        <span>Touch ID</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/trulioo/">
+        <img src="images/trulioo.png" alt="Trulioo" title="Trulioo" />
+        <span>Trulioo</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Social Add-Ons
 
-|  ![alt_text](images/disqus.png "image_tooltip") 	|   ![alt_text](images/social9.png "image_tooltip")	| ![alt_text](images/viafoura.png "image_tooltip") 	| |
-|---	|---	|---	|---	|
-|   [Disqus](https://www.loginradius.com/integrations/disqus/)	| [Social9](https://www.loginradius.com/integrations/social9/)  	|  [Viafoura](https://www.loginradius.com/integrations/viafoura/) 	|   	|
-
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/disqus/">
+        <img src="images/disqus.png" alt="Disqus" title="Disqus" />
+        <span>Disqus</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/social9/">
+        <img src="images/social9.png" alt="Social9" title="Social9" />
+        <span>Social9</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/viafoura/">
+        <img src="images/viafoura.png" alt="Viafoura" title="Viafoura" />
+        <span>Viafoura</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 ## Data Streaming
 
-|  ![alt_text](images/Amazon-Kinesis.png "image_tooltip") 	|  | ||
-|---	|---	|---	|---	|
-|   [AWS Kinesis](https://www.loginradius.com/integrations/Kinesis/)	|   	|   	|   	|
+<div class="third-party">
+  <div class="third-party-logos grid-25">
+    <div class="card">
+      <a href="https://www.loginradius.com/integrations/Kinesis/">
+        <img src="images/Amazon-Kinesis.png" alt="WS Kinesis" title="WS Kinesis" />
+        <span>WS Kinesis</span>
+      </a>
+    </div>
+  </div>
+</div>

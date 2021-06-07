@@ -209,18 +209,16 @@ section {
   }
 }
 //tutorials
-.tutorials {
-  .read-more {
-    font-size: 18px;
-    color: $black;
-    margin-top: 24px;
-    a {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      svg {
-        margin-right: 1rem;
-      }
+.read-more {
+  font-size: 18px;
+  color: $black;
+  margin-top: 24px;
+  a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      margin-right: 1rem;
     }
   }
 }
@@ -245,6 +243,13 @@ section {
           color: $blue;
           &:hover {
             color: $gray-dark;
+          }
+        }
+        .read-more {
+          a {
+            &:hover {
+              color: $blue;
+            }
           }
         }
       }

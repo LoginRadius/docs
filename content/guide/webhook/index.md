@@ -20,7 +20,7 @@ This guide explains how to configure webhook in [LoginRadius Dashboard](https://
 ### Step 1: Visit Integration Section 
 Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
-![alt_text](./images/configureintegration.png "image_tooltip")
+![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
 ### Step 2: Add Webhook
 
@@ -28,7 +28,7 @@ Click the **Add** button from the above screen, and you will find the list of al
 
 ![alt_text](./images/available-integration.png "image_tooltip")
 
-Click the **Add Me** button from the Webhook tile on the above screen and then **Enable** button from the appeared pop-up. The Webhook tile will now display **Let's Configure** option. Click this option and follow step 3.
+Click the **Let's Configure** button in the Webhook tile as on the above screen and follow step 3.
 
 ### Step 3: Configure Webhook
 

@@ -1,11 +1,11 @@
 ---
-title: "Contact Us"
-tags: ["Contact Us"]
-description: "Contact Us."
-path: "/contact-us"
+title: "FAQ"
+tags: ["FAQ"]
+description: "Frequently asked Questions"
+path: "/FAQ"
 ---
 
-# Contact Us
+# FAQ
 
 Contact our support team for any questions you might have.
 
@@ -183,5 +183,5 @@ Have questions or issues with our product?
 
 Want to work with us? We are always looking for talented people.
 
-[Explore Our Jobs](https://www.loginradius.com/careers/)
+<a href="https://www.loginradius.com/careers/" target="_blank">Explore Our Jobs</a>
 

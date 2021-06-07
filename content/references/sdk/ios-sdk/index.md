@@ -137,13 +137,13 @@ Registration service supports email/password (traditional) registration and logi
 
 Registration Service is done through the Authentication API.
 
-Registration requires a parameter called SOTT. You can create the SOTT token by following this [doc](https://dashboard.loginradius.com/dashboard)
+Registration requires a parameter called SOTT. For more information regarding generating a SOTT, refer to this [document](/concepts/sott).
 
 **Parameters and their Description:**
 
 |Name|Description|Required|
 |---|----|----|
-|SOTT|Secure One-time Token which you can check information about SOTT [here](https://dashboard.loginradius.com/dashboard)|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
+|SOTT|Secure One-time Token which you can check information about SOTT [here](/concepts/sott)|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
 |smstemplate|SMS template allows you to customize the formatting and text of SMS sent by users who share your content.|NO|
 |emailTemplate|Email templates allow you to customize the formatting and text of emails sent by users who share your content. Templates can be text-only, or HTML and text, in which case the user's email client will determine which is displayed. |NO  Go To API Configuration -> Email Workflow to get the template names|
 
