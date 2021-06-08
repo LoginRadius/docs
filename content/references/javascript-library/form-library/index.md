@@ -11,7 +11,7 @@ The Form Library is part of the LoginRadius JavaScript Library and is used for c
 
 This document describes the different function calls that can be made to the various LoginRadius APIs via the Form Library allowing you to easily add support for LoginRadius to your custom-built forms.
 
-> Note: If you are currently using the automatically generated interfaces provided by `LoginRadiusV2.js` and are looking to add additional customizations/functionality, we recommend using the [JavaScript Hooks](/references/javascript-library/hooks) or referring to the [LoginRadius HTML5 SDK](/references/sdk/html5-sdk).
+> Note: If you are currently using the automatically generated interfaces provided by `LoginRadiusV2.js` and are looking to add additional customizations/functionality, we recommend using the <a href="/references/javascript-library/hooks" target="_blank">JavaScript Hooks</a> or referring to the <a href="/references/sdk/html5-sdk" target="_blank">LoginRadius HTML5 SDK</a>.
 
 ## Initialization
 
@@ -138,7 +138,7 @@ Format:
 
 `LRObject.api.forgotPassword(data, onSuccess, onError);`
 
-  * **data**: Data is an object that contains the object details for the [Auth Forgot Password API](/references/api/authentication#auth-forgot-password), this object requires the email of the consumer.
+  * **data**: Data is an object that contains the object details for the <a href="/references/api/authentication#auth-forgot-password" target="_blank">Auth Forgot Password API</a>, this object requires the email of the consumer.
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the email was successfully sent.
 
@@ -164,7 +164,7 @@ Format:
 
 `LRObject.api.resetPassword(data, onSuccess, onError);`
 
-  * **data**: Data is an object that represents the body params for the [Auth Reset Password API](/references/api/authentication#auth-reset-password-by-reset-token) it requires the following:
+  * **data**: Data is an object that represents the body params for the <a href="/references/api/authentication#auth-reset-password-by-reset-token" target="_blank">Auth Reset Password API</a> it requires the following:
 
     * **resettoken**: The password reset token the consumer should have received via email when requesting a password reset.
 
@@ -198,7 +198,7 @@ The verification page that has this emailVerification function should be the sam
 
 Alternatively, in the LoginRadius Dashboard in your verification email template, you can also hard code the link to your verification page that has the emailVerification function.
 
-For more details on email verification, we recommend reading our documentation on [Email Workflow Settings](/guide/customize-email-and-sms-settings#email-settings) and on [Email Template Management](/guide/emailpassword-login#step-2-configure-email-templates).
+For more details on email verification, we recommend reading our documentation on <a href="/guide/customize-email-and-sms-settings#email-settings" target="_blank">Email Workflow Settings</a> and on <a href="/guide/emailpassword-login#step-2-configure-email-templates" target="_blank">Email Template Management</a>.
 
 > Note: This function leverages the [Auth Verify Email API](/references/api/authentication#auth-verify-email). Review this API if you need details on parameters that can be provided in the **Data** object.
 
@@ -266,7 +266,7 @@ LRObject.api.socialLogin({
 
 To resend email verification, you can call `LRObject.api.resendEmailVerification` with the consumers' email address.
 
-> Note: This function leverages the [Auth Resend Email Verification API](/references/api/authentication#auth-resend-email-verification).
+> Note: This function leverages the <a href="/references/api/authentication#auth-resend-email-verification" target="_blank">Auth Resend Email Verification API</a>.
 
 Format:
 
@@ -298,7 +298,7 @@ This section deals with enabling login by sending a One Time Passcode to your co
 
 To get a One Time Password (OTP), call `LRObject.api.otpLogin` with the consumer's `phone` number.
 
-> Note: This API is based on the [Phone Send One time Passcode API](/references/api/passwordless-login#passwordless-login-by-phone).
+> Note: This API is based on the <a href="/references/api/passwordless-login#passwordless-login-by-phone" target="_blank">Phone Send One time Passcode API</a>.
 
 Format:
 
@@ -331,7 +331,7 @@ LRObject.api.otpLogin(
 
 ### Verify OTP
 
-The Verify OTP Login function leverages the [Phone Verification by OTP API](/references/api/phone-authentication#phone-verification-otp) to verify a consumer's provided phone number via the One Time Passcode.
+The Verify OTP Login function leverages the <a href="/references/api/phone-authentication#phone-verification-otp" target="_blank">Phone Verification by OTP API</a> to verify a consumer's provided phone number via the One Time Passcode.
 
 Format:
 
@@ -358,7 +358,7 @@ LRObject.api.verifyOTP(
 
 ### Resend OTP
 
-The resendOTP function is used to resend the One Time Passcode to a consumer's phone. It is based on the [Phone Resend Verification OTP API](/references/api/phone-authentication#phone-resend-verification-otp).
+The resendOTP function is used to resend the One Time Passcode to a consumer's phone. It is based on the <a href="/references/api/phone-authentication#phone-resend-verification-otp" target="_blank">Phone Resend Verification OTP API</a>.
 
 Format:
 
@@ -420,7 +420,7 @@ LRObject.api.updatePhone(
 
 > Note: This function is intended for flows that interact with the Passwordless Login APIs.
 
-The Verify OTP Login function leverages the [Phone Login Using One Time Passcode API](/references/api/passwordless-login#passwordless-login-phone-verification) which is part of the Passwordless Login APIs to log in a consumer instantly by returning an **access_token** along with the consumer's profile if the token is valid.
+The Verify OTP Login function leverages the <a href="/references/api/passwordless-login#passwordless-login-phone-verification" target="_blank">Phone Login Using One Time Passcode API</a> which is part of the Passwordless Login APIs to log in a consumer instantly by returning an **access_token** along with the consumer's profile if the token is valid.
 
 Format:
 
@@ -459,7 +459,7 @@ The Two-Factor Authentication set of functions are specifically designed to help
 
 ### Two-Factor Authentication Login
 
-This function allows you to initiate a traditional login if you have 2FA (Two-Factor Authentication) enabled in your LoginRadius Dashboard. This function leverages the [2FA Email Login API](/references/api/two-factor-authentication#2fa-email-login).
+This function allows you to initiate a traditional login if you have 2FA (Two-Factor Authentication) enabled in your LoginRadius Dashboard. This function leverages the <a href="/references/api/two-factor-authentication#2fa-email-login" target="_blank">2FA Email Login API</a>.
 
 Format:
 
@@ -473,13 +473,13 @@ Format:
 
 ### Two-Factor Authentication Update Phone
 
-The `twoFAUpdatePhone` function leverages the [2FA Update Phone Number API](/references/api/two-factor-authentication#2fa-update-phone-number-by-token) which is used to update the phone number used to log in using Two-Factor Authentication by consumers.
+The `twoFAUpdatePhone` function leverages the <a href="/references/api/two-factor-authentication#2fa-update-phone-number-by-token" target="_blank">2FA Update Phone Number API</a> which is used to update the phone number used to log in using Two-Factor Authentication by consumers.
 
 Format:
 
 `LRObject.api.twoFAUpdatePhone(data, onSuccess, onError);`
 
-  * **data**: Should be an object which contains all of the parameters required to update the phone number in the [2FA Update Phone Number API](/references/api/two-factor-authentication#2fa-update-phone-number-by-token).
+  * **data**: Should be an object which contains all of the parameters required to update the phone number in the <a href="/references/api/two-factor-authentication#2fa-update-phone-number-by-token" target="_blank">2FA Update Phone Number API</a>.
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the consumer has passed successfully updated the phone number.
 
@@ -503,13 +503,13 @@ LRObject.api.twoFAUpdatePhone(
 
 ### Two-Factor Authentication Verify OTP
 
-This function leverages the [2FA Validate OTP API](/references/api/two-factor-authentication#2fa-validate-otp) and is used to log in via Two-Factor Authentication.
+This function leverages the <a href="/references/api/two-factor-authentication#2fa-validate-otp" target="_blank">2FA Validate OTP API</a> and is used to log in via Two-Factor Authentication.
 
 Format:
 
 `LRObject.api.twoFAVerifyOTP(data, onSuccess, onError);`
 
-  * **data**: Should be an object which contains all of the parameters required to verify the OTP, you can refer to the [2FA Validate OTP API](/references/api/two-factor-authentication#2fa-validate-otp) for details.
+  * **data**: Should be an object which contains all of the parameters required to verify the OTP, you can refer to the <a href="/references/api/two-factor-authentication#2fa-validate-otp" target="_blank">2FA Validate OTP API</a> for details.
 
   * **onSuccess**: Pass in a function you would like to use as a callback when the consumer has been successfully logged in.
 

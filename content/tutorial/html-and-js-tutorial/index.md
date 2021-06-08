@@ -11,11 +11,11 @@ path: "/tutorial/html-and-js-tutorial"
 This demo will help you with a quick implementation of the LoginRadius platform with HTML and JS demo.
 
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](/concepts/idx).
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
-Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your HTML application.
+Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your HTML application.
 
 
 ## Choose Theme
@@ -34,7 +34,7 @@ To preview your login page's theme, click the **Go to your Login Page** link as 
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-- In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your App Name and API Key:
+- In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your App Name and API Key:
 
   ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -47,9 +47,9 @@ Before using any of the APIs or Methods that LoginRadius provides, you need to g
 
 ## Set Up HTML Project 
 
-> **Prerequisites :** <li> The web server needs to be set up. Refer the guides [here](https://www.maketecheasier.com/setup-local-web-server-all-platforms/) to set up web server locally. You can also set up a small GitHub webserver [here](https://www.maketecheasier.com/setup-local-web-server-all-platforms/).<li> Basic knowledge of HTML and JS.
+> **Prerequisites :** <li> The web server needs to be set up. Refer the guides <a href="https://www.maketecheasier.com/setup-local-web-server-all-platforms/" target="_blank">here</a> to set up web server locally. You can also set up a small GitHub webserver <a href="https://www.maketecheasier.com/setup-local-web-server-all-platforms/" target="_blank">here</a>.<li> Basic knowledge of HTML and JS.
 
-- Download our HTML and JS demo project from Github [here](https://github.com/LoginRadius/demo), and put it in the root directory of your server.
+- Download our HTML and JS demo project from Github <a href="https://github.com/LoginRadius/demo" target="_blank">here</a>, and put it in the root directory of your server.
 
 - Open the `option.js` file and add the following:
   * LoginRadius API Key as obtained from [Get Cedentials](#get-credentials) step.
@@ -92,13 +92,13 @@ var LRObject= new LoginRadiusV2(commonOptions);
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 ## Explore Demo
 
-* **[Refer to GitHub Demo](/download/html5-sdk-demo.zip)**  to know how to implement various LoginRadius features using SDK Functions.
+* **<a href="/download/html5-sdk-demo.zip" target="_blank">Refer to GitHub Demo</a>**  to know how to implement various LoginRadius features using SDK Functions.
 
 ## Recommended Next Steps
 

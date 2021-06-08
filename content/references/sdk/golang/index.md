@@ -10,11 +10,11 @@ path: "/references/sdk/golang"
 > **Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
 
-This document contains information and examples regarding the LoginRadius Golang SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google, Twitter, Yahoo, LinkedIn, and more. You can get the SDK from [here](https://github.com/LoginRadius/go-sdk)
+This document contains information and examples regarding the LoginRadius Golang SDK. It provides guidance for working with social authentication, user profile data, and sending messages with a variety of social networks such as Facebook, Google, Twitter, Yahoo, LinkedIn, and more. You can get the SDK from <a href="https://github.com/LoginRadius/go-sdk" target="_blank">here</a>
 
 ## SDK Installation and Configuration
 
-> Note: Before starting, install Golang and setup the proper paths. Find the instructions [here](https://golang.org/doc/install).
+> Note: Before starting, install Golang and setup the proper paths. Find the instructions <a href="https://golang.org/doc/install" target="_blank">here</a>.
 
 ```
    go get github.com/loginradius/go-sdk
@@ -40,7 +40,7 @@ Import the Golang sdk package on the top of the code that calls the SDK.
 ```
 
 
-Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from [here](https://dashboard.loginradius.com/dashboard). Also, whitelist your application domain as explained in [this document](/tutorial/golang/#whitelist-domain).
+Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from <a href="https://dashboard.loginradius.com/dashboard" target="_blank">here</a>. Also, whitelist your application domain as explained in <a href="/tutorial/golang/#whitelist-domain" target="_blank">this document</a>.
 
 Many API calls included in this SDK must be completed with an access token, which can be obtained after calling the Authentication Login API and reading the token from the response or from generating an access token through the UID in the Accounts API.
 
@@ -391,7 +391,7 @@ This API is used to set the password of an account in Cloud Storage.
 ```
 
 
-#### [](#account-create-post)Account Create (POST)
+#### Account Create (POST)
 
 This API is used to create an account in Cloud Storage. This API bypass the normal email verification process and manually creates the user.
 

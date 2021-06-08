@@ -9,9 +9,9 @@ path: "/references/sdk/android-sdk"
 
 > **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document describes how to start using the LoginRadius Android  SDK for the various authentication types and features supported by the LoginRadius Identity Platform’s. You can get the SDK from [here](https://github.com/LoginRadius/android-sdk).
+This document describes how to start using the LoginRadius Android  SDK for the various authentication types and features supported by the LoginRadius Identity Platform’s. You can get the SDK from <a href="https://github.com/LoginRadius/android-sdk" target="_blank">here</a>.
 
-For a more hands-on tutorial on setting up the SDK and using it in an Android application to make LoginRadius API calls, check out our [Android Tutorial](/tutorial/android).
+For a more hands-on tutorial on setting up the SDK and using it in an Android application to make LoginRadius API calls, check out our <a href="/tutorial/android" target="_blank">Android Tutorial</a>.
 
 ## SDK Installation
 
@@ -28,9 +28,9 @@ implementation 'com.loginradius.android:androidsdk:4.7.0'
 
 To get your app supported by LoginRadius Android SDK, you need to configure your LoginRadius user account.
 
-You will need to pass a SOTT value for user registration. You can generate this in the [Configuration](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+You will need to pass a SOTT value for user registration. You can generate this in the <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration</a> section of your LoginRadius Dashboard.
 
-To access **Secure Mobile OTP Token configuration**, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section. 
+To access **Secure Mobile OTP Token configuration**, login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section. 
 
 Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 
@@ -48,7 +48,7 @@ init.setSiteName("<your-site-name>");
 
 ```
 
-Refer [this document](/tutorial/android/#get-credentials) for getting API Key and Site/ App Name.
+Refer <a href="/tutorial/android/#get-credentials" target="_blank">this document</a> for getting API Key and Site/ App Name.
 
 ### Manifest Settings
 
@@ -260,7 +260,7 @@ With the earlier Add Sign-In procedure, your app authenticates the user on the c
 
 _Configurations_:
 
-1. Configure OAuth 2.0 web application for Google provider from [LoginRadius Dashboard](https://dashboard.loginradius.com/configuration) under **Login Methods**.
+1. Configure OAuth 2.0 web application for Google provider from <a href="https://dashboard.loginradius.com/configuration" target="_blank">LoginRadius Dashboard</a> under **Login Methods**.
 
 2. Make sure web and android configuration are configured under Single Project in Google API Console.
 

@@ -17,18 +17,18 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > - Android Studio >= 3.5.2
 >
->  New to Android? Check out [this reference](https://developer.android.com/training/basics/firstapp/creating-project).
+>  New to Android? Check out <a href="https://developer.android.com/training/basics/firstapp/creating-project" target="_blank">this reference</a>.
 
 
 ---
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
 ## Get Credentials
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name** (when you signed up for the LoginRadius account, it created an app for you), **API Key**, and **SOTT**.
 
-- In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your App Name and API Key:
+- In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your App Name and API Key:
 
   ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -349,7 +349,7 @@ Here is an example user profile object that is returned from the `readAllUserPro
 
 Check out our Android demo to know how you can implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/android-sdk)** | **[Download Demo](https://github.com/LoginRadius/android-sdk/archive/master.zip)**
+**<a href="https://github.com/LoginRadius/android-sdk" target="_blank">GitHub Demo Link</a>** | **<a href="https://github.com/LoginRadius/android-sdk/archive/master.zip" target="_blank">Download Demo</a>**
 
 ## Recommended Next Steps
 

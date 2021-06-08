@@ -11,7 +11,7 @@ In computer language, the term hooking refers to a range of techniques that are 
 
 Here we will see how hooks can be implemented in JavaScript to change/alter the functionality of a specific LoginRadius function. The hooks that we can build in JavaScript are achieved with events and/or callbacks.
 
-> Note: All of the advanced customizations explained here require that the LoginRadius User Registration Interface is already configured on your site. Refer back to the [Getting Started](/references/javascript-library/getting-started) section for more details.
+> Note: All of the advanced customizations explained here require that the LoginRadius User Registration Interface is already configured on your site. Refer back to the <a href="/references/javascript-library/getting-started">Getting Started</a> section for more details.
 
 ## JavaScript Hooks Customization Guide
 
@@ -593,6 +593,6 @@ This hook provides you a way to display the labels, placeholders, validation mes
 LRObject.$hooks.call('setLocaleBasedInfo', options);
 ```
 
-`options` is a JavaScript object containing key-value pairs for customization options (including labels, placeholders, and validation messages). For more information regarding the use of this, refer to our [Localization](/concepts/localization#form-contents-customization) document.
+`options` is a JavaScript object containing key-value pairs for customization options (including labels, placeholders, and validation messages). For more information regarding the use of this, refer to our <a href="/concepts/localization#form-contents-customization" target="_blank">Localization</a> document.
 
 [Go Back to Home Page](/)
