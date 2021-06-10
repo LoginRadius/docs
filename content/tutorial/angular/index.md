@@ -9,11 +9,11 @@ path: "/tutorial/angular"
 
 The tutorial lets you implement LoginRadius user registration, login, and view profile on your Angular application. 
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](/concepts/idx).
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
-Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your Angular application.
+Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your Angular application.
 
 
 ## Choose Theme
@@ -33,7 +33,7 @@ To preview your login page's theme, click **Go to your Login Page** link highlig
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 
 
@@ -43,7 +43,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 ## Setup Angular 
 
 This example uses a sample Angular application based on the Angular official tutorial. 
-A shortened version of the process is provided below, and for more information, visit the [Angular Documentation page.](https://angular.io/docs)
+A shortened version of the process is provided below, and for more information, visit the <a href="https://angular.io/docs" target="_blank">Angular Documentation page.</a>
 
 - To install the Angular CLI tool, run the following command:
 
@@ -237,13 +237,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx-overview/" target="_blank">this document</a> for more information.
 
 ##  Whitelist Your Domain
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
@@ -253,7 +253,7 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 As an alternative to handling all API calls in the Angular frontend, you may also opt to access the LoginRadius API from a Node backend. If you wish to do so, you can check out our Node.js demo to learn how to implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo)**   |   **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**   
+**<a href="https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo" target="_blank">GitHub Demo Link</a>**   |   **<a href="https://github.com/LoginRadius/login-page-demos/archive/master.zip" target="_blank">Download Demo/a>**   
 
 
 ## Recommended Next Steps

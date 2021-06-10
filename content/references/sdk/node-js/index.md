@@ -10,11 +10,11 @@ path: "/references/sdk/node-js"
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
 
-This document describes how to start using the LoginRadius Node.js SDK and its various features. You can get the SDK from [here](http://github.com/LoginRadius/node-js-sdk).
+This document describes how to start using the LoginRadius Node.js SDK and its various features. You can get the SDK from <a href="http://github.com/LoginRadius/node-js-sdk" target="_blank">here</a>.
 
 > Note: The latest version(10.0.0) of Node js SDK works with LoginRadius V2 APIs.
 
-For a more hands-on tutorial on setting up the SDK and using it in a Node.js application to make LoginRadius API calls, check out our [Node.js Tutorial.](/tutorial/node-js)
+For a more hands-on tutorial on setting up the SDK and using it in a Node.js application to make LoginRadius API calls, check out our<a href="/tutorial/node-js" target="_blank">Node.js Tutorial.</a>
 
 ## SDK Installation and Configuration <br/>
 
@@ -38,7 +38,7 @@ In your project, create `var config` file:
      }
   }
   ```
-Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from [here](https://dashboard.loginradius.com/configuration).
+Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from <a href="https://dashboard.loginradius.com/configuration" target="_blank">here</a>.
 
 Pass the proxy configurations if you want to set Http Server Proxy Configuration through your Node.js SDK. Host and port are required to set Http Server Proxy configuration (username and password are optional).
 
@@ -675,7 +675,7 @@ List of APIs in this Section:
 
 #### Account Update (PUT)
 
-This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
+This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/' target="_blank">Here</a> for more capabilities.
 
  
  

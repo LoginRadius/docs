@@ -22,7 +22,7 @@ Watch this video's step-by-step information, or refer to the section below for t
 
 ### Step 1: Choose Login Method
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
 2. Click the down caret, and the **Login Methods** screen will appear:
 
@@ -48,7 +48,7 @@ In the above screen, you will see that the Email/Password method is enabled by d
 
 * Edit template content.
 * Reset the template to its default content.
-* Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in [SMTP Configuration](/guide/setup-your-smtp-provider).
+* Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in <a href="/guide/setup-your-smtp-provider" target="_blank">SMTP Configuration</a>.
 
 These actions are available in the action bar highlighted in the image below:
 

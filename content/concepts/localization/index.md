@@ -105,7 +105,7 @@ var french = {
 
 The above code contains key-value pairs for labels, placeholders, validationMessages, etc. keys are properties, and values are objects/array of objects in your local language.
 
-**Step 3**: In case of Identity Experience Framework, copy the code snippet of french.js and add it to the beginning of the **Before Script** file on the LoginRadius Dashboard (available in Advanced Editor), navigate to [Auth Page (IDX) Customization](https://dashboard.loginradius.com/auth-page#advanceEditor).
+**Step 3**: In case of Identity Experience Framework, copy the code snippet of french.js and add it to the beginning of the **Before Script** file on the LoginRadius Dashboard (available in Advanced Editor), navigate to <a href="https://dashboard.loginradius.com/auth-page#advanceEditor" target="_blank">Auth Page (IDX) Customization</a>.
 
 **Step 4**: Calling the Loginradius HOOK to set the local language and once you have provided the desired details, simply call this hook with the name of your locale object as a parameter before LRObject.init
 

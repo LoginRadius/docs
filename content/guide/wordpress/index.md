@@ -8,9 +8,9 @@ path: "/guide/wordpress"
 # Get Started - WordPress
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your WordPress application.
 
-> **Note:** [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> **Note:** <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
-You can access the WordPress LoginRadius CIAM Plugin [here](https://wordpress.org/plugins/loginradius-customer-identity-and-access-management/).
+You can access the WordPress LoginRadius CIAM Plugin <a href="https://wordpress.org/plugins/loginradius-customer-identity-and-access-management/" target="_blank">here</a>.
 
 Watch this video to get started, or refer to the section below for the text-based guide.
 
@@ -24,7 +24,7 @@ Watch this video to get started, or refer to the section below for the text-base
 
 Before using LoginRadius WordPress Plugin, you need to get your App Name, API Key, and API Secret.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -100,7 +100,7 @@ You can select shortcodes that can be used on the page or post to display the re
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
  
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
  
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

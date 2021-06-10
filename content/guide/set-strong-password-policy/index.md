@@ -11,7 +11,7 @@ The **Password Policy** feature allows you to enhance authentication security by
 
 ## Access Password Policy Section
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 2. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Password Policy** section.
 3. Click the down arrow, the **Password Policy** screen will appear:
 
@@ -50,11 +50,11 @@ Enter or select the following details:
 ![alt_text](/images/password-type.png "image_tooltip")
        
 
-2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of [common passwords](/concepts/common-passwords/) is maintained by LoginRadius and gets updated regularly.
+2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of <a href="/concepts/common-passwords/" target="_blank">common passwords</a> is maintained by LoginRadius and gets updated regularly.
 
 3.   **Profile Password Prevention**: Profile Password Prevention enables you to prevent your consumers from using the profile data for the account password. For example, the values of consumer profile fields like username, email id, first name, etc cannot be used as an account password.
 
-4.   **Dictionary Password Prevention**: Dictionary Password Prevention enables you to prevent your consumers from setting the dictionary passwords. LoginRadius uses this dynamic [Password Dictionary](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt) to avoid the use of dictionary passwords.
+4.   **Dictionary Password Prevention**: Dictionary Password Prevention enables you to prevent your consumers from setting the dictionary passwords. LoginRadius uses this dynamic <a href="https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt" target="_blank">Password Dictionary</a> to avoid the use of dictionary passwords.
 
 5.   **Password History**: You can configure the number of unique passwords a consumer must set before reusing an old password. This enables you to enhance security by ensuring that old passwords are not reused frequently.
 

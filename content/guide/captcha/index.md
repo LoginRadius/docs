@@ -26,7 +26,7 @@ The following explains the configuration and deployment of the above CAPTCHA fea
 
 This section covers the required configurations that you need to perform to implement the Google reCAPTCHA functionality.
 
-1. Log in to your Google account, navigate to https://www.google.com/recaptcha/intro/v3.html, and select **Admin console** on the top right, as highlighted in the following screen:
+1. Log in to your Google account, navigate to <a href="https://www.google.com/recaptcha/intro/v3.html" target="_blank">https://www.google.com/recaptcha/intro/v3.html</a>, and select **Admin console** on the top right, as highlighted in the following screen:
 
    ![alt_text](images/google-recaptcha.png "image_tooltip")
 
@@ -47,7 +47,7 @@ This section covers the required configurations that you need to perform to impl
 
 ## Step 2: CAPTCHA Deployment
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **CAPTCHA Setting** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **CAPTCHA Setting** section.
 
 2. Click the down arrow and the **CAPTCHA Setting** screen will appear:
 

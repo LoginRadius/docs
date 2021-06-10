@@ -8,9 +8,9 @@ path: "/references/sdk/ruby-sdk"
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document contains information and examples regarding the LoginRadius ruby-on-rails SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter.You can get the SDK from [here](https://github.com/LoginRadius/ruby-on-rails-sdk).
+This document contains information and examples regarding the LoginRadius ruby-on-rails SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter.You can get the SDK from <a href="https://github.com/LoginRadius/ruby-on-rails-sdk" target="_blank">here</a>.
 
-For a more hands-on tutorial on setting up the SDK and using it in a Ruby application to make LoginRadius API calls, check out our Ruby [tutorial](/tutorial/ror).
+For a more hands-on tutorial on setting up the SDK and using it in a Ruby application to make LoginRadius API calls, check out our Ruby <a href="/tutorial/ror" target="_blank">tutorial</a>.
 
 ## SDK Installation and Configuration
 
@@ -46,7 +46,7 @@ Before using any of the functions available in the library, its corresponding mo
   API_REQUEST_SIGNING: "false"
 ```
 
-> **Note:** You can get the API Key, API Secret and App/Site Name from the [Configuration > API Credentials](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+> **Note:** You can get the API Key, API Secret and App/Site Name from the <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> section of your LoginRadius Dashboard.
 
 After define the configuration key details, its corresponding module must first be instantiated:
 
@@ -602,7 +602,7 @@ List of APIs in this Section:
 
 #### Account Update (PUT)
 
-This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.   
+This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/' target="_blank">Here</a> for more capabilities.   
 
  
  

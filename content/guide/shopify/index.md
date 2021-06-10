@@ -29,7 +29,7 @@ This section covers the required configurations that you need to perform to enab
 
 ## LoginRadius Dashboard Configurations
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and navigate to [Integration](https://dashboard.loginradius.com/integration). The following screen will appear:
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>account, select your app and navigate to <a href="https://dashboard.loginradius.com/integration" target="_blank">Integration</a>. The following screen will appear:
 
    ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
@@ -83,7 +83,7 @@ Now, click the **Add** button to save your configurations.
 
 ## Upload Assets 
 
-This section covers the LoginRadius Shopify Plugin integration under the Shopify Admin Console. To integrate it, you need to extract the Shopify plugin zip file, which you can get from [LoginRadius Github](https://github.com/LoginRadius/shopify-identity-plugin).
+This section covers the LoginRadius Shopify Plugin integration under the Shopify Admin Console. To integrate it, you need to extract the Shopify plugin zip file, which you can get from <a href="https://github.com/LoginRadius/shopify-identity-plugin" target="_blank">LoginRadius Github</a>.
 
 1. After extracting the above file, upload the Javascript and CSS files into your theme, refer to the following JavaScript and CSS files. 
 
