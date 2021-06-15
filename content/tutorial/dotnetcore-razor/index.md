@@ -11,7 +11,7 @@ The purpose of this tutorial is to help you with implementing LoginRadius user r
 
 > You must have the &#46;NET 5.0 SDK installed or later.
 
-When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the <a href="/concepts/idx" target="_blank">Auth Page (IDX)</a>. When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your web application.
+When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>. When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your web application.
 
 > <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank" >Create an account</a> to get started if you don't have one yet!
 
@@ -224,21 +224,21 @@ To whitelist your domain, in your LoginRadius Dashboard navigate to **<a href="h
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Dotnet SDK Reference
 
-[Dotnet SDK](/references/sdk/dotnet-sdk)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/dotnet-SDK" target="_blank">Dotnet SDK</a>
 
 ## API Reference
 

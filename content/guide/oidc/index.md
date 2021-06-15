@@ -208,7 +208,7 @@ e.g.
 ```
 
 
-Once you have the code, you can request an access_token via the <a href="../../references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code API</a>.
+Once you have the code, you can request an access_token via the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code API</a>.
 
 ### Implicit Flow
 
@@ -270,15 +270,15 @@ Once you have obtained a code or access_token (depending on the workflow you've 
 
 If you've obtained an authorization code, you're able to exchange it for an access_token.
 
-Use the <a href="../../references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code</a> API to get the access_token, JWT Token, and the refresh_token.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code</a> API to get the access_token, JWT Token, and the refresh_token.
 
 ### Refresh Access Token
 
-You can use the <a href="../../references/api/oidc/#refresh-access-token" target="_blank">Refresh Access Token API Call</a>to expire a Refresh Token.
+You can use the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#refresh-access-token" target="_blank">Refresh Access Token API Call</a>to expire a Refresh Token.
 
 ### Get UserInfo
 
-The UserInfo of a logged in user can be retrieved with the <a href="../../references/api/oidc/#userinfo-by-access-token" target="_blank">UserInfo by Access Token API</a> call, which will return the UserInfo in a JWT Token.
+The UserInfo of a logged in user can be retrieved with the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#userinfo-by-access-token" target="_blank">UserInfo by Access Token API</a> call, which will return the UserInfo in a JWT Token.
 
 > **Note:** The RSA algorithm is currently the only supported encryption type for the JWT tokens.
 
@@ -288,11 +288,11 @@ Here are some other endpoints you will need in your OpenID workflow.
 
 ### Get JSON Web Key Set
 
-Our <a href="../../references/api/oidc/#json-web-key-set" target="_blank">JSON Web Key Set API Call</a> provides the JWKS that can be used to verify any JWT token with the returned JSON Web Key Set (JWKS).
+Our <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#json-web-key-set" target="_blank">JSON Web Key Set API Call</a> provides the JWKS that can be used to verify any JWT token with the returned JSON Web Key Set (JWKS).
 
 ### OIDC Discovery Endpoint
 
-The <a href="../../references/api/oidc/#oidc-discovery-endpoint" target="_blank">OIDC Discovery API Endpoint</a> provides a client with configuration details about the OpenID Connect metadata of the Loginradius App.
+The <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#oidc-discovery-endpoint" target="_blank">OIDC Discovery API Endpoint</a> provides a client with configuration details about the OpenID Connect metadata of the Loginradius App.
 
 
 URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-known/openid-configuration

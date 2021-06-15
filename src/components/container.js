@@ -605,37 +605,37 @@ const Middle = () => {
             <h3 className="title">SDKs</h3>
             <ul>
               <li>
-                <Link to="references/sdk/android-sdk">Android</Link>
+                <Link to="references/SDK/android-SDK">Android</Link>
               </li>
               <li>
-                <Link to="references/sdk/dotnet-sdk">ASP.NET</Link>
+                <Link to="references/SDK/dotnet-SDK">ASP.NET</Link>
               </li>
               <li>
-                <Link to="references/sdk/html5-sdk">HTML5</Link>
+                <Link to="references/SDK/html5-SDK">HTML5</Link>
               </li>
               <li>
-                <Link to="references/sdk/ios-sdk">iOS</Link>
+                <Link to="references/SDK/ios-SDK">iOS</Link>
               </li>
               <li>
-                <Link to="references/sdk/java">Java</Link>
+                <Link to="references/SDK/java-SDK">Java</Link>
               </li>
               <li>
-                <Link to="references/sdk/node-js">Node.js</Link>
+                <Link to="references/SDK/nodejs-SDK">Node.js</Link>
               </li>
               <li>
-                <Link to="references/sdk/php">PHP</Link>
+                <Link to="references/SDK/php-SDK">PHP</Link>
               </li>
               <li>
-                <Link to="references/sdk/python">Python</Link>
+                <Link to="references/SDK/python-SDK">Python</Link>
               </li>
               <li>
-                <Link to="references/sdk/ruby-sdk">Ruby</Link>
+                <Link to="references/SDK/ruby-SDK">Ruby</Link>
               </li>
               <li>
-                <Link to="references/sdk/react-native">React Native</Link>
+                <Link to="references/SDK/react-native-SDK">React Native</Link>
               </li>
               <li>
-                <Link to="references/sdk/golang">Golang</Link>
+                <Link to="references/SDK/golang-SDK">Golang</Link>
               </li>
             </ul>
           </div>

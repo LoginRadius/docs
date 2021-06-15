@@ -11,7 +11,7 @@ path: "/concepts/idx"
 
 There are a few predefined layouts that can be further customized via your LoginRadius Dashboard under <a href="https://dashboard.loginradius.com/auth-page" target="_blank">Auth Page Customization</a>.
 
-Go through the <a href="/guide/customize-auth-page" target="_blank">Auth Page (IDX) customization</a> for more details.
+Go through the <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">Auth Page (IDX) customization</a> for more details.
 
 
 ## Actions
@@ -75,7 +75,7 @@ https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return
 
 ## Customization
 
-Go through <a href="/guide/customize-auth-page" target="_blank">this document</a> for Auth Page (IDX) customization.
+Go through <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">this document</a> for Auth Page (IDX) customization.
 
 ## Key Benefits
 

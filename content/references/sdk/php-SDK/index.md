@@ -2,7 +2,7 @@
 title: "PHP SDK"
 tags: ["PHP", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a PHP application."
-path: "/references/sdk/php"
+path: "/references/SDK/php-SDK"
 ---
 
 # PHP SDK
@@ -11,7 +11,7 @@ path: "/references/sdk/php"
 
 This document contains information and examples regarding the LoginRadius PHP SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter. You can get the SDK from <a href="https://github.com/LoginRadius/php-sdk" target="_blank">here</a>
 
-For a more hands-on tutorial on setting up the SDK and using it in a PHP application to make LoginRadius API calls, check out our <a href="/tutorial/php" target="_blank">PHP Tutorial.</a>
+For a more hands-on tutorial on setting up the SDK and using it in a PHP application to make LoginRadius API calls, check out our <a href="https://www.loginradius.com/docs/developer/tutorial/php" target="_blank">PHP Tutorial.</a>
 
 ## SDK Installation
 

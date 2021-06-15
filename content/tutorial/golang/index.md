@@ -13,7 +13,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Golang? Check out <a href="https://golang.org/doc/" target="_blank">this reference</a>.
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="/concepts/idx" target="_blank">Auth Page (IDX)</a>.
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
 Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your Golang application.
 
@@ -192,27 +192,27 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="
 
 ## Explore Golang Demo
 
-* **<a href="/download/golang-sdk-tutorial.zip" target="_blank">Download Demo</a>** of the above-explained tutorial to support your implementation.
+* **<a href="https://www.loginradius.com/docs/developer/download/golang-sdk-tutorial.zip" target="_blank">Download Demo</a>** of the above-explained tutorial to support your implementation.
 
 * **<a href="https://github.com/LoginRadius/login-page-demos/tree/master/go-idx-demo" target="_blank">Refer to GitHub Demo</a>**  to know how to implement various LoginRadius features using SDK Functions.
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Golang SDK Reference
 
-[Golang SDK](/references/sdk/golang)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/golang-SDK" target="_blank">Golang SDK</a>
 
 ## API Reference
 

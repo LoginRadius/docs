@@ -2,7 +2,7 @@
 title: "Python SDK Library"
 tags: ["Python", "SDK"]
 description: "This is a document detailing the LoginRadius Python SDK Library."
-path: "/references/sdk/python"
+path: "/references/SDK/python-SDK"
 ---
 
 # Python SDK
@@ -13,7 +13,7 @@ This document describes how to start using the LoginRadius Python SDK and its va
 
 > You must have Python 2.7 or later installed.
 
-For a more hands-on tutorial on setting up the SDK and using it in a Python application to make LoginRadius API calls, check out our <a href="/tutorial/python" target="_blank">Python</a> tutorial.
+For a more hands-on tutorial on setting up the SDK and using it in a Python application to make LoginRadius API calls, check out our <a href="https://www.loginradius.com/docs/developer/tutorial/python" target="_blank">Python</a> tutorial.
 
 ## SDK Installation and Configuration
 

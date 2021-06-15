@@ -353,21 +353,21 @@ Check out our Android demo to know how you can implement various LoginRadius fea
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## HTML SDK Reference
 
-[HTML SDK](/references/sdk/android-sdk)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/android-SDK" target="_blank">HTML SDK</a>
 
 ## API Reference
 

@@ -9,7 +9,7 @@ path: "/guide/drupal"
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Drupal application.
 
-> **Note:** <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register">Create an account</a> to get started if you don't have one yet!
+> **Note:** <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
 ## Get Credentials
 
@@ -56,7 +56,7 @@ You can install LoginRadius  Drupal Plugin [manually](#install-manually) or via 
 
 7. Enable the Customer Identity Modules and click the **Save Configuration**.
 
-> **Note:** Make sure you should clear the website's cache. For more information on clearing the cache, <a href="https://www.drupal.org/node/326504">click here<a>.
+> **Note:** Make sure you should clear the website's cache. For more information on clearing the cache, <a href="https://www.drupal.org/node/326504" target="_blank">click here<a>.
 For more details related to installation instructions, <a href="https://www.drupal.org/docs/extending-drupal/installing-modules" target="_blank">click here</a>.
 
 ## Install LoginRadius PHP SDK

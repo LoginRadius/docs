@@ -7,6 +7,7 @@ path: "/guide/set-strong-password-policy"
 
 
 # Set Strong Password Policy
+<span class="developer plan-tag">Developer</span>
 The **Password Policy** feature allows you to enhance authentication security by defining the password rules. This guide will help you in setting a Password Policy using various password scales.
 
 ## Access Password Policy Section
@@ -50,7 +51,7 @@ Enter or select the following details:
 ![alt_text](/images/password-type.png "image_tooltip")
        
 
-2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of <a href="/concepts/common-passwords/" target="_blank">common passwords</a> is maintained by LoginRadius and gets updated regularly.
+2.  **Common Password Protection**: Common Password Protection enables you to prevent consumers from using common passwords. The list of <a href="https://www.loginradius.com/docs/developer/concepts/common-passwords/" target="_blank">common passwords</a> is maintained by LoginRadius and gets updated regularly.
 
 3.   **Profile Password Prevention**: Profile Password Prevention enables you to prevent your consumers from using the profile data for the account password. For example, the values of consumer profile fields like username, email id, first name, etc cannot be used as an account password.
 

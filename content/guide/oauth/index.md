@@ -53,7 +53,7 @@ The access token request will contain the following parameters. Here is an expla
 
 **Step 2: Exchange Code for Access Token**
 
-The authorization code is an intermediate credential, which encodes the authorization obtained at Step 1. To retrieve the access token, the client must submit the code to the authorization server, use the <a href="../../references/api/oauth/#access-token-by-oauth-2-token" target="_blank">Access token by OAuth 2 token API</a> to obtain an access_token.
+The authorization code is an intermediate credential, which encodes the authorization obtained at Step 1. To retrieve the access token, the client must submit the code to the authorization server, use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#access-token-by-oauth-2-token" target="_blank">Access token by OAuth 2 token API</a> to obtain an access_token.
 
 ```
 https://cloud-api.loginradius.com/sso/oauth/access_token
@@ -138,7 +138,7 @@ The Resource Owner Password Credentials Grant flow allows you to obtain an acces
 
 **Step 1: Obtain Access Token** 
 
-Use the <a href="../../references/api/oauth/#access-token-by-account-password" target="_blank">Access Token by Account Password</a> to obtain an access_token.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#access-token-by-account-password" target="_blank">Access Token by Account Password</a> to obtain an access_token.
 
 **POST**
 
@@ -181,7 +181,7 @@ Here is an explanation of the Request Body Parameters:
 
 **Step 2: Use Obtained LoginRadius Access Token** 
 
-You can use the obtained access_token with <a href="../../references/api/oauth/#user-registration-overview" target="_blank">LoginRadius APIs</a> supporting the access_token until the token expires or revokes.
+You can use the obtained access_token with <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#user-registration-overview" target="_blank">LoginRadius APIs</a> supporting the access_token until the token expires or revokes.
 
 ### Device Code Flow
 
@@ -199,7 +199,7 @@ First, you need to enable the device code flow feature by raising a support tick
 ```
 **Step 1: Obtained Device Code** 
 
-Use the <a href="../../references/api/oauth/#request-device-code" target="_blank">Request Device Code</a> API to request a new device code, user code from the Device Code Endpoint.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#request-device-code" target="_blank">Request Device Code</a> API to request a new device code, user code from the Device Code Endpoint.
 
 ```
 Post: https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device
@@ -251,7 +251,7 @@ return_url=URLENCODE(https://cloud-api.lrinternal.com/sso/oauth/device/callback?
 ```
 **Step 3: Accept Authorization Request** 
 
-Use the <a href="../../references/api/oauth/#request-tokens" target="_blank">Request Token API</a> to accept the authorization request.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#request-tokens" target="_blank">Request Token API</a> to accept the authorization request.
 
 ```
  https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token
@@ -580,7 +580,7 @@ In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginrad
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration">Configuration > Whitelist Your Domain</a>** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

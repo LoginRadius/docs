@@ -5,7 +5,7 @@ description: "This is a tutorial for bruteforce lockout."
 path: "/guide/bruteforce"
 ---
 # Bruteforce Lockout
-
+<span class="developer plan-tag">Developer</span>
 The Brute Force Lockout feature allows you to restrict account access based on failed login attempts. Once the limit of failed login attempts is reached, the customer will either get suspended for the configured period or prompted to complete an additional security step to log in.
 
 
@@ -32,7 +32,7 @@ The Brute Force Lockout feature allows you to restrict account access based on f
 
      * **Captcha:** Select this option to prompt the customer to complete a CAPTCHA to log in when the maximum failed login attempt is reached.
 
-       > Pre-requisites: You must have <a href="/guide/captcha/" target="_blank">Google reCAPTCHA V2</a> configured in your LoginRadius Identity Platform to display captcha on lockout. 
+       > Pre-requisites: You must have <a href="https://www.loginradius.com/docs/developer/guide/captcha/" target="_blank">Google reCAPTCHA V2</a> configured in your LoginRadius Identity Platform to display captcha on lockout. 
 
 
 [Go Back to Home Page](/)

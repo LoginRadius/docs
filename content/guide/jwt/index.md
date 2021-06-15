@@ -160,10 +160,10 @@ This section covers the required configurations that you need to perform in the 
 
 If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
-* <a href="../../references/api/jwt/#jwt-token" target="_blank">JWT Token</a>: This GET API is used to exchange access token with your JWT.
-* <a href="../../references/api/jwt/#jwt-token-by-email" target="_blank">JWT Token by Email</a>: This API is used to get a JWT by Email and Password.
-* <a href="../../references/api/jwt/#jwt-token-by-username" target="_blank">JWT Token by Username</a>: This API is used to get JWT by Username and password.
-* <a href="../../references/api/jwt/#jwt-token-by-phone" target="_blank">JWT Token by Phone</a>: This API is used to get JWT by Phone and password.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token" target="_blank">JWT Token</a>: This GET API is used to exchange access token with your JWT.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token-by-email" target="_blank">JWT Token by Email</a>: This API is used to get a JWT by Email and Password.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token-by-username" target="_blank">JWT Token by Username</a>: This API is used to get JWT by Username and password.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token-by-phone" target="_blank">JWT Token by Phone</a>: This API is used to get JWT by Phone and password.
 
 The response from the above APIs will look like this:
 

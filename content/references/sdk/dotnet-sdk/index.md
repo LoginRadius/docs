@@ -2,7 +2,7 @@
 title: "ASP.NET SDK Library"
 tags: ["ASP.NET", "SDK"]
 description: "This is a document detailing the LoginRadius ASP.NET SDK Library."
-path: "/references/sdk/dotnet-sdk"
+path: "/references/SDK/dotnet-SDK"
 ---
 
 # ASP&#46;NET SDK
@@ -14,7 +14,7 @@ This document describes how to start using the LoginRadius ASP&#46;NET SDK and i
 
 > You must have &#46;NET 4.0 / &#46;NetStandard 1.3 or later installed.
 
-For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core <a href="/tutorial/dotnetcore-mvc" target="_blank">MVC</a> or <a href="/tutorial/dotnetcore-razor" target="_blank">Razor</a> tutorial.
+For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-mvc" target="_blank">MVC</a> or <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor" target="_blank">Razor</a> tutorial.
 
 ## SDK Installation and Configuration
 

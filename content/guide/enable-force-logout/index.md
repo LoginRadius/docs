@@ -5,7 +5,7 @@ description: "This is a guide for Enabling Force Logout."
 path: "/guide/enable-force-logout"
 ---
 #Enable Force Logout
- 
+<span class="developer plan-tag">Premium</span>
 Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed. This guide explains how to enable force logout for your consumers.
 
 ## Step 1: Access Force Logout Section

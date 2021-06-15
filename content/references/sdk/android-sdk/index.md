@@ -2,7 +2,7 @@
 title: Android Library
 description: "A guide to implement LoginRadius SDK in a Android application."
 summary: "A guide to implement LoginRadius SDK in a Android application"
-path: "/references/sdk/android-sdk"
+path: "/references/SDK/android-SDK"
 ---
 
 # Android SDK 
@@ -11,7 +11,7 @@ path: "/references/sdk/android-sdk"
 
 This document describes how to start using the LoginRadius Android  SDK for the various authentication types and features supported by the LoginRadius Identity Platform’s. You can get the SDK from <a href="https://github.com/LoginRadius/android-sdk" target="_blank">here</a>.
 
-For a more hands-on tutorial on setting up the SDK and using it in an Android application to make LoginRadius API calls, check out our <a href="/tutorial/android" target="_blank">Android Tutorial</a>.
+For a more hands-on tutorial on setting up the SDK and using it in an Android application to make LoginRadius API calls, check out our <a href="https://www.loginradius.com/docs/developer/tutorial/android" target="_blank">Android Tutorial</a>.
 
 ## SDK Installation
 
@@ -48,7 +48,7 @@ init.setSiteName("<your-site-name>");
 
 ```
 
-Refer <a href="/tutorial/android/#get-credentials" target="_blank">this document</a> for getting API Key and Site/ App Name.
+Refer <a href="https://www.loginradius.com/docs/developer/tutorial/android/#get-credentials" target="_blank">this document</a> for getting API Key and Site/ App Name.
 
 ### Manifest Settings
 
