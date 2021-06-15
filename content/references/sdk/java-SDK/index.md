@@ -2,7 +2,7 @@
 title: "JAVA SDK"
 tags: ["JAVA", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a JAVA application."
-path: "/references/sdk/java"
+path: "/references/SDK/java-SDK"
 ---
 
 # JAVA SDK
@@ -47,7 +47,7 @@ Add this snippet in pom.xml
 
 > LoginRadius is now using Maven. The jars are also available <a href="https://search.maven.org/search?q=loginradius" target="_blank">here</a> on the Maven repository. Select the directory for the latest version and download the jar files.
 
-> For more information on SDK configuration and obtaining API credentials, refer to this <a href="/tutorial/java/" target="_blank">tutorial</a>.
+> For more information on SDK configuration and obtaining API credentials, refer to this <a href="https://www.loginradius.com/docs/developer/tutorial/java/" target="_blank">tutorial</a>.
 
 
 ## API Methods

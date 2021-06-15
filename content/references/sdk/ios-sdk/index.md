@@ -2,7 +2,7 @@
 title: iOS Library
 description: "A guide to implement LoginRadius SDK in iOS application."
 summary: "A guide to implement LoginRadius SDK in iOS application"
-path: "/references/sdk/ios-sdk"
+path: "/references/SDK/ios-SDK"
 ---
 
 # iOS SDK
@@ -137,13 +137,13 @@ Registration service supports email/password (traditional) registration and logi
 
 Registration Service is done through the Authentication API.
 
-Registration requires a parameter called SOTT. For more information regarding generating a SOTT, refer to this <a href="/concepts/sott" target="_blank">document</a>.
+Registration requires a parameter called SOTT. For more information regarding generating a SOTT, refer to this <a href="https://www.loginradius.com/docs/developer/concepts/sott" target="_blank">document</a>.
 
 **Parameters and their Description:**
 
 |Name|Description|Required|
 |---|----|----|
-|SOTT|Secure One-time Token which you can check information about SOTT <a href="/concepts/sott" target="_blank" >here</a>|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
+|SOTT|Secure One-time Token which you can check information about SOTT <a href="https://www.loginradius.com/docs/developer/concepts/sott" target="_blank" >here</a>|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
 |smstemplate|SMS template allows you to customize the formatting and text of SMS sent by users who share your content.|NO|
 |emailTemplate|Email templates allow you to customize the formatting and text of emails sent by users who share your content. Templates can be text-only, or HTML and text, in which case the user's email client will determine which is displayed. |NO  Go To API Configuration -> Email Workflow to get the template names|
 

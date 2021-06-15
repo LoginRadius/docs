@@ -19,13 +19,13 @@ You can implement the Passwordless Login method in two following ways:
 
 * **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
 
-> Note: If both Passwordless Login and <a href="/guide/mfa" target="_blank">Two Factor Authentication (2FA)</a> are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
+> Note: If both Passwordless Login and <a href="https://www.loginradius.com/docs/developer/guide/mfa" target="_blank">Two Factor Authentication (2FA)</a> are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
 
 ## Configuration
 
 ### Step 1: Choose Login Method
 
-1. Log in to your <a href="https://dashboard.loginradius.com/dashboard">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
@@ -39,7 +39,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 2: Configure Passwordless Login Templates
 
-1. Similar to the <a href="/guide/emailpassword-login/" target="_blank">Email/Password Login</a> and <a href="/guide/phone-login" target="_blank">Phone Login</a> methods, you can perform the following actions:
+1. Similar to the <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login/" target="_blank">Email/Password Login</a> and <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> methods, you can perform the following actions:
 
    * Edit templates associated with this login method.
    * Delete the login method from your application.

@@ -48,7 +48,7 @@ In the above screen, you will see that the Email/Password method is enabled by d
 
 * Edit template content.
 * Reset the template to its default content.
-* Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in <a href="/guide/setup-your-smtp-provider" target="_blank">SMTP Configuration</a>.
+* Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">SMTP Configuration</a>.
 
 These actions are available in the action bar highlighted in the image below:
 

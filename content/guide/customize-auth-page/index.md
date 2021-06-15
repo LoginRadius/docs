@@ -113,7 +113,7 @@ Each content field and its corresponding text on your Auth Page (IDX) is illustr
 
 ## Further Customization
 
-You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the <a href="/guide/auth-page-advanced-editor" target="_blank" >Advanced Editor</a> document for more information.
+You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the <a href="https://www.loginradius.com/docs/developer/guide/auth-page-advanced-editor" target="_blank" >Advanced Editor</a> document for more information.
 
 
 [Go Back to Home Page](/)

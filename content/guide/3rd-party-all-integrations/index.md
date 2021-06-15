@@ -7,7 +7,7 @@ path: "/guide/3rd-party-all-integrations"
 
 # Available 3rd party integrations
 
-See below for a comprehensive list of integrations that are available within LoginRadius, if you have questions in regards to enabling certain integrations please contact [LoginRadius Support Team](https://loginradiusassist.freshdesk.com/support/home).
+See below for a comprehensive list of integrations that are available within LoginRadius, if you have questions in regards to enabling certain integrations please contact <a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">LoginRadius Support Team</a>.
 
 ## Advertising
 

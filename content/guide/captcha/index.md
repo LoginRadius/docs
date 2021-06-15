@@ -5,7 +5,7 @@ description: "This is a guide for implementing Captcha in the LoginRadius Identi
 path: "/guide/captcha"
 ---
 # Implement Captcha 
-
+<span class="developer plan-tag">Developer</span>
 LoginRadius Identity Platform provides you the feature to add another layer of security to your registration form by configuring CAPTCHA, which ensures that the person registering is not a bot.
 
 > Note: CAPTCHA is mainly used as a security check to ensure only humans can pass through. Generally, bots are not capable of solving a captcha.

@@ -6,12 +6,13 @@ path: "/guide/mfa"
 ---
 
 # Implement Two-Factor Authentication (2FA)
+<span class="devloper-premium plan-tag">Premium</span>
 The LoginRadius Identity Platform provides Two-Factor Authentication to add an extra layer of security for the consumers' accounts. With this feature enabled, once the consumer enters their login credentials, they are sent an authentication code to complete the login. This feature is available on an add-on basis for your LoginRadius account.
 
 You can keep 2FA optional or required for the users as per your business requirement. This guide explains how to configure the Two-Factor Authentication for your consumers. 
 
 
-> Note: When both <a href="/guide/passwordless-login/" target="_blank">Passwordless Login</a> and Two Factor Authentication (2FA) are implemented for your application, the consumer will not be prompted for 2FA, if they choose to authenticate with the Passwordless Login method.
+> Note: When both <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login/" target="_blank">Passwordless Login</a> and Two Factor Authentication (2FA) are implemented for your application, the consumer will not be prompted for 2FA, if they choose to authenticate with the Passwordless Login method.
 
 You can implement the 2FA in two following ways:
 
@@ -54,7 +55,7 @@ Two-Factor Authentication with SMS Passcode will be the default option for the c
 
 2. To edit the template used for the SMS Passcode method, click the Edit icon given in the action bar highlighted in the previous step.
 
-   >  Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
+   >  Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
 
 ### Google Authenticator
 

@@ -2,7 +2,7 @@
 title: "React Native SDK Library"
 tags: ["React", "Native","SDK"]
 description: "This is a document detailing the LoginRadius React Native SDK Library."
-path: "/references/sdk/react-native"
+path: "/references/SDK/react-native-SDK"
 ---
 
 # React-Native SDK Library
@@ -31,7 +31,7 @@ You need to configure your LoginRadius user account with the following changes.
 
   ![alt_text](../../../assets/blog-common/sott.png "image_tooltip")
 
-3. Get your <a href="https://dashboard.loginradius.com/configuration" target="_blank">API credentials</a> to initialize SDK and whitelist your application domain as explained <a href="/tutorial/react/#whitelist-your-domain" target="_blank">here</a>.
+3. Get your <a href="https://dashboard.loginradius.com/configuration" target="_blank">API credentials</a> to initialize SDK and whitelist your application domain as explained <a href="https://www.loginradius.com/docs/developer/tutorial/react/#whitelist-your-domain" target="_blank">here</a>.
 
 
 Get a copy of the React Native SDK and demo projects from <a href="https://github.com/LoginRadius/react-native-sdk" target="_blank">here</a> and include in your project.

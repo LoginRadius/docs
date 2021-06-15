@@ -14,7 +14,7 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 > New to Python? Check out <a href="https://www.python.org/about/" target="_blank">this reference</a>.
 
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="/concepts/idx" target="_blank">Auth Page (IDX)</a>.
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
 Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your python application.
 
@@ -169,7 +169,7 @@ def get_user():
 
 Similarly, you can implement more features using Python SDK.
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx-overview/" target="_blank">this document</a> for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
 ## Whitelist Domain
 
@@ -185,21 +185,21 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Python SDK Reference
 
-[Python SDK](/references/sdk/python)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/python-SDK" target="_blank">Python SDK</a>
 
 ## API Reference
 

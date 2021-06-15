@@ -2,7 +2,7 @@
 title: "Golang SDK Library"
 tags: ["Golang", "SDK"]
 description: "This is a document detailing the LoginRadius Golang SDK Library."
-path: "/references/sdk/golang"
+path: "/references/SDK/golang-SDK"
 ---
 
 # Golang SDK
@@ -40,7 +40,7 @@ Import the Golang sdk package on the top of the code that calls the SDK.
 ```
 
 
-Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from <a href="https://dashboard.loginradius.com/dashboard" target="_blank">here</a>. Also, whitelist your application domain as explained in <a href="/tutorial/golang/#whitelist-domain" target="_blank">this document</a>.
+Replace the placeholders in the config object with your LoginRadius credentials apikey, apisecret, sitename. These can be obtained from <a href="https://dashboard.loginradius.com/dashboard" target="_blank">here</a>. Also, whitelist your application domain as explained in <a href="https://www.loginradius.com/docs/developer/tutorial/golang/#whitelist-domain" target="_blank">this document</a>.
 
 Many API calls included in this SDK must be completed with an access token, which can be obtained after calling the Authentication Login API and reading the token from the response or from generating an access token through the UID in the Accounts API.
 

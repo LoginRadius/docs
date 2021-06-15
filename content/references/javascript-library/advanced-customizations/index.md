@@ -9,7 +9,7 @@ path: "/references/javascript-library/advanced-customizations"
 
 This document covers the Advanced Customizations available in LoginRadius JavaScript library and how to use them. Here we will see how to customize JavaScript to add functionality for a specific LoginRadius function. 
 
-> Note: All of the advanced customizations explained here require that the LoginRadius User Registration Interface is already configured on your site. Refer back to the <a href="/references/javascript-library/getting-started" target="_blank">Getting Started</a> section for more details.
+> Note: All of the advanced customizations explained here require that the LoginRadius User Registration Interface is already configured on your site. Refer back to the <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">Getting Started</a> section for more details.
 
 ## JS Version
 
@@ -774,11 +774,11 @@ Using our JavaScript interfaces you're able to limit which primary/root fields y
 
 The structure is as follows:
 
-**Action Name**: This is the name of the JavaScript interface action that is called in your init method that you will be expecting a response from. For example: "login, registration". You can find a list of all possible actions in the actions table of our <a href="/references/javascript-library/getting-started#initialize-actions" target="_blank">Getting Started</a> guide.
+**Action Name**: This is the name of the JavaScript interface action that is called in your init method that you will be expecting a response from. For example: "login, registration". You can find a list of all possible actions in the actions table of our <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started#initialize-actions" target="_blank">Getting Started</a> guide.
 
 **Field Name**: The names of the primary / root fields you would like to be returned in your API response. These fields vary depending on the JavaScript Interface you're targeting. The fields that are not included here will be left out from the API response.
 
-To apply this selection, you need to add the projectionFields parameter as part of your options during instantiation of your <a href="/references/javascript-library/getting-started#instantiating-the-loginradius-object" target="_blank">LRObject</a>.
+To apply this selection, you need to add the projectionFields parameter as part of your options during instantiation of your <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started#instantiating-the-loginradius-object" target="_blank">LRObject</a>.
 
 The projectionFields parameter takes an object with the action names as the key and the field names as values inside an array:
 
@@ -817,14 +817,14 @@ To retrieve a JWT using an access token:
 
   1. Configure the JWT token configuration in your LoginRadius Dashboard.
 
-  2. Include the following client-side options when instantiating your <a href="/references/javascript-library/getting-started#instantiating-the-loginradius-object" target="_blank">LRObject</a>.
+  2. Include the following client-side options when instantiating your <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started#instantiating-the-loginradius-object" target="_blank">LRObject</a>.
 
   ```javascript
   commonOptions.tokenType = "jwt";
   commonOptions.integrationName = "<your jwt configuration integration app name>";
   ```
 
-> Note: For additional information regarding configuring, generating, and consuming a JWT, refer to our JWT document <a href="/guide/jwt" target="_blank">here</a>.
+> Note: For additional information regarding configuring, generating, and consuming a JWT, refer to our JWT document <a href="https://www.loginradius.com/docs/developer/guide/jwt" target="_blank">here</a>.
 
 ## Idempotent Requests
 
@@ -832,7 +832,7 @@ Idempotent requests are requests which are generated with the same set of inputs
 
 LoginRadius prevents such requests from being accidentally executed twice or thrice upon the submit operation of a form (like Registration, Login, Forgot Password, etc). Once a submit operation is performed, it will disable the **Submit** button until the response (success/error) is not received from the server. Once the response is received from the server, it can be set enabled back.
 
-Following options can be used with **commonOptions** during instantiation of your <a href="/references/javascript-library/getting-started#instantiating-the-loginradius-object" target="_blank">LRObject</a> to enable/disable the Submit Button:
+Following options can be used with **commonOptions** during instantiation of your <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started#instantiating-the-loginradius-object" target="_blank">LRObject</a> to enable/disable the Submit Button:
 
 | Name | Type | Description |
 | :-- | :--: | --:|

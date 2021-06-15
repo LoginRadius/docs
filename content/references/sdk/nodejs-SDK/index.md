@@ -2,7 +2,7 @@
 title: "Node.js SDK"
 tags: ["Node.js", "Node", "JavaScript", "JS", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a Node.js application."
-path: "/references/sdk/node-js"
+path: "/references/SDK/nodejs-SDK"
 ---
 
 # Node.js SDK
@@ -14,7 +14,7 @@ This document describes how to start using the LoginRadius Node.js SDK and its v
 
 > Note: The latest version(10.0.0) of Node js SDK works with LoginRadius V2 APIs.
 
-For a more hands-on tutorial on setting up the SDK and using it in a Node.js application to make LoginRadius API calls, check out our<a href="/tutorial/node-js" target="_blank">Node.js Tutorial.</a>
+For a more hands-on tutorial on setting up the SDK and using it in a Node.js application to make LoginRadius API calls, check out our<a href="https://www.loginradius.com/docs/developer/tutorial/node-js" target="_blank">Node.js Tutorial.</a>
 
 ## SDK Installation and Configuration <br/>
 

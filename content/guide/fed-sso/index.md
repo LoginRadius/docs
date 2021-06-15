@@ -38,7 +38,7 @@ The LoginRadius Dashboard allows you to configure the SAML app by customizing th
 
 For more information, refer to the following documents:
 
-* <a href="../../guide/saml" target="_blank">LoginRadius SAML Document</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/saml" target="_blank">LoginRadius SAML Document</a>
 
 * <a href="http://saml.xml.org/saml-specifications" target="_blank>SAML Specs Document</a>
 
@@ -48,7 +48,7 @@ This protocol allows you to generate a JSON format encrypted token. LoginRadius 
 
 For more information, refer to the following documents:
 
-* <a href="../../guide/jwt" target="_blank">LoginRadius JWT Document</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/jwt" target="_blank">LoginRadius JWT Document</a>
 
 * <a href="https://tools.ietf.org/html/rfc7519" target="_blank">JWT RFC 7519</a>
 
@@ -58,7 +58,7 @@ LoginRadius Identity Platform can function as either an OAuth 2 Identity Provide
 
 LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
-* <a href="../../guide/oauth" target="_blank">LoginRadius OAuth Document</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/oauth" target="_blank">LoginRadius OAuth Document</a>
 
 * <a href="https://tools.ietf.org/html/rfc6749" target="_blank">OAuth 2 RFC 6749</a>
 
@@ -66,7 +66,7 @@ LoginRadius Dashboard allows you to configure the OAuth App. For more informatio
 
 LoginRadius Identity Platform provides a way to integrate your OpenID client with our APIs by following the standards. LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
-* <a href="../../guide/oidc" target="_blank">LoginRadius OpenID Connect Document</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/oidc" target="_blank">LoginRadius OpenID Connect Document</a>
 
 * <a href="https://openid.net/specs/openid-authentication-2_0.html" target="_blank">OpenID Connect Specs</a>
 

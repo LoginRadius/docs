@@ -2,7 +2,7 @@
 title: "HTML5 SDK"
 tags: ["HTML5", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a HTML5 application."
-path: "/references/sdk/html5"
+path: "/references/SDK/html5-SDK"
 ---
 
 
@@ -16,9 +16,9 @@ You can get the SDK from <a href="https://github.com/LoginRadius/html5-sdk" targ
 
 To communicate with LoginRadius you will need some details about the application. These details are required for setup and initiate the implementation of LoginRadius.
 
-* **API Credentials**: Refer to <a href="/tutorial/html-and-js-tutorial/#get-credentals" target="_blank">this document</a> for getting API Key and Secrect
-* **Mobile SOTT**: Refer to <a href="/tutorial/html-and-js-tutorial/#get-credentals" target="_blank">this document</a> for getting Mobile SOTT.
-* **Whitelist Domain**: Refer to <a href="/tutorial/html-and-js-tutorial/#whitelist-domain" target="_blank">this document</a> to whitelist your domain. 
+* **API Credentials**: Refer to <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/#get-credentals" target="_blank">this document</a> for getting API Key and Secrect
+* **Mobile SOTT**: Refer to <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/#get-credentals" target="_blank">this document</a> for getting Mobile SOTT.
+* **Whitelist Domain**: Refer to <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/#whitelist-domain" target="_blank">this document</a> to whitelist your domain. 
 
 
 ## SDK Installation and Configuration

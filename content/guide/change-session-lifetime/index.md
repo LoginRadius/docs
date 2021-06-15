@@ -6,7 +6,7 @@ path: "/guide/change-session-lifetime"
 ---
 
 # Change Session Lifetime
-
+<span class="devloper plan-tag">Premium</span>
 Session Management allows you to control and manage your consumer’s login session. This feature is available through the **Token Lifetime** option inside the Session Management section. **Token lifetime** is the amount of time a consumer is logged in to your application until it expires and prompts the consumer to log back in. 
 
 This time can be managed by the following steps:

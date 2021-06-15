@@ -11,7 +11,7 @@ In computer language, the term hooking refers to a range of techniques that are 
 
 Here we will see how hooks can be implemented in JavaScript to change/alter the functionality of a specific LoginRadius function. The hooks that we can build in JavaScript are achieved with events and/or callbacks.
 
-> Note: All of the advanced customizations explained here require that the LoginRadius User Registration Interface is already configured on your site. Refer back to the <a href="/references/javascript-library/getting-started">Getting Started</a> section for more details.
+> Note: All of the advanced customizations explained here require that the LoginRadius User Registration Interface is already configured on your site. Refer back to the <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">Getting Started</a> section for more details.
 
 ## JavaScript Hooks Customization Guide
 
