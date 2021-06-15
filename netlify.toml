@@ -120,7 +120,7 @@ to = "/docs/developer/guide/emailpassword-login"
 
 [[redirects]]
 from = "/docs/developer/sdk-libraries/overview/"
-to = "/docs/developer/#SDK"
+to = "/docs/developer/#sdk"
 
 [[redirects]]
 from = "/docs/developer/howto/social-login/"

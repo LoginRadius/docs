@@ -13,7 +13,7 @@ The tutorial lets you implement LoginRadius user registration, login, and view p
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
-Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank"> LoginRadius Dashboard></a>. You can utilize this webpage for authentication requirements on your React.js application.
+Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank"> LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your React.js application.
 
 ## Choose Theme
 
@@ -207,7 +207,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx-overview/" target="_blank">this document</a> for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
 ## Whitelist Your Domain
 

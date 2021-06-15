@@ -176,7 +176,7 @@ app.get('/', function(req, res) {
 
 Similarly, you can implement more features using Node.js SDK.
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx-overview/" target="_blank">this document</a> for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
 ## Whitelist Domain
 
