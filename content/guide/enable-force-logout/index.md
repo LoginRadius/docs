@@ -1,16 +1,19 @@
 ---
 title: "Enable Force Logout"
-tags: ["Enable", "Force","Logout","Remember"]
+tags: ["Enable", "Force", "Logout", "Remember"]
 description: "This is a guide for Enabling Force Logout."
 path: "/guide/enable-force-logout"
 ---
-#Enable Force Logout
+
 <span class="developer plan-tag">Premium</span>
+
+# Enable Force Logout
+
 Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed. This guide explains how to enable force logout for your consumers.
 
 ## Step 1: Access Force Logout Section
 
-1. Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
+1. Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Session Management** section.
 
 2. Click the down arrow, and the **Session Management** screen will appear.
 
@@ -18,12 +21,11 @@ Force Logout enables you to expire all active sessions of the consumer account o
 
 ## Step 2: Configure Force Logout
 
-Enable the **Force Logout** option. 
+Enable the **Force Logout** option.
 
 The Force Logout feature is now enabled, and upon resetting the password, the consumer will be logged out from other active login sessions.
 
-
-## Remember Me (Additional) 
+## Remember Me (Additional)
 
 You can enable the **Remember Me** option to keep your consumers logged in until the access token expires, even after the browser is closed.
 
@@ -33,6 +35,4 @@ By enabling this option, a **Remember Me** checkbox will show up on your Auth Pa
 
 > Note: Remember me token expiry duration will be the same as token lifetime.
 
-
 [Go Back to Home Page](/)
-
