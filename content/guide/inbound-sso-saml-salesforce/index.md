@@ -11,7 +11,7 @@ This document provides instructions to add a custom Identity provider using SAML
 
 ## Salesforce Configuration
 
-1.  Log into Salesforce with your developer account.
+1.  Log into <a href="https://login.salesforce.com/" target="_blank">Salesforce</a> with your developer account.
 
 2.  In the left navigation pane, search `Identity provider` and enable Identity provider setup.
 
@@ -79,7 +79,7 @@ The following screen will appear:
 * Enter the Display Provider Name.
 Select IDP Binding : `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 
-* Enter the IDP Location: https://<account>.salesforce.com/idp/endpoint/HttpPost
+* Enter the IDP Location: `https://<account>.salesforce.com/idp/endpoint/HttpPost`
 
 * Enter the IDP Logout URL: `https://<account>.salesforce.com/services/auth/idp/saml2/logout`
 
