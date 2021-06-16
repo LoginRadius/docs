@@ -11,7 +11,7 @@ This document provides instructions to add a custom Identity provider using SAML
 
 ## Azure AD Configuration
 
-1. Log into the <a href="http://portal.azure.com/" target="_blank">Azure portal</a>with your developer account.
+1. Log into the <a href="http://portal.azure.com/" target="_blank">Azure portal</a> with your developer account.
 
 2. Click the **View** button from the **Manage Azure Active Directory** card.
 
