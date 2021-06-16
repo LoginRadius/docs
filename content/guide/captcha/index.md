@@ -11,19 +11,13 @@ path: "/guide/captcha"
 
 LoginRadius Identity Platform provides you the feature to add another layer of security to your registration form by configuring CAPTCHA, which ensures that the person registering is not a bot.
 
-> Note: CAPTCHA is mainly used as a security check to ensure only humans can pass through. Generally, bots are not capable of solving a captcha.
+> Note: CAPTCHA is mainly used as a security check to ensure only humans can pass through. Generally, bots are not capable of solving a CAPTCHA challenge.
 
-As a part of your Login and Registration flows, LoginRadius CAPTCHA settings allow you to enable [Google reCaptcha](#step-1-google-recaptcha-configuration), which is a service from Google that protects web applications from spam and abuse. It is easy for humans to solve, but hard for “bots” and other malicious software to figure out.
+As a part of your Login and Registration flows, LoginRadius reCAPTCHA settings allow you to enable [Google reCAPTCHA](#step-1-google-recaptcha-configuration), which is a service from Google that protects web applications from spam and abuse. It is easy for humans to solve, but hard for “bots” and other malicious software to figure out.
 
-Currently, LoginRadius supports two different versions of the Google reCAPTCHA.
+LoginRadius supports the use of Invisible reCAPTCHA. This version of reCAPTCHA provides a minimally intrusive experience to your consumers by tracking their mouse movements to identify if they are a bot. If so, it presents a CAPTCHA challenge on the screen.
 
-- **reCAPTCHA v2:** This is the second version of the reCAPTCHA service. With this, consumers are presented with descriptions along with a set of images to identify based on the description.
-
-- **Invisible reCAPTCHA:** This version provides a better experience to the consumers by tracking mouse movements to identify if a human is interacting with the application or it is a bot. If identified as a bot, it displays the CAPTCHA option on the screen.
-
-> **Note:** You can select one of the reCAPTCHA options while configuring CAPTCHA settings in Google.
-
-The following explains the configuration and deployment of the above CAPTCHA features:
+The following explains the configuration and deployment of Google reCAPTCHA:
 
 ## Step 1: Google reCAPTCHA Configuration
 
