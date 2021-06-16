@@ -5,7 +5,7 @@ description: "step by step guide to configure webhook."
 path: "/guide/webhook"
 ---
 
-<span class="devloper plan-tag">Premium</span>
+<span class="developer plan-tag">Developer</span>
 
 # Setup Webhooks
 

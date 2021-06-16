@@ -5,7 +5,7 @@ description: "This is a guide for Changing Session Lifetime."
 path: "/guide/change-session-lifetime"
 ---
 
-<span class="developer plan-tag">Premium</span>
+<span class="developer plan-tag">Developer</span>
 
 # Change Session Lifetime
 

@@ -5,7 +5,7 @@ description: "This is a guide for Enabling Force Logout."
 path: "/guide/enable-force-logout"
 ---
 
-<span class="developer plan-tag">Premium</span>
+<span class="developer plan-tag">Developer</span>
 
 # Enable Force Logout
 
