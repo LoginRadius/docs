@@ -70,11 +70,11 @@ The following screen will appear:
 
 * Select IDP Binding : `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 
-* Enter the IDP Location: https://login.microsoftonline.com/22d****eeaa60/saml2
+* Enter the IDP Location: `https://login.microsoftonline.com/22d****eeaa60/saml2`
 
 * Enter the IDP Logout URL: `https://login.microsoftonline.com/22*****bfd7-62dda0eeaa60/saml2`
 
-* Enter the IDP Certificate from the Azure app. You can download the IDP Certificate from Azure.
+* Enter the IDP Certificate from the Azure app. You can download the <a href="https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-certificates-for-federated-single-sign-on" target="_blank">IDP Certificate</a> from Azure.
 
 * Enter the SP Certificate and SP Private Key that you have generated while doing [Azure AD Configuration](#azure-ad-configuration).
 
