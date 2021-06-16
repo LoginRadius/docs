@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
 @import "variable", "button", "link", "grid", "header", "landing", "detail-page",
   "footer";
 *,
@@ -31,6 +31,9 @@ h6,
 button {
   font-family: $font-stack;
   margin-top: 0;
+}
+th {
+  font-weight: 600;
 }
 a {
   cursor: pointer;
@@ -78,10 +81,10 @@ input[type="button"] {
 }
 .card {
   background-color: $white;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 32px;
-  border: 1px solid $gray-lightest;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
   transition: color 0.35s, background-color 0.35s, border-color 0.35s,
     box-shadow 0.35s, opacity 0.35s;
   &.no-shadow {

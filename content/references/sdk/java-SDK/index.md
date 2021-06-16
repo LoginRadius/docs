@@ -2,20 +2,20 @@
 title: "JAVA SDK"
 tags: ["JAVA", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a JAVA application."
-path: "/references/sdk/java"
+path: "/references/SDK/java-SDK"
 ---
 
 # JAVA SDK
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document describes how to start using JAVA SDK and its various features. You can get the SDK from [here](https://github.com/LoginRadius/java-sdk).
+This document describes how to start using JAVA SDK and its various features. You can get the SDK from <a href="https://github.com/LoginRadius/java-sdk" target="_blank">here</a>.
 
 > **Note:** You must have JAVA JDK 8 or JDK 11 installed on your system.
 
 ## SDK Installation and Configuration
 
-Download the JAVA SDK from [here](https://github.com/LoginRadius/java-sdk).
+Download the JAVA SDK from <a href="https://github.com/LoginRadius/java-sdk" target="_blank">here</a>.
 
 Once the project is downloaded, the folder structure is like this.
 
@@ -45,16 +45,16 @@ Add this snippet in pom.xml
 
 ```
 
-> LoginRadius is now using Maven. The jars are also available [here](https://search.maven.org/search?q=loginradius) on the Maven repository. Select the directory for the latest version and download the jar files.
+> LoginRadius is now using Maven. The jars are also available <a href="https://search.maven.org/search?q=loginradius" target="_blank">here</a> on the Maven repository. Select the directory for the latest version and download the jar files.
 
-> For more information on SDK configuration and obtaining API credentials, refer to this [tutorial](/tutorial/java/).
+> For more information on SDK configuration and obtaining API credentials, refer to this <a href="https://www.loginradius.com/docs/developer/tutorial/java/" target="_blank">tutorial</a>.
 
 
 ## API Methods
 
 Similar to the above example, you can use other API Methods to implement more features.
 
-> You can utilize these methods to implement features covered in your subscribed [plan](https://www.loginradius.com/pricing/).
+> You can utilize these methods to implement features covered in your subscribed <a href="https://www.loginradius.com/pricing/" target="_blank">plan</a>.
 
 Below is the list of APIs with sample use of respective API Method:
 
@@ -108,7 +108,7 @@ List of APIs in this Section:<br>
 
 
 <h4 id="UpdateProfileByAccessToken-put-">Auth Update Profile by Token (PUT)</h4>
- This API is used to update the user's profile by passing the access token. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-update-profile-by-token/)
+ This API is used to update the user's profile by passing the access token. <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-update-profile-by-token/" target="_blank">More info</a>
 
 ```java
 
@@ -143,7 +143,7 @@ authenticationApi.updateProfileByAccessToken(accessToken,  userProfileUpdateMode
 
 
 <h4 id="UnlockAccountByToken-put-">Auth Unlock Account by Access Token (PUT)</h4>
- This API is used to allow a customer with a valid access token to unlock their account provided that they successfully pass the prompted Bot Protection challenges. The Block or Suspend block types are not applicable for this API. For additional details see our Auth Security Configuration documentation.You are only required to pass the Post Parameters that correspond to the prompted challenges. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-unlock-account-by-access-token/)
+ This API is used to allow a customer with a valid access token to unlock their account provided that they successfully pass the prompted Bot Protection challenges. The Block or Suspend block types are not applicable for this API. For additional details see our Auth Security Configuration documentation.You are only required to pass the Post Parameters that correspond to the prompted challenges.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-unlock-account-by-access-token/" target="_blank">More info</a>
 
 ```java
 
@@ -172,7 +172,7 @@ authenticationApi.unlockAccountByToken(accessToken,  unlockProfileModel ,  new A
 
 
 <h4 id="VerifyEmailByOTP-put-">Auth Verify Email By OTP (PUT)</h4>
- This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-verify-email-by-otp/)
+ This API is used to verify the email of user when the OTP Email verification flow is enabled, please note that you must contact LoginRadius to have this feature enabled. <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-verify-email-by-otp/" target="_blank">More info</a>
 
 ```java
 
@@ -204,7 +204,7 @@ authenticationApi.verifyEmailByOTP( emailVerificationByOtpModel, fields, url, we
 
 
 <h4 id="ResetPasswordBySecurityAnswerAndEmail-put-">Auth Reset Password by Security Answer and Email (PUT)</h4>
- This API is used to reset password for the specified account by security question [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-email)
+ This API is used to reset password for the specified account by security question <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-email" target="_blank">More info</a>
 
 ```java
 
@@ -236,7 +236,7 @@ authenticationApi.resetPasswordBySecurityAnswerAndEmail( resetPasswordBySecurity
 
 
 <h4 id="ResetPasswordBySecurityAnswerAndPhone-put-">Auth Reset Password by Security Answer and Phone (PUT)</h4>
- This API is used to reset password for the specified account by security question [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-phone)
+ This API is used to reset password for the specified account by security question <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-phone" target="_blank">More info</a>
 
 ```java
 
@@ -268,7 +268,7 @@ authenticationApi.resetPasswordBySecurityAnswerAndPhone( resetPasswordBySecurity
 
 
 <h4 id="ResetPasswordBySecurityAnswerAndUserName-put-">Auth Reset Password by Security Answer and UserName (PUT)</h4>
- This API is used to reset password for the specified account by security question [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-username)
+ This API is used to reset password for the specified account by security question <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-username" target="_blank">More info</a>
 
 ```java
 
@@ -300,7 +300,7 @@ authenticationApi.resetPasswordBySecurityAnswerAndUserName( resetPasswordBySecur
 
 
 <h4 id="ResetPasswordByResetToken-put-">Auth Reset Password by Reset Token (PUT)</h4>
- This API is used to set a new password for the specified account. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-reset-token)
+ This API is used to set a new password for the specified account.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-reset-token" target="_blank">More info</a>
 
 ```java
 
@@ -329,7 +329,7 @@ authenticationApi.resetPasswordByResetToken( resetPasswordByResetTokenModel ,  n
 
 
 <h4 id="ResetPasswordByEmailOTP-put-">Auth Reset Password by OTP (PUT)</h4>
- This API is used to set a new password for the specified account. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-otp)
+ This API is used to set a new password for the specified account.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-otp" target="_blank">More info</a>
 
 ```java
 
@@ -359,7 +359,7 @@ authenticationApi.resetPasswordByEmailOTP( resetPasswordByEmailAndOtpModel ,  ne
 
 
 <h4 id="ResetPasswordByOTPAndUserName-put-">Auth Reset Password by OTP and UserName (PUT)</h4>
- This API is used to set a new password for the specified account if you are using the username as the unique identifier in your workflow [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-otp-and-username/)
+ This API is used to set a new password for the specified account if you are using the username as the unique identifier in your workflow <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-reset-password-by-otp-and-username/" target="_blank">More info</a>
 
 ```java
 
@@ -389,7 +389,7 @@ authenticationApi.resetPasswordByOTPAndUserName( resetPasswordByUserNameModel , 
 
 
 <h4 id="ChangePassword-put-">Auth Change Password (PUT)</h4>
- This API is used to change the accounts password based on the previous password [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-change-password)
+ This API is used to change the accounts password based on the previous password <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-change-password" target="_blank">More info</a>
 
 ```java
 
@@ -418,7 +418,7 @@ authenticationApi.changePassword(accessToken, newPassword, oldPassword ,  new As
 
 
 <h4 id="SetOrChangeUserName-put-">Auth Set or Change UserName (PUT)</h4>
- This API is used to set or change UserName by access token. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-set-or-change-user-name/)
+ This API is used to set or change UserName by access token.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-set-or-change-user-name/" target="_blank">More info</a>
 
 ```java
 
@@ -446,7 +446,7 @@ authenticationApi.setOrChangeUserName(accessToken, username ,  new AsyncHandler<
 
 
 <h4 id="AuthResendEmailVerification-put-">Auth Resend Email Verification (PUT)</h4>
- This API resends the verification email to the user. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-resend-email-verification/)
+ This API resends the verification email to the user. <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-resend-email-verification/" target="_blank">More info</a>
 
 ```java
 
@@ -475,7 +475,7 @@ authenticationApi.authResendEmailVerification(email, emailTemplate, verification
 
 
 <h4 id="AddEmail-post-">Auth Add Email (POST)</h4>
- This API is used to add additional emails to a user's account. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-add-email)
+ This API is used to add additional emails to a user's account. <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-add-email" target="_blank">More info</a>
 
 ```java
 
@@ -506,7 +506,7 @@ authenticationApi.addEmail(accessToken, email, type, emailTemplate, verification
 
 
 <h4 id="LoginByEmail-post-">Auth Login by Email (POST)</h4>
- This API retrieves a copy of the user data based on the Email [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-login-by-email)
+ This API retrieves a copy of the user data based on the Email <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-login-by-email" target="_blank">More info</a>
 
 ```java
 
@@ -539,7 +539,7 @@ authenticationApi.loginByEmail( emailAuthenticationModel, emailTemplate, fields,
 
 
 <h4 id="LoginByUserName-post-">Auth Login by Username (POST)</h4>
- This API retrieves a copy of the user data based on the Username [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-login-by-username)
+ This API retrieves a copy of the user data based on the Username <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-login-by-username" target="_blank">More info</a>
 
 ```java
 
@@ -572,7 +572,7 @@ authenticationApi.loginByUserName( userNameAuthenticationModel, emailTemplate, f
 
 
 <h4 id="ForgotPassword-post-">Auth Forgot Password (POST)</h4>
- This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-forgot-password)
+ This API is used to send the reset password url to a specified account. Note: If you have the UserName workflow enabled, you may replace the 'email' parameter with 'username' <a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-forgot-password" target="_blank">More info</a>
 
 ```java
 
@@ -601,7 +601,7 @@ authenticationApi.forgotPassword(email, resetPasswordUrl, emailTemplate ,  new A
 
 
 <h4 id="LinkSocialIdentities-post-">Auth Link Social Identities (POST)</h4>
- This API is used to link up a social provider account with an existing LoginRadius account on the basis of access token and the social providers user access token. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-link-social-identities)
+ This API is used to link up a social provider account with an existing LoginRadius account on the basis of access token and the social providers user access token.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-link-social-identities" target="_blank">More info</a>
 
 ```java
 
@@ -629,7 +629,7 @@ authenticationApi.linkSocialIdentities(accessToken, candidateToken ,  new AsyncH
 
 
 <h4 id="LinkSocialIdentitiesByPing-post-">Auth Link Social Identities By Ping (POST)</h4>
- This API is used to link up a social provider account with an existing LoginRadius account on the basis of ping and the social providers user access token. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-link-social-identities-by-ping)
+ This API is used to link up a social provider account with an existing LoginRadius account on the basis of ping and the social providers user access token.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-link-social-identities-by-ping" target="_blank">More info</a>
 
 ```java
 
@@ -657,7 +657,7 @@ authenticationApi.linkSocialIdentitiesByPing(accessToken, clientGuid ,  new Asyn
 
 
 <h4 id="UserRegistrationByEmail-post-">Auth User Registration by Email (POST)</h4>
- This API creates a user in the database as well as sends a verification email to the user. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-user-registration-by-email)
+ This API creates a user in the database as well as sends a verification email to the user.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-user-registration-by-email" target="_blank">More info</a>
 
 ```java
 
@@ -699,7 +699,7 @@ authenticationApi.userRegistrationByEmail( authUserRegistrationModel, sott, emai
 
 
 <h4 id="UserRegistrationByCaptcha-post-">Auth User Registration By Captcha (POST)</h4>
- This API creates a user in the database as well as sends a verification email to the user. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-user-registration-by-recaptcha)
+ This API creates a user in the database as well as sends a verification email to the user.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/auth-user-registration-by-recaptcha" target="_blank">More info</a>
 
 ```java
 
@@ -742,7 +742,7 @@ authenticationApi.userRegistrationByCaptcha( authUserRegistrationModelWithCaptch
 
 
 <h4 id="GetSecurityQuestionsByEmail-get-">Get Security Questions By Email (GET)</h4>
- This API is used to retrieve the list of questions that are configured on the respective LoginRadius site. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/security-questions-by-email/)
+ This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/security-questions-by-email/" target="_blank">More info</a>
 
 ```java
 
@@ -769,7 +769,7 @@ authenticationApi.getSecurityQuestionsByEmail(email ,  new AsyncHandler<Security
 
 
 <h4 id="GetSecurityQuestionsByUserName-get-">Get Security Questions By UserName (GET)</h4>
- This API is used to retrieve the list of questions that are configured on the respective LoginRadius site. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/security-questions-by-user-name/)
+ This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/security-questions-by-user-name/" target="_blank">More info</a>
 
 ```java
 
@@ -796,7 +796,7 @@ authenticationApi.getSecurityQuestionsByUserName(userName ,  new AsyncHandler<Se
 
 
 <h4 id="GetSecurityQuestionsByPhone-get-">Get Security Questions By Phone (GET)</h4>
- This API is used to retrieve the list of questions that are configured on the respective LoginRadius site. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/security-questions-by-phone/)
+ This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.<a href="https://www.loginradius.com/docs/api/v2/customer-identity-api/authentication/security-questions-by-phone/" target="_blank">More info</a>
 
 ```java
 
@@ -1268,7 +1268,7 @@ List of APIs in this Section:<br>
 
 
 <h4 id="UpdateAccountByUid-put-">Account Update (PUT)</h4>
- This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/account/account-update)
+ This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/' target="_blank">Here</a> for more capabilities. [More info](https://www.loginradius.com/docs/api/v2/customer-identity-api/account/account-update)
 
 ```java
 

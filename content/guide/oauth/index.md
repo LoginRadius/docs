@@ -10,12 +10,12 @@ path: "/guide/oauth"
 OAuth 2.0 is a protocol that facilitates token-based authentication and authorization; thus, allowing the consumers to grant limited access to their resources on one application, to another application, without having to expose their credentials.
 
 
-LoginRadius Identity Platform supports standard [OAuth 2.0 specs](https://tools.ietf.org/html/rfc6749) to integrate your OAuth client with LoginRadius. Thus, you can allow your application's consumers to log in to an OAuth-enabled application without creating an account. This document goes over the full process of getting the SSO feature implemented with OAuth 2.0. 
+LoginRadius Identity Platform supports standard <a href="https://tools.ietf.org/html/rfc6749" target="_blank">OAuth 2.0 specs</a>  to integrate your OAuth client with LoginRadius. Thus, you can allow your application's consumers to log in to an OAuth-enabled application without creating an account. This document goes over the full process of getting the SSO feature implemented with OAuth 2.0. 
 
 
 ## OAuth 2.0 configuration using Loginradius API
 
-To understand OAuth 2.0 and the flows involved in this guide, check out [this reference](https://itnext.io/an-oauth-2-0-introduction-for-beginners-6e386b19f7a9).
+To understand OAuth 2.0 and the flows involved in this guide, check out <a href="https://itnext.io/an-oauth-2-0-introduction-for-beginners-6e386b19f7a9" target="_blank">this reference</a>.
 
 This section covers the configuration that one needs to do in LoginRadius to implement OAuth functionality. The aim remains to obtain an **access_token** and uses it to access protected resources. There are four flows involved, and you can choose one based on your requirements:
 
@@ -53,7 +53,7 @@ The access token request will contain the following parameters. Here is an expla
 
 **Step 2: Exchange Code for Access Token**
 
-The authorization code is an intermediate credential, which encodes the authorization obtained at Step 1. To retrieve the access token, the client must submit the code to the authorization server, use the [Access token by OAuth 2 token API](../../references/api/oauth/#access-token-by-oauth-2-token) to obtain an access_token.
+The authorization code is an intermediate credential, which encodes the authorization obtained at Step 1. To retrieve the access token, the client must submit the code to the authorization server, use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#access-token-by-oauth-2-token" target="_blank">Access token by OAuth 2 token API</a> to obtain an access_token.
 
 ```
 https://cloud-api.loginradius.com/sso/oauth/access_token
@@ -119,7 +119,7 @@ The access token request will contain the following parameters. Here is an expla
 
 - **Redirect_uri:** Callback URL of your site where you want to redirect back your customers after an authorization code is granted.
 
-  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your [LoginRadius Dashboard](https://dashboard.loginradius.com/configuration). For more information, refer to this [section](#whitelist-domain).
+  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your <a href="https://dashboard.loginradius.com/configuration" target="_blank">LoginRadius Dashboard</a>. For more information, refer to this [section](#whitelist-domain).
 
 - **scope [optional]:** Specifies the scope of the requested token. If omitted, the authorization server may assume some default scope.
 - **state [optional]:** this parameter will be returned as it is, part of the response
@@ -138,7 +138,7 @@ The Resource Owner Password Credentials Grant flow allows you to obtain an acces
 
 **Step 1: Obtain Access Token** 
 
-Use the [Access Token by Account Password](../../references/api/oauth/#access-token-by-account-password) to obtain an access_token.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#access-token-by-account-password" target="_blank">Access Token by Account Password</a> to obtain an access_token.
 
 **POST**
 
@@ -181,13 +181,13 @@ Here is an explanation of the Request Body Parameters:
 
 **Step 2: Use Obtained LoginRadius Access Token** 
 
-You can use the obtained access_token with [LoginRadius APIs](../../references/api/oauth/#user-registration-overview) supporting the access_token until the token expires or revokes.
+You can use the obtained access_token with <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#user-registration-overview" target="_blank">LoginRadius APIs</a> supporting the access_token until the token expires or revokes.
 
 ### Device Code Flow
 
 This section covers use of the Device Code flow with LoginRadius.
 
-First, you need to enable the device code flow feature by raising a support ticket to the [LoginRadius Support](https://loginradiusassist.freshdesk.com/customer/login) team. You should provide the following details at the time of configuration :
+First, you need to enable the device code flow feature by raising a support ticket to the <a href="https://loginradiusassist.freshdesk.com/customer/login" target="_blank">LoginRadius Support</a> team. You should provide the following details at the time of configuration :
 
 ```
 "LoginUrl": "< login URL>"// Device will open this URL to get the code and login after authentication in the browser. 
@@ -199,7 +199,7 @@ First, you need to enable the device code flow feature by raising a support tick
 ```
 **Step 1: Obtained Device Code** 
 
-Use the [Request Device Code](../../references/api/oauth/#request-device-code) API to request a new device code, user code from the Device Code Endpoint.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#request-device-code" target="_blank">Request Device Code</a> API to request a new device code, user code from the Device Code Endpoint.
 
 ```
 Post: https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device
@@ -251,7 +251,7 @@ return_url=URLENCODE(https://cloud-api.lrinternal.com/sso/oauth/device/callback?
 ```
 **Step 3: Accept Authorization Request** 
 
-Use the [Request Token API](../../references/api/oauth/#request-tokens) to accept the authorization request.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#request-tokens" target="_blank">Request Token API</a> to accept the authorization request.
 
 ```
  https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token
@@ -572,7 +572,7 @@ Request body:
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -580,7 +580,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

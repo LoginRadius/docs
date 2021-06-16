@@ -21,7 +21,7 @@ Watch this video's step-by-step information, or refer to the section below for t
 
 ## Access Auth Page (IDX) Customization
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Auth Page (IDX)** and then navigate to the **Theme Customization** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Auth Page (IDX)** and then navigate to the **Theme Customization** section.
 
 2. Click the down caret, and the **Theme Customization** screen will appear:
 
@@ -113,7 +113,7 @@ Each content field and its corresponding text on your Auth Page (IDX) is illustr
 
 ## Further Customization
 
-You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the [Advanced Editor](/guide/auth-page-advanced-editor) document for more information.
+You can manually edit the HTML and JavaScript code used for your Auth Page (IDX) or use your own for further customizations. These options are only available in the **Advanced Editor**. Refer to the <a href="https://www.loginradius.com/docs/developer/guide/auth-page-advanced-editor" target="_blank" >Advanced Editor</a> document for more information.
 
 
 [Go Back to Home Page](/)

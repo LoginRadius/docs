@@ -2,7 +2,7 @@
 title: "HTML5 SDK"
 tags: ["HTML5", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a HTML5 application."
-path: "/references/sdk/html5"
+path: "/references/SDK/html5-SDK"
 ---
 
 
@@ -12,13 +12,13 @@ path: "/references/sdk/html5"
 
 This document contains information and examples regarding the LoginRadius HTML5 SDK. It guides working with social authentication, user profile data, and log in with a variety of social networks such as Facebook, Google, Twitter, etc. 
 
-You can get the SDK from [here](https://github.com/LoginRadius/html5-sdk).
+You can get the SDK from <a href="https://github.com/LoginRadius/html5-sdk" target="_blank">here</a>.
 
 To communicate with LoginRadius you will need some details about the application. These details are required for setup and initiate the implementation of LoginRadius.
 
-* **API Credentials**: Refer to [this document](/tutorial/html-and-js-tutorial/#get-credentals) for getting API Key and Secrect
-* **Mobile SOTT**: Refer to [this document](/tutorial/html-and-js-tutorial/#get-credentals) for getting Mobile SOTT.
-* **Whitelist Domain**: Refer to [this document](/tutorial/html-and-js-tutorial/#whitelist-domain) to whitelist your domain. 
+* **API Credentials**: Refer to <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/#get-credentals" target="_blank">this document</a> for getting API Key and Secrect
+* **Mobile SOTT**: Refer to <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/#get-credentals" target="_blank">this document</a> for getting Mobile SOTT.
+* **Whitelist Domain**: Refer to <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/#whitelist-domain" target="_blank">this document</a> to whitelist your domain. 
 
 
 ## SDK Installation and Configuration
@@ -32,7 +32,7 @@ To communicate with LoginRadius you will need some details about the application
    LoginRadiusSDK.initSDK(sdkoptions);
    ```
 
-2. Download the SDK from [Github](https://github.com/LoginRadius/html5-sdk).
+2. Download the SDK from <a href="https://github.com/LoginRadius/html5-sdk" target="_blank">Github</a>.
 
 3. Include the SDK javascript file on your website.
 

@@ -105,7 +105,7 @@ If the consumer is not logged into the hosted page, the consumer will be asked t
 
 This section covers the required configurations that you need to perform in the LoginRadius Dashboard for JWT Login.
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and navigate to [Integration](https://dashboard.loginradius.com/integration).
+1. Log in to your <a href="https://dashboard.loginradius.com/" target="_blank">LoginRadius Dashboard</a> account, select your app and navigate to <a href="https://dashboard.loginradius.com/integration" target="_blank">Integration</a>.
 
    The following screen will appear:
 
@@ -160,10 +160,10 @@ This section covers the required configurations that you need to perform in the 
 
 If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
-* [JWT Token](../../references/api/jwt/#jwt-token): This GET API is used to exchange access token with your JWT.
-* [JWT Token by Email](../../references/api/jwt/#jwt-token-by-email): This API is used to get a JWT by Email and Password.
-* [JWT Token by Username](../../references/api/jwt/#jwt-token-by-username): This API is used to get JWT by Username and password.
-* [JWT Token by Phone](../../references/api/jwt/#jwt-token-by-phone): This API is used to get JWT by Phone and password.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token" target="_blank">JWT Token</a>: This GET API is used to exchange access token with your JWT.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token-by-email" target="_blank">JWT Token by Email</a>: This API is used to get a JWT by Email and Password.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token-by-username" target="_blank">JWT Token by Username</a>: This API is used to get JWT by Username and password.
+* <a href="https://www.loginradius.com/docs/developer/references/api/jwt/#jwt-token-by-phone" target="_blank">JWT Token by Phone</a>: This API is used to get JWT by Phone and password.
 
 The response from the above APIs will look like this:
 
@@ -212,7 +212,7 @@ It is recommended to use the Asymmetric algorithm when signing the JWT token. As
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -220,7 +220,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

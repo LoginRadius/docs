@@ -6,13 +6,13 @@ path: "/guide/oidc"
 ---
 # OpenID Connect
 
-OpenID Connect or (OIDC) is an authentication layer on top of the OAuth 2.0 framework that is standardized by the OpenID Foundation. LoginRadius provides a way to integrate your OpenID Connect client with our APIs by following the standards specified in the [OpenID Connect specs](https://openid.net/specs/openid-authentication-2_0.html). These specs cover the various requirements and standardized process that OpenID Connect encompasses.
+OpenID Connect or (OIDC) is an authentication layer on top of the OAuth 2.0 framework that is standardized by the OpenID Foundation. LoginRadius provides a way to integrate your OpenID Connect client with our APIs by following the standards specified in the <a href="https://openid.net/specs/openid-authentication-2_0.html" target="_blank">OpenID Connect specs</a>. These specs cover the various requirements and standardized process that OpenID Connect encompasses.
 
-This [guide](https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-openid-connect-protocols-35ebc1cbc11a) will show you OAuth 2.0 and Open ID connect working in action.
+This <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-openid-connect-protocols-35ebc1cbc11a" target="_blank">guide</a> will show you OAuth 2.0 and Open ID connect working in action.
 
 ## OpenID Configurations in LoginRadius Dashboard
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and navigate to **Integration**, the following screen will appear:
+1. Log in to your <a href="https://dashboard.loginradius.com/" target="_blank">LoginRadius Dashboard</a> account, select your app and navigate to **Integration**, the following screen will appear:
 
    ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
@@ -208,7 +208,7 @@ e.g.
 ```
 
 
-Once you have the code, you can request an access_token via the [Access token by OpenID Code API](../../references/api/oidc/#access-token-by-openid-code).
+Once you have the code, you can request an access_token via the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code API</a>.
 
 ### Implicit Flow
 
@@ -270,15 +270,15 @@ Once you have obtained a code or access_token (depending on the workflow you've 
 
 If you've obtained an authorization code, you're able to exchange it for an access_token.
 
-Use the [Access token by OpenID Code](../../references/api/oidc/#access-token-by-openid-code) API to get the access_token, JWT Token, and the refresh_token.
+Use the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code</a> API to get the access_token, JWT Token, and the refresh_token.
 
 ### Refresh Access Token
 
-You can use the [Refresh Access Token API Call](../../references/api/oidc/#refresh-access-token) to expire a Refresh Token.
+You can use the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#refresh-access-token" target="_blank">Refresh Access Token API Call</a>to expire a Refresh Token.
 
 ### Get UserInfo
 
-The UserInfo of a logged in user can be retrieved with the [UserInfo by Access Token API](../../references/api/oidc/#userinfo-by-access-token) call, which will return the UserInfo in a JWT Token.
+The UserInfo of a logged in user can be retrieved with the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#userinfo-by-access-token" target="_blank">UserInfo by Access Token API</a> call, which will return the UserInfo in a JWT Token.
 
 > **Note:** The RSA algorithm is currently the only supported encryption type for the JWT tokens.
 
@@ -288,11 +288,11 @@ Here are some other endpoints you will need in your OpenID workflow.
 
 ### Get JSON Web Key Set
 
-Our [JSON Web Key Set API Call](../../references/api/oidc/#json-web-key-set) provides the JWKS that can be used to verify any JWT token with the returned JSON Web Key Set (JWKS).
+Our <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#json-web-key-set" target="_blank">JSON Web Key Set API Call</a> provides the JWKS that can be used to verify any JWT token with the returned JSON Web Key Set (JWKS).
 
 ### OIDC Discovery Endpoint
 
-The [OIDC Discovery API Endpoint](../../references/api/oidc/#oidc-discovery-endpoint) provides a client with configuration details about the OpenID Connect metadata of the Loginradius App.
+The <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#oidc-discovery-endpoint" target="_blank">OIDC Discovery API Endpoint</a> provides a client with configuration details about the OpenID Connect metadata of the Loginradius App.
 
 
 URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-known/openid-configuration
@@ -302,7 +302,7 @@ URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappnam
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -310,7 +310,7 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 

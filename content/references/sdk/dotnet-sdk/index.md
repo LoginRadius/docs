@@ -2,19 +2,19 @@
 title: "ASP.NET SDK Library"
 tags: ["ASP.NET", "SDK"]
 description: "This is a document detailing the LoginRadius ASP.NET SDK Library."
-path: "/references/sdk/dotnet-sdk"
+path: "/references/SDK/dotnet-SDK"
 ---
 
 # ASP&#46;NET SDK
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document describes how to start using the LoginRadius ASP&#46;NET SDK and its various features. You can get the SDK from [here](https://github.com/LoginRadius/dot-net-sdk).
+This document describes how to start using the LoginRadius ASP&#46;NET SDK and its various features. You can get the SDK from <a href="https://github.com/LoginRadius/dot-net-sdk" target="_blank">here</a>.
 
 
 > You must have &#46;NET 4.0 / &#46;NetStandard 1.3 or later installed.
 
-For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core [MVC](/tutorial/dotnetcore-mvc) or [Razor](/tutorial/dotnetcore-razor) tutorial.
+For a more hands-on tutorial on setting up the SDK and using it in an ASP&#46;NET Core application to make LoginRadius API calls, check out our ASP&#46;NET Core <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-mvc" target="_blank">MVC</a> or <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor" target="_blank">Razor</a> tutorial.
 
 ## SDK Installation and Configuration
 
@@ -36,7 +36,7 @@ In your ASP&#46;NET project, go to the `appsettings.json` file and add the follo
     "domainName" : "https://api.loginradius.com/"
 }
 ```
-> **Note:** You can get the API Key, API Secret and App Name from the [Configuration > API Credentials](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+> **Note:** You can get the API Key, API Secret and App Name from the <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> section of your LoginRadius Dashboard.
 
 ## API Methods
 
@@ -1327,6 +1327,6 @@ var apiResponse = new WebHookApi().WebHookUnsubscribe(webHookSubscribeModel);
 
 ## Demo
 
-A sample ASP&#46;NET project utilizing the SDK is available at [GitHub](https://github.com/LoginRadius/dot-net-sdk/tree/master/Samples/dot-net-demo).
+A sample ASP&#46;NET project utilizing the SDK is available at <a href="https://github.com/LoginRadius/dot-net-sdk/tree/master/Samples/dot-net-demo" target="_blank">GitHub</a>.
 
 [Go Back to Home Page](/)

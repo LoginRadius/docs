@@ -17,7 +17,7 @@ You can choose to either [generate static SOTTs](#generate-sott-in-loginradius-d
 
 ### Generate SOTT in LoginRadius Dashboard
 
-To generate SOTTs in your dashboard, log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+To generate SOTTs in your dashboard, log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
 Click the **Secure Mobile OTP Token** sub-section, and the **Generate SOTT** screen will appear:
 

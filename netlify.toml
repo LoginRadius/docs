@@ -132,7 +132,7 @@ to = "/docs/developer/tutorial/node-js"
 
 [[redirects]]
 from = "/docs/developer/sdk-libraries/python-library/"
-to = "/docs/developer/references/sdk/python"
+to = "/docs/developer/references/SDK/python-SDK"
 
 [[redirects]]
 from = "/docs/developer/guides/web-python/"
@@ -140,7 +140,7 @@ to = "/docs/developer/tutorial/python"
 
 [[redirects]]
 from = "/docs/developer/sdk-libraries/php-library/"
-to = "/docs/developer/references/sdk/php"
+to = "/docs/developer/references/SDK/php-SDK"
 
 [[redirects]]
 from = "/docs/developer/guides/web-ror/"
@@ -148,7 +148,7 @@ to = "/docs/developer/tutorial/ror"
 
 [[redirects]]
 from = "/docs/developer/sdk-libraries/ruby-library/"
-to = "/docs/developer/references/sdk/ruby-sdk"
+to = "/docs/developer/references/SDK/ruby-SDK"
 
 [[redirects]]
 from = "/docs/developer/guides/web-golang/"

@@ -9,18 +9,18 @@ path: "/tutorial/ror"
 
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out for your ROR based application.
 
-> You must have [Ruby On Rails](https://www.ruby-lang.org/en/downloads/) installed in your system.
+> You must have <a href="https://www.ruby-lang.org/en/downloads" target="_blank" >Ruby On Rails</a> installed in your system.
 >
-> New to Ruby on rails? Check out this [reference](https://guides.rubyonrails.org/v5.0/getting_started.html).
+> New to Ruby on rails? Check out this <a href="https://guides.rubyonrails.org/v5.0/getting_started.html" target="_blank">reference</a>.
 
 
 ---
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](/concepts/idx).
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
-Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your ROR application.
+Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your ROR application.
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
 ## Choose Theme
 
@@ -36,7 +36,7 @@ To preview your login page's theme, click the **Go to your Login Page** link hig
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -171,13 +171,13 @@ end
 
 Similarly, you can implement more features using ROR SDK.
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
 ## Whitelist Your Domain
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
@@ -185,25 +185,25 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 Check out our ROR demo to know how you can implement various LoginRadius features using SDK and its functions.
 
-**[GitHub Demo Link](https://github.com/LoginRadius/login-page-demos/tree/master/ruby-on-rails-idx-demo)** | **[Download Demo](https://github.com/LoginRadius/login-page-demos/archive/master.zip)**
+**<a href="https://github.com/LoginRadius/login-page-demos/tree/master/ruby-on-rails-idx-demo" target="_blank">GitHub Demo Link</a>** | **<a href="https://github.com/LoginRadius/login-page-demos/archive/master.zip" target="_blank">Download Demo</a>**
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Ruby On Rails SDK Reference
 
-[Ruby On Rails SDK](/references/sdk/ruby-sdk)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/ruby-SDK" target="_blank">Ruby On Rails SDK</a>
 
 ## API Reference
 

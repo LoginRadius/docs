@@ -2,18 +2,18 @@
 title: "Python SDK Library"
 tags: ["Python", "SDK"]
 description: "This is a document detailing the LoginRadius Python SDK Library."
-path: "/references/sdk/python"
+path: "/references/SDK/python-SDK"
 ---
 
 # Python SDK
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document describes how to start using the LoginRadius Python SDK and its various features. You can get the SDK from [here](https://github.com/LoginRadius/python-sdk).
+This document describes how to start using the LoginRadius Python SDK and its various features. You can get the SDK from <a href="https://github.com/LoginRadius/python-sdk" target="_blank">here</a>.
 
 > You must have Python 2.7 or later installed.
 
-For a more hands-on tutorial on setting up the SDK and using it in a Python application to make LoginRadius API calls, check out our [Python](/tutorial/python) tutorial.
+For a more hands-on tutorial on setting up the SDK and using it in a Python application to make LoginRadius API calls, check out our <a href="https://www.loginradius.com/docs/developer/tutorial/python" target="_blank">Python</a> tutorial.
 
 ## SDK Installation and Configuration
 
@@ -35,7 +35,7 @@ LoginRadius.API_KEY = API_KEY
 LoginRadius.API_SECRET = API_SECRET
 loginradius = LoginRadius()   
 ```
-> **Note:** You can get the API Key and Secret from the [Configuration > API Credentials](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+> **Note:** You can get the API Key and Secret from the <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> section of your LoginRadius Dashboard.
 
 Import the library's functions by importing `lr.py` in your scripts:
 
@@ -1431,6 +1431,6 @@ result = loginradius.web_hook.web_hook_unsubscribe(web_hook_subscribe_model)
 
 ## Demo
 
-A sample Python project utilizing the SDK is available at [GitHub](https://github.com/LoginRadius/python-sdk/tree/master/demo).
+A sample Python project utilizing the SDK is available at <a href="https://github.com/LoginRadius/python-sdk/tree/master/demo" target="_blank">GitHub</a>.
 
 [Go Back to Home Page](/)

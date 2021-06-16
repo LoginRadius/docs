@@ -9,9 +9,9 @@ path: "/concepts/idx"
 
 **Auth Page (IDX)** is a ready-to-use web page available on a dedicated instance in LoginRadius and allows you to setup a centralized authentication page. It is a set of registration, login, and related web pages such as forgot password, profile.
 
-There are a few predefined layouts that can be further customized via your LoginRadius Dashboard under [Auth Page Customization](https://dashboard.loginradius.com/auth-page).
+There are a few predefined layouts that can be further customized via your LoginRadius Dashboard under <a href="https://dashboard.loginradius.com/auth-page" target="_blank">Auth Page Customization</a>.
 
-Go through the [Auth Page (IDX) customization](/guide/customize-auth-page) for more details.
+Go through the <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">Auth Page (IDX) customization</a> for more details.
 
 
 ## Actions
@@ -75,7 +75,7 @@ https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return
 
 ## Customization
 
-Go through [this document](/guide/customize-auth-page) for Auth Page (IDX) customization.
+Go through <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">this document</a> for Auth Page (IDX) customization.
 
 ## Key Benefits
 

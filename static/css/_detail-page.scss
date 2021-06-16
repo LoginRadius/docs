@@ -181,8 +181,9 @@
     }
     h1 {
       margin-top: 0;
-      font-size: 44px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      font-weight: 500;
+      margin-bottom: 16px;
       @media (max-width: 768px) {
         font-size: 32px;
       }
@@ -190,7 +191,7 @@
     h2 {
       margin-top: 48px;
       margin-bottom: 24px;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 30px;
       @media (max-width: 768px) {
         font-size: 24px;
@@ -205,7 +206,7 @@
       margin-top: 48px;
       margin-bottom: 24px;
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 500;
       & + blockquote,
       & + h4 {
         margin-top: 24px;
@@ -216,7 +217,7 @@
       margin-top: 48px;
       margin-bottom: 24px;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 500;
       & + blockquote {
         margin-top: 24px;
       }
@@ -264,6 +265,8 @@
     // detail page image alignment
     .gatsby-resp-image-wrapper {
       margin-left: 0 !important;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
       img {
         border-radius: 5px;
         border: 1px solid #e8e9ea;
@@ -354,6 +357,29 @@
     b,
     strong {
       font-weight: 600;
+    }
+    .plan-tag {
+      color: #fff;
+      border-radius: 23px;
+      font-size: 12px;
+      padding: 0px 8px;
+      /* min-height: 40px; */
+      display: inline-flex;
+      /* margin-left: 16px; */
+      line-height: 16px;
+      text-transform: uppercase;
+      /* margin-bottom: 0px; */
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      &.devloper-premium,
+      &.developer {
+        border: 2px solid $cta;
+        background-color: $cta;
+      }
+      &.free {
+        border: 2px solid $blue;
+        background-color: $blue;
+      }
     }
   }
 }

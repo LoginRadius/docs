@@ -12,7 +12,7 @@ Setting up the SMTP server in LoginRadius allows the system to send out all emai
 Setup your SMTP provider by following the below steps.
 
 ## Step 1: Access SMTP Provider Settings
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. 
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
 2. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. 
 3. Click the down arrow, the **SMTP Provider Settings** screen will appear.
 

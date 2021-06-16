@@ -1,24 +1,25 @@
 ---
 title: "how to configure Webhook"
-tags: ["webhook", "configure","Setup"]
+tags: ["webhook", "configure", "Setup"]
 description: "step by step guide to configure webhook."
 path: "/guide/webhook"
 ---
+
+<span class="developer plan-tag">Developer</span>
 
 # Setup Webhooks
 
 Webhooks allow you to build or set up integrations that subscribe to certain events on LoginRadius. When one of these events is triggered, LoginRadius automatically sends a POST payload over HTTPS to the Webhook's configured URL in real-time. You can use Webhooks to update an external tracker or update a backup mirror.
 
->**Note:** Upon submitting the request to the configured Webhook URL, LoginRadius does not track payload deliverability.
+> **Note:** Upon submitting the request to the configured Webhook URL, LoginRadius does not track payload deliverability.
 
-This guide explains how to configure webhook in [LoginRadius Dashboard](https://dashboard.loginradius.com/).
-
-
+This guide explains how to configure webhook in <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>.
 
 ## Configuration
 
-### Step 1: Visit Integration Section 
-Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
+### Step 1: Visit Integration Section
+
+Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
 ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
@@ -37,10 +38,10 @@ Enter or select the following details on the Webhook screen:
 - **Name**: Enter the name of the Webhook
 - **Event**: Choose the type of event from the dropdown.
 
-  | PLAN | ALLOWED EVENTS |
-  |----|----|
-  | **Developer**	|Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification
-  | **Developer Pro**	| Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext
+  | PLAN              | ALLOWED EVENTS                                                                                                                                                                                                                                                                                       |
+  | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | **Developer**     | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification                                                                                                                                                            |
+  | **Developer Pro** | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext |
 
 - **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
 
@@ -48,15 +49,13 @@ The following displays the Webhook screen:
 
 ![alt_text](./images/add-webhook.png "image_tooltip")
 
-
 Click the **Save** button after providing the required details.
-
 
 You will find the successfully configured webhook in the **Configured Integrations** section as displayed in the below screen:
 
 ![alt_text](./images/configured-webhook.png "image_tooltip")
 
->Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
+> Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
 
 ## Webhook Handling
 
@@ -86,7 +85,9 @@ Once you configure the webhook with an event, LoginRadius triggers that webhook 
      },
 }
 ```
-Where: 
+
+Where:
+
 - **HookName**: Webhook event which is triggered.
 - **Time**: The timestamp when the hook is triggered.
 - **HookId**: A uniquely generated number associated with the triggered hook.
@@ -105,7 +106,6 @@ The following is a sample script in .NET that can be used to generate a signatur
 
 Replace <LoginRadius API secret> with API secret for your LoginRadius account in the below code. Replace <Webhook payload body> with Webhook payload Body in string format. The code will write the derived signature in the console.
 
-
 ```javascript
 using System;
 using System.Text;
@@ -115,7 +115,7 @@ public class Program
 {
     private const string key = "<LoginRadius API secret>";
     private const string message = "<Webhook payload body>";
-    private static readonly Encoding encoding = Encoding.UTF8; 
+    private static readonly Encoding encoding = Encoding.UTF8;
 
     static void Main(string[] args)
     {
@@ -133,9 +133,10 @@ public class Program
         for (int i = 0; i < buff.Length; i++)
             sbinary += buff[i].ToString("X2"); /* hex format */
         return sbinary;
-    }    
+    }
 }
 ```
+
 ## Webhook Sample Header
 
 All webhook POST request headers will contain the following fields: host, accept, accept-encoding, content-type, request-context, request-id, signature, user-agent, content-length, connection.
@@ -147,7 +148,6 @@ Here is the sample for the Webhook payload header:
 ## Webhook Sample Payload Body
 
 All webhook request payload contains the configured webhook name, time at which the webhook triggered, webhook id, and information about the event associated with the webhook. The following is a sample payload body:
-
 
 ```javascript
 {
@@ -321,7 +321,5 @@ All webhook request payload contains the configured webhook name, time at which 
     }
 }
 ```
-
-
 
 [Go Back to Home Page](/)
