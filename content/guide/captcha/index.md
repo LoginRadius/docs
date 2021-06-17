@@ -47,7 +47,7 @@ This section covers the required configurations that you need to perform to impl
 
 2. Click the down arrow and the **CAPTCHA Setting** screen will appear:
 
-   ![alt_text](/images/captcha-setting.png "image_tooltip")
+   ![alt_text](images/captcha-setting.png "image_tooltip")
 
 3. Enter or select the following CAPTCHA details:
 
@@ -61,8 +61,8 @@ This section covers the required configurations that you need to perform to impl
 
 ## Step 3: See Result
 
-In case of reCAPTCHA v2, the captcha will be available on your Auth Page `<your-app-name>.hub.loginradius.com/auth.aspx` as highlighted in the below screen`.
+If your configuration was successful, you will be able to see the following badge on the bottom right of your Auth Page `<your-app-name>.hub.loginradius.com/auth.aspx` Registration form, as highlighted in the below screen:
 
-![alt_text](/images/auth-captcha.png "image_tooltip")
+![alt_text](images/auth-captcha.png "image_tooltip")
 
 [Go Back to Home Page](/)
