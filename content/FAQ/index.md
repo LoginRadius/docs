@@ -64,19 +64,19 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to upgrade the plan for your LoginRadius App?
 
-* Click the account icon from the right-top of your LoginRadius Dashboard screen and select the Manage Apps option: 
+* Click the account icon from the right-top of your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> screen and select the **Manage Apps** option: 
 
-![alt_text](images/FAQ1.png "image_tooltip")
+  ![alt_text](images/FAQ1.png "image_tooltip")
 
 The Manage App screen will appear.
 
-* Hover over the app tile for which you want to upgrade the plan, click the App Actions and then select the Update Subscription option: 
+* Hover over the app tile for which you want to upgrade the plan, click the **App Actions** and then select the **Update Subscription** option: 
 
-![alt_text](images/FAQ2.png "image_tooltip")
+  ![alt_text](images/FAQ2.png "image_tooltip")
 
-* Select a desired plan from the Plan drop-down and click the Update button.
+* Select a desired plan from the **Plan** drop-down and click the **Update** button.
 
-![alt_text](images/FAQ3.png "image_tooltip")
+  ![alt_text](images/FAQ3.png "image_tooltip")
 
 
 ### How do I contact LoginRadius Support?
