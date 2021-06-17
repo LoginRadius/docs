@@ -31,8 +31,4 @@ The Brute Force Lockout feature allows you to restrict account access based on f
 
      - **Suspend Effective Period:** The effective period for which the account is suspended. Default suspend effective period is 900 seconds.
 
-     - **Captcha:** Select this option to prompt the customer to complete a CAPTCHA to log in when the maximum failed login attempt is reached.
-
-       > Pre-requisites: You must have <a href="https://www.loginradius.com/docs/developer/guide/captcha/" target="_blank">Google reCAPTCHA V2</a> configured in your LoginRadius Identity Platform to display captcha on lockout.
-
 [Go Back to Home Page](/)
