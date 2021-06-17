@@ -13,7 +13,7 @@ The Brute Force Lockout feature allows you to restrict account access based on f
 
 ## LoginRadius Configuration
 
-1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard]</a> account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **Brute Force Lockout** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Security** section and then navigate to the **Brute Force Lockout** section.
 
 2. Click the down arrow, the Brute Force Lockout screen will appear:
 
