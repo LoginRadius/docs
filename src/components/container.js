@@ -498,6 +498,9 @@ const Middle = () => {
                 <Link to="/guide/inbound-sso-saml-salesforce">Inbound SSO SAML - Salesforce</Link>
               </li>
               <li>
+                <Link to="/guide/inbound-sso-saml-azure-ad">Inbound SSO SAML - Azure AD</Link>
+              </li>
+              <li>
                 <div className="read-more mt-0">
                   <Link to="/guide/3rd-party-all-integrations/">
                     <svg
