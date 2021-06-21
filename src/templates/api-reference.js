@@ -37,7 +37,7 @@ const ApiReferenceTemplate = ({ data, location }) => {
                   <div className="headings">Get in Touch</div>
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://stackoverflow.com/questions/tagged/loginradius" target="_blank">
                         <span className="icon">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const ApiReferenceTemplate = ({ data, location }) => {
                       </a>
                     </li>
                     <li>
-                      <a href="https://loginradiusassist.freshdesk.com/customer/login">
+                      <a href="https://loginradiusassist.freshdesk.com/customer/login" target="_blank">
                         <span className="icon">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -81,6 +81,22 @@ const ApiReferenceTemplate = ({ data, location }) => {
                           </svg>
                         </span>
                         <span>Support Ticket</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/LoginRadius/docs" target="_blank">
+                        <span className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="ionicon"
+                            viewBox="0 0 512 512"
+                          >
+                            <title>Logo Github</title>
+                            <path d="M392 440V320h40v160H64V320h40v120z" />
+                            <path d="M149.1 308.77l198.57 40.87 8.4-39.32-198.57-40.87zm26.27-93.12L359.22 300 376 263.76l-183.82-84.84zm50.95-89l156 127.78 25.74-30.52-156-127.78zM328 32l-33.39 23.8 120.82 160.37L448 192zM144 400h204v-40H144z" />
+                          </svg>
+                        </span>
+                        <span>Edit on Github</span>
                       </a>
                     </li>
                   </ul>
