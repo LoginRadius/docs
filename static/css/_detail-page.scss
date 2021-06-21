@@ -13,7 +13,7 @@
     @media (min-width: 769px) {
       position: -webkit-sticky;
       position: sticky;
-      top: 172px;
+      top: 148px;
     }
     @media (max-width: 768px) {
       max-width: 100%;
@@ -106,7 +106,7 @@
       }
     }
     .get-in-touch {
-      margin-top: 48px;
+      margin-top: 32px;
       li {
         display: flex;
         align-items: center;
@@ -122,10 +122,11 @@
             }
           }
           span {
+            line-height: normal;
             &.icon {
               svg {
                 transition: 0.2s ease-in-out;
-                width: 24px;
+                width: 22px;
                 margin-right: 1rem;
               }
             }
