@@ -164,8 +164,12 @@ Use this API to get JWT token by access token by email
 | email  |  String                |   User's registered email address [REQUIRED]       |
 | password      |String         | User's password[REQUIRED]              |
 
-  ### Try Me Out
-  <try-me-out id="jwt-token-by-email" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"","password":""}}'></try-me-out>
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
+
+### Try Me Out
+<try-me-out id="jwt-token-by-email" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"","password":""}}'></try-me-out>
 
 This is sample API code:
 
@@ -291,8 +295,12 @@ Use this API to get JWT token by access token by Phone
 | phone     |  String               |   User's registered phone number [REQUIRED]       |
 | password      |String          | User's password[REQUIRED]             |
 
-  ### Try Me Out
-  <try-me-out id="jwt-token-by-phone" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}'></try-me-out>
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
+
+### Try Me Out
+<try-me-out id="jwt-token-by-phone" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}'></try-me-out>
 
 This is sample API code:
 
@@ -409,8 +417,12 @@ Use this API to get JWT token by access token.
 | access_token          |String         | none  | Token generated from a successful oauth from social platform [REQUIRED]               |
 | jwtapp        |  String       | none          | JWT App Name [Required]           |
 
-  ### Try Me Out
-  <try-me-out id="jwt-token" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/token" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"access_token","default":""},{"key":"jwtApp"}]}'></try-me-out>
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
+
+### Try Me Out
+<try-me-out id="jwt-token" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/token" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"access_token","default":""},{"key":"jwtApp"}]}'></try-me-out>
 
 
 This is sample API code:

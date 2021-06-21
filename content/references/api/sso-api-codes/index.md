@@ -1,3 +1,10 @@
+---
+title: "SSO API Response Codes"
+tags: ["SSO","API","Response","Codes"]
+description: "This is a document detailing the LoginRadius SSO API codes."
+path: "/references/api/sso-api-codes"
+---
+
 # SSO API Response Codes
 
 ---

@@ -32,7 +32,11 @@ This API allows you to exchange your OpenID code for a LoginRadius access_token.
 |redirect_uri|Redirection URI to be used.
 |response_type|If used, needs to be 'token' |  
 |code|The authorization_code obtained during the Authorization process. [REQUIRED] |
-  
+
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
+
 ### Try Me Out
 <try-me-out id="access-token-by-openid-code" endpoint="https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token" method="POST" params='{"templateParams":[{"key":"oidcappname","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"grant_type":"","client_id":"","client_secret":"","redirect_uri":"","response_type":"","code":""}}'></try-me-out>
 
@@ -137,7 +141,11 @@ This API allows you to refresh an access_token, use access tokens to ensure a us
 |response_type|If used, needs to be 'token' |  
 |refresh_token|this is the refresh_token you received when you used the 'Access Token by OpenID Connect code' API call [REQUIRED] | 
 |scope|The scope for the Open ID profile, use 'openid profile'. [REQUIRED] |
-  
+
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
+
 ### Try Me Out
 <try-me-out id="refresh-access-token" endpoint="https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token" method="POST" params='{"templateParams":[{"key":"oidcappname","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"grant_type":"","client_id":"","client_secret":"","response_type":"","refresh_token":""}}'></try-me-out>
 
@@ -236,7 +244,11 @@ This API allows you to expire a refresh_token
 |client_id|Your LoginRadius API Key. [REQUIRED]
 |client_secret|LoginRadius API Secret [REQUIRED] |  
 |token |This is the refresh_token you received when you used the Access Token by OpenID code API call. [REQUIRED] |
-  
+
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>  
+
 ### Try Me Out
 <try-me-out id="revoke-refresh-token" endpoint="https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/token/revoke" method="POST" params='{"templateParams":[{"key":"oidcappname","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","token":""}}'></try-me-out>
 
@@ -327,6 +339,10 @@ Use this Endpoint to obtain the claims for a given user. a client makes a reques
 | Attribute | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
 |Authorization |Bearer <ACCESS_TOKEN> (customer's access token) [REQUIRED] |
+
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
 <try-me-out id="userinfo-by-access-token" endpoint="https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/userinfo" method="GET" params='{"templateParams":[{"key":"oidcappname","default":""},{"key":"sitename","default":""}],"headers":[{"key":"Authorization","default":"Bearer "}]}'></try-me-out>
@@ -421,6 +437,11 @@ At the most basic level, the JSON Web Key Set (JWKS) is a set of keys containing
 | Attribute | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
 |Authorization |Bearer <ACCESS_TOKEN> (customer's access token) [REQUIRED] |
+
+
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
 <try-me-out id="json-web-key-set" endpoint="https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/jwks" method="GET" params='{"templateParams":[{"key":"oidcappname","default":""},{"key":"sitename","default":""}],"headers":[{"key":"Authorization","default":"Bearer "}]}'></try-me-out>
@@ -520,6 +541,10 @@ The OpenID Connect Discovery endpoint provides a client with configuration detai
 |:---	    |:---	    |:---	        |
 | oidcappname    	|  String	    |   The name for the ODIC App you have configured in the LoginRadius Admin Console. [REQUIRED]	        |
 | sitename     	|  String	    |   The name of your LoginRadius SiteName / Environment. [REQUIRED]	        |
+
+### API Error Codes
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
 <try-me-out id="oidc-discovery" endpoint="https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-known/openid-configuration" method="GET" params='{"templateParams":[{"key":"oidcappname","default":""},{"key":"sitename","default":""}]}'></try-me-out>
