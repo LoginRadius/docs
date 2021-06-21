@@ -173,3 +173,11 @@ to = "/docs/developer/guide/wordpress"
 [[redirects]]
   from = "docs/developer/faq/loginradius-support/"
   to = "docs/developer/contact-us/#how-do-i-contact-loginradius-support"
+
+[[redirects]]
+  from = "/docs/developer/contact-us"
+  to = "/docs/developer/FAQ"
+
+[[redirects]]
+  from = "docs/developer/concepts/idx-overview/"
+  to = "docs/developer/concepts/idx"
