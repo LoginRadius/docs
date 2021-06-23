@@ -167,61 +167,61 @@ from = "/docs/developer/plugin/wordpress/"
 to = "/docs/developer/guide/wordpress"
 
 [[redirects]]
-  from = "docs/developer/api/webhooks-api/"
+  from = "/docs/developer/api/webhooks-api/"
   to = "/docs/developer/references/api/webhooks"
 
 [[redirects]]
-  from = "docs/developer/faq/loginradius-support/"
-  to = "docs/developer/contact-us/#how-do-i-contact-loginradius-support"
+  from = "/docs/developer/faq/loginradius-support/"
+  to = "/docs/developer/contact-us/#how-do-i-contact-loginradius-support"
 
 [[redirects]]
   from = "/docs/developer/contact-us"
   to = "/docs/developer/FAQ"
 
 [[redirects]]
-  from = "docs/developer/concepts/idx-overview/"
-  to = "docs/developer/concepts/idx"
+  from = "/docs/developer/concepts/idx-overview/"
+  to = "/docs/developer/concepts/idx"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/android-sdk"
-  to = "docs/developer/references/SDK/android-SDK"
+  from = "/docs/developer/references/sdk/android-sdk"
+  to = "/docs/developer/references/SDK/android-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/dotnet-sdk"
-  to = "docs/developer/references/SDK/dotnet-SDK"
+  from = "/docs/developer/references/sdk/dotnet-sdk"
+  to = "/docs/developer/references/SDK/dotnet-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/html5-sdk"
-  to = "docs/developer/references/SDK/html5-SDK"
+  from = "/docs/developer/references/sdk/html5-sdk"
+  to = "/docs/developer/references/SDK/html5-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/ios-sdk"
-  to = "docs/developer/references/SDK/ios-SDK"
+  from = "/docs/developer/references/sdk/ios-sdk"
+  to = "/docs/developer/references/SDK/ios-SDK"
   
 [[redirects]]
-  from = "docs/developer/references/sdk/java"
-  to = "docs/developer/references/SDK/java-SDK"
+  from = "/docs/developer/references/sdk/java"
+  to = "/docs/developer/references/SDK/java-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/node-js"
-  to = "docs/developer/references/SDK/nodejs-SDK"
+  from = "/docs/developer/references/sdk/node-js"
+  to = "/docs/developer/references/SDK/nodejs-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/php"
-  to = "docs/developer/references/SDK/php-SDK"
+  from = "/docs/developer/references/sdk/php"
+  to = "/docs/developer/references/SDK/php-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/python"
-  to = "docs/developer/references/SDK/python-SDK"
+  from = "/docs/developer/references/sdk/python"
+  to = "/docs/developer/references/SDK/python-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/ruby-sdk"
-  to = "docs/developer/references/SDK/ruby-SDK"
+  from = "/docs/developer/references/sdk/ruby-sdk"
+  to = "/docs/developer/references/SDK/ruby-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/react-native"
-  to = "docs/developer/references/SDK/react-native-SDK"
+  from = "/docs/developer/references/sdk/react-native"
+  to = "/docs/developer/references/SDK/react-native-SDK"
 
 [[redirects]]
-  from = "docs/developer/references/sdk/golang"
-  to = "docs/developer/references/SDK/golang-SDK"
+  from = "/docs/developer/references/sdk/golang"
+  to = "/docs/developer/references/SDK/golang-SDK"
