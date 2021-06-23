@@ -22,6 +22,9 @@ path: "/references/api/passwordless-login"
   | SmsTemplate | none | SMS Template name [**Optional**] |
   
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="passwordless-login-by-phone" endpoint="https://api.loginradius.com/identity/v2/auth/login/passwordlesslogin/otp" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"phone","default":""},{"key":"smsTemplate"}]}'></try-me-out>
  
 ## Passwordless Login By Email
@@ -40,6 +43,9 @@ path: "/references/api/passwordless-login"
   | VerificationUrl | none | Email verification url [**Optional**] |
   
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="passwordless-login-by-email" endpoint="https://api.loginradius.com/identity/v2/auth/login/passwordlesslogin/email" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"email","default":""},{"key":"passwordlessLoginTemplate"},{"key":"verificationUrl"}]}'></try-me-out>
  
 ## Passwordless Login Verification
@@ -58,6 +64,9 @@ path: "/references/api/passwordless-login"
   | welcomeEmailTemplate | none | Name of the welcome email template [**Optional**] |
   
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="passwordless-login-verification" endpoint="https://api.loginradius.com/identity/v2/auth/login/passwordlesslogin/email/verify" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"verificationToken","default":""},{"key":"fields"},{"key":"welcomeEmailTemplate"}]}'></try-me-out>
 
 ## Passwordless Login Phone Verification
@@ -81,6 +90,9 @@ path: "/references/api/passwordless-login"
   |Phone|New Phone Number | Model Class containing Definition of payload for PasswordLessLoginOtpModel API [**Required**]
   
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="passwordless-login-phone-verification" endpoint="https://api.loginradius.com/identity/v2/auth/login/passwordlesslogin/otp/verify" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"fields","default":""},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"otp":"", "phone":""}}'></try-me-out>
 
 [Go Back to Home Page](/)
