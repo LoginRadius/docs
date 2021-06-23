@@ -5,7 +5,8 @@ description: "This is a guide for setting up Multifactor Authentication."
 path: "/guide/mfa"
 ---
 
-<span class="devloper-premium plan-tag">Premium</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
 
 # Implement Two-Factor Authentication (2FA)
 

@@ -112,11 +112,12 @@ const ApiReferenceTemplate = ({ data, location }) => {
               </div>
 
               <div className={`content`}>
-                <ul className="breadcrumbs">
+                {/*<ul className="breadcrumbs">
                   {pathArray.map((e, i) =>
                     e ? <li key={`crumb-${e}`}> {e} </li> : null
                   )}
                 </ul>
+                  */}
                 {/* <div
                   dangerouslySetInnerHTML={{ __html: post.html }}
                   itemProp="articleBody"

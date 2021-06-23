@@ -5,6 +5,8 @@ description: "This is a guide for configuring SMS provider settings."
 path: "/guide/setup-sms-provider"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
 # Setup SMS Provider
 
 Setting up an SMS provider allows you to send and receive text messages to and from an SMS capable device over the network. LoginRadius Identity Platform establishes SMS communication by sending the SMS from your SMS provider to your consumers. To send out SMS from your SMS provider, you should follow the below steps.

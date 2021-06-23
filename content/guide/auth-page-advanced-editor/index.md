@@ -5,6 +5,8 @@ description: "This is a guide for customizing the HTML, scripts, and CSS of your
 path: "/guide/auth-page-advanced-editor"
 ---
 
+<span class="developer plan-tag">Developer</span>
+
 # Advanced Editor
 
 The Advanced Editor allows you to manually edit the HTML, Scripts, and CSS that make up your LoginRadius Auth Page (IDX).

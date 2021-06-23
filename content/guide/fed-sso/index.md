@@ -5,6 +5,8 @@ description: "This document covers the Federated SSO introduction and its protoc
 path: "/guide/fed-sso"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
 
 # Federated SSO
 

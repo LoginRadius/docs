@@ -5,6 +5,9 @@ description: "This document covers the Inbound SSO SAML - Azure AD introduction 
 path: "guide/inbound-sso-saml-azure-ad"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Inbound SSO SAML - Azure AD
 
 This document provides instructions to add a custom Identity provider (Azure) using Inbound SAML - SSO. As a result, it will allow your consumers to log in to your application with their Azure account using SSO.

@@ -5,6 +5,8 @@ description: "Configure your Custom Domain settings, which will replace LoginRad
 path: "/guide/customize-domain"
 ---
 
+<span class="developer plan-tag">Developer</span>
+
 # Setup Custom Domain
 
 Domain customization allows you to use your domain instead of redirecting your consumers to the LoginRadius domain. It will help you maintain consistency and give a frictionless experience to your consumers.

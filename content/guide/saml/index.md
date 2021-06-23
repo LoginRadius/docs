@@ -5,6 +5,9 @@ description: "This is a guide for connecting SAML app."
 path: "/guide/saml"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Connect SAML App 
 
 Security Assertion Markup Language (SAML) is an open-source framework for exchanging authentication and authorization data between an identity provider and a service provider where:

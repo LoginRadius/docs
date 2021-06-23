@@ -5,6 +5,8 @@ description: "This is a guide for managing the Phone Login method in LoginRadius
 path: "/guide/phone-login"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
 # Manage Phone Login
 
 The LoginRadius Identity Platform provides the Phone Login method to enable your consumer to register and log in using their phone number. After registration, your consumer must verify their phone number via a one-time password (OTP) before logging in.

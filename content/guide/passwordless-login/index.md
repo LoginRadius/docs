@@ -5,6 +5,8 @@ description: "This is a guide for managing the Passwordless Login method in Logi
 path: "/guide/passwordless-login"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
 # Manage Passwordless Login
 
 The LoginRadius Identity Platform provides the Passwordless Login method to enable your consumers to log in without providing a password. Upon initiating a Passwordless Login, an OTP/link is sent to your consumer's registered phone number or email address. When the OTP/link is verified, the consumer will be logged into their account.
