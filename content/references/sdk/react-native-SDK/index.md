@@ -2,7 +2,7 @@
 title: "React Native SDK Library"
 tags: ["React", "Native","SDK"]
 description: "This is a document detailing the LoginRadius React Native SDK Library."
-path: "/references/sdk/react-native"
+path: "/references/SDK/react-native-SDK"
 ---
 
 # React-Native SDK Library
@@ -23,18 +23,18 @@ You need to configure your LoginRadius user account with the following changes.
 
     ![alt_text](images/email-template.png "image_tooltip")
 
-2.  Generate SOTT: You will need to pass a SOTT value at the time of registration. You can generate this in the [Configuration](https://dashboard.loginradius.com/configuration) section of your Dashboard.
+2.  Generate SOTT: You will need to pass a SOTT value at the time of registration. You can generate this in the <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration</a> section of your Dashboard.
 
-   To access **Secure Mobile OTP Token configuration**, log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section.
+   To access **Secure Mobile OTP Token configuration**, log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Configuration** and then navigate to the **API Credentials** section.
 
     Click the down arrow and open the **Secure Mobile OTP Token** subsection, the below screen will appear:
 
   ![alt_text](../../../assets/blog-common/sott.png "image_tooltip")
 
-3. Get your [API credentials](https://dashboard.loginradius.com/configuration) to initialize SDK and whitelist your application domain as explained [here](/tutorial/react/#whitelist-your-domain).
+3. Get your <a href="https://dashboard.loginradius.com/configuration" target="_blank">API credentials</a> to initialize SDK and whitelist your application domain as explained <a href="https://www.loginradius.com/docs/developer/tutorial/react/#whitelist-your-domain" target="_blank">here</a>.
 
 
-Get a copy of the React Native SDK and demo projects from [here](https://github.com/LoginRadius/react-native-sdk) and include in your project.
+Get a copy of the React Native SDK and demo projects from <a href="https://github.com/LoginRadius/react-native-sdk" target="_blank">here</a> and include in your project.
 
 
 ```
@@ -76,7 +76,7 @@ Currently, only Facebook And Google is supported for native login with our SDK f
 
 #### Facebook Native Login
 
-Before you can implement native login, you should have a look at the necessary instructions. This [link](https://developers.facebook.com/docs/react-native/getting-started) will help you regarding the same.
+Before you can implement native login, you should have a look at the necessary instructions. This <a href="https://developers.facebook.com/docs/react-native/getting-started" target="_blank">link</a> will help you regarding the same.
 
 **Installation/Build Errors:**
 
@@ -183,7 +183,7 @@ The above code snippet helps you to get token from Facebook. Then, this token ca
 
 **Facebook Configuration for Facebook Native Login**
 
-Create a new Facebook App on the Facebook Developer site. You will need to create an Android application and get a Facebook Application ID: [https://developers.facebook.com/](https://developers.facebook.com/)
+Create a new Facebook App on the Facebook Developer site. You will need to create an Android application and get a Facebook Application ID: <a href="https://developers.facebook.com/" target="_blank">https://developers.facebook.com/</a>
 
 ##### Android
 
@@ -225,7 +225,7 @@ Facebook uses the key hash to authenticate interactions between your app and the
 
 ### Google Native Login
 
-Before you can implement native login, you must install the [react-native-google-signin](https://github.com/react-native-community/google-signin) into your current project for google native login.
+Before you can implement native login, you must install the <a href="https://github.com/react-native-community/google-signin" target="_blank">react-native-google-signin</a> into your current project for google native login.
 
 **Installation/Build Errors:**
 
@@ -239,9 +239,9 @@ If you're getting the above error,then you need to specify version of the react-
 
 #### Android
 
-*   To configure Android, generate a configuration file [here](https://firebase.google.com/?platform=android&cntapi=signin). Once Google Sign-In is enabled Google will automatically create necessary credentials in Developer Console. There is no need to add the generated google-services.json file into your react-native project.
+*   To configure Android, generate a configuration file <a href="https://firebase.google.com/?platform=android&cntapi=signin" target="_blank">here</a>. Once Google Sign-In is enabled Google will automatically create necessary credentials in Developer Console. There is no need to add the generated google-services.json file into your react-native project.
 
-*   After generating the configuration file, move to [Google Credentials Manager](https://console.developers.google.com/apis/credentials?pli=1) and select your project name (Which you have created) in the header section. Now Select Credentials from the left panel and copy the Client ID available under project's **web application**.
+*   After generating the configuration file, move to <a href="https://console.developers.google.com/apis/credentials?pli=1" target="_blank">Google Credentials Manager</a> and select your project name (Which you have created) in the header section. Now Select Credentials from the left panel and copy the Client ID available under project's **web application**.
 
 ![alt_text](images/google-native-android.png "image_tooltip")
 
@@ -271,7 +271,7 @@ If you're getting the above error,then you need to specify version of the react-
 
 #### iOS
 
-*   To get your iOS REVERSED_CLIENT_ID, generate a configuration file [here](https://developers.google.com/identity/sign-in/ios/start-integrating). This GoogleService-Info.plist and just drag & drop in your project's "Resources" folder.
+*   To get your iOS REVERSED_CLIENT_ID, generate a configuration file <a href="https://developers.google.com/identity/sign-in/ios/start-integrating" target="_blank">here</a>. This GoogleService-Info.plist and just drag & drop in your project's "Resources" folder.
 
 *   The file contains the REVERSED_CLIENT_ID you'll need during installation and also copy CLIENT_ID from "GoogleService-Info.plist" and pass this on lroptions
 

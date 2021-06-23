@@ -11,7 +11,7 @@ This guide explains how to customize behaviors for sending event-based emails an
 
 ## Access Email or SMS Settings Sections
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section.
 
 2. Click the down caret, and the **Email/SMS Provider Settings** screen will appear:
 
@@ -40,6 +40,9 @@ Click the **Reset** button to reset all email configurations to default values.
 Click the **Save** button to save your changes.
 
 ### SMS Settings
+
+<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p> </p>
 
 You can edit your application's SMS settings by clicking on the **SMS Settings** tab. The settings screen will show as below:
 

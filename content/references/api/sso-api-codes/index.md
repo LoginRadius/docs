@@ -1,3 +1,10 @@
+---
+title: "SSO API Response Codes"
+tags: ["SSO","API","Response","Codes"]
+description: "This is a document detailing the LoginRadius SSO API codes."
+path: "/references/api/sso-api-codes"
+---
+
 # SSO API Response Codes
 
 ---
@@ -27,7 +34,7 @@ This section details the LoginRadius SSO API codes and some suggestions on how t
 | 404        | Not Found             | The API endpoint is not correct or your account does not have sufficient permissions to access this endpoint.                                                                             |
 | 405        | Method not allowed    | Verify that you are accessing the API endpoint with the correct format (ie. Get or Post)
 |429          | Too Many Request      | Response status code indicates the user has sent too many requests in a given amount of time (i.e. rate limiting)                                                                                                  |
-| 500        | Internal Server Error | Something has gone wrong with the processing of the request, check your server error logs and [contact us](https://secure.loginradius.com/support/support-tickets) if the error persists. |
+| 500        | Internal Server Error | Something has gone wrong with the processing of the request, check your server error logs and <a href="https://secure.loginradius.com/support/support-tickets" target="_blank">contact us</a> if the error persists. |
 
 ## LoginRadius Error Response Descriptions:
 

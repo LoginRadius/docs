@@ -2,7 +2,7 @@
 title: iOS Library
 description: "A guide to implement LoginRadius SDK in iOS application."
 summary: "A guide to implement LoginRadius SDK in iOS application"
-path: "/references/sdk/ios-sdk"
+path: "/references/SDK/ios-SDK"
 ---
 
 # iOS SDK
@@ -10,13 +10,13 @@ path: "/references/sdk/ios-sdk"
 
 > **Disclaimer**: This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in an iOS app. You can download the iOS SDK from [here](https://github.com/LoginRadius/ios-sdk).
+This document provides instructions to integrate the LoginRadius User Registration Service or Social Login in an iOS app. You can download the iOS SDK from <a href="https://github.com/LoginRadius/ios-sdk" target="_blank">here</a>.
 
 ## SDK Installation
 
 We recommend using CocoaPods for installing the library in a project.
 
-[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
+<a href="http://cocoapods.org/" target="_blank">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ```
 $ gem install cocoapods
@@ -48,7 +48,7 @@ $ pod install
 ```
 
 ## Prerequisites
-[OS X](http://www.apple.com/macos/sierra/), [Xcode](https://developer.apple.com/xcode/) and iOS 9 or higher.
+<a href="http://www.apple.com/macos/sierra/" target="_blank">OS X</a>, <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> and iOS 9 or higher.
 
 
 ## Initialize SDK
@@ -66,7 +66,7 @@ $ pod install
 |customDomain    |String  |Optional, (Default URL: `https://api.loginradius.com/`)                               |
 
 
-> **Note**: You can get API Key and Site/App Name from the [Configuration](https://dashboard.loginradius.com/configuration) section of your LoginRadius Dashboard.
+> **Note**: You can get API Key and Site/App Name from the <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration</a> section of your LoginRadius Dashboard.
 
 
 3. Import the module in your source code.
@@ -137,13 +137,13 @@ Registration service supports email/password (traditional) registration and logi
 
 Registration Service is done through the Authentication API.
 
-Registration requires a parameter called SOTT. For more information regarding generating a SOTT, refer to this [document](/concepts/sott).
+Registration requires a parameter called SOTT. For more information regarding generating a SOTT, refer to this <a href="https://www.loginradius.com/docs/developer/concepts/sott" target="_blank">document</a>.
 
 **Parameters and their Description:**
 
 |Name|Description|Required|
 |---|----|----|
-|SOTT|Secure One-time Token which you can check information about SOTT [here](/concepts/sott)|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
+|SOTT|Secure One-time Token which you can check information about SOTT <a href="https://www.loginradius.com/docs/developer/concepts/sott" target="_blank" >here</a>|Yes for Registration.  You can generate a long term SOTT token from the Dashboard
 |smstemplate|SMS template allows you to customize the formatting and text of SMS sent by users who share your content.|NO|
 |emailTemplate|Email templates allow you to customize the formatting and text of emails sent by users who share your content. Templates can be text-only, or HTML and text, in which case the user's email client will determine which is displayed. |NO  Go To API Configuration -> Email Workflow to get the template names|
 
@@ -271,7 +271,7 @@ To integrate Web Social Login. Follow the steps
 
 **Facebook native login**
 
-> For Native Facebook login to work, create and configure your Facebook app as per [facebook docs](https://developers.facebook.com/docs/facebook-login/ios).
+> For Native Facebook login to work, create and configure your Facebook app as per <a href="https://developers.facebook.com/docs/facebook-login/ios" target="_blank">facebook docs</a>.
 
 You don't need to download and integrate the Facebook SDK with your project. It is distributed as a dependency with LoginRadius SDK. Just make sure your `Info.plist` looks like this
 
@@ -295,7 +295,7 @@ and you are calling
 }
 ```
 
-> Replace the values with your Facebook App ID and Display name from your App Settings page in [Facebook Developer portal](https://developers.facebook.com/)
+> Replace the values with your Facebook App ID and Display name from your App Settings page in <a href="https://developers.facebook.com/" target="_blank">Facebook Developer portal</a>
 
 Call the function to start Facebook Native Login.
 ```objectiveC
@@ -319,7 +319,7 @@ Call the function to start Facebook Native Login.
 As of iOS 11, Twitter Native Login is done through the TwitterKit Library. The TwitterKit library works to perform native login on previous iOS versions.
 
 First, you need to create a Twitter App.
-Get your Twitter Keys from [Twitter Dev Console](https://apps.twitter.com/). Go to your App Page and you will find the keys under __Keys And Access Tokens__ tab.
+Get your Twitter Keys from <a href="https://apps.twitter.com/" target="_blank">Twitter Dev Console</a>. Go to your App Page and you will find the keys under __Keys And Access Tokens__ tab.
 
 Then add "TwitterKit" Library to your iOS Project's `Podfile`.
 
@@ -327,7 +327,7 @@ Then add "TwitterKit" Library to your iOS Project's `Podfile`.
 pod 'TwitterKit'
 ```
 
-You can follow the original guide over at Twitter's [documentation](https://dev.twitter.com/twitterkit/ios/overview)
+You can follow the original guide over at Twitter's <a href="https://dev.twitter.com/twitterkit/ios/overview" target="_blank">documentation</a>
 
 Or follow these steps:
 

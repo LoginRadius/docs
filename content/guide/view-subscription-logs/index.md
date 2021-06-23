@@ -11,7 +11,7 @@ This guide explains how to view your application's subscription logs using the L
 
 ## Access Manage Apps Section
 
-Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. From the top right corner dropdown menu, click **Manage Apps**.
+Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. From the top right corner dropdown menu, click **Manage Apps**.
 
   ![alt_text](images/manage-apps.png "image_tooltip")
 

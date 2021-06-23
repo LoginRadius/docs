@@ -21,6 +21,9 @@ path: "/references/api/configuration"
   | TimeDifference | none | The time difference you would like to pass, If you not pass difference then the default value is 10 minutes [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="get-server-time" endpoint="https://api.loginradius.com/identity/v2/serverinfo" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"timeDifference","default":""}]}'></try-me-out>
 
 [Go Back to Home Page](/)

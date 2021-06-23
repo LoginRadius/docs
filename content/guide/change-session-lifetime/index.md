@@ -1,24 +1,26 @@
 ---
 title: "Change Session Lifetime"
-tags: ["Token", "Session","Lifetime","Change"]
+tags: ["Token", "Session", "Lifetime", "Change"]
 description: "This is a guide for Changing Session Lifetime."
 path: "/guide/change-session-lifetime"
 ---
 
+<span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
 # Change Session Lifetime
 
-Session Management allows you to control and manage your consumer’s login session. This feature is available through the **Token Lifetime** option inside the Session Management section. **Token lifetime** is the amount of time a consumer is logged in to your application until it expires and prompts the consumer to log back in. 
+Session Management allows you to control and manage your consumer’s login session. This feature is available through the **Token Lifetime** option inside the Session Management section. **Token lifetime** is the amount of time a consumer is logged in to your application until it expires and prompts the consumer to log back in.
 
 This time can be managed by the following steps:
 
 ## Step 1: Access Session Management
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Session Management** section. 
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Security** and then navigate to the **Session Management** section.
 
 2. Click the down arrow and the **Session Management** screen will appear.
 
    ![alt_text](./../../assets/blog-common/session-management-settings.png "image_tooltip")
-
 
 ## Step 2: Configure Token Lifetime
 
@@ -33,6 +35,5 @@ This time can be managed by the following steps:
    **Use Case**: A token having the expiration at 7.00 will be extended to the configured expiration time if your consumer logged in before the expiry (i.e., 7.00).
 
 2. Click the **Save** button.
-
 
 [Go Back to Home Page](/)

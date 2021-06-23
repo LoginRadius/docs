@@ -11,7 +11,7 @@ This guide explains how to manage your registered users using the LoginRadius Da
 
 ## Access Manage Users Section
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **User Management** and then navigate to the **Manage Users** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **User Management** and then navigate to the **Manage Users** section.
 
 2. Click the down caret, and the **Manage Users** screen will appear:
 
@@ -30,6 +30,9 @@ This guide explains how to manage your registered users using the LoginRadius Da
   * **Action**: The options that you can perform on your user. You can reset their password, block their account, or delete their account. For more details, refer to the [Supported Actions](#supported-actions) section of this document.
 
 ## View Blocked Users
+
+<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p> </p>
 
 You can check your blocked users by accessing the **Blocked Users** table. To access this table, click the **Blocked Users** link available at the bottom right of the screen:
 
@@ -78,6 +81,9 @@ You can mass import user data from another application/service/database into you
 Refer to the [Migrate User Data](/guide/migrate-user-data) document for more information.
 
 ## Supported Actions
+
+<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p> </p>
 
 > Note: You must have a **Developer Pro** plan subscription to access these actions in the LoginRadius Dashboard. You can otherwise utilize our APIs to manage your users.
 

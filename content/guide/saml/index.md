@@ -5,6 +5,9 @@ description: "This is a guide for connecting SAML app."
 path: "/guide/saml"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Connect SAML App 
 
 Security Assertion Markup Language (SAML) is an open-source framework for exchanging authentication and authorization data between an identity provider and a service provider where:
@@ -222,11 +225,11 @@ Each authentication system is unique and might require different configuration s
 
 Configure LoginRadius as a Service Provider in your application with the following values:
 
-1.   Enter [https://lr.hub.loginradius.com](https://lr.hub.loginradius.com) in Start URL.
+1.   Enter <a href="https://lr.hub.loginradius.com" target="_blank">https://lr.hub.loginradius.com</a> in Start URL.
 
-2.   Enter [https://lr.hub.loginradius.com/](https://lr.hub.loginradius.com/) in Entity Id.
+2.   Enter <a href="https://lr.hub.loginradius.com/">https://lr.hub.loginradius.com/</a> in Entity Id.
 
-3.   Enter [https://lr.hub.loginradius.com/saml/serviceprovider/AdfsACS.aspx](https://lr.hub.loginradius.com/saml/serviceprovider/AdfsACS.aspx) in ACS URL.
+3.   Enter <a href="https://lr.hub.loginradius.com/saml/serviceprovider/AdfsACS.aspx" target="_blank">https://lr.hub.loginradius.com/saml/serviceprovider/AdfsACS.aspx</a> in ACS URL.
 
 4.   Select Name Id format: **urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified.**
 
@@ -238,7 +241,7 @@ Download the metadata for SAML configuration.
 
 #### Access SAML
 
-1.  Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/).
+1.  Log in to your <a href="https://dashboard.loginradius.com/" target="_blank">LoginRadius Dashboard</a>.
 
 2.  Select your app, then from the left Navigation panel, click the **Integration** section and click **Add** in **Configured Integration** section
 
@@ -335,7 +338,7 @@ The below steps are if the **Add App** option is selected.
 
 9. Once all the required fields are completed, **scroll down** and click **Save**.
 
-> **Note:** The consumer should have an account with the same email address in your SAML application as well as in LoginRadius before using your SAML application to log in to the [LoginRadius Dashboard](https://dashboard.loginradius.com/).
+> **Note:** The consumer should have an account with the same email address in your SAML application as well as in LoginRadius before using your SAML application to log in to the <a href="https://dashboard.loginradius.com/" target="_blank">LoginRadius Dashboard</a>.
 
 ## SAML
 

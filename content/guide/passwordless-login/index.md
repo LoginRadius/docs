@@ -5,6 +5,8 @@ description: "This is a guide for managing the Passwordless Login method in Logi
 path: "/guide/passwordless-login"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
 # Manage Passwordless Login
 
 The LoginRadius Identity Platform provides the Passwordless Login method to enable your consumers to log in without providing a password. Upon initiating a Passwordless Login, an OTP/link is sent to your consumer's registered phone number or email address. When the OTP/link is verified, the consumer will be logged into their account.
@@ -19,13 +21,13 @@ You can implement the Passwordless Login method in two following ways:
 
 * **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
 
-> Note: If both Passwordless Login and [Two Factor Authentication (2FA)](/guide/mfa) are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
+> Note: If both Passwordless Login and <a href="https://www.loginradius.com/docs/developer/guide/mfa" target="_blank">Two Factor Authentication (2FA)</a> are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
 
 ## Configuration
 
 ### Step 1: Choose Login Method
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
@@ -39,7 +41,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 2: Configure Passwordless Login Templates
 
-1. Similar to the [Email/Password Login](/guide/emailpassword-login/) and [Phone Login](/guide/phone-login) methods, you can perform the following actions:
+1. Similar to the <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login/" target="_blank">Email/Password Login</a> and <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> methods, you can perform the following actions:
 
    * Edit templates associated with this login method.
    * Delete the login method from your application.

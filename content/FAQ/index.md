@@ -17,13 +17,13 @@ Find answers to any questions you might have about pricing and other aspects of 
 LoginRadius support team is available 24/7, and you can reach them through the:
 
 *  [Email Support](#what-is-the-email-id-for-raising-a-support-query)
-*  [Raise Support Ticket](https://loginradiusassist.freshdesk.com/support/home)
+*  <a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">Raise Support Ticket</a>
 *  [Live Chat](#how-do-i-contact-loginradius-support)
-*  [Support Document](https://www.loginradius.com/docs/developer/)
+*  <a href="https://www.loginradius.com/docs/developer/" target="_blank">Support Document</a>
 
 ### How to Retrieve API key and secret?
 
-* Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
 * Click the down arrow and the **API Credentials** screen will appear:
 
@@ -43,7 +43,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to reset the API Secret?
 
-* Login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
 
 * Click the **API Key And Secret** and the below screen will appear:
 
@@ -53,7 +53,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to access the LoginRadius Support section?
 
-* To access the LoginRadius Support section, login to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account, from the top header panel, click **Support** as displayed in the below screen.
+* To access the LoginRadius Support section, login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, from the top header panel, click **Support** as displayed in the below screen.
 
   ![alt_text](images/support.png "image_tooltip")
 
@@ -62,13 +62,30 @@ LoginRadius support team is available 24/7, and you can reach them through the:
   ![alt_text](images/need-help.png "image_tooltip")
 
 
+### How to upgrade the plan for your LoginRadius App?
+
+* Click the account icon from the right-top of your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> screen and select the **Manage Apps** option: 
+
+  ![alt_text](images/FAQ1.png "image_tooltip")
+
+The Manage App screen will appear.
+
+* Hover over the app tile for which you want to upgrade the plan, click the **App Actions** and then select the **Update Subscription** option: 
+
+  ![alt_text](images/FAQ2.png "image_tooltip")
+
+* Select a desired plan from the **Plan** drop-down and click the **Update** button.
+
+  ![alt_text](images/FAQ3.png "image_tooltip")
+
+
 ### How do I contact LoginRadius Support?
 
 * For quick, general, or verification-type questions, you can chat with a LoginRadius Support Team member by clicking the blue chat icon on the dashboard’s bottom right.
 
   ![alt_text](images/live-chat.png "image_tooltip")
 
-* Otherwise, submit a [Support Ticket](https://loginradiusassist.freshdesk.com/customer/login), located under the **Support** tab in the header panel. In the support ticket, please include any relevant code snippets and screenshots that can help our Support Team better understand your concern.
+* Otherwise, submit a <a href="https://loginradiusassist.freshdesk.com/customer/login" target="_blank">Support Ticket</a>, located under the **Support** tab in the header panel. In the support ticket, please include any relevant code snippets and screenshots that can help our Support Team better understand your concern.
 
    ![alt_text](images/support.png "image_tooltip")
 
@@ -77,9 +94,11 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 Once a support ticket is submitted, you will receive a confirmation email about ticket creation. A LoginRadius technician is then assigned based on the request urgency level, and you will receive updates on the ticket via email once the technician starts working on it.
 
+
 ### Do you provide support in our time zone?
 
 Yes. LoginRadius provides 24/7 support, the LoginRadius Support Team will always be available to help you regardless of your time zone.
+
 
 ### How do I create/review support tickets?
 
@@ -88,15 +107,19 @@ Yes. LoginRadius provides 24/7 support, the LoginRadius Support Team will always
    ![alt_text](images/freshdesk.png "image_tooltip")
 
 * **New Support Ticket**: You can create a new support ticket.
+
 * **Check Ticket Status**: Check the status of the existing ticket you submitted earlier.
+
 
 ### What is the Email ID for raising a support query?
 
 * Reach out to us at **help@loginradius.com**
 
+
 ### How do I retrieve the provider access token?
 
-With the extended profile data set, which you can view on the [LoginRadius datapoints page](https://www.loginradius.com/datapoints/), you can retrieve the access token that is generated by the social provider. You have access to the provider-generated access token through the data point "**Provider Access Credential**". You can use this token with direct API requests using the specific social providers' APIs.
+With the extended profile data set, which you can view on the <a href="https://www.loginradius.com/datapoints/" target="_blank">LoginRadius datapoints page</a>, you can retrieve the access token that is generated by the social provider. You have access to the provider-generated access token through the data point "**Provider Access Credential**". You can use this token with direct API requests using the specific social providers' APIs.
+
 
 ### What is the token lifetime for Facebook, Google and Twitter?
 
@@ -169,14 +192,14 @@ This is the list of browsers that are supported by LoginRadius, including the di
 
 Ask about products, implementation, use cases, and more— we are ready to help!
 
-[Get In Touch](https://www.loginradius.com/contact-sales/)
+<a href="https://www.loginradius.com/contact-sales/" target="_blank">Get In Touch</a>
 
 
 ## Technical Support
 
 Have questions or issues with our product?
 
-[Support for Developer Plans](https://loginradiusassist.freshdesk.com/customer/login)
+<a href="https://loginradiusassist.freshdesk.com/customer/" target="_blank">"Support for Developer Plans</a>
 
 
 ## Careers
@@ -184,4 +207,3 @@ Have questions or issues with our product?
 Want to work with us? We are always looking for talented people.
 
 <a href="https://www.loginradius.com/careers/" target="_blank">Explore Our Jobs</a>
-

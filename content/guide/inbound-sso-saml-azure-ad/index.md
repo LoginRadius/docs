@@ -5,9 +5,12 @@ description: "This document covers the Inbound SSO SAML - Azure AD introduction 
 path: "guide/inbound-sso-saml-azure-ad"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Inbound SSO SAML - Azure AD
 
-This document provides instructions to add a custom Identity provider using SAML SSO.  
+This document provides instructions to add a custom Identity provider (Azure) using Inbound SAML - SSO. As a result, it will allow your consumers to log in to your application with their Azure account using SSO.
 
 ## Azure AD Configuration
 
@@ -17,21 +20,21 @@ This document provides instructions to add a custom Identity provider using SAML
 
 3. In the left navigation pane, click the **Enterprise Applications**, the below screen will appear:
 
-![alt_text](images/image1.png "image_tooltip")
+   ![alt_text](images/enterprise_azure.png "image_tooltip")
 
 4. Click the **+ New application** and then click the **+ Create your own application**, as highlighted below:
 
-![alt_text](images/image2.png "image_tooltip")
+   ![alt_text](images/gallery_azure.png "image_tooltip")
 
 5. Enter the name of your app and click the **Create** button. Upon app creation, you will be redirected to your application page.
 
 6. Click the **Set up single sign on** card from the below screen:
 
-![alt_text](images/image3.png "image_tooltip")
+   ![alt_text](images/setup_sso.png "image_tooltip")
 
 7. Click the SAML as a single sign-on method, and the below screen will appear:
 
-![alt_text](images/image4.png "image_tooltip")
+   ![alt_text](images/newtest.png "image_tooltip")
 
 8. Click the Edit icon given next to the **Basic SAML Configuration** and enter below SAML configuration:
 
@@ -49,21 +52,22 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
 1. Log into your LoginRadius Dashboard account, select your app and then navigate to the Integration section.
 
-The following screen will appear:
+   The following screen will appear:
 
-![alt_text](images/image5.png "image_tooltip")
+   ![alt_text](images/integration_configure.png "image_tooltip")
 
 2. Click the Add button for adding a new Inbound SSO SAML app. The configuration options will appear.
 
-3. Search for Inbound SSO SAML in the search bar, locate Inbound SSO SAML and click the Let’s Configure option.
+3. Search for Inbound SSO SAML in the search bar, locate Inbound SSO SAML and click the  Let’s Configure option.
 
-![alt_text](images/image6.png "image_tooltip")
+   ![alt_text](images/integrations_available.png "image_tooltip")
 
-The following screen will appear:
+   The following screen will appear:
 
-![alt_text](images/image7.png "image_tooltip")
+   ![alt_text](images/custom_saml_provider.png "image_tooltip")
 
 4. Enter or select the following values:
+
 * Enter the Provider Name.
 
 * Enter the Display Provider Name.
@@ -88,6 +92,7 @@ The following screen will appear:
 
 
 5. Click the **Save** button to save the configuration.
+
 You have successfully configured **Azure** IDP using Inbound SSO SAML. Open Auth Page(IDX) of your app, and the **Login with Azure AD** option will appear:
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/login_azure.png "image_tooltip")

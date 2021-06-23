@@ -5,6 +5,8 @@ description: "This document covers the Federated SSO introduction and its protoc
 path: "/guide/fed-sso"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
 
 # Federated SSO
 
@@ -38,9 +40,9 @@ The LoginRadius Dashboard allows you to configure the SAML app by customizing th
 
 For more information, refer to the following documents:
 
-* [LoginRadius SAML Document](../../guide/saml)
+* <a href="https://www.loginradius.com/docs/developer/guide/saml" target="_blank">LoginRadius SAML Document</a>
 
-* [SAML Specs Document](http://saml.xml.org/saml-specifications)
+* <a href="http://saml.xml.org/saml-specifications" target="_blank>SAML Specs Document</a>
 
 ### JWT
 
@@ -48,9 +50,9 @@ This protocol allows you to generate a JSON format encrypted token. LoginRadius 
 
 For more information, refer to the following documents:
 
-* [LoginRadius JWT Document](../../guide/jwt)
+* <a href="https://www.loginradius.com/docs/developer/guide/jwt" target="_blank">LoginRadius JWT Document</a>
 
-* [JWT RFC 7519](https://tools.ietf.org/html/rfc7519)
+* <a href="https://tools.ietf.org/html/rfc7519" target="_blank">JWT RFC 7519</a>
 
 ### OAuth
 
@@ -58,17 +60,17 @@ LoginRadius Identity Platform can function as either an OAuth 2 Identity Provide
 
 LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
-* [LoginRadius OAuth Document](../../guide/oauth)
+* <a href="https://www.loginradius.com/docs/developer/guide/oauth" target="_blank">LoginRadius OAuth Document</a>
 
-* [OAuth 2 RFC 6749](https://tools.ietf.org/html/rfc6749)
+* <a href="https://tools.ietf.org/html/rfc6749" target="_blank">OAuth 2 RFC 6749</a>
 
 ### OpenID Connect
 
 LoginRadius Identity Platform provides a way to integrate your OpenID client with our APIs by following the standards. LoginRadius Dashboard allows you to configure the OAuth App. For more information, refer to the following documents:
 
-* [LoginRadius OpenID Connect Document](../../guide/oidc)
+* <a href="https://www.loginradius.com/docs/developer/guide/oidc" target="_blank">LoginRadius OpenID Connect Document</a>
 
-* [OpenID Connect Specs](https://openid.net/specs/openid-authentication-2_0.html)
+* <a href="https://openid.net/specs/openid-authentication-2_0.html" target="_blank">OpenID Connect Specs</a>
 
 
 

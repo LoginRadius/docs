@@ -5,6 +5,9 @@ description: "This is a document detailing registration schema customizations."
 path: "/references/javascript-library/customizing-your-registration-schema"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Customizing Your Registration Schema
 
 Your application follows a configured schema which populates the registration forms generated using the LoginRadius JavaScript Library (LoginRadiusV2.js). You are free to override this default configuration during the initialization of the JavaScript Library.
@@ -77,9 +80,9 @@ The array of options to provide as selectable to the consumer. This key is only 
 
 ## Adding Fields
 
-As mentioned in the JavaScript Library [Getting Started](/references/javascript-library/getting-started#registration) document, the registration schema objects are contained in the `LRObject.registrationFormSchema` array object.
+As mentioned in the JavaScript Library <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started#registration" target="_blank">Getting Started</a> document, the registration schema objects are contained in the `LRObject.registrationFormSchema` array object.
 
-You can add to the default schema by utilizing the [Process Start Hook](/references/javascript-library/hooks#process-start-hook) for the `registrationSchema` event and concatenating additional schema objects to the `LRObject.registrationFormSchema` array object.
+You can add to the default schema by utilizing the <a href="https://www.loginradius.com/docs/developer/references/javascript-library/hooks#process-start-hook" target="_blank">Process Start Hook</a> for the `registrationSchema` event and concatenating additional schema objects to the `LRObject.registrationFormSchema` array object.
 
 For example, here we are adding schemas utilizing the `company`, `firstname` and `lastname` data fields to `LRObject.registrationFormSchema`.
 

@@ -9,11 +9,11 @@ path: "/tutorial/php"
 
 The tutorial lets you implement LoginRadius user registration, login, and view profile on your PHP web application. 
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
-When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - [Auth Page (IDX)](/concepts/idx).
+When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
-Auth Page (IDX) reflects the configuration changes that you make in [LoginRadius Dashboard](https://dashboard.loginradius.com/getting-started). You can utilize this webpage for authentication requirements on your PHP application.
+Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your PHP application.
 
 
 ## Choose Theme
@@ -33,7 +33,7 @@ To preview your login page's theme, click the **Go to your Login Page** link hig
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
@@ -41,9 +41,9 @@ In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](h
 
 ## Setup PHP 
 
-In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/LoginRadius/php-sdk) to retrieve the user profile after login. To obtain a copy of the SDK, there are two methods:
+In this example, we will leverage the <a href="https://github.com/LoginRadius/php-sdk" target="_blank">LoginRadius PHP SDK</a> to retrieve the user profile after login. To obtain a copy of the SDK, there are two methods:
 
-1. Install the SDK through [Composer](http://getcomposer.org/):
+1. Install the SDK through <a href="http://getcomposer.org/" target="_blank">Composer</a>:
 
     `curl -sS https://getcomposer.org/installer | php`
 
@@ -51,7 +51,7 @@ In this example, we will leverage the [LoginRadius PHP SDK](https://github.com/L
 
     `composer require loginradius/php-sdk:11.0.0`
 
-2. Clone or download the source from [LoginRadius official github repository.](https://github.com/LoginRadius/php-sdk)
+2. Clone or download the source from <a href="https://github.com/LoginRadius/php-sdk" target="_blank">LoginRadius official github repository.</a>
 
 <br>
 
@@ -227,7 +227,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 ## Run and See Result
 
-- To run the sample application locally for testing purposes, we will utilize [XAMPP](https://www.apachefriends.org/index.html) to deploy a local PHP server.
+- To run the sample application locally for testing purposes, we will utilize <a href="https://www.apachefriends.org/index.html" target="_blank">XAMPP</a> to deploy a local PHP server.
 
 - With XAMPP installed, navigate to the XAMPP installation folder and locate the `htdocs` folder. Now copy the `lr-php-demo` folder we created earlier and paste it inside `htdocs`.
 
@@ -245,13 +245,13 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](https://www.loginradius.com/docs/developer/concepts/idx-overview/) for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
 ##  Whitelist Your Domain
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default. 
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
@@ -261,26 +261,26 @@ To whitelist your domain, in your LoginRadius Dashboard, navigate to **[Configur
 
 The tutorial above walks through a quick PHP implementation to import the SDK and leverage it to process user data from LoginRadius in the frontend. For a more structured example of a PHP server, check out the demo and SDK references from our LoginRadius repository.
 
-**[GitHub Demo/SDK Link](https://github.com/LoginRadius/php-sdk)**   |   **[Download Demo](https://github.com/LoginRadius/php-sdk/archive/master.zip)**   
+**<a href="https://github.com/LoginRadius/php-sdk" target="_blank">GitHub Demo/SDK Link</a>**   |   **<a href="https://github.com/LoginRadius/php-sdk/archive/master.zip" target="_blank">Download Demo</a>**   
 
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## PHP SDK Reference
 
-[PHP SDK](/references/sdk/php)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/php-SDK" target="_blank">PHP SDK</a>
 
 ## API Reference
 

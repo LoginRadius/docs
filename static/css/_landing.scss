@@ -2,6 +2,7 @@
   h1 {
     margin-bottom: 24px;
     font-size: 44px;
+    font-weight: 500;
   }
   p {
     margin-bottom: 24px;
@@ -117,15 +118,13 @@
         max-width: 485px;
         max-height: 355px;
         min-height: 355px;
-        border-radius: 8px;
-        @media (max-width: 1024px) {
-        }
+        border-radius: 10px;
       }
     }
   }
   .video-thumbnail {
     position: relative;
-    background-image: url(../images/video-thumbnail.jpg);
+    background-image: url("../images/video-thumbnail.jpg");
     background-position: top -60px center;
     .video-logo {
       padding: 24px 0 0 24px;

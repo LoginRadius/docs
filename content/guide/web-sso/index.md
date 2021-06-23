@@ -5,6 +5,9 @@ summary: "A guide on how to implement web sso in any web application"
 path: "/guide/web-sso"
 ---
 
+<span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
 # Enable Web SSO
 
 Single sign-on (SSO) is the authentication mechanism, which allows consumers to sign in to different applications with a single digital identity. Also, upon signing into one application consumer is signed into another (SSO enabled) application automatically. 

@@ -2,20 +2,20 @@
 title: "PHP SDK"
 tags: ["PHP", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a PHP application."
-path: "/references/sdk/php"
+path: "/references/SDK/php-SDK"
 ---
 
 # PHP SDK
 
 >**Disclaimer:** This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-This document contains information and examples regarding the LoginRadius PHP SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter. You can get the SDK from [here](https://github.com/LoginRadius/php-sdk) 
+This document contains information and examples regarding the LoginRadius PHP SDK. It provides guidance for working with social authentication, user profile data, and auth implementation with a variety of social networks such as Facebook, Google, Twitter. You can get the SDK from <a href="https://github.com/LoginRadius/php-sdk" target="_blank">here</a>
 
-For a more hands-on tutorial on setting up the SDK and using it in a PHP application to make LoginRadius API calls, check out our [PHP Tutorial.](/tutorial/php)
+For a more hands-on tutorial on setting up the SDK and using it in a PHP application to make LoginRadius API calls, check out our <a href="https://www.loginradius.com/docs/developer/tutorial/php" target="_blank">PHP Tutorial.</a>
 
 ## SDK Installation
 
-The recommended way to install is through [Composer](http://getcomposer.org/).
+The recommended way to install is through <a href="http://getcomposer.org/" target="_blank">Composer</a>.
  
 ```
 # Install Composer
@@ -83,7 +83,7 @@ define('PASSWORD', 'PROXY_PASSWORD'); // Replace PROXY_PASSWORD with your proxy 
 define('API_DOMAIN', 'DEFINE_CUSTOM_API_DOMAIN');   // Custom API Domain
 ```
 
->Replace `LOGINRADIUS_SITE_NAME_HERE`, `LOGINRADIUS_API_KEY_HERE` and  `LOGINRADIUS_API_SECRET_HERE` in the above code with your LoginRadius Site Name, LoginRadius API Key, and Secret which you can get [here](https://dashboard.loginradius.com/configuration)
+>Replace `LOGINRADIUS_SITE_NAME_HERE`, `LOGINRADIUS_API_KEY_HERE` and  `LOGINRADIUS_API_SECRET_HERE` in the above code with your LoginRadius Site Name, LoginRadius API Key, and Secret which you can get <a href="https://dashboard.loginradius.com/configuration" target="_blank">here</a>
 
 
 >If you have Custom API Domain then define 'API_DOMAIN' then replaced it with your custom API domain, Otherwise no need to define this option in configuration.
@@ -565,7 +565,7 @@ $accountAPI = new AccountAPI();
 
 
 ##### Account Update (PUT)
-This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/'>Here</a> for more capabilities.
+This API is used to update the information of existing accounts in your Cloud Storage. See our Advanced API Usage section <a href='https://www.loginradius.com/docs/api/v2/customer-identity-api/advanced-api-usage/' target="_blank">Here</a> for more capabilities.
  
 
  ```php

@@ -12,9 +12,9 @@ The purpose of this tutorial is to help you with implementing LoginRadius user r
 > This tutorial assumes that you have Visual Studio 2019 with &#46;NET Framework installed.
 
 
-When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the [Auth Page (IDX)](/concepts/idx). When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your Web Forms application.
+When you signed up for a LoginRadius account, an app was created for you. This app is linked to a ready to use web page, known as the <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>. When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX). You can utilize this web page for your authentication requirements in your Web Forms application.
 
-> [Create an account](https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register) to get started if you don't have one yet!
+> <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
 ## Choose Theme
 
@@ -30,7 +30,7 @@ To preview your theme and content, click the **Go to your Login Page** link as h
 
 Before using any of the APIs or methods that LoginRadius provides, you will need to retrieve your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **[Configuration > API Credentials](https://dashboard.loginradius.com/configuration)**, and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>**, and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -50,7 +50,7 @@ Set up a Web Forms project as explained below:
 
 This tutorial uses JavaScript to make API calls to LoginRadius.
 
-- Download the LoginRadius HTML5 SDK from **[Github](https://github.com/LoginRadius/HTML5-SDK)**. You will find the SDK script file `LoginRadiusV2SDK.x.x.x.js` or `LoginRadiusV2SDK.x.x.x.min.js` (minified version) under `html5-sdk/lib`.
+- Download the LoginRadius HTML5 SDK from **<a href="https://github.com/LoginRadius/HTML5-SDK" target="_blank">Github</a>**. You will find the SDK script file `LoginRadiusV2SDK.x.x.x.js` or `LoginRadiusV2SDK.x.x.x.min.js` (minified version) under `html5-sdk/lib`.
 
 - Save the SDK script in your project's directory. In this example, we've saved it in our project's `Scripts` folder like:
 
@@ -342,33 +342,33 @@ From here, you can use JQuery or Vanilla JavaScript to populate your web page wi
   }
   ```
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to [this document](/concepts/idx) for more information.
+> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">this document</a> for more information.
 
 ## Whitelist Your Domain
 
 For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard navigate to **[Configuration > Whitelist Your Domain](https://dashboard.loginradius.com/configuration)** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 ## Recommended Next Steps
 
-[How to manage email templates for verification and forgot password](/guide/customize-email-and-sms-settings)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-[How to personalize interfaces and branding of login pages](/guide/customize-auth-page)
+<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-[How to configure SMTP settings for sending emails to consumers](/guide/setup-your-smtp-provider)
+<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-[How to implement Social Login options like Facebook, Google](/guide/social-login)
+<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-[How to implement Phone Login](/guide/phone-login)
+<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-[How to implement Passwordless Login](/guide/passwordless-login)
+<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Dotnet SDK Reference
 
-[Dotnet SDK](/references/sdk/dotnet-sdk)
+<a href="https://www.loginradius.com/docs/developer/references/SDK/dotnet-SDK" target="_blank">Dotnet SDK</a>
 
 ## API Reference
 

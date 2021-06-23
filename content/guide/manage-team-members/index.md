@@ -5,6 +5,7 @@ description: "This is a guide for Managing Team Members."
 path: "/guide/manage-team-members"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Manage Team Members
 This section helps view and manage your authorized Team Members who can manage your LoginRadius site.
@@ -17,7 +18,7 @@ Team Management screen has the following options:
 
 ## Access Team Management Section
 
-1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/dashboard) account.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 2. Select your app, then from the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
 
    ![alt_text](images/team-management.png "image_tooltip")
