@@ -6,6 +6,7 @@ path: "/guide/web-sso"
 ---
 
 <span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Enable Web SSO
 

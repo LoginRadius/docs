@@ -6,6 +6,7 @@ path: "/guide/enable-force-logout"
 ---
 
 <span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Enable Force Logout
 

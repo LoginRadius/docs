@@ -5,8 +5,6 @@ description: "step by step guide to configure webhook."
 path: "/guide/webhook"
 ---
 
-<span class="developer plan-tag">Developer</span>
-
 # Setup Webhooks
 
 Webhooks allow you to build or set up integrations that subscribe to certain events on LoginRadius. When one of these events is triggered, LoginRadius automatically sends a POST payload over HTTPS to the Webhook's configured URL in real-time. You can use Webhooks to update an external tracker or update a backup mirror.

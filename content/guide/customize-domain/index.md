@@ -6,6 +6,7 @@ path: "/guide/customize-domain"
 ---
 
 <span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Setup Custom Domain
 
