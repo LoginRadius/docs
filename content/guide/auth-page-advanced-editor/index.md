@@ -6,6 +6,7 @@ path: "/guide/auth-page-advanced-editor"
 ---
 
 <span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Advanced Editor
 

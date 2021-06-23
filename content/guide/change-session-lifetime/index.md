@@ -6,6 +6,7 @@ path: "/guide/change-session-lifetime"
 ---
 
 <span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Change Session Lifetime
 
