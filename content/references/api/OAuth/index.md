@@ -46,9 +46,14 @@ This is what a sample response looks like:
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+  
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="request-tokens" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token" method="POST" params='{"templateParams":[{"key":"OAuthName","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","device_code":"","grant_type":""}}'></try-me-out>
 
 ## Access token by OAuth 2 token
@@ -83,9 +88,14 @@ This is what a sample response looks like:
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+  
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="access-token-by-oauth2-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/access_token" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","redirect_uri":"","response_type":"","code":""}}'></try-me-out>
 
 ## Access Token by Account Password
@@ -119,9 +129,14 @@ This is what a sample response looks like:
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+  
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="access-token-by-account-password" endpoint="https://cloud-api.loginradius.com/sso/oauth/access_token" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","grant_type":"","username":"","password":""}}'></try-me-out>
 
 ## Request Device Code
@@ -162,9 +177,14 @@ This is what a sample response looks like:
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+  
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="request-device-code" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device" method="POST" params='{"templateParams":[{"key":"OAuthName"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","scope":""}}'></try-me-out>
 
 ## Refresh Access Token
@@ -199,9 +219,14 @@ This is what a sample response looks like:
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+  
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="refresh-access-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","grant_type":"","refresh_token":""}}'></try-me-out>
 
 ## Revoke Refresh Token
@@ -225,9 +250,14 @@ The server successfully processed the request, and is not returning any content.
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="revoke-refresh-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/refresh_token/revoke" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","refresh_token":""}}'></try-me-out>
 
 

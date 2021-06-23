@@ -23,6 +23,9 @@ path: "/references/api/authentication"
   | VerificationUrl | none | Email verification url [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-add-email" endpoint="https://api.loginradius.com/identity/v2/auth/email" method="POST" params='{"queryParams":[{"key":"access_token"},{"key":"apiKey","default":""},{"key":"verificationUrl","default":""},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"example@example.com","type":"Secondary"}}'></try-me-out>
  
 ## Auth Login by Email
@@ -48,6 +51,9 @@ path: "/references/api/authentication"
   |password|Password for the email | Model Class containing Definition of payload for Email Authentication API [**Required**]
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-login-by-email" endpoint="https://api.loginradius.com/identity/v2/auth/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"verificationUrl","default":""},{"key":"loginUrl"},{"key":"emailTemplate"},{"key":"fields"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"example@example.com","password":""}}'></try-me-out>
  
 ## Auth Forgot Password
@@ -65,6 +71,9 @@ path: "/references/api/authentication"
   | EmailTemplate | none | Email template name [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-forgot-password" endpoint="https://api.loginradius.com/identity/v2/auth/password" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"resetPasswordUrl","default":""},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"example@example.com"}}'></try-me-out>
 
 ## Auth User Registration by Email
@@ -86,6 +95,9 @@ path: "/references/api/authentication"
   | WelcomeEmailTemplate | none | Name of the welcome email template [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-user-registration-by-email" endpoint="https://api.loginradius.com/identity/v2/auth/register" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"sott","default":""},{"key":"emailTemplate"},{"key":"fields"},{"key":"options"},{"key":"verificationUrl"},{"key":"welcomeEmailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"FirstName":"Test","LastName":"Account","Email":[{"Type":"Primary","Value": "example@example.com"}],"Password":"xxxxxxxxxxxx"}}'></try-me-out>
 
   ### Body Attributes
@@ -97,6 +109,9 @@ path: "/references/api/authentication"
   |Password|Password for the email | Model Class containing Definition of payload for Auth User Registration API [**Required**]
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-user-registration-by-email" endpoint="https://api.loginradius.com/identity/v2/auth/register" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"sott","default":""},{"key":"emailTemplate"},{"key":"fields"},{"key":"options"},{"key":"verificationUrl"},{"key":"welcomeEmailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"FirstName":"Test","LastName":"Account","Email":[{"Type":"Primary","Value": "example@example.com"}],"Password":"xxxxxxxxxxxx"}}'></try-me-out>
 
 ## Auth User Registration By Captcha
@@ -127,6 +142,9 @@ path: "/references/api/authentication"
   |Password|Password for the email | Model Class containing Definition of payload for Auth User Registration by Recaptcha API [**Required**]
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-user-registration-by-captcha" endpoint="https://api.loginradius.com/identity/v2/auth/register/captcha" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"emailTemplate"},{"key":"fields"},{"key":"options"},{"key":"verificationUrl"},{"key":"welcomeEmailTemplate"},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"FirstName":"Test","LastName":"Account","Email":[{"Type":"Primary","Value":"example@example.com"}],"Password":"xxxxxxxxxxxx","g-recaptcha-response":""}}'></try-me-out>
 
 ## Auth Validate Access Token
@@ -143,6 +161,9 @@ path: "/references/api/authentication"
   | apikey | none | LoginRadius API Key [**Required**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-validate-access-token" endpoint="https://api.loginradius.com/identity/v2/auth/access_token/validate" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"}]}'></try-me-out>
  
 ## Access Token Invalidate
@@ -160,6 +181,9 @@ path: "/references/api/authentication"
   | PreventRefresh | none | Boolean value that when set as true, in addition of the access token being invalidated, it will no longer have the capability of being refreshed. [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="access-token-invalidate" endpoint="https://api.loginradius.com/identity/v2/auth/access_token/invalidate" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"},{"key":"preventRefresh"}]}'></try-me-out>
 
 ## Access Token Info
@@ -175,7 +199,10 @@ path: "/references/api/authentication"
   | access_token | none | Uniquely generated identifier key by LoginRadius that is activated after successful authentication. [**Required**] |
   | apikey | none | LoginRadius API Key [**Required**] |
 
-  ### Try Me Out
+  ### Try Me Out  
+
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="access-token-info" endpoint="https://api.loginradius.com/identity/v2/auth/access_token" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"}]}'></try-me-out>
  
 ## Auth Get Profiles by Token
@@ -193,6 +220,9 @@ path: "/references/api/authentication"
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-get-profiles-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/account" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"},{"key":"fields"}]}'></try-me-out>
  
 ## Auth Delete Account
@@ -209,6 +239,9 @@ path: "/references/api/authentication"
   | deletetoken | none | Delete token received in the email [**Required**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-delete-account" endpoint="https://api.loginradius.com/identity/v2/auth/account/delete" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"deleteToken"}]}'></try-me-out>
  
 ## Auth Check Email Availability
@@ -225,6 +258,9 @@ path: "/references/api/authentication"
   | Email | none | Email of the user [**Required**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-check-email-availability" endpoint="https://api.loginradius.com/identity/v2/auth/email" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"email"}]}'></try-me-out>
   
 ## Auth Verify Email
@@ -244,6 +280,9 @@ path: "/references/api/authentication"
   | WelcomeEmailTemplate | none | Name of the welcome email template [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-verify-email" endpoint="https://api.loginradius.com/identity/v2/auth/email" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"verificationToken"},{"key":"fields"},{"key":"url"},{"key":"welcomeEmailTemplate"}]}'></try-me-out>
  
 ## Auth Social Identity
@@ -261,6 +300,9 @@ path: "/references/api/authentication"
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-social-identity" endpoint="https://api.loginradius.com/identity/v2/auth/socialIdentity" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"},{"key":"fields"}]}'></try-me-out>
 
  
@@ -289,6 +331,9 @@ path: "/references/api/authentication"
   |LastName|user's last name | Model Class containing Definition of payload for User Profile update API [**Required**]
   
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-update-profile-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/account" method="PUT" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey","default":""},{"key":"emailTemplate"},{"key":"fields"},{"key":"nullSupport"},{"key":"smsTemplate"},{"key":"verificationUrl"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"FirstName":"", "LastName":""}}'></try-me-out>
 
 ## Auth Reset Password by Reset Token
@@ -312,6 +357,9 @@ path: "/references/api/authentication"
   | resetpasswordemailtemplate | Reset password email template. [**Optional**]
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-reset-password-by-reset-token" endpoint="https://api.loginradius.com/identity/v2/auth/password/reset" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"resettoken":"","password":"","welcomeemailtemplate": "","resetpasswordemailtemplate":""}}'></try-me-out>
 
 ## Auth Resend Email Verification
@@ -329,6 +377,9 @@ path: "/references/api/authentication"
   | verificationUrl | none | Email verification url [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-resend-email-verification" endpoint="https://api.loginradius.com/identity/v2/auth/register" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"emailTemplate"},{"key":"verificationUrl"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":""}}'></try-me-out>
 
 ## Auth Delete Account with Email Confirmation
@@ -347,6 +398,9 @@ path: "/references/api/authentication"
   | EmailTemplate | none | Email template name [**Optional**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-delete-account-with-email-confirmation" endpoint="https://api.loginradius.com/identity/v2/auth/account" method="DELETE" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"},{"key":"deleteUrl"},{"key":"emailTemplate"}]}'></try-me-out>
  
 ## Auth Remove Email
@@ -363,6 +417,9 @@ path: "/references/api/authentication"
   | apikey | none | LoginRadius API Key [**Required**] |
 
   ### Try Me Out
+    
+  Enter query parameters and send a request to view the sample response.
+
   <try-me-out id="auth-remove-email" endpoint="https://api.loginradius.com/identity/v2/auth/email" method="DELETE" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":""}}'></try-me-out>
 
 [Go Back to Home Page](/)

@@ -166,9 +166,14 @@ Use this API to get JWT token by access token by email
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="jwt-token-by-email" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"","password":""}}'></try-me-out>
 
 This is sample API code:
@@ -297,9 +302,14 @@ Use this API to get JWT token by access token by Phone
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+  
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="jwt-token-by-phone" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}'></try-me-out>
 
 This is sample API code:
@@ -419,9 +429,14 @@ Use this API to get JWT token by access token.
 
 ### API Error Codes
 
+Find common API error codes and their description.
+
 * <a href="https://www.loginradius.com/docs/developer/references/api/sso-api-codes" target="_blank">API Error Codes</a>
 
 ### Try Me Out
+
+Enter query parameters and send a request to view the sample response.
+
 <try-me-out id="jwt-token" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/token" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"access_token","default":""},{"key":"jwtApp"}]}'></try-me-out>
 
 
