@@ -5,6 +5,9 @@ description: "This document covers the Inbound SSO SAML - Salesforce introductio
 path: "guide/inbound-sso-saml-salesforce"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Inbound SSO SAML - Salesforce
 
 This document provides instructions to add a custom Identity provider (Salesforce) using Inbound SAML - SSO. As a result, it will allow your consumers to log in to your application with their Salesforce account using SSO.  

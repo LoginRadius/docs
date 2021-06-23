@@ -5,6 +5,8 @@ description: "This is a guide for integrating and configuring BigCommerce in the
 path: "/guide/big-commerce"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
 
 # BigCommerce
 

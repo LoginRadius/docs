@@ -5,6 +5,9 @@ description: "This is a guide to all the 3rd party integrations available with L
 path: "/guide/3rd-party-all-integrations"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Available 3rd party integrations
 
 See below for a comprehensive list of integrations that are available within LoginRadius, if you have questions in regards to enabling certain integrations please contact <a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">LoginRadius Support Team</a>.

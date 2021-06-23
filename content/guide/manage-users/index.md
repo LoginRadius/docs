@@ -31,6 +31,9 @@ This guide explains how to manage your registered users using the LoginRadius Da
 
 ## View Blocked Users
 
+<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p> </p>
+
 You can check your blocked users by accessing the **Blocked Users** table. To access this table, click the **Blocked Users** link available at the bottom right of the screen:
 
   ![alt_text](images/blocked-users-link.png "image_tooltip")
@@ -78,6 +81,9 @@ You can mass import user data from another application/service/database into you
 Refer to the [Migrate User Data](/guide/migrate-user-data) document for more information.
 
 ## Supported Actions
+
+<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p> </p>
 
 > Note: You must have a **Developer Pro** plan subscription to access these actions in the LoginRadius Dashboard. You can otherwise utilize our APIs to manage your users.
 

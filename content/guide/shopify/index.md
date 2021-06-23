@@ -5,6 +5,9 @@ description: "This is a guide for integrating and configuring Shopify e-commerce
 path: "/guide/shopify"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # Shopify
 
 LoginRadius provides you with a Shopify Multipass Hosted Plugin to integrate LoginRadius features and functionalities into your Shopify site. 

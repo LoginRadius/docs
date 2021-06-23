@@ -5,6 +5,9 @@ description: "This is a tutorial with JWT implementation."
 path: "/guide/jwt"
 ---
 
+<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Add on</span>
+
 # JWT
 
 JWT (JSON Web Token) is used to provide a standard way for two parties to communicate securely. JWT is commonly used for managing authorization.
