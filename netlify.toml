@@ -181,3 +181,47 @@ to = "/docs/developer/guide/wordpress"
 [[redirects]]
   from = "docs/developer/concepts/idx-overview/"
   to = "docs/developer/concepts/idx"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/android-sdk"
+  to = "docs/developer/references/SDK/android-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/dotnet-sdk"
+  to = "docs/developer/references/SDK/dotnet-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/html5-sdk"
+  to = "docs/developer/references/SDK/html5-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/ios-sdk"
+  to = "docs/developer/references/SDK/ios-SDK"
+  
+[[redirects]]
+  from = "docs/developer/references/sdk/java"
+  to = "docs/developer/references/SDK/java-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/node-js"
+  to = "docs/developer/references/SDK/nodejs-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/php"
+  to = "docs/developer/references/SDK/php-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/python"
+  to = "docs/developer/references/SDK/python-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/ruby-sdk"
+  to = "docs/developer/references/SDK/ruby-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/react-native"
+  to = "docs/developer/references/SDK/react-native-SDK"
+
+[[redirects]]
+  from = "docs/developer/references/sdk/golang"
+  to = "docs/developer/references/SDK/golang-SDK"
