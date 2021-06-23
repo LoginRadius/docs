@@ -100,7 +100,6 @@ Select IDP Binding : `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 
 
 5. Click the **Save** button to save the configuration.
-
 You have successfully configured **Salesforce** IDP using Inbound SSO SAML. Open Auth Page(IDX) of your app and the **Login with SAML Salesforce option will appear:**
 
 ![alt_text](images/image6.png "image_tooltip")
