@@ -2,7 +2,7 @@
 title: "PHP SDK"
 tags: ["PHP", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a PHP application."
-path: "/references/SDK/php-SDK"
+path: "/references/sdk/php-sdk"
 ---
 
 # PHP SDK
