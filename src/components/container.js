@@ -320,13 +320,13 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="/guide/big-commerce">
-                <img src="images/bigcommerce.png" width={28} />
+                <img src="images/bigcommerce.svg" width={20} />
                 <span>BigCommerce </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/shopify">
-                <img src="images/shopify.png" width={30} />
+                <img src="images/shopify.svg" width={20} />
                 <span>Shopify </span>
                 </Link>
               </li>
