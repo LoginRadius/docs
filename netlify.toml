@@ -176,28 +176,12 @@ to = "/docs/developer/guide/wordpress"
 
 [[redirects]]
   from = "/docs/developer/contact-us"
-  to = "/docs/developer/FAQ"
+  to = "/docs/developer/faq"
 
 [[redirects]]
   from = "/docs/developer/concepts/idx-overview/"
   to = "/docs/developer/concepts/idx"
 
-[[redirects]]
-  from = "/docs/developer/references/sdk/android-sdk"
-  to = "/docs/developer/references/sdk/android-sdk"
-
-[[redirects]]
-  from = "/docs/developer/references/sdk/dotnet-sdk"
-  to = "/docs/developer/references/sdk/dotnet-sdk"
-
-[[redirects]]
-  from = "/docs/developer/references/sdk/html5-sdk"
-  to = "/docs/developer/references/sdk/html5-sdk"
-
-[[redirects]]
-  from = "/docs/developer/references/sdk/ios-sdk"
-  to = "/docs/developer/references/sdk/ios-sdk"
-  
 [[redirects]]
   from = "/docs/developer/references/sdk/java"
   to = "/docs/developer/references/sdk/java-sdk"
@@ -213,10 +197,6 @@ to = "/docs/developer/guide/wordpress"
 [[redirects]]
   from = "/docs/developer/references/sdk/python"
   to = "/docs/developer/references/sdk/python-sdk"
-
-[[redirects]]
-  from = "/docs/developer/references/sdk/ruby-sdk"
-  to = "/docs/developer/references/sdk/ruby-sdk"
 
 [[redirects]]
   from = "/docs/developer/references/sdk/react-native"
