@@ -11,7 +11,7 @@ This guide explains how to mass import user data from another application/servic
 
 ## Access Import Users Section
 
-1. Log in to your [<a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **User Management** and then navigate to the **Manage Users** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **User Management** and then navigate to the **Manage Users** section.
 
 2. Click the down caret, and the **Manage Users** screen will appear:
 
