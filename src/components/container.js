@@ -318,6 +318,18 @@ const Middle = () => {
                   <span>Drupal </span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/big-commerce">
+                <img src="images/bigcommerce.png" width={20} />
+                <span>BigCommerce </span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/guide/shopify">
+                <img src="images/shopify.png" width={20} />
+                <span>Shopify </span>
+                </Link>
+              </li>
               {/* <li>
                 <a href="#">
                   <img src="images/joomla.svg" width={20} />
