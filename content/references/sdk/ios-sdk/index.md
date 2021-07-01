@@ -2,7 +2,7 @@
 title: iOS Library
 description: "A guide to implement LoginRadius SDK in iOS application."
 summary: "A guide to implement LoginRadius SDK in iOS application"
-path: "/references/SDK/ios-SDK"
+path: "/references/sdk/ios-sdk"
 ---
 
 # iOS SDK

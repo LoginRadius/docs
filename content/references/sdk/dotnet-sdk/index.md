@@ -2,7 +2,7 @@
 title: "ASP.NET SDK Library"
 tags: ["ASP.NET", "SDK"]
 description: "This is a document detailing the LoginRadius ASP.NET SDK Library."
-path: "/references/SDK/dotnet-SDK"
+path: "/references/sdk/dotnet-sdk"
 ---
 
 # ASP&#46;NET SDK

@@ -2,7 +2,7 @@
 title: "HTML5 SDK"
 tags: ["HTML5", "SDK"]
 description: "A guide to impliment LoginRadius SDK in a HTML5 application."
-path: "/references/SDK/html5-SDK"
+path: "/references/sdk/html5-sdk"
 ---
 
 
