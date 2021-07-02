@@ -2,7 +2,7 @@
 title: "FAQ"
 tags: ["FAQ"]
 description: "Frequently asked Questions"
-path: "/FAQ"
+path: "/faq"
 ---
 
 # FAQ

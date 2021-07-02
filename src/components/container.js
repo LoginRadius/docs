@@ -318,6 +318,18 @@ const Middle = () => {
                   <span>Drupal </span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/big-commerce">
+                <img src="images/bigcommerce.svg" width={20} />
+                <span>BigCommerce </span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/guide/shopify">
+                <img src="images/shopify.svg" width={20} />
+                <span>Shopify </span>
+                </Link>
+              </li>
               {/* <li>
                 <a href="#">
                   <img src="images/joomla.svg" width={20} />
@@ -611,37 +623,37 @@ const Middle = () => {
             <h3 className="title">SDKs</h3>
             <ul>
               <li>
-                <Link to="references/SDK/android-SDK">Android</Link>
+                <Link to="references/sdk/android-sdk">Android</Link>
               </li>
               <li>
-                <Link to="references/SDK/dotnet-SDK">ASP.NET</Link>
+                <Link to="references/sdk/dotnet-sdk">ASP.NET</Link>
               </li>
               <li>
-                <Link to="references/SDK/html5-SDK">HTML5</Link>
+                <Link to="references/sdk/html5-sdk">HTML5</Link>
               </li>
               <li>
-                <Link to="references/SDK/ios-SDK">iOS</Link>
+                <Link to="references/sdk/ios-sdk">iOS</Link>
               </li>
               <li>
-                <Link to="references/SDK/java-SDK">Java</Link>
+                <Link to="references/sdk/java-sdk">Java</Link>
               </li>
               <li>
-                <Link to="references/SDK/nodejs-SDK">Node.js</Link>
+                <Link to="references/sdk/nodejs-sdk">Node.js</Link>
               </li>
               <li>
-                <Link to="references/SDK/php-SDK">PHP</Link>
+                <Link to="references/sdk/php-sdk">PHP</Link>
               </li>
               <li>
-                <Link to="references/SDK/python-SDK">Python</Link>
+                <Link to="references/sdk/python-sdk">Python</Link>
               </li>
               <li>
-                <Link to="references/SDK/ruby-SDK">Ruby</Link>
+                <Link to="references/sdk/ruby-sdk">Ruby</Link>
               </li>
               <li>
-                <Link to="references/SDK/react-native-SDK">React Native</Link>
+                <Link to="references/sdk/react-native-sdk">React Native</Link>
               </li>
               <li>
-                <Link to="references/SDK/golang-SDK">Golang</Link>
+                <Link to="references/sdk/golang-sdk">Golang</Link>
               </li>
             </ul>
           </div>
