@@ -781,9 +781,9 @@ See below for a comprehensive list of integrations that are available within Log
       </a>
     </div>
     <div class="card">
-      <a href="https://www.loginradius.com/integrations/boomtrain/" target="_blank">
-        <img src="images/boomtrain.png" alt="BoomTrain" title="BoomTrain" />
-        <span>BoomTrain</span>
+      <a href="https://www.loginradius.com/integrations/zeta-boomtrain/" target="_blank">
+        <img src="images/boomtrain.png" alt="Zeta BoomTrain" title="Zeta BoomTrain" />
+        <span>Zeta (previously Boomtrain)</span>
       </a>
     </div>
     <div class="card">
