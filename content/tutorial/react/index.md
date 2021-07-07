@@ -121,6 +121,7 @@ Once the CRA boilerplate is set up, follow these steps:
 
 We will make use of the `loginWithRedirect`, `loginWithPopup` and `logout` authentication methods from the `useLRAuth` hook in our components to quickly setup an authentication flow for our application. We can also get access to the authentication state using `isAuthenticated`. 
 - Create a `Landing.js` file under the `src` folder and populate it as shown below. This component will act as the `Landing Page` for our application. 
+
 ``` JavaScript
 import { useLRAuth } from "loginradius-react";
 
