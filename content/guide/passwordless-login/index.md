@@ -100,6 +100,9 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 * **#FirstName#**: The consumer's first name as defined in your registration form.
 * **#LastName#**: The consumer's last name as defined in your registration form.
 
+## References
+
+* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
 
 
 [Go Back to Home Page](/)
