@@ -88,6 +88,9 @@ The following are the social providers that LoginRadius supports for the Free, D
 |Developer Pro	| Supports| 20+ | Social| ID | Providers| 
 
 
+## References
+
+* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
 
 
 [Go Back to Home Page](/)

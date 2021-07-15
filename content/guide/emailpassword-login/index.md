@@ -86,6 +86,9 @@ These tags are specific to the **Forgot Password** email template. The text defi
 
 * **#FProv \<Content\> FProv#**: This tag defines a section that will appear in cases where the consumer has signed up using a social provider. You should typically use this section with the **#Providers#** placeholder tag to inform the consumer about the social provider they used for registration.
 
+## References
+
+* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
 
 
 [Go Back to Home Page](/)
