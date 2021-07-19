@@ -345,3 +345,89 @@ main {
 .mt-0 {
   margin-top: 0;
 }
+
+.toggle-container {
+  width: 700px;
+  font-size: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  input {
+    display: none;
+    &:checked + label {
+      background: #eee;
+    }
+    @for $i from 1 through 4 {
+      &#tab#{$i}:checked {
+        ~ .line {
+          left: #{($i - 1) * 25%};
+        }
+        ~ .content-container #c#{$i} {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  label {
+    display: inline-block;
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    width: 25%;
+    text-align: center;
+    background: #f4f4f4;
+    color: #555;
+    position: relative;
+    transition: 0.25s background ease;
+    cursor: pointer;
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      display: block;
+      background: #ccc;
+      bottom: 0;
+      opacity: 0;
+      left: 0;
+      transition: 0.25s ease;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+  .line {
+    position: absolute;
+    height: 2px;
+    background: #1E88E5;
+    width: 25%;
+    top: 34px;
+    left: 0;
+    transition: 0.25s ease;
+  }
+  .content-container {
+    background: #eee;
+    position: relative;
+    height: 400px;
+    font-size: 16px;
+    .content {
+      position: absolute;
+      padding: 10px;
+      width: 100%;
+      top: 0;
+      opacity: 0;
+      transition: 0.25s ease;
+      color: #333;
+      h3 {
+        font-weight: 200;
+        margin: 10px 0;
+      }
+      p {
+        margin: 10px 0;
+      }
+      p, i {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
