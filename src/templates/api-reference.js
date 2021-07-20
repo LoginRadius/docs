@@ -14,7 +14,7 @@ const renderAst = new rehypeReact({
 }).Compiler
 
 const ApiReferenceTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark || data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
   const section = pathArray.length >= 2 ? pathArray[1] : undefined
@@ -32,7 +32,7 @@ const ApiReferenceTemplate = ({ data, location }) => {
             <div>
               <div className={`sidebar`}>
                 <div className="headings">{section}</div>
-                <TableOfContents html={post.tableOfContents} />
+                {post.tableOfContents && <TableOfContents html={post.tableOfContents} />}
                 <div className="get-in-touch">
                   <div className="headings">Get in Touch</div>
                   <ul>
@@ -136,11 +136,7 @@ const ApiReferenceTemplate = ({ data, location }) => {
 export default ApiReferenceTemplate
 
 export const pageQuery = graphql`
-  query ApiReferenceBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query ApiReferenceBySlug($id: String!) {
     siteSearchIndex {
       index
     }
@@ -156,25 +152,17 @@ export const pageQuery = graphql`
       htmlAst
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
       }
       tableOfContents(heading: "")
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
+    mdx(id: { eq: $id }) {
+      id
+      excerpt(pruneLength: 160)
+      mdxAST
       frontmatter {
         title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
+        description
       }
     }
   }

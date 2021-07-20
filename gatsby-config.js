@@ -6,7 +6,7 @@ module.exports = {
       summary: ``,
     },
     description: `LoginRadius Developer Docs`,
-    siteUrl: `https://www.loginradius.com/`
+    siteUrl: `https://www.loginradius.com/`,
   },
   plugins: [
     {
@@ -44,7 +44,7 @@ module.exports = {
             options: {
               fromHeading: 1,
               toHeading: 2,
-              className: "table-of-contents"
+              className: "table-of-contents",
             },
           },
           `gatsby-remark-component`,
@@ -52,7 +52,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-use-frontmatter-path`
+          `gatsby-remark-use-frontmatter-path`,
         ],
       },
     },
@@ -130,11 +130,28 @@ module.exports = {
             title: node => node.frontmatter.title,
             tags: node => node.frontmatter.tags,
             // description: node => node.frontmatter.description,
-            path: node => node.fields.slug
+            path: node => node.fields.slug,
           },
         },
         // Optional filter to limit indexed nodes
         filter: (node, getNode) => node.frontmatter.tags !== "exempt",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+        ],
       },
     },
   ],

@@ -1,0 +1,44 @@
+### Using LoginRadius CLI
+
+With [LoginRadius CLI](https://github.com/LoginRadius/lr-cli/) you can directly these simple commands from your terminal to set or get the themes.
+
+**To get all available themes**
+
+```sh
+$ lr get theme --all
+Available Themes:
+1. London
+2. Tokyo
+3. Helsinki
+
+```
+
+**To get an active theme**
+
+```sh
+$ lr get theme --active
+Current Theme: London
+```
+
+**To Choose the theme with the default configuration**
+
+```sh
+$ lr set theme -t Tokyo
+? Previous changes will be lost. Do you wish to continue? Yes
+Reseting current theme...
+Fetching Auth theme url...
+Updating CSS based on new theme...
+Fetching data...
+Updating to new theme...
+Your theme has been changed
+```
+
+### Using Dashboard
+
+In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page (IDX)** section located in the left navigation bar and click the **Theme Customization** section. There you can select a design theme for your login page, or further customize the content displayed:
+
+<img src={require("../assets/blog-common/theme-customization.png")} alt_text={"Theme Customization"} />
+
+To preview your login page's theme, click the **Go to your Login Page** link highlighted on the above screen.
+
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).
