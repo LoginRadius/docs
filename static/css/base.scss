@@ -361,12 +361,12 @@ main {
       border-left: 1px solid $gray-light;
       border-top: 1px solid $gray-light;
     }
-    @for $i from 1 through 4 {
-      &#tab#{$i}:checked {
+    @for $i from 1 through 2 {
+      &.tab#{$i}:checked {
         ~ .line {
           left: #{($i - 1) * 25%};
         }
-        ~ .content-container #c#{$i} {
+        ~ .content-container .c#{$i} {
           display: block;
         }
       }

@@ -5,12 +5,14 @@ import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import TableOfContents from "../components/table-of-contents"
+import TOCMdx from "../components/toc_mdx"
 import * as containerStyles from "./blog-post.module.css"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const isMdx = data.mdx || false
+  const post = data.markdownRemark || data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  //const { previous, next } = data
   const pathArray = location.pathname.split("/")
   const section = pathArray.length >= 2 ? pathArray[1] : undefined
 
@@ -27,7 +29,11 @@ const BlogPostTemplate = ({ data, location }) => {
             <div>
               <div className={`sidebar ${containerStyles.sidebar}`}>
                 <div className="headings">{section}</div>
-                <TableOfContents html={post.tableOfContents} />
+                {isMdx ? (
+                  <TOCMdx toc={post.tableOfContents} path={data.mdx.fields.slug} />
+                ) : (
+                  <TableOfContents html={post.tableOfContents} />
+                )}
                 <div className="get-in-touch">
                   <div className="headings">Get in Touch</div>
                   <ul>
@@ -113,10 +119,14 @@ const BlogPostTemplate = ({ data, location }) => {
                   )}
                 </ul>
                   */}
-                <div
-                  dangerouslySetInnerHTML={{ __html: post.html }}
-                  itemProp="articleBody"
-                />
+                {post.html ? (
+                  <div
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                    itemProp="articleBody"
+                  />
+                ) : (
+                  <MDXRenderer>{post.body}</MDXRenderer>
+                )}
               </div>
             </div>
           </section>
@@ -130,11 +140,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!) {
     siteSearchIndex {
       index
     }
@@ -150,26 +156,22 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
       }
       tableOfContents(heading: "")
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    mdx(id: { eq: $id }) {
+      id
+      excerpt(pruneLength: 160)
+      body
       fields {
         slug
       }
       frontmatter {
         title
+        description
       }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
+      tableOfContents
     }
   }
 `
