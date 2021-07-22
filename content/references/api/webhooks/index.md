@@ -30,7 +30,7 @@ path: "/references/api/webhooks"
     
   Enter query parameters and send a request to view the sample response.
 
-  <try-me-out id="webhook-subscribe" endpoint="https://api.loginradius.com/api/v2/webhook" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"targeturl":"","event":""}}'></try-me-out>
+  <try-me-out id="webhook-subscribe" endpoint="https://api.loginradius.com/api/v2/webhook" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"targeturl":"","event":""}}' sampleresponse='{ "IsPosted": true }'></try-me-out>
 
 ## Webhook Subscribed URLs
 
@@ -50,7 +50,7 @@ path: "/references/api/webhooks"
     
   Enter query parameters and send a request to view the sample response.
 
-  <try-me-out id="webhook-subscribed-urls" endpoint="https://api.loginradius.com/api/v2/webhook" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"event"}]}'></try-me-out>
+  <try-me-out id="webhook-subscribed-urls" endpoint="https://api.loginradius.com/api/v2/webhook" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"event"}]}' sampleresponse='{ "data": [ { "TargetUrl": "https://xxxx.abc.com/acjhgj/gkgkj", "Event": "AssignRoles" }, { "TargetUrl": "https://xxxx.abc.com/kjnplatfhjhjorhjhgm-confihgjghguratihjon/stjyxxxndardn", "Event": "AssignRoles" } ], "Count": 2 }'></try-me-out>
  
 ## Webhook Test
 
@@ -69,7 +69,7 @@ path: "/references/api/webhooks"
     
   Enter query parameters and send a request to view the sample response.
 
-  <try-me-out id="webhook-test" endpoint="https://api.loginradius.com/api/v2/webhook/test" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
+  <try-me-out id="webhook-test" endpoint="https://api.loginradius.com/api/v2/webhook/test" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}' sampleresponse='{ "IsAllowed": true }'></try-me-out>
  
 ## Webhook Unsubscribe
 
@@ -94,6 +94,6 @@ path: "/references/api/webhooks"
     
   Enter query parameters and send a request to view the sample response.
 
-  <try-me-out id="webhook-unsubscribe" endpoint="https://api.loginradius.com/api/v2/webhook" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"targeturl":"","event":""}}'></try-me-out>
+  <try-me-out id="webhook-unsubscribe" endpoint="https://api.loginradius.com/api/v2/webhook" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"targeturl":"","event":""}}' sampleresponse='{ "IsDeleted": true }'></try-me-out>
 
 [Go Back to Home Page](/)

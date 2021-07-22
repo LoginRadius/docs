@@ -174,7 +174,7 @@ Find common API error codes and their description.
 
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="jwt-token-by-email" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"","password":""}}'></try-me-out>
+<try-me-out id="jwt-token-by-email" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"","password":""}}' sampleresponse='{ "signature": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.**********JodHRwczovL2xyLmh1Yi5sb2dpbnJhZGl1cy5jb20vIiwianRpIjoiZDYyOTc1ODEtZDUyNi00Zjg2LWIxNGMtMjVlMTljZTkzMTc2Iiwi**********51bGwsImlhdCI6MTUwNDY5ODA5MCwibmJmIjoxNTA0Njk4MDkwLCJleHAiOjE1MDQ2OTg2OTB9.sH_M1NPY7M7360BJoJ6X-*******************-no" }'></try-me-out>
 
 This is sample API code:
 
@@ -310,7 +310,7 @@ Find common API error codes and their description.
   
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="jwt-token-by-phone" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}'></try-me-out>
+<try-me-out id="jwt-token-by-phone" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/login" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"jwtApp","default":""},{"key":"verificationUrl"},{"key":"loginUrl"},{"key":"emailTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}' sampleresponse='{ "signature": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.**********JodHRwczovL2xyLmh1Yi5sb2dpbnJhZGl1cy5jb20vIiwianRpIjoiZDYyOTc1ODEtZDUyNi00Zjg2LWIxNGMtMjVlMTljZTkzMTc2Iiwi**********51bGwsImlhdCI6MTUwNDY5ODA5MCwibmJmIjoxNTA0Njk4MDkwLCJleHAiOjE1MDQ2OTg2OTB9.sH_M1NPY7M7360BJoJ6X-*******************-no" }'></try-me-out>
 
 This is sample API code:
 
@@ -437,7 +437,7 @@ Find common API error codes and their description.
 
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="jwt-token" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/token" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"access_token","default":""},{"key":"jwtApp"}]}'></try-me-out>
+<try-me-out id="jwt-token" endpoint="https://cloud-api.loginradius.com/sso/jwt/api/token" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"access_token","default":""},{"key":"jwtApp"}]}' sampleresponse='{ signature: <JWT response> }'></try-me-out>
 
 
 This is sample API code:

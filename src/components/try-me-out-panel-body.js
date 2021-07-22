@@ -14,7 +14,7 @@ export default class TryMeOut extends React.Component {
     this.state = {
       endpoint: this.props.endpoint || null,
       method: this.props.method || null,
-      params: JSON.parse(this.props.params),
+      params: this.props.params ? JSON.parse(this.props.params) : "",
       isExpanded: false,
 
       clientState: {
@@ -28,6 +28,10 @@ export default class TryMeOut extends React.Component {
         },
       },
     }
+  }
+
+  componentDidMount() {
+    this.onTryMeOutClick();
   }
 
   handleTemplateChange = event => {
@@ -187,131 +191,121 @@ export default class TryMeOut extends React.Component {
 
   render() {
     const { id } = this.props
-    const { isExpanded, params, endpoint, method, clientState } = this.state
+    const { params, endpoint, method, clientState } = this.state
 
     return (
       <div id={id} className={`${styles.tryMeOut}`}>
-        <a
-          className={`${styles.tryMeOutButton} btn btn-primary`}
-          onClick={this.onTryMeOutClick}
-        >
-          {!isExpanded ? "Show" : "Hide"}
-        </a>
-        {isExpanded ? (
-          <div className={`${styles.tryMeOutClient}`}>
-            <div className={styles.requestUrl}>
-              <div className={styles.methodname}>{method}</div>
-              <div className={styles.requestUrlRow}>
-                <div className={styles.method}>Request URL</div>
-                <div className={styles.endpoint}>{endpoint}</div>
-                <a
-                  className={`${styles.requestBtn} btn btn-primary btn-sm`}
-                  onClick={this.onRequestSubmitClick}
-                >
-                  Send Request
+        <div className={`${styles.tryMeOutClient}`}>
+          <div className={styles.requestUrl}>
+            <div className={styles.methodname}>{method}</div>
+            <div className={styles.requestUrlRow}>
+              <div className={styles.method}>Request URL</div>
+              <div className={styles.endpoint}>{endpoint}</div>
+              <a
+                className={`${styles.requestBtn} btn btn-primary btn-sm`}
+                onClick={this.onRequestSubmitClick}
+              >
+                Send Request
                 </a>
-              </div>
             </div>
-            <div className={styles.requestUrlBody}>
-              {params.queryParams ? (
-                <div className={styles.queryParams}>
-                  <h4>Query Params</h4>
-                  {params.queryParams.map((param, index) => {
-                    return (
-                      <label key={`queryParam_${index}`}>
-                        <div>{param.key}</div>
-                        <input
-                          name={param.key}
-                          type="text"
-                          onChange={this.handleQueryChange}
-                          value={clientState.query[param.key] || ""}
-                        />
-                      </label>
-                    )
-                  })}
-                </div>
-              ) : (
-                ""
-              )}
-              {params.templateParams ? (
-                <div className={styles.templateParams}>
-                  <h4>Template Params</h4>
-                  {params.templateParams.map((param, index) => {
-                    return (
-                      <label key={`templateParam_${index}`}>
-                        <div>{param.key}</div>
-                        <input
-                          name={param.key}
-                          type="text"
-                          onChange={this.handleTemplateChange}
-                          value={clientState.template[param.key] || ""}
-                        />
-                      </label>
-                    )
-                  })}
-                </div>
-              ) : (
-                ""
-              )}
-              {params.headers ? (
-                <div className={styles.headers}>
-                  <h4>Headers</h4>
-                  {params.headers.map((header, index) => {
-                    return (
-                      <label key={`header_${index}`}>
-                        <div>{header.key}</div>
-                        <input
-                          name={header.key}
-                          type="text"
-                          onChange={this.handleHeaderChange}
-                          value={clientState.headers[header.key] || ""}
-                          readOnly={header.key === "Content-Type"}
-                        />
-                      </label>
-                    )
-                  })}
-                </div>
-              ) : (
-                ""
-              )}
-              {params.body ? (
-                <div className={styles.body}>
-                  <h4>Body</h4>
-                  <div className={styles.bodyEditor}>
-                    <textarea
-                      name="body"
-                      rows="15"
-                      onChange={this.handleBodyChange}
-                      value={clientState.body || ""}
-                    />
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
-              <div className={styles.response}>
-                <div className={styles.responseHeader}>
-                  <h4>Response</h4>
-                  <div className={styles.statusCode}>
-                    {clientState.response.status
-                      ? clientState.response.status
-                      : ""}
-                  </div>
-                </div>
-                <div className={styles.responseBody}>
+          </div>
+          <div className={styles.requestUrlBody}>
+            {params.queryParams ? (
+              <div className={styles.queryParams}>
+                <h4>Query Params</h4>
+                {params.queryParams.map((param, index) => {
+                  return (
+                    <label key={`queryParam_${index}`}>
+                      <div>{param.key}</div>
+                      <input
+                        name={param.key}
+                        type="text"
+                        onChange={this.handleQueryChange}
+                        value={clientState.query[param.key] || ""}
+                      />
+                    </label>
+                  )
+                })}
+              </div>
+            ) : (
+              ""
+            )}
+            {params.templateParams ? (
+              <div className={styles.templateParams}>
+                <h4>Template Params</h4>
+                {params.templateParams.map((param, index) => {
+                  return (
+                    <label key={`templateParam_${index}`}>
+                      <div>{param.key}</div>
+                      <input
+                        name={param.key}
+                        type="text"
+                        onChange={this.handleTemplateChange}
+                        value={clientState.template[param.key] || ""}
+                      />
+                    </label>
+                  )
+                })}
+              </div>
+            ) : (
+              ""
+            )}
+            {params.headers ? (
+              <div className={styles.headers}>
+                <h4>Headers</h4>
+                {params.headers.map((header, index) => {
+                  return (
+                    <label key={`header_${index}`}>
+                      <div>{header.key}</div>
+                      <input
+                        name={header.key}
+                        type="text"
+                        onChange={this.handleHeaderChange}
+                        value={clientState.headers[header.key] || ""}
+                        readOnly={header.key === "Content-Type"}
+                      />
+                    </label>
+                  )
+                })}
+              </div>
+            ) : (
+              ""
+            )}
+            {params.body ? (
+              <div className={styles.body}>
+                <h4>Body</h4>
+                <div className={styles.bodyEditor}>
                   <textarea
-                    readOnly
-                    name="responseBody"
+                    name="body"
                     rows="15"
-                    value={clientState.response.body || ""}
+                    onChange={this.handleBodyChange}
+                    value={clientState.body || ""}
                   />
                 </div>
               </div>
+            ) : (
+              ""
+            )}
+            <div className={styles.response}>
+              <div className={styles.responseHeader}>
+                <h4>Response</h4>
+                <div className={styles.statusCode}>
+                  {clientState.response.status
+                    ? clientState.response.status
+                    : ""}
+                </div>
+              </div>
+              <div className={styles.responseBody}>
+                <textarea
+                  readOnly
+                  name="responseBody"
+                  rows="15"
+                  value={clientState.response.body || ""}
+                />
+              </div>
             </div>
           </div>
-        ) : (
-          ""
-        )}
+        </div>
       </div>
     )
   }

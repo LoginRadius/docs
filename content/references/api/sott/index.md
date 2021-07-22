@@ -25,6 +25,6 @@ path: "/references/api/sott"
     
   Enter query parameters and send a request to view the sample response.
 
-  <try-me-out id="generate-sott" endpoint="https://api.loginradius.com/identity/v2/manage/account/sott" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"timeDifference"}]}'></try-me-out>
+  <try-me-out id="generate-sott" endpoint="https://api.loginradius.com/identity/v2/manage/account/sott" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"timeDifference"}]}' sampleresponse='{ "Sott": "UHvoadn**********/PrJ6DzANoF**********jWGFyk***J8n3COAV**********gjlHh****YN4mGy+mly**********uyp3hZPMqxs48=*c09bd**********a40662e6eb30*****", "ExpiryTime": "2017-11-06T07:03:12.1100256Z" }'></try-me-out>
 
 [Go Back to Home Page](/)
