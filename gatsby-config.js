@@ -39,14 +39,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              fromHeading: 1,
-              toHeading: 2,
-              className: "table-of-contents",
-            },
-          },
           `gatsby-remark-component`,
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
@@ -151,9 +143,22 @@ module.exports = {
             },
           },
           `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+        duration: 100
+      }
+    }
   ],
   pathPrefix: `/docs/developer`,
 }
