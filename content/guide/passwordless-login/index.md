@@ -27,17 +27,44 @@ You can implement the Passwordless Login method in two following ways:
 
 ### Step 1: Choose Login Method
 
-1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
+
+- #### Using CLI
+   Select an app. With [LoginRadius CLI](https://github.com/LoginRadius/lr-cli/), you can check the status of Login Methods for a particular app by using the command as shown below
+   ``` sh
+   $ lr get login-method
+      +--------------------+---------------+
+      |   Method  	        |   Enabled     |  
+      +--------------------+---------------+
+      | Phone Login        | false         |	
+      | Passwordless Login | false         | 
+      +--------------------+---------------+
+   ```
+- #### Using Dashboard
+
+   Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
-2. To enable the Passwordless Login method for your application, click the **Add Method** dropdown and select the **Passwordless** login method.
+2. Enable the Passwordless Login method for your application. 
+ > Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
 
-   > Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
+- #### Using CLI
+   To enable Passwordless login, use the below command in CLI.
+   ```sh
+   $ lr add login-method
+   Select the Login Method from the list:
+   - Phone Login 
+   - Passordless Login <chosen>
+
+   Passwordless Login has been successfully added.
+   ```
+- #### Using Dashboard
+   Click the **Add Method** dropdown and select the **Passwordless** login method.
 
    ![alt_text](images/add-passwordless-method.png "image_tooltip")
 
-When the login method is successfully enabled, you will see it listed in your login methods table.
+   When the login method is successfully enabled, you will see it listed in your login methods table. 
 
 ### Step 2: Configure Passwordless Login Templates
 
@@ -83,7 +110,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 3: Check Auth Page (IDX)
 
-To verify that the Passwordless Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. You should see the following login options available:
+To verify that the Passwordless Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. The IDX page can also be opened using the `lr demo` command in CLI. You should see the following login options available:
 
 ![alt_text](../../assets/blog-common/idx-passwordless.png "image_tooltip")
 
