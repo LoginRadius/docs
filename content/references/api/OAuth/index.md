@@ -54,7 +54,7 @@ Find common API error codes and their description.
   
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="request-tokens" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token" method="POST" params='{"templateParams":[{"key":"OAuthName","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","device_code":"","grant_type":""}}'></try-me-out>
+<try-me-out id="request-tokens" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/access_token" method="POST" params='{"templateParams":[{"key":"OAuthName","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","device_code":"","grant_type":""}}' sampleresponse='{ "access_token": "b8cb84c9-dff7-401a-94c1-7cd44ebf80a0", "token_type": "access_token", "refresh_token": "a795bbb0-5868-4079-a45b-606ad8aeee80", "expires_in": 31103985 }'></try-me-out>
 
 ## Access token by OAuth 2 token
 
@@ -96,7 +96,7 @@ Find common API error codes and their description.
   
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="access-token-by-oauth2-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/access_token" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","redirect_uri":"","response_type":"","code":""}}'></try-me-out>
+<try-me-out id="access-token-by-oauth2-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/access_token" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","redirect_uri":"","response_type":"","code":""}}' sampleresponse='{ "access_token": "********-****-****-*****************", "token_type": "access_token", "expires_in": 394, "refresh_token": "********-****-****-*****************" }'></try-me-out>
 
 ## Access Token by Account Password
 
@@ -137,7 +137,7 @@ Find common API error codes and their description.
   
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="access-token-by-account-password" endpoint="https://cloud-api.loginradius.com/sso/oauth/access_token" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","grant_type":"","username":"","password":""}}'></try-me-out>
+<try-me-out id="access-token-by-account-password" endpoint="https://cloud-api.loginradius.com/sso/oauth/access_token" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","grant_type":"","username":"","password":""}}' sampleresponse='{ "access_token": "********-****-****-*****************", "token_type": "access_token", "expires_in": 394, "refresh_token": "********-****-****-*****************" }'></try-me-out>
 
 ## Request Device Code
 
@@ -185,7 +185,7 @@ Find common API error codes and their description.
   
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="request-device-code" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device" method="POST" params='{"templateParams":[{"key":"OAuthName"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","scope":""}}'></try-me-out>
+<try-me-out id="request-device-code" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device" method="POST" params='{"templateParams":[{"key":"OAuthName"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","scope":""}}' sampleresponse='{ "device_code": "af2a4121179546c1b121995414cc4530", "user_code": "oP5lLq", "verification_uri": "https://example.com/federation/device/activate.php", "interval": 10, "expires_in": 1800 }'></try-me-out>
 
 ## Refresh Access Token
 
@@ -227,7 +227,7 @@ Find common API error codes and their description.
   
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="refresh-access-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","grant_type":"","refresh_token":""}}'></try-me-out>
+<try-me-out id="refresh-access-token" endpoint="https://cloud-api.loginradius.com/sso/oauth/{OAuthName}/device" method="POST" params='{"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"client_id":"","client_secret":"","grant_type":"","refresh_token":""}}' sampleresponse='{ "access_token": "********-****-****-*****************", "token_type": "access_token", "expires_in": 394, "refresh_token": "********-****-****-*****************" }'></try-me-out>
 
 ## Revoke Refresh Token
 
