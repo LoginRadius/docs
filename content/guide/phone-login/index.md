@@ -21,13 +21,39 @@ During login, the consumer will need to provide both the Phone Number and Passwo
 
 ### Step 1: Choose Login Method
 
-1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
+
+- #### Using CLI
+   Select an app. With [LoginRadius CLI](https://github.com/LoginRadius/lr-cli/), you can check the status of Login Methods for a particular app by using the command as shown below
+   ``` sh
+   $ lr get login-method
+      +--------------------+---------------+
+      |   Method  	        |   Enabled     |  
+      +--------------------+---------------+
+      | Phone Login        | false         |	
+      | Passwordless Login | false         | 
+      +--------------------+---------------+
+   ```
+- #### Using Dashboard
+   Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Login Methods** section.
 
    ![alt_text](../../assets/blog-common/configuration.png "image_tooltip")
 
-2. To enable the Phone Login method for your application, click the **Add Method** dropdown, and select the **Phone** login method.
+2. Enable Phone Login method for your application
+   > Note: You will need to be subscribed to the **Developer Pro** plan to enable  this login method.
 
-   > Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
+- #### Using CLI
+   To enable Phone login, use the below command in CLI.
+   ```sh
+   $ lr add login-method
+   Select the Login Method from the list:
+   - Phone Login       <chosen>
+   - Passordless Login 
+
+   Phone Login has been successfully added.
+   ```
+- #### Using Dashboard
+   Click the **Add Method** dropdown, and select the **Phone** login method.
 
    ![alt_text](images/add-phone-method.png "image_tooltip")
 
@@ -80,7 +106,7 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 ### Step 3: Check Auth Page (IDX)
 
-To verify that the Phone Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. You should see the following login field available:
+To verify that the Phone Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. The IDX page can also be opened using the `lr demo` command in CLI. You should see the following login field available:
 
 ![alt_text](../../assets/blog-common/idx-phone-login.png "image_tooltip")
 
