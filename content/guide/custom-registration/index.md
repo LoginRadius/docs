@@ -25,7 +25,7 @@ This guide explains how to select fields from a predefined list or create fields
 
 ## Step 2: Manage Registration Form Fields
 
-You can add registration form fields by selecting from the existing list or creating a custom field based on the requirement.
+You can add registration form fields by selecting from the [existing list](#a-select-from-the-list) or creating a [custom field](#b-create-a-custom-field) based on the requirement.
 
    ![alt_text](images/fieldname.png "image_tooltip")
 
@@ -81,12 +81,10 @@ You can add registration form fields by selecting from the existing list or crea
 
 >**Note:** You can remove a Custom Field from the Registration Schema by           
 >a. Disable the respective toggle button, click **Save** and the disabled field will appear in the Custom Fields section. (e.g City is the added custom field here)
-
-   ![alt_text](images/custom5.png "image_tooltip")
+![alt_text](images/custom5.png "image_tooltip")
 
 >b. Click the **Delete** icon given next to it in the Custom Fields section and confirm the action.
-
-   ![alt_text](images/custom2.png "image_tooltip")
+![alt_text](images/custom2.png "image_tooltip")
 
 ## Step 3: Auth Page
 
