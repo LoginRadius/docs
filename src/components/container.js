@@ -456,6 +456,11 @@ const Middle = () => {
                   <span>Setup Custom Domain (IDX)</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guide/custom-registration">
+                  <span>Customize Registration Form Fields</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Personalize interfaces and branding*/}
