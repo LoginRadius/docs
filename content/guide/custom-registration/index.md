@@ -29,7 +29,7 @@ You can add registration form fields by selecting from the existing list or crea
 
    ![alt_text](images/fieldname.png "image_tooltip")
 
->Note: If you have Social Login enabled and included additional mandatory registration form fields from the registration schema, the consumer will need to fill in the respective details even in case of using social login.
+>**Note:** If you have Social Login enabled and included additional mandatory registration form fields from the registration schema, the consumer will need to fill in the respective details even in case of using social login.
 
 ### a. Select from the list
 
@@ -47,7 +47,7 @@ You can add registration form fields by selecting from the existing list or crea
 
 3. Click the **Save** button after configuring the field(s).
 
->Note: You cannot disable the Email and Password fields, as Email/Password Login is the default authentication method. For more information, refer to <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login" target="_blank">this document</a>.
+>**Note:** You cannot disable the Email and Password fields, as Email/Password Login is the default authentication method. For more information, refer to <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login" target="_blank">this document</a>.
 
 ### b. Create a custom field
 
@@ -59,7 +59,7 @@ You can add registration form fields by selecting from the existing list or crea
 
    ![alt_text](images/custom1.png "image_tooltip")
 
-    >Note: You can add a maximum of 5 Custom Fields.
+    >**Note:** You can add a maximum of 5 Custom Fields.
 
 3. Click the **`+`** icon given next to the field to include it in the registration form. And then click the **Save** button.
 
@@ -79,7 +79,7 @@ You can add registration form fields by selecting from the existing list or crea
 
   Click the **Save** button to save the changes.
 
->Note: You can remove a Custom Field from the Registration Schema by           
+>**Note:** You can remove a Custom Field from the Registration Schema by           
 >a. Disable the respective toggle button, click **Save** and the disabled field will appear in the Custom Fields section. (e.g City is the added custom field here)
 
    ![alt_text](images/custom5.png "image_tooltip")

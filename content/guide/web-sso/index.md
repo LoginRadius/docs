@@ -34,7 +34,57 @@ So that the consumers logged in to one application automatically logs into other
 
 3. Enter the desired domains in the **Add Domain** textbox highlighted above, and then click the Add button. These are the domains where you want to enable SSO.
 
-### Step 2: Set SSO Token
+### Step 2: Get SSO Token
+
+Now let's get a LoginRadius **access_token** for SSO as explained below:
+
+Use the **SSOLogin** action to set the SSO session on a centralized domain managed by LoginRadius (Auth Page (IDX)). **ssologinoptions.onSuccess** will return the token if a valid access token is already available at the centralized LoginRadius domain. You can write your custom code in **ssologinoptions.onSuccess** to handle the successful SSO call.
+
+Add the following code to the **Index.html** file of your Web Application:
+
+```
+// If found activated session, go to the callback/onsuccess function
+var ssologin_options= {};
+
+ssologin_options.onSuccess = function(response) {
+// On Success
+//Write your custom code here
+console.log(response);
+}; 
+
+LRObject.util.ready(function() {
+LRObject.init("ssoLogin", ssologin_options);
+
+});
+var login_options = {};
+login_options.onSuccess = function (response) {
+
+        //On Success
+        console.log(response);
+
+
+    };
+    login_options.onError = function (errors) {
+        //On Errors
+        console.log(errors);
+    };
+    login_options.container = "login-container";
+
+    LRObject.util.ready(function () {
+        LRObject.init("login", login_options);
+    })
+```
+
+>**Note:** You can visit the below URL to check whether you are logged in or not: https://.hub.loginradius.com/ssologin/login
+
+The following JSON response in the console log of your browser will indicate the successful login and active SSO session:
+
+```
+{"token":"xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx","isauthenticated":true}
+```
+
+
+### Step 3: Set SSO Token
 
 Now lets set a LoginRadius access_token for SSO. There are 2 ways to achieve this - [Ajax Call](#set-sso-token-via-ajax-call) or [HTTPs Redirect](#set-sso-token-via-https-redirect).
 
