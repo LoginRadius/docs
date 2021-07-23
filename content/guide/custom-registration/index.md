@@ -8,51 +8,93 @@ path: "/guide/custom-registration"
 <span class="developer plan-tag">Developer</span>
 <span class="devloper-premium plan-tag">Developer Pro</span>
 
-
 # Customize Registration Form Fields
 
-Registration form fields allow you to configure how the consumer can register to your application.You can choose which fields are required while registering and also set those fields to be optional or mandatory.
+The LoginRadius Identity Platform provides the Registration Schema to enable you to configure the information required from the consumers during registration.
 
-## Configuration
+This guide explains how to select fields from a predefined list or create fields based on the requirements in LoginRadius Dashboard.
 
-### Step 1: Choose Registration Form Field
+## Step 1: Navigate to Registration Schema
 
-1. Login to your <a href="https://dashboard.loginradius.com/" target="_blank">LoginRadius Dashboard</a> account, from the left navigation panel, click **Configuration** and then navigate to the **Registration Schema** section.
+1. Login to your <a href="https://dashboard.loginradius.com" target="_blank"> LoginRadius Dashboard</a> account; from the left navigation panel, click the **Configuration** option. 
 
-2. Select form fields from the list that you want as information from the consumer when they register.
 
-![alt_text](images/config-reg.png "image_tooltip")
+2. Click within the **Configuration** section and then navigate to the **Registration Schema** section. The following screen will appear: 
+   
+   ![alt_text](images/config-reg.png "image_tooltip")
 
-### Step 2: Configure Form Fields
+## Step 2: Manage Registration Form Fields
 
-1. Click the **Edit** option next to form fields to configure.
+You can add registration form fields by selecting from the existing list or creating a custom field based on the requirement.
 
-2. Add the Field name that will be displayed on auth page when the consumer registers.
+   ![alt_text](images/fieldname.png "image_tooltip")
 
-3. Select whether the Field is mandatory or optional when the consumer registers to your application.
+>Note: If you have Social Login enabled and included additional mandatory registration form fields from the registration schema, the consumer will need to fill in the respective details even in case of using social login.
 
-> NOTE: Email and Password are mandatory form fields during the registration process.
+### a. Select from the list
 
-> NOTE: If a Social Login Provider is added as a Login Method then the consumer can login without Registration Form Fields using the Social Provider.  
+1. Choose a field from the predefined list, enable the toggle button given next to it.
+ 
+2. Click the **Edit** icon next to the field to:
 
-### Step 3: Custom Fields
+    a. Mark the field **Optional** or **Mandatory**
 
-1. Add or Delete a new Custom Field to Registration Form Fields by clicking the **Add** or **Delete** buttons in the **Custom Fields** section respectively.
+    b. Change the field's name 
 
-2. If a new Custom Field is added, configure the newly added Form Field by following Step 2. 
+  The options will appear as displayed below: 
 
-3. Add your own set of validation rules in the **validation string** section.
 
-* <a href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema" target="_blank">Configure Custom registration using JS</a>
 
-The Custom Fields added will be displayed during registration.
+3. Click the **Save** button after configuring the field(s).
 
-### Step 4: Auth page
+>Note: You cannot disable the Email and Password fields, as Email/Password Login is the default authentication method. For more information, refer to <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login" target="_blank">this document</a>.
 
-The Auth Page for a Registration Form Field eg. Firstname is shown below:
+### b. Create a custom field
 
-![alt_text](images/auth-page.png "image_tooltip")
+1. Click the **Add** button from the **Custom Fields** section to add a custom field, as highlighted on the screen below: 
 
+   ![alt_text](images/custom4.png "image_tooltip")
+
+2. Enter the Field Name and then click the Save button to add the field to the **Custom Fields** section list. (e.g City)
+
+   ![alt_text](images/custom1.png "image_tooltip")
+
+    >Note: You can add a maximum of 5 Custom Fields.
+
+3. Click the **`+`** icon given next to the field to include it in the registration form. And then click the **Save** button.
+
+   ![alt_text](images/custom3.png "image_tooltip")
+
+
+4. Click the **Edit** icon given next to the field to:
+
+    a. Mark it **Optional** or **Mandatory**
+
+    b. Update the field name
+
+    c. Select field type
+
+    d. Define **validation rules**. Refer to Configure Custom registration using JS 
+    document for more details.
+
+  Click the **Save** button to save the changes.
+
+>Note: You can remove a Custom Field from the Registration Schema by           
+>a. Disable the respective toggle button, click **Save** and the disabled field will appear in the Custom Fields section. (e.g City is the added custom field here)
+
+   ![alt_text](images/custom5.png "image_tooltip")
+
+>b. Click the **Delete** icon given next to it in the Custom Fields section and confirm the action.
+
+   ![alt_text](images/custom2.png "image_tooltip")
+
+## Step 3: Auth Page
+
+The Auth Page(IDX) will display the enabled or added fields in the Register tab.  For example, the following displays the added **First Name** field: 
+
+   ![alt_text](images/auth-page.png "image_tooltip")
+
+Alternatively, you can configure the registration form fields using JS. Refer to <a href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema/" target="_blank">this document</a> for more information.
 
 
 
