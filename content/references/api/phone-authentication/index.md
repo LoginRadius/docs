@@ -23,10 +23,10 @@ path: "/references/api/phone-authentication"
   | SmsTemplate | none | SMS Template name [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |password|Password for the email
-  |phone|New Phone Number | Model Class containing Definition of payload for PhoneAuthenticationModel API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |password|string|Password for the email
+  |phone|string|New Phone Number | Model Class containing Definition of payload for PhoneAuthenticationModel API [**Required**]
 
   ### Try Me Out
     
@@ -111,12 +111,12 @@ path: "/references/api/phone-authentication"
   | WelcomeEmailTemplate | none | Name of the welcome email template [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |FirstName|user's first name
-  |LastName|user's last name
-  |Password|Password for the email
-  |PhoneId|Phone ID (Unique Phone Number Identifier of the user) | Model Class containing Definition of payload for Auth User Registration API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |FirstName|string|user's first name
+  |LastName|string|user's last name
+  |Password|string|Password for the email
+  |PhoneId|string|Phone ID (Unique Phone Number Identifier of the user) | Model Class containing Definition of payload for Auth User Registration API [**Required**]
 
   ### Try Me Out
     
@@ -156,11 +156,11 @@ path: "/references/api/phone-authentication"
   | apikey | none | LoginRadius API Key [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |otp|The Verification Code
-  |password|Password for the email
-  |Phone|New Phone Number | Model Class containing Definition of payload for ResetPasswordByOTP API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |otp|string|The Verification Code
+  |password|string|Password for the email
+  |phone|string|New Phone Number | Model Class containing Definition of payload for ResetPasswordByOTP API [**Required**]
   
   ### Try Me Out
     

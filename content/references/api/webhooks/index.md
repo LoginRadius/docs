@@ -21,10 +21,10 @@ path: "/references/api/webhooks"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Event|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject|
-  |TargetUrl|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Event|string|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject|
+  |TargetUrl|string|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
 
   ### Try Me Out
     
@@ -85,10 +85,10 @@ path: "/references/api/webhooks"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Event|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject |
-  |TargetUrl|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Event|string|Allowed events: Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, AddEmail, RemoveEmail, BlockAccount, DeleteAccount, SetUsername, AssignRoles, UnassignRoles, SetPassword, LinkAccount, UnlinkAccount, UpdatePhoneId, VerifyPhoneNumber, CreateCustomObject, UpdateCustomobject, DeleteCustomObject |
+  |TargetUrl|string|URL where trigger will send data when it invoke | Model Class containing Definition of payload for Webhook Subscribe API [**Required**] |
   
   ### Try Me Out
     

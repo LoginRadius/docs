@@ -84,10 +84,10 @@ path: "/references/api/passwordless-login"
   | SmsTemplate | none | SMS Template name [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
+  | Attribute | Type | Description 
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Otp|The Verification Code
-  |Phone|New Phone Number | Model Class containing Definition of payload for PasswordLessLoginOtpModel API [**Required**]
+  |otp|string|The Verification Code
+  |phone|string|New Phone Number | Model Class containing Definition of payload for PasswordLessLoginOtpModel API [**Required**]
   
   ### Try Me Out
     

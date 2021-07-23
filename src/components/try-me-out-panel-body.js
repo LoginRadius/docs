@@ -226,6 +226,7 @@ export default class TryMeOut extends React.Component {
                     </label>
                   )
                 })}
+                <span style={{marginTop: 10}}>Click <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">here</a> to learn more about how to obtain your API key and API secret.</span>
               </div>
             ) : (
               ""

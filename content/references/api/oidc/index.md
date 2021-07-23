@@ -24,14 +24,14 @@ This API allows you to exchange your OpenID code for a LoginRadius access_token.
 
 ### Body Attributes
 
-| Attribute | Description 
+| Attribute | Type | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-|grant_type|This is the grant type to be used, you should provide 'authorization_code' [REQUIRED]
-|client_id|Your LoginRadius API Key. [REQUIRED]
-|client_secret|LoginRadius API Secret [REQUIRED] |
-|redirect_uri|Redirection URI to be used.
-|response_type|If used, needs to be 'token' |  
-|code|The authorization_code obtained during the Authorization process. [REQUIRED] |
+|grant_type|string|This is the grant type to be used, you should provide 'authorization_code' [REQUIRED]
+|client_id|string|Your LoginRadius API Key. [REQUIRED]
+|client_secret|string|LoginRadius API Secret [REQUIRED] |
+|redirect_uri|string|Redirection URI to be used.
+|response_type|string|If used, needs to be 'token' |  
+|code|string|The authorization_code obtained during the Authorization process. [REQUIRED] |
 
 ### API Error Codes
 
@@ -138,14 +138,14 @@ This API allows you to refresh an access_token, use access tokens to ensure a us
 
 ### Body Attributes
 
-| Attribute | Description 
+| Attribute | Type | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-|grant_type|This is the grant type to be used, you should provide 'refresh_token' [REQUIRED]
-|client_id|Your LoginRadius API Key. [REQUIRED]
-|client_secret|LoginRadius API Secret [REQUIRED] |
-|response_type|If used, needs to be 'token' |  
-|refresh_token|this is the refresh_token you received when you used the 'Access Token by OpenID Connect code' API call [REQUIRED] | 
-|scope|The scope for the Open ID profile, use 'openid profile'. [REQUIRED] |
+|grant_type|string|This is the grant type to be used, you should provide 'refresh_token' [REQUIRED]
+|client_id|string|Your LoginRadius API Key. [REQUIRED]
+|client_secret|string|LoginRadius API Secret [REQUIRED] |
+|response_type|string|If used, needs to be 'token' |  
+|refresh_token|string|this is the refresh_token you received when you used the 'Access Token by OpenID Connect code' API call [REQUIRED] | 
+|scope|string|The scope for the Open ID profile, use 'openid profile'. [REQUIRED] |
 
 ### API Error Codes
 
@@ -249,11 +249,11 @@ This API allows you to expire a refresh_token
 | oidcappname    	|  String	    |   The name for the ODIC App you have configured in the LoginRadius Admin Console. [REQUIRED]	        |
 
 ### Body Attributes
-| Attribute | Description 
+| Attribute | Type | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-|client_id|Your LoginRadius API Key. [REQUIRED]
-|client_secret|LoginRadius API Secret [REQUIRED] |  
-|token |This is the refresh_token you received when you used the Access Token by OpenID code API call. [REQUIRED] |
+|client_id|string|Your LoginRadius API Key. [REQUIRED]
+|client_secret|string|LoginRadius API Secret [REQUIRED] |  
+|token|string|This is the refresh_token you received when you used the Access Token by OpenID code API call. [REQUIRED] |
 
 ### API Error Codes
 

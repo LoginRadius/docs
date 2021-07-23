@@ -24,12 +24,12 @@ path: "/references/api/account"
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|boolean type value, default is true
-  |FirstName|user's first name
-  |LastName|user's last name
-  |Password|Password for the email | Model Class containing Definition of payload for Account Create API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Email|array of Email objects|Email object consists of 2 properties:<br />'Value': The email string.<br />'Type': A string describing the email.<br />We suggest using 'Primary' as the 'Type' on the first email registration.
+  |FirstName|string|user's first name
+  |LastName|string|user's last name
+  |Password|string|Password for the email | Model Class containing Definition of payload for Account Create API [**Required**]
 
   ### Try Me Out
 
@@ -218,10 +218,10 @@ path: "/references/api/account"
   | NullSupport | none | Boolean, pass true if you wish to update any user profile field with a NULL value, You can get the details [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |FirstName|user's first name
-  |LastName|user's last name | Model Class containing Definition of payload for Account Update API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |FirstName|string|user's first name
+  |LastName|string|user's last name | Model Class containing Definition of payload for Account Update API [**Required**]
   
   ### Try Me Out
     
@@ -324,9 +324,9 @@ path: "/references/api/account"
   | Fields | none | The fields parameter filters the API response so that the response only includes a specific set of fields [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|user's email | Model Class containing Definition of payload for UpsertEmail Property [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Email|string|user's email | Model Class containing Definition of payload for UpsertEmail Property [**Required**]
   
   ### Try Me Out
     
@@ -349,9 +349,9 @@ path: "/references/api/account"
   | uid | none | UID, the unified identifier for each user account [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |NewUid|New Uid | Payload containing Update UID [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |NewUid|string|New Uid | Payload containing Update UID [**Required**]
   
   ### Try Me Out
     

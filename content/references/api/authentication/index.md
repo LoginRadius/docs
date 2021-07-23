@@ -45,10 +45,10 @@ path: "/references/api/authentication"
   | VerificationUrl | none | Email verification url [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |email|user's email
-  |password|Password for the email | Model Class containing Definition of payload for Email Authentication API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |email|string|user's email
+  |password|string|Password for the email | Model Class containing Definition of payload for Email Authentication API [**Required**]
 
   ### Try Me Out
     
@@ -95,12 +95,12 @@ path: "/references/api/authentication"
   | WelcomeEmailTemplate | none | Name of the welcome email template [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|boolean type value, default is true
-  |FirstName|user's first name
-  |LastName|user's last name
-  |Password|Password for the email | Model Class containing Definition of payload for Auth User Registration API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Email|array of Email objects|Email object consists of 2 properties:<br />'Value': The email string.<br />'Type': A string describing the email.<br />We suggest using 'Primary' as the 'Type' on the first email registration.
+  |FirstName|string|user's first name
+  |LastName|string|user's last name
+  |Password|string|Password for the email | Model Class containing Definition of payload for Auth User Registration API [**Required**]
 
   ### Try Me Out
     
@@ -127,13 +127,13 @@ path: "/references/api/authentication"
   | WelcomeEmailTemplate | none | Name of the welcome email template [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|boolean type value, default is true
-  |FirstName|user's first name
-  |g-recaptcha-response|The acknowledgement received by Google in Google recaptcha authorisation process.
-  |LastName|user's last name
-  |Password|Password for the email | Model Class containing Definition of payload for Auth User Registration by Recaptcha API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Email|array of Email objects|Email object consists of 2 properties:<br />'Value': The email string.<br />'Type': A string describing the email.<br />We suggest using 'Primary' as the 'Type' on the first email registration.
+  |FirstName|string|user's first name
+  |g-recaptcha-response|string|The acknowledgement received by Google in Google recaptcha authorisation process.
+  |LastName|string|user's last name
+  |Password|string|Password for the email | Model Class containing Definition of payload for Auth User Registration by Recaptcha API [**Required**]
 
   ### Try Me Out
     
@@ -319,10 +319,10 @@ path: "/references/api/authentication"
   | VerificationUrl | none | Email verification url [**Optional**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |FirstName|user's first name
-  |LastName|user's last name | Model Class containing Definition of payload for User Profile update API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |FirstName|string|user's first name
+  |LastName|string|user's last name | Model Class containing Definition of payload for User Profile update API [**Required**]
   
   ### Try Me Out
     
@@ -343,12 +343,12 @@ path: "/references/api/authentication"
   | apikey | none | LoginRadius API Key [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  | resettoken | The reset token received in the forgot password email. [**Required**]
-  | password | The new password for the consumer's account. [**Required**]
-  | welcomeemailtemplate | Welcome email template. [**Optional**]
-  | resetpasswordemailtemplate | Reset password email template. [**Optional**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  | resettoken | string | The reset token received in the forgot password email. [**Required**]
+  | password | string | The new password for the consumer's account. [**Required**]
+  | welcomeemailtemplate | string | Welcome email template. [**Optional**]
+  | resetpasswordemailtemplate | string | Reset password email template. [**Optional**]
 
   ### Try Me Out
     

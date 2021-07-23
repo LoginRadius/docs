@@ -21,8 +21,8 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
   |Roles|Array of Role objects | Model Class containing Definition of payload for Roles API [**Required**]
 
   ### Try Me Out
@@ -121,9 +121,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for Create Role API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Roles|Array of string|The strings represent the role names | Model Class containing Definition of payload for Create Role API [**Required**]
 
   ### Try Me Out
     
@@ -145,9 +145,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |RoleContext|Array of RoleContext object, see body tab for structure | Model Class containing Definition of RoleContext payload [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |RoleContext|Array of RoleContext object| Model Class containing Definition of RoleContext payload [**Required**]
 
   ### Try Me Out
     
@@ -169,9 +169,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Permissions|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Permissions|object|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**]
 
   ### Try Me Out
     
@@ -193,9 +193,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for Create Role API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Roles | Array of string | Strings represent the role names | Model Class containing Definition of payload for Create Role API [**Required**]
 
   ### Try Me Out
     
@@ -236,9 +236,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Roles|Array of String, which represents the role name | Model Class containing Definition of payload for RoleContextRemoveRole API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Roles|Array of string| Strings represent the role names | Model Class containing Definition of payload for RoleContextRemoveRole API [**Required**]
 
   ### Try Me Out
     
@@ -260,9 +260,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |AdditionalPermissions|Array of String, which represents the additional permissions | Model Class containing Definition of payload for RoleContextAdditionalPermissionRemoveRole API [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |AdditionalPermissions|Array of string| Strings represent the additional permissions | Model Class containing Definition of payload for RoleContextAdditionalPermissionRemoveRole API [**Required**]
 
   ### Try Me Out
     
@@ -303,9 +303,9 @@ path: "/references/api/roles-management"
   | apisecret | none | LoginRadius API Secret [**Required**] |
 
   ### Body Attributes
-  | Attribute | Description 
-  | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Permissions|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**]
+  | Attribute | Type | Description 
+  | :------------ | :------- | :------- | :-------------------------------------------------------------------------------- | 
+  |Permissions|object|Any Permission name for the role | Model Class containing Definition for PermissionsModel Property [**Required**]
 
   ### Try Me Out
     
