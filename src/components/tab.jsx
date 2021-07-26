@@ -14,7 +14,7 @@ export const TabContainer = ({ tabs, tabheaders }) => {
             <li>
               <a
                 onClick={() => setActive(i)}
-                class="tab-a active-a"
+                className={`tab-a ${active === i ? "active-a" : ""}`}
                 key={`tabhead-${i}`}
               >
                 {tabName}
