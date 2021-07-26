@@ -53,7 +53,7 @@ You can add registration form fields by selecting from the [existing list](#a-se
 
 1. Click the **Add** button from the **Custom Fields** section to add a custom field, as highlighted on the screen below: 
 
-   ![alt_text](images/custom4.png "image_tooltip")
+   ![alt_text](images/config-reg2.png "image_tooltip")
 
 2. Enter the Field Name and then click the Save button to add the field to the **Custom Fields** section list. (e.g City)
 
@@ -63,7 +63,7 @@ You can add registration form fields by selecting from the [existing list](#a-se
 
 3. Click the **`+`** icon given next to the field to include it in the registration form. And then click the **Save** button.
 
-   ![alt_text](images/custom3.png "image_tooltip")
+   ![alt_text](images/custom2.png "image_tooltip")
 
 
 4. Click the **Edit** icon given next to the field to:
