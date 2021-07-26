@@ -346,85 +346,48 @@ main {
   margin-top: 0;
 }
 
-.toggle-container {
-  background-color: $blue-darkest;
-  font-size: 0;
-  overflow: hidden;
-  margin: 24px 0 56px;
-  input {
-    display: none;
-    &:checked + label {
-      background: $white;
-      opacity: 1;
-      color: $blue-darkest;
-      font-weight: 600;
-      border-left: 1px solid $gray-light;
-      border-top: 1px solid $gray-light;
-    }
-    @for $i from 1 through 2 {
-      &.tab#{$i}:checked {
-        ~ .line {
-          left: #{($i - 1) * 25%};
-        }
-        ~ .content-container .c#{$i} {
-          display: block;
-        }
-      }
-    }
-  }
-  label {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    height: 52px;
-    line-height: 52px;
-    width: 20%;
-    text-align: center;
-    background: $blue-darkest;
-    color: $white;
-    opacity: 0.5;
-    position: relative;
-    transition: 0.3s background ease;
-    cursor: pointer;
-    margin-bottom: -1px;
-  }
-  .line {
-    position: absolute;
-    height: 2px;
-    background: #1e88e5;
-    width: 25%;
-    top: 34px;
-    left: 0;
-    transition: 0.25s ease;
-  }
-  .content-container {
-    background: $white;
-    position: relative;
-    font-size: 16px;
-    padding: 24px;
-    border: 1px solid $gray-light;
-    .content {
-      padding: 0;
-      width: 100%;
-      display: none;
-      transition: 0.25s ease;
-      color: #333;
-      border: 0;
-      .gatsby-resp-image-wrapper {
-        margin: 0 !important;
-        max-width: 100% !important;
-      }
-      h3 {
-        font-weight: 200;
-        margin: 10px 0;
-      }
-      p {
-        margin: 10px 0;
-      }
-      p,
-      i {
-        font-size: 13px;
-      }
-    }
-  }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.tab-container {
+  margin: 5% 10%;
+  padding: 3%;
+  border-radius: 4px;
+}
+.tab-menu {
+}
+.tab-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.tab-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.tab-menu ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  padding: 7px 25px;
+  border-radius: 4px;
+}
+.tab-menu ul li a.active-a {
+  background-color: #ff661f;
+  color: #ffffff;
+}
+.tab {
+  display: none;
+}
+.tab h2 {
+  color: rgba(0, 0, 0, 0.7);
+}
+.tab p {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: justify;
+}
+.tab-active {
+  display: block;
 }
