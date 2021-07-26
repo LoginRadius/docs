@@ -1,30 +1,35 @@
-import React, { useState } from "react"
+import React from "react"
+
+import DocsContext from "../context/docsContext"
 
 export const Tab = ({ children }) => {
   return <div class="tab tab-active">{children}</div>
 }
 
 export const TabContainer = ({ tabs, tabheaders }) => {
-  const [active, setActive] = useState(0)
   return (
-    <div class="tab-container">
-      <div class="tab-menu">
-        <ul>
-          {tabheaders.map((tabName, i) => (
-            <li>
-              <a
-                onClick={() => setActive(i)}
-                className={`tab-a ${active === i ? "active-a" : ""}`}
-                key={`tabhead-${i}`}
-              >
-                {tabName}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <DocsContext.Consumer>
+      {docs => (
+        <div class="tab-container">
+          <div class="tab-menu">
+            <ul>
+              {tabheaders.map((tabName, i) => (
+                <li>
+                  <a
+                    onClick={() => docs.toggleTab(i)}
+                    className={`tab-a ${docs.tab === i ? "active-a" : ""}`}
+                    key={`tabhead-${i}`}
+                  >
+                    {tabName}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      {tabs.map((tab, i) => (i === active ? tab : null))}
-    </div>
+          {tabs.map((tab, i) => (docs.tab === i ? tab : null))}
+        </div>
+      )}
+    </DocsContext.Consumer>
   )
 }
