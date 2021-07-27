@@ -5,8 +5,11 @@ description: "This is a guide for integrating LoginRadius services with Wordpres
 path: "/guide/wordpress"
 ---
 
-import CredsDoc from "../../common-docs/get-creds"
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import SOTT from "./wpsottcli.mdx"
+import SottDashboard from "./wpsottdashboard.mdx"
 import DomainDoc from "../../common-docs/domain-whitelisting"
+
 
 # Get Started - WordPress
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your WordPress application.
@@ -25,9 +28,17 @@ Watch this video to get started, or refer to the section below for the text-base
 
 ## Get Credentials
 
-<CredsDoc />
-
-> **Note:** Whitelist your application domain as explained in the [Whitelist Domain](#whitelist-domain) section.
+<TabContainer
+  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabs={[
+    <Tab>
+      <SOTT />
+    </Tab>,
+    <Tab>
+      <SottDashboard />
+    </Tab>,
+  ]}
+/>
 
 ## Setup WordPress Plugin
 

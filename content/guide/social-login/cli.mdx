@@ -1,0 +1,39 @@
+### Step 1: Choose Login Method 
+
+With [Loginradius CLI](https://github.com/LoginRadius/lr-cli/), You can add social provider using the simple command below
+
+   ```sh
+   $ lr add social
+   ? Select the provider from the list: ###Provider###
+   ? Client ID: ###Client ID###
+   ? Client Secret: ###Client Secret###
+   ###Provider### is added as your login Method
+   ```
+
+### Step 2: Configure Social Login 
+
+With [Loginradius CLI](https://github.com/LoginRadius/lr-cli/), You can update social provider using the simple command below
+
+   ```sh
+   $ lr set social -p ###Provider###
+   ? API Key: ###key###
+   ? API Secret: ###secret###
+   ###Provider### updated successfully.
+   ```
+
+### Step 3: Whitelist Domain
+
+With the help of **<a href="https://github.com/LoginRadius/lr-cli/" target="_blank">LoginRadius CLI</a>** you can whitelist your domain using your terminal.
+
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+
+    ```$ lr add domain -d htts://google.com
+    htts://google.com is now added as your whitelisted domain.
+    ```
+### Step 4: Check Auth Page (IDX)
+
+With [Loginradius CLI](https://github.com/LoginRadius/lr-cli/), You can go to Auth page from CLI using the simple command below
+
+   ```sh
+   $ lr demo
+   ```
