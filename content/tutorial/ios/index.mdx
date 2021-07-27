@@ -6,8 +6,8 @@ path: "/tutorial/ios"
 ---
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import SOTT from "./iosSottCli.mdx"
-import SottDashboard from "./iosSottDashboard.mdx"
+import Creds from "../../common-docs/get-creds"
+import Sott from "../../common-docs/generate-sott"
 
 # Get Started - iOS
 
@@ -24,17 +24,14 @@ Watch this video to get started, or refer to the section below for the text-base
 
 ## Get Credentials
 
-<TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
-  tabs={[
-    <Tab>
-      <SOTT />
-    </Tab>,
-    <Tab>
-      <SottDashboard />
-    </Tab>,
-  ]}
-/>
+* **API Key/Secret**
+
+<Creds />
+<p></p>
+
+* **SOTT**
+
+<Sott />
 
 ## iOS Implementation
 
