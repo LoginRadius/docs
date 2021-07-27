@@ -1,0 +1,25 @@
+Select an app. With [LoginRadius CLI](https://github.com/LoginRadius/lr-cli/), you can check and configure Login Methods for a particular app by using the commands as shown below
+      
+**To check status of login methods:**
+
+```sh
+$ lr get login-method
++--------------------------+-----------+
+|   Method                          | Enabled     |  
++--------------------------+-----------+
+| Phone Login                   | false         |	
+| Passwordless Login   | false         | 
++--------------------------+-----------+
+```
+
+
+**To enable Phone login:**
+
+```sh
+$ lr add login-method
+Select the Login Method from the list:
+- Phone Login      <chosen>
+- Passordless Login 
+
+Phone Login has been successfully added.
+```  
