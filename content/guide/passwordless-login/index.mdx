@@ -32,17 +32,17 @@ You can implement the Passwordless Login method in two following ways:
 Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import CLI from "./cli"
-import Dashboard from "./dashboard"
+import PwdLessCLI from "./cli"
+import PwdLessDash from "./dashboard"
 
 <TabContainer
   tabheaders={["Using CLI", "Using Dashboard"]}
   tabs={[
     <Tab>
-      <CLI />
+      <PwdLessCLI />
     </Tab>,
     <Tab>
-      <Dashboard />
+      <PwdLessDash />
     </Tab>,
   ]}
 />

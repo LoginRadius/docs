@@ -26,17 +26,17 @@ During login, the consumer will need to provide both the Phone Number and Passwo
 Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import CLI from "./cli"
-import Dashboard from "./dashboard"
+import PhoneCLI from "./cli"
+import PhoneDash from "./dashboard"
 
 <TabContainer
   tabheaders={["Using CLI", "Using Dashboard"]}
   tabs={[
     <Tab>
-      <CLI />
+      <PhoneCLI />
     </Tab>,
     <Tab>
-      <Dashboard />
+      <PhoneDash />
     </Tab>,
   ]}
 />
