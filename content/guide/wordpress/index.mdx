@@ -6,10 +6,8 @@ path: "/guide/wordpress"
 ---
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import SOTT from "./wpsottcli.mdx"
-import SottDashboard from "./wpsottdashboard.mdx"
 import DomainDoc from "../../common-docs/domain-whitelisting"
-
+import Creds from "../../common-docs/get-creds"
 
 # Get Started - WordPress
 The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your WordPress application.
@@ -28,17 +26,7 @@ Watch this video to get started, or refer to the section below for the text-base
 
 ## Get Credentials
 
-<TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
-  tabs={[
-    <Tab>
-      <SOTT />
-    </Tab>,
-    <Tab>
-      <SottDashboard />
-    </Tab>,
-  ]}
-/>
+<Creds />
 
 ## Setup WordPress Plugin
 

@@ -6,8 +6,10 @@ path: "/guide/manage-users"
 ---
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import UCLI from "./userscli"
-import uDasboard from "./userdashboard"
+import Search from "./search"
+import Reset from "./reset"
+import Delete from "./delete"
+import Add from "./add"
 
 # Manage Users
 
@@ -52,31 +54,11 @@ You can navigate back to your active users table by clicking the **Back to Activ
 
 ## Search for Users
 
-<TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
-  tabs={[
-    <Tab>
-      <UCLI />
-    </Tab>,
-    <Tab>
-      <uDasboard />
-    </Tab>,
-  ]}
-/>
+<Search />
 
 ## Add Users
 
-You can add new users to your application without having them go through the typical registration process.
-
-1. To add a new user, click the **Add User** button available at the bottom right of the screen. From the dropdown, click **Create User** as highlighted in the screen below:
-
-  ![alt_text](images/create-user.png "image_tooltip")
-
-  The confirmation pop-up will appear.
-
-2. Enter the required details in each respective field and click the **Create** button to create the new user.
-
-  ![alt_text](images/create-user-popup.png "image_tooltip")
+<Add />
 
 ## Import Users
 
@@ -89,6 +71,7 @@ Refer to the [Migrate User Data](/guide/migrate-user-data) document for more inf
 <p><span class="devloper-premium plan-tag">Developer Pro</span></p>
 <p> </p>
 
+
 > Note: You must have a **Developer Pro** plan subscription to access these actions in the LoginRadius Dashboard. You can otherwise utilize our APIs to manage your users.
 
 To access available actions for a registered user, find the user record of the target user and click the vertical ellipsis button (three dots) contained in the **Action** column of your user table:
@@ -99,11 +82,7 @@ These are the supported actions you can perform on each registered user:
 
 * **Reset Password**
 
-  Triggers the reset password flow for your user. Clicking **Reset Password** will show a confirmation pop-up as displayed below:
-
-  ![alt_text](images/user-reset-password.png "image_tooltip")
-
-  Click the **Send Email** button in the pop-up to send a password reset email to your selected customer.
+<Reset />
 
 * **Block User**
 
@@ -123,13 +102,8 @@ These are the supported actions you can perform on each registered user:
 
   Click the **Unblock** button in the pop-up to unblock your selected customer.
 
-* **Delete User**
+* **Delete Users**
 
-  Deletes your user permanently from your application. A deleted user cannot be recovered again. Clicking **Delete User** will show a confirmation pop-up as displayed below:
-
-  ![alt_text](images/user-delete.png "image_tooltip")
-
-  Click the **Delete** button in the pop-up to delete your selected customer.
-
+<Delete />
 
   [Go Back to Home Page](/)

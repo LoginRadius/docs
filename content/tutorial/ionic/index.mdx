@@ -6,9 +6,9 @@ path: "/tutorial/ionic"
 ---
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import SOTT from "./sottCliIonic.mdx"
-import SottDashboard from "./sottDashboardIonic.mdx"
 import DomainDoc from "../../common-docs/domain-whitelisting"
+import Creds from "../../common-docs/get-creds"
+import Sott from "../../common-docs/generate-sott"
 
 # Get Started - Ionic
 
@@ -22,17 +22,14 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 ## Get Credentials
 
-<TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
-  tabs={[
-    <Tab>
-      <SOTT />
-    </Tab>,
-    <Tab>
-      <SottDashboard />
-    </Tab>,
-  ]}
-/>
+* **API Key/Secret**
+
+<Creds />
+<p></p>
+
+* **SOTT**
+
+<Sott />
 
 ## Setup Ionic 
 
