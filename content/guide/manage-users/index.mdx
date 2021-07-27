@@ -6,8 +6,8 @@ path: "/guide/manage-users"
 ---
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import cli from "./CLI"
-import dashboard from "./Dashboard"
+import UCLI from "./userscli"
+import uDasboard from "./userdashboard"
 
 # Manage Users
 
@@ -56,10 +56,10 @@ You can navigate back to your active users table by clicking the **Back to Activ
   tabheaders={["Using CLI", "Using Dashboard"]}
   tabs={[
     <Tab>
-      <cli />
+      <UCLI />
     </Tab>,
     <Tab>
-      <dashboard />
+      <uDasboard />
     </Tab>,
   ]}
 />
