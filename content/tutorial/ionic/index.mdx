@@ -5,8 +5,9 @@ description: "This is a tutorial with Ionic sdk implementation."
 path: "/tutorial/ionic"
 ---
 
-import IntroDoc from "../../common-docs/intro"
-import CredsDoc from "../../common-docs/get-creds"
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import SOTT from "./sottCliIonic.mdx"
+import SottDashboard from "./sottDashboardIonic.mdx"
 import DomainDoc from "../../common-docs/domain-whitelisting"
 
 # Get Started - Ionic
@@ -21,15 +22,17 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 ## Get Credentials
 
-Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name** (when you signed up for the LoginRadius account, it created an app for you), **API Key**, and **SOTT**.
-
-- <CredsDoc />
-
-- Now click the **Secure Mobile OTP Token(SOTT)** subsection, the below screen will appear:
-
-  ![alt_text](../../assets/blog-common/sott.png "image_tooltip")
-
-- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
+<TabContainer
+  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabs={[
+    <Tab>
+      <SOTT />
+    </Tab>,
+    <Tab>
+      <SottDashboard />
+    </Tab>,
+  ]}
+/>
 
 ## Setup Ionic 
 
