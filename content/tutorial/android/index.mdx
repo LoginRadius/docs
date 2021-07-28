@@ -6,8 +6,8 @@ path: "/tutorial/android"
 ---
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
-import SOTT from "./sottcli.mdx"
-import SottDashboard from "./sottdashboard.mdx"
+import Creds from "../../common-docs/get-creds"
+import Sott from "../../common-docs/generate-sott"
 
 # Get Started - Android
 
@@ -30,17 +30,14 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 
 ## Get Credentials
 
-<TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
-  tabs={[
-    <Tab>
-      <SOTT />
-    </Tab>,
-    <Tab>
-      <SottDashboard />
-    </Tab>,
-  ]}
-/>
+* **API Key/Secret**
+
+<Creds />
+<p></p>
+
+* **SOTT**
+
+<Sott />
 
 ## Install SDK 
 

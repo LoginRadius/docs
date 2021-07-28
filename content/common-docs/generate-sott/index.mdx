@@ -1,0 +1,15 @@
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import CLI from "./cli"
+import Dashboard from "./dashboard"
+
+<TabContainer
+  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabs={[
+    <Tab>
+      <CLI />
+    </Tab>,
+    <Tab>
+      <Dashboard />
+    </Tab>,
+  ]}
+/>

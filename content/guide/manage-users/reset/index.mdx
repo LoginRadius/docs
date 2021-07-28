@@ -1,0 +1,15 @@
+import { Tab, TabContainer } from "../../../../src/components/tab.jsx"
+import ResetCli from "./resetcli"
+import ResetDashboard from "./resetdashboard"
+
+<TabContainer
+  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabs={[
+    <Tab>
+      <ResetCli />
+    </Tab>,
+    <Tab>
+      <ResetDashboard />
+    </Tab>,
+  ]}
+/>
