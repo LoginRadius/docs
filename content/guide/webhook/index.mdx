@@ -11,47 +11,25 @@ Webhooks allow you to build or set up integrations that subscribe to certain eve
 
 > **Note:** Upon submitting the request to the configured Webhook URL, LoginRadius does not track payload deliverability.
 
-This guide explains how to configure webhook in <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>.
+This guide explains how to configure webhooks using [LoginRadius CLI](https://github.com/LoginRadius/lr-cli/) or <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>.
 
 ## Configuration
 
-### Step 1: Visit Integration Section
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import HookCLI from "./cli"
+import HookDash from "./dashboard"
 
-Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
-
-![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
-
-### Step 2: Add Webhook
-
-Click the **Add** button from the above screen, and you will find the list of all available integrations as displayed in the below screen:
-
-![alt_text](./images/available-integration.png "image_tooltip")
-
-Click the **Let's Configure** button in the Webhook tile as on the above screen and follow step 3.
-
-### Step 3: Configure Webhook
-
-Enter or select the following details on the Webhook screen:
-
-- **Name**: Enter the name of the Webhook
-- **Event**: Choose the type of event from the dropdown.
-
-  | PLAN              | ALLOWED EVENTS                                                                                                                                                                                                                                                                                       |
-  | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | **Developer**     | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification                                                                                                                                                            |
-  | **Developer Pro** | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext |
-
-- **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
-
-The following displays the Webhook screen:
-
-![alt_text](./images/add-webhook.png "image_tooltip")
-
-Click the **Save** button after providing the required details.
-
-You will find the successfully configured webhook in the **Configured Integrations** section as displayed in the below screen:
-
-![alt_text](./images/configured-webhook.png "image_tooltip")
+<TabContainer
+  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabs={[
+    <Tab>
+      <HookCLI />
+    </Tab>,
+    <Tab>
+      <HookDash />
+    </Tab>,
+  ]}
+/>
 
 > Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
 
