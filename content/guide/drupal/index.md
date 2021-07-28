@@ -27,7 +27,7 @@ You can install LoginRadius  Drupal Plugin [manually](#install-manually) or via 
 
 ### Install Manually
 
-1. Download the <a href="(https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-8/package/customer_identity_and_access_management.tar" target="_blank">Drupal v8.x</a> or <a href="https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-9/package/customer_identity_and_access_management.tar" target="_blank">Drupal v9.x</a> Customer Identity module.
+1. Download the <a href="https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-8/package/customer_identity_and_access_management.tar" target="_blank">Drupal v8.x</a> or <a href="https://github.com/LoginRadius/drupal-identity-module/blob/master/drupal-9/package/customer_identity_and_access_management.tar" target="_blank">Drupal v9.x</a> Customer Identity module.
 
 2. Unarchive the module and upload the module folder to your Drupal installation's modules directory.
 

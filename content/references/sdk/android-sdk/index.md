@@ -2,7 +2,7 @@
 title: Android Library
 description: "A guide to implement LoginRadius SDK in a Android application."
 summary: "A guide to implement LoginRadius SDK in a Android application"
-path: "/references/SDK/android-SDK"
+path: "/references/sdk/android-sdk"
 ---
 
 # Android SDK 

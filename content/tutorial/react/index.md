@@ -7,7 +7,7 @@ path: "/tutorial/react"
 
 # Get Started - React.js
 
-The tutorial lets you implement LoginRadius user registration, login, and view profile on your React.js based application.
+The tutorial lets you implement LoginRadius user registration, login, and view profile on your React.js based application. It makes use of the LoginRadius React SDK.  
 
 > <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don't have one yet!
 
@@ -33,15 +33,60 @@ In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginrad
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
+## Whitelist Your Domain
+
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+
+To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
+
+![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
+
+## About LoginRadius React SDK
+
+We will be using the [LoginRadius React SDK](https://github.com/LoginRadius/loginradius-react) to implement different functionalities in our application. The SDK makes use of [React Context](https://reactjs.org/docs/context.html) to manage the authentication state of your users. It can easily be installed using the `npm` package manager as explained later. 
+
 ## Setup React JS
 
-This example uses a sample app based on the Create React App (CRA) boilerplate. For directions on how to Create React App, you can reference <a href="https://reactjs.org/docs/create-a-new-react-app.html" target="_blank">here.</a>
+This example uses a sample app based on the Create React App (CRA) boilerplate. For directions on how to Create React App, you can reference <a href="https://reactjs.org/docs/create-a-new-react-app.html" target="_blank">here.</a> 
 
 Once the CRA boilerplate is set up, follow these steps:
+
+- ### Install LoginRadius React SDK
+    
+    Navigate to the root of the project and install `loginradius-react`:
+  
+  `npm install loginradius-react`
 
 - Navigate to the project root and install `react-router-dom`:
 
   `npm install react-router-dom`
+
+- Setup a `.env.local` file at the project root with the following details:
+  ```Shell 
+  REACT_APP_LR_APP_NAME =<value>
+  REACT_APP_API_KEY =<value>
+  ```
+
+- Go to `index.js` file and add the following code: 
+  ```JavaScript
+  import React from "react";
+  import ReactDOM from "react-dom";
+  import App from "./App";
+  import { LRAuthProvider } from "loginradius-react";
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <LRAuthProvider
+        appName={process.env.REACT_APP_LR_APP_NAME || ""}
+        apiKey={process.env.REACT_APP_API_KEY || ""}
+        redirectUri={window.location.origin}
+      >
+        <App />
+      </LRAuthProvider>
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
+  ```
 
 - Go to `App.js` and modify the App component as follows:
 
@@ -71,39 +116,44 @@ Once the CRA boilerplate is set up, follow these steps:
   export default App;
   ```
 
-## Configure Registration and Login URLs
+## Configure Authentication Flow
 
-> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
-Navigate your Register or Login links or buttons to the following URLs:
+We will make use of the `loginWithRedirect`, `loginWithPopup` and `logout` authentication methods from the `useLRAuth` hook in our components to quickly setup an authentication flow for our application. We can also get access to the authentication state using `isAuthenticated`. 
+- Create a `Landing.js` file under the `src` folder and populate it as shown below. This component will act as the `Landing Page` for our application. 
 
-**Registration Page URL:**
+``` JavaScript
+import { useLRAuth } from "loginradius-react";
 
-`https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`
+const Auth = () => {
 
-**Login Page URL:**
+const {isAuthenticated,loginWithRedirect,logout } =  useLRAuth();
+  if (isAuthenticated) {
+    return (
+      <div>
+        <button onClick={() => logout()}>
+          Log out
+        </button>
+      </div>
+    );
+  } else {
+    
+    return <button onClick={() => loginWithRedirect("/login")}>Login/Register</button>;
 
-`https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=login&return_url=<Return URL>`
+  }
+}; 
 
-**Where:**
+export default Auth;     
+``` 
 
-- **LoginRadius App Name** is the name of your app as mentioned in [Get Credential](#get-credentials) step.
-- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-your-domain) if you are not using Local Domain for this tutorial.
+Make sure to add the `Auth` component to the `"/"` route in the `App.js` file. 
+>  - The loginWithRedirect() and logout() methods make use of the Auth Page(IDX), where Registration and Login functionality is already implemented. 
+>  - The URL's used by the methods are of the format `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=<value>&return_url=<Return URL>` where action's value(login,logout etc.) changes based on the functionality. 
+>  - The **return_url** is where the users will be redirected to after an action is performed successfully. It has a default value of `window.location.origin` and can be modified by passing a string as a paramter to the respective method as shown above.  
 
-> return_url can be your website, frontend app, or backend server url where you are handling the access token.
->
-> For this tutorial, set the `return_url` to point to the `/login` subdomain of your application. For example, in the local React instance, it can point to `http://localhost:3000/login`. This way, after logging in through the Auth Page (IDX) Login page, it will redirect the user to the Login component implemented in below [step](#retrieve-user-data-using-access-token).
+## Retrieve User Data 
 
-## Retrieve User Data using Access Token
-
-> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url should be your application's web page where you would like to receive the access token.
-> The following is an example of the access token in the query string with the Return URL:
->
-> `<Return URL>?token=745******-3e8e-****-b3**2-9c0******1e.`
->
-> Point return_url to a route in your React application to capture the access token and retrieve the user profile data.
-
-- Add the `"/login"` route to the `App` component to get the user profile. Your `App.js` file should look like this:
+- Add the `"/login"` route to the `App` component to get the user profile. Your `App.js` file should now look like this:
 
   ```JavaScript
   import './App.css';
@@ -112,6 +162,7 @@ Navigate your Register or Login links or buttons to the following URLs:
     Switch,
     Route
   } from "react-router-dom";
+  import Auth from './Landing'
   import Login from './Login'
 
   function App() {
@@ -121,6 +172,7 @@ Navigate your Register or Login links or buttons to the following URLs:
           <Switch>
             <Route exact path="/">
               <div>{"Application home"}</div>
+              <Auth />
             </Route>
             <Route path="/login">
               <Login />
@@ -142,104 +194,117 @@ Navigate your Register or Login links or buttons to the following URLs:
 
   ```JavaScript
   import React from "react"
-  import { withRouter } from "react-router-dom";
+  import { useLRAuth, withAuthenticationRequired } from "loginradius-react";
 
-  const apiKey = '{{ Your API Key }}';
-
-  class Login extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        userProfileResponse: null
-      }
-    }
-
-    componentDidMount() {
-      const token = new URLSearchParams(this.props.location.search).get("token");
-      fetch("https://api.loginradius.com/identity/v2/auth/account?apikey=" + apiKey, {
-        method: 'GET',
-        headers: {
-          'Authorization': 'Bearer ' + token
-        },
-      })
-        .then(res => res.json())
-        .then(res => {
-          this.setState({ userProfileResponse: res })
-        })
-        .catch(e => {
-          console.log(e);
-        })
-    }
-
-    render() {
-      const { userProfileResponse } = this.state;
-
-      return (
-        <div>
-          <span style={{ whiteSpace: "pre-wrap", textAlign: "left" }}>
-            {JSON.stringify(userProfileResponse, null, 4)}
-          </span>
-        </div>
-      );
-    }
-  }
-
-  export default withRouter(Login);
+  const Login = () => {
+  const { user } = useLRAuth();
+  return (
+  <div>
+    <span style={{ whiteSpace: "pre-wrap", textAlign: "left" }}>
+      {JSON.stringify(user, null, 4)}
+    </span>
+  </div>
+   );
+  } 
+  export default withAuthenticationRequired(Login, {
+  onRedirecting: () => <div>Loading...</div>, returnTo: '/login',
+  });
   ```
+Here, we have used the `user` method from the `useLRAuth` hook to get access to user related data. We can protect a route component using the `withAuthenticationRequired` higher order component. This is shown in the above code for the `Login` component. Any visits made to the protected route when the user is unauthenticated, will redirect the user to the login page. The user will be redirected to the protected page only after authentication is completed.  
 
-- Replace the following placeholder in the above code:
-  {{YOUR API KEY}}: API Key obtained in the [Get Credentials](#get-credentials) step.
+> Also, we can fetch the access token by using the `getAccessTokenSilently` method from the `useLRAuth` hook. This access token can be used to fetch data from different APIs as shown [here](#call-an-api).
 
 
-## Run and See Result
+## Run and See Result  
 
 - From your command line, run the React application:
 
   `npm start`
 
-- Wait for the application to finish launching.
+- Wait for the application to finish launching. 
 
-- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=http://localhost:3000/login`. It will display the following screen:
+- Click the `Login/Register` button on the Home Page to login or register as a user to the application. It will display the following screen:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-- Register a user here and then log in. Upon successful login, it will redirect you to the return url with access token. In response, you will get user profile in JSON format displayed in the "/login" route. The following displays a sample JSON response:
+- Upon successful login, it will redirect you to the return url. In response, you will get user profile in JSON format displayed in the `"/login"` route. The following displays a sample JSON response: 
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
 > In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
-## Whitelist Your Domain
+## Call An API  
 
-For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+As an additional feature, we can use the LoginRadius React SDK to easily call API's with an access token. The token can be obtained by using the `getAccessTokenSilently` method from the `useLRAuth` hook. To test this out, create a new file/component with the below code. A route for this component can later be created in the `App.js` file. 
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
+``` JavaScript
+import React, { useEffect, useState } from "react";
+import { useLRAuth, withAuthenticationRequired } from "loginradius-react";
 
-![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
+const CallAPI = () => {
+  const { getAccessTokenSilently } = useLRAuth();
+  const [resp, setResp] = useState(null);
 
-## Explore Node.js Demo
+  useEffect(() => {
+    (async () => {
+      try {
+        const token = await getAccessTokenSilently();
+        const response = await fetch(
+        `https://api.loginradius.com/identity/v2/auth/access_token/validate?access_token=${token}&apiKey=${process.env.REACT_APP_API_KEY}`,
+          {}
+        );
+        setResp(await response.json());
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, [getAccessTokenSilently]);
 
-As an alternative to handling all API calls in the React frontend, you may also opt to access the LoginRadius API from a Node backend. If you wish to do so, you can check out our Node.js demo to learn how to implement various LoginRadius features using SDK and its functions.
+  if (!resp) {
+    return <div>Loading...</div>;
+  }
 
-**<a href="https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo" target="_blank">GitHub Demo Link</a>** | **<a href="https://github.com/LoginRadius/login-page-demos/archive/master.zip" target="_blank">Download Demo</a>**
+  return (
+    <span>{JSON.stringify(resp, null, 2)}</span>
+  );
+};
+
+export default withAuthenticationRequired(CallAPI, {
+    onRedirecting: () => <div>Loading...</div>, 
+    });
+
+```
+Here, we are fetching data from the LoginRadius [Auth Validate Access Token](https://www.loginradius.com/docs/developer/references/api/authentication#auth-validate-access-token) API. 
+
+The following displays a sample output for this API:
+
+![alt_text](./images/callAPI.png "image_tooltip")
+
+A similar approach can be used for any API. 
+
+
+## Explore React SDK
+
+LoginRadius React SDK is an open-source software. If you wish to contribute or get a better understanding of the concepts explained in this guide, refer the [React SDK](https://github.com/LoginRadius/loginradius-react) repository. You can find `working examples` of the LoginRadius React SDK [here](https://github.com/LoginRadius/loginradius-react/tree/main/examples).
+
 
 ## Recommended Next Steps
 
-<a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-<a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-<a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-<a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-<a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
+* <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
-## Node-js SDK Reference
+## React SDK Reference
 
-<a href="https://www.loginradius.com/docs/developer/references/SDK/nodejs-SDK" target="_blank">Node-js SDK</a>
+<a href="https://github.com/LoginRadius/loginradius-react" target="_blank">React SDK</a>
 
 ## API Reference
 

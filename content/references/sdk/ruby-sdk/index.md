@@ -2,7 +2,7 @@
 title: Ruby Library
 description: "A guide to implement LoginRadius SDK in a Ruby on Rails application."
 summary: "A guide to implement LoginRadius SDK in a Ruby on Rails application"
-path: "/references/SDK/ruby-SDK"
+path: "/references/sdk/ruby-sdk"
 ---
 # Ruby SDK
 
