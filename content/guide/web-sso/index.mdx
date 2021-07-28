@@ -5,6 +5,8 @@ summary: "A guide on how to implement web sso in any web application"
 path: "/guide/web-sso"
 ---
 
+import Domain from "../../common-docs/domain-whitelisting"
+
 <span class="developer plan-tag">Developer</span>
 <span class="devloper-premium plan-tag">Developer Pro</span>
 
@@ -25,14 +27,7 @@ So that the consumers logged in to one application automatically logs into other
 
 ### Step 1: Whitelist Your Domain
 
-1. Login to your LoginRadius Dashboard account, from the left navigation panel, click the **Configuration**.
-
-
-2. From the appeared screen, click the down arrow given against the **Whitelist Your Domain** section, the following screen will appear:
-
-   ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
-
-3. Enter the desired domains in the **Add Domain** textbox highlighted above, and then click the Add button. These are the domains where you want to enable SSO.
+<Domain />
 
 ### Step 2: Get SSO Token
 
