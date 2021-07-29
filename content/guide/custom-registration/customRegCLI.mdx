@@ -1,0 +1,86 @@
+## Step 1: Manage Registration Form Fields
+
+You can add registration form fields by selecting from the [existing list](#a-select-from-the-list) or creating a [custom field](#b-create-a-custom-field) based on the requirement.
+
+With [Loginradius CLI](https://github.com/LoginRadius/lr-cli/), You can manage your registration form fields and custom fields using the below commands:
+
+### a. Select from the list
+
+#### To get the existing list of registration form fields
+
+```shell
+$ lr get schema
++-----------+---------------+----------+---------+
+|   NAME    |    DISPLAY    |   TYPE   | ENABLED |
++-----------+---------------+----------+---------+
+| emailid   | Email Id      | email    | true    |
+| country   | Country       | string   | false    |
+| birthdate | Date of Birth | string   | false    |
+| lastname  | Last Name     | string   | false    |
+| firstname | First Name    | string   | false    |
+| password  | Password      | password | true    |
++-----------+---------------+----------+---------+
+```
+
+#### To enable/disable field for your registration form fields
+
+```shell
+
+# To Enable the Field
+lr set schema -f firstname --enable
+`firstname` enabled successfully
+
+# To Disable the Field
+lr set schema -f firstname --disable
+`firstname` disabled successfully
+```
+
+> **Note:** You cannot disable the Email and Password fields, as Email/Password Login is the default authentication method. For more information, refer to <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login" target="_blank">this document</a>.
+
+#### To Update other properties of your registration form fields
+
+```shell
+$ lr set schema -f country
+? Enter Field Name: Country
+? Optional? No
+? Select field Type Option
+? Enter Option in the below format:
+key1,value1
+key2,value2 [Enter 2 empty lines to finish]
+? Enter Option in the below format:
+key1,value1
+key2,value2
+india,India
+...
+? This field is not enabled in your registration schema, Do you want to enable it? Yes
+`country` updated successfully
+```
+
+### b. Create a custom field
+
+#### Add A Custom Field
+
+```shell
+$ lr add custom-field -f City
+City is successfully add as your customfields
+You can now add the custom field in your registration schema using `lr set schema` command
+```
+
+> Once you enable the custom field you can add the same in your registration form fields either by [enabling it](#to-enabledisable-field-for-your-registration-form-fields) or by [updating the configuration](#to-update-other-properties-of-your-registration-form-fields).
+
+#### Delete A Custom Field
+
+```shell
+$ lr delete custom-field
+? Select the field you Want to delete from the list: City
+? Are you Sure you want to delete this custom field? Yes
+The field has been sucessfully deleted
+```
+
+## Step 2: Auth Page
+
+The Auth Page(IDX) will display the enabled or added fields in the Register tab. For example, the following displays the added **First Name** field. You can go to your auth page using the below command.
+
+```shell
+$ lr demo
+```

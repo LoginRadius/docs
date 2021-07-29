@@ -1,10 +1,8 @@
-With the help of **<a href="https://github.com/LoginRadius/lr-cli/" target="_blank">LoginRadius CLI</a>** you can whitelist your domain using your terminal.
-
-For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+With the help of **<a href="https://github.com/LoginRadius/lr-cli/" target="_blank">LoginRadius CLI</a>** you can whitelist your domain using below command
 
 **To get the list of whitelisted domain**
 
-```sh
+```shell
 $ lr get domain
 1.http://localhost
 2.http://127.0.0.1
@@ -13,7 +11,7 @@ $ lr get domain
 
 **To Add/Remove the whitelisted domain**
 
-```sh
+```shell
 $ lr delete domain -d http://127.0.0.1
 http://127.0.0.1 is now removed from whitelisted domain.
 

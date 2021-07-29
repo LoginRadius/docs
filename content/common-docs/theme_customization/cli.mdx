@@ -2,7 +2,7 @@ With **<a href="https://github.com/LoginRadius/lr-cli/" target="_blank">LoginRad
 
 **To get all available themes**
 
-```sh
+```shell
 $ lr get theme --all
 Available Themes:
 1. London
@@ -13,14 +13,14 @@ Available Themes:
 
 **To get an active theme**
 
-```sh
+```shell
 $ lr get theme --active
 Current Theme: London
 ```
 
 **To Choose the theme with the default configuration**
 
-```sh
+```shell
 $ lr set theme -t Tokyo
 ? Previous changes will be lost. Do you wish to continue: Yes
 Resetting the current theme...
@@ -29,4 +29,10 @@ Updating CSS based on new theme...
 Fetching data...
 Updating to new theme...
 Your theme has been changed
+```
+
+**To preview your login page's theme**
+
+```shell
+lr demo
 ```
