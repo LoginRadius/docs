@@ -1,23 +1,23 @@
 Login to your LoginRadius account using `lr login` in CLI and select your app. Use the following commands to configure webhooks for your app.
 
-> Currently, Webhook configuration via CLI is only available for Developer Plans. If you wish to configure webhooks for your apps with Developer Pro Plan, kindly use dashboard instead.   
+> Currently, Webhook configuration via CLI is only available for Developer Plans. If you wish to configure webhooks for your apps with Developer Pro Plan, use the dashboard instead.   
 
 **Get list of current configured webhooks:**
 
-```sh
+```shell
 $ lr get hooks
-+----------------+----------+----------+--------------------+
-|     ID         | NAME     | EVENT    | TARGETURL          |
-+----------------+----------+----------+--------------------+
-| <value>        | devhook  | register | https://google.com |
-+----------------+----------+----------+--------------------+
++----------------+----------+-----------+------------------------+
+|     ID                    | NAME     | EVENT    | TARGETURL               |
++----------------+----------+-----------+------------------------+
+| <value>            | devhook | register | https://google.com |
++----------------+----------+-----------+------------------------+
 ```
 
 **Add a Webhook:**
-```sh
+```shell
 $ lr add hooks
 Enter Name: <hook-name>
-Select a plan  [Use arrows to move, type to filter]
+Select an event  [Use arrows to move, type to filter]
 > Login
 Register
 ResetPassword
