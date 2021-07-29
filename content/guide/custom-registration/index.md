@@ -26,9 +26,7 @@ This guide explains how to select fields from a predefined list or create fields
 ## Step 2: Manage Registration Form Fields
 
 You can add registration form fields by selecting from the [existing list](#a-select-from-the-list) or creating a [custom field](#b-create-a-custom-field) based on the requirement.
-
-   ![alt_text](images/fieldname.png "image_tooltip")
-
+   
 >**Note:** If you have Social Login enabled and included additional mandatory registration form fields from the registration schema, the consumer will need to fill in the respective details even in case of using social login.
 
 ### a. Select from the list
@@ -43,7 +41,7 @@ You can add registration form fields by selecting from the [existing list](#a-se
 
   The options will appear as displayed below: 
 
-
+   ![alt_text](images/fieldname.png "image_tooltip")
 
 3. Click the **Save** button after configuring the field(s).
 
@@ -55,7 +53,7 @@ You can add registration form fields by selecting from the [existing list](#a-se
 
    ![alt_text](images/config-reg2.png "image_tooltip")
 
-2. Enter the Field Name and then click the Save button to add the field to the **Custom Fields** section list. (e.g City)
+2. Enter the **Field Name** and then click the **Save** button to add the field to the **Custom Fields** section list. (e.g City)
 
    ![alt_text](images/custom1.png "image_tooltip")
 
@@ -82,7 +80,6 @@ You can add registration form fields by selecting from the [existing list](#a-se
 >**Note:** You can remove a Custom Field from the Registration Schema by           
 >a. Disable the respective toggle button, click **Save** and the disabled field will appear in the Custom Fields section. (e.g City is the added custom field here)
 ![alt_text](images/custom5.png "image_tooltip")
-
 >b. Click the **Delete** icon given next to it in the Custom Fields section and confirm the action.
 ![alt_text](images/custom2.png "image_tooltip")
 
