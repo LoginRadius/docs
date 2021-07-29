@@ -5,6 +5,10 @@ description: "This is a tutorial with IDX and .NET Razor implmentation."
 path: "/tutorial/dotnetcore-razor"
 ---
 
+import ThemeDoc from "../../common-docs/theme_customization"
+import CredsDoc from "../../common-docs/get-creds"
+import DomainDoc from "../../common-docs/domain-whitelisting"
+
 # Get Started - ASP&#46;NET Core Razor Pages
 
 The purpose of this tutorial is to help you with implementing LoginRadius user registration, log in and log out functionalities in your ASP&#46;NET Core Razor Pages web application.
@@ -17,19 +21,11 @@ When you signed up for a LoginRadius account, an app was created for you. This a
 
 ## Choose Theme
 
-In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page (IDX)** section located in the left navigation bar and click the **Theme Customization** section. There you can select a design theme for your login page, or further customize the content displayed:
-
-![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
-
-To preview your theme and content, click the **Go to your Login Page** link as highlighted on the above screen. There are various features already implemented on your Auth Page, such as Email and Password Login, User Registration, Forgot Password, and Remember Password.
+<ThemeDoc />
 
 ## Get Credentials
 
-Before using any of the APIs or methods that LoginRadius provides, you will need to retrieve your **App Name**, **API Key**, and **API Secret**.
-
-In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>**, and click the **API Key And Secret** subsection to retrieve your API Credentials.
-
-![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
+<CredsDoc />
 
 ## SDK Installation
 
@@ -216,11 +212,7 @@ namespace RazorPagesDemoApplication.Pages
 
 ## Whitelist Your Domain
 
-For security reasons, LoginRadius will only process API calls coming from domains included in your app's whitelist. Local domains (http://localhost and http://127.0.0.1) are already whitelisted by default.
-
-To whitelist your domain, in your LoginRadius Dashboard navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
-
-![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
+<DomainDoc />
 
 ## Recommended Next Steps
 
