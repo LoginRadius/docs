@@ -1,0 +1,39 @@
+---
+title: "Customize Registration Form Fields"
+tags: ["Customize", "Registration", "Form", "Fields"]
+description: "Configure your Registration Form Fields to get the essential consumer information for your application."
+path: "/guide/custom-registration"
+---
+
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import RegCLI from "./customRegCLI"
+import RegDashboard from "./customRegDashboard"
+
+<span class="developer plan-tag">Developer</span>
+<span class="devloper-premium plan-tag">Developer Pro</span>
+
+# Customize Registration Form Fields
+
+The LoginRadius Identity Platform provides the Registration Schema to enable you to configure the information required from the consumers during registration.
+
+This guide explains how to select fields from a predefined list or create fields based on the requirements in LoginRadius Dashboard.
+
+<TabContainer
+  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabs={[
+    <Tab>
+      <RegCLI />
+    </Tab>,
+    <Tab>
+      <RegDashboard />
+    </Tab>,
+  ]}
+/>
+
+<br />
+Alternatively, you can configure the registration form fields using JS. Refer to <a
+  href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema/"
+  target="_blank"
+>
+  this document
+</a> for more information.
