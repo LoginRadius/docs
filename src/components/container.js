@@ -512,6 +512,9 @@ const Middle = () => {
                 <Link to="/guide/shopify">Integrate Shopify</Link>
               </li>
               <li>
+                <Link to="/guide/inbound-sso-saml">Inbound SSO SAML</Link>
+              </li>
+              <li>
                 <Link to="/guide/inbound-sso-saml-salesforce">Inbound SSO SAML - Salesforce</Link>
               </li>
               <li>
