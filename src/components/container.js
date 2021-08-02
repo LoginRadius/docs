@@ -53,6 +53,12 @@ const Middle = () => {
               >
                 Curious How It Works?
               </Link>
+              <Link
+                to="/questionnaire"
+                className="btn btn-primary"
+              >
+                Take Our Short Quiz!
+              </Link>
               <a
                 onClick={() => setDisplay(true)}
                 className="btn btn-primary show-mobile"
