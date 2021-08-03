@@ -2,14 +2,16 @@ import { Tab, TabContainer } from "../../../src/components/tab.jsx"
 import CLI from "./cli"
 import Dashboard from "./dashboard"
 
+LoginRadius provides the functionality where you can select a design theme for your login page or further customize the content displayed.
+
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <CLI />
+      <Dashboard />
     </Tab>,
     <Tab>
-      <Dashboard />
+      <CLI />
     </Tab>,
   ]}
 />

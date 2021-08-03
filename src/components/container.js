@@ -53,6 +53,9 @@ const Middle = () => {
               >
                 Curious How It Works?
               </Link>
+              <Link to="/questionnaire" className="btn btn-primary">
+                Take Our Short Quiz!
+              </Link>
               <a
                 onClick={() => setDisplay(true)}
                 className="btn btn-primary show-mobile"
@@ -351,14 +354,14 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="/guide/big-commerce">
-                <img src="images/bigcommerce.svg" width={20} />
-                <span>BigCommerce </span>
+                  <img src="images/bigcommerce.svg" width={20} />
+                  <span>BigCommerce </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/shopify">
-                <img src="images/shopify.svg" width={20} />
-                <span>Shopify </span>
+                  <img src="images/shopify.svg" width={20} />
+                  <span>Shopify </span>
                 </Link>
               </li>
               {/* <li>
@@ -546,10 +549,14 @@ const Middle = () => {
                 <Link to="/guide/inbound-sso-saml">Inbound SSO SAML</Link>
               </li>
               <li>
-                <Link to="/guide/inbound-sso-saml-salesforce">Inbound SSO SAML - Salesforce</Link>
+                <Link to="/guide/inbound-sso-saml-salesforce">
+                  Inbound SSO SAML - Salesforce
+                </Link>
               </li>
               <li>
-                <Link to="/guide/inbound-sso-saml-azure-ad">Inbound SSO SAML - Azure AD</Link>
+                <Link to="/guide/inbound-sso-saml-azure-ad">
+                  Inbound SSO SAML - Azure AD
+                </Link>
               </li>
               <li>
                 <div className="read-more mt-0">
@@ -668,6 +675,9 @@ const Middle = () => {
                 <Link to="references/sdk/dotnet-sdk">ASP.NET</Link>
               </li>
               <li>
+                <Link to="references/sdk/golang-sdk">Golang</Link>
+              </li>
+              <li>
                 <Link to="references/sdk/html5-sdk">HTML5</Link>
               </li>
               <li>
@@ -686,13 +696,13 @@ const Middle = () => {
                 <Link to="references/sdk/python-sdk">Python</Link>
               </li>
               <li>
-                <Link to="references/sdk/ruby-sdk">Ruby</Link>
+                <Link to="references/sdk/react-sdk">React</Link>
               </li>
               <li>
                 <Link to="references/sdk/react-native-sdk">React Native</Link>
               </li>
               <li>
-                <Link to="references/sdk/golang-sdk">Golang</Link>
+                <Link to="references/sdk/ruby-sdk">Ruby</Link>
               </li>
             </ul>
           </div>

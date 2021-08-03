@@ -20,13 +20,13 @@ import HookCLI from "./cli"
 import HookDash from "./dashboard"
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <HookCLI />
+      <HookDash />
     </Tab>,
     <Tab>
-      <HookDash />
+      <HookCLI />
     </Tab>,
   ]}
 />
