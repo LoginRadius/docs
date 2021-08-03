@@ -3,13 +3,13 @@ import SearchCli from "./searchcli"
 import SearchDashboard from "./searchdashboard"
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <SearchCli />
+      <SearchDashboard />
     </Tab>,
     <Tab>
-      <SearchDashboard />
+      <SearchCli />
     </Tab>,
   ]}
 />

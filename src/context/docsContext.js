@@ -6,7 +6,7 @@ const defaultState = {
 const DocsContext = React.createContext(defaultState)
 class DocsProvider extends React.Component {
   state = {
-    tab: 0,
+    ...defaultState,
   }
   toggleTab = tab => {
     localStorage.setItem("tab", tab)

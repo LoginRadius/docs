@@ -1,6 +1,6 @@
 ---
 title: "how to implement Social login"
-tags: ["social", "login","implement"]
+tags: ["social", "login", "implement"]
 description: "step by step guide to implement social login."
 path: "/guide/social-login"
 ---
@@ -9,31 +9,35 @@ import { Tab, TabContainer } from "../../../src/components/tab.jsx"
 import CLI from "./socialcli"
 import Dashboard from "./socialdashboard"
 
-
-
 # Implement Social Login
 
-   
 You can implement Social Login for a quick and convenient approach for consumer registration and login. This guide explains how to add and configure the desired Social Login providers on your application using LoginRadius Dashboard.
 
 Watch this video for step by step information, or refer to the section below for the text-based guide.
 
-
 <figure class="video_container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gd5Ig1S4P_U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/gd5Ig1S4P_U"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</figure>
 
 ---
 
 ## Configuration
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <CLI />
+      <Dashboard />
     </Tab>,
     <Tab>
-      <Dashboard />
+      <CLI />
     </Tab>,
   ]}
 />
@@ -42,17 +46,19 @@ Watch this video for step by step information, or refer to the section below for
 
 The following are the social providers that LoginRadius supports for the Free, Developer, and Developer Pro plans.
 
-
-|PLAN |	FACEBOOK |	GOOGLE |	TWITTER |	LINKEDIN |	GITHUB  |
-|:---|:---|:---|:---|:---|:---|:---|
-|Free |	Yes |	Yes |	Yes |	No | No |
-|Developer	| Yes	| Yes	| Yes	| Yes	| Yes |
-|Developer Pro	| Supports| 20+ | Social| ID | Providers| 
-
+| PLAN          | FACEBOOK | GOOGLE | TWITTER | LINKEDIN | GITHUB    |
+| :------------ | :------- | :----- | :------ | :------- | :-------- |
+| Free          | Yes      | Yes    | Yes     | No       | No        |
+| Developer     | Yes      | Yes    | Yes     | Yes      | Yes       |
+| Developer Pro | Supports | 20+    | Social  | ID       | Providers |
 
 ## References
 
-* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
-
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/custom-registration"
+    target="_blank"
+  >
+    Customize Registration Form Fields
+  </a>
 
 [Go Back to Home Page](/)
