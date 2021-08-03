@@ -5,13 +5,13 @@ import Dashboard from "./dashboard"
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <CLI />
+      <Dashboard />
     </Tab>,
     <Tab>
-      <Dashboard />
+      <CLI />
     </Tab>,
   ]}
 />

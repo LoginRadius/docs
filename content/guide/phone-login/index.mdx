@@ -13,44 +13,43 @@ The LoginRadius Identity Platform provides the Phone Login method to enable your
 
 During login, the consumer will need to provide both the Phone Number and Password. This guide explains how to configure Phone Login for your consumers.
 
-> Note: The **Passwordless Login** method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP, which they can use to log in without a password. 
-> 
+> Note: The **Passwordless Login** method provides your consumers with the ability to **Login with OTP**. Your consumers will be able to enter their phone number to receive an OTP, which they can use to log in without a password.
+>
 > The **Phone Login** method must also be enabled for this feature to work. For more details, refer to the <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">Manage Passwordless Docs</a> document.
 
 ## Configuration
 
 ### Step 1: Choose Login Method
 
-> Note: You will need to be subscribed to the **Developer Pro** plan to enable  this login method.
+> Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
 
-Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
+Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
 import PhoneCLI from "./cli"
 import PhoneDash from "./dashboard"
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <PhoneCLI />
+      <PhoneDash />
     </Tab>,
     <Tab>
-      <PhoneDash />
+      <PhoneCLI />
     </Tab>,
   ]}
 />
 
 When the login method is successfully enabled, you will see it listed in your login methods table.
 
-
 ### Step 2: Configure Phone Login Templates
 
 1. Similarly to the <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login" target="_blank">Email/Password Login</a> and <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">Passwordless Login</a> methods, you can perform the following actions:
 
-   * Edit templates associated with this login method.
+   - Edit templates associated with this login method.
 
-   * Delete the login method from your application.
+   - Delete the login method from your application.
 
    These actions are available in the action bar highlighted in the image below:
 
@@ -62,17 +61,16 @@ When the login method is successfully enabled, you will see it listed in your lo
 
    ![alt_text](images/phone-templates.png "image_tooltip")
 
-   * **Phone Verification**: The Phone Verification SMS is sent to your consumer when they first register on your application. This SMS contains an OTP that will need to be verified to confirm their phone number.
+   - **Phone Verification**: The Phone Verification SMS is sent to your consumer when they first register on your application. This SMS contains an OTP that will need to be verified to confirm their phone number.
 
-   * **Phone Number Change**: The Phone Number Change SMS is sent to your consumer when they attempt to change their account's phone number. This SMS contains an OTP that will need to be verified to confirm their new phone number.
+   - **Phone Number Change**: The Phone Number Change SMS is sent to your consumer when they attempt to change their account's phone number. This SMS contains an OTP that will need to be verified to confirm their new phone number.
 
-   * **Password Reset**: The Password Reset SMS is sent to your consumer when they attempt to reset their account's password. This SMS contains an OTP that will need to be verified before your consumer can reset their password.
+   - **Password Reset**: The Password Reset SMS is sent to your consumer when they attempt to reset their account's password. This SMS contains an OTP that will need to be verified before your consumer can reset their password.
 
 3. With a Phone Login template type selected, you can perform the following actions:
 
-   * Edit template content.
-   * Reset the template to its default content.
-
+   - Edit template content.
+   - Reset the template to its default content.
 
    These actions are available in the action bar highlighted in the image below:
 
@@ -80,20 +78,17 @@ When the login method is successfully enabled, you will see it listed in your lo
 
 4. When editing a template, you can update the following:
 
-   * **SMS CONTENT**: The plain text template.
-
+   - **SMS CONTENT**: The plain text template.
 
 5. To save your changes, click the **Save** button.
 
 > In your templates, you can use predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your SMS.
-
 
 ### Step 3: Check Auth Page (IDX)
 
 To verify that the Phone Login method has been enabled, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. The IDX page can also be opened using the `lr demo` command in CLI. You should see the following login field available:
 
 ![alt_text](../../assets/blog-common/idx-phone-login.png "image_tooltip")
-
 
 ## Adding Phone ID to Auth Page (IDX) Profile Page
 
@@ -111,12 +106,24 @@ The login page of your Auth Page (IDX) handles the Phone ID input fields automat
 
 ```javascript
 for (var i = 0; i < viewerSchema.length; i++) {
-   if(viewerSchema[i].name == "emailid") {
-      $("#profile-editor-container").prepend('<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">'+viewerSchema[i].display+'</label><input type="text" name="" id="" class="loginradius-string" disabled value="'+viewerSchema[i].value+'"></div>');
-      renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
-   } else {
-      renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
-   }
+  if (viewerSchema[i].name == "emailid") {
+    $("#profile-editor-container").prepend(
+      '<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">' +
+        viewerSchema[i].display +
+        '</label><input type="text" name="" id="" class="loginradius-string" disabled value="' +
+        viewerSchema[i].value +
+        '"></div>'
+    )
+    renderedHtml += LRObject.util.hashTmpl(
+      "profileViewTemplate",
+      viewerSchema[i]
+    )
+  } else {
+    renderedHtml += LRObject.util.hashTmpl(
+      "profileViewTemplate",
+      viewerSchema[i]
+    )
+  }
 }
 ```
 
@@ -124,11 +131,20 @@ for (var i = 0; i < viewerSchema.length; i++) {
 
 ```javascript
 for (var i = 0; i < viewerSchema.length; i++) {
-   if (viewerSchema[i].name == "emailid" || (viewerSchema[i].name == "phoneid" && viewerSchema[i].value)) {
-      $("#profile-editor-container").prepend('<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">'+viewerSchema[i].display+'</label><input type="text" name="" id="" class="loginradius-string" disabled value="'+viewerSchema[i].value+'"></div>');
-   }
+  if (
+    viewerSchema[i].name == "emailid" ||
+    (viewerSchema[i].name == "phoneid" && viewerSchema[i].value)
+  ) {
+    $("#profile-editor-container").prepend(
+      '<div class="loginradius--form-element-content "><label for="loginradius-profileeditor">' +
+        viewerSchema[i].display +
+        '</label><input type="text" name="" id="" class="loginradius-string" disabled value="' +
+        viewerSchema[i].value +
+        '"></div>'
+    )
+  }
 
-   renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i]);
+  renderedHtml += LRObject.util.hashTmpl("profileViewTemplate", viewerSchema[i])
 }
 ```
 
@@ -138,21 +154,24 @@ for (var i = 0; i < viewerSchema.length; i++) {
 
    ![alt_text](images/profile-editor-phoneid.png "image_tooltip")
 
-
 ## Placeholder Tags
 
 These tags are used to define where LoginRadius retrieved data will appear in your SMS.
 
-* **#Name#**: The consumer's name as defined in your registration form.
-* **#OTP#**: The OTP received in an SMS for verification purposes.
-* **#OTPExpiry#**: The expiration time of the OTP in seconds.
-* **#Email#**: The consumer's email address used to register their account.
-* **#FirstName#**: The consumer's first name as defined in your registration form.
-* **#LastName#**: The consumer's last name as defined in your registration form.
+- **#Name#**: The consumer's name as defined in your registration form.
+- **#OTP#**: The OTP received in an SMS for verification purposes.
+- **#OTPExpiry#**: The expiration time of the OTP in seconds.
+- **#Email#**: The consumer's email address used to register their account.
+- **#FirstName#**: The consumer's first name as defined in your registration form.
+- **#LastName#**: The consumer's last name as defined in your registration form.
 
 ## References
 
-* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
-
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/custom-registration"
+    target="_blank"
+  >
+    Customize Registration Form Fields
+  </a>
 
 [Go Back to Home Page](/)

@@ -1,6 +1,6 @@
-With the help of **<a href="https://github.com/LoginRadius/lr-cli/" target="_blank">LoginRadius CLI</a>** you can whitelist your domain using below command
+With **<a href="https://github.com/LoginRadius/lr-cli/" target="_blank">LoginRadius CLI</a>**, you can use the following commands from your terminal:
 
-**To get the list of whitelisted domain**
+**To get the list of whitelisted domain**:
 
 ```shell
 $ lr get domain
@@ -9,12 +9,16 @@ $ lr get domain
 3.loginradius.com
 ```
 
-**To Add/Remove the whitelisted domain**
+**To whitelist a domain**:
 
 ```shell
 $ lr delete domain -d http://127.0.0.1
 http://127.0.0.1 is now removed from whitelisted domain.
+```
 
+**To remove whitelisted domain**:
+
+```shell
 $ lr add domain -d htts://google.com
 htts://google.com is now added as your whitelisted domain.
 ```

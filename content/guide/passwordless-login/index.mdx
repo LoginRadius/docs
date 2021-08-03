@@ -17,9 +17,9 @@ This guide explains how to configure the Passwordless Login for your consumers.
 
 You can implement the Passwordless Login method in two following ways:
 
-* **With OTP via SMS**: A verification OTP is sent to the consumer's registered phone number. The consumer will be issued an access token upon verifying this OTP.
+- **With OTP via SMS**: A verification OTP is sent to the consumer's registered phone number. The consumer will be issued an access token upon verifying this OTP.
 
-* **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
+- **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
 
 > Note: If both Passwordless Login and <a href="https://www.loginradius.com/docs/developer/guide/mfa" target="_blank">Two Factor Authentication (2FA)</a> are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
 
@@ -27,33 +27,32 @@ You can implement the Passwordless Login method in two following ways:
 
 ### Step 1: Choose Login Method
 
- > Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
+> Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
 
-Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. 
+Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 
 import { Tab, TabContainer } from "../../../src/components/tab.jsx"
 import PwdLessCLI from "./cli"
 import PwdLessDash from "./dashboard"
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
-    <Tab>
-      <PwdLessCLI />
-    </Tab>,
     <Tab>
       <PwdLessDash />
     </Tab>,
+    <Tab>
+      <PwdLessCLI />
+    </Tab>,
   ]}
 />
-
 
 ### Step 2: Configure Passwordless Login Templates
 
 1. Similar to the <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login/" target="_blank">Email/Password Login</a> and <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> methods, you can perform the following actions:
 
-   * Edit templates associated with this login method.
-   * Delete the login method from your application.
+   - Edit templates associated with this login method.
+   - Delete the login method from your application.
 
    These actions are available in the action bar highlighted in the image below:
 
@@ -65,8 +64,8 @@ import PwdLessDash from "./dashboard"
 
 3. With a Passwordless Login template type selected, you can perform the following actions:
 
-   * Edit template content.
-   * Reset the template to its default content.
+   - Edit template content.
+   - Reset the template to its default content.
 
    These actions are available in the action bar highlighted in the image below:
 
@@ -74,20 +73,17 @@ import PwdLessDash from "./dashboard"
 
 4. When editing the **Passwordless Login with OTP** template, you can update the following:
 
-   * **SMS CONTENT**: The plain text template. You can use [Placeholder](#placeholder-tags) tags in the SMS Content Body.
-
+   - **SMS CONTENT**: The plain text template. You can use [Placeholder](#placeholder-tags) tags in the SMS Content Body.
 
 5. When editing the **Passwordless Login with Email** template, you can update the following:
 
-   * **SUBJECT**: The subject line of the template.
-   * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body.
-   * **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) tags in the Text Body.
-   
+   - **SUBJECT**: The subject line of the template.
+   - **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body.
+   - **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) tags in the Text Body.
 
 6. To save your changes, click the **Save** button.
 
 > In your templates, you can make use of predefined [Placeholder](#placeholder-tags) tags to define where LoginRadius data will appear in your email or SMS.
-
 
 ### Step 3: Check Auth Page (IDX)
 
@@ -101,16 +97,20 @@ To verify that the Passwordless Login method has been enabled, open your **Auth 
 
 These tags are used to define where LoginRadius retrieved data will appear in your email or SMS.
 
-* **#Name#**: The consumer's name as defined in your registration form.
-* **#OTP#**: The OTP received in an SMS for verification purposes.
-* **#OTPExpiry#**: The expiration time of the OTP in seconds.
-* **#Email#**: The consumer's email address used to register their account.
-* **#FirstName#**: The consumer's first name as defined in your registration form.
-* **#LastName#**: The consumer's last name as defined in your registration form.
+- **#Name#**: The consumer's name as defined in your registration form.
+- **#OTP#**: The OTP received in an SMS for verification purposes.
+- **#OTPExpiry#**: The expiration time of the OTP in seconds.
+- **#Email#**: The consumer's email address used to register their account.
+- **#FirstName#**: The consumer's first name as defined in your registration form.
+- **#LastName#**: The consumer's last name as defined in your registration form.
 
 ## References
 
-* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
-
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/custom-registration"
+    target="_blank"
+  >
+    Customize Registration Form Fields
+  </a>
 
 [Go Back to Home Page](/)

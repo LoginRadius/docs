@@ -3,13 +3,13 @@ import CLI from "./cli"
 import Dashboard from "./dashboard"
 
 <TabContainer
-  tabheaders={["Using CLI", "Using Dashboard"]}
+  tabheaders={["Using Dashboard", "Using CLI"]}
   tabs={[
     <Tab>
-      <CLI />
+      <Dashboard />
     </Tab>,
     <Tab>
-      <Dashboard />
+      <CLI />
     </Tab>,
   ]}
 />
