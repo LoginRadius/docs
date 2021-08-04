@@ -1,6 +1,7 @@
 import React from "react";
 import SelectSearch from 'react-select-search';
 import Footer from "../components/footer"
+import { Link } from "gatsby"
 
 import "./questionnaire.css";
 import Logo from "../../public/images/logo.svg";
@@ -1105,21 +1106,21 @@ const DocsList = [
   // "Other SAML enabled SSO providers"
   [
     {
-      name: "Azure AD",
+      name: "Inbound SSO with Azure AD",
       body: {
         __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Azure AD.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/</a></span>`
       }
     },
     {
-      name: "Salesforce",
+      name: "Inbound SSO with Salesforce",
       body: {
         __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Salesforce.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/</a></span>`
       }
     },
     {
-      name: "Other SAML enabled SSO providers",
+      name: "Inbound SSO with SAML supported applications",
       body: {
         __html: `<span>Here is a guide to configuring Inbound/Employee SSO using applications that support SAML protocol.<br/>
         <a href="" target="_blank">Link not yet available</a></span>`
@@ -1133,35 +1134,35 @@ const DocsList = [
   // "Others using LoginRadius JavaScript"
   [
     {
-      name: "SSO SAML",
+      name: "Outbound SSO - SAML",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using SAML protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports SAML.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/saml" target="_blank">https://www.loginradius.com/docs/developer/guide/saml</a></span>`
       }
     },
     {
-      name: "SSO JWT",
+      name: "Outbound SSO - JWT",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using JWT protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports JWT.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/jwt/" target="_blank">https://www.loginradius.com/docs/developer/guide/jwt/</a></span>`
       }
     },
     {
-      name: "SSO OIDC",
+      name: "Outbound SSO - OIDC",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using OIDC protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports OIDC.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/oidc/" target="_blank">https://www.loginradius.com/docs/developer/guide/oidc/</a></span>`
       }
     },
     {
-      name: "SSO OAuth2",
+      name: "Outbound SSO - OAuth",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using OAuth2 protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports OAuth2.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/oauth/" target="_blank">https://www.loginradius.com/docs/developer/guide/oauth/</a></span>`
       }
     },
     {
-      name: "Others using LoginRadius JavaScript",
+      name: "Outbound SSO using JavaScript",
       body: {
         __html: `<span>Info not yet available<br/>
         <a href="" target="_blank">Link not yet available</a></span>`
@@ -1171,7 +1172,7 @@ const DocsList = [
   // Data Migration Question
   [
     {
-      name: "Data Migration",
+      name: "User Data Migration",
       body: {
         __html: `<span>Here is a guide to migrating user data from any third-party application to LoginRadius using the CSV file.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/migrate-user-data" target="_blank">https://www.loginradius.com/docs/developer/guide/migrate-user-data</a></span>`
@@ -1192,7 +1193,7 @@ const DocsList = [
   // "Other",
   [
     {
-      name: "PHP",
+      name: "PHP Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your PHP application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/php/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/php/</a><br /><br />
@@ -1201,7 +1202,7 @@ const DocsList = [
       }
     },
     {
-      name: ".NET",
+      name: ".NET Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your .NET application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <b>.NET Webforms:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnet-webforms/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnet-webforms/</a><br />
@@ -1212,7 +1213,7 @@ const DocsList = [
       }
     },
     {
-      name: "NodeJS",
+      name: "NodeJS Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Nodejs application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/node-js/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/node-js/</a><br /><br />
@@ -1221,7 +1222,7 @@ const DocsList = [
       }
     },
     {
-      name: "Java",
+      name: "Java Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Java application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/java/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/java/</a><br /><br />
@@ -1230,7 +1231,7 @@ const DocsList = [
       }
     },
     {
-      name: "Golang",
+      name: "Golang Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Golang application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/golang/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/golang/</a><br /><br />
@@ -1239,7 +1240,7 @@ const DocsList = [
       }
     },
     {
-      name: "Python",
+      name: "Python Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Python application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/python/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/python/</a><br /><br />
@@ -1248,7 +1249,7 @@ const DocsList = [
       }
     },
     {
-      name: "ROR",
+      name: "ROR Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your ROR application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/ror/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ror/</a><br /><br />
@@ -1257,35 +1258,35 @@ const DocsList = [
       }
     },
     {
-      name: "BigCommerce",
+      name: "BigCommerce CMS",
       body: {
         __html: `<span>Here is a tutorial on installing the LoginRadius CIAM Plugin for the BigCommerce application. It also describes deploying the LoginRadius template code to your Stencil theme.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/big-commerce/" target="_blank">https://www.loginradius.com/docs/developer/guide/big-commerce/</a></span>`
       }
     },
     {
-      name: "WordPress",
+      name: "WordPress CMS",
       body: {
         __html: `<span>Here is a tutorial on implementing LoginRadius features like user registration, login, profile, and log out for your WordPress application.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/wordpress/" target="_blank">https://www.loginradius.com/docs/developer/guide/wordpress/</a></span>`
       }
     },
     {
-      name: "Shopify",
+      name: "Shopify CMS",
       body: {
         __html: `<span>Here is a tutorial to integrate LoginRadius features into your Shopify application with Shopify Multipass Hosted Plugin. This integration makes use of the LoginRadius JavaScript Interfaces along with the LoginRadius Hosted Plugin feature. <br/>
         <a href="https://www.loginradius.com/docs/developer/guide/shopify/" target="_blank">https://www.loginradius.com/docs/developer/guide/shopify/</a></span>`
       }
     },
     {
-      name: "Drupal",
+      name: "Drupal CMS",
       body: {
         __html: `<span>Here is a tutorial on implementing LoginRadius user registration, login, profile, and log out for your Drupal application.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/drupal/" target="_blank">https://www.loginradius.com/docs/developer/guide/drupal/</a></span>`
       }
     },
     {
-      name: "Other Back-end technology",
+      name: "Back-end Technology",
       body: {
         __html: `<span>Refer to our APIs for implementing LoginRadius features into your application irrespective of the technology or CMS.<br/>
         <a href="https://www.loginradius.com/docs/developer/#api" target="_blank">https://www.loginradius.com/docs/developer/#api</a></span>`
@@ -1299,7 +1300,7 @@ const DocsList = [
   // "VueJS"
   [
     {
-      name: "JavaScript",
+      name: "JavaScript Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your Javascript-based application.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/</a><br /><br />
@@ -1310,14 +1311,14 @@ const DocsList = [
       }
     },
     {
-      name: "AngularJS",
+      name: "AngularJS Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your AngularJS based application.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/angular/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/angular/</a></span>`
       }
     },
     {
-      name: "ReactJS",
+      name: "ReactJS Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your ReactJS based application.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/react/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/react/</a><br /><br />
@@ -1326,7 +1327,7 @@ const DocsList = [
       }
     },
     {
-      name: "VueJS",
+      name: "VueJS Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your VueJS based application.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/vue/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/vue/</a></span>`
@@ -1335,7 +1336,7 @@ const DocsList = [
   ],
   [
     {
-      name: "Enabling SSO (single sign-on)",
+      name: "Implement Web SSO",
       body: {
         __html: `<span>Here is a guide to implementing web SSO among your applications.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/web-sso/" target="_blank">https://www.loginradius.com/docs/developer/guide/web-sso/</a></span>`
@@ -1378,21 +1379,21 @@ const DocsList = [
       }
     },
     {
-      name: "Shopify",
+      name: "Integration - Shopify",
       body: {
         __html: `<span>Here is a tutorial to integrate LoginRadius features into your Shopify application with Shopify Multipass Hosted Plugin. This integration makes use of the LoginRadius JavaScript Interfaces along with the LoginRadius Hosted Plugin feature. <br/>
         <a href="https://www.loginradius.com/docs/developer/guide/shopify/" target="_blank">https://www.loginradius.com/docs/developer/guide/shopify/</a></span>`
       }
     },
     {
-      name: "BigCommerce",
+      name: "Integration - BigCommerce",
       body: {
         __html: `<span>Here is a tutorial on installing the LoginRadius CIAM Plugin for the BigCommerce application. It also describes deploying the LoginRadius template code to your Stencil theme.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/big-commerce/" target="_blank">https://www.loginradius.com/docs/developer/guide/big-commerce/</a></span>`
       }
     },
     {
-      name: "Other Third-party Integrations",
+      name: "Integrations",
       body: {
         __html: `<span>Here is a list of all integrations supported by LoginRadius. <br/>
         <a href="https://www.loginradius.com/docs/developer/guide/3rd-party-all-integrations/" target="_blank">https://www.loginradius.com/docs/developer/guide/3rd-party-all-integrations/</a><br /><br />
@@ -1405,21 +1406,21 @@ const DocsList = [
   // "Hybrid/Ionic"
   [
     {
-      name: "Android",
+      name: "Android App",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Android app. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/android/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/android/</a></span>`
       }
     },
     {
-      name: "iOS",
+      name: "iOS App",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your iOS app. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/ios/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ios/</a></span>`
       }
     },
     {
-      name: "Hybrid/Ionic",
+      name: "Hybrid App",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Hybrid app. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/ionic/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ionic/</a></span>`
@@ -1462,7 +1463,7 @@ export default class TryMeOut extends React.Component {
         return responseArray;
       }),
       thirdPartyChoices: [],
-      step: 0,
+      step: 1,
       errorMessage: "",
       showResultPage: false
     }
@@ -1570,7 +1571,7 @@ export default class TryMeOut extends React.Component {
             <div className="dd-form">
               <div className="dd-content">
                 <div className="dd-logo">
-                  <a href="#"><img src={Logo} width={228} /></a>
+                  <Link to="/"><img src={Logo} width={228} /></Link>
                 </div>
 
                 <div className="qa grid-67">
@@ -1599,12 +1600,19 @@ export default class TryMeOut extends React.Component {
       </React.Fragment>
     ) : (
       <React.Fragment>
-        <div className="dd-steps step2" id="step2">
+        <div style={{overflow: "hidden"}} className="dd-steps step2" id="step2">
+          <div className="dd-close">
+            <Link to="/">
+              <img
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik91dGxpbmVkIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBpZD0iRmlsbCI+PHBhdGggZD0iTTE2LDJBMTQsMTQsMCwxLDAsMzAsMTYsMTQsMTQsMCwwLDAsMTYsMlptMCwyNkExMiwxMiwwLDEsMSwyOCwxNiwxMiwxMiwwLDAsMSwxNiwyOFoiLz48cG9seWdvbiBwb2ludHM9IjE5LjU0IDExLjA1IDE2IDE0LjU5IDEyLjQ2IDExLjA1IDExLjA1IDEyLjQ2IDE0LjU5IDE2IDExLjA1IDE5LjU0IDEyLjQ2IDIwLjk1IDE2IDE3LjQxIDE5LjU0IDIwLjk1IDIwLjk1IDE5LjU0IDE3LjQxIDE2IDIwLjk1IDEyLjQ2IDE5LjU0IDExLjA1Ii8+PC9nPjwvc3ZnPg=="
+              />
+            </Link>
+          </div>
           <div className="grid-50">
             <div className="dd-form">
-              <div className="dd-content">
+              <div className="dd-content max-height-restricted">
                 <div className="dd-logo">
-                  <a href="#"><img src={Logo} width={228} /></a>
+                  <Link to="/"><img src={Logo} width={228} /></Link>
                 </div>
                 {this.state.step === 0 ? (
                   <div className="qa">
@@ -1713,13 +1721,16 @@ export default class TryMeOut extends React.Component {
               <div className="dd-action">
                 {this.state.step > 1 && (<a
                   onClick={() => {
-                    this.onInputBlur(() => {
+                    // this.onInputBlur(() => {
                       let stepsBackward = 1;
                       if (this.state.step === 4 && this.state.responses[1][0] === "No") {
                         stepsBackward = 2;
                       }
-                      this.setState({ step: this.state.step - stepsBackward })
-                    });
+                      this.setState({ 
+                        errorMessage: "",
+                        step: this.state.step - stepsBackward
+                      })
+                    // });
                   }}
                   className={`btn btn-secondary${!!this.state.errorMessage ? " disabled" : ""}`}
                 >
