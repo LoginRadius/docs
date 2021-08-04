@@ -53,12 +53,6 @@ const Middle = () => {
               >
                 Curious How It Works?
               </Link>
-              <Link
-                to="/questionnaire"
-                className="btn btn-primary"
-              >
-                Take Our Short Quiz!
-              </Link>
               <a
                 onClick={() => setDisplay(true)}
                 className="btn btn-primary show-mobile"
@@ -126,6 +120,37 @@ const Middle = () => {
                 </div>
               </div>
             </Modal>
+          </div>
+
+          <div
+            className="btn-group"
+            style={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "space-around",
+              backgroundColor: "#008ecf",
+              color: "#fff",
+              padding: 30,
+              borderRadius: "0.5rem"
+            }}
+          >
+            <div>
+              <h2>Does LoginRadius support my use case?</h2>
+              <p style={{color: "#fff"}}>Answer a few questions and get a self-served implementation guide addressing your needs</p>
+            </div>
+            <div style={{display: "flex", alignItems: "center"}}>
+              <Link
+                to="/questionnaire"
+                className="btn btn-secondary"
+                style={{
+                  height: 48,
+                  backgroundColor: "#fff",
+                  color: "#f15e22"
+                }}
+              >
+                Take Our Short Quiz!
+              </Link>
+            </div>
           </div>
 
           {/* <div className="wrapper">
