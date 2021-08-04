@@ -1,3 +1,14 @@
+.dd-steps>.dd-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.dd-steps>.dd-close>a>img {
+  height: 48px;
+  filter: invert(1);
+}
+
 .dd-steps>.grid-50 {
   height: 100vh
 }
@@ -13,6 +24,10 @@
 
 .dd-steps>.grid-50 .dd-form .dd-content {
   padding: 64px 100px 64px 64px
+}
+
+.dd-steps>.grid-50 .dd-form .dd-content.max-height-restricted {
+  max-height: 650px;
 }
 
 .dd-steps>.grid-50 .dd-form .dd-content .dd-error-message {
@@ -100,7 +115,7 @@
   font-size: 18px;
 }
 
-.dd-steps>.grid-50>div ul li:not(:last-child) {
+.dd-steps>.grid-50>div ul li {
   margin-bottom: 24px
 }
 
