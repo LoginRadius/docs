@@ -266,12 +266,12 @@ const Middle = () => {
                   text: "Node.js",
                 },
                 {
-                  link: "",
+                  link: "/tutorial/php",
                   icon: "images/php.svg",
                   text: "PHP",
                 },
                 {
-                  link: "",
+                  link: "/tutorial/java",
                   icon: "images/java.svg",
                   text: "JAVA",
                 },
