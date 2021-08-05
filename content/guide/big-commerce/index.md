@@ -291,6 +291,92 @@ The following options are available to render specific interfaces:
 10. `{{> components/loginradius/profileeditor }}` - Displays the update profile data interface.
 11. `{{> components/loginradius/LoginRadiusOptimizedCheckout }}` - Overrides the deault optimzed checkout page functionality.
 
+## Blueprint Theme Setup
+
+The following sections presume you have a standard BigCommerce Blueprint custom template (Classic Next) configured on your WebDav, If you need assistance in setting this up contact the LoginRadius support team.
+
+It is recommended that you backup your theme before making any modifications in case you would like to revert the changes at some point.
+
+1. Open **WebDav** Access to your BigCommerce Site.
+
+2. Unzip the **LoginRadius BigCommerce-blueprint-Package**
+
+3. Copy the following folders to the specified locations in your **webdav/template** folder
+
+   * **assets/js**- Copy the loginradius folder to your **webdav/template/js** folder
+
+   * **assets/images**- Copy the loginradius folder to your **webdav/template/images** folder
+
+   * **assets/css**- Copy the loginradius folder to your **webdav/template/Styles** folder
+
+4. Copy the contents of the **panels** folder to the **webdav/Panels** Folder
+
+## Modifying your BluePrint Theme
+
+1. Open the `config.js` in the provided `BlueprintThemeFile\assets\js\loginradius` and update the LoginRadius options object with the following:
+
+   * `storeName` - Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your storeName value should be `pqshk245fh`
+
+   * `option.apiKey` - Add your LoginRadius [API Key](#get-credentials)
+
+   * `option.appName` - Add your LoginRadius [App Name](#get-credentials)
+
+   * `option.sott` - Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott)
+
+   * `option.verificationUrl` - You can leave this default unless you want to direct customers to a specific location to validate the emails. This is required if you are using the Email add/remove panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">here</a>.
+
+2. Include the reference files for LoginRadius in your header section by including the following code in your `webdav/Panels/header.html` or `webdav/Panels/HTMLHead.html` just before the closing `</header>` tag
+
+```
+%%Panel.lrreferences%%
+```
+
+3. If you are using Single Sign-On also include the tag after the lrreferences tag
+
+```
+%%Panel.lrsso%%
+```
+
+4. Open the `LoginForm.html` file in your `webdav/Panels/LoginForm.html` and replace the existing Login page code with
+
+```
+%%Panel.lrauth%%
+```
+
+This will display the pre-styled customer authentication features which include handling of Login, Social Login, Registration, Forgot Password, and Reset Password.
+
+5. Logout is handled automatically in the `lrsso.html` panel. If you have custom logout links on any of your pages you can add the following on click action to them to tie into the normal LoginRadius Logout procedures.
+
+```
+lrLogout(); return false;
+```
+
+6. You will need to update any of the dynamically created checkout page links if you are using the streamlined cart flow.
+
+   * Search your template files for `%%GLOBAL_CheckoutLink%%`
+
+   * Add the following onclick handler to these links: `onclick="assignCheckout(this)"`
+
+>**Note:** Guest checkout is not supported by BigCommerce for Customized Login Providers
+
+## Additional Theme options
+
+The above steps will allow you to get quickly setup and all of the interfaces can be directly customized using the CSS, js, and HTML that comes in the BluePrint Package. We have also included some more basic functions to display the interfaces that you can use to customize the look and feel or to embed specific interfaces directly on your preexisting forms.
+
+The following options are available to render specific interfaces:
+
+1. `%%Panel.lrauth%%` - Displays the full LoginRadius interface.
+2. `%%Panel.lrlogin%%` - Displays the Traditional Login interface.
+3. `%%Panel.lrsocial%%` - Displays the Social Login interface.
+4. `%%Panel.lrregister%%` - Displays the Traditional Registration interface.
+5. `%%Panel.lrverify%%` - Includes the code to handle the email verification process.
+6. `%%Panel.lrforgot%%` - Displays the interfaces for Forgot password and Reset Password
+7. `%%Panel.lraccountdetails%%` - Displays all of the Profile editing forms
+8. `%%Panel.lrchangepassword%%` - Displays the Change Password Form
+9. `%%Panel.lremailmanage%%` - Displays the add and remove Email Forms
+10. `%%Panel.lrprofileeditor%%` - Displays the Profile Editor Form
+
+
 ## Storage of BigCommerce customer_id
 
 BigCommerce uses the field `customer_id` to identify unique users for your store. In LoginRadius cloud, this is stored in the ExternalIds field of your consumer profile:
