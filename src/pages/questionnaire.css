@@ -1,3 +1,11 @@
+@media print
+{    
+  .no-print, .no-print *
+  {
+    display: none !important;
+  }
+}
+
 .dd-steps>.dd-close {
   position: absolute;
   right: 20px;
@@ -13,8 +21,73 @@
   height: 100vh
 }
 
+/* .dd-steps>.grid-50>.dd-form div.qa > ul div.select-search__select > ul > li > button {
+  background-color: #000
+} */
+
+/* div.select-search > ul > li.select-search__row::before {
+  border: 2px solid #008ecf;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  transform: none;
+  content: '';
+  display: inline-block;
+}
+
+div.select-search > ul > li.select-search__row::after {
+  transform: rotate(45deg);
+  transition: all 0s;
+  width: 5px;
+  height: 9px;
+  border-width: 2px;
+  border-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-color: #008ecf;
+  left: 7px;
+  top: 4px;
+  content: '';
+  display: inline-block;
+} */
+
+.btn-box.top-half {
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom-color: #fff;
+  background-color: #000;
+}
+
+.btn-box.top-half>img {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+}
+
+.btn-box.bottom-half {
+  border: 1px solid #000;
+  border-radius: 0 0 0.5rem 0.5rem;
+  border-top-color: #fff;
+  background-color: #fafafa;
+}
+
+.btn-box.bottom-half>h3 {
+  font-size: 1.10rem;
+  font-weight: 500;
+  color: #020b13;
+  margin-bottom: 12px;
+  padding: 15px 15px 0 15px;
+}
+
+.btn-box.bottom-half>.btn-group {
+  padding: 15px;
+}
+
 .dd-steps .grid-67 {
-  width: 67%
+  width: 67%;
+  margin-right: 40px
 }
 
 .dd-steps>.grid-50 .dd-form {
