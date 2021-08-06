@@ -1,0 +1,40 @@
+To download or find more information about LoginRadius CLI, see the **<a href="https://www.loginradius.com/open-source/cli/" target="_blank">LoginRadius CLI feature page.</a>**
+
+Use the following commands to generate, get or delete a SOTT.
+
+**To generate a SOTT:**
+```shell
+    $ lr add sott -f <FromDate(mm/dd/yyyy)> -t <ToDate(mm/dd/yyyy)>
+		Comment(optional): <value>
+		Select a technology
+		.....
+		.....
+
+		sott generated successfully
+		AunthenticityToken: <token>
+		Comment: <comment>
+		Sott: <sott>
+		Technology: <tech>
+ ```
+
+ **To get available SOTTs:**       
+ ```shell
+    $ lr get sott
+	+--------------------------------+-------------------------+---------------------------------+-------------------+
+	| AUTHENTICITY TOKEN       | TECHNOLOGY             | DATE RANGE                             | COMMENT           |
+	+--------------------------------+-------------------------+---------------------------------+-------------------+
+	| <value>                                        | android                           | 2021/8/3 0:0:0 - 2022/8/3  | test                        |
+	|                                                         |                                             |  0:0:0                                             |                                  |
+	+--------------------------------+-------------------------+----------------------------------+------------------+
+```
+
+**To delete a SOTT:**
+```shell
+    $ lr delete sott --token <value>  //Pass Authenticity token of SOTT to be deleted as value.
+
+	SOTT deleted successfully. 
+
+	$ lr delete sott --all           //Deletes all SOTTs 
+
+	All SOTTs for your app have been deleted successfully.
+```        
