@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 
 import "./questionnaire.css";
 import Logo from "../../public/images/logo.svg";
+import ResultBanner from "../../public/images/questionnaire_graphics.svg";
 
 const splashArt = (animationClassName) => {
   return (
@@ -1447,14 +1448,16 @@ function search(options) {
   };
 }
 
-export default class TryMeOut extends React.Component {
+class Questionnaire extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      responses: QuestionList.map((question) => {
+      responses: QuestionList.map((question, index) => {
         if (question.answers.type === "single") {
           return [""];
+        } else if (index === 9) {
+          return [false];
         }
         let responseArray = [];
         for (let _ of question.answers.choices) {
@@ -1465,7 +1468,15 @@ export default class TryMeOut extends React.Component {
       thirdPartyChoices: [],
       step: 1,
       errorMessage: "",
-      showResultPage: false
+      showResultPage: false,
+      encodedUrlParams: "",
+      copyButtonClicked: false
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.location.search) {
+      this.decodeFromBase64ToState(this.props.location.search.replace("?id=", ""));
     }
   }
 
@@ -1500,6 +1511,82 @@ export default class TryMeOut extends React.Component {
     }
   }
 
+  encodeToBase64FromState = () => {
+    let responsesSerialized = "";
+
+    for (let i = 0; i < this.state.responses.length; i++) {
+      if (QuestionList[i].answers.type === "multi") {
+        let answerString = "";
+        for (let answer of this.state.responses[i]) {
+          answerString = answerString + (answer ? "1" : "0");
+        }
+
+        responsesSerialized = responsesSerialized + answerString + "|";
+      } else {
+        responsesSerialized = responsesSerialized + this.state.responses[i][0] + "|";
+      }
+    }
+
+    let thirdPartyChoicesSerialized = "";
+
+    for (let thirdPartyChoice of this.state.thirdPartyChoices) {
+      thirdPartyChoicesSerialized = thirdPartyChoicesSerialized + thirdPartyChoice + "|"
+    }
+
+    responsesSerialized = responsesSerialized.slice(0, -1);
+    thirdPartyChoicesSerialized = thirdPartyChoicesSerialized.slice(0, -1);
+    let serializedString =
+      Buffer.from(responsesSerialized).toString("base64") +
+      "|" +
+      Buffer.from(thirdPartyChoicesSerialized).toString("base64");
+
+    const encodedUrlParams = Buffer.from(serializedString).toString("base64");
+
+    return encodedUrlParams;
+  }
+
+  decodeFromBase64ToState = (encodedString) => {
+    try {
+      const decodedUrlParam = Buffer.from(encodedString, "base64").toString();
+
+      const [encodedResponses, encodedThirdPartyChoices] = decodedUrlParam.split("|");
+
+      const decodedResponses = Buffer.from(encodedResponses, "base64").toString();
+      const responseArray = decodedResponses.split("|");
+      let responses = [];
+      for (let i = 0; i < responseArray.length; i++) {
+        if (QuestionList[i].answers.type === "multi") {
+          let answerArray = [];
+          for (let answer of responseArray[i]) {
+            answerArray.push(answer === "1");
+          }
+          responses.push(answerArray);
+        } else {
+          responses.push([responseArray[i]]);
+        }
+      }
+      // for (let i = 0; i < responseArray.length; i++) {
+
+      // }
+      const decodedThirdPartyChoices = Buffer.from(encodedThirdPartyChoices, "base64").toString();
+      const thirdPartyArray = decodedThirdPartyChoices.split("|");
+
+      let thirdPartyChoices = [];
+      for (let thirdParty of thirdPartyArray) {
+        thirdPartyChoices.push(thirdParty);
+      }
+
+      this.setState({
+        responses,
+        thirdPartyChoices,
+        encodedUrlParams: encodedString,
+        showResultPage: true
+      })
+    } catch (e) {
+      window.location.replace(this.props.location.pathname);
+    }
+  }
+
   render() {
     const { responses, thirdPartyChoices, showResultPage } = this.state;
     const currentQuestion = QuestionList[this.state.step - 1];
@@ -1522,36 +1609,30 @@ export default class TryMeOut extends React.Component {
           for (let j = 0; j < responses[i].length; j++) {
             if (responses[i][j] === true) {
               flattenedDocsList.push(DocsList[i][j]);
-              console.log("pushed, ", flattenedDocsList);
             }
           }
         } else if (QuestionList[i].answers.type === "single") {
-          const docIndex = DocsList[i].findIndex(doc => (doc.name === responses[i][0]));
+          const docIndex = DocsList[i].findIndex(doc => (doc.name.includes(responses[i][0])));
           if (docIndex !== -1) {
             flattenedDocsList.push(DocsList[i][docIndex]);
-            console.log("pushed, ", flattenedDocsList);
           }
         } else if (QuestionList[i].answers.type === "multiselectbox") {
           let remainingThirdPartyCount = thirdPartyChoices.length;
-  
-          if (responses[9][responses[9].length-1] === true) {
+
+          if (responses[9][0] === true) {
             flattenedDocsList.push(DocsList[i][0]);
-            console.log("pushed, ", flattenedDocsList);
           }
           if (thirdPartyChoices.includes("Shopify")) {
             flattenedDocsList.push(DocsList[i][1]);
-              console.log("pushed, ", flattenedDocsList);
-              remainingThirdPartyCount--;
+            remainingThirdPartyCount--;
           }
           if (thirdPartyChoices.includes("BigCommerce")) {
             flattenedDocsList.push(DocsList[i][2]);
-              console.log("pushed, ", flattenedDocsList);
-              remainingThirdPartyCount--;
+            remainingThirdPartyCount--;
           }
           // meaning the user selected other third party integrations aside from Shopify and BigCommerce
           if (remainingThirdPartyCount > 0) {
             flattenedDocsList.push(DocsList[i][3]);
-            console.log("pushed, ", flattenedDocsList);
           }
         }
       }
@@ -1568,29 +1649,59 @@ export default class TryMeOut extends React.Component {
       <React.Fragment>
         <div className="dd-steps step2" id="step2">
           <div className="grid-50 override">
-            <div className="dd-form">
+            <div className="dd-form" id="result_page_container">
               <div className="dd-content">
-                <div className="dd-logo">
+                <div className="dd-logo" style={{ display: "flex", flexDirection: "column" }}>
                   <Link to="/"><img src={Logo} width={228} /></Link>
+                  <a style={{ marginTop: "1rem" }} onClick={() => this.setState({
+                    showResultPage: false,
+                    step: 1
+                  })}>Need to change some answers? Go back to the questionnaire.</a>
                 </div>
 
-                <div className="qa grid-67">
-                  <h2>This document contains sequential information on how to implement your use case using LoginRadius. For any future references, you can bookmark this link or download the document as a PDF.</h2>
-                  <br />
+                <div style={{ display: "flex" }}>
+                  <div className="qa grid-67">
+                    <h2>This document contains sequential information on how to implement your use case using LoginRadius. For any future references, you can bookmark this link or download the document as a PDF.</h2>
+                    <br />
 
-                  {flattenedDocsList.map((doc) => {
-                    return (<React.Fragment key={doc.name}>
-                      <h3>{doc.name}</h3>
-                      <div dangerouslySetInnerHTML={doc.body} />
-                      <br /><br />
-                    </React.Fragment>)
-                  })}
-                  {/* <h3>Email/Password Login</h3>
-                  <p>
-                    Answer a few questions and get a self-served implementation
-                    guide addressing your needs.
-                  </p> */}
+                    {flattenedDocsList.map((doc) => {
+                      return (<React.Fragment key={doc.name}>
+                        <h3>{doc.name}</h3>
+                        <div dangerouslySetInnerHTML={doc.body} />
+                        <br /><br />
+                      </React.Fragment>)
+                    })}
 
+                  </div>
+                  <div style={{ width: "33%" }} className="no-print">
+                    <div className="btn-box top-half">
+                      <img src={ResultBanner} width={228} />
+                    </div>
+                    <div className="btn-box bottom-half">
+                      <h3>Print for future use. You can also bookmark the link</h3>
+                      {/* <h3>Download as PDF for future use. You can also bookmark the link</h3> */}
+                      <div className="btn-group">
+                        <a
+                          onClick={window.print}
+                          className="btn btn-primary"
+                        >
+                          {/* Download */}
+                          Print
+                        </a>
+                        <a
+                          onClick={() => {
+                            this.setState({ copyButtonClicked: true }, () => {
+                              navigator.clipboard.writeText(window.location.href);
+                            });
+                          }}
+                          className="btn btn-outline"
+                          style={{ minWidth: 160 }}
+                        >
+                          {this.state.copyButtonClicked ? "Copied Link" : "Share"}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <Footer />
@@ -1600,7 +1711,7 @@ export default class TryMeOut extends React.Component {
       </React.Fragment>
     ) : (
       <React.Fragment>
-        <div style={{overflow: "hidden"}} className="dd-steps step2" id="step2">
+        <div style={{ overflow: "hidden" }} className="dd-steps step2" id="step2">
           <div className="dd-close">
             <Link to="/">
               <img
@@ -1670,6 +1781,9 @@ export default class TryMeOut extends React.Component {
                               <input
                                 type="checkbox"
                                 name="checkbox"
+
+                                // implement pdf gen, permalink, 
+
                                 id={"answer_choice_" + this.state.step + "_" + index}
                                 checked={!!this.state.responses[this.state.step - 1][index]}
                                 // onBlur={() => this.onInputBlur(() => {})}
@@ -1702,10 +1816,10 @@ export default class TryMeOut extends React.Component {
                               type="checkbox"
                               name="checkbox"
                               id={"answer_choice_" + this.state.step + "_" + (lastIndexQuestion9)}
-                              checked={!!this.state.responses[this.state.step - 1][lastIndexQuestion9]}
+                              checked={!!this.state.responses[this.state.step - 1][0]}
                               onChange={() => {
                                 let responsesCopy = this.state.responses;
-                                responsesCopy[this.state.step - 1][lastIndexQuestion9] = !responsesCopy[this.state.step - 1][lastIndexQuestion9];
+                                responsesCopy[this.state.step - 1][0] = !responsesCopy[this.state.step - 1][0];
                                 this.setState({ responses: responsesCopy }, () => this.onInputBlur(() => { }));
                               }}
                             />
@@ -1722,14 +1836,14 @@ export default class TryMeOut extends React.Component {
                 {this.state.step > 1 && (<a
                   onClick={() => {
                     // this.onInputBlur(() => {
-                      let stepsBackward = 1;
-                      if (this.state.step === 4 && this.state.responses[1][0] === "No") {
-                        stepsBackward = 2;
-                      }
-                      this.setState({ 
-                        errorMessage: "",
-                        step: this.state.step - stepsBackward
-                      })
+                    let stepsBackward = 1;
+                    if (this.state.step === 4 && this.state.responses[1][0] === "No") {
+                      stepsBackward = 2;
+                    }
+                    this.setState({
+                      errorMessage: "",
+                      step: this.state.step - stepsBackward
+                    })
                     // });
                   }}
                   className={`btn btn-secondary${!!this.state.errorMessage ? " disabled" : ""}`}
@@ -1753,20 +1867,37 @@ export default class TryMeOut extends React.Component {
 
                 {this.state.step === QuestionList.length && (<a
                   onClick={() => {
-                    this.onInputBlur(() => { this.setState({ showResultPage: true }) })
-                  }
-                  }
+                    this.onInputBlur(() => {
+                      const encodedUrlParams = this.encodeToBase64FromState();
+
+                      // this.props.location.search = "?id=" + encodedUrlParams;
+                      window.location.replace(this.props.location.pathname + "?id=" + encodedUrlParams);
+                      this.setState({
+                        // showResultPage: true,
+                        encodedUrlParams
+                      });
+                    })
+                  }}
                   className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""}`}
                 >
-                  Submit
+                  Show Result
                 </a>)}
               </div>
             </div>
 
-            {splashArt("step" + (this.state.step > 2 ? this.state.step - 1 : this.state.step))}
+            {splashArt("step" + (this.state.step > 2 ? this.state.step - 2 : this.state.step - 1))}
           </div>
         </div>
       </React.Fragment>
     )
   }
 }
+
+const QuestionnaireWrapper = ({ data, location, }) => {
+  // const siteTitle = data.site.siteMetadata?.title || `Title`
+  return (
+    <Questionnaire location={location}></Questionnaire>
+  )
+}
+
+export default QuestionnaireWrapper;

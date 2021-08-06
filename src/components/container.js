@@ -151,7 +151,7 @@ const Middle = () => {
                   color: "#f15e22"
                 }}
               >
-                Take Our Short Quiz!
+                Let's Get Started!
               </Link>
             </div>
           </div>
