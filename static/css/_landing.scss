@@ -109,6 +109,9 @@
       &:first-child {
         p {
           padding-right: 40px;
+          @media (max-width: 768px) {
+            padding-right: 0;
+          }
         }
       }
       &:nth-child(2) {
@@ -194,6 +197,24 @@
       position: relative;
       z-index: 2;
     }
+  }
+}
+.quiz {
+  .btn-group {
+    .btn {
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    justify-content: space-between;
+    & > div:last-child {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  p {
+    margin-bottom: 56px;
   }
 }
 section {
