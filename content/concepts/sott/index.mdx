@@ -5,6 +5,10 @@ description: "This is a document detailing the concept of the Secure One Time To
 path: "/concepts/sott"
 ---
 
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import SottCLI from "./sottCLI"
+import SottDashboard from "./sottDash"
+
 # Secure One Time Token
 
 The LoginRadius Registration APIs require an API key and a Secure One Time Token to authenticate requests. This SOTT acts as a layer for you to control your consumer's access to register in your app.
@@ -13,25 +17,21 @@ A SOTT combines data from your API secret, your API key, and a defined timestamp
 
 ## Generating Your SOTT
 
-You can choose to either [generate static SOTTs](#generate-sott-in-loginradius-dashboard) using the LoginRadius Dashboard, or generate dynamic SOTTs in your application using [the provided algorithm](#generate-sott-manually), or [our SDKs](#generate-sott-using-sdks).
+You can choose to either [generate static SOTTs](#generate-sott-in-loginradius-dashboard) using the LoginRadius Dashboard or LoginRadius CLI, or generate dynamic SOTTs in your application using [the provided algorithm](#generate-sott-manually), or [our SDKs](#generate-sott-using-sdks).
 
-### Generate SOTT in LoginRadius Dashboard
+<TabContainer
+  tabheaders={["Using Dashboard", "Using CLI"]}
+  tabs={[
+    <Tab>
+      <SottDashboard />
+    </Tab>,
+    <Tab>
+      <SottCLI />
+    </Tab>,
+  ]}
+/>
 
-To generate SOTTs in your dashboard, log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
-
-Click the **Secure Mobile OTP Token** sub-section, and the **Generate SOTT** screen will appear:
-
-![alt_text](../../assets/blog-common/sott.png "image_tooltip")
-
-If you have already generated a SOTT, you can generate additional tokens by clicking the **Generate SOTT** button available at the bottom right of the screen as highlighted below:
-
-![alt_text](images/generate-sott.png "image_tooltip")
-
-Enter the required details in each respective field in the form provided, and click the **Generate** button to generate your SOTT.
-
-![alt_text](images/generate-sott-form.png "image_tooltip")
-
-> **Note:** When your SOTT is generated, be sure to save this somewhere, as this will not be saved in your dashboard.
+> **Note:** When your SOTT is generated, be sure to save this somewhere, as this will not be saved in your dashboard or CLI.
 
 These are the fields that you will find in the **Generate SOTT** form and their descriptions:
 
