@@ -1,13 +1,13 @@
-import React from "react";
-import SelectSearch from 'react-select-search';
+import React from "react"
+import SelectSearch from "react-select-search"
 import Footer from "../components/footer"
 import { Link } from "gatsby"
 
-import "./questionnaire.css";
-import Logo from "../../public/images/logo.svg";
-import ResultBanner from "../../public/images/questionnaire_graphics.svg";
+import "./questionnaire.css"
+import Logo from "../../public/images/logo.svg"
+import ResultBanner from "../../public/images/questionnaire_graphics.svg"
 
-const splashArt = (animationClassName) => {
+const splashArt = animationClassName => {
   return (
     <React.Fragment>
       <div className="dd-animation">
@@ -760,7 +760,8 @@ const splashArt = (animationClassName) => {
 
 const QuestionList = [
   {
-    question: "Choose how consumers will register and log in to your application.",
+    question:
+      "Choose how consumers will register and log in to your application.",
     description: "",
     answers: {
       type: "multi",
@@ -770,21 +771,19 @@ const QuestionList = [
         "Phone Login",
         "Social Login",
         "Passwordless Login - Email Magic Link",
-        "Passwordless Login - SMS OTP"
-      ]
-    }
+        "Passwordless Login - SMS OTP",
+      ],
+    },
   },
   {
     question: "Will consumers log in using their internal identity provider?",
-    description: "Choose yes, if your consumers are businesses who want their employees to log in using their internal identity providers like Salesforce, AzureAD, etc.",
+    description:
+      "Choose yes, if your consumers are businesses who want their employees to log in using their internal identity providers like Salesforce, AzureAD, etc.",
     answers: {
       type: "single",
       isRequired: true,
-      choices: [
-        "Yes",
-        "No"
-      ]
-    }
+      choices: ["Yes", "No"],
+    },
   },
   {
     question: "Tell us all the internal identity providers your consumers use.",
@@ -792,16 +791,13 @@ const QuestionList = [
     answers: {
       type: "multi",
       isRequired: true,
-      choices: [
-        "Azure AD",
-        "Salesforce",
-        "Other SAML enabled SSO providers"
-      ]
-    }
+      choices: ["Azure AD", "Salesforce", "Other SAML enabled SSO providers"],
+    },
   },
   {
     question: "Do you want to implement Outbound SSO using LoginRadius IDP?",
-    description: "Choose the protocol you want to utilize for allowing consumers to log into your application via LoginRadius IDP",
+    description:
+      "Choose the protocol you want to utilize for allowing consumers to log into your application via LoginRadius IDP",
     answers: {
       type: "multi",
       isRequired: false,
@@ -810,24 +806,24 @@ const QuestionList = [
         "SSO JWT",
         "SSO OIDC",
         "SSO OAuth2",
-        "Others using LoginRadius JavaScript"
-      ]
-    }
+        "Others using LoginRadius JavaScript",
+      ],
+    },
   },
   {
-    question: "Do you have consumers' information in your or a third-party application and require migrating it to LoginRadius?",
-    description: "We have a straightforward migration process for you to migrate their data into LoginRadius.",
+    question:
+      "Do you have consumers' information in your or a third-party application and require migrating it to LoginRadius?",
+    description:
+      "We have a straightforward migration process for you to migrate their data into LoginRadius.",
     answers: {
       type: "single",
       isRequired: true,
-      choices: [
-        "Yes",
-        "No"
-      ]
-    }
+      choices: ["Yes", "No"],
+    },
   },
   {
-    question: "Choose the back-end technology of your application where you plan to implement LoginRadius.",
+    question:
+      "Choose the back-end technology of your application where you plan to implement LoginRadius.",
     description: "",
     answers: {
       type: "single",
@@ -845,11 +841,12 @@ const QuestionList = [
         "Shopify",
         "Drupal",
         "Other",
-      ]
-    }
+      ],
+    },
   },
   {
-    question: "Choose the front-end technology of your application where you plan to implement LoginRadius.",
+    question:
+      "Choose the front-end technology of your application where you plan to implement LoginRadius.",
     description: "",
     answers: {
       type: "single",
@@ -859,24 +856,24 @@ const QuestionList = [
         // "Pure JavaScript implementation",
         "AngularJS",
         "ReactJS",
-        "VueJS"
-      ]
-    }
+        "VueJS",
+      ],
+    },
   },
   {
-    question: "Do you own multiple applications and want to enable SSO (single sign-on) among them for consumers?",
-    description: "To allow your consumers access to these applications with a single set of login credentials and an active login session.",
+    question:
+      "Do you own multiple applications and want to enable SSO (single sign-on) among them for consumers?",
+    description:
+      "To allow your consumers access to these applications with a single set of login credentials and an active login session.",
     answers: {
       type: "single",
       isRequired: true,
-      choices: [
-        "Yes",
-        "No"
-      ]
-    }
+      choices: ["Yes", "No"],
+    },
   },
   {
-    question: "Are you planning to enhance the security aspects of your application and protect against account takeover? Choose your preferences:",
+    question:
+      "Are you planning to enhance the security aspects of your application and protect against account takeover? Choose your preferences:",
     description: "",
     answers: {
       type: "multi",
@@ -884,12 +881,13 @@ const QuestionList = [
       choices: [
         "Protect against brute force attack",
         "Set strong password policy",
-        "Protect using MFA"
-      ]
-    }
+        "Protect using MFA",
+      ],
+    },
   },
   {
-    question: "Do you want to synchronize consumers' data to any third-party applications or across your applications? If yes, choose integrations from the list below:",
+    question:
+      "Do you want to synchronize consumers' data to any third-party applications or across your applications? If yes, choose integrations from the list below:",
     description: "",
     answers: {
       type: "multiselectbox",
@@ -1030,25 +1028,21 @@ const QuestionList = [
         "Zoho",
         "kaltura",
         "klaviyo",
-        "Other systems using Webhook"
-      ]
-    }
+        "Other systems using Webhook",
+      ],
+    },
   },
   {
-    question: "Are you planning to implement the selected use case to a Mobile App? If yes, choose app type:",
+    question:
+      "Are you planning to implement the selected use case to a Mobile App? If yes, choose app type:",
     description: "",
     answers: {
       type: "multi",
       isRequired: false,
-      choices: [
-        "Android",
-        "iOS",
-        "Hybrid/Ionic"
-      ]
-    }
+      choices: ["Android", "iOS", "Hybrid/Ionic"],
+    },
   },
-];
-
+]
 
 const DocsList = [
   // "Email/Password Login",
@@ -1061,44 +1055,44 @@ const DocsList = [
       name: "Email/Password Login",
       body: {
         __html: `<span>Here is a guide to configure and customize Email/Password Login for your application. It also describes how to manage email templates for this login method.<br/>
-      <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login/" target="_blank">https://www.loginradius.com/docs/developer/guide/emailpassword-login/</a><br/><br/>
+      <a href="https://www.loginradius.com/docs/developer/guide/emailpassword-login/" target="_blank">https://www.loginradius.com/docs/developer/guide/emailpassword-login/</a><br/>
       In this case, Email (required) and Password (required) are the default registration form fields. You can add more fields to your registration form:<br/>
       <b>Via Dashboard:</b> <a href="https://www.loginradius.com/docs/developer/guide/custom-registration/" target="_blank">https://www.loginradius.com/docs/developer/guide/custom-registration/</a><br/>
-      <b>Via JS:</b> <a href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema</a></span>`
-      }
+      <b>Via JS:</b> <a href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema</a></span>`,
+      },
     },
     {
       name: "Phone Login",
       body: {
         __html: `<span>Here is a guide to configure and customize Phone Login for your application. It also describes how to manage phone number verification, phone number change, and password reset SMS templates for this login method.<br/>
-      <a href="https://www.loginradius.com/docs/developer/guide/phone-login/" target="_blank">https://www.loginradius.com/docs/developer/guide/phone-login/</a><br/><br/>
+      <a href="https://www.loginradius.com/docs/developer/guide/phone-login/" target="_blank">https://www.loginradius.com/docs/developer/guide/phone-login/</a><br/>
       In this case, Phone Number (required), Email (optional), and Password (required) are the default registration form fields. You can add more fields to your registration form:<br/>
       <b>Via Dashboard:</b> <a href="https://www.loginradius.com/docs/developer/guide/custom-registration/" target="_blank">https://www.loginradius.com/docs/developer/guide/custom-registration/</a><br/>
-      <b>Via JS:</b> <a href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema</a></span>`
-      }
+      <b>Via JS:</b> <a href="https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/customizing-your-registration-schema</a></span>`,
+      },
     },
     {
       name: "Social Login",
       body: {
         __html: `<span>Here is a guide to configuring social login for your application. You can enable and configure a range of social providers based on your subscribed plan. <br/>
-      <a href="https://www.loginradius.com/docs/developer/guide/social-login/" target="_blank">https://www.loginradius.com/docs/developer/guide/social-login/</a><br/><br/>
+      <a href="https://www.loginradius.com/docs/developer/guide/social-login/" target="_blank">https://www.loginradius.com/docs/developer/guide/social-login/</a><br/>
       To get additional information from consumers when they sign up using Social Provider, you can configure the respective fields as required in the registration schema. For more information, refer to this document: <br/>
-      <a href="https://www.loginradius.com/docs/developer/guide/custom-registration/" target="_blank">https://www.loginradius.com/docs/developer/guide/custom-registration/</a></span>`
-      }
+      <a href="https://www.loginradius.com/docs/developer/guide/custom-registration/" target="_blank">https://www.loginradius.com/docs/developer/guide/custom-registration/</a></span>`,
+      },
     },
     {
       name: "Passwordless Login - Email Magic Link",
       body: {
         __html: `<span>Here is a guide to configuring passwordless login for your application using Email Magic. You can also manage email templates for passwordless login.<br/>
-      <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">https://www.loginradius.com/docs/developer/guide/passwordless-login</a></span>`
-      }
+      <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">https://www.loginradius.com/docs/developer/guide/passwordless-login</a></span>`,
+      },
     },
     {
       name: "Passwordless Login - SMS OTP",
       body: {
         __html: `<span>Here is a guide to configuring passwordless login for your application using OTP via SMS. You can also manage SMS templates for passwordless login.<br/>
-      <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">https://www.loginradius.com/docs/developer/guide/passwordless-login</a></span>`
-      }
+      <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">https://www.loginradius.com/docs/developer/guide/passwordless-login</a></span>`,
+      },
     },
   ],
   [],
@@ -1110,22 +1104,22 @@ const DocsList = [
       name: "Inbound SSO with Azure AD",
       body: {
         __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Azure AD.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/</a></span>`,
+      },
     },
     {
       name: "Inbound SSO with Salesforce",
       body: {
         __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Salesforce.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/</a></span>`,
+      },
     },
     {
       name: "Inbound SSO with SAML supported applications",
       body: {
         __html: `<span>Here is a guide to configuring Inbound/Employee SSO using applications that support SAML protocol.<br/>
-        <a href="" target="_blank">Link not yet available</a></span>`
-      }
+        <a href="" target="_blank">Link not yet available</a></span>`,
+      },
     },
   ],
   // "SSO SAML",
@@ -1138,36 +1132,36 @@ const DocsList = [
       name: "Outbound SSO - SAML",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using SAML protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports SAML.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/saml" target="_blank">https://www.loginradius.com/docs/developer/guide/saml</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/saml" target="_blank">https://www.loginradius.com/docs/developer/guide/saml</a></span>`,
+      },
     },
     {
       name: "Outbound SSO - JWT",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using JWT protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports JWT.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/jwt/" target="_blank">https://www.loginradius.com/docs/developer/guide/jwt/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/jwt/" target="_blank">https://www.loginradius.com/docs/developer/guide/jwt/</a></span>`,
+      },
     },
     {
       name: "Outbound SSO - OIDC",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using OIDC protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports OIDC.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/oidc/" target="_blank">https://www.loginradius.com/docs/developer/guide/oidc/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/oidc/" target="_blank">https://www.loginradius.com/docs/developer/guide/oidc/</a></span>`,
+      },
     },
     {
       name: "Outbound SSO - OAuth",
       body: {
         __html: `<span>Here is a guide to implementing Outbound SSO using OAuth2 protocol, where LoginRadius acts as an IDP. You can utilize any desired application as SP (service providers) that supports OAuth2.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/oauth/" target="_blank">https://www.loginradius.com/docs/developer/guide/oauth/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/oauth/" target="_blank">https://www.loginradius.com/docs/developer/guide/oauth/</a></span>`,
+      },
     },
     {
       name: "Outbound SSO using JavaScript",
       body: {
         __html: `<span>Info not yet available<br/>
-        <a href="" target="_blank">Link not yet available</a></span>`
-      }
+        <a href="" target="_blank">Link not yet available</a></span>`,
+      },
     },
   ],
   // Data Migration Question
@@ -1176,8 +1170,8 @@ const DocsList = [
       name: "User Data Migration",
       body: {
         __html: `<span>Here is a guide to migrating user data from any third-party application to LoginRadius using the CSV file.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/migrate-user-data" target="_blank">https://www.loginradius.com/docs/developer/guide/migrate-user-data</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/migrate-user-data" target="_blank">https://www.loginradius.com/docs/developer/guide/migrate-user-data</a></span>`,
+      },
     },
   ],
   // "PHP",
@@ -1197,10 +1191,10 @@ const DocsList = [
       name: "PHP Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your PHP application. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/php/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/php/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/php/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/php/</a><br/>
         Refer to the <b>PHP SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/php-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/php-sdk/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/php-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/php-sdk/</a></span>`,
+      },
     },
     {
       name: ".NET Back-end Technology",
@@ -1208,90 +1202,90 @@ const DocsList = [
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your .NET application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <b>.NET Webforms:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnet-webforms/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnet-webforms/</a><br />
         <b>.NET Core MVC:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-mvc/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnetcore-mvc/</a><br />
-        <b>.NET Razor:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor/</a><br /><br />
+        <b>.NET Razor:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor/</a><br/>
         Refer to the <b>.NET SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/dotnet-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/dotnet-sdk/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/dotnet-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/dotnet-sdk/</a></span>`,
+      },
     },
     {
       name: "NodeJS Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Nodejs application. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/node-js/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/node-js/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/node-js/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/node-js/</a><br/>
         Refer to the <b>NodeJS SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk</a></span>`,
+      },
     },
     {
       name: "Java Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Java application. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/java/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/java/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/java/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/java/</a><br/>
         Refer to the <b>Java SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/java-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/java-sdk</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/java-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/java-sdk</a></span>`,
+      },
     },
     {
       name: "Golang Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Golang application. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/golang/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/golang/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/golang/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/golang/</a><br/>
         Refer to the <b>Golang SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/golang-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/golang-sdk/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/golang-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/golang-sdk/</a></span>`,
+      },
     },
     {
       name: "Python Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Python application. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/python/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/python/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/python/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/python/</a><br/>
         Refer to the <b>Python SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/python-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/python-sdk/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/python-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/python-sdk/</a></span>`,
+      },
     },
     {
       name: "ROR Back-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your ROR application. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/ror/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ror/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/ror/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ror/</a><br/>
         Refer to the <b>ROR SDK</b> document for more information on available methods:
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/ruby-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/ruby-sdk/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/ruby-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/ruby-sdk/</a></span>`,
+      },
     },
     {
       name: "BigCommerce CMS",
       body: {
         __html: `<span>Here is a tutorial on installing the LoginRadius CIAM Plugin for the BigCommerce application. It also describes deploying the LoginRadius template code to your Stencil theme.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/big-commerce/" target="_blank">https://www.loginradius.com/docs/developer/guide/big-commerce/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/big-commerce/" target="_blank">https://www.loginradius.com/docs/developer/guide/big-commerce/</a></span>`,
+      },
     },
     {
       name: "WordPress CMS",
       body: {
         __html: `<span>Here is a tutorial on implementing LoginRadius features like user registration, login, profile, and log out for your WordPress application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/wordpress/" target="_blank">https://www.loginradius.com/docs/developer/guide/wordpress/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/wordpress/" target="_blank">https://www.loginradius.com/docs/developer/guide/wordpress/</a></span>`,
+      },
     },
     {
       name: "Shopify CMS",
       body: {
         __html: `<span>Here is a tutorial to integrate LoginRadius features into your Shopify application with Shopify Multipass Hosted Plugin. This integration makes use of the LoginRadius JavaScript Interfaces along with the LoginRadius Hosted Plugin feature. <br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/shopify/" target="_blank">https://www.loginradius.com/docs/developer/guide/shopify/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/shopify/" target="_blank">https://www.loginradius.com/docs/developer/guide/shopify/</a></span>`,
+      },
     },
     {
       name: "Drupal CMS",
       body: {
         __html: `<span>Here is a tutorial on implementing LoginRadius user registration, login, profile, and log out for your Drupal application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/drupal/" target="_blank">https://www.loginradius.com/docs/developer/guide/drupal/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/drupal/" target="_blank">https://www.loginradius.com/docs/developer/guide/drupal/</a></span>`,
+      },
     },
     {
       name: "Back-end Technology",
       body: {
         __html: `<span>Refer to our APIs for implementing LoginRadius features into your application irrespective of the technology or CMS.<br/>
-        <a href="https://www.loginradius.com/docs/developer/#api" target="_blank">https://www.loginradius.com/docs/developer/#api</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/#api" target="_blank">https://www.loginradius.com/docs/developer/#api</a></span>`,
+      },
     },
   ],
   // "JavaScript",
@@ -1304,35 +1298,35 @@ const DocsList = [
       name: "JavaScript Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your Javascript-based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/</a><br/>
         This document covers how to utilize various features of LoginRadius using JavaScript. <br/>
-        <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/</a><br/>
         Refer to the <b>HTML5 SDK</b> document for more information on available methods:<br/>
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/html5-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/html5-sdk</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/html5-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/html5-sdk</a></span>`,
+      },
     },
     {
       name: "AngularJS Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your AngularJS based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/angular/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/angular/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/tutorial/angular/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/angular/</a></span>`,
+      },
     },
     {
       name: "ReactJS Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your ReactJS based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/react/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/react/</a><br /><br />
+        <a href="https://www.loginradius.com/docs/developer/tutorial/react/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/react/</a><br/>
         Refer to the <b>ReactJS SDK</b> document for more information on available methods:<br/>
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk</a></span>`,
+      },
     },
     {
       name: "VueJS Front-end Technology",
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your VueJS based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/vue/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/vue/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/tutorial/vue/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/vue/</a></span>`,
+      },
     },
   ],
   [
@@ -1340,9 +1334,9 @@ const DocsList = [
       name: "Implement Web SSO",
       body: {
         __html: `<span>Here is a guide to implementing web SSO among your applications.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/web-sso/" target="_blank">https://www.loginradius.com/docs/developer/guide/web-sso/</a></span>`
-      }
-    }
+        <a href="https://www.loginradius.com/docs/developer/guide/web-sso/" target="_blank">https://www.loginradius.com/docs/developer/guide/web-sso/</a></span>`,
+      },
+    },
   ],
   // "Protect against brute force attack",
   // "Set strong password policy",
@@ -1352,22 +1346,22 @@ const DocsList = [
       name: "Protect against brute force attack",
       body: {
         __html: `<span>Here is a guide to configuring restrictions for consumers based on their failed login attempts.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/bruteforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/bruteforce/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/bruteforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/bruteforce/</a></span>`,
+      },
     },
     {
       name: "Set strong password policy",
       body: {
         __html: `<span>Here is a guide to configuring password rules to enhance the security of the consumers’ accounts.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/set-strong-password-policy/" target="_blank">https://www.loginradius.com/docs/developer/guide/set-strong-password-policy/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/set-strong-password-policy/" target="_blank">https://www.loginradius.com/docs/developer/guide/set-strong-password-policy/</a></span>`,
+      },
     },
     {
       name: "Protect using MFA",
       body: {
         __html: `<span>Here is a guide to configuring multi-factor authentication to add an extra layer of security for the consumers’ accounts.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/mfa/" target="_blank">https://www.loginradius.com/docs/developer/guide/mfa/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/mfa/" target="_blank">https://www.loginradius.com/docs/developer/guide/mfa/</a></span>`,
+      },
     },
   ],
   // Integration Question
@@ -1376,30 +1370,30 @@ const DocsList = [
       name: "Webhook",
       body: {
         __html: `<span>Here is a guide to configuring Webhook for LoginRadius events and automatically send a POST payload over HTTPS to the webhook’s configured URL in real-time.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/webhook/" target="_blank">https://www.loginradius.com/docs/developer/guide/webhook/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/webhook/" target="_blank">https://www.loginradius.com/docs/developer/guide/webhook/</a></span>`,
+      },
     },
     {
       name: "Integration - Shopify",
       body: {
         __html: `<span>Here is a tutorial to integrate LoginRadius features into your Shopify application with Shopify Multipass Hosted Plugin. This integration makes use of the LoginRadius JavaScript Interfaces along with the LoginRadius Hosted Plugin feature. <br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/shopify/" target="_blank">https://www.loginradius.com/docs/developer/guide/shopify/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/shopify/" target="_blank">https://www.loginradius.com/docs/developer/guide/shopify/</a></span>`,
+      },
     },
     {
       name: "Integration - BigCommerce",
       body: {
         __html: `<span>Here is a tutorial on installing the LoginRadius CIAM Plugin for the BigCommerce application. It also describes deploying the LoginRadius template code to your Stencil theme.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/big-commerce/" target="_blank">https://www.loginradius.com/docs/developer/guide/big-commerce/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/big-commerce/" target="_blank">https://www.loginradius.com/docs/developer/guide/big-commerce/</a></span>`,
+      },
     },
     {
       name: "Integrations",
       body: {
         __html: `<span>Here is a list of all integrations supported by LoginRadius. <br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/3rd-party-all-integrations/" target="_blank">https://www.loginradius.com/docs/developer/guide/3rd-party-all-integrations/</a><br /><br />
-        You can contact us <a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">here</a> to get the desired third-party integration enabled.</span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/guide/3rd-party-all-integrations/" target="_blank">https://www.loginradius.com/docs/developer/guide/3rd-party-all-integrations/</a><br/>
+        You can contact us <a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">here</a> to get the desired third-party integration enabled.</span>`,
+      },
     },
   ],
   // "Android",
@@ -1410,42 +1404,42 @@ const DocsList = [
       name: "Android App",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Android app. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/android/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/android/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/tutorial/android/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/android/</a></span>`,
+      },
     },
     {
       name: "iOS App",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your iOS app. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/ios/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ios/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/tutorial/ios/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ios/</a></span>`,
+      },
     },
     {
       name: "Hybrid App",
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Hybrid app. It also describes the next steps that you might want to take after the initial implementation.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/ionic/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ionic/</a></span>`
-      }
+        <a href="https://www.loginradius.com/docs/developer/tutorial/ionic/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ionic/</a></span>`,
+      },
     },
-  ]
-];
+  ],
+]
 
 function search(options) {
-  return (value) => {
+  return value => {
     if (!value.length) {
-      return options;
+      return options
     }
 
-    let filteredOptions = [];
+    let filteredOptions = []
 
     for (let option of options) {
       if (option.name.toLowerCase().includes(value)) {
-        filteredOptions.push(option);
+        filteredOptions.push(option)
       }
     }
 
-    return filteredOptions;
-  };
+    return filteredOptions
+  }
 }
 
 class Questionnaire extends React.Component {
@@ -1455,152 +1449,171 @@ class Questionnaire extends React.Component {
     this.state = {
       responses: QuestionList.map((question, index) => {
         if (question.answers.type === "single") {
-          return [""];
+          return [""]
         } else if (index === 9) {
-          return [false];
+          return [false]
         }
-        let responseArray = [];
+        let responseArray = []
         for (let _ of question.answers.choices) {
-          responseArray.push(false);
+          responseArray.push(false)
         }
-        return responseArray;
+        return responseArray
       }),
       thirdPartyChoices: [],
       step: 1,
       errorMessage: "",
       showResultPage: false,
       encodedUrlParams: "",
-      copyButtonClicked: false
+      copyButtonClicked: false,
     }
   }
 
   componentDidMount() {
     if (this.props.location.search) {
-      this.decodeFromBase64ToState(this.props.location.search.replace("?id=", ""));
+      this.decodeFromBase64ToState(
+        this.props.location.search.replace("?id=", "")
+      )
     }
   }
 
-  onInputBlur = (callback) => {
-    const { step } = this.state;
+  onInputBlur = callback => {
+    const { step } = this.state
 
     if (step === 0) {
-      return callback();
+      return callback()
     }
 
-    const currentQuestion = QuestionList[step - 1];
+    const currentQuestion = QuestionList[step - 1]
 
     if (currentQuestion.answers.isRequired) {
       if (currentQuestion.answers.type === "single") {
         if (this.state.responses[this.state.step - 1][0] === "") {
-          this.setState({ errorMessage: "This question requires an option to be selected." });
+          this.setState({
+            errorMessage: "This question requires an option to be selected.",
+          })
         } else {
-          this.setState({ errorMessage: "" }, callback);
+          this.setState({ errorMessage: "" }, callback)
         }
       } else {
-        const currentAnswers = this.state.responses[this.state.step - 1];
+        const currentAnswers = this.state.responses[this.state.step - 1]
         for (let answer of currentAnswers) {
           if (answer) {
-            return this.setState({ errorMessage: "" }, callback);
+            return this.setState({ errorMessage: "" }, callback)
           }
         }
 
-        return this.setState({ errorMessage: "This question requires an option to be selected." });
+        return this.setState({
+          errorMessage: "This question requires an option to be selected.",
+        })
       }
     } else {
-      return callback();
+      return callback()
     }
   }
 
   encodeToBase64FromState = () => {
-    let responsesSerialized = "";
+    let responsesSerialized = ""
 
     for (let i = 0; i < this.state.responses.length; i++) {
       if (QuestionList[i].answers.type === "multi") {
-        let answerString = "";
+        let answerString = ""
         for (let answer of this.state.responses[i]) {
-          answerString = answerString + (answer ? "1" : "0");
+          answerString = answerString + (answer ? "1" : "0")
         }
 
-        responsesSerialized = responsesSerialized + answerString + "|";
+        responsesSerialized = responsesSerialized + answerString + "|"
       } else {
-        responsesSerialized = responsesSerialized + this.state.responses[i][0] + "|";
+        responsesSerialized =
+          responsesSerialized + this.state.responses[i][0] + "|"
       }
     }
 
-    let thirdPartyChoicesSerialized = "";
+    let thirdPartyChoicesSerialized = ""
 
     for (let thirdPartyChoice of this.state.thirdPartyChoices) {
-      thirdPartyChoicesSerialized = thirdPartyChoicesSerialized + thirdPartyChoice + "|"
+      thirdPartyChoicesSerialized =
+        thirdPartyChoicesSerialized + thirdPartyChoice + "|"
     }
 
-    responsesSerialized = responsesSerialized.slice(0, -1);
-    thirdPartyChoicesSerialized = thirdPartyChoicesSerialized.slice(0, -1);
+    responsesSerialized = responsesSerialized.slice(0, -1)
+    thirdPartyChoicesSerialized = thirdPartyChoicesSerialized.slice(0, -1)
     let serializedString =
       Buffer.from(responsesSerialized).toString("base64") +
       "|" +
-      Buffer.from(thirdPartyChoicesSerialized).toString("base64");
+      Buffer.from(thirdPartyChoicesSerialized).toString("base64")
 
-    const encodedUrlParams = Buffer.from(serializedString).toString("base64");
+    const encodedUrlParams = Buffer.from(serializedString).toString("base64")
 
-    return encodedUrlParams;
+    return encodedUrlParams
   }
 
-  decodeFromBase64ToState = (encodedString) => {
+  decodeFromBase64ToState = encodedString => {
     try {
-      const decodedUrlParam = Buffer.from(encodedString, "base64").toString();
+      const decodedUrlParam = Buffer.from(encodedString, "base64").toString()
 
-      const [encodedResponses, encodedThirdPartyChoices] = decodedUrlParam.split("|");
+      const [
+        encodedResponses,
+        encodedThirdPartyChoices,
+      ] = decodedUrlParam.split("|")
 
-      const decodedResponses = Buffer.from(encodedResponses, "base64").toString();
-      const responseArray = decodedResponses.split("|");
-      let responses = [];
+      const decodedResponses = Buffer.from(
+        encodedResponses,
+        "base64"
+      ).toString()
+      const responseArray = decodedResponses.split("|")
+      let responses = []
       for (let i = 0; i < responseArray.length; i++) {
         if (QuestionList[i].answers.type === "multi") {
-          let answerArray = [];
+          let answerArray = []
           for (let answer of responseArray[i]) {
-            answerArray.push(answer === "1");
+            answerArray.push(answer === "1")
           }
-          responses.push(answerArray);
+          responses.push(answerArray)
         } else {
-          responses.push([responseArray[i]]);
+          responses.push([responseArray[i]])
         }
       }
       // for (let i = 0; i < responseArray.length; i++) {
 
       // }
-      const decodedThirdPartyChoices = Buffer.from(encodedThirdPartyChoices, "base64").toString();
-      const thirdPartyArray = decodedThirdPartyChoices.split("|");
+      const decodedThirdPartyChoices = Buffer.from(
+        encodedThirdPartyChoices,
+        "base64"
+      ).toString()
+      const thirdPartyArray = decodedThirdPartyChoices.split("|")
 
-      let thirdPartyChoices = [];
+      let thirdPartyChoices = []
       for (let thirdParty of thirdPartyArray) {
-        thirdPartyChoices.push(thirdParty);
+        thirdPartyChoices.push(thirdParty)
       }
 
       this.setState({
         responses,
         thirdPartyChoices,
         encodedUrlParams: encodedString,
-        showResultPage: true
+        showResultPage: true,
       })
     } catch (e) {
-      window.location.replace(this.props.location.pathname);
+      window.location.replace(this.props.location.pathname)
     }
   }
 
   render() {
-    const { responses, thirdPartyChoices, showResultPage } = this.state;
-    const currentQuestion = QuestionList[this.state.step - 1];
-    const lastIndexQuestion9 = QuestionList[9].answers.choices.length - 1;
-    let thirdPartyOptions = QuestionList[9].answers.choices.map((choice, index) => {
-      return {
-        name: choice,
-        value: index
+    const { responses, thirdPartyChoices, showResultPage } = this.state
+    const currentQuestion = QuestionList[this.state.step - 1]
+    const lastIndexQuestion9 = QuestionList[9].answers.choices.length - 1
+    let thirdPartyOptions = QuestionList[9].answers.choices.map(
+      (choice, index) => {
+        return {
+          name: choice,
+          value: index,
+        }
       }
-    });
+    )
 
-    thirdPartyOptions = thirdPartyOptions.slice(0, -1);
+    thirdPartyOptions = thirdPartyOptions.slice(0, -1)
 
-    let flattenedDocsList = [];
+    let flattenedDocsList = []
 
     if (showResultPage) {
       // generate docs page layout
@@ -1608,36 +1621,37 @@ class Questionnaire extends React.Component {
         if (QuestionList[i].answers.type === "multi") {
           for (let j = 0; j < responses[i].length; j++) {
             if (responses[i][j] === true) {
-              flattenedDocsList.push(DocsList[i][j]);
+              flattenedDocsList.push(DocsList[i][j])
             }
           }
         } else if (QuestionList[i].answers.type === "single") {
-          const docIndex = DocsList[i].findIndex(doc => (doc.name.includes(responses[i][0])));
+          const docIndex = DocsList[i].findIndex(doc =>
+            doc.name.includes(responses[i][0])
+          )
           if (docIndex !== -1) {
-            flattenedDocsList.push(DocsList[i][docIndex]);
+            flattenedDocsList.push(DocsList[i][docIndex])
           }
         } else if (QuestionList[i].answers.type === "multiselectbox") {
-          let remainingThirdPartyCount = thirdPartyChoices.length;
+          let remainingThirdPartyCount = thirdPartyChoices.length
 
           if (responses[9][0] === true) {
-            flattenedDocsList.push(DocsList[i][0]);
+            flattenedDocsList.push(DocsList[i][0])
           }
           if (thirdPartyChoices.includes("Shopify")) {
-            flattenedDocsList.push(DocsList[i][1]);
-            remainingThirdPartyCount--;
+            flattenedDocsList.push(DocsList[i][1])
+            remainingThirdPartyCount--
           }
           if (thirdPartyChoices.includes("BigCommerce")) {
-            flattenedDocsList.push(DocsList[i][2]);
-            remainingThirdPartyCount--;
+            flattenedDocsList.push(DocsList[i][2])
+            remainingThirdPartyCount--
           }
           // meaning the user selected other third party integrations aside from Shopify and BigCommerce
           if (remainingThirdPartyCount > 0) {
-            flattenedDocsList.push(DocsList[i][3]);
+            flattenedDocsList.push(DocsList[i][3])
           }
         }
       }
     }
-
 
     // for (let doc of DocsList) {
     //   for (let answer of doc) {
@@ -1651,53 +1665,86 @@ class Questionnaire extends React.Component {
           <div className="grid-50 override">
             <div className="dd-form" id="result_page_container">
               <div className="dd-content">
-                <div className="dd-logo" style={{ display: "flex", flexDirection: "column" }}>
-                  <Link to="/"><img src={Logo} width={228} /></Link>
-                  <a style={{ marginTop: "1rem" }} onClick={() => this.setState({
-                    showResultPage: false,
-                    step: 1
-                  })}>Need to change some answers? Go back to the questionnaire.</a>
+                <div
+                  className="dd-logo"
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <Link to="/">
+                    <img src={Logo} width={228} />
+                  </Link>
                 </div>
 
                 <div style={{ display: "flex" }}>
                   <div className="qa grid-67">
-                    <h2>This document contains sequential information on how to implement your use case using LoginRadius. For any future references, you can bookmark this link or download the document as a PDF.</h2>
-                    <br />
+                    <a
+                      className="backbtn"
+                      onClick={() =>
+                        this.setState({
+                          showResultPage: false,
+                          step: 1,
+                        })
+                      }
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="feather feather-arrow-left"
+                      >
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                      </svg>{" "}
+                      Click here to change answers!
+                    </a>
+                    <h2>
+                      This document contains sequential information on how to
+                      implement your use case using LoginRadius. For any future
+                      references, you can bookmark this link or download the
+                      document as a PDF.
+                    </h2>
 
-                    {flattenedDocsList.map((doc) => {
-                      return (<React.Fragment key={doc.name}>
-                        <h3>{doc.name}</h3>
-                        <div dangerouslySetInnerHTML={doc.body} />
-                        <br /><br />
-                      </React.Fragment>)
+                    {flattenedDocsList.map(doc => {
+                      return (
+                        <React.Fragment key={doc.name}>
+                          <h3>{doc.name}</h3>
+                          <div dangerouslySetInnerHTML={doc.body} />
+                        </React.Fragment>
+                      )
                     })}
-
                   </div>
-                  <div style={{ width: "33%" }} className="no-print">
+                  <div className="no-print">
                     <div className="btn-box top-half">
                       <img src={ResultBanner} width={228} />
                     </div>
                     <div className="btn-box bottom-half">
-                      <h3>Print for future use. You can also bookmark the link</h3>
+                      <h3>
+                        Print for future use. You can also bookmark the link
+                      </h3>
                       {/* <h3>Download as PDF for future use. You can also bookmark the link</h3> */}
                       <div className="btn-group">
-                        <a
-                          onClick={window.print}
-                          className="btn btn-primary"
-                        >
+                        <a onClick={window.print} className="btn btn-primary">
                           {/* Download */}
                           Print
                         </a>
                         <a
                           onClick={() => {
                             this.setState({ copyButtonClicked: true }, () => {
-                              navigator.clipboard.writeText(window.location.href);
-                            });
+                              navigator.clipboard.writeText(
+                                window.location.href
+                              )
+                            })
                           }}
                           className="btn btn-outline"
-                          style={{ minWidth: 160 }}
                         >
-                          {this.state.copyButtonClicked ? "Copied Link" : "Share"}
+                          {this.state.copyButtonClicked
+                            ? "Copied Link"
+                            : "Share"}
                         </a>
                       </div>
                     </div>
@@ -1711,181 +1758,321 @@ class Questionnaire extends React.Component {
       </React.Fragment>
     ) : (
       <React.Fragment>
-        <div style={{ overflow: "hidden" }} className="dd-steps step2" id="step2">
+        <div
+          style={{ overflow: "hidden" }}
+          className="dd-steps step2"
+          id="step2"
+        >
           <div className="dd-close">
             <Link to="/">
-              <img
-                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik91dGxpbmVkIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBpZD0iRmlsbCI+PHBhdGggZD0iTTE2LDJBMTQsMTQsMCwxLDAsMzAsMTYsMTQsMTQsMCwwLDAsMTYsMlptMCwyNkExMiwxMiwwLDEsMSwyOCwxNiwxMiwxMiwwLDAsMSwxNiwyOFoiLz48cG9seWdvbiBwb2ludHM9IjE5LjU0IDExLjA1IDE2IDE0LjU5IDEyLjQ2IDExLjA1IDExLjA1IDEyLjQ2IDE0LjU5IDE2IDExLjA1IDE5LjU0IDEyLjQ2IDIwLjk1IDE2IDE3LjQxIDE5LjU0IDIwLjk1IDIwLjk1IDE5LjU0IDE3LjQxIDE2IDIwLjk1IDEyLjQ2IDE5LjU0IDExLjA1Ii8+PC9nPjwvc3ZnPg=="
-              />
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik91dGxpbmVkIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBpZD0iRmlsbCI+PHBhdGggZD0iTTE2LDJBMTQsMTQsMCwxLDAsMzAsMTYsMTQsMTQsMCwwLDAsMTYsMlptMCwyNkExMiwxMiwwLDEsMSwyOCwxNiwxMiwxMiwwLDAsMSwxNiwyOFoiLz48cG9seWdvbiBwb2ludHM9IjE5LjU0IDExLjA1IDE2IDE0LjU5IDEyLjQ2IDExLjA1IDExLjA1IDEyLjQ2IDE0LjU5IDE2IDExLjA1IDE5LjU0IDEyLjQ2IDIwLjk1IDE2IDE3LjQxIDE5LjU0IDIwLjk1IDIwLjk1IDE5LjU0IDE3LjQxIDE2IDIwLjk1IDEyLjQ2IDE5LjU0IDExLjA1Ii8+PC9nPjwvc3ZnPg==" />
             </Link>
           </div>
           <div className="grid-50">
             <div className="dd-form">
               <div className="dd-content max-height-restricted">
                 <div className="dd-logo">
-                  <Link to="/"><img src={Logo} width={228} /></Link>
+                  <Link to="/">
+                    <img src={Logo} width={228} />
+                  </Link>
                 </div>
                 {this.state.step === 0 ? (
                   <div className="qa">
-                    <h1>Does LoginRadius support my use case?</h1>
+                    <h1>Does LoginRadius Support my Use Case?</h1>
                     <p>
-                      Answer a few questions and get a self-served implementation
-                      guide addressing your needs.
+                      Answer a few questions and get a self-served
+                      implementation guide addressing your needs.
                     </p>
                   </div>
                 ) : (
                   <div className="qa">
-                    <h2>
-                      {currentQuestion.question}
-                    </h2>
-                    <p>
-                      {currentQuestion.description}
-                    </p>
-                    <ul style={currentQuestion.answers.choices.length > 5 && this.state.step !== 10 ? { display: "flex", flexWrap: "wrap" } : undefined}>
-                      {currentQuestion.answers.type !== "multiselectbox" && currentQuestion.answers.choices.map((choice, index) => {
-                        if (currentQuestion.answers.type === "single") {
-                          return (
-                            <li
-                              key={"answer_choice_" + this.state.step + "_" + index}
-                              style={currentQuestion.answers.choices.length > 5 ? { width: "50%" } : undefined}
-                            >
-                              <input
-                                type="radio"
-                                name="radio"
-                                id={"answer_choice_" + this.state.step + "_" + index}
-                                checked={this.state.responses[this.state.step - 1][0] === choice}
-                                // onBlur={() => this.onInputBlur(() => {})}
-                                onChange={() => {
-                                  let responsesCopy = this.state.responses;
-                                  responsesCopy[this.state.step - 1][0] = choice
-                                  // responsesCopy[this.state.step-1] = this.state.responses[this.state.step-1].map((_, responseIndex) => {
-                                  //   if (responseIndex === index) {
-                                  //     return true;
-                                  //   } else {
-                                  //     return false;
-                                  //   }
-                                  // });
-                                  this.setState({ responses: responsesCopy }, () => this.onInputBlur(() => { }));
-                                }}
-                              />
-                              {choice === "Pure JavaScript implementation" ? (
-                                <a href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7" target="_blank">{choice}</a>
-                              ) : (
-                                <label htmlFor={"answer_choice_" + this.state.step + "_" + index}>{choice}</label>
-                              )}
-                            </li>
-                          );
-                        } else if (currentQuestion.answers.type === "multi") {
-                          return (
-                            <li key={"answer_choice_" + this.state.step + "_" + index}>
-                              <input
-                                type="checkbox"
-                                name="checkbox"
+                    <h2>{currentQuestion.question}</h2>
+                    <p>{currentQuestion.description}</p>
+                    <ul
+                      style={
+                        currentQuestion.answers.choices.length > 5 &&
+                        this.state.step !== 10
+                          ? { display: "flex", flexWrap: "wrap" }
+                          : undefined
+                      }
+                    >
+                      {currentQuestion.answers.type !== "multiselectbox" &&
+                        currentQuestion.answers.choices.map((choice, index) => {
+                          if (currentQuestion.answers.type === "single") {
+                            return (
+                              <li
+                                key={
+                                  "answer_choice_" +
+                                  this.state.step +
+                                  "_" +
+                                  index
+                                }
+                                style={
+                                  currentQuestion.answers.choices.length > 5
+                                    ? { width: "50%" }
+                                    : undefined
+                                }
+                              >
+                                <input
+                                  type="radio"
+                                  name="radio"
+                                  id={
+                                    "answer_choice_" +
+                                    this.state.step +
+                                    "_" +
+                                    index
+                                  }
+                                  checked={
+                                    this.state.responses[
+                                      this.state.step - 1
+                                    ][0] === choice
+                                  }
+                                  // onBlur={() => this.onInputBlur(() => {})}
+                                  onChange={() => {
+                                    let responsesCopy = this.state.responses
+                                    responsesCopy[
+                                      this.state.step - 1
+                                    ][0] = choice
+                                    // responsesCopy[this.state.step-1] = this.state.responses[this.state.step-1].map((_, responseIndex) => {
+                                    //   if (responseIndex === index) {
+                                    //     return true;
+                                    //   } else {
+                                    //     return false;
+                                    //   }
+                                    // });
+                                    this.setState(
+                                      { responses: responsesCopy },
+                                      () => this.onInputBlur(() => {})
+                                    )
+                                  }}
+                                />
+                                {choice === "Pure JavaScript implementation" ? (
+                                  <a
+                                    href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7"
+                                    target="_blank"
+                                  >
+                                    {choice}
+                                  </a>
+                                ) : (
+                                  <label
+                                    htmlFor={
+                                      "answer_choice_" +
+                                      this.state.step +
+                                      "_" +
+                                      index
+                                    }
+                                  >
+                                    {choice}
+                                  </label>
+                                )}
+                              </li>
+                            )
+                          } else if (currentQuestion.answers.type === "multi") {
+                            return (
+                              <li
+                                key={
+                                  "answer_choice_" +
+                                  this.state.step +
+                                  "_" +
+                                  index
+                                }
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="checkbox"
+                                  // implement pdf gen, permalink,
 
-                                // implement pdf gen, permalink, 
-
-                                id={"answer_choice_" + this.state.step + "_" + index}
-                                checked={!!this.state.responses[this.state.step - 1][index]}
-                                // onBlur={() => this.onInputBlur(() => {})}
-                                onChange={() => {
-                                  let responsesCopy = this.state.responses;
-                                  responsesCopy[this.state.step - 1][index] = !responsesCopy[this.state.step - 1][index];
-                                  this.setState({ responses: responsesCopy }, () => this.onInputBlur(() => { }));
-                                }}
-                              />
-                              <label htmlFor={"answer_choice_" + this.state.step + "_" + index}>{choice}</label>
-                            </li>
-                          )
-                        }
-                      })}
+                                  id={
+                                    "answer_choice_" +
+                                    this.state.step +
+                                    "_" +
+                                    index
+                                  }
+                                  checked={
+                                    !!this.state.responses[this.state.step - 1][
+                                      index
+                                    ]
+                                  }
+                                  // onBlur={() => this.onInputBlur(() => {})}
+                                  onChange={() => {
+                                    let responsesCopy = this.state.responses
+                                    responsesCopy[this.state.step - 1][
+                                      index
+                                    ] = !responsesCopy[this.state.step - 1][
+                                      index
+                                    ]
+                                    this.setState(
+                                      { responses: responsesCopy },
+                                      () => this.onInputBlur(() => {})
+                                    )
+                                  }}
+                                />
+                                <label
+                                  htmlFor={
+                                    "answer_choice_" +
+                                    this.state.step +
+                                    "_" +
+                                    index
+                                  }
+                                >
+                                  {choice}
+                                </label>
+                              </li>
+                            )
+                          }
+                        })}
                       {currentQuestion.answers.type === "multiselectbox" && (
                         <React.Fragment>
                           <SelectSearch
                             options={thirdPartyOptions}
                             name="Integrations"
+                            placeholder="Select Integrations"
                             filterOptions={search}
                             closeOnSelect={false}
                             value={this.state.thirdPartyChoices}
-                            onChange={(arg) => { this.setState({ thirdPartyChoices: arg }) }}
+                            onChange={arg => {
+                              this.setState({ thirdPartyChoices: arg })
+                            }}
                             printOptions="on-focus"
                             multiple
                             search
                           />
-                          <li key={"answer_choice_" + this.state.step + "_" + (lastIndexQuestion9)}>
+                          <li
+                            key={
+                              "answer_choice_" +
+                              this.state.step +
+                              "_" +
+                              lastIndexQuestion9
+                            }
+                          >
                             <input
                               type="checkbox"
                               name="checkbox"
-                              id={"answer_choice_" + this.state.step + "_" + (lastIndexQuestion9)}
-                              checked={!!this.state.responses[this.state.step - 1][0]}
+                              id={
+                                "answer_choice_" +
+                                this.state.step +
+                                "_" +
+                                lastIndexQuestion9
+                              }
+                              checked={
+                                !!this.state.responses[this.state.step - 1][0]
+                              }
                               onChange={() => {
-                                let responsesCopy = this.state.responses;
-                                responsesCopy[this.state.step - 1][0] = !responsesCopy[this.state.step - 1][0];
-                                this.setState({ responses: responsesCopy }, () => this.onInputBlur(() => { }));
+                                let responsesCopy = this.state.responses
+                                responsesCopy[
+                                  this.state.step - 1
+                                ][0] = !responsesCopy[this.state.step - 1][0]
+                                this.setState(
+                                  { responses: responsesCopy },
+                                  () => this.onInputBlur(() => {})
+                                )
                               }}
                             />
-                            <label htmlFor={"answer_choice_" + this.state.step + "_" + (lastIndexQuestion9)}>{QuestionList[9].answers.choices[lastIndexQuestion9]}</label>
+                            <label
+                              htmlFor={
+                                "answer_choice_" +
+                                this.state.step +
+                                "_" +
+                                lastIndexQuestion9
+                              }
+                            >
+                              {
+                                QuestionList[9].answers.choices[
+                                  lastIndexQuestion9
+                                ]
+                              }
+                            </label>
                           </li>
                         </React.Fragment>
                       )}
                     </ul>
                   </div>
                 )}
-                <div className="dd-error-message">{this.state.errorMessage}</div>
+                <div className="dd-error-message">
+                  {this.state.errorMessage}
+                </div>
               </div>
               <div className="dd-action">
-                {this.state.step > 1 && (<a
-                  onClick={() => {
-                    // this.onInputBlur(() => {
-                    let stepsBackward = 1;
-                    if (this.state.step === 4 && this.state.responses[1][0] === "No") {
-                      stepsBackward = 2;
-                    }
-                    this.setState({
-                      errorMessage: "",
-                      step: this.state.step - stepsBackward
-                    })
-                    // });
-                  }}
-                  className={`btn btn-secondary${!!this.state.errorMessage ? " disabled" : ""}`}
-                >
-                  Back
-                </a>)}
-                {this.state.step < QuestionList.length && (<a
-                  onClick={() => {
-                    this.onInputBlur(() => {
-                      let stepsForward = 1;
-                      if (this.state.step === 2 && this.state.responses[1][0] === "No") {
-                        stepsForward = 2;
+                {this.state.step > 1 && (
+                  <a
+                    onClick={() => {
+                      // this.onInputBlur(() => {
+                      let stepsBackward = 1
+                      if (
+                        this.state.step === 4 &&
+                        this.state.responses[1][0] === "No"
+                      ) {
+                        stepsBackward = 2
                       }
-                      this.setState({ step: this.state.step + stepsForward })
-                    });
-                  }}
-                  className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""}`}
-                >
-                  {this.state.step === 0 ? "Let's do it!" : "Next"}
-                </a>)}
-
-                {this.state.step === QuestionList.length && (<a
-                  onClick={() => {
-                    this.onInputBlur(() => {
-                      const encodedUrlParams = this.encodeToBase64FromState();
-
-                      // this.props.location.search = "?id=" + encodedUrlParams;
-                      window.location.replace(this.props.location.pathname + "?id=" + encodedUrlParams);
                       this.setState({
-                        // showResultPage: true,
-                        encodedUrlParams
-                      });
-                    })
-                  }}
-                  className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""}`}
-                >
-                  Show Result
-                </a>)}
+                        errorMessage: "",
+                        step: this.state.step - stepsBackward,
+                      })
+                      // });
+                    }}
+                    className={`btn btn-secondary${
+                      !!this.state.errorMessage ? " disabled" : ""
+                    }`}
+                  >
+                    Back
+                  </a>
+                )}
+                {this.state.step < QuestionList.length && (
+                  <a
+                    onClick={() => {
+                      this.onInputBlur(() => {
+                        let stepsForward = 1
+                        if (
+                          this.state.step === 2 &&
+                          this.state.responses[1][0] === "No"
+                        ) {
+                          stepsForward = 2
+                        }
+                        this.setState({ step: this.state.step + stepsForward })
+                      })
+                    }}
+                    className={`btn btn-primary${
+                      !!this.state.errorMessage ? " disabled" : ""
+                    }`}
+                  >
+                    {this.state.step === 0 ? "Let's do it!" : "Next"}
+                  </a>
+                )}
+
+                {this.state.step === QuestionList.length && (
+                  <a
+                    onClick={() => {
+                      this.onInputBlur(() => {
+                        const encodedUrlParams = this.encodeToBase64FromState()
+
+                        // this.props.location.search = "?id=" + encodedUrlParams;
+                        window.location.replace(
+                          this.props.location.pathname +
+                            "?id=" +
+                            encodedUrlParams
+                        )
+                        this.setState({
+                          // showResultPage: true,
+                          encodedUrlParams,
+                        })
+                      })
+                    }}
+                    className={`btn btn-primary${
+                      !!this.state.errorMessage ? " disabled" : ""
+                    }`}
+                  >
+                    Show Result
+                  </a>
+                )}
               </div>
             </div>
 
-            {splashArt("step" + (this.state.step > 2 ? this.state.step - 2 : this.state.step - 1))}
+            {splashArt(
+              "step" +
+                (this.state.step > 2
+                  ? this.state.step - 2
+                  : this.state.step - 1)
+            )}
           </div>
         </div>
       </React.Fragment>
@@ -1893,11 +2080,9 @@ class Questionnaire extends React.Component {
   }
 }
 
-const QuestionnaireWrapper = ({ data, location, }) => {
+const QuestionnaireWrapper = ({ data, location }) => {
   // const siteTitle = data.site.siteMetadata?.title || `Title`
-  return (
-    <Questionnaire location={location}></Questionnaire>
-  )
+  return <Questionnaire location={location}></Questionnaire>
 }
 
-export default QuestionnaireWrapper;
+export default QuestionnaireWrapper
