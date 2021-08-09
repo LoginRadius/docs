@@ -806,15 +806,15 @@ const QuestionList = [
         "SSO JWT",
         "SSO OIDC",
         "SSO OAuth2",
-        "Others using LoginRadius JavaScript",
+        "Session-based SSO using LoginRadius JavaScript",
       ],
     },
   },
   {
     question:
-      "Do you have consumers' information in your or a third-party application and require migrating it to LoginRadius?",
+      "Do you have consumer profile data in your app or in a third-party app and want to migrate it to LoginRadius?",
     description:
-      "We have a straightforward migration process for you to migrate their data into LoginRadius.",
+      "We have a straightforward migration process for you to migrate their profile data to LoginRadius.",
     answers: {
       type: "single",
       isRequired: true,
@@ -860,17 +860,17 @@ const QuestionList = [
       ],
     },
   },
-  {
-    question:
-      "Do you own multiple applications and want to enable SSO (single sign-on) among them for consumers?",
-    description:
-      "To allow your consumers access to these applications with a single set of login credentials and an active login session.",
-    answers: {
-      type: "single",
-      isRequired: true,
-      choices: ["Yes", "No"],
-    },
-  },
+  // {
+  //   question:
+  //     "Do you own multiple applications and want to enable SSO (single sign-on) among them for consumers?",
+  //   description:
+  //     "To allow your consumers access to these applications with a single set of login credentials and an active login session.",
+  //   answers: {
+  //     type: "single",
+  //     isRequired: true,
+  //     choices: ["Yes", "No"],
+  //   },
+  // },
   {
     question:
       "Are you planning to enhance the security aspects of your application and protect against account takeover? Choose your preferences:",
@@ -1126,7 +1126,7 @@ const DocsList = [
   // "SSO JWT",
   // "SSO OIDC",
   // "SSO OAuth2",
-  // "Others using LoginRadius JavaScript"
+  // "Session-based SSO using LoginRadius JavaScript"
   [
     {
       name: "Outbound SSO - SAML",
@@ -1159,8 +1159,8 @@ const DocsList = [
     {
       name: "Outbound SSO using JavaScript",
       body: {
-        __html: `<span>Info not yet available<br/>
-        <a href="" target="_blank">Link not yet available</a></span>`,
+        __html: `<span>Here is a guide to implementing session-based web SSO among your applications using LoginRadius JavaScript.<br/>
+        <a href="https://www.loginradius.com/docs/developer/guide/web-sso/" target="_blank">https://www.loginradius.com/docs/developer/guide/web-sso/</a></span>`,
       },
     },
   ],
@@ -1329,15 +1329,18 @@ const DocsList = [
       },
     },
   ],
-  [
-    {
-      name: "Implement Web SSO",
-      body: {
-        __html: `<span>Here is a guide to implementing web SSO among your applications.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/web-sso/" target="_blank">https://www.loginradius.com/docs/developer/guide/web-sso/</a></span>`,
-      },
-    },
-  ],
+
+  // Question 8 removed
+  // [
+  //   {
+  //     name: "Implement Web SSO",
+  //     body: {
+  //       __html: `<span>Here is a guide to implementing web SSO among your applications.<br/>
+  //       <a href="https://www.loginradius.com/docs/developer/guide/web-sso/" target="_blank">https://www.loginradius.com/docs/developer/guide/web-sso/</a></span>`,
+  //     },
+  //   },
+  // ],
+
   // "Protect against brute force attack",
   // "Set strong password policy",
   // "Protect using MFA"
@@ -1450,7 +1453,7 @@ class Questionnaire extends React.Component {
       responses: QuestionList.map((question, index) => {
         if (question.answers.type === "single") {
           return [""]
-        } else if (index === 9) {
+        } else if (index === 8) {
           return [false]
         }
         let responseArray = []
@@ -1462,7 +1465,7 @@ class Questionnaire extends React.Component {
       thirdPartyChoices: [],
       step: 1,
       errorMessage: "",
-      showResultPage: false,
+      showResultPage: !!this.props.location.search,
       encodedUrlParams: "",
       copyButtonClicked: false,
     }
@@ -1599,10 +1602,10 @@ class Questionnaire extends React.Component {
   }
 
   render() {
-    const { responses, thirdPartyChoices, showResultPage } = this.state
+    const { responses, thirdPartyChoices, showResultPage, encodedUrlParams } = this.state
     const currentQuestion = QuestionList[this.state.step - 1]
-    const lastIndexQuestion9 = QuestionList[9].answers.choices.length - 1
-    let thirdPartyOptions = QuestionList[9].answers.choices.map(
+    const lastIndexQuestion8 = QuestionList[8].answers.choices.length - 1
+    let thirdPartyOptions = QuestionList[8].answers.choices.map(
       (choice, index) => {
         return {
           name: choice,
@@ -1613,9 +1616,10 @@ class Questionnaire extends React.Component {
 
     thirdPartyOptions = thirdPartyOptions.slice(0, -1)
 
-    let flattenedDocsList = []
+    let flattenedDocsList = [];
+    let technologyDocList = [];
 
-    if (showResultPage) {
+    if (showResultPage && encodedUrlParams) {
       // generate docs page layout
       for (let i = 0; i < responses.length; i++) {
         if (QuestionList[i].answers.type === "multi") {
@@ -1628,20 +1632,29 @@ class Questionnaire extends React.Component {
           const docIndex = DocsList[i].findIndex(doc =>
             doc.name.includes(responses[i][0])
           )
+
           if (docIndex !== -1) {
-            flattenedDocsList.push(DocsList[i][docIndex])
-          }
+            // if question at index 5 and 6, append to a different array
+            if (i !== 5 && i !== 6) {
+              flattenedDocsList.push(DocsList[i][docIndex])
+            } else {
+              technologyDocList.push(DocsList[i][docIndex]);
+            }
+          } else {}
         } else if (QuestionList[i].answers.type === "multiselectbox") {
           let remainingThirdPartyCount = thirdPartyChoices.length
 
-          if (responses[9][0] === true) {
+          const shopifyIndex = QuestionList[8].answers.choices.findIndex(choice => choice === "Shopify");
+          const bigCommerceIndex = QuestionList[8].answers.choices.findIndex(choice => choice === "BigCommerce");
+
+          if (responses[8][0] === true) {
             flattenedDocsList.push(DocsList[i][0])
           }
-          if (thirdPartyChoices.includes("Shopify")) {
+          if (thirdPartyChoices.includes(shopifyIndex.toString())) {
             flattenedDocsList.push(DocsList[i][1])
             remainingThirdPartyCount--
           }
-          if (thirdPartyChoices.includes("BigCommerce")) {
+          if (thirdPartyChoices.includes(bigCommerceIndex.toString())) {
             flattenedDocsList.push(DocsList[i][2])
             remainingThirdPartyCount--
           }
@@ -1653,6 +1666,7 @@ class Questionnaire extends React.Component {
       }
     }
 
+    flattenedDocsList = technologyDocList.concat(flattenedDocsList);
     // for (let doc of DocsList) {
     //   for (let answer of doc) {
     //     flattenedDocsList.push(answer);
@@ -1674,7 +1688,7 @@ class Questionnaire extends React.Component {
                   </Link>
                 </div>
 
-                <div style={{ display: "flex" }}>
+                {encodedUrlParams ? <div style={{ display: "flex" }}>
                   <div className="qa grid-67">
                     <a
                       className="backbtn"
@@ -1708,6 +1722,9 @@ class Questionnaire extends React.Component {
                       references, you can bookmark this link or download the
                       document as a PDF.
                     </h2>
+                    <span>
+                      <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don’t already have one! Also, get your <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">App Name, API Key, and API Secret</a> to use methods and APIs provided by LoginRadius.
+                    </span>
 
                     {flattenedDocsList.map(doc => {
                       return (
@@ -1749,7 +1766,7 @@ class Questionnaire extends React.Component {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> : <div><h3>Loading...</h3></div>}
               </div>
               <Footer />
             </div>
@@ -1942,7 +1959,7 @@ class Questionnaire extends React.Component {
                               "answer_choice_" +
                               this.state.step +
                               "_" +
-                              lastIndexQuestion9
+                              lastIndexQuestion8
                             }
                           >
                             <input
@@ -1952,7 +1969,7 @@ class Questionnaire extends React.Component {
                                 "answer_choice_" +
                                 this.state.step +
                                 "_" +
-                                lastIndexQuestion9
+                                lastIndexQuestion8
                               }
                               checked={
                                 !!this.state.responses[this.state.step - 1][0]
@@ -1973,12 +1990,12 @@ class Questionnaire extends React.Component {
                                 "answer_choice_" +
                                 this.state.step +
                                 "_" +
-                                lastIndexQuestion9
+                                lastIndexQuestion8
                               }
                             >
                               {
-                                QuestionList[9].answers.choices[
-                                  lastIndexQuestion9
+                                QuestionList[8].answers.choices[
+                                  lastIndexQuestion8
                                 ]
                               }
                             </label>
