@@ -117,6 +117,11 @@ module.exports = {
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
+          Mdx: {
+            title: node => node.frontmatter.title,
+            tags: node => node.frontmatter.tags,
+            path: node => node.fields.slug,
+          },
           MarkdownRemark: {
             title: node => node.frontmatter.title,
             tags: node => node.frontmatter.tags,
@@ -155,9 +160,9 @@ module.exports = {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,
-        duration: 100
-      }
-    }
+        duration: 100,
+      },
+    },
   ],
   pathPrefix: `/docs/developer`,
 }

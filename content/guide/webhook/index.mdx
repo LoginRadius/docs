@@ -31,18 +31,6 @@ import HookDash from "./dashboard"
   ]}
 />
 
-- **Name**: Enter the name of the Webhook
-- **Event**: Choose the type of event.
-
-  | PLAN              | ALLOWED EVENTS                                                                                                                                                                                                                                                                                       |
-  | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | **Developer**     | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, LinkAccount, UnlinkAccount, InvalidateEmailVerification                                                                                                                                                            |
-  | **Developer Pro** | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext |
-
-- **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
-
-> Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
-
 ## Webhook Handling
 
 Once you configure the webhook with an event, LoginRadius triggers that webhook every time for that event. For example, a webhook subscribed URL configured for a Login event will receive a POST request on your server with the below sample payload:
