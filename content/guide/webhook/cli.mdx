@@ -1,8 +1,8 @@
 To download or find more information about LoginRadius CLI, see the **<a href="https://www.loginradius.com/open-source/cli/" target="_blank">LoginRadius CLI feature page.</a>**
 
-Use the following commands to manage webhooks for your app. 
+Use the following commands to manage webhooks for your app.
 
-### Step 1: Manage Webhooks
+### Manage Webhooks
 
 Login to your LoginRadius account using `lr login` in CLI and select your app. Use the following commands to configure webhooks for your app.
 
@@ -17,7 +17,8 @@ $ lr get hooks
 +----------------+----------+-----------+------------------------+
 ```
 
-**Add a Webhook:**
+**Add a webhook:**
+
 ```shell
 $ lr add hooks
 Enter Name: <hook-name>
@@ -31,7 +32,8 @@ Enter TargetUrl: <url>
 Webhook has been added.
 ```
 
-**Delete a Webhook:**
+**Delete a webhook:**
+
 ```sh
 $ lr delete hooks --hookid <hookid>
 Are you sure you want to proceed ?
