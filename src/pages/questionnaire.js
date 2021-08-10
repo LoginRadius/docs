@@ -1465,9 +1465,10 @@ class Questionnaire extends React.Component {
       thirdPartyChoices: [],
       step: 1,
       errorMessage: "",
-      showResultPage: !!this.props.location.search,
+      showResultPage: false,
       encodedUrlParams: "",
       copyButtonClicked: false,
+      pageReady: false,
     }
   }
 
@@ -1476,6 +1477,8 @@ class Questionnaire extends React.Component {
       this.decodeFromBase64ToState(
         this.props.location.search.replace("?id=", "")
       )
+    } else {
+      this.setState({ pageReady: true });
     }
   }
 
@@ -1595,6 +1598,7 @@ class Questionnaire extends React.Component {
         thirdPartyChoices,
         encodedUrlParams: encodedString,
         showResultPage: true,
+        pageReady: true
       })
     } catch (e) {
       window.location.replace(this.props.location.pathname)
@@ -1602,7 +1606,7 @@ class Questionnaire extends React.Component {
   }
 
   render() {
-    const { responses, thirdPartyChoices, showResultPage, encodedUrlParams } = this.state
+    const { responses, thirdPartyChoices, showResultPage, encodedUrlParams, pageReady } = this.state
     const currentQuestion = QuestionList[this.state.step - 1]
     const lastIndexQuestion8 = QuestionList[8].answers.choices.length - 1
     let thirdPartyOptions = QuestionList[8].answers.choices.map(
@@ -1673,7 +1677,26 @@ class Questionnaire extends React.Component {
     //   }
     // }
 
-    return this.state.showResultPage ? (
+    return !pageReady ? (
+      <div className="dd-steps step2" id="step2">
+        <div className="grid-50 override">
+          <div className="dd-form" id="result_page_container">
+            <div className="dd-content">
+              <div
+                className="dd-logo"
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                <Link to="/">
+                  <img src={Logo} width={228} />
+                </Link>
+              </div>
+
+              <div><h3>Loading...</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ) : this.state.showResultPage ? (
       <React.Fragment>
         <div className="dd-steps step2" id="step2">
           <div className="grid-50 override">
