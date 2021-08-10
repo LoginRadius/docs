@@ -2110,8 +2110,8 @@ class Questionnaire extends React.Component {
             {splashArt(
               "step" +
                 (this.state.step > 2
-                  ? this.state.step - 2
-                  : this.state.step - 1)
+                  ? this.state.step - 1
+                  : this.state.step)
             )}
           </div>
         </div>
