@@ -5,8 +5,6 @@ description: "This is a guide for customizing the design of your Auth Page (IDX)
 path: "/guide/customize-auth-page"
 ---
 
-import Theme from "../../common-docs/theme_customization"
-
 # Customize Auth Page (IDX)
 
 The LoginRadius Auth Page (IDX) is a ready-to-use web page that can be utilized for your authentication requirements. The URL of the page is unique to your app. When you make changes to your configurations in the LoginRadius Dashboard, your changes will automatically be reflected on your Auth Page (IDX).
@@ -21,29 +19,25 @@ Watch this video's step-by-step information, or refer to the section below for t
 
 ---
 
-## Access Auth Page (IDX) Customization
-
-1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Auth Page (IDX)** and then navigate to the **Theme Customization** section.
-
-2. Click the down caret, and the **Theme Customization** screen will appear:
-
-   ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
-
-   To preview your login page's theme, click the **Go to your Login Page** link as highlighted on the above screen. 
-
 ## Theme Selection
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import ThemeDash from "./themeDash"
+import ThemeCLI from "./themeCli"
 
-To activate a theme, hover over any inactive theme image and click on the **Activate** button:
+<TabContainer
+  tabheaders={["Using Dashboard", "Using CLI"]}
+  tabs={[
+    <Tab>
+      <ThemeDash />
+    </Tab>,
+    <Tab>
+      <ThemeCLI />
+    </Tab>,
+  ]}
+/>
 
-> Note: Activating a new theme will replace your existing theme and its customized content with default values.
-
-![alt_text](images/activate-theme-button.png "image_tooltip")
-
-These themes will reflect in your registration, login, reset password, and profile page.
 
 ## Theme Customization
-
-<Theme />
 
 ### General Configuration
 
