@@ -2,8 +2,6 @@ import React from "react"
 import SelectSearch from "react-select-search"
 import Footer from "../components/footer"
 import { Link } from "gatsby"
-import Select, { components } from 'react-select';
-import SEO from "../components/seo";
 
 import "./questionnaire.css"
 import Logo from "../../public/images/logo.svg"
@@ -897,6 +895,7 @@ const QuestionList = [
       choices: [
         "AdRoll",
         "Adobe Analytics",
+        "Adobe Analytics",
         "Adobe Campaign",
         "Adobe Experience Manager",
         "AdxStudio",
@@ -1483,34 +1482,6 @@ class Questionnaire extends React.Component {
     }
   }
 
-  // componentDidUpdate() {
-  //   if (this.state.step > 0 && QuestionList[this.state.step-1].answers.type === "multiselectbox") {
-  //     function scrollHorizontally(e) {
-  //       e = window.event || e;
-  //       var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-  //       document.getElementById('integration_multi_select').scrollLeft -= (delta * 40); // Multiplied by 40
-  //       e.preventDefault();
-  //     }
-
-  //     const multiselectBox = document.getElementById('integration_multi_select');
-  //     for(const child of multiselectBox.children) {
-  //       if (child.tagName.toLowerCase() === "div") {
-  //         if (child.addEventListener) {
-  //           // IE9, Chrome, Safari, Opera
-  //           child.addEventListener('mousewheel', scrollHorizontally, false);
-  //           // Firefox
-  //           child.addEventListener('DOMMouseScroll', scrollHorizontally, false);
-  //         } else {
-  //           // IE 6/7/8
-  //           child.attachEvent('onmousewheel', scrollHorizontally);
-  //         }
-
-  //         return;
-  //       }
-  //     }
-  //   }
-  // }
-
   onInputBlur = callback => {
     const { step } = this.state
 
@@ -1641,8 +1612,7 @@ class Questionnaire extends React.Component {
     let thirdPartyOptions = QuestionList[8].answers.choices.map(
       (choice, index) => {
         return {
-          // name: choice,
-          label: choice,
+          name: choice,
           value: index,
         }
       }
@@ -1674,7 +1644,7 @@ class Questionnaire extends React.Component {
             } else {
               technologyDocList.push(DocsList[i][docIndex]);
             }
-          } else { }
+          } else {}
         } else if (QuestionList[i].answers.type === "multiselectbox") {
           let remainingThirdPartyCount = thirdPartyChoices.length
 
@@ -1707,356 +1677,273 @@ class Questionnaire extends React.Component {
     //   }
     // }
 
-    return (
-      <React.Fragment>
-        {!pageReady ? (
-          <div className="dd-steps step2" id="step2">
-            <div className="grid-50 override">
-              <div className="dd-form" id="result_page_container">
-                <div className="dd-content">
-                  <div
-                    className="dd-logo"
-                    style={{ display: "flex", flexDirection: "column" }}
-                  >
-                    <Link to="/">
-                      <img src={Logo} width={228} />
-                    </Link>
-                  </div>
-
-                  <div><h3>Loading...</h3></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : this.state.showResultPage ? (
-          <React.Fragment>
-            <div className="dd-steps step2" id="step2">
-              <div className="grid-50 override">
-                <div className="dd-form" id="result_page_container">
-                  <div className="dd-content">
-                    <div
-                      className="dd-logo"
-                      style={{ display: "flex", flexDirection: "column" }}
-                    >
-                      <Link to="/">
-                        <img src={Logo} width={228} />
-                      </Link>
-                    </div>
-
-                    {encodedUrlParams ? <div style={{ display: "flex" }}>
-                      <div className="qa grid-67">
-                        <a
-                          className="backbtn"
-                          onClick={() =>
-                            this.setState({
-                              showResultPage: false,
-                              step: 1,
-                            })
-                          }
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="feather feather-arrow-left"
-                          >
-                            <line x1="19" y1="12" x2="5" y2="12"></line>
-                            <polyline points="12 19 5 12 12 5"></polyline>
-                          </svg>{" "}
-                          Click here to change answers!
-                        </a>
-                        <h2>
-                          This document contains sequential information on how to
-                          implement your use case using LoginRadius. For any future
-                          references, you can bookmark this link or download the
-                          document as a PDF.
-                        </h2>
-                        <span>
-                          <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don’t already have one! Also, get your <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">App Name, API Key, and API Secret</a> to use methods and APIs provided by LoginRadius.
-                        </span>
-
-                        {flattenedDocsList.map(doc => {
-                          return (
-                            <React.Fragment key={doc.name}>
-                              <h3>{doc.name}</h3>
-                              <div dangerouslySetInnerHTML={doc.body} />
-                            </React.Fragment>
-                          )
-                        })}
-                      </div>
-                      <div className="no-print">
-                        <div className="btn-box top-half">
-                          <img src={ResultBanner} width={228} />
-                        </div>
-                        <div className="btn-box bottom-half">
-                          <h3>
-                            Print for future use. You can also bookmark the link
-                          </h3>
-                          {/* <h3>Download as PDF for future use. You can also bookmark the link</h3> */}
-                          <div className="btn-group">
-                            <a onClick={window.print} className="btn btn-primary">
-                              {/* Download */}
-                              Print
-                            </a>
-                            <a
-                              onClick={() => {
-                                this.setState({ copyButtonClicked: true }, () => {
-                                  navigator.clipboard.writeText(
-                                    window.location.href
-                                  )
-                                })
-                              }}
-                              className="btn btn-outline"
-                            >
-                              {this.state.copyButtonClicked
-                                ? "Copied Link"
-                                : "Share"}
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div> : <div><h3>Loading...</h3></div>}
-                  </div>
-                  <Footer />
-                </div>
-              </div>
-            </div>
-          </React.Fragment>
-        ) : (
-          <React.Fragment>
-            <div
-              style={{ overflow: "hidden" }}
-              className="dd-steps step2"
-              id="step2"
-            >
-              <div className="dd-close">
+    return !pageReady ? (
+      <div className="dd-steps step2" id="step2">
+        <div className="grid-50 override">
+          <div className="dd-form" id="result_page_container">
+            <div className="dd-content">
+              <div
+                className="dd-logo"
+                style={{ display: "flex", flexDirection: "column" }}
+              >
                 <Link to="/">
-                  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik91dGxpbmVkIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBpZD0iRmlsbCI+PHBhdGggZD0iTTE2LDJBMTQsMTQsMCwxLDAsMzAsMTYsMTQsMTQsMCwwLDAsMTYsMlptMCwyNkExMiwxMiwwLDEsMSwyOCwxNiwxMiwxMiwwLDAsMSwxNiwyOFoiLz48cG9seWdvbiBwb2ludHM9IjE5LjU0IDExLjA1IDE2IDE0LjU5IDEyLjQ2IDExLjA1IDExLjA1IDEyLjQ2IDE0LjU5IDE2IDExLjA1IDE5LjU0IDEyLjQ2IDIwLjk1IDE2IDE3LjQxIDE5LjU0IDIwLjk1IDIwLjk1IDE5LjU0IDE3LjQxIDE2IDIwLjk1IDEyLjQ2IDE5LjU0IDExLjA1Ii8+PC9nPjwvc3ZnPg==" />
+                  <img src={Logo} width={228} />
                 </Link>
               </div>
-              <div className="grid-50">
-                <div className="dd-form">
-                  <div className="dd-content max-height-restricted">
-                    <div className="dd-logo">
-                      <Link to="/">
-                        <img src={Logo} width={228} />
-                      </Link>
+
+              <div><h3>Loading...</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ) : this.state.showResultPage ? (
+      <React.Fragment>
+        <div className="dd-steps step2" id="step2">
+          <div className="grid-50 override">
+            <div className="dd-form" id="result_page_container">
+              <div className="dd-content">
+                <div
+                  className="dd-logo"
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <Link to="/">
+                    <img src={Logo} width={228} />
+                  </Link>
+                </div>
+
+                {encodedUrlParams ? <div style={{ display: "flex" }}>
+                  <div className="qa grid-67">
+                    <a
+                      className="backbtn"
+                      onClick={() =>
+                        this.setState({
+                          showResultPage: false,
+                          step: 1,
+                        })
+                      }
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="feather feather-arrow-left"
+                      >
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                      </svg>{" "}
+                      Click here to change answers!
+                    </a>
+                    <h2>
+                      This document contains sequential information on how to
+                      implement your use case using LoginRadius. For any future
+                      references, you can bookmark this link or download the
+                      document as a PDF.
+                    </h2>
+                    <span>
+                      <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don’t already have one! Also, get your <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">App Name, API Key, and API Secret</a> to use methods and APIs provided by LoginRadius.
+                    </span>
+
+                    {flattenedDocsList.map(doc => {
+                      return (
+                        <React.Fragment key={doc.name}>
+                          <h3>{doc.name}</h3>
+                          <div dangerouslySetInnerHTML={doc.body} />
+                        </React.Fragment>
+                      )
+                    })}
+                  </div>
+                  <div className="no-print">
+                    <div className="btn-box top-half">
+                      <img src={ResultBanner} width={228} />
                     </div>
-                    {this.state.step === 0 ? (
-                      <div className="qa">
-                        <h1>Does LoginRadius Support my Use Case?</h1>
-                        <p>
-                          Answer a few questions and get a self-served
-                          implementation guide addressing your needs.
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="qa">
-                        <h2>{currentQuestion.question}</h2>
-                        <p>{currentQuestion.description}</p>
-                        <ul
-                          style={
-                            currentQuestion.answers.choices.length > 5 &&
-                              this.state.step !== 10
-                              ? { display: "flex", flexWrap: "wrap" }
-                              : undefined
-                          }
+                    <div className="btn-box bottom-half">
+                      <h3>
+                        Print for future use. You can also bookmark the link
+                      </h3>
+                      {/* <h3>Download as PDF for future use. You can also bookmark the link</h3> */}
+                      <div className="btn-group">
+                        <a onClick={window.print} className="btn btn-primary">
+                          {/* Download */}
+                          Print
+                        </a>
+                        <a
+                          onClick={() => {
+                            this.setState({ copyButtonClicked: true }, () => {
+                              navigator.clipboard.writeText(
+                                window.location.href
+                              )
+                            })
+                          }}
+                          className="btn btn-outline"
                         >
-                          {currentQuestion.answers.type !== "multiselectbox" &&
-                            currentQuestion.answers.choices.map((choice, index) => {
-                              if (currentQuestion.answers.type === "single") {
-                                return (
-                                  <li
-                                    key={
-                                      "answer_choice_" +
-                                      this.state.step +
-                                      "_" +
-                                      index
-                                    }
-                                    style={
-                                      currentQuestion.answers.choices.length > 5
-                                        ? { width: "50%" }
-                                        : undefined
-                                    }
-                                  >
-                                    <input
-                                      type="radio"
-                                      name="radio"
-                                      id={
-                                        "answer_choice_" +
-                                        this.state.step +
-                                        "_" +
-                                        index
-                                      }
-                                      checked={
-                                        this.state.responses[
-                                        this.state.step - 1
-                                        ][0] === choice
-                                      }
-                                      // onBlur={() => this.onInputBlur(() => {})}
-                                      onChange={() => {
-                                        let responsesCopy = this.state.responses
-                                        responsesCopy[
-                                          this.state.step - 1
-                                        ][0] = choice
-                                        // responsesCopy[this.state.step-1] = this.state.responses[this.state.step-1].map((_, responseIndex) => {
-                                        //   if (responseIndex === index) {
-                                        //     return true;
-                                        //   } else {
-                                        //     return false;
-                                        //   }
-                                        // });
-                                        this.setState(
-                                          { responses: responsesCopy },
-                                          () => this.onInputBlur(() => { })
-                                        )
-                                      }}
-                                    />
-                                    {choice === "Pure JavaScript implementation" ? (
-                                      <a
-                                        href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7"
-                                        target="_blank"
-                                      >
-                                        {choice}
-                                      </a>
-                                    ) : (
-                                      <label
-                                        htmlFor={
-                                          "answer_choice_" +
-                                          this.state.step +
-                                          "_" +
-                                          index
-                                        }
-                                      >
-                                        {choice}
-                                      </label>
-                                    )}
-                                  </li>
-                                )
-                              } else if (currentQuestion.answers.type === "multi") {
-                                return (
-                                  <li
-                                    key={
-                                      "answer_choice_" +
-                                      this.state.step +
-                                      "_" +
-                                      index
-                                    }
-                                  >
-                                    <input
-                                      type="checkbox"
-                                      name="checkbox"
-                                      // implement pdf gen, permalink,
-
-                                      id={
-                                        "answer_choice_" +
-                                        this.state.step +
-                                        "_" +
-                                        index
-                                      }
-                                      checked={
-                                        !!this.state.responses[this.state.step - 1][
-                                        index
-                                        ]
-                                      }
-                                      // onBlur={() => this.onInputBlur(() => {})}
-                                      onChange={() => {
-                                        let responsesCopy = this.state.responses
-                                        responsesCopy[this.state.step - 1][
-                                          index
-                                        ] = !responsesCopy[this.state.step - 1][
-                                        index
-                                        ]
-                                        this.setState(
-                                          { responses: responsesCopy },
-                                          () => this.onInputBlur(() => { })
-                                        )
-                                      }}
-                                    />
-                                    <label
-                                      htmlFor={
-                                        "answer_choice_" +
-                                        this.state.step +
-                                        "_" +
-                                        index
-                                      }
-                                    >
-                                      {choice}
-                                    </label>
-                                  </li>
-                                )
-                              }
-                            })}
-                          {currentQuestion.answers.type === "multiselectbox" && (
-                            <React.Fragment>
-                              {/* <SelectSearch
-                                options={thirdPartyOptions}
-                                name="Integrations"
-                                placeholder="Select Integrations"
-                                filterOptions={search}
-                                closeOnSelect={false}
-                                value={this.state.thirdPartyChoices}
-                                onChange={arg => {
-                                  this.setState({ thirdPartyChoices: arg })
-                                }}
-                                printOptions="on-focus"
-                                multiple
-                                search
-                              /> */}
-                              <Select
-                                className="integration-multi-select"
-                                id="integration_multi_select"
-                                options={thirdPartyOptions}
-                                onChange={arg => {
-                                  const resultArray = arg.map(choice => {
-                                    return choice.value
-                                  });
-
-                                  this.setState({
-                                    thirdPartyChoices: resultArray
-                                  });
-                                }}
-                                value={this.state.thirdPartyChoices.map(choice => {
-                                  return { value: choice, label: QuestionList[8].answers.choices[parseInt(choice)] }
-                                })}
-                                closeMenuOnSelect={false}
-                                isSearchable
-                                isMulti
-                              />
+                          {this.state.copyButtonClicked
+                            ? "Copied Link"
+                            : "Share"}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div> : <div><h3>Loading...</h3></div>}
+              </div>
+              <Footer />
+            </div>
+          </div>
+        </div>
+      </React.Fragment>
+    ) : (
+      <React.Fragment>
+        <div
+          style={{ overflow: "hidden" }}
+          className="dd-steps step2"
+          id="step2"
+        >
+          <div className="dd-close">
+            <Link to="/">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik91dGxpbmVkIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBpZD0iRmlsbCI+PHBhdGggZD0iTTE2LDJBMTQsMTQsMCwxLDAsMzAsMTYsMTQsMTQsMCwwLDAsMTYsMlptMCwyNkExMiwxMiwwLDEsMSwyOCwxNiwxMiwxMiwwLDAsMSwxNiwyOFoiLz48cG9seWdvbiBwb2ludHM9IjE5LjU0IDExLjA1IDE2IDE0LjU5IDEyLjQ2IDExLjA1IDExLjA1IDEyLjQ2IDE0LjU5IDE2IDExLjA1IDE5LjU0IDEyLjQ2IDIwLjk1IDE2IDE3LjQxIDE5LjU0IDIwLjk1IDIwLjk1IDE5LjU0IDE3LjQxIDE2IDIwLjk1IDEyLjQ2IDE5LjU0IDExLjA1Ii8+PC9nPjwvc3ZnPg==" />
+            </Link>
+          </div>
+          <div className="grid-50">
+            <div className="dd-form">
+              <div className="dd-content max-height-restricted">
+                <div className="dd-logo">
+                  <Link to="/">
+                    <img src={Logo} width={228} />
+                  </Link>
+                </div>
+                {this.state.step === 0 ? (
+                  <div className="qa">
+                    <h1>Does LoginRadius Support my Use Case?</h1>
+                    <p>
+                      Answer a few questions and get a self-served
+                      implementation guide addressing your needs.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="qa">
+                    <h2>{currentQuestion.question}</h2>
+                    <p>{currentQuestion.description}</p>
+                    <ul
+                      style={
+                        currentQuestion.answers.choices.length > 5 &&
+                        this.state.step !== 10
+                          ? { display: "flex", flexWrap: "wrap" }
+                          : undefined
+                      }
+                    >
+                      {currentQuestion.answers.type !== "multiselectbox" &&
+                        currentQuestion.answers.choices.map((choice, index) => {
+                          if (currentQuestion.answers.type === "single") {
+                            return (
                               <li
                                 key={
                                   "answer_choice_" +
                                   this.state.step +
                                   "_" +
-                                  lastIndexQuestion8
+                                  index
+                                }
+                                style={
+                                  currentQuestion.answers.choices.length > 5
+                                    ? { width: "50%" }
+                                    : undefined
+                                }
+                              >
+                                <input
+                                  type="radio"
+                                  name="radio"
+                                  id={
+                                    "answer_choice_" +
+                                    this.state.step +
+                                    "_" +
+                                    index
+                                  }
+                                  checked={
+                                    this.state.responses[
+                                      this.state.step - 1
+                                    ][0] === choice
+                                  }
+                                  // onBlur={() => this.onInputBlur(() => {})}
+                                  onChange={() => {
+                                    let responsesCopy = this.state.responses
+                                    responsesCopy[
+                                      this.state.step - 1
+                                    ][0] = choice
+                                    // responsesCopy[this.state.step-1] = this.state.responses[this.state.step-1].map((_, responseIndex) => {
+                                    //   if (responseIndex === index) {
+                                    //     return true;
+                                    //   } else {
+                                    //     return false;
+                                    //   }
+                                    // });
+                                    this.setState(
+                                      { responses: responsesCopy },
+                                      () => this.onInputBlur(() => {})
+                                    )
+                                  }}
+                                />
+                                {choice === "Pure JavaScript implementation" ? (
+                                  <a
+                                    href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7"
+                                    target="_blank"
+                                  >
+                                    {choice}
+                                  </a>
+                                ) : (
+                                  <label
+                                    htmlFor={
+                                      "answer_choice_" +
+                                      this.state.step +
+                                      "_" +
+                                      index
+                                    }
+                                  >
+                                    {choice}
+                                  </label>
+                                )}
+                              </li>
+                            )
+                          } else if (currentQuestion.answers.type === "multi") {
+                            return (
+                              <li
+                                key={
+                                  "answer_choice_" +
+                                  this.state.step +
+                                  "_" +
+                                  index
                                 }
                               >
                                 <input
                                   type="checkbox"
                                   name="checkbox"
+                                  // implement pdf gen, permalink,
+
                                   id={
                                     "answer_choice_" +
                                     this.state.step +
                                     "_" +
-                                    lastIndexQuestion8
+                                    index
                                   }
                                   checked={
-                                    !!this.state.responses[this.state.step - 1][0]
+                                    !!this.state.responses[this.state.step - 1][
+                                      index
+                                    ]
                                   }
+                                  // onBlur={() => this.onInputBlur(() => {})}
                                   onChange={() => {
                                     let responsesCopy = this.state.responses
-                                    responsesCopy[
-                                      this.state.step - 1
-                                    ][0] = !responsesCopy[this.state.step - 1][0]
+                                    responsesCopy[this.state.step - 1][
+                                      index
+                                    ] = !responsesCopy[this.state.step - 1][
+                                      index
+                                    ]
                                     this.setState(
                                       { responses: responsesCopy },
-                                      () => this.onInputBlur(() => { })
+                                      () => this.onInputBlur(() => {})
                                     )
                                   }}
                                 />
@@ -2065,113 +1952,169 @@ class Questionnaire extends React.Component {
                                     "answer_choice_" +
                                     this.state.step +
                                     "_" +
-                                    lastIndexQuestion8
+                                    index
                                   }
                                 >
-                                  {
-                                    QuestionList[8].answers.choices[
-                                    lastIndexQuestion8
-                                    ]
-                                  }
+                                  {choice}
                                 </label>
                               </li>
-                            </React.Fragment>
-                          )}
-                        </ul>
-                      </div>
-                    )}
-                    <div className="dd-error-message">
-                      {this.state.errorMessage}
-                    </div>
-                  </div>
-                  <div className="dd-action">
-                    {this.state.step > 1 && (
-                      <a
-                        onClick={() => {
-                          // this.onInputBlur(() => {
-                          let stepsBackward = 1
-                          if (
-                            this.state.step === 4 &&
-                            this.state.responses[1][0] === "No"
-                          ) {
-                            stepsBackward = 2
-                          }
-                          this.setState({
-                            errorMessage: "",
-                            step: this.state.step - stepsBackward,
-                          })
-                          // });
-                        }}
-                        className={`btn btn-secondary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
-                      >
-                        Back
-                      </a>
-                    )}
-                    {this.state.step < QuestionList.length && (
-                      <a
-                        onClick={() => {
-                          this.onInputBlur(() => {
-                            let stepsForward = 1
-                            if (
-                              this.state.step === 2 &&
-                              this.state.responses[1][0] === "No"
-                            ) {
-                              stepsForward = 2
-                            }
-                            this.setState({ step: this.state.step + stepsForward })
-                          })
-                        }}
-                        className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
-                      >
-                        {this.state.step === 0 ? "Let's do it!" : "Next"}
-                      </a>
-                    )}
-
-                    {this.state.step === QuestionList.length && (
-                      <a
-                        onClick={() => {
-                          this.onInputBlur(() => {
-                            const encodedUrlParams = this.encodeToBase64FromState()
-
-                            // this.props.location.search = "?id=" + encodedUrlParams;
-                            window.location.replace(
-                              this.props.location.pathname +
-                              "?id=" +
-                              encodedUrlParams
                             )
-                            this.setState({
-                              // showResultPage: true,
-                              encodedUrlParams,
-                            })
-                          })
-                        }}
-                        className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
-                      >
-                        Show Result
-                      </a>
-                    )}
+                          }
+                        })}
+                      {currentQuestion.answers.type === "multiselectbox" && (
+                        <React.Fragment>
+                          <SelectSearch
+                            options={thirdPartyOptions}
+                            name="Integrations"
+                            placeholder="Select Integrations"
+                            filterOptions={search}
+                            closeOnSelect={false}
+                            value={this.state.thirdPartyChoices}
+                            onChange={arg => {
+                              this.setState({ thirdPartyChoices: arg })
+                            }}
+                            printOptions="on-focus"
+                            multiple
+                            search
+                          />
+                          <li
+                            key={
+                              "answer_choice_" +
+                              this.state.step +
+                              "_" +
+                              lastIndexQuestion8
+                            }
+                          >
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id={
+                                "answer_choice_" +
+                                this.state.step +
+                                "_" +
+                                lastIndexQuestion8
+                              }
+                              checked={
+                                !!this.state.responses[this.state.step - 1][0]
+                              }
+                              onChange={() => {
+                                let responsesCopy = this.state.responses
+                                responsesCopy[
+                                  this.state.step - 1
+                                ][0] = !responsesCopy[this.state.step - 1][0]
+                                this.setState(
+                                  { responses: responsesCopy },
+                                  () => this.onInputBlur(() => {})
+                                )
+                              }}
+                            />
+                            <label
+                              htmlFor={
+                                "answer_choice_" +
+                                this.state.step +
+                                "_" +
+                                lastIndexQuestion8
+                              }
+                            >
+                              {
+                                QuestionList[8].answers.choices[
+                                  lastIndexQuestion8
+                                ]
+                              }
+                            </label>
+                          </li>
+                        </React.Fragment>
+                      )}
+                    </ul>
                   </div>
+                )}
+                <div className="dd-error-message">
+                  {this.state.errorMessage}
                 </div>
+              </div>
+              <div className="dd-action">
+                {this.state.step > 1 && (
+                  <a
+                    onClick={() => {
+                      // this.onInputBlur(() => {
+                      let stepsBackward = 1
+                      if (
+                        this.state.step === 4 &&
+                        this.state.responses[1][0] === "No"
+                      ) {
+                        stepsBackward = 2
+                      }
+                      this.setState({
+                        errorMessage: "",
+                        step: this.state.step - stepsBackward,
+                      })
+                      // });
+                    }}
+                    className={`btn btn-secondary${
+                      !!this.state.errorMessage ? " disabled" : ""
+                    }`}
+                  >
+                    Back
+                  </a>
+                )}
+                {this.state.step < QuestionList.length && (
+                  <a
+                    onClick={() => {
+                      this.onInputBlur(() => {
+                        let stepsForward = 1
+                        if (
+                          this.state.step === 2 &&
+                          this.state.responses[1][0] === "No"
+                        ) {
+                          stepsForward = 2
+                        }
+                        this.setState({ step: this.state.step + stepsForward })
+                      })
+                    }}
+                    className={`btn btn-primary${
+                      !!this.state.errorMessage ? " disabled" : ""
+                    }`}
+                  >
+                    {this.state.step === 0 ? "Let's do it!" : "Next"}
+                  </a>
+                )}
 
-                {splashArt(
-                  "step" +
-                  (this.state.step > 2
-                    ? this.state.step - 1
-                    : this.state.step)
+                {this.state.step === QuestionList.length && (
+                  <a
+                    onClick={() => {
+                      this.onInputBlur(() => {
+                        const encodedUrlParams = this.encodeToBase64FromState()
+
+                        // this.props.location.search = "?id=" + encodedUrlParams;
+                        window.location.replace(
+                          this.props.location.pathname +
+                            "?id=" +
+                            encodedUrlParams
+                        )
+                        this.setState({
+                          // showResultPage: true,
+                          encodedUrlParams,
+                        })
+                      })
+                    }}
+                    className={`btn btn-primary${
+                      !!this.state.errorMessage ? " disabled" : ""
+                    }`}
+                  >
+                    Show Result
+                  </a>
                 )}
               </div>
             </div>
-          </React.Fragment>
-        )}
-        <SEO
-          title="Get a solution for your use case - LoginRadius"
-          description="This CIAM Use Case Tool takes your requirements and creates a corresponding implementation guide. All you have to do is answer a few use case questions."
-          lang="en"
-          meta=""
-        />
+
+            {splashArt(
+              "step" +
+                (this.state.step > 2
+                  ? this.state.step - 1
+                  : this.state.step)
+            )}
+          </div>
+        </div>
       </React.Fragment>
     )
   }
