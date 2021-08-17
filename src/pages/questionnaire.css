@@ -11,6 +11,40 @@
   top: 230px;
   height: fit-content;
 }
+
+.integration-multi-select {
+  width: 400px;
+  padding-bottom: 15px;
+}
+
+.integration-multi-select>div[class$="control"] {
+  height: 100%;
+  padding: 5px;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.integration-multi-select>div[class$="control"]>div[class$="ValueContainer"] {
+  display: flex;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 14px;
+  white-space: normal;
+  overflow: hidden;
+  vertical-align: top;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* .integration-multi-select>div[class$="control"]>div[class$="ValueContainer"]>div[class$="placeholder"] {
+  
+} */
+
+.integration-multi-select>div:first-of-type>div>div {
+  min-width: initial;
+}
+
 .dd-steps > .dd-close {
   position: absolute;
   right: 20px;
