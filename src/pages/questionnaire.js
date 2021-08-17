@@ -2,8 +2,8 @@ import React from "react"
 import SelectSearch from "react-select-search"
 import Footer from "../components/footer"
 import { Link } from "gatsby"
-import Select, { components } from 'react-select';
-import SEO from "../components/seo";
+import Select, { components } from "react-select"
+import SEO from "../components/seo"
 
 import "./questionnaire.css"
 import Logo from "../../public/images/logo.svg"
@@ -1193,7 +1193,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your PHP application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/php/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/php/</a><br/>
-        Refer to the <b>PHP SDK</b> document for more information on available methods:
+        Refer to the <strong>PHP SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/php-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/php-sdk/</a></span>`,
       },
     },
@@ -1204,7 +1204,7 @@ const DocsList = [
         <b>.NET Webforms:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnet-webforms/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnet-webforms/</a><br />
         <b>.NET Core MVC:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-mvc/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnetcore-mvc/</a><br />
         <b>.NET Razor:</b> <a href="https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/dotnetcore-razor/</a><br/>
-        Refer to the <b>.NET SDK</b> document for more information on available methods:
+        Refer to the <strong>.NET SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/dotnet-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/dotnet-sdk/</a></span>`,
       },
     },
@@ -1213,7 +1213,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Nodejs application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/node-js/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/node-js/</a><br/>
-        Refer to the <b>NodeJS SDK</b> document for more information on available methods:
+        Refer to the <strong>NodeJS SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk</a></span>`,
       },
     },
@@ -1222,7 +1222,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Java application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/java/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/java/</a><br/>
-        Refer to the <b>Java SDK</b> document for more information on available methods:
+        Refer to the <strong>Java SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/java-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/java-sdk</a></span>`,
       },
     },
@@ -1231,7 +1231,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Golang application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/golang/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/golang/</a><br/>
-        Refer to the <b>Golang SDK</b> document for more information on available methods:
+        Refer to the <strong>Golang SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/golang-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/golang-sdk/</a></span>`,
       },
     },
@@ -1240,7 +1240,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your Python application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/python/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/python/</a><br/>
-        Refer to the <b>Python SDK</b> document for more information on available methods:
+        Refer to the <strong>Python SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/python-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/python-sdk/</a></span>`,
       },
     },
@@ -1249,7 +1249,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with the user registration, login, and view profile for your ROR application. It also describes the next steps that you might want to take after the initial implementation.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/ror/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/ror/</a><br/>
-        Refer to the <b>ROR SDK</b> document for more information on available methods:
+        Refer to the <strong>ROR SDK</strong> document for more information on available methods:
         <a href="https://www.loginradius.com/docs/developer/references/sdk/ruby-sdk/" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/ruby-sdk/</a></span>`,
       },
     },
@@ -1302,7 +1302,7 @@ const DocsList = [
         <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/</a><br/>
         This document covers how to utilize various features of LoginRadius using JavaScript. <br/>
         <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/</a><br/>
-        Refer to the <b>HTML5 SDK</b> document for more information on available methods:<br/>
+        Refer to the <strong>HTML5 SDK</strong> document for more information on available methods:<br/>
         <a href="https://www.loginradius.com/docs/developer/references/sdk/html5-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/html5-sdk</a></span>`,
       },
     },
@@ -1318,7 +1318,7 @@ const DocsList = [
       body: {
         __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your ReactJS based application.<br/>
         <a href="https://www.loginradius.com/docs/developer/tutorial/react/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/react/</a><br/>
-        Refer to the <b>ReactJS SDK</b> document for more information on available methods:<br/>
+        Refer to the <strong>ReactJS SDK</strong> document for more information on available methods:<br/>
         <a href="https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk</a></span>`,
       },
     },
@@ -1479,7 +1479,7 @@ class Questionnaire extends React.Component {
         this.props.location.search.replace("?id=", "")
       )
     } else {
-      this.setState({ pageReady: true });
+      this.setState({ pageReady: true })
     }
   }
 
@@ -1599,7 +1599,7 @@ class Questionnaire extends React.Component {
         thirdPartyChoices,
         encodedUrlParams: encodedString,
         showResultPage: true,
-        pageReady: true
+        pageReady: true,
       })
     } catch (e) {
       window.location.replace(this.props.location.pathname)
@@ -1607,7 +1607,13 @@ class Questionnaire extends React.Component {
   }
 
   render() {
-    const { responses, thirdPartyChoices, showResultPage, encodedUrlParams, pageReady } = this.state
+    const {
+      responses,
+      thirdPartyChoices,
+      showResultPage,
+      encodedUrlParams,
+      pageReady,
+    } = this.state
     const currentQuestion = QuestionList[this.state.step - 1]
     const lastIndexQuestion8 = QuestionList[8].answers.choices.length - 1
     let thirdPartyOptions = QuestionList[8].answers.choices.map(
@@ -1622,8 +1628,8 @@ class Questionnaire extends React.Component {
 
     thirdPartyOptions = thirdPartyOptions.slice(0, -1)
 
-    let flattenedDocsList = [];
-    let technologyDocList = [];
+    let flattenedDocsList = []
+    let technologyDocList = []
 
     if (showResultPage && encodedUrlParams) {
       // generate docs page layout
@@ -1644,14 +1650,18 @@ class Questionnaire extends React.Component {
             if (i !== 5 && i !== 6) {
               flattenedDocsList.push(DocsList[i][docIndex])
             } else {
-              technologyDocList.push(DocsList[i][docIndex]);
+              technologyDocList.push(DocsList[i][docIndex])
             }
           }
         } else if (QuestionList[i].answers.type === "multiselectbox") {
           let remainingThirdPartyCount = thirdPartyChoices.length
 
-          const shopifyIndex = QuestionList[8].answers.choices.findIndex(choice => choice === "Shopify");
-          const bigCommerceIndex = QuestionList[8].answers.choices.findIndex(choice => choice === "BigCommerce");
+          const shopifyIndex = QuestionList[8].answers.choices.findIndex(
+            choice => choice === "Shopify"
+          )
+          const bigCommerceIndex = QuestionList[8].answers.choices.findIndex(
+            choice => choice === "BigCommerce"
+          )
 
           if (responses[8][0] === true) {
             flattenedDocsList.push(DocsList[i][0])
@@ -1672,7 +1682,7 @@ class Questionnaire extends React.Component {
       }
     }
 
-    flattenedDocsList = technologyDocList.concat(flattenedDocsList);
+    flattenedDocsList = technologyDocList.concat(flattenedDocsList)
     // for (let doc of DocsList) {
     //   for (let answer of doc) {
     //     flattenedDocsList.push(answer);
@@ -1686,16 +1696,22 @@ class Questionnaire extends React.Component {
             <div className="grid-50 override">
               <div className="dd-form" id="result_page_container">
                 <div className="dd-content">
-                  <div
-                    className="dd-logo"
-                    style={{ display: "flex", flexDirection: "column" }}
-                  >
-                    <Link to="/">
-                      <img src={Logo} width={228} />
-                    </Link>
-                  </div>
+                  <header>
+                    <div>
+                      <div className="logo">
+                        <Link to="/">
+                          <img src={Logo} width="228" />
+                        </Link>
+                      </div>
+                      <div className="right-section">
+                        <div className="authentication-buttons">&nbsp;</div>
+                      </div>
+                    </div>
+                  </header>
 
-                  <div><h3>Loading...</h3></div>
+                  <div>
+                    <h3>Loading...</h3>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1706,94 +1722,187 @@ class Questionnaire extends React.Component {
               <div className="grid-50 override">
                 <div className="dd-form" id="result_page_container">
                   <div className="dd-content">
-                    <div
+                    {/* <div
                       className="dd-logo"
                       style={{ display: "flex", flexDirection: "column" }}
                     >
                       <Link to="/">
                         <img src={Logo} width={228} />
                       </Link>
-                    </div>
-
-                    {encodedUrlParams ? <div style={{ display: "flex" }}>
-                      <div className="qa grid-67">
-                        <a
-                          className="backbtn"
-                          onClick={() =>
-                            this.setState({
-                              showResultPage: false,
-                              step: 1,
-                            })
-                          }
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="feather feather-arrow-left"
-                          >
-                            <line x1="19" y1="12" x2="5" y2="12"></line>
-                            <polyline points="12 19 5 12 12 5"></polyline>
-                          </svg>{" "}
-                          Click here to change answers!
-                        </a>
-                        <h2>
-                          This document contains sequential information on how to
-                          implement your use case using LoginRadius. For any future
-                          references, you can bookmark this link or download the
-                          document as a PDF.
-                        </h2>
-                        <span>
-                          <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank">Create an account</a> to get started if you don’t already have one! Also, get your <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">App Name, API Key, and API Secret</a> to use methods and APIs provided by LoginRadius.
-                        </span>
-
-                        {flattenedDocsList.map(doc => {
-                          return (
-                            <React.Fragment key={doc.name}>
-                              <h3>{doc.name}</h3>
-                              <div dangerouslySetInnerHTML={doc.body} />
-                            </React.Fragment>
-                          )
-                        })}
-                      </div>
-                      <div className="no-print">
-                        <div className="btn-box top-half">
-                          <img src={ResultBanner} width={228} />
+                    </div> */}
+                    <header>
+                      <div>
+                        <div className="logo">
+                          <Link to="/">
+                            <img src={Logo} width="228" />
+                          </Link>
                         </div>
-                        <div className="btn-box bottom-half">
-                          <h3>
-                            Print for future use. You can also bookmark the link
-                          </h3>
-                          {/* <h3>Download as PDF for future use. You can also bookmark the link</h3> */}
-                          <div className="btn-group">
-                            <a onClick={window.print} className="btn btn-primary">
-                              {/* Download */}
-                              Print
-                            </a>
+                        <div className="right-section">
+                          <div className="authentication-buttons">
                             <a
-                              onClick={() => {
-                                this.setState({ copyButtonClicked: true }, () => {
-                                  navigator.clipboard.writeText(
-                                    window.location.href
-                                  )
+                              className="backbtn"
+                              onClick={() =>
+                                this.setState({
+                                  showResultPage: false,
+                                  step: 1,
                                 })
-                              }}
-                              className="btn btn-outline"
+                              }
                             >
-                              {this.state.copyButtonClicked
-                                ? "Copied Link"
-                                : "Share"}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="feather feather-arrow-left"
+                              >
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                              </svg>{" "}
+                              Click here to change answers!
                             </a>
+                            <div className="btn-group">
+                              <a
+                                onClick={window.print}
+                                className="btn btn-primary"
+                              >
+                                {/* Download */}
+                                Print
+                              </a>
+                              <a
+                                onClick={() => {
+                                  this.setState(
+                                    { copyButtonClicked: true },
+                                    () => {
+                                      navigator.clipboard.writeText(
+                                        window.location.href
+                                      )
+                                    }
+                                  )
+                                }}
+                                className="btn btn-outline"
+                              >
+                                {this.state.copyButtonClicked
+                                  ? "Copied Link"
+                                  : "Share"}
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div> : <div><h3>Loading...</h3></div>}
+                    </header>
+
+                    {encodedUrlParams ? (
+                      <div className="result_page_block">
+                        <div className="qa grid-67">
+                          <a
+                            className="backbtn mobile"
+                            onClick={() =>
+                              this.setState({
+                                showResultPage: false,
+                                step: 1,
+                              })
+                            }
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="feather feather-arrow-left"
+                            >
+                              <line x1="19" y1="12" x2="5" y2="12"></line>
+                              <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>{" "}
+                            Click here to change answers!
+                          </a>
+                          <h2>
+                            This document contains sequential information on how
+                            to implement your use case using LoginRadius.
+                            {/* For
+                            any future references, you can bookmark this link or
+                            download the document as a PDF. */}
+                          </h2>
+                          <span>
+                            <a
+                              href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register"
+                              target="_blank"
+                            >
+                              Create an account
+                            </a>{" "}
+                            to get started if you don’t already have one! Also,
+                            get your{" "}
+                            <a
+                              href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret"
+                              target="_blank"
+                            >
+                              App Name, API Key, and API Secret
+                            </a>{" "}
+                            to use methods and APIs provided by LoginRadius.
+                          </span>
+
+                          {flattenedDocsList.map(doc => {
+                            return (
+                              <React.Fragment key={doc.name}>
+                                <h3>{doc.name}</h3>
+                                <div dangerouslySetInnerHTML={doc.body} />
+                              </React.Fragment>
+                            )
+                          })}
+                        </div>
+                        <div className="no-print">
+                          <div className="btn-box top-half">
+                            <img src={ResultBanner} width={228} />
+                          </div>
+                          <div className="btn-box bottom-half">
+                            <h3>
+                              Print for future use. You can also bookmark the
+                              link
+                            </h3>
+                            {/* <h3>Download as PDF for future use. You can also bookmark the link</h3> */}
+                            <div className="btn-group">
+                              <a
+                                onClick={window.print}
+                                className="btn btn-primary"
+                              >
+                                {/* Download */}
+                                Print
+                              </a>
+                              <a
+                                onClick={() => {
+                                  this.setState(
+                                    { copyButtonClicked: true },
+                                    () => {
+                                      navigator.clipboard.writeText(
+                                        window.location.href
+                                      )
+                                    }
+                                  )
+                                }}
+                                className="btn btn-outline"
+                              >
+                                {this.state.copyButtonClicked
+                                  ? "Copied Link"
+                                  : "Share"}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div>
+                        <h3>Loading...</h3>
+                      </div>
+                    )}
                   </div>
                   <Footer />
                 </div>
@@ -1809,7 +1918,7 @@ class Questionnaire extends React.Component {
             >
               <div className="dd-close">
                 <Link to="/">
-                  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ik91dGxpbmVkIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBpZD0iRmlsbCI+PHBhdGggZD0iTTE2LDJBMTQsMTQsMCwxLDAsMzAsMTYsMTQsMTQsMCwwLDAsMTYsMlptMCwyNkExMiwxMiwwLDEsMSwyOCwxNiwxMiwxMiwwLDAsMSwxNiwyOFoiLz48cG9seWdvbiBwb2ludHM9IjE5LjU0IDExLjA1IDE2IDE0LjU5IDEyLjQ2IDExLjA1IDExLjA1IDEyLjQ2IDE0LjU5IDE2IDExLjA1IDE5LjU0IDEyLjQ2IDIwLjk1IDE2IDE3LjQxIDE5LjU0IDIwLjk1IDIwLjk1IDE5LjU0IDE3LjQxIDE2IDIwLjk1IDEyLjQ2IDE5LjU0IDExLjA1Ii8+PC9nPjwvc3ZnPg==" />
+                  <img src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E" />
                 </Link>
               </div>
               <div className="grid-50">
@@ -1835,69 +1944,129 @@ class Questionnaire extends React.Component {
                         <ul
                           style={
                             currentQuestion.answers.choices.length > 5 &&
-                              this.state.step !== 10
+                            this.state.step !== 10
                               ? { display: "flex", flexWrap: "wrap" }
                               : undefined
                           }
                         >
                           {currentQuestion.answers.type !== "multiselectbox" &&
-                            currentQuestion.answers.choices.map((choice, index) => {
-                              if (currentQuestion.answers.type === "single") {
-                                return (
-                                  <li
-                                    key={
-                                      "answer_choice_" +
-                                      this.state.step +
-                                      "_" +
-                                      index
-                                    }
-                                    style={
-                                      currentQuestion.answers.choices.length > 5
-                                        ? { width: "50%" }
-                                        : undefined
-                                    }
-                                  >
-                                    <input
-                                      type="radio"
-                                      name="radio"
-                                      id={
+                            currentQuestion.answers.choices.map(
+                              (choice, index) => {
+                                if (currentQuestion.answers.type === "single") {
+                                  return (
+                                    <li
+                                      key={
                                         "answer_choice_" +
                                         this.state.step +
                                         "_" +
                                         index
                                       }
-                                      checked={
-                                        this.state.responses[
-                                        this.state.step - 1
-                                        ][0] === choice
+                                      style={
+                                        currentQuestion.answers.choices.length >
+                                        5
+                                          ? { width: "50%" }
+                                          : undefined
                                       }
-                                      // onBlur={() => this.onInputBlur(() => {})}
-                                      onChange={() => {
-                                        let responsesCopy = this.state.responses
-                                        responsesCopy[
-                                          this.state.step - 1
-                                        ][0] = choice
-                                        // responsesCopy[this.state.step-1] = this.state.responses[this.state.step-1].map((_, responseIndex) => {
-                                        //   if (responseIndex === index) {
-                                        //     return true;
-                                        //   } else {
-                                        //     return false;
-                                        //   }
-                                        // });
-                                        this.setState(
-                                          { responses: responsesCopy },
-                                          () => this.onInputBlur(() => { })
-                                        )
-                                      }}
-                                    />
-                                    {choice === "Pure JavaScript implementation" ? (
-                                      <a
-                                        href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7"
-                                        target="_blank"
-                                      >
-                                        {choice}
-                                      </a>
-                                    ) : (
+                                    >
+                                      <input
+                                        type="radio"
+                                        name="radio"
+                                        id={
+                                          "answer_choice_" +
+                                          this.state.step +
+                                          "_" +
+                                          index
+                                        }
+                                        checked={
+                                          this.state.responses[
+                                            this.state.step - 1
+                                          ][0] === choice
+                                        }
+                                        // onBlur={() => this.onInputBlur(() => {})}
+                                        onChange={() => {
+                                          let responsesCopy = this.state
+                                            .responses
+                                          responsesCopy[
+                                            this.state.step - 1
+                                          ][0] = choice
+                                          // responsesCopy[this.state.step-1] = this.state.responses[this.state.step-1].map((_, responseIndex) => {
+                                          //   if (responseIndex === index) {
+                                          //     return true;
+                                          //   } else {
+                                          //     return false;
+                                          //   }
+                                          // });
+                                          this.setState(
+                                            { responses: responsesCopy },
+                                            () => this.onInputBlur(() => {})
+                                          )
+                                        }}
+                                      />
+                                      {choice ===
+                                      "Pure JavaScript implementation" ? (
+                                        <a
+                                          href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7"
+                                          target="_blank"
+                                        >
+                                          {choice}
+                                        </a>
+                                      ) : (
+                                        <label
+                                          htmlFor={
+                                            "answer_choice_" +
+                                            this.state.step +
+                                            "_" +
+                                            index
+                                          }
+                                        >
+                                          {choice}
+                                        </label>
+                                      )}
+                                    </li>
+                                  )
+                                } else if (
+                                  currentQuestion.answers.type === "multi"
+                                ) {
+                                  return (
+                                    <li
+                                      key={
+                                        "answer_choice_" +
+                                        this.state.step +
+                                        "_" +
+                                        index
+                                      }
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        // implement pdf gen, permalink,
+
+                                        id={
+                                          "answer_choice_" +
+                                          this.state.step +
+                                          "_" +
+                                          index
+                                        }
+                                        checked={
+                                          !!this.state.responses[
+                                            this.state.step - 1
+                                          ][index]
+                                        }
+                                        // onBlur={() => this.onInputBlur(() => {})}
+                                        onChange={() => {
+                                          let responsesCopy = this.state
+                                            .responses
+                                          responsesCopy[this.state.step - 1][
+                                            index
+                                          ] = !responsesCopy[
+                                            this.state.step - 1
+                                          ][index]
+                                          this.setState(
+                                            { responses: responsesCopy },
+                                            () => this.onInputBlur(() => {})
+                                          )
+                                        }}
+                                      />
                                       <label
                                         htmlFor={
                                           "answer_choice_" +
@@ -1908,64 +2077,13 @@ class Questionnaire extends React.Component {
                                       >
                                         {choice}
                                       </label>
-                                    )}
-                                  </li>
-                                )
-                              } else if (currentQuestion.answers.type === "multi") {
-                                return (
-                                  <li
-                                    key={
-                                      "answer_choice_" +
-                                      this.state.step +
-                                      "_" +
-                                      index
-                                    }
-                                  >
-                                    <input
-                                      type="checkbox"
-                                      name="checkbox"
-                                      // implement pdf gen, permalink,
-
-                                      id={
-                                        "answer_choice_" +
-                                        this.state.step +
-                                        "_" +
-                                        index
-                                      }
-                                      checked={
-                                        !!this.state.responses[this.state.step - 1][
-                                        index
-                                        ]
-                                      }
-                                      // onBlur={() => this.onInputBlur(() => {})}
-                                      onChange={() => {
-                                        let responsesCopy = this.state.responses
-                                        responsesCopy[this.state.step - 1][
-                                          index
-                                        ] = !responsesCopy[this.state.step - 1][
-                                        index
-                                        ]
-                                        this.setState(
-                                          { responses: responsesCopy },
-                                          () => this.onInputBlur(() => { })
-                                        )
-                                      }}
-                                    />
-                                    <label
-                                      htmlFor={
-                                        "answer_choice_" +
-                                        this.state.step +
-                                        "_" +
-                                        index
-                                      }
-                                    >
-                                      {choice}
-                                    </label>
-                                  </li>
-                                )
+                                    </li>
+                                  )
+                                }
                               }
-                            })}
-                          {currentQuestion.answers.type === "multiselectbox" && (
+                            )}
+                          {currentQuestion.answers.type ===
+                            "multiselectbox" && (
                             <React.Fragment>
                               {/* <SelectSearch
                                 options={thirdPartyOptions}
@@ -1988,15 +2106,23 @@ class Questionnaire extends React.Component {
                                 onChange={arg => {
                                   const resultArray = arg.map(choice => {
                                     return choice.value
-                                  });
+                                  })
 
                                   this.setState({
-                                    thirdPartyChoices: resultArray
-                                  });
+                                    thirdPartyChoices: resultArray,
+                                  })
                                 }}
-                                value={this.state.thirdPartyChoices.map(choice => {
-                                  return { value: choice, label: QuestionList[8].answers.choices[parseInt(choice)] }
-                                })}
+                                value={this.state.thirdPartyChoices.map(
+                                  choice => {
+                                    return {
+                                      value: choice,
+                                      label:
+                                        QuestionList[8].answers.choices[
+                                          parseInt(choice)
+                                        ],
+                                    }
+                                  }
+                                )}
                                 closeMenuOnSelect={false}
                                 isSearchable
                                 isMulti
@@ -2019,16 +2145,20 @@ class Questionnaire extends React.Component {
                                     lastIndexQuestion8
                                   }
                                   checked={
-                                    !!this.state.responses[this.state.step - 1][0]
+                                    !!this.state.responses[
+                                      this.state.step - 1
+                                    ][0]
                                   }
                                   onChange={() => {
                                     let responsesCopy = this.state.responses
                                     responsesCopy[
                                       this.state.step - 1
-                                    ][0] = !responsesCopy[this.state.step - 1][0]
+                                    ][0] = !responsesCopy[
+                                      this.state.step - 1
+                                    ][0]
                                     this.setState(
                                       { responses: responsesCopy },
-                                      () => this.onInputBlur(() => { })
+                                      () => this.onInputBlur(() => {})
                                     )
                                   }}
                                 />
@@ -2042,7 +2172,7 @@ class Questionnaire extends React.Component {
                                 >
                                   {
                                     QuestionList[8].answers.choices[
-                                    lastIndexQuestion8
+                                      lastIndexQuestion8
                                     ]
                                   }
                                 </label>
@@ -2074,8 +2204,9 @@ class Questionnaire extends React.Component {
                           })
                           // });
                         }}
-                        className={`btn btn-secondary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
+                        className={`btn btn-secondary${
+                          !!this.state.errorMessage ? " disabled" : ""
+                        }`}
                       >
                         Back
                       </a>
@@ -2091,11 +2222,14 @@ class Questionnaire extends React.Component {
                             ) {
                               stepsForward = 2
                             }
-                            this.setState({ step: this.state.step + stepsForward })
+                            this.setState({
+                              step: this.state.step + stepsForward,
+                            })
                           })
                         }}
-                        className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
+                        className={`btn btn-primary${
+                          !!this.state.errorMessage ? " disabled" : ""
+                        }`}
                       >
                         {this.state.step === 0 ? "Let's do it!" : "Next"}
                       </a>
@@ -2110,8 +2244,8 @@ class Questionnaire extends React.Component {
                             // this.props.location.search = "?id=" + encodedUrlParams;
                             window.location.replace(
                               this.props.location.pathname +
-                              "?id=" +
-                              encodedUrlParams
+                                "?id=" +
+                                encodedUrlParams
                             )
                             this.setState({
                               // showResultPage: true,
@@ -2119,8 +2253,9 @@ class Questionnaire extends React.Component {
                             })
                           })
                         }}
-                        className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
+                        className={`btn btn-primary${
+                          !!this.state.errorMessage ? " disabled" : ""
+                        }`}
                       >
                         Show Result
                       </a>
@@ -2130,9 +2265,9 @@ class Questionnaire extends React.Component {
 
                 {splashArt(
                   "step" +
-                  (this.state.step > 2
-                    ? this.state.step - 1
-                    : this.state.step)
+                    (this.state.step > 2
+                      ? this.state.step - 1
+                      : this.state.step)
                 )}
               </div>
             </div>
