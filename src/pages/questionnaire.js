@@ -1696,7 +1696,7 @@ class Questionnaire extends React.Component {
             <div className="grid-50 override">
               <div className="dd-form" id="result_page_container">
                 <div className="dd-content">
-                  <header>
+                  <header className="no-print">
                     <div>
                       <div className="logo">
                         <Link to="/">
@@ -1730,7 +1730,7 @@ class Questionnaire extends React.Component {
                         <img src={Logo} width={228} />
                       </Link>
                     </div> */}
-                    <header>
+                    <header className="no-print">
                       <div>
                         <div className="logo">
                           <Link to="/">
@@ -1800,7 +1800,7 @@ class Questionnaire extends React.Component {
                       <div className="result_page_block">
                         <div className="qa grid-67">
                           <a
-                            className="backbtn mobile"
+                            className="backbtn mobile no-print"
                             onClick={() =>
                               this.setState({
                                 showResultPage: false,
@@ -1859,7 +1859,7 @@ class Questionnaire extends React.Component {
                             )
                           })}
                         </div>
-                        <div className="no-print">
+                        <div className="no-print share-widget">
                           <div className="btn-box top-half">
                             <img src={ResultBanner} width={228} />
                           </div>

@@ -3,9 +3,12 @@
   .no-print * {
     display: none !important;
   }
+  .result_page_block {
+    margin-top: 0;
+  }
 }
 
-.no-print {
+.share-widget {
   width: 30%;
   position: sticky;
   top: 158px;
@@ -812,7 +815,7 @@ header .right-section .backbtn svg,
     width: 100%;
     padding-right: 0;
   }
-  .no-print {
+  .share-widget {
     display: none;
   }
   .result_page_block {
