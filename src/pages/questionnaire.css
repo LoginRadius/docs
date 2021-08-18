@@ -800,11 +800,7 @@ header .right-section .backbtn svg,
     width: 100%;
   }
 }
-@media (max-width: 768px) {
-  #result_page_container header > div {
-    min-height: 20px;
-  }
-}
+
 @media (max-width: 993px) {
   #result_page_container .dd-content .result_page_block {
     margin: 124px auto 0;
@@ -832,6 +828,14 @@ header .right-section .backbtn svg,
   }
 }
 
+@media (max-width: 768px) {
+  #result_page_container header > div {
+    min-height: 20px;
+  }
+  #result_page_container .dd-content .result_page_block {
+    margin: 180px auto 0;
+  }
+}
 @media (min-width: 993px) {
   .result_page_block .backbtn {
     display: none;
