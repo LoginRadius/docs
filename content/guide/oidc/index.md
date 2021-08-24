@@ -5,8 +5,7 @@ description: "This is a guide for implementing OpenID Connect flow in the LoginR
 path: "/guide/oidc"
 ---
 
-<span class="devloper-premium plan-tag"></span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Paid</span>
 
 # OpenID Connect
 
