@@ -5,9 +5,6 @@ description: "This is a guide for enabling the Block Disposable Email feature."
 path: "/guide/block-disposable-email"
 ---
 
-<span class="developer plan-tag">Developer</span>
-<span class="devloper-premium plan-tag">Developer Pro</span>
-
 # Block Disposable Email
 The Block Disposable Email feature allows you to prevent disposable registrations on your application, providing only authentic user logins.
 

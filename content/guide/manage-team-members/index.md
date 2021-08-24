@@ -5,7 +5,7 @@ description: "This is a guide for Managing Team Members."
 path: "/guide/manage-team-members"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Paid</span>
 
 # Manage Team Members
 This section helps view and manage your authorized Team Members who can manage your LoginRadius site.
