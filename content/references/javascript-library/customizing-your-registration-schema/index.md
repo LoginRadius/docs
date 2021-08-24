@@ -5,8 +5,7 @@ description: "This is a document detailing registration schema customizations."
 path: "/references/javascript-library/customizing-your-registration-schema"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Paid</span>
 
 # Customizing Your Registration Schema
 

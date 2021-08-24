@@ -5,9 +5,6 @@ description: "This is a tutorial for bruteforce lockout."
 path: "/guide/bruteforce"
 ---
 
-<span class="developer plan-tag">Developer</span>
-<span class="devloper-premium plan-tag">Developer Pro</span>
-
 # Bruteforce Lockout
 
 The Brute Force Lockout feature allows you to restrict account access based on failed login attempts. Once the limit of failed login attempts is reached, the customer will either get suspended for the configured period or prompted to complete an additional security step to log in.

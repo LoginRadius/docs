@@ -5,8 +5,8 @@ description: "This is a guide for integrating and configuring Shopify e-commerce
 path: "/guide/shopify"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Paid</span>
+
 
 # Shopify
 

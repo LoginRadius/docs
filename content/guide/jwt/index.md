@@ -5,8 +5,8 @@ description: "This is a tutorial with JWT implementation."
 path: "/guide/jwt"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Paid</span>
+
 
 # JWT
 
