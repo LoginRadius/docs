@@ -146,7 +146,7 @@
       border-left: 0;
     }
     a {
-      word-break: break-all;
+      word-break: break-word;
     }
     .breadcrumbs {
       display: flex;
@@ -380,6 +380,44 @@
       &.free {
         border: 2px solid $blue;
         background-color: $blue;
+      }
+    }
+    hr {
+      border-top: 0;
+      margin-top: 48px;
+      border-color: $gray-light;
+    }
+    .response-block {
+      margin-top: 48px;
+      p {
+        margin-top: 24px;
+        margin-bottom: 0;
+      }
+      .actions {
+        svg {
+          fill: none;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-width: 32px;
+          margin-right: 8px;
+          transition: color 0.35s, background-color 0.35s, border-color 0.35s,
+            box-shadow 0.35s, opacity 0.35s;
+        }
+        .btn-primary {
+          svg {
+            stroke: $white;
+          }
+        }
+        .btn-outline {
+          svg {
+            stroke: $cta;
+          }
+          &:hover {
+            svg {
+              stroke: $white;
+            }
+          }
+        }
       }
     }
   }
