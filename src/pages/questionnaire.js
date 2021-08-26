@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 import "./questionnaire.css"
 import Logo from "../../public/images/logo.svg"
-import ResultBanner from "../../public/images/questionnaireImage.svg"
+import ResultBanner from "../../public/images/questionnaire.svg"
 
 const splashArt = animationClassName => {
   return (
