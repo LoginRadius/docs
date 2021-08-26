@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 import "./questionnaire.css"
 import Logo from "../../public/images/logo.svg"
-import ResultBanner from "../../public/images/questionnaire.svg"
+//import ResultBanner from "../../public/images/questionnaire.svg"
 
 const splashArt = animationClassName => {
   return (
@@ -1861,7 +1861,7 @@ class Questionnaire extends React.Component {
                         </div>
                         <div className="no-print share-widget">
                           <div className="btn-box top-half">
-                            <img src={ResultBanner} width={228} />
+                            {/* <img src={ResultBanner} width={228} /> */}
                           </div>
                           <div className="btn-box bottom-half">
                             <h3>
