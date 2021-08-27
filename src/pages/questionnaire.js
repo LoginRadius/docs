@@ -1933,7 +1933,7 @@ class Questionnaire extends React.Component {
                       <div className="qa">
                         <h1>Does LoginRadius Support my Use Case?</h1>
                         <p>
-                          Answer a few questions and get a self-served
+                          Answer a few questions and get a self-serve
                           implementation guide addressing your needs.
                         </p>
                       </div>
@@ -1944,7 +1944,7 @@ class Questionnaire extends React.Component {
                         <ul
                           style={
                             currentQuestion.answers.choices.length > 5 &&
-                              this.state.step !== 10
+                            this.state.step !== 10
                               ? { display: "flex", flexWrap: "wrap" }
                               : undefined
                           }
@@ -1963,7 +1963,7 @@ class Questionnaire extends React.Component {
                                       }
                                       style={
                                         currentQuestion.answers.choices.length >
-                                          5
+                                        5
                                           ? { width: "50%" }
                                           : undefined
                                       }
@@ -1979,7 +1979,7 @@ class Questionnaire extends React.Component {
                                         }
                                         checked={
                                           this.state.responses[
-                                          this.state.step - 1
+                                            this.state.step - 1
                                           ][0] === choice
                                         }
                                         // onBlur={() => this.onInputBlur(() => {})}
@@ -1998,12 +1998,12 @@ class Questionnaire extends React.Component {
                                           // });
                                           this.setState(
                                             { responses: responsesCopy },
-                                            () => this.onInputBlur(() => { })
+                                            () => this.onInputBlur(() => {})
                                           )
                                         }}
                                       />
                                       {choice ===
-                                        "Pure JavaScript implementation" ? (
+                                      "Pure JavaScript implementation" ? (
                                         <a
                                           href="https://www.notion.so/Pure-JavaScript-implementation-709fc8aa64334ebb8f5fc3f7cf51d3b7"
                                           target="_blank"
@@ -2049,7 +2049,7 @@ class Questionnaire extends React.Component {
                                         }
                                         checked={
                                           !!this.state.responses[
-                                          this.state.step - 1
+                                            this.state.step - 1
                                           ][index]
                                         }
                                         // onBlur={() => this.onInputBlur(() => {})}
@@ -2059,11 +2059,11 @@ class Questionnaire extends React.Component {
                                           responsesCopy[this.state.step - 1][
                                             index
                                           ] = !responsesCopy[
-                                          this.state.step - 1
+                                            this.state.step - 1
                                           ][index]
                                           this.setState(
                                             { responses: responsesCopy },
-                                            () => this.onInputBlur(() => { })
+                                            () => this.onInputBlur(() => {})
                                           )
                                         }}
                                       />
@@ -2084,8 +2084,8 @@ class Questionnaire extends React.Component {
                             )}
                           {currentQuestion.answers.type ===
                             "multiselectbox" && (
-                              <React.Fragment>
-                                {/* <SelectSearch
+                            <React.Fragment>
+                              {/* <SelectSearch
                                 options={thirdPartyOptions}
                                 name="Integrations"
                                 placeholder="Select Integrations"
@@ -2099,86 +2099,86 @@ class Questionnaire extends React.Component {
                                 multiple
                                 search
                               /> */}
-                                <Select
-                                  className="integration-multi-select"
-                                  id="integration_multi_select"
-                                  options={thirdPartyOptions}
-                                  onChange={arg => {
-                                    const resultArray = arg.map(choice => {
-                                      return choice.value
-                                    })
+                              <Select
+                                className="integration-multi-select"
+                                id="integration_multi_select"
+                                options={thirdPartyOptions}
+                                onChange={arg => {
+                                  const resultArray = arg.map(choice => {
+                                    return choice.value
+                                  })
 
-                                    this.setState({
-                                      thirdPartyChoices: resultArray,
-                                    })
-                                  }}
-                                  value={this.state.thirdPartyChoices.map(
-                                    choice => {
-                                      return {
-                                        value: choice,
-                                        label:
-                                          QuestionList[8].answers.choices[
+                                  this.setState({
+                                    thirdPartyChoices: resultArray,
+                                  })
+                                }}
+                                value={this.state.thirdPartyChoices.map(
+                                  choice => {
+                                    return {
+                                      value: choice,
+                                      label:
+                                        QuestionList[8].answers.choices[
                                           parseInt(choice)
-                                          ],
-                                      }
+                                        ],
                                     }
-                                  )}
-                                  closeMenuOnSelect={false}
-                                  isSearchable
-                                  isMulti
+                                  }
+                                )}
+                                closeMenuOnSelect={false}
+                                isSearchable
+                                isMulti
+                              />
+                              <li
+                                key={
+                                  "answer_choice_" +
+                                  this.state.step +
+                                  "_" +
+                                  lastIndexQuestion8
+                                }
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="checkbox"
+                                  id={
+                                    "answer_choice_" +
+                                    this.state.step +
+                                    "_" +
+                                    lastIndexQuestion8
+                                  }
+                                  checked={
+                                    !!this.state.responses[
+                                      this.state.step - 1
+                                    ][0]
+                                  }
+                                  onChange={() => {
+                                    let responsesCopy = this.state.responses
+                                    responsesCopy[
+                                      this.state.step - 1
+                                    ][0] = !responsesCopy[
+                                      this.state.step - 1
+                                    ][0]
+                                    this.setState(
+                                      { responses: responsesCopy },
+                                      () => this.onInputBlur(() => {})
+                                    )
+                                  }}
                                 />
-                                <li
-                                  key={
+                                <label
+                                  htmlFor={
                                     "answer_choice_" +
                                     this.state.step +
                                     "_" +
                                     lastIndexQuestion8
                                   }
                                 >
-                                  <input
-                                    type="checkbox"
-                                    name="checkbox"
-                                    id={
-                                      "answer_choice_" +
-                                      this.state.step +
-                                      "_" +
+                                  {
+                                    QuestionList[8].answers.choices[
                                       lastIndexQuestion8
-                                    }
-                                    checked={
-                                      !!this.state.responses[
-                                      this.state.step - 1
-                                      ][0]
-                                    }
-                                    onChange={() => {
-                                      let responsesCopy = this.state.responses
-                                      responsesCopy[
-                                        this.state.step - 1
-                                      ][0] = !responsesCopy[
-                                      this.state.step - 1
-                                      ][0]
-                                      this.setState(
-                                        { responses: responsesCopy },
-                                        () => this.onInputBlur(() => { })
-                                      )
-                                    }}
-                                  />
-                                  <label
-                                    htmlFor={
-                                      "answer_choice_" +
-                                      this.state.step +
-                                      "_" +
-                                      lastIndexQuestion8
-                                    }
-                                  >
-                                    {
-                                      QuestionList[8].answers.choices[
-                                      lastIndexQuestion8
-                                      ]
-                                    }
-                                  </label>
-                                </li>
-                              </React.Fragment>
-                            )}
+                                    ]
+                                  }
+                                </label>
+                              </li>
+                            </React.Fragment>
+                          )}
                         </ul>
                       </div>
                     )}
@@ -2204,8 +2204,9 @@ class Questionnaire extends React.Component {
                           })
                           // });
                         }}
-                        className={`btn btn-secondary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
+                        className={`btn btn-secondary${
+                          !!this.state.errorMessage ? " disabled" : ""
+                        }`}
                       >
                         Back
                       </a>
@@ -2226,8 +2227,9 @@ class Questionnaire extends React.Component {
                             })
                           })
                         }}
-                        className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
+                        className={`btn btn-primary${
+                          !!this.state.errorMessage ? " disabled" : ""
+                        }`}
                       >
                         {this.state.step === 0 ? "Let's do it!" : "Next"}
                       </a>
@@ -2242,8 +2244,8 @@ class Questionnaire extends React.Component {
                             // this.props.location.search = "?id=" + encodedUrlParams;
                             window.location.replace(
                               this.props.location.pathname +
-                              "?id=" +
-                              encodedUrlParams
+                                "?id=" +
+                                encodedUrlParams
                             )
                             this.setState({
                               // showResultPage: true,
@@ -2251,8 +2253,9 @@ class Questionnaire extends React.Component {
                             })
                           })
                         }}
-                        className={`btn btn-primary${!!this.state.errorMessage ? " disabled" : ""
-                          }`}
+                        className={`btn btn-primary${
+                          !!this.state.errorMessage ? " disabled" : ""
+                        }`}
                       >
                         Show Result
                       </a>
@@ -2262,9 +2265,9 @@ class Questionnaire extends React.Component {
 
                 {splashArt(
                   "step" +
-                  (this.state.step > 2
-                    ? this.state.step - 1
-                    : this.state.step)
+                    (this.state.step > 2
+                      ? this.state.step - 1
+                      : this.state.step)
                 )}
               </div>
             </div>
