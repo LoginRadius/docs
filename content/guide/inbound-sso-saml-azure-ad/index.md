@@ -33,7 +33,7 @@ This document provides instructions to add a custom Identity provider (Azure) us
 
 7. Click the SAML as a single sign-on method, and the below screen will appear:
 
-   ![alt_text](images/newtest.png "image_tooltip")
+   ![alt_text](images/newtest1.png "image_tooltip")
 
 8. Click the Edit icon given next to the **Basic SAML Configuration** and enter below SAML configuration:
 
