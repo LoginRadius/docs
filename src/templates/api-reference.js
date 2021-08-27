@@ -9,7 +9,7 @@ import TableOfContents from "../components/table-of-contents"
 import TryMeOut from "../components/try-me-out-panel-body"
 import CodePanel from "../components/code-panel-body"
 import ReactSlidingPane from "react-sliding-pane"
-import "react-sliding-pane/dist/react-sliding-pane.css";
+import "react-sliding-pane/dist/react-sliding-pane.css"
 import * as containerStyles from "./api-reference.module.css"
 import * as styles from "./try-me-out.module.css"
 
@@ -19,9 +19,14 @@ const ApiReferenceTemplate = ({ data, location }) => {
   const pathArray = location.pathname.split("/")
   const section = pathArray.length >= 2 ? pathArray[1] : undefined
 
-  const [isPaneOpen, setIsPaneOpenState] = useState(false);
-  const [isViewCode, setIsViewCodeState] = useState(false);
-  const [tryMeOutProps, setTryMeOutPropsState] = useState({ endpoint: "", method: "", params: "", sampleresponse: "" });
+  const [isPaneOpen, setIsPaneOpenState] = useState(false)
+  const [isViewCode, setIsViewCodeState] = useState(false)
+  const [tryMeOutProps, setTryMeOutPropsState] = useState({
+    endpoint: "",
+    method: "",
+    params: "",
+    sampleresponse: "",
+  })
 
   const TryMeOutButton = ({ id, endpoint, method, params, sampleresponse }) => {
     return (
@@ -29,8 +34,8 @@ const ApiReferenceTemplate = ({ data, location }) => {
         <a
           className={`${styles.tryMeOutButton} btn btn-primary`}
           onClick={() => {
-            setIsPaneOpenState(true);
-            setTryMeOutPropsState({ endpoint, method, params, sampleresponse });
+            setIsPaneOpenState(true)
+            setTryMeOutPropsState({ endpoint, method, params, sampleresponse })
           }}
         >
           Show
@@ -59,7 +64,9 @@ const ApiReferenceTemplate = ({ data, location }) => {
             <div>
               <div className={`sidebar`}>
                 <div className="headings">{section}</div>
-                {post.tableOfContents && <TableOfContents html={post.tableOfContents} />}
+                {post.tableOfContents && (
+                  <TableOfContents html={post.tableOfContents} />
+                )}
                 <div className="get-in-touch">
                   <div className="headings">Get in Touch</div>
                   <ul>
@@ -150,6 +157,49 @@ const ApiReferenceTemplate = ({ data, location }) => {
                   itemProp="articleBody"
                 /> */}
                 {renderAst(post.htmlAst)}
+                <hr></hr>
+                <div className="response-block">
+                  <div className="headings">
+                    <h2>Was this article helpful?</h2>
+                  </div>
+                  <div className="actions">
+                    <a href="#" className="ga_event btn btn-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>yes</title>
+                        <polyline points="416 128 192 384 96 288" />
+                      </svg>
+                      Yes
+                    </a>
+                    <a href="#" className="ga_event btn btn-outline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>No</title>
+                        <line x1="368" y1="368" x2="144" y2="144" />
+                        <line x1="368" y1="144" x2="144" y2="368" />
+                      </svg>
+                      No
+                    </a>
+                  </div>
+                  <p>
+                    Any feedback or suggestion?{" "}
+                    <a
+                      href="https://loginradiusassist.freshdesk.com/customer/login"
+                      target="_blank"
+                    >
+                      Leave a comment here
+                    </a>
+                    .
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -158,7 +208,10 @@ const ApiReferenceTemplate = ({ data, location }) => {
         <ReactSlidingPane
           className={`${containerStyles.panel}`}
           closeIcon={
-            <img style={{ width: 36 }} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEQUlEQVR4nO2aSWsVQRRGj8PThQpOMSZmY8QBjQtRxK0uFEURwRhBQYwPjAOIaHRpFooTCf4FUQR/gOBKV87D1nkEcYiiiRHMYOLivpbX1dV5Xd1VFYJ9oFfd9363uqpujZCTk5OTk5PzvzLGk041sBpYBSwC5gJVwKTS+19AJ/AGeALcBW4CXzzF54TpwEHgHjCU4hlEfsSBkq9RQy3QAfSQruC65yfQDtR4LIcx44FDQDf2Cq4+v4A2YIKtoG3lgPnAVWBZzPs/SFe4CTwGngIfkVYCMBlpOQuB5Ui+WAmMi/H3CGgCXlmIPTObgS70NfYWOIoUzpRaoBV4F+P7B7ApY+yZKQIDRIP7BOwBChY0CiWdzxqdfqDZgkYqikimVoO6CEx1oDcNuKTRG2QEfsJmojXfC+z2oF0E+oi2hI0etAFJeGqf7wHW+goAWEd0mP0B1LsWLiBZXK15n4UPWEe0JTxAhmNntBLtgz6afRxFTTyHXYnVEm12F12JGXCZcEzdwGwXQh2K0GckM48005FFU3ls51yIqLW/x8B+SQpNE5u9RNcOVivnoCLwnuTz8TZkyNxpoNeIDG1nEn5fQGad5THuM9CryH3F+dGEdm1lNv3I/L0STaVvA7u2hFrHlRjvJLSrSDXhGd8Ayeb2DYQLkuQnqIUPbBoS6M1BFl3lM8SqBHYV2a4EdMvANq5Aup9g8m0cdxX7bQa2sVxQnJ40tE9SMBuFBzit+OgwtNdyXXG6JYWPrUQLGCTGxph3O1LqlPu5lsJHhJeK08Up/cTVso2aD2hQfD1P6SfEN8Vplg1KXUuwUfMBMxV/nRl8/aNXcZp1Py7uJ2QtPMBExefvSgZjMwqmYbh9SF/nFEbY7AK6hKdLjGlx0gVeKE7TzOvBTxJcqviykgRtDIPDDXXDDZGmOBkG1YnQKUP7UT8RalKc3ja09TkVVs8hGw1sY5nF6FgM1RFeDP1BkqIV1EVGa0K7kVwOmyzaKnJAcW6yIXIc80lOkBhPJPxetyHSYqBXEd2WWNHA3vWWWAvh2LpxsF/Zroh8BWbYFkmBblM06VaaETXIZmO50CUXQoZcIRxTF5K4nXBEETPtCrZRd4OHkEsazigADxXBPuSYyjfriR6N3cPx0RjAPOQgsly4B78/YT3RpPwduX3mhU1EJyx9+OkOe9Efj2/woB2iGf0Ficu4udY2g2jCGyrFsMuBXiKa0a/vvyA1ZeM21wRknO/U6PQzgoUP2Eg0J5TPGI8hhxam1CGzyPcxvr9jodnb2oKqR67JrYh5P4hcXriBXLB4BnwgfE2uDliAXJNbU/IVt2V3HzmweWMhdmsEFyXjrszZeHqQVuF8qMtCNXCe6Kwxy9MNnMXhDM8F04D9yCmtbrSo9AwiS9oWHF7E8LUNXUX4unw9slkxpfT+J7K4ek34uvxXT/Hl5OTk5OTk/If8BQpUozRe/7JRAAAAAElFTkSuQmCC" />
+            <img
+              style={{ width: 36 }}
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEQUlEQVR4nO2aSWsVQRRGj8PThQpOMSZmY8QBjQtRxK0uFEURwRhBQYwPjAOIaHRpFooTCf4FUQR/gOBKV87D1nkEcYiiiRHMYOLivpbX1dV5Xd1VFYJ9oFfd9363uqpujZCTk5OTk5PzvzLGk041sBpYBSwC5gJVwKTS+19AJ/AGeALcBW4CXzzF54TpwEHgHjCU4hlEfsSBkq9RQy3QAfSQruC65yfQDtR4LIcx44FDQDf2Cq4+v4A2YIKtoG3lgPnAVWBZzPs/SFe4CTwGngIfkVYCMBlpOQuB5Ui+WAmMi/H3CGgCXlmIPTObgS70NfYWOIoUzpRaoBV4F+P7B7ApY+yZKQIDRIP7BOwBChY0CiWdzxqdfqDZgkYqikimVoO6CEx1oDcNuKTRG2QEfsJmojXfC+z2oF0E+oi2hI0etAFJeGqf7wHW+goAWEd0mP0B1LsWLiBZXK15n4UPWEe0JTxAhmNntBLtgz6afRxFTTyHXYnVEm12F12JGXCZcEzdwGwXQh2K0GckM48005FFU3ls51yIqLW/x8B+SQpNE5u9RNcOVivnoCLwnuTz8TZkyNxpoNeIDG1nEn5fQGad5THuM9CryH3F+dGEdm1lNv3I/L0STaVvA7u2hFrHlRjvJLSrSDXhGd8Ayeb2DYQLkuQnqIUPbBoS6M1BFl3lM8SqBHYV2a4EdMvANq5Aup9g8m0cdxX7bQa2sVxQnJ40tE9SMBuFBzit+OgwtNdyXXG6JYWPrUQLGCTGxph3O1LqlPu5lsJHhJeK08Up/cTVso2aD2hQfD1P6SfEN8Vplg1KXUuwUfMBMxV/nRl8/aNXcZp1Py7uJ2QtPMBExefvSgZjMwqmYbh9SF/nFEbY7AK6hKdLjGlx0gVeKE7TzOvBTxJcqviykgRtDIPDDXXDDZGmOBkG1YnQKUP7UT8RalKc3ja09TkVVs8hGw1sY5nF6FgM1RFeDP1BkqIV1EVGa0K7kVwOmyzaKnJAcW6yIXIc80lOkBhPJPxetyHSYqBXEd2WWNHA3vWWWAvh2LpxsF/Zroh8BWbYFkmBblM06VaaETXIZmO50CUXQoZcIRxTF5K4nXBEETPtCrZRd4OHkEsazigADxXBPuSYyjfriR6N3cPx0RjAPOQgsly4B78/YT3RpPwduX3mhU1EJyx9+OkOe9Efj2/woB2iGf0Ficu4udY2g2jCGyrFsMuBXiKa0a/vvyA1ZeM21wRknO/U6PQzgoUP2Eg0J5TPGI8hhxam1CGzyPcxvr9jodnb2oKqR67JrYh5P4hcXriBXLB4BnwgfE2uDliAXJNbU/IVt2V3HzmweWMhdmsEFyXjrszZeHqQVuF8qMtCNXCe6Kwxy9MNnMXhDM8F04D9yCmtbrSo9AwiS9oWHF7E8LUNXUX4unw9slkxpfT+J7K4ek34uvxXT/Hl5OTk5OTk/If8BQpUozRe/7JRAAAAAElFTkSuQmCC"
+            />
           }
           isOpen={isPaneOpen}
           title={
@@ -166,7 +219,7 @@ const ApiReferenceTemplate = ({ data, location }) => {
               <a
                 className={`${styles.tryMeOutButton} btn btn-primary btn-sm`}
                 onClick={() => {
-                  setIsViewCodeState(!isViewCode);
+                  setIsViewCodeState(!isViewCode)
                 }}
               >
                 {isViewCode ? "View API Panel" : "View Code Panel"}
@@ -176,22 +229,31 @@ const ApiReferenceTemplate = ({ data, location }) => {
           from="right"
           width="900px"
           onRequestClose={() => {
-            setIsPaneOpenState(false);
-            setIsViewCodeState(false);
-            setTryMeOutPropsState({ endpoint: "", method: "", params: "", sampleresponse: "" });
+            setIsPaneOpenState(false)
+            setIsViewCodeState(false)
+            setTryMeOutPropsState({
+              endpoint: "",
+              method: "",
+              params: "",
+              sampleresponse: "",
+            })
           }}
-        // subtitle="Optional subtitle."
+          // subtitle="Optional subtitle."
         >
-          {isViewCode ? <CodePanel
-            endpoint={tryMeOutProps.endpoint}
-            method={tryMeOutProps.method}
-            params={tryMeOutProps.params}
-            sampleresponse={tryMeOutProps.sampleresponse}
-          /> : <TryMeOut
-            endpoint={tryMeOutProps.endpoint}
-            method={tryMeOutProps.method}
-            params={tryMeOutProps.params}
-          />}
+          {isViewCode ? (
+            <CodePanel
+              endpoint={tryMeOutProps.endpoint}
+              method={tryMeOutProps.method}
+              params={tryMeOutProps.params}
+              sampleresponse={tryMeOutProps.sampleresponse}
+            />
+          ) : (
+            <TryMeOut
+              endpoint={tryMeOutProps.endpoint}
+              method={tryMeOutProps.method}
+              params={tryMeOutProps.params}
+            />
+          )}
         </ReactSlidingPane>
       </div>
     </div>
