@@ -1629,15 +1629,26 @@ class Questionnaire extends React.Component {
     thirdPartyOptions = thirdPartyOptions.slice(0, -1)
 
     let flattenedDocsList = []
-    let technologyDocList = []
+    let inboundSsoDocsList = []
+    let outboundSsoDocsList = []
 
     if (showResultPage && encodedUrlParams) {
       // generate docs page layout
       for (let i = 0; i < responses.length; i++) {
+        // after question 3, concat the 2 doc lists
+        if (i === 4) {
+          flattenedDocsList = flattenedDocsList.concat(outboundSsoDocsList, inboundSsoDocsList);
+        }
         if (QuestionList[i].answers.type === "multi") {
           for (let j = 0; j < responses[i].length; j++) {
             if (responses[i][j] === true) {
-              flattenedDocsList.push(DocsList[i][j])
+              if (i === 2) {
+                inboundSsoDocsList.push(DocsList[i][j]);
+              } else if (i === 3) {
+                outboundSsoDocsList.push(DocsList[i][j]);
+              } else {
+                flattenedDocsList.push(DocsList[i][j]);
+              }
             }
           }
         } else if (QuestionList[i].answers.type === "single") {
@@ -1650,7 +1661,7 @@ class Questionnaire extends React.Component {
             if (i !== 5 && i !== 6) {
               flattenedDocsList.push(DocsList[i][docIndex])
             } else {
-              technologyDocList.push(DocsList[i][docIndex])
+              flattenedDocsList.unshift(DocsList[i][docIndex])
             }
           }
         } else if (QuestionList[i].answers.type === "multiselectbox") {
@@ -1682,7 +1693,7 @@ class Questionnaire extends React.Component {
       }
     }
 
-    flattenedDocsList = technologyDocList.concat(flattenedDocsList)
+    // flattenedDocsList = technologyDocList.concat(flattenedDocsList)
     // for (let doc of DocsList) {
     //   for (let answer of doc) {
     //     flattenedDocsList.push(answer);
@@ -2277,7 +2288,6 @@ class Questionnaire extends React.Component {
           title="Get a solution for your use case - LoginRadius"
           description="This CIAM Use Case Tool takes your requirements and creates a corresponding implementation guide. All you have to do is answer a few use case questions."
           lang="en"
-          meta=""
         />
       </React.Fragment>
     )

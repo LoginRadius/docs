@@ -18,6 +18,7 @@
 .integration-multi-select {
   width: 400px;
   padding-bottom: 15px;
+  padding-right: 15px;
 }
 
 .integration-multi-select div[class$="control"] {
