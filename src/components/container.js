@@ -164,8 +164,8 @@ const Middle = () => {
             <div>
               <h2>Does LoginRadius Support my Use Case?</h2>
               <p>
-                Answer a few questions and get a self-served implementation
-                guide addressing your needs
+                Answer a few questions and get a self-serve implementation guide
+                addressing your needs
               </p>
               <Link to="/questionnaire" className="btn btn-primary">
                 Let's Get Started!
