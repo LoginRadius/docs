@@ -30,7 +30,10 @@ const BlogPostTemplate = ({ data, location }) => {
               <div className={`sidebar ${containerStyles.sidebar}`}>
                 <div className="headings">{section}</div>
                 {isMdx ? (
-                  <TOCMdx toc={post.tableOfContents} path={data.mdx.fields.slug} />
+                  <TOCMdx
+                    toc={post.tableOfContents}
+                    path={data.mdx.fields.slug}
+                  />
                 ) : (
                   <TableOfContents html={post.tableOfContents} />
                 )}
@@ -127,6 +130,49 @@ const BlogPostTemplate = ({ data, location }) => {
                 ) : (
                   <MDXRenderer>{post.body}</MDXRenderer>
                 )}
+                <hr></hr>
+                <div className="response-block">
+                  <div className="headings">
+                    <h2>Was this article helpful?</h2>
+                  </div>
+                  <div className="actions">
+                    <a href="#" className="ga_event btn btn-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>Yes</title>
+                        <polyline points="416 128 192 384 96 288" />
+                      </svg>
+                      Yes
+                    </a>
+                    <a href="#" className="ga_event btn btn-outline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>No</title>
+                        <line x1="368" y1="368" x2="144" y2="144" />
+                        <line x1="368" y1="144" x2="144" y2="368" />
+                      </svg>
+                      No
+                    </a>
+                  </div>
+                  <p>
+                    Any feedback or suggestion?{" "}
+                    <a
+                      href="https://loginradiusassist.freshdesk.com/customer/login"
+                      target="_blank"
+                    >
+                      Leave a comment here
+                    </a>
+                    .
+                  </p>
+                </div>
               </div>
             </div>
           </section>
