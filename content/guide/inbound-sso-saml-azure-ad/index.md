@@ -5,7 +5,7 @@ description: "This document covers the Inbound SSO SAML - Azure AD introduction 
 path: "guide/inbound-sso-saml-azure-ad"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Inbound SSO SAML - Azure AD
 

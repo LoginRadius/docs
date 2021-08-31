@@ -5,7 +5,7 @@ description: "This is a guide to all the 3rd party integrations available with L
 path: "/guide/3rd-party-all-integrations"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 
 # Available 3rd party integrations

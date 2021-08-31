@@ -5,7 +5,7 @@ description: "This is a guide for customizing the HTML, scripts, and CSS of your
 path: "/guide/auth-page-advanced-editor"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Advanced Editor
 
