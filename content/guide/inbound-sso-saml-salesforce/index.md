@@ -5,7 +5,7 @@ description: "This document covers the Inbound SSO SAML - Salesforce introductio
 path: "guide/inbound-sso-saml-salesforce"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 
 # Inbound SSO SAML - Salesforce

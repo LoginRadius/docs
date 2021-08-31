@@ -5,7 +5,7 @@ description: "Configure your Custom Domain settings, which will replace LoginRad
 path: "/guide/customize-domain"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Setup Custom Domain
 

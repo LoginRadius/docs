@@ -5,7 +5,7 @@ description: "This document covers the Inbound SSO SAML introduction and its pro
 path: "guide/inbound-sso-saml"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Inbound SSO SAML
 

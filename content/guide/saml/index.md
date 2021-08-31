@@ -5,7 +5,7 @@ description: "This is a guide for connecting SAML app."
 path: "/guide/saml"
 ---
 
-<span class="devloper-premium plan-tag">Paid</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Connect SAML App 
 
