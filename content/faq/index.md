@@ -199,7 +199,7 @@ Ask about products, implementation, use cases, and more— we are ready to help!
 
 Have questions or issues with our product?
 
-<a href="https://loginradiusassist.freshdesk.com/customer/" target="_blank">"Support for Developer Plans</a>
+<a href="https://loginradiusassist.freshdesk.com/customer/" target="_blank">"Support for Premium Features</a>
 
 
 ## Careers
