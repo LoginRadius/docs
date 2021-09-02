@@ -11,8 +11,6 @@ path: "/guide/auth-page-advanced-editor"
 
 The Advanced Editor allows you to manually edit the HTML, Scripts, and CSS that make up your LoginRadius Auth Page (IDX).
 
-> Note: You must have a **Developer** plan subscription or higher to access the **Advanced Editor** section.
-
 ## Access Auth Page (IDX) Advanced Editor
 
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **Auth Page (IDX)** and then navigate to the **Theme Customization** section.

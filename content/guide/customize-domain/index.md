@@ -11,9 +11,6 @@ path: "/guide/customize-domain"
 
 Domain customization allows you to use your domain instead of redirecting your consumers to the LoginRadius domain. It will help you maintain consistency and give a frictionless experience to your consumers.
 
-> Note: You must have a Developer plan subscription or higher to access the **Domain Customization** section.
-
-
 ## Configuration
 
 ### Step 1: Register Your Domain
