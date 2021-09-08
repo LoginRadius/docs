@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import React from "react"
 import Select from "react-select"
 import Footer from "../components/footer"
@@ -1696,7 +1696,7 @@ class Questionnaire extends React.Component {
                     <div>
                       <div className="logo">
                         <Link to="/">
-                          <img src={"/images/logo.svg"} width="228" />
+                          <img src={withPrefix("/images/logo.svg")} width="228" />
                         </Link>
                       </div>
                       <div className="right-section">
@@ -1857,7 +1857,7 @@ class Questionnaire extends React.Component {
                         </div>
                         <div className="no-print share-widget">
                           <div className="btn-box top-half">
-                            <img src={"/images/questionnaireImage.svg"} width={228} />
+                            <img src={withPrefix("/images/questionnaireImage.svg")} width={228} />
                           </div>
                           <div className="btn-box bottom-half">
                             <h3>
@@ -1922,7 +1922,7 @@ class Questionnaire extends React.Component {
                   <div className="dd-content max-height-restricted">
                     <div className="dd-logo">
                       <Link to="/">
-                        <img src={"/images/logo.svg"} width={228} />
+                        <img src={withPrefix("/images/logo.svg")} width={228} />
                       </Link>
                     </div>
                     {this.state.step === 0 ? (
