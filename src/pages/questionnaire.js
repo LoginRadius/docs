@@ -1,13 +1,9 @@
-import React from "react"
-import SelectSearch from "react-select-search"
-import Footer from "../components/footer"
 import { Link } from "gatsby"
-import Select, { components } from "react-select"
+import React from "react"
+import Select from "react-select"
+import Footer from "../components/footer"
 import SEO from "../components/seo"
-
 import "./questionnaire.css"
-import Logo from "../../public/images/logo.svg"
-import ResultBanner from "../../public/images/questionnaireImage.svg"
 
 const splashArt = animationClassName => {
   return (
@@ -1700,7 +1696,7 @@ class Questionnaire extends React.Component {
                     <div>
                       <div className="logo">
                         <Link to="/">
-                          <img src={Logo} width="228" />
+                          <img src={"/images/logo.svg"} width="228" />
                         </Link>
                       </div>
                       <div className="right-section">
@@ -1734,7 +1730,7 @@ class Questionnaire extends React.Component {
                       <div>
                         <div className="logo">
                           <Link to="/">
-                            <img src={Logo} width="228" />
+                            <img src={"/"} width="228" />
                           </Link>
                         </div>
                         <div className="right-section">
@@ -1861,7 +1857,7 @@ class Questionnaire extends React.Component {
                         </div>
                         <div className="no-print share-widget">
                           <div className="btn-box top-half">
-                            <img src={ResultBanner} width={228} />
+                            <img src={"/images/questionnaireImage.svg"} width={228} />
                           </div>
                           <div className="btn-box bottom-half">
                             <h3>
@@ -1926,7 +1922,7 @@ class Questionnaire extends React.Component {
                   <div className="dd-content max-height-restricted">
                     <div className="dd-logo">
                       <Link to="/">
-                        <img src={Logo} width={228} />
+                        <img src={"/images/logo.svg"} width={228} />
                       </Link>
                     </div>
                     {this.state.step === 0 ? (
