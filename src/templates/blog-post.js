@@ -137,7 +137,7 @@ const BlogPostTemplate = ({ data, location }) => {
                   <div className="headings">
                     <h2>Was this article helpful?</h2>
                   </div>
-                  {isSubmit?<div className="actions">
+                  {!isSubmit?<div className="actions">
                     <a  onClick={()=>setSubmit(true)} className="ga_event btn btn-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       No
                     </a>
-                  </div>:<div className="actions">"Thank you for your feedback !"</div>}
+                  </div>:<div className="actions">Thank you for your feedback !</div>}
                   <p>
                     Have more questions?{" "}
                     <a
