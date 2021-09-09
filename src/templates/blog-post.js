@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,6 +15,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
   const section = pathArray.length >= 2 ? pathArray[1] : undefined
+  const [isSubmit, setSubmit] = useState(false)
+
 
   return (
     <div className="global-wrapper">
@@ -135,8 +137,8 @@ const BlogPostTemplate = ({ data, location }) => {
                   <div className="headings">
                     <h2>Was this article helpful?</h2>
                   </div>
-                  <div className="actions">
-                    <a href="#" className="ga_event btn btn-primary">
+                  {isSubmit?<div className="actions">
+                    <a  onClick={()=>setSubmit(true)} className="ga_event btn btn-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -148,7 +150,7 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       Yes
                     </a>
-                    <a href="#" className="ga_event btn btn-outline">
+                    <a  onClick={()=>setSubmit(true)}  className="ga_event btn btn-outline">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -161,16 +163,15 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       No
                     </a>
-                  </div>
+                  </div>:<div className="actions">"Thank you for your feedback !"</div>}
                   <p>
-                    Any feedback or suggestion?{" "}
+                    Have more questions?{" "}
                     <a
                       href="https://loginradiusassist.freshdesk.com/customer/login"
                       target="_blank"
                     >
-                      Leave a comment here
+                      Submit a request
                     </a>
-                    .
                   </p>
                 </div>
               </div>
