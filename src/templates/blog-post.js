@@ -165,7 +165,7 @@ const BlogPostTemplate = ({ data, location }) => {
                     </a>
                   </div>:<div className="actions">"Thank you for your feedback!"</div>}
                   <p>
-                  Any feedback or suggestion? 
+                  Any feedback or suggestion?{" "}
                     <a
                       href="https://loginradiusassist.freshdesk.com/support/tickets/new"
                       target="_blank"
