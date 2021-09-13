@@ -163,14 +163,14 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       No
                     </a>
-                  </div>:<div className="actions">Thank you for your feedback !</div>}
+                  </div>:<div className="actions">"Thank you for your feedback!"</div>}
                   <p>
-                    Have more questions?{" "}
+                  Any feedback or suggestion? 
                     <a
-                      href="https://loginradiusassist.freshdesk.com/customer/login"
+                      href="https://loginradiusassist.freshdesk.com/support/tickets/new"
                       target="_blank"
                     >
-                      Submit a request
+                       Leave a comment here
                     </a>
                   </p>
                 </div>
