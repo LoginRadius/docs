@@ -7,7 +7,7 @@ p ~ div .try-me-out-button {
 }
 
 .try-me-out .try-me-out-client h4 {
-  margin-top: 40px;
+  margin-top: 22px;
   margin-bottom: 12px;
 }
 
@@ -15,7 +15,7 @@ p ~ div .try-me-out-button {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 
 .request-url .request-url-row .request-btn {
@@ -130,8 +130,7 @@ p ~ div .try-me-out-button {
 .request-url {
   background-color: #09263c;
   color: #fff;
-  padding: 24px 24px 0 24px;
-  margin-top: 24px;
+  padding: 20px 20px 0 20px;
 }
 .methodname {
   width: 85px;
@@ -181,10 +180,10 @@ p ~ div .try-me-out-button {
 }
 .response-header {
   width: 100%;
-  padding: 12px 24px;
+  padding: 12px 16px;
   color: #020b13;
   background: #f4f4f4;
-  margin-top: 40px;
+  margin-top: 32px;
   border: 1px solid #d1d3d4;
   border-bottom: 0;
   display: flex;

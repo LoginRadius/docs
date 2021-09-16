@@ -356,10 +356,11 @@ body {
 }
 .tab-container {
   .tab-menu {
-    background-color: $blue-darkest;
+    background-color: $white;
     ul {
       margin: 0 !important;
       padding: 0;
+      border-bottom: 1px solid $gray-medium;
       li {
         list-style-type: none;
         display: inline-block;
@@ -367,26 +368,26 @@ body {
         a {
           display: block;
           text-decoration: none;
-          background-color: $blue-darkest;
-          border-top: 1px solid $blue-darkest;
-          color: $gray-medium;
-          padding: 8px 24px;
+          background-color: $white;
+          color: $black;
+          padding: 8px 0;
           font-weight: 500;
+          margin-right: 24px;
+          border-bottom: 2px solid $white;
           &.active-a {
             background-color: $white;
-            color: $blue-darkest;
-            border-left: 1px solid $gray-medium;
-            border-top: 1px solid $gray-medium;
+            color: $blue;
+            border-color: $blue;
             &:hover,
             &:focus {
               background-color: $white;
-              color: $blue-darkest;
+              color: $blue;
+              border-color: $blue;
             }
           }
           &:hover,
           &:focus {
-            background-color: $blue-dark;
-            color: $white;
+            color: $blue;
           }
         }
       }
@@ -397,9 +398,8 @@ body {
   }
   .tab-active {
     display: block;
-    border: 1px solid $gray-medium;
     border-top: 0;
-    padding: 24px;
+    padding: 16px 0;
     margin-bottom: 1em;
     h3 {
       &:first-child {
@@ -410,6 +410,11 @@ body {
 }
 .slide-pane__header {
   flex-direction: row-reverse;
+  flex: 0 0 52px !important;
+  height: 52px !important;
+}
+.slide-pane__content {
+  padding: 24px !important;
 }
 .slide-pane__content .btn-sm {
   min-width: 88px;
