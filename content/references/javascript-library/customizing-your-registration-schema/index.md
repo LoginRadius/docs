@@ -5,8 +5,6 @@ description: "This is a document detailing registration schema customizations."
 path: "/references/javascript-library/customizing-your-registration-schema"
 ---
 
-<span class="devloper-premium plan-tag">Premium</span>
-
 # Customizing Your Registration Schema
 
 Your application follows a configured schema which populates the registration forms generated using the LoginRadius JavaScript Library (LoginRadiusV2.js). You are free to override this default configuration during the initialization of the JavaScript Library.
