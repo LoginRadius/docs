@@ -182,7 +182,8 @@
     }
     h1 {
       margin-top: 0;
-      font-size: 38px;
+      font-size: 36px;
+      line-height: 46px;
       font-weight: 500;
       margin-bottom: 16px;
       @media (max-width: 768px) {
@@ -190,10 +191,10 @@
       }
     }
     h2 {
-      margin-top: 48px;
-      margin-bottom: 24px;
-      font-weight: 500;
-      font-size: 30px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 24px;
       @media (max-width: 768px) {
         font-size: 24px;
         line-height: 36px;
@@ -204,10 +205,10 @@
     }
     h3 {
       position: relative;
-      margin-top: 48px;
-      margin-bottom: 24px;
-      font-size: 24px;
-      font-weight: 500;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 20px;
+      font-weight: 600;
       & + blockquote,
       & + h4 {
         margin-top: 24px;
@@ -215,10 +216,10 @@
     }
     h4 {
       position: relative;
-      margin-top: 48px;
-      margin-bottom: 24px;
-      font-size: 20px;
-      font-weight: 500;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 600;
       & + blockquote {
         margin-top: 24px;
       }
@@ -240,15 +241,18 @@
     }
     blockquote {
       background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-alert-circle'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
-      background-position: left 24px top 26px;
+      background-position: left 12px top 18px;
       background-repeat: no-repeat;
       background-color: #e8e9ea;
       color: $black;
       border-radius: 4px;
       border-radius: 4px;
-      margin: 48px 0;
-      padding: 24px 24px 24px 64px;
+      margin: 17px 0;
+      padding: 12px 12px 12px 40px;
+      background-size: 17px;
       p {
+        margin-bottom: 12px;
+        font-size: 15px;
         &:last-child {
           margin-bottom: 0;
         }
@@ -308,14 +312,14 @@
       margin: 0 0 2rem 1.2rem;
       list-style-type: disc;
       li {
-        margin: 0 auto 1rem;
+        margin: 0 auto 0.875rem;
       }
     }
     ol {
       margin: 0 0 2rem 1.2rem;
       padding: 0;
       li {
-        margin: 0 auto 1rem;
+        margin: 0 auto 0.875rem;
       }
     }
     table {
@@ -394,6 +398,7 @@
         margin-bottom: 0;
       }
       .actions {
+        margin-top: 24px;
         svg {
           fill: none;
           stroke-linecap: round;

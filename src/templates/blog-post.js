@@ -136,7 +136,7 @@ const BlogPostTemplate = ({ data, location }) => {
                     <h2>Was this article helpful?</h2>
                   </div>
                   <div className="actions">
-                    <a href="#" className="ga_event btn btn-primary">
+                    <a href="#" className="ga_event btn btn-primary  btn-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -148,7 +148,7 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       Yes
                     </a>
-                    <a href="#" className="ga_event btn btn-outline">
+                    <a href="#" className="ga_event btn btn-outline  btn-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

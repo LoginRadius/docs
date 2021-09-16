@@ -23,7 +23,9 @@
   font-size: 1rem;
   padding: 0 0.75rem;
 }
-
+.request-url .request-url-row .btn-sm {
+  min-width: 88px;
+}
 .request-url .method {
   width: 125px;
 }
