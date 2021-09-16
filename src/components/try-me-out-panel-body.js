@@ -31,7 +31,7 @@ export default class TryMeOut extends React.Component {
   }
 
   componentDidMount() {
-    this.onTryMeOutClick();
+    this.onTryMeOutClick()
   }
 
   handleTemplateChange = event => {
@@ -206,7 +206,7 @@ export default class TryMeOut extends React.Component {
                 onClick={this.onRequestSubmitClick}
               >
                 Send Request
-                </a>
+              </a>
             </div>
           </div>
           <div className={styles.requestUrlBody}>
@@ -277,7 +277,7 @@ export default class TryMeOut extends React.Component {
                 <div className={styles.bodyEditor}>
                   <textarea
                     name="body"
-                    rows="15"
+                    rows="12"
                     onChange={this.handleBodyChange}
                     value={clientState.body || ""}
                   />
@@ -299,7 +299,7 @@ export default class TryMeOut extends React.Component {
                 <textarea
                   readOnly
                   name="responseBody"
-                  rows="15"
+                  rows="12"
                   value={clientState.response.body || ""}
                 />
               </div>

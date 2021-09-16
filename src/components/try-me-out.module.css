@@ -8,7 +8,7 @@
 }
 
 .try-me-out .try-me-out-client h4 {
-  margin-top: 40px;
+  margin-top: 22px;
   margin-bottom: 12px;
 }
 
@@ -133,8 +133,7 @@
 .request-url {
   background-color: #09263c;
   color: #fff;
-  padding: 24px 24px 0 24px;
-  margin-top: 24px;
+  padding: 20px 20px 0 20px;
 }
 .methodname {
   width: 85px;
