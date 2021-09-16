@@ -54,11 +54,11 @@
 .templateParams div,
 .headers div {
   color: #09263c;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   width: 225px;
   text-align: left;
-  padding: 12px 24px;
+  padding: 8px 16px;
   background-color: #f4f4f4;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
@@ -108,7 +108,10 @@
   line-height: 1.4;
   font-size: 14px;
 }
-
+.body .bodyEditor textarea::-webkit-scrollbar-thumb,
+.response .responseBody textarea::-webkit-scrollbar-thumb {
+  background: rgba(249, 249, 249, 0.75);
+}
 .body .bodyEditor textarea:focus {
   outline: none;
 }
@@ -183,7 +186,7 @@
 }
 .response-header {
   width: 100%;
-  padding: 12px 24px;
+  padding: 8px 16px;
   color: #020b13;
   background: #f4f4f4;
   margin-top: 40px;
