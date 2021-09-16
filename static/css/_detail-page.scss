@@ -333,9 +333,9 @@
         & > tr {
           & > th {
             vertical-align: bottom;
-            border-bottom: 2px solid $gray-light;
+            border-bottom: 1px solid $gray-light;
             padding: 8px;
-            line-height: 2;
+            line-height: 1.5;
           }
         }
       }
@@ -343,9 +343,13 @@
         & > tr {
           & > td {
             padding: 8px;
-            line-height: 2;
+            line-height: 1.5;
             vertical-align: top;
-            border-top: 1px solid $gray-light;
+          }
+          &:not(:last-child) {
+            td {
+              border-bottom: 1px solid $gray-light;
+            }
           }
         }
       }

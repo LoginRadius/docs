@@ -105,7 +105,10 @@ p ~ div .try-me-out-button {
   line-height: 1.4;
   font-size: 14px;
 }
-
+.body .bodyEditor textarea::-webkit-scrollbar-thumb,
+.response .responseBody textarea::-webkit-scrollbar-thumb {
+  background: rgba(249, 249, 249, 0.75);
+}
 .body .bodyEditor textarea:focus {
   outline: none;
 }
