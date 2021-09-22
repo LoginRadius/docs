@@ -21,7 +21,7 @@ Team Management screen has the following options:
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 2. Select your app, then from the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
 
-   ![alt_text](images/team-management.png "image_tooltip")
+   ![alt_text](images/team-management-pricing.png "image_tooltip")
 
 
 ## Manage Team Member
@@ -34,7 +34,7 @@ This section displays the complete list of team members that have access to your
 
 > You can access these options for a team member by clicking the vertical ellipsis (three dots) available next to a team member's name:
 >
-> ![alt_text](images/teams-action.png "image_tooltip")
+> ![alt_text](images/teams-action-pricing.png "image_tooltip")
 
 
 ## Add Team Member
@@ -47,11 +47,13 @@ To add a new team member to your LoginRadius Site, click the **Add Member** butt
 
 You need to provide the following details:
 
-1. **Email Address(es):** Enter the team member’s email address.
+1. **Full Name :** Enter the team member's full name.  
 
-2. **App(s):** Select the App for which you are adding team members. If you have multiple LoginRadius App(s), you can find the list in the dropdown.
+2. **Email Address(es):** Enter the team member’s email address.
 
-3. **Role(s):** Select the team member’s Role.
+3. **App(s):** Select the App for which you are adding team members. If you have multiple LoginRadius App(s), you can find the list in the dropdown.
+
+4. **Role(s):** Select the team member’s Role.
 
     Available Role(s) are:
 

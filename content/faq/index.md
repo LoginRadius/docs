@@ -61,24 +61,6 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
   ![alt_text](images/need-help.png "image_tooltip")
 
-
-### How to upgrade the plan for your LoginRadius App?
-
-* Click the account icon from the right-top of your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> screen and select the **Manage Apps** option: 
-
-  ![alt_text](images/FAQ1.png "image_tooltip")
-
-The Manage App screen will appear.
-
-* Hover over the app tile for which you want to upgrade the plan, click the **App Actions** and then select the **Update Subscription** option: 
-
-  ![alt_text](images/FAQ2.png "image_tooltip")
-
-* Select a desired plan from the **Plan** drop-down and click the **Update** button.
-
-  ![alt_text](images/FAQ3.png "image_tooltip")
-
-
 ### How do I contact LoginRadius Support?
 
 * For quick, general, or verification-type questions, you can chat with a LoginRadius Support Team member by clicking the blue chat icon on the dashboard’s bottom right.
@@ -199,7 +181,7 @@ Ask about products, implementation, use cases, and more— we are ready to help!
 
 Have questions or issues with our product?
 
-<a href="https://loginradiusassist.freshdesk.com/customer/" target="_blank">"Support for Premium Features</a>
+<a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">Support for Premium Features</a>
 
 
 ## Careers
