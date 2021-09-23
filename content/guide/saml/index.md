@@ -249,6 +249,7 @@ Download the metadata for SAML configuration.
    ![alt_text](images/outbound-saml.png "image_tooltip")
    
    The following pop-up will appear:
+   
    ![alt_text](images/outbound-saml-popup.png "image_tooltip")
    
 5. Click **Enable** button from above pop-up and then click the **Let’s Configure** option that appeared on **Outbound SSO - SAML** tile.
