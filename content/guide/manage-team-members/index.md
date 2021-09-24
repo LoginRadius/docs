@@ -21,7 +21,14 @@ Team Management screen has the following options:
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 2. Select your app, then from the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
 
-   ![alt_text](images/team-management-pricing.png "image_tooltip")
+   ![alt_text](images/team-management-pricing1.png "image_tooltip")
+
+3. Click the toggle button next to the **Team Management** and the following pop-up will appear:   
+
+   ![alt_text](images/team-management-popup.png "image_tooltip")
+
+4. Click the **Enable** button to enable the **Team Management** feature. You will be prompted to add payment details, if not already provided.
+
 
 
 ## Manage Team Member
