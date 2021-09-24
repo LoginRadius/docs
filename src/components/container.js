@@ -755,7 +755,7 @@ const Middle = () => {
                 <Link to="/guide/web-sso"> Web SSO</Link>
               </li>
               <li>
-                <Link to="/guide/fed-sso">Federated SSO</Link>
+                <Link to="/guide/fed-sso">Outbound SSO</Link>
               </li>
             </ul>
           </div>
@@ -774,16 +774,16 @@ const Middle = () => {
                 <Link to="/guide/web-sso"> Enable Web SSO</Link>
               </li>
               <li>
-                <Link to="/guide/saml">Connect SAML App </Link>
+                <Link to="/guide/saml">Outbound SAML SSO </Link>
               </li>
               <li>
-                <Link to="/guide/jwt"> Connect JWT App</Link>
+                <Link to="/guide/jwt"> Outbound JWT SSO </Link>
               </li>
               <li>
-                <Link to="/guide/oauth"> Connect OAuth App</Link>
+                <Link to="/guide/oauth"> Outbound OAuth SSO </Link>
               </li>
               <li>
-                <Link to="/guide/oidc">Connect OIDC App </Link>
+                <Link to="/guide/oidc"> Outbound OIDC SSO </Link>
               </li>
               <li>
                 <Link to="/guide/big-commerce">Integrate BigCommerce</Link>

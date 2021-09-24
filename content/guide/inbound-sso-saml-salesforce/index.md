@@ -69,11 +69,11 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
 3. Search for **Inbound SSO SAML** in the search bar, locate Inbound SSO SAML and click the **Let’s Configure** option.
 
-   ![alt_text](images/Integration-inbound.png "image_tooltip")
+   ![alt_text](images/integrations-available-new.png "image_tooltip")
 
    The following screen will appear:
 
-   ![alt_text](images/saml.png "image_tooltip")
+   ![alt_text](images/configure.png "image_tooltip")
 
 4. Enter or select the following values:
 
