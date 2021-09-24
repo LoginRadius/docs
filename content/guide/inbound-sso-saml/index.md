@@ -44,9 +44,9 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
 2. Click the **Add** button for adding a new Inbound SSO SAML app. The configuration options will appear.
 
-3. Search for **Inbound SSO SAML** in the search bar, locate **Inbound SSO SAML** and click the **Try It For Free** option. The following pop-up will appear, click the **Enable** button.
+3. Search for **Inbound SSO SAML** in the search bar, locate **Inbound SSO SAML** and click the **Add me** option. The following pop-up will appear, click the **Enable** button.
 
-   ![alt_text](images/enable.png "image_tooltip")
+   ![alt_text](images/enable-pricing.png "image_tooltip")
 
 4. From the **Available Integrations** screen, click the **Let’s Configure** under the Inbound SSO SAML box. The following screen will appear:
 
