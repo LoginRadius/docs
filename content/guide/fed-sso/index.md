@@ -15,7 +15,7 @@ Outbound SSO comes in handy while implementing SSO with third-party applications
 
 LoginRadius acts as an IdP, which stores and authenticates the identities that your consumers use to log in to your systems, applications, files servers, and more depending upon the configuration. The following flow diagram displays the role of LoginRadius as IDP:
 
-![alt_text](/images/fed-sso-flow.png "image_tooltip")
+![alt_text](images/fed-sso-flow.png "image_tooltip")
 
 ## Outbound SSO Protocols
 
