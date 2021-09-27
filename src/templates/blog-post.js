@@ -141,8 +141,8 @@ const BlogPostTemplate = ({ data, location }) => {
                     <a  onClick={()=>setSubmit(true)} className="ga_event btn btn-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
+                        width="24"
+                        height="24"
                         viewBox="0 0 512 512"
                       >
                         <title>Yes</title>
@@ -153,8 +153,8 @@ const BlogPostTemplate = ({ data, location }) => {
                     <a  onClick={()=>setSubmit(true)}  className="ga_event btn btn-outline">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
+                        width="24"
+                        height="24"
                         viewBox="0 0 512 512"
                       >
                         <title>No</title>
@@ -165,14 +165,14 @@ const BlogPostTemplate = ({ data, location }) => {
                     </a>
                   </div>:<div className="actions">"Thank you for your feedback!"</div>}
                   <p>
-                  Any feedback or suggestion?{" "}
+                    Have more questions?{" "}
                     <a
-                      href="https://loginradiusassist.freshdesk.com/support/tickets/new"
+                      href="https://loginradiusassist.freshdesk.com/customer/login"
                       target="_blank"
                     >
-                       Leave a comment here
+                      Submit a request
                     </a>
-                  </p>
+                  </p>                  
                 </div>
               </div>
             </div>

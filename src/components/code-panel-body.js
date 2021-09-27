@@ -8,19 +8,19 @@ const languageOptions = {
   python: "Python",
   ruby: "Ruby",
   csharp: "C#",
-  php: "PHP"
+  php: "PHP",
 }
 
 const codeTemplate = {
   // cURL template
-  "cURL": `curl -X |method| \\
+  cURL: `curl -X |method| \\
   '|endpoint|' \\
   -H 'Cache-Control: no-cache' \\
   -H 'content-Type: application/json' \\
   -d  "|postbody|"`,
 
   // Go template
-  "Go": `package main
+  Go: `package main
 
   import (
       "fmt"
@@ -44,7 +44,7 @@ const codeTemplate = {
   }`,
 
   // NodeJS template
-  "NodeJS": `var request = require("request");
+  NodeJS: `var request = require("request");
 
   var options = {
     method: '|method|',
@@ -60,7 +60,7 @@ const codeTemplate = {
   });`,
 
   // Python template
-  "Python": `import requests
+  Python: `import requests
 
   url = "|endpoint|"
   querystring = |paramsjson|
@@ -72,7 +72,7 @@ const codeTemplate = {
   print(response.text)`,
 
   // Ruby template
-  "Ruby": `require 'uri'
+  Ruby: `require 'uri'
   require 'net/http'
   url = URI('|endpoint|')
   http = Net::HTTP.new(url.host, url.port)
@@ -113,7 +113,7 @@ const codeTemplate = {
   Console.WriteLine(response);`,
 
   // PHP template
-  "PHP": `<?php 
+  PHP: `<?php 
 
   $curl = curl_init();
   curl_setopt_array($curl, array(
@@ -136,7 +136,7 @@ const codeTemplate = {
      echo 'cURL Error #:' . $err;
   } else {
      echo $response;
-  }`
+  }`,
 }
 
 export default class TryMeOut extends React.Component {
@@ -160,12 +160,12 @@ export default class TryMeOut extends React.Component {
           body: null,
         },
       },
-      selectedLanguage: "cURL"
+      selectedLanguage: "cURL",
     }
   }
 
   componentDidMount() {
-    this.onTryMeOutClick();
+    this.onTryMeOutClick()
   }
 
   handleTemplateChange = event => {
@@ -325,59 +325,80 @@ export default class TryMeOut extends React.Component {
 
   render() {
     const { id } = this.props
-    const { params, endpoint, method, clientState, selectedLanguage } = this.state
+    const {
+      params,
+      endpoint,
+      method,
+      clientState,
+      selectedLanguage,
+    } = this.state
 
-    let paramsString = "";
-    let paramsJson = "";
+    let paramsString = ""
+    let paramsJson = ""
 
     if (params && params.queryParams && params.queryParams.length) {
       paramsString = "?"
-      paramsJson = "{";
+      paramsJson = "{"
       for (let param of params.queryParams) {
         paramsString = paramsString + param.key + "=&"
-        paramsJson = paramsJson + '\"' + param.key + '\":\"\",'
+        paramsJson = paramsJson + '"' + param.key + '":"",'
       }
 
-      paramsString = paramsString.slice(0, -1);
-      paramsJson = paramsJson.slice(0, -1) + "}";
+      paramsString = paramsString.slice(0, -1)
+      paramsJson = paramsJson.slice(0, -1) + "}"
     }
 
-    let formattedCode = codeTemplate[selectedLanguage].replace("|method|", method);
-    let rubyMethod = method[0] + method.toLowerCase().slice(1);
-    formattedCode = formattedCode.replace("|rubymethod|", rubyMethod);
+    let formattedCode = codeTemplate[selectedLanguage].replace(
+      "|method|",
+      method
+    )
+    let rubyMethod = method[0] + method.toLowerCase().slice(1)
+    formattedCode = formattedCode.replace("|rubymethod|", rubyMethod)
 
     // if (selectedLanguage === languageOptions.Ruby) {
     // } else {
     //   formattedCode = formattedCode.replace("|method|", method);
     // }
 
-
     if (formattedCode.indexOf("|paramsjson|") !== -1) {
       formattedCode = formattedCode
         .replace("|paramsjson|", paramsJson)
-        .replace("|endpoint|", endpoint);
+        .replace("|endpoint|", endpoint)
     } else {
-      formattedCode = formattedCode.replace("|endpoint|", endpoint + paramsString);
+      formattedCode = formattedCode.replace(
+        "|endpoint|",
+        endpoint + paramsString
+      )
     }
 
     if (params && params.body && formattedCode.indexOf("|postbody|") !== -1) {
-      formattedCode = formattedCode.replace("|postbody|", JSON.stringify(params.body));
+      formattedCode = formattedCode.replace(
+        "|postbody|",
+        JSON.stringify(params.body)
+      )
     } else {
-      formattedCode = formattedCode.replace("|postbody|", "");
+      formattedCode = formattedCode.replace("|postbody|", "")
     }
 
     return (
       <div id={id} className={`${styles.tryMeOut}`}>
         <div className={`${styles.tryMeOutClient}`}>
           <div className={styles.requestUrl}>
-            <div style={{ justifyContent: "space-evenly" }} className={styles.requestUrlRow}>
-              {Object.keys(languageOptions).map((key) => (<a
-                key={languageOptions[key]}
-                className={`${styles.requestBtn} btn btn-primary`}
-                onClick={() => this.setState({ selectedLanguage: languageOptions[key] })}
-              >
-                {languageOptions[key]}
-              </a>))}
+            <div
+              style={{ justifyContent: "space-evenly" }}
+              className={styles.requestUrlRow}
+            >
+              {Object.keys(languageOptions).map(key => (
+                <a
+                  key={languageOptions[key]}
+                  className={`${styles.requestBtn} btn btn-primary btn-sm`}
+                  onClick={() =>
+                    this.setState({ selectedLanguage: languageOptions[key] })
+                  }
+                >
+                  {languageOptions[key]}
+                </a>
+              ))}
             </div>
           </div>
           <div className={styles.requestUrlBody}>
@@ -451,7 +472,7 @@ export default class TryMeOut extends React.Component {
                 <textarea
                   name="body"
                   rows="15"
-                  onChange={() => { }}
+                  onChange={() => {}}
                   value={formattedCode}
                 />
               </div>
@@ -471,7 +492,15 @@ export default class TryMeOut extends React.Component {
                   readOnly
                   name="responseBody"
                   rows="15"
-                  value={this.state.sampleresponse ? JSON.stringify(JSON.parse(this.state.sampleresponse), null, 4) : ""}
+                  value={
+                    this.state.sampleresponse
+                      ? JSON.stringify(
+                          JSON.parse(this.state.sampleresponse),
+                          null,
+                          4
+                        )
+                      : ""
+                  }
                 />
               </div>
             </div>

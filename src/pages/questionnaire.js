@@ -1,10 +1,8 @@
+import { Link, withPrefix } from "gatsby"
 import React from "react"
-import SelectSearch from "react-select-search"
+import Select from "react-select"
 import Footer from "../components/footer"
-import { Link } from "gatsby"
-import Select, { components } from "react-select"
 import SEO from "../components/seo"
-
 import "./questionnaire.css"
 import Logo from "../../static/images/logo.svg"
 import ResultBanner from "../../static/images/questionnaire_graphics.svg"
@@ -1700,7 +1698,7 @@ class Questionnaire extends React.Component {
                     <div>
                       <div className="logo">
                         <Link to="/">
-                          <img src={Logo} width="228" />
+                          <img src={withPrefix("/images/logo.svg")} width="228" />
                         </Link>
                       </div>
                       <div className="right-section">
@@ -1734,7 +1732,7 @@ class Questionnaire extends React.Component {
                       <div>
                         <div className="logo">
                           <Link to="/">
-                            <img src={Logo} width="228" />
+                            <img src={"/"} width="228" />
                           </Link>
                         </div>
                         <div className="right-section">
@@ -1861,7 +1859,7 @@ class Questionnaire extends React.Component {
                         </div>
                         <div className="no-print share-widget">
                           <div className="btn-box top-half">
-                            <img src={ResultBanner} width={228} />
+                            <img src={withPrefix("/images/questionnaireImage.svg")} width={228} />
                           </div>
                           <div className="btn-box bottom-half">
                             <h3>
@@ -1926,7 +1924,7 @@ class Questionnaire extends React.Component {
                   <div className="dd-content max-height-restricted">
                     <div className="dd-logo">
                       <Link to="/">
-                        <img src={Logo} width={228} />
+                        <img src={withPrefix("/images/logo.svg")} width={228} />
                       </Link>
                     </div>
                     {this.state.step === 0 ? (
