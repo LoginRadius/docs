@@ -67,7 +67,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
   ![alt_text](images/upgrade-support.png "image_tooltip")
 
-* The following screen will appear:
+  The following screen will appear:
 
   ![alt_text](images/support-conf.png "image_tooltip")
 
