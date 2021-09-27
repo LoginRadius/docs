@@ -5,7 +5,7 @@ description: "This is a guide for configuring SMS provider settings."
 path: "/guide/setup-sms-provider"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Setup SMS Provider
 

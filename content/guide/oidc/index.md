@@ -5,8 +5,7 @@ description: "This is a guide for implementing OpenID Connect flow in the LoginR
 path: "/guide/oidc"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # OpenID Connect
 
@@ -20,23 +19,21 @@ This <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-
 
    ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
-2. Click **Add** button for adding a new OpenID app. The following configuration options will appear:
+2. Click **Add** button for adding a new OpenID app. Either search for **OpenID** in search bar or go to the **Select Category** dropdown and select **Outbound SSO** category. Locate **OpenID** and click the **Try It For Free** link.
 
-   ![alt_text](/images/OpenID-config.png "image_tooltip")
+   ![alt_text](images/outbound-oidc.png "image_tooltip")
+   
+   The following screen will appear:
+   
+   ![alt_text](images/outbound-oidc-popup.png "image_tooltip")
 
-3. Either search for **OpenID** in search bar or go to the **Select Category** dropdown and select **Federation** category. Locate **OpenID** and click the **Add Me** link. The following pop-up will appear: 
+3. Click the **Enable** button and then click the **Let’s Configure** option that appeared on **Outbound SSO - OIDC** tile.
 
-   ![alt_text](/images/OpenID-addon.png "image_tooltip")
+   The following screen will appear:
 
-4. Click the **Enable** button. The OpenID app is now available in the **Available Integrations**. 
+   ![alt_text](images/outbound-oidc-details.png "image_tooltip")
 
-   ![alt_text](../../guide/oidc/images/oidc-configure.png "image_tooltip")
-
-5. Click the **Let's Configure** option under **OpenID** box. The following screen will appear:
-
-   ![alt_text](/images/OpenID-settings.png "image_tooltip")
-
-6. Enter or select the following to configure the OpenID app:
+4. Enter or select the following to configure the OpenID app:
 
    - **App Name:** Enter the name for your OpenID Connect App.
 
@@ -56,7 +53,7 @@ This <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-
 
    - **Data Mapping:** Enter your desired fields and how they map out the left column is how they will show up in the OIDC, the right column is the field name in the LoginRadius profile, keep in mind that for some of the profile fields you will need to use dot notation to access them.
 
-7. Click the **Save** button.
+5. Click the **Save** button.
 
 The OpenID app is now configured.
 

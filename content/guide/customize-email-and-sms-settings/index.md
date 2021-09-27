@@ -41,7 +41,7 @@ Click the **Save** button to save your changes.
 
 ### SMS Settings
 
-<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p><span class="devloper-premium plan-tag">Premium</span></p>
 <p> </p>
 
 You can edit your application's SMS settings by clicking on the **SMS Settings** tab. The settings screen will show as below:

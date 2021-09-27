@@ -4,6 +4,8 @@ import Select from "react-select"
 import Footer from "../components/footer"
 import SEO from "../components/seo"
 import "./questionnaire.css"
+import Logo from "../../static/images/logo.svg"
+import ResultBanner from "../../static/images/questionnaire_graphics.svg"
 
 const splashArt = animationClassName => {
   return (
@@ -1929,7 +1931,7 @@ class Questionnaire extends React.Component {
                       <div className="qa">
                         <h1>Does LoginRadius Support my Use Case?</h1>
                         <p>
-                          Answer a few questions and get a self-served
+                          Answer a few questions and get a self-serve
                           implementation guide addressing your needs.
                         </p>
                       </div>

@@ -21,7 +21,6 @@
 
 .request-url .request-url-row .request-btn {
   font-size: 1rem;
-  padding: 0 0.75rem;
 }
 .request-url .request-url-row .btn-sm {
   min-width: 88px;
@@ -200,4 +199,7 @@
   margin: 0 !important;
   font-size: 16px !important;
   font-weight: 400 !important;
+}
+.slide-pane__header {
+  flex-direction: row-reverse;
 }

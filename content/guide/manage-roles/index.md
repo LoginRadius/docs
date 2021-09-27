@@ -5,14 +5,11 @@ description: "This is a guide for managing roles in the LoginRadius Identity Pla
 path: "/guide/manage-roles"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Manage Roles
 
 This guide explains how to manage roles and permissions for your registered users using the LoginRadius Dashboard.
-
-> Note: You must have a **Developer Pro** plan subscription to access the **Manage Roles** section in the LoginRadius Dashboard.
-
 
 ## Access Manage Roles Section
 

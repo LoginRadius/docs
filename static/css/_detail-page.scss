@@ -412,6 +412,11 @@
           transition: color 0.35s, background-color 0.35s, border-color 0.35s,
             box-shadow 0.35s, opacity 0.35s;
         }
+        .btn {
+          min-height: 36px;
+          padding: 0 12px;
+          font-size: 1rem;
+        }
         .btn-primary {
           svg {
             stroke: $white;

@@ -5,8 +5,8 @@ description: "This is a tutorial with JWT implementation."
 path: "/guide/jwt"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Premium</span>
+
 
 # JWT
 
@@ -73,7 +73,7 @@ The JWT will be encrypted with an algorithm. The decrypted JWT contains the Head
 
   ```
 
-## JWT Login Guide
+## Outbound SSO - JWT 
 
 This guide will take you through the process of setup and implementation of the JWT SSO. It covers the following:
 
@@ -114,25 +114,20 @@ This section covers the required configurations that you need to perform in the 
 
    ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
-2. Click **Add** option for adding a new JWT app. The following configuration options will appear: 
+2. Click the **Add** option for adding a new JWT app. Either search for JWT in the search bar or go to the **Select Category** dropdown and select **Outbound SSO**. Locate **Outbound SSO - JWT** and click the **Try It For Free** button.
 
-   ![alt_text](../../guide/jwt/images/jwt-configuration.png "image_tooltip")
+   ![alt_text](../../guide/jwt/images/outbound-jwt.png "image_tooltip")
+   
+   The following pop-up will appear:
+   
+   ![alt_text](../../guide/jwt/images/outbound-jwt-popup.png "image_tooltip")
 
-3. Either search for JWT in the search bar or go to the **Select Category** dropdown and selected **Federation**. Locate **JWT** and click the **Add Me**. Select Enable.
+3. Click the **Enable** button and then click the **Let’s Configure** option that appeared on **Outbound SSO - JWT** tile.
+   The following screen will appear:
+   
+   ![alt_text](../../guide/jwt/images/outbound-jwt-details.png "image_tooltip")
 
-   ![alt_text](../../guide/jwt/images/jwt-federation-option.png "image_tooltip")
-
-   ![alt_text](../../guide/jwt/images/jwt-enable.png "image_tooltip")
-
-   After this configuration, the app is available in **Available Integrations**. 
-
-   ![alt_text](../../guide/jwt/images/jwt-configure-me.png "image_tooltip")
-
-4. Click the **Let's Configure** under JWT. The following screen will appear:
-
-   ![alt_text](../../guide/jwt/images/jwt-configure.png "image_tooltip")
-
-5. You need to provide or select the following values to configure the JWT App.
+4. Enter or select the following values to configure the JWT App.
 
    * **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
 
@@ -142,13 +137,13 @@ This section covers the required configurations that you need to perform in the 
 
    * **Algorithms:** Algorithm to sign JWT. LoginRadius supports the following algorithms:
 
-     * HS256
-     * HS384
-     * HS512
-     * RS256
-     * RS384
-     * RS512
-
+       * HS256
+       * HS384
+       * HS512
+       * RS256
+       * RS384
+       * RS512
+  
    * **Enter The Key** Specify the Key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
        * Enter any value for the key column( left column), these values will be used as keys for claims in the payload.
 
@@ -156,7 +151,7 @@ This section covers the required configurations that you need to perform in the 
 
      Similarly, by clicking the **Add Row** button, you can map multiple attributes.
 
-6. Click the **Save** button.
+5. Click the **Save** button.
 
 
 ### JWT LoginRadius APIs

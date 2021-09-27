@@ -21,6 +21,16 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 *  [Live Chat](#how-do-i-contact-loginradius-support)
 *  <a href="https://www.loginradius.com/docs/developer/" target="_blank">Support Document</a>
 
+### How to create a new app in LoginRadius?
+
+* Click the **+ New App** from the header of the <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>.
+
+  ![alt_text](images/create-new-app.png "image_tooltip")
+
+* Enter the desired app name and URL for the app, and then select a data center of your choice. 
+
+* Click the **Create** button.  
+
 ### How to Retrieve API key and secret?
 
 * Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
@@ -51,6 +61,25 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 * You can reset the API Secret by clicking the respective **reset** button.
 
+### How to upgrade Support / SLA / Rate Limit for your LoginRadius App?
+
+* Click the **Support** from the header of your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> and then click **Upgrade Support** from displayed options.
+
+  ![alt_text](images/upgrade-support.png "image_tooltip")
+
+* The following screen will appear:
+
+  ![alt_text](images/support-conf.png "image_tooltip")
+
+* Click the toggle button next to the desired support option. The following pop-up will appear:
+
+  ![alt_text](images/popup.png "image_tooltip")
+
+* Click the **Enable** button to upgrade the support plan.  
+
+* Similarly, you can also upgrade **SLA** and **Rate Limit**.
+
+
 ### How to access the LoginRadius Support section?
 
 * To access the LoginRadius Support section, login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, from the top header panel, click **Support** as displayed in the below screen.
@@ -60,24 +89,6 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 * Apart from this, you can also check out the **Report An Issue** section available at the bottom of getting started page as displayed in the below screen:
 
   ![alt_text](images/need-help.png "image_tooltip")
-
-
-### How to upgrade the plan for your LoginRadius App?
-
-* Click the account icon from the right-top of your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> screen and select the **Manage Apps** option: 
-
-  ![alt_text](images/FAQ1.png "image_tooltip")
-
-The Manage App screen will appear.
-
-* Hover over the app tile for which you want to upgrade the plan, click the **App Actions** and then select the **Update Subscription** option: 
-
-  ![alt_text](images/FAQ2.png "image_tooltip")
-
-* Select a desired plan from the **Plan** drop-down and click the **Update** button.
-
-  ![alt_text](images/FAQ3.png "image_tooltip")
-
 
 ### How do I contact LoginRadius Support?
 
@@ -199,7 +210,7 @@ Ask about products, implementation, use cases, and more— we are ready to help!
 
 Have questions or issues with our product?
 
-<a href="https://loginradiusassist.freshdesk.com/customer/" target="_blank">"Support for Developer Plans</a>
+<a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">Support for Premium Features</a>
 
 
 ## Careers
