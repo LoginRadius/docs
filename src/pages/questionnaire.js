@@ -1732,8 +1732,7 @@ class Questionnaire extends React.Component {
                       <div>
                         <div className="logo">
                           <Link to="/">
-                            <img src={"/"} width="228" />
-                          </Link>
+                          <img src={withPrefix("/images/logo.svg")} width="228" />                          </Link>
                         </div>
                         <div className="right-section">
                           <div className="authentication-buttons">

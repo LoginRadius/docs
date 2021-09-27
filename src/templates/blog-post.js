@@ -167,7 +167,7 @@ const BlogPostTemplate = ({ data, location }) => {
                   <p>
                     Have more questions?{" "}
                     <a
-                      href="https://loginradiusassist.freshdesk.com/customer/login"
+                      href="https://loginradiusassist.freshdesk.com/support/tickets/new"
                       target="_blank"
                     >
                       Submit a request
