@@ -11,6 +11,8 @@ path: "/guide/customize-domain"
 
 Domain customization allows you to use your domain instead of redirecting your consumers to the LoginRadius domain. It will help you maintain consistency and give a frictionless experience to your consumers.
 
+ Also, enabling this feature removes the security seal of LoginRadius i.e.  Powered by LoginRadius will no longer be visible on your Auth Page (IDX).
+
 ## Configuration
 
 ### Step 1: Register Your Domain
@@ -22,12 +24,17 @@ For example: Your LoginRadius domain is `https://<your-app-name>.hub.loginradius
 
 ### Step 2: Access Domain Customization Section
 
-To access the **Domain Customization**, log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click the **Auth Page (IDX)** and then navigate to the **Domain Customization** section. 
+- To access the **Domain Customization**, log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click the **Auth Page (IDX)** and then navigate to the **Domain Customization** section. 
 
-Click the down arrow and the **Domain Customization** screen will appear:
+- Click the down arrow and the **Domain Customization** screen will appear:
 
+<img src="images/domainSelectNew.png" alt="Domain Customization" />
 
-<img src="images/domaincustomization1.png" alt="Domain Customization" />
+- Click the toggle button next to **Domain Customization** and the following pop-up will appear:
+
+<img src="images/domainPopupNew.png" alt="Domain Popup" />
+
+- Click the **Enable** button to enable the **Domain Customization** feature. You will be prompted to add payment details, if not already provided.
 
 
 ### Step 3: Configure Custom Domain
