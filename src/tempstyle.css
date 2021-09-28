@@ -1,0 +1,10 @@
+.search__list {
+  position: absolute;
+  background: #ccc;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+div.search {
+  width: 400px;
+}

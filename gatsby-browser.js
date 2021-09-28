@@ -7,6 +7,8 @@ import "./src/normalize.css"
 //import "./src/style.css"
 import "./static/css/base.min.css"
 
+import "./src/tempstyle.css"
+
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
 
