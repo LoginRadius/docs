@@ -1,8 +1,7 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
-import Search from "./search"
-import Logo from "../../public/images/logo.svg"
+import Logo from "../../static/images/logo.svg"
 // Header component
 export default class Header extends Component {
   constructor(props) {
@@ -61,8 +60,7 @@ export default class Header extends Component {
             </Link>
           </div>
           <div className="right-section">
-            <Search classNames="search " />
-            {/* <div
+            <div
               className="search "
               onMouseOver={() => (this._shouldClose = false)}
               onMouseLeave={() => (this._shouldClose = true)}
@@ -87,7 +85,7 @@ export default class Header extends Component {
                   </ul>
                 ) : null}
               </form>
-            </div> */}
+            </div>
             <div className="authentication-buttons">
               <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login" target="_blank"  className="btn btn-secondary">
                 Login
