@@ -87,18 +87,18 @@ To support the BigCommerce SSO flows, you will need to handle the following:
 2. Click the **Add** button for adding a new BigCommerce app. The configuration options will appear. 
 
 
-3. Either search for **BigCommerce** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **BigCommerce** and click the **Add Me** option. 
+3. Either search for **BigCommerce** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **BigCommerce** and click the **Try It For Free** option. 
 
-   ![alt_text](images/bigcommerce-add.png "image_tooltip")
+   ![alt_text](images/bigcommerce-add1.png "image_tooltip")
 
    From the below pop-up, click the **Enable** button: 
 
-   ![alt_text](images/bigcommerce-popup.png "image_tooltip")
+   ![alt_text](images/bigcommerce-popup1.png "image_tooltip")
 
 
 4. After this configuration, the app is available in **Available Integrations**. There, click the **Let's configure** option under the BigCommerce box.
 
-   ![alt_text](images/bigcommerce-conf.png "image_tooltip")
+   ![alt_text](images/bigcommerce-configure-me.png "image_tooltip")
 
    The following screen will appear:
 
