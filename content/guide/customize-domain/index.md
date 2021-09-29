@@ -28,11 +28,11 @@ For example: Your LoginRadius domain is `https://<your-app-name>.hub.loginradius
 
 - Click the down arrow and the **Domain Customization** screen will appear:
 
-<img src="images/domainSelectNew.png" alt="Domain Customization" />
+  <img src="images/domainSelectNew1.png" alt="Domain Customization" />
 
 - Click the toggle button next to **Domain Customization** and the following pop-up will appear:
 
-<img src="images/domainPopupNew.png" alt="Domain Popup" />
+  <img src="images/domainPopupNew1.png" alt="Domain Popup" />
 
 - Click the **Enable** button to enable the **Domain Customization** feature. You will be prompted to add payment details, if not already provided.
 
@@ -41,19 +41,15 @@ For example: Your LoginRadius domain is `https://<your-app-name>.hub.loginradius
 
 Enter your domain in the **Domain Name** field and click the **Add** button, the below screen will appear:
 
-
-<img src="images/pendingverification1.png" alt="Add Domain" />
-
+<img src="images/pendingverification2.png" alt="Add Domain" />
 
 > Note: After adding the domain, make sure to add the given records (Type and Value) to your DNS provider.
 
 Once LoginRadius verifies your domain, its status will be changed to **verified**. The Auth Page (IDX) will start using your domain `https://<your-domain>.com/auth.aspx` instead of `https://<your-app-name>.hub.loginradius.com/auth.aspx`
 
+<img src="images/verificationsuccess1.png" alt="Custom Domain Status" />
 
-
-<img src="images/verificationsuccess.png" alt="Custom Domain Status" />
-
-**Note**: The domain verification might take up to 12 hours.
+> **Note**: The domain verification might take up to 12 hours.
 
 
 [Go Back to Home Page](/)
