@@ -1,35 +1,34 @@
 ### Step 1: Visit Integration Section
 
-Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
 
-![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
-### Step 2: Add Webhook
+2. Click the **Add** button from the above screen, and you will find the list of all available integrations as displayed in the below screen:
 
-Click the **Add** button from the above screen, and you will find the list of all available integrations as displayed in the below screen:
+   ![alt_text](./images/webhook.png "image_tooltip")
+   
+3. Click the **Try It For Free** option and the following pop-up will appear:
+   ![alt_text](./images/webhook-pop-up.png "image_tooltip")
 
-![alt_text](./images/available-integration-pricing.png "image_tooltip")
+4. Click the **Enable** button from above pop-up and then rom the **Available Integrations** screen, click the **Let’s Configure** option under the Webhook box. The following screen will appear:
 
-Click the **Let's Configure** button in the Webhook tile as on the above screen and follow step 3.
+   ![alt_text](./images/add-webhook.png "image_tooltip")
 
-### Step 3: Configure Webhook
+5. Enter or select the following details on the Webhook screen:
 
-Enter or select the following details on the Webhook screen:
+   - **Name**: Enter the name of the Webhook
+   - **Event**: Choose the type of event.
 
-- **Name**: Enter the name of the Webhook
-- **Event**: Choose the type of event.
+     | ALLOWED EVENTS                                                                                                                                                                                                                                                                                       |
+     | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+     | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext |
 
-  | ALLOWED EVENTS                                                                                                                                                                                                                                                                                       |
-  | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | Login, Register, UpdateProfile, ResetPassword, ChangePassword, emailVerification, BlockAccount, DeleteAccount, AssignRoles, UnassignRoles, LinkAccount, UnlinkAccount, VerifyPhoneNumber, UpdateCustomobject, DeleteCustomObject, CreateCustomObject, InvalidateEmailVerification, RemoveRoleContext |
+   - **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
 
-- **Subscribe URL**: Enter the URL where payload data will be sent when the webhook event is triggered.
+   > **Note**: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
 
-> Note: You can change the list of subscribed events through the API at any time. By default, Webhooks are only subscribed to the push event.
-
-![alt_text](./images/add-webhook.png "image_tooltip")
-
-Click the **Save** button after providing the required details.
+6. Click the **Save** button after providing the required details.
 
 You will find the successfully configured webhook in the **Configured Integrations** section as displayed in the below screen:
 
