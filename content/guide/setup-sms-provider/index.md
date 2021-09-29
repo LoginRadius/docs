@@ -12,14 +12,23 @@ path: "/guide/setup-sms-provider"
 Setting up an SMS provider allows you to send and receive text messages to and from an SMS capable device over the network. LoginRadius Identity Platform establishes SMS communication by sending the SMS from your SMS provider to your consumers. To send out SMS from your SMS provider, you should follow the below steps.
 
 
-## Step 1: Access SMS Provider Settings
+## Step 1: Access SMS Provider
 
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
-2. Select your app, then from the left navigation panel, click **Configuration** and then navigate to the **Email/SMS Provider Settings** section. 
-3. Click the down arrow and select the **SMS Provider Settings** section as highlighted in the below screen.
+2. Select your app and navigate to **Integration** from the left navigation panel. The following screen will appear:
 
-   ![alt_text](images/sms-provider.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
+   
+3. Click the **Add** button, the available integrations screen will appear.
+4. Either search for **SMS** in the search bar or go to the **Select Category** dropdown and select **Communication** category. Locate **SMS Provider**. 
 
+   ![alt_text](images/sms-provider-integration.png "image_tooltip")
+
+   > **Note**: SMS Provider option will appear in the **Integration** section only when **Phone Login** feature is enabled for your app.
+
+5. Click the **Let's Configure** option, the following screen will appear:
+
+   ![alt_text](images/sms-provider-configuration.png "image_tooltip")
 
 ## Step 2: Configure SMS Provider Settings
 
