@@ -26,11 +26,11 @@ You can implement the 2FA in two following ways:
 
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Security** and then navigate to the **Two Factor Authentication** section. Click on the switch to enable the Two Factor Authentication Add-On.
 
-   ![alt_text](images/addon-switch.png "image_tooltip")
+   ![alt_text](images/addon-switch1.png "image_tooltip")
 
-2. When the Add-On dialog appears, click **Enable**
+2. When the pop-up appears, click **Enable** button:
 
-   ![alt_text](images/addon-dialog.png "image_tooltip")
+   ![alt_text](images/addon-dialog1.png "image_tooltip")
 
 ## Step 2: Choose 2FA Method
 
@@ -54,7 +54,7 @@ Two-Factor Authentication with SMS Passcode will be the default option for the c
 
 2. To edit the template used for the SMS Passcode method, click the Edit icon given in the action bar highlighted in the previous step.
 
-   > Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
+   > **Note**: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
 
 ### Google Authenticator
 
