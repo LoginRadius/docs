@@ -4,10 +4,13 @@ tags: ["Data Migration", "Migrate Users"]
 description: "This is a guide for migrating users into the LoginRadius Identity Platform."
 path: "/guide/migrate-user-data"
 ---
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Migrate User Data
 
-This guide explains how to mass import user data from another application/service/database into the LoginRadius database using CSV files.
+This guide explains how to mass import user data from another application/service/database into the LoginRadius database using CSV files. 
+
+> **Note**: The **Manage Users** feature should be enabled for your app to import user data.
 
 ## Access Import Users Section
 
@@ -15,11 +18,11 @@ This guide explains how to mass import user data from another application/servic
 
 2. Click the down caret, and the **Manage Users** screen will appear:
 
-   ![alt_text](../../assets/blog-common/manage-users.png "image_tooltip")
+   ![alt_text](images/manage-users.png "image_tooltip")
 
 3. At the bottom right of the screen, click the **Add User** button and select the **Import Users** option in the dropdown menu:
 
-   ![alt_text](images/import-users-link.png "image_tooltip")
+   ![alt_text](images/import-users-link2.png "image_tooltip")
 
    The **Import Users** screen will appear as below:
 
