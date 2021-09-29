@@ -14,7 +14,7 @@ Team Management screen has the following options:
 
 * [Manage Team Member](#manage-team-member)
 * [Add Team Member](#add-team-member)
-* [Audit Logs](#activity-logs)
+* [Activity Logs](#activity-logs)
 
 ## Access Team Management Section
 
@@ -50,7 +50,7 @@ From this section, you can add a new team member to your LoginRadius Site by pro
 
 To add a new team member to your LoginRadius Site, click the **Add Member** button, and the following pop-up will appear.
 
-![alt_text](images/add-member.png "image_tooltip")
+![alt_text](images/team-add.png "image_tooltip")
 
 You need to provide the following details:
 
