@@ -84,7 +84,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 * To access the LoginRadius Support section, login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, from the top header panel, click **Support** as displayed in the below screen.
 
-  ![alt_text](images/support.png "image_tooltip")
+  ![alt_text](images/support1.png "image_tooltip")
 
 * Apart from this, you can also check out the **Report An Issue** section available at the bottom of getting started page as displayed in the below screen:
 
@@ -98,7 +98,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 * Otherwise, submit a <a href="https://loginradiusassist.freshdesk.com/customer/login" target="_blank">Support Ticket</a>, located under the **Support** tab in the header panel. In the support ticket, please include any relevant code snippets and screenshots that can help our Support Team better understand your concern.
 
-   ![alt_text](images/support.png "image_tooltip")
+   ![alt_text](images/support1.png "image_tooltip")
 
 
 ### How does LoginRadius handle support tickets?
