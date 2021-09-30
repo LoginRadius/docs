@@ -11,7 +11,7 @@ path: "/guide/customize-domain"
 
 Domain customization allows you to use your domain instead of redirecting your consumers to the LoginRadius domain. It will help you maintain consistency and give a frictionless experience to your consumers.
 
- Also, enabling this feature removes the security seal of LoginRadius i.e.  Powered by LoginRadius will no longer be visible on your Auth Page (IDX).
+Also, enabling this feature removes the security seal of LoginRadius i.e.  Powered by LoginRadius will no longer be visible on your Auth Page (IDX).
 
 ## Configuration
 
@@ -43,7 +43,7 @@ Enter your domain in the **Domain Name** field and click the **Add** button, the
 
 <img src="images/pendingverification2.png" alt="Add Domain" />
 
-> Note: After adding the domain, make sure to add the given records (Type and Value) to your DNS provider.
+> **Note**: After adding the domain, make sure to add the given records (Type and Value) to your DNS provider.
 
 Once LoginRadius verifies your domain, its status will be changed to **verified**. The Auth Page (IDX) will start using your domain `https://<your-domain>.com/auth.aspx` instead of `https://<your-app-name>.hub.loginradius.com/auth.aspx`
 
