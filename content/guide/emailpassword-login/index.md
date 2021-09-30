@@ -9,15 +9,6 @@ path: "/guide/emailpassword-login"
 
 The LoginRadius Identity Platform provides Email and Password as the default registration and login method. This guide explains how to configure the content of emails that LoginRadius sends to your consumers using the LoginRadius Dashboard.
 
-Watch this video's step-by-step information, or refer to the section below for the text-based guide.
-
----
-
-<figure class="video_container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kHbXGqUNv-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
-
----
-
 ## Configuration
 
 ### Step 1: Choose Login Method

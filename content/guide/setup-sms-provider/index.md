@@ -32,18 +32,30 @@ Setting up an SMS provider allows you to send and receive text messages to and f
 
 ## Step 2: Configure SMS Provider Settings
 
-Provide the following default supported Twilio SMS provider details:
+You can select the SMS Provider from the drop-down list. The supported providers are:
 
-1.  **SMS Provider**: Select Twilio SMS Provider
-2.  **Twilio Account SID**: Enter the Twilio Account SID. Check <a href="https://support.twilio.com/hc/en-us/articles/223136607-What-is-an-Application-SID-" target="_blank">Twilio help center</a> for Account SID.
-3.  **Twilio Auth Token**: Enter the Twilio Auth Token.
-4.  **Twilio Number**: Enter the Twilio registered number.
+* Twilio
+* Message Bird
+* Text Local
 
-> To obtain the **Twilio Account SID**, **Auth Token** and **Number**, sign up for <a href="https://www.twilio.com/try-twilio" target="_blank">Twilio</a> account.
+The following explains how to configure **Twilio** as SMS provider: 
 
-Save the settings by clicking the **Save** button.
+1. **SMS Provider**: Select Twilio SMS Provider.
+2. **Twilio Account SID**: Enter the Twilio Account SID. Check <a href="https://support.twilio.com/hc/en-us/articles/223136607-What-is-an-Application-SID-" target="_blank">Twilio help center</a> for Account SID.
+3. **Twilio Auth Token**: Enter the Twilio Auth Token.
+4. **Twilio Number**: Enter the Twilio registered number.
 
+   > **Note**:To obtain the **Twilio Account SID**, **Auth Token** and **Number**, sign up for <a href="https://www.twilio.com/try-twilio" target="_blank">Twilio</a> account.
+5. Save the settings by clicking the **Save** button.
 
+The following explains how to configure **Message Bird** or **Text Local** as SMS provider:
+1. **SMS Provider**: Select **Message Bird** or **Text Local** SMS Provider. The following fields will appear on the screen:
+
+   ![alt_text](images/sms-provider-configuration1.png "image_tooltip")
+
+2. **Provider Number**: Enter the provider number for the selected provider.
+3. **Access Key**: Enter the access key for the selected provider.
+4.  Save the settings by clicking the **Save** button.
 
 
 [Go Back to Home Page](/)
