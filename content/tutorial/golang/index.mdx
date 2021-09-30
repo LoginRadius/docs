@@ -39,7 +39,7 @@ This implementation uses the `github.com/julienschmidt/httprouter` router module
 
   `go mod init golang-sdk-tutorial`
 
-  > Upon completion, it will add a `go.mod` file in the project folder.
+  > **Note**: Upon completion, it will add a `go.mod` file in the project folder.
 
 * Add the project dependency of router. 
   
@@ -106,7 +106,7 @@ Replace the placeholders in the above config object with the following values:
 
 ## Configure Registration and Login URLs
 
-> This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
+> **Note**: This tutorial uses Auth Page(IDX) for authentication, where Registration and Login functionality is already implemented.
 
 Navigate your Register or Login links or buttons to the following URLs:
 
@@ -123,11 +123,11 @@ Navigate your Register or Login links or buttons to the following URLs:
 * **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
 * **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
 
-> return_url can be your website, frontend app, or backend server url where you are handling the access token.
+> **Note**: return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
 ## Retrieve User Data using Access Token
 
-> Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Golang backend API with query parameter (access token).
+> **Note**: Once the authentication is done using Auth Page (IDX), the default script of LoginRadius sends an access token in the query string as a token parameter with the return_url. The return_url will access the Golang backend API with query parameter (access token).
 >
 > The following is an example of the access token in the query string with the Return URL:
 >
@@ -174,7 +174,7 @@ router.GET("/", func (w http.ResponseWriter, r *http.Request, _ httprouter.Param
 
 Similarly, you can implement more features using Golang SDK.
 
-> In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
+> **Note**: In addition to Registration and Login actions, the Auth Page (IDX) supports more actions. Refer to <a href="https://www.loginradius.com/docs/developer/concepts/idx/" target="_blank">this document</a> for more information.
 
 ## Whitelist Your Domain
 
