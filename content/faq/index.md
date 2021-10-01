@@ -37,6 +37,8 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to view the API Secret?
 
+* * Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Click the **API Key And Secret** and the below screen will appear.
 * Click the **eye** button given next to the API Secret field. The API secret is not displayed by default for security reasons.
 
   ![alt_text](images/api-secret-eye.png "image_tooltip")
@@ -44,12 +46,10 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 ### How to reset the API Secret?
 
 * Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Click the **API Key And Secret** and the below screen will appear.
+* Click the **reset** button given next to the API Secret field as displayed below:
 
-* Click the **API Key And Secret** and the below screen will appear:
-
-  ![alt_text](images/key-secret.png "image_tooltip")
-
-* You can reset the API Secret by clicking the respective **reset** button.
+  ![alt_text](images/secret-reset.png "image_tooltip")
 
 ### How to access the LoginRadius Support section?
 
@@ -199,7 +199,7 @@ Ask about products, implementation, use cases, and more— we are ready to help!
 
 Have questions or issues with our product?
 
-<a href="https://loginradiusassist.freshdesk.com/customer/" target="_blank">"Support for Developer Plans</a>
+<a href="https://loginradiusassist.freshdesk.com/support/home" target="_blank">Support for Developer Plans</a>
 
 
 ## Careers
