@@ -8,7 +8,8 @@ const languageOptions = {
   python: "Python",
   ruby: "Ruby",
   csharp: "C#",
-  php: "PHP"
+  php: "PHP",
+  java: "JAVA"
 }
 
 const codeTemplate = {
