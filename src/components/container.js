@@ -474,7 +474,7 @@ const Middle = () => {
               <li>
                 <Link to="/tutorial/html-and-js-tutorial">
                   <img src="images/html5.svg" width={20} />
-                  <span>HTML and JS</span>
+                  <span>HTML, CSS and Vanilla JS</span>
                 </Link>
               </li>
             </ul>
