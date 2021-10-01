@@ -31,24 +31,22 @@ Setup your SMTP provider by following the below steps.
 Enter or select the following SMTP details:
 
 1. **SMTP Providers:** Select a pre-configured provider or other for a custom provider.
-2. **SMTP Host:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP host details.
-3. **SMTP Port:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP port details.
-4. **From Name:** Enter the name of the sender.
-5. **From Email Address:** Enter the email of the sender.
-6. **SMTP User Name:** Enter the SMTP username.
-7. **SMTP Password:** Enter the password for the SMTP username.
-8. **Enable SSL:** Select this option to make email communication more secure.
+   > **Note**: The following are the default SMTP providers list:
+   > * Mandrill
+   > * Mailazy
+   > * Mailgun
+   > * SendGrid
+   > 
+   > You can also configure other SMTP providers like Amazon SES (US East), Amazon SES (US West), Amazon SES (EU), Gmail, Rackspace-mailgun, Yahoo, etc by selecting the **Other** option.
+3. **SMTP Host:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP host details.
+4. **SMTP Port:** If you have selected the SMTP provider from the default list (rather than Others), enter the SMTP port details.
+5. **From Name:** Enter the name of the sender.
+6. **From Email Address:** Enter the email of the sender.
+7. **SMTP User Name:** Enter the SMTP username.
+8. **SMTP Password:** Enter the password for the SMTP username.
+9. **Enable SSL:** Select this option to make email communication more secure.
 
-> **Note**: The following are the default SMTP providers list:
-> 
-> * Amazon SES (US East)
-> * Amazon SES (US West)
-> * Amazon SES (EU)
-> * Gmail
-> * Mandrill
-> * Rackspace-mailgun
-> * SendGrid
-> * Yahoo
+
 ## Step 3: Verify and Save SMTP Provider Settings
 
 1. Click the **Verify** button, the following pop-up will appear:
