@@ -50,12 +50,10 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 ### How to reset the API Secret?
 
 * Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Click the **API Key And Secret** and the below screen will appear.
+* Click the **reset** button given next to the API Secret field as displayed below:
 
-* Click the **API Key And Secret** and the below screen will appear:
-
-  ![alt_text](images/key-secret.png "image_tooltip")
-
-* You can reset the API Secret by clicking the respective **reset** button.
+  ![alt_text](images/secret-reset.png "image_tooltip")
 
 ### How to upgrade Support / SLA / Rate Limit for your LoginRadius App?
 
