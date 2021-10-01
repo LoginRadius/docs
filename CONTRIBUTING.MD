@@ -15,6 +15,7 @@
 - Push your changes to a topic branch in your fork of the repository.
 - Make sure to proofread the content before submitting
 - Submit a pull request to the original repository.
+- If your guide contains demo code, or if you want to include demo code in a repo for easier reference, please [add your demo code in this repo](https://github.com/LoginRadius/developer-authentication-demos) by raising a pull request.
 
 #### Commit Messages
 
