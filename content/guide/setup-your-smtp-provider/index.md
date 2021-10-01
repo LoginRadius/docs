@@ -46,9 +46,7 @@ Enter or select the following SMTP details:
 8. **SMTP Password:** Enter the password for the SMTP username.
 9. **Enable SSL:** Select this option to make email communication more secure.
 
-
 ## Step 3: Verify and Save SMTP Provider Settings
-
 1. Click the **Verify** button, the following pop-up will appear:
 
    ![alt_text](images/verify-smtp1.png "image_tooltip")
@@ -56,8 +54,6 @@ Enter or select the following SMTP details:
 2. Enter the email id in the **To Email** textbox and click the **Send** button. If the email is sent successfully, a success message will be displayed on the screen.
 
 3. Save the configured SMTP settings by clicking the **Save** button.
-
-
 
 
 [Go Back to Home Page](/)
