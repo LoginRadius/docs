@@ -30,4 +30,3 @@ Please follow the below format while writing commit messages
 
 
 Thanks for your contributions!
-
