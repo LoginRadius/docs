@@ -49,7 +49,7 @@ This guide explains how to mass import user data from another application/servic
 
    ![alt_text](images/submit-request.png "image_tooltip")
 
-  > Note: After the import process is complete, LoginRadius will send you an email notification with a secure link to access your import report file.
+  > **Note**: After the import process is complete, LoginRadius will send you an email notification with a secure link to access your import report file.
   >
   > Depending on the number of requests in the pipeline, it may take up to an hour for your import request to complete.
 
