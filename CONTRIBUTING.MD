@@ -8,13 +8,14 @@
 - If you find any bug/typo/fix in our existing blog posts, please create a pull request as mentioned in Contribution Flow
 
 ## Contribution Flow
-
-- Create a separate branch from `dev` branch to base your work.
-- Make commits of logical units.
-- Make sure your commit messages are in the proper format (see below).
-- Push your changes to a topic branch in your fork of the repository.
-- Make sure to proofread the content before submitting
-- Submit a pull request to the original repository.
+- First you  open the repository 
+- find out contributing string(file)
+- Fork such code. 
+- Edit the code 
+- Make proper changes (appropriate)
+- Then commit chnages 
+- open code and goes to coustmization 
+- and pull a request 
 
 #### Commit Messages
 
