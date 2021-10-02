@@ -1,8 +1,8 @@
 
 
-## About LoginRadius Docs
+## About [LoginRadius](https://www.loginradius.com/) Docs
 
-Welcome to LoginRadius Docs! 👋 Get comprehensive documents including quick-starts with sample demos using various technologies, example code, how-to guides, SDKs, APIs, and FAQs to implement the LoginRadius Identity Platform for your application. 
+Welcome to [LoginRadius Docs](https://github.com/LoginRadius/docs)! 👋 Get comprehensive documents including quick-starts with sample demos using various technologies, example code, how-to guides, SDKs, APIs, and FAQs to implement the [LoginRadius](https://github.com/LoginRadius) Identity Platform for your application. 
 
 Use these Quick Links for handy use:
 - [Quick Start](https://www.loginradius.com/docs/developer/)
