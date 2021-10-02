@@ -1,14 +1,9 @@
 ---
-title: "Get started with HTML and JS"
-tags: ["HTML5", "CSS", "JS", "GetStarted"]
-description: "This is a tutorial with IDX and HTML5 SDK implementation."
-path: "/tutorial/html-and-js-tutorial"
+Title: "Get started with HTML and JS"
+Tags: ["HTML5", "CSS", "JS", "GetStarted"]
+Description: "This is a tutorial with IDX and HTML5 SDK implementation."
+Path: "/tutorial/html-and-js-tutorial"
 ---
-
-import ThemeDoc from "../../common-docs/theme_customization"
-import CredsDoc from "../../common-docs/get-creds"
-import GenSOTT from "../../common-docs/generate-sott"
-import DomainDoc from "../../common-docs/domain-whitelisting"
 
 # HTML and JS Tutorial
 
@@ -29,15 +24,25 @@ Auth Page (IDX) reflects the configuration changes that you make in <a href="htt
 
 ## Choose Theme
 
-<ThemeDoc />
+LoginRadius provides the functionality where you can select a design theme for your login page or further customize the content displayed.
+- In your LoginRadius Dashboard, select your app 
+- Navigate to the Auth Page (IDX) section located in the left navigation bar 
+- Click the Theme Customization section. There you can select a design theme for your login page or further customize the content displayed.
+- To preview your login page's theme, click the Go to your Login Page link highlighted on the above screen.
+
+**NOTE:** Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX)
 
 ## Get Credentials
 
-<CredsDoc />
+Before using any of the APIs or Methods that LoginRadius provides, you need to get your App Name, API Key, and API Secret.
+
+- In your LoginRadius Dashboard, navigate to Configuration > API Credentials 
+- Click the API Key And Secret subsection to retrieve your API Credentials.
 
 ## Generate SOTT
 
-<GenSOTT />
+- Now click the Secure Mobile OTP Token(SOTT) subsection
+- Generate SOTT and make sure to copy the SOTT value (for security reasons, it's only visible once in the LoginRadius Dashboard).
 
 ## Set Up HTML Project
 
@@ -76,17 +81,17 @@ var LRObject= new LoginRadiusV2(commonOptions);
 
 3. Create a user by clicking on **Register Here**, upon successful user creation you'll be redirected to Login page
 
-![alt_text](/images/loginscreen.png "image_tooltip")
+![alt_text](/public/images/loginscreen.png "image_tooltip")
 
-![alt_text](/images/registration.png "image_tooltip")
+![alt_text](/public/images/registration.png "image_tooltip")
 
 4. Log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. Open **Developer Tools** in your browser, navigate to **Console** and you'll find a JSON response. The following displays a sample JSON response:
 
-![alt_text](/images/jsonresponse.png "image_tooltip")
+![alt_text](/public/images/jsonresponse.png "image_tooltip")
 
 ## Whitelist Domain
 
-<DomainDoc />
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
 ## Explore Demo
 
