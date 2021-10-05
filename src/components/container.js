@@ -1,12 +1,13 @@
+import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
 import Modal from "react-modal"
-import { Link, withPrefix } from "gatsby"
-import PopUp from "./modal.js"
 import LogoVideo from "../../static/images/logovideo.svg"
+import PopUp from "./modal.js"
 const Middle = () => {
   const apiRef = React.createRef()
   const sdkRef = React.createRef()
   const gotQRef = React.createRef()
+  const getStartedRef = React.createRef()
   const [display, setDisplay] = useState(false)
 
   useEffect(() => {
@@ -25,6 +26,9 @@ const Middle = () => {
       } else if (window.location.hash === "#loginmethods") {
         window.history.scrollRestoration = "manual"
         gotQRef.current.scrollIntoView({ block: "start" })
+      } else if (window.location.hash === "#getstarted") {
+        window.history.scrollRestoration = "manual"
+        getStartedRef.current.scrollIntoView({ block: "start" })
       }
     }
   })
@@ -438,7 +442,7 @@ const Middle = () => {
       {/*Tutorials section*/}
 
       <section className="tutorials py-72">
-        <div className="section-header">
+        <div ref={getStartedRef} className="section-header">
           <h2>Ready To Start Building?</h2>
           <p>
             Choose your application type and implement authentication in a few
