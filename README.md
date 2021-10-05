@@ -1,6 +1,6 @@
 
 
-## About LoginRadius Docs
+## 📝 About LoginRadius Docs
 
 Welcome to LoginRadius Docs! 👋 Get comprehensive documents including quick-starts with sample demos using various technologies, example code, how-to guides, SDKs, APIs, and FAQs to implement the LoginRadius Identity Platform for your application. 
 
@@ -11,7 +11,7 @@ Use these Quick Links for handy use:
 - [FAQs](https://www.loginradius.com/docs/developer/faq/api-credentials/)
 
 
-## Running Locally 
+## 🏃‍♀️ Running Locally 
 
 
 - `npm install` in this directory
@@ -19,7 +19,7 @@ Use these Quick Links for handy use:
 -  Open a browser to the link provided in the console.
 
 
-## How to contribute
+## ❤️ How to contribute
 
 We appreciate all kinds of contributions from our contributors.
 
