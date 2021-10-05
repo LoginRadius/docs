@@ -5,6 +5,8 @@ description: "This document covers the Inbound SSO SAML introduction and its pro
 path: "guide/inbound-sso-saml"
 ---
 
+<span class="devloper-premium plan-tag">Premium</span>
+
 # Inbound SSO SAML
 
 This document provides instructions to add a custom Identity provider using Inbound SAML - SSO. As a result, it will allow your consumers to log in to your application with their identity provider account using SSO.
@@ -42,9 +44,9 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
 2. Click the **Add** button for adding a new Inbound SSO SAML app. The configuration options will appear.
 
-3. Search for **Inbound SSO SAML** in the search bar, locate **Inbound SSO SAML** and click the **Try It For Free** option. The following pop-up will appear, click the **Enable** button.
+3. Search for **Inbound SSO SAML** in the search bar, locate **Inbound SSO SAML** and click the **Add me** option. The following pop-up will appear, click the **Enable** button.
 
-   ![alt_text](images/enable.png "image_tooltip")
+   ![alt_text](images/enable-pricing.png "image_tooltip")
 
 4. From the **Available Integrations** screen, click the **Let’s Configure** under the Inbound SSO SAML box. The following screen will appear:
 

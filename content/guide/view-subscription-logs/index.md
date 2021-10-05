@@ -19,7 +19,7 @@ Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_bl
 
 When the **Manage Apps** screen appears, look for the app you want to see information of, and hover on it. On the top right corner of the hover card, there should be a dropdown menu labeled **App Actions**. Click on this menu and select **View Logs**:
 
-  ![alt_text](images/select-app-logs.png "image_tooltip")
+  ![alt_text](images/select-app-logs1.png "image_tooltip")
 
   In the log, you will find the following details for each log entry:
 

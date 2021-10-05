@@ -8,7 +8,7 @@
 }
 
 .try-me-out .try-me-out-client h4 {
-  margin-top: 40px;
+  margin-top: 22px;
   margin-bottom: 12px;
 }
 
@@ -21,9 +21,10 @@
 
 .request-url .request-url-row .request-btn {
   font-size: 1rem;
-  padding: 0 0.75rem;
 }
-
+.request-url .request-url-row .btn-sm {
+  min-width: 88px;
+}
 .request-url .method {
   width: 125px;
 }
@@ -52,11 +53,11 @@
 .templateParams div,
 .headers div {
   color: #09263c;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   width: 225px;
   text-align: left;
-  padding: 12px 24px;
+  padding: 8px 16px;
   background-color: #f4f4f4;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
@@ -106,7 +107,10 @@
   line-height: 1.4;
   font-size: 14px;
 }
-
+.body .bodyEditor textarea::-webkit-scrollbar-thumb,
+.response .responseBody textarea::-webkit-scrollbar-thumb {
+  background: rgba(249, 249, 249, 0.75);
+}
 .body .bodyEditor textarea:focus {
   outline: none;
 }
@@ -131,8 +135,7 @@
 .request-url {
   background-color: #09263c;
   color: #fff;
-  padding: 24px 24px 0 24px;
-  margin-top: 24px;
+  padding: 20px 20px 0 20px;
 }
 .methodname {
   width: 85px;
@@ -182,7 +185,7 @@
 }
 .response-header {
   width: 100%;
-  padding: 12px 24px;
+  padding: 8px 16px;
   color: #020b13;
   background: #f4f4f4;
   margin-top: 40px;
@@ -196,4 +199,7 @@
   margin: 0 !important;
   font-size: 16px !important;
   font-weight: 400 !important;
+}
+.slide-pane__header {
+  flex-direction: row-reverse;
 }

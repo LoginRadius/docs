@@ -5,8 +5,8 @@ description: "This is a guide for integrating and configuring Shopify e-commerce
 path: "/guide/shopify"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Premium</span>
+
 
 # Shopify
 
@@ -37,24 +37,21 @@ This section covers the required configurations that you need to perform to enab
    ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
 
-2. Click **Add** button for adding a new Shopify app. The following configuration options will appear: 
+2. Click **Add** button for adding a new Shopify app. The available integrations screen will appear. 
 
-   ![alt_text](images/shopify-available-integrations.png "image_tooltip")
+3. Either search for **Shopify** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **Shopify** and click the **Try It For Free** option.
 
+   ![alt_text](images/shopify-integration-search1.png "image_tooltip")
 
-3. Either search for **Shopify** in the search bar or go to the **Select Category** dropdown and select **E-Commerce**category. Locate **Shopify** and click the **Add Me** option.
+   The following pop-up will appear:
 
-   ![alt_text](images/shopify-integration-search.png "image_tooltip")
+   ![alt_text](images/shopify-popup.png "image_tooltip")
 
-4. The following pop-up will appear, click the **Enable** button.
+4. Click the **Enable** button from above pop-up and then click the **Let’s Configure** option that appeared on the Shopify tile. The following screen will appear:
 
-   ![alt_text](images/shopify-enable.png "image_tooltip")
+   ![alt_text](images/shopify-configuration-fields1.png "image_tooltip")
 
-5. The Shopify app is now available in the **Available Integrations**. There, click the **Let's Configure** under the Shopify box. The following screen will appear:
-
-   ![alt_text](images/shopify-configuration-fields.png "image_tooltip")
-
-6. Enter or select the following details to configure your shopify app:
+5. Enter or select the following details to configure your shopify app:
 
    * In the **Store Name** field, enter the name of your store.
    * In the **Store Url** field, enter the URL: https://.myshopify.com.

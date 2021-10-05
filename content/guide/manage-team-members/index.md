@@ -5,7 +5,7 @@ description: "This is a guide for Managing Team Members."
 path: "/guide/manage-team-members"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Manage Team Members
 This section helps view and manage your authorized Team Members who can manage your LoginRadius site.
@@ -14,14 +14,21 @@ Team Management screen has the following options:
 
 * [Manage Team Member](#manage-team-member)
 * [Add Team Member](#add-team-member)
-* [Audit Logs](#activity-logs)
+* [Activity Logs](#activity-logs)
 
 ## Access Team Management Section
 
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 2. Select your app, then from the left navigation panel, click **Teams**, and the **Team Management** screen will appear.
 
-   ![alt_text](images/team-management.png "image_tooltip")
+   ![alt_text](images/team-management-pricing1.png "image_tooltip")
+
+3. Click the toggle button next to the **Team Management** and the following pop-up will appear:   
+
+   ![alt_text](images/team-management-popup.png "image_tooltip")
+
+4. Click the **Enable** button to enable the **Team Management** feature. You will be prompted to add payment details, if not already provided.
+
 
 
 ## Manage Team Member
@@ -34,7 +41,7 @@ This section displays the complete list of team members that have access to your
 
 > You can access these options for a team member by clicking the vertical ellipsis (three dots) available next to a team member's name:
 >
-> ![alt_text](images/teams-action.png "image_tooltip")
+> ![alt_text](images/teams-action-pricing.png "image_tooltip")
 
 
 ## Add Team Member
@@ -43,15 +50,17 @@ From this section, you can add a new team member to your LoginRadius Site by pro
 
 To add a new team member to your LoginRadius Site, click the **Add Member** button, and the following pop-up will appear.
 
-![alt_text](images/add-member.png "image_tooltip")
+![alt_text](images/team-add.png "image_tooltip")
 
 You need to provide the following details:
 
-1. **Email Address(es):** Enter the team member’s email address.
+1. **Full Name :** Enter the team member's full name.  
 
-2. **App(s):** Select the App for which you are adding team members. If you have multiple LoginRadius App(s), you can find the list in the dropdown.
+2. **Email Address(es):** Enter the team member’s email address.
 
-3. **Role(s):** Select the team member’s Role.
+3. **App(s):** Select the App for which you are adding team members. If you have multiple LoginRadius App(s), you can find the list in the dropdown.
+
+4. **Role(s):** Select the team member’s Role.
 
     Available Role(s) are:
 

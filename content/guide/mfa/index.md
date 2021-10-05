@@ -5,8 +5,8 @@ description: "This is a guide for setting up Multifactor Authentication."
 path: "/guide/mfa"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Premium</span>
+
 
 # Implement Two-Factor Authentication (2FA)
 
@@ -14,7 +14,7 @@ The LoginRadius Identity Platform provides Two-Factor Authentication to add an e
 
 You can keep 2FA optional or required for the users as per your business requirement. This guide explains how to configure the Two-Factor Authentication for your consumers.
 
-> Note: When both <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login/" target="_blank">Passwordless Login</a> and Two Factor Authentication (2FA) are implemented for your application, the consumer will not be prompted for 2FA, if they choose to authenticate with the Passwordless Login method.
+> **Note**: If both <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login/" target="_blank">Passwordless Login</a> and Two Factor Authentication (2FA) are implemented for your application, the **Passwordless Login** will not work for your consumers.
 
 You can implement the 2FA in two following ways:
 
@@ -26,11 +26,11 @@ You can implement the 2FA in two following ways:
 
 1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Security** and then navigate to the **Two Factor Authentication** section. Click on the switch to enable the Two Factor Authentication Add-On.
 
-   ![alt_text](images/addon-switch.png "image_tooltip")
+   ![alt_text](images/addon-switch1.png "image_tooltip")
 
-2. When the Add-On dialog appears, click **Enable**
+2. When the pop-up appears, click **Enable** button:
 
-   ![alt_text](images/addon-dialog.png "image_tooltip")
+   ![alt_text](images/addon-dialog1.png "image_tooltip")
 
 ## Step 2: Choose 2FA Method
 
@@ -54,7 +54,7 @@ Two-Factor Authentication with SMS Passcode will be the default option for the c
 
 2. To edit the template used for the SMS Passcode method, click the Edit icon given in the action bar highlighted in the previous step.
 
-   > Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
+   > **Note**: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
 
 ### Google Authenticator
 

@@ -5,8 +5,8 @@ description: "This is a guide for integrating and configuring BigCommerce in the
 path: "/guide/big-commerce"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Premium</span>
+
 
 # BigCommerce
 
@@ -82,18 +82,18 @@ To support the BigCommerce SSO flows, you will need to handle the following:
 
    The following screen will appear:
 
-   ![alt_text](images/bigcommerce-integration.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
 2. Click the **Add** button for adding a new BigCommerce app. The configuration options will appear. 
 
 
-3. Either search for **BigCommerce** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **BigCommerce** and click the **Add Me** option. 
+3. Either search for **BigCommerce** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **BigCommerce** and click the **Try It For Free** option. 
 
-   ![alt_text](images/bigcommerce-integration-search-results.png "image_tooltip")
+   ![alt_text](images/bigcommerce-add1.png "image_tooltip")
 
    From the below pop-up, click the **Enable** button: 
 
-   ![alt_text](images/bigcommerce-integration-enable.png "image_tooltip")
+   ![alt_text](images/bigcommerce-popup1.png "image_tooltip")
 
 
 4. After this configuration, the app is available in **Available Integrations**. There, click the **Let's configure** option under the BigCommerce box.

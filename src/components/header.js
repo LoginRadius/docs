@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
-import Logo from "../../public/images/logo.svg"
+import Logo from "../../static/images/logo.svg"
 // Header component
 export default class Header extends Component {
   constructor(props) {
