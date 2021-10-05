@@ -465,6 +465,11 @@ const Middle = () => {
               <li>
                 <Link to="/guide/3rd-party-all-integrations">Available Integrations</Link>
               </li>
+              <li>
+                <Link to="/guide/inbound-sso-oauth">
+                  <span>Configure Inbound SSO OAuth2</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Integrate Third Parties*/}
