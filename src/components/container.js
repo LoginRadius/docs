@@ -826,6 +826,11 @@ const Middle = () => {
                   </Link>
                 </div>
               </li>
+              <li>
+                <Link to="/guide/inbound-sso-oauth">
+                  <span>Configure Inbound SSO OAuth2</span>
+                </Link>
+              </li>
             </ul>
           </div>
           {/*Integrate Third Parties*/}
