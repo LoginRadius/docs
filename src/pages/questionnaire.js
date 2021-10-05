@@ -1,13 +1,12 @@
+import { Link, withPrefix } from "gatsby"
 import React from "react"
-import SelectSearch from "react-select-search"
+import Select from "react-select"
 import Footer from "../components/footer"
-import { Link } from "gatsby"
-import Select, { components } from "react-select"
-import SEO from "../components/seo"
 
+import SEO from "../components/seo"
 import "./questionnaire.css"
-import Logo from "../../public/images/logo.svg"
-import ResultBanner from "../../public/images/questionnaire_graphics.svg"
+import Logo from "../../static/images/logo.svg"
+import ResultBanner from "../../static/images/questionnaire_graphics.svg"
 
 const splashArt = animationClassName => {
   return (
@@ -1700,7 +1699,8 @@ class Questionnaire extends React.Component {
                     <div>
                       <div className="logo">
                         <Link to="/">
-                          <img src={Logo} width="228" />
+
+                          <img src={withPrefix("/images/logo.svg")} width="228" />
                         </Link>
                       </div>
                       <div className="right-section">
@@ -1734,8 +1734,7 @@ class Questionnaire extends React.Component {
                       <div>
                         <div className="logo">
                           <Link to="/">
-                            <img src={Logo} width="228" />
-                          </Link>
+                          <img src={withPrefix("/images/logo.svg")} width="228" />                          </Link>
                         </div>
                         <div className="right-section">
                           <div className="authentication-buttons">
@@ -1861,7 +1860,7 @@ class Questionnaire extends React.Component {
                         </div>
                         <div className="no-print share-widget">
                           <div className="btn-box top-half">
-                            <img src={ResultBanner} width={228} />
+                            <img src={withPrefix("/images/questionnaireImage.svg")} width={228} />
                           </div>
                           <div className="btn-box bottom-half">
                             <h3>
@@ -1926,14 +1925,14 @@ class Questionnaire extends React.Component {
                   <div className="dd-content max-height-restricted">
                     <div className="dd-logo">
                       <Link to="/">
-                        <img src={Logo} width={228} />
+                        <img src={withPrefix("/images/logo.svg")} width={228} />
                       </Link>
                     </div>
                     {this.state.step === 0 ? (
                       <div className="qa">
                         <h1>Does LoginRadius Support my Use Case?</h1>
                         <p>
-                          Answer a few questions and get a self-served
+                          Answer a few questions and get a self-serve
                           implementation guide addressing your needs.
                         </p>
                       </div>

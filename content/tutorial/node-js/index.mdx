@@ -18,12 +18,6 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Node.Js? Check out <a href="https://nodejs.org/en/about/" target="_blank">this reference</a>.
 
-Watch this video to get started, or refer to the section below for the text-based guide.
-
-<figure class="video_container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/efM46qNSaeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
-
----
 <IntroDoc />
 
 ## Choose Theme
@@ -34,19 +28,19 @@ Watch this video to get started, or refer to the section below for the text-base
 
 <CredsDoc />
 
-## Setup Node.js 
+## Setup Node.js
 
 This implementation uses the express framework to create Node.js API.
 
-* Create a node project by running the following command in the command line:
+- Create a node project by running the following command in the command line:
 
   `npm init`
 
   > Upon completion, it will add a `package.json` file in the project folder.
 
-* Create a server file in the project and name it `server.js`.
+- Create a server file in the project and name it `server.js`.
 
-* Add the following code snippet to the `server.js` file.
+- Add the following code snippet to the `server.js` file.
 
   ```
   var express = require('express');
@@ -63,7 +57,8 @@ This implementation uses the express framework to create Node.js API.
   app.listen(PORT, () => console.log('App can be accessed at localhost:' + PORT ));
 
   ```
->**Note:** Make sure you add further code (given in steps below) in place of **// your LR API implementation goes here** text mentioned in the above file.
+
+  > **Note:** Make sure you add further code (given in steps below) in place of **// your LR API implementation goes here** text mentioned in the above file.
 
 ## Install SDK
 
@@ -100,9 +95,9 @@ var lrv2 = require('loginradius-sdk')(config);
 
 Replace the placeholders in the above config object with the following values:
 
-* apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
-* apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
-* siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
+- apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
+- apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
+- siteName: **App Name** obtained in the [Get Credentials](#get-credentials) step.
 
 > **Note:** Pass the proxy configurations if you want to set HTTP Server Proxy Configuration through your Node.js SDK. In this case, host and port are required, while username and password are optional.
 
@@ -122,8 +117,8 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 
-* **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
-* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
+- **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
@@ -153,14 +148,14 @@ app.get('/', function(req, res) {
 
 ## Run and See Result
 
-* Run the API Server by executing the following command in the command line:
+- Run the API Server by executing the following command in the command line:
   [`node server.js`]
 
-* Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-* Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
+- Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format. The following displays a sample JSON response:
 
   ![alt_text](../../assets/blog-common/jsonresponse.png "image_tooltip")
 
@@ -174,27 +169,62 @@ Similarly, you can implement more features using Node.js SDK.
 
 ## Explore Node.js Demo
 
-* **<a href="https://www.loginradius.com/docs/developer/download/get-started-node-js.zip" target="_blank">Download Demo</a>** of the above-explained tutorial to support your implementation.
+- **<a href="https://www.loginradius.com/docs/developer/download/get-started-node-js.zip" target="_blank">Download Demo</a>** of the above-explained tutorial to support your implementation.
 
-* **<a href="https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo" target="_blank">Refer to GitHub Demo</a>**  to know how to implement various LoginRadius features using SDK Functions.
+- **<a href="https://github.com/LoginRadius/login-page-demos/blob/master/node-idx-demo" target="_blank">Refer to GitHub Demo</a>** to know how to implement various LoginRadius features using SDK Functions.
 
 ## Recommended Next Steps
 
-* <a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings"
+    target="_blank"
+  >
+    How to manage email templates for verification and forgot password
+  </a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/customize-auth-page"
+    target="_blank"
+  >
+    How to personalize interfaces and branding of login pages
+  </a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider"
+    target="_blank"
+  >
+    How to configure SMTP settings for sending emails to consumers
+  </a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/social-login"
+    target="_blank"
+  >
+    How to implement Social Login options like Facebook, Google
+  </a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/phone-login"
+    target="_blank"
+  >
+    How to implement Phone Login
+  </a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
+- <a
+    href="https://www.loginradius.com/docs/developer/guide/passwordless-login"
+    target="_blank"
+  >
+    How to implement Passwordless Login
+  </a>
 
 ## Node-js SDK Reference
 
-<a href="https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk" target="_blank">Node-js SDK</a>
+<a
+  href="https://www.loginradius.com/docs/developer/references/sdk/nodejs-sdk"
+  target="_blank"
+>
+  Node-js SDK
+</a>
 
 ## API Reference
 

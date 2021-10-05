@@ -5,9 +5,6 @@ description: "This is a guide for configuring Strong Password Policy."
 path: "/guide/set-strong-password-policy"
 ---
 
-<span class="developer plan-tag">Developer</span>
-<span class="devloper-premium plan-tag">Developer Pro</span>
-
 # Set Strong Password Policy
 
 The **Password Policy** feature allows you to enhance authentication security by defining the password rules. This guide will help you in setting a Password Policy using various password scales.

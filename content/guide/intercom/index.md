@@ -1,0 +1,58 @@
+---
+title: "Intercom"
+tags: ["Intercom"]
+description: "This is a guide for integrating Intercom with LoginRadius services."
+path: "/guide/intercom"
+---
+
+# Intercom
+
+Intercom allows your user to talk to you.
+
+Let's integrate Intercom into your Loginradius Application.
+
+## Step 1: Visit Integration Section
+
+Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click the **Integration** and the Configured Integrations screen will appear:
+
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
+
+## Step 2: Add Integration
+
+Click the **Add** button from the above screen, and you will find the list of all available integrations as displayed in the below screen:
+
+   ![alt_text](images/available-integration.png "image_tooltip")
+
+## Step 3: Enable Intercom
+
+Search for Intercom in the search bar, locate **Intercom** and click the **Try It For Free** option. 
+
+   ![alt_text](images/intercom1.png "image_tooltip")
+
+The following pop-up will appear, click the **Enable** button.
+
+   ![alt_text](images/intercom2.png "image_tooltip")
+
+## Step 4: Configure Intercom
+
+From the **Available Integrations** screen, click the **Let’s Configure** under the Intercom box. The following screen will appear:
+
+   ![alt_text](images/intercom3.png "image_tooltip")
+
+Enter or select the following details to configure Intercom:
+
+a. Select the **Event** from the dropdown
+
+c. Enter the **Metadata** details namely
+
+   * **Mapping**
+
+   * **Plugin Filters**
+
+   * **Filters**
+
+   * **Script**
+
+> **Note:** Metadata details of Plugin Filters, Filters and Script are optional
+
+Click the **Save** button to save the configuration.

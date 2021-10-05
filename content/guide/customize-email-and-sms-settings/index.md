@@ -15,7 +15,7 @@ This guide explains how to customize behaviors for sending event-based emails an
 
 2. Click the down caret, and the **Email/SMS Provider Settings** screen will appear:
 
-   ![alt_text](../../assets/blog-common/email-sms-provider-settings.png "image_tooltip")
+   ![alt_text](images/email-sms-settings.png "image_tooltip")
 
 3. You can access either the **Email Settings** or **SMS Settings** sub-section by clicking on the respective tab located in the section's sidebar.
 
@@ -23,7 +23,7 @@ This guide explains how to customize behaviors for sending event-based emails an
 
 You can edit your application's email settings by clicking the **Email Settings** tab. The settings screen will show as below:
 
-  ![alt_text](images/email-settings.png "image_tooltip")
+![alt_text](images/email-settings1.png "image_tooltip")
 
 You can configure the following settings:
 
@@ -41,12 +41,14 @@ Click the **Save** button to save your changes.
 
 ### SMS Settings
 
-<p><span class="devloper-premium plan-tag">Developer Pro</span></p>
+<p><span class="devloper-premium plan-tag">Premium</span></p>
 <p> </p>
 
 You can edit your application's SMS settings by clicking on the **SMS Settings** tab. The settings screen will show as below:
 
-![alt_text](images/sms-settings.png "image_tooltip")
+![alt_text](images/sms-settings1.png "image_tooltip")
+
+> **Note**: SMS Settings tab will appear in this section only when **Phone Login** feature is enabled for your app.
 
 You can configure the following settings:
 

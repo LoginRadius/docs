@@ -5,8 +5,7 @@ description: "This document covers the Inbound SSO SAML - Azure AD introduction 
 path: "guide/inbound-sso-saml-azure-ad"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
-<span class="devloper-premium plan-tag">Add on</span>
+<span class="devloper-premium plan-tag">Premium</span>
 
 # Inbound SSO SAML - Azure AD
 
@@ -34,7 +33,7 @@ This document provides instructions to add a custom Identity provider (Azure) us
 
 7. Click the SAML as a single sign-on method, and the below screen will appear:
 
-   ![alt_text](images/newtest.png "image_tooltip")
+   ![alt_text](images/newtest1.png "image_tooltip")
 
 8. Click the Edit icon given next to the **Basic SAML Configuration** and enter below SAML configuration:
 
@@ -58,13 +57,13 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
 2. Click the Add button for adding a new Inbound SSO SAML app. The configuration options will appear.
 
-3. Search for Inbound SSO SAML in the search bar, locate Inbound SSO SAML and click the  Let’s Configure option.
+3. Search for Inbound SSO SAML in the search bar, locate **Inbound SSO SAML** and click the  **Let’s Configure** option.
 
-   ![alt_text](images/integrations_available.png "image_tooltip")
+   ![alt_text](images/integration-options.png "image_tooltip")
 
    The following screen will appear:
 
-   ![alt_text](images/custom_saml_provider.png "image_tooltip")
+   ![alt_text](images/configure.png "image_tooltip")
 
 4. Enter or select the following values:
 

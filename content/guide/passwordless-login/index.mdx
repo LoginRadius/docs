@@ -5,7 +5,6 @@ description: "This is a guide for managing the Passwordless Login method in Logi
 path: "/guide/passwordless-login"
 ---
 
-<span class="devloper-premium plan-tag">Developer Pro</span>
 
 # Manage Passwordless Login
 
@@ -13,7 +12,7 @@ The LoginRadius Identity Platform provides the Passwordless Login method to enab
 
 This guide explains how to configure the Passwordless Login for your consumers.
 
-> Note: Your consumer will still need to register by providing a password. After registering, the consumer will have the option to log in without a password.
+> **Note**: Your consumer will still need to register by providing a password. After registering, the consumer will have the option to log in without a password.
 
 You can implement the Passwordless Login method in two following ways:
 
@@ -21,13 +20,11 @@ You can implement the Passwordless Login method in two following ways:
 
 - **With Link via Email**: A link is sent to the consumer's registered email address. The consumer will be issued an access token upon navigating to the provided link.
 
-> Note: If both Passwordless Login and <a href="https://www.loginradius.com/docs/developer/guide/mfa" target="_blank">Two Factor Authentication (2FA)</a> are implemented for your application, your consumer will not be prompted for 2FA when they choose to authenticate using the Passwordless login method.
+> **Note**: If both Passwordless Login and <a href="https://www.loginradius.com/docs/developer/guide/mfa" target="_blank">Two Factor Authentication (2FA)</a> are implemented for your application, the **Passwordless Login** will not work for your consumers.
 
 ## Configuration
 
 ### Step 1: Choose Login Method
-
-> Note: You will need to be subscribed to the **Developer Pro** plan to enable this login method.
 
 Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
 
@@ -56,11 +53,11 @@ import PwdLessDash from "./dashboard"
 
    These actions are available in the action bar highlighted in the image below:
 
-   ![alt_text](images/passwordless-method-actions.png "image_tooltip")
+   ![alt_text](images/passwordless-method-actions1.png "image_tooltip")
 
 2. To edit the templates used for the Passwordless Login method, click the **Edit** icon given in the action bar highlighted in the previous step. Each template corresponds to one of the two ways that the Passwordless Login method can be implemented.
 
-   ![alt_text](images/passwordless-templates.png "image_tooltip")
+   ![alt_text](images/passwordless-templates1.png "image_tooltip")
 
 3. With a Passwordless Login template type selected, you can perform the following actions:
 
@@ -69,7 +66,7 @@ import PwdLessDash from "./dashboard"
 
    These actions are available in the action bar highlighted in the image below:
 
-   ![alt_text](images/passwordless-template-edit.png "image_tooltip")
+   ![alt_text](images/passwordless-template-edit1.png "image_tooltip")
 
 4. When editing the **Passwordless Login with OTP** template, you can update the following:
 
