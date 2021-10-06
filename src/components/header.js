@@ -101,9 +101,9 @@ export default class Header extends Component {
                 {results.length ? (
                   <ul style={{overflow: "auto", maxHeight: 467}} id="results">
                     {results.slice(0, 10).map((page, ind) => (
-                      <li style={cursor === ind ? {backgroundColor: "red"} : undefined} key={page.id} tabIndex="1" className={cursor === ind ? "active" : null}>
+                      <li key={page.id} tabIndex="1" className={cursor === ind ? "active" : null}>
                         <div>
-                          <Link to={page.path}>{page.title}</Link>
+                          <Link to={page.path} style={cursor === ind ? {color: "#008ecf"} : undefined} >{page.title}</Link>
                         </div>
                       </li>
                     ))}
