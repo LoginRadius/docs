@@ -279,6 +279,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        tags
       }
       tableOfContents(heading: "")
     }
@@ -289,6 +290,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        tags
       }
     }
   }

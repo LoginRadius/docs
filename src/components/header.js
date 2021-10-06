@@ -10,7 +10,9 @@ export default class Header extends Component {
       query: ``,
       results: [],
       toggleOpen: false,
+      cursor: -1,
     }
+    this._handleKeyDown = this._handleKeyDown.bind(this);
   }
 
   _shouldClose = false
@@ -28,6 +30,28 @@ export default class Header extends Component {
       this.setState({
         toggleOpen: true,
       })
+    }
+  }
+
+  _handleKeyDown(e) {
+    const { cursor, results } = this.state
+    // arrow up/down button should select next/previous list element
+    if (e.keyCode === 38 && cursor >= 0) {
+      e.preventDefault();
+      this.setState( prevState => ({
+        cursor: prevState.cursor - 1
+      }))
+    } else if (e.keyCode === 40 && cursor < results.length - 1) {
+      e.preventDefault();
+      this.setState( prevState => ({
+        cursor: prevState.cursor + 1
+      }))
+    } else if (e.keyCode === 13) {
+      e.preventDefault();
+      if (cursor >= 0) {
+        const item = document.getElementById("results").children[cursor];
+        item.children[0].children[0].click();
+      }
     }
   }
 
@@ -50,7 +74,7 @@ export default class Header extends Component {
   }
 
   render() {
-    const { results, toggleOpen } = this.state
+    const { results, toggleOpen, cursor } = this.state
     return (
       <header>
         <div>
@@ -71,12 +95,13 @@ export default class Header extends Component {
                   placeholder="Search documentation..."
                   onChange={this.search}
                   id={"search"}
+                  onKeyDown={this._handleKeyDown}
                 />
                 <a onClick={this._toggleSearch}></a>
                 {results.length ? (
-                  <ul>
-                    {results.slice(0, 4).map(page => (
-                      <li key={page.id}>
+                  <ul style={{overflow: "auto", maxHeight: 467}} id="results">
+                    {results.slice(0, 10).map((page, ind) => (
+                      <li style={cursor === ind ? {backgroundColor: "red"} : undefined} key={page.id} tabIndex="1" className={cursor === ind ? "active" : null}>
                         <div>
                           <Link to={page.path}>{page.title}</Link>
                         </div>
