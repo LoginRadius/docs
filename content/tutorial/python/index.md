@@ -1,7 +1,7 @@
 ---
 title: "Get started with Python"
 tags: ["Python", "GetStarted"]
-description: "This is a tutorial with IDX and python sdk implmentation."
+description: "This is a tutorial with IDX and python sdk implementation."
 path: "/tutorial/python"
 ---
 
@@ -26,7 +26,7 @@ In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
+To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen.
 
 > Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
 
@@ -47,9 +47,9 @@ In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginrad
 * Install virutalenv by running the following command:
 
     `pip install virtualenv`
-    
+
 * Create the virtual environment by running the following command:
-    
+
     `virtualenv python_demo`
 
 * Activate the virtualenv, the following are the commands for MacOS/Linux and Windows:
@@ -79,7 +79,7 @@ This implementation uses the flask framework to create Python API.
    return "Hello World!"
 
   if __name__ == "__main__":
-  
+
    app.run()
   ```
 
