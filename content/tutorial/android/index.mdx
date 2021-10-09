@@ -11,9 +11,9 @@ import Sott from "../../common-docs/generate-sott"
 
 # Get Started - Android
 
-The tutorial lets you implement LoginRadius user registration, login, profile, and log out in your Android mobile application.
+The tutorial helps you implement user registration, login, profile, and log out with LoginRadius in your Android mobile application.
 
-> You must have the following:
+> Prerequisites
 >
 > - Android SDK Version >= 15
 >
@@ -74,7 +74,7 @@ implementation 'com.loginradius.android:androidsdk:4.8.0'
   <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
   ```
-- Add the following dependency in your app's `build.gradle`:
+- Add the following dependencies in your app's `build.gradle`:
 
 ```
 implementation 'com.squareup.retrofit2:retrofit:2.4.0'
@@ -162,9 +162,8 @@ api.login(LoginActivity.this, params, new AsyncHandler < LoginData > () {
 
 ## Retrieve User Data using Access Token
 
-> You will get an `access token` in response to Registration and Login functions.
-
-Once the authentication is done, you can use the `access token` to retrieve profile data and handle other user functionality. Add the following code to get the user profile:
+> The Registration and Login functions return an `access token`.
+Once the authentication is done, you can use the `access token` to retrieve profile data and handle other user functionalities. Add the following code to get the user profile:
 
 ```java
 public void readAllUserProfile(String access_token) {
@@ -348,7 +347,7 @@ Here is an example user profile object that is returned from the `readAllUserPro
 
 ## Explore Android Demo
 
-Check out our Android demo to know how you can implement various LoginRadius features using SDK and its functions.
+Check out our Android demo to know how you can implement various LoginRadius features using the SDK and its functions.
 
 **<a href="https://github.com/LoginRadius/android-sdk" target="_blank">GitHub Demo Link</a>** | **<a href="https://github.com/LoginRadius/android-sdk/archive/master.zip" target="_blank">Download Demo</a>**
 
