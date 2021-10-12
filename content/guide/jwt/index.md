@@ -134,7 +134,7 @@ This section covers the required configurations that you need to perform in the 
 
 5. You need to provide or select the following values to configure the JWT App.
 
-   * **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
+   * **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., company_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
 
    * [**Secret Key:**](#get-credentials) A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
 
