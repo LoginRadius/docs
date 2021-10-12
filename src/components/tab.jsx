@@ -24,7 +24,10 @@ export const TabContainer = ({ tabs, tabheaders }) => {
                     {tabName}
                   </a>
                 </li>
-              ))}
+                <button onClick={Copied}>
+                Copy
+                </button>
+                ))}
             </ul>
           </div>
 
