@@ -16,7 +16,7 @@ Use these Quick Links for handy use:
 
 - `npm install` in this directory
 - `npm start` in this directory
--  Open a browser to the link provided in the console.
+-  Open the link provided in the console in a browser.
 
 
 ## How to contribute
