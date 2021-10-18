@@ -188,7 +188,7 @@ This is the list of browsers that are supported by LoginRadius, including the di
 | Android Default Browser | Yes       | All including Latest one |
 
 
-## Pricing, Billing and Licensing
+## Pricing, Billing, and Licensing
 
 Ask about products, implementation, use cases, and more— we are ready to help!
 
