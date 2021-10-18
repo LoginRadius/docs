@@ -24,7 +24,7 @@ The Website is based upon proprietary LoginRadius technology and includes the Co
 
 ## External Websites  
 
-The LoginRadius Website contains links to external websites that are not owned or controlled by us. LoginRadius assumes no responsibility for the content, privacy policies or practices of any external websites. In addition, LoginRadius will not and cannot censor or edit the content of any external website. By using the Website or the Service, you expressly relieve LoginRadius from any and all liabilities arising from your use of any external websites.
+The LoginRadius Website contains links to external websites that are not owned or controlled by us. LoginRadius assumes no responsibility for the content, privacy policies, except for or practices of any external websites. In addition, LoginRadius will not and cannot censor or edit the content of any external website. By using the Website or the Service, you expressly relieve LoginRadius from any liabilities arising from your use of any external websites.
 
 ## Privacy  
 
