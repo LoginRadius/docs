@@ -57,4 +57,3 @@ Enter or select the following SMTP details:
 
 
 [Go Back to Home Page](/)
-
