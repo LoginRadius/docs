@@ -969,7 +969,7 @@ const Middle = () => {
                 <Link to="references/api/account">Account</Link>
               </li>
               <li>
-                <Link to="references/api/b2b">Account</Link>
+                <Link to="references/api/b2b">B2B</Link>
               </li>
               <li>
                 <Link to="references/api/social">Social</Link>
