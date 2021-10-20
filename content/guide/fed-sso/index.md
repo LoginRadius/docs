@@ -1,7 +1,7 @@
 ---
-title: "Guide to Federated SSO "
-tags: ["FedSSO", "GetStarted"]
-description: "This document covers the Federated SSO introduction and its protocols supported by the LoginRadius Identity Platform."
+title: "Guide to Outbound SSO "
+tags: ["FedSSO", "GetStarted", "OutboundSSO", "FederatedSSO"]
+description: "This document covers the Outbound SSO introduction and its protocols supported by the LoginRadius Identity Platform."
 path: "/guide/fed-sso"
 ---
 
