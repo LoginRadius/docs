@@ -1,0 +1,27 @@
+To download or find more information about LoginRadius CLI, see the **<a href="https://www.loginradius.com/open-source/cli/" target="_blank">LoginRadius CLI feature page.</a>**
+      
+Use the following commands to check and configure passwordless login for your app. 
+
+**To check status of login methods:**
+
+```shell
+$ lr get login-method
++--------------------------+-----------+
+|   Method                          | Enabled     |  
++--------------------------+-----------+
+| Phone Login                   | false         |	
+| Passwordless Login   | false         | 
++--------------------------+-----------+
+```
+
+**To enable Passwordless login:**
+
+```shell
+$ lr add login-method
+Select the Login Method from the list:
+- Phone Login 
+- Passordless Login <chosen>
+
+Passwordless Login has been successfully added.
+```  
+

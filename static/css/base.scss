@@ -65,7 +65,7 @@ input[type="button"] {
   padding: 32px 0;
 }
 .py-72 {
-  padding: 72px 0;
+  padding: 62px 0;
   @media (max-width: 768px) {
     padding: 48px 0;
   }
@@ -344,4 +344,64 @@ main {
 
 .mt-0 {
   margin-top: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.tab-container {
+  .tab-menu {
+    background-color: $blue-darkest;
+    ul {
+      margin: 0 !important;
+      padding: 0;
+      li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 !important;
+        a {
+          display: block;
+          text-decoration: none;
+          background-color: $blue-darkest;
+          border-top: 1px solid $blue-darkest;
+          color: $gray-medium;
+          padding: 12px 32px;
+          font-weight: 600;
+          &.active-a {
+            background-color: $white;
+            color: $blue-darkest;
+            border-left: 1px solid $gray-medium;
+            border-top: 1px solid $gray-medium;
+            &:hover,
+            &:focus {
+              background-color: $white;
+              color: $blue-darkest;
+            }
+          }
+          &:hover,
+          &:focus {
+            background-color: $blue-dark;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .tab {
+    display: none;
+  }
+  .tab-active {
+    display: block;
+    border: 1px solid $gray-medium;
+    border-top: 0;
+    padding: 32px;
+    margin-bottom: 1em;
+    h3 {
+      &:first-child {
+        margin-top: 0 !important;
+      }
+    }
+  }
 }

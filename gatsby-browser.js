@@ -9,3 +9,12 @@ import "./static/css/base.min.css"
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
+
+import "prismjs/plugins/command-line/prism-command-line.css"
+
+import React from "react"
+import { DocsProvider } from "./src/context/docsContext"
+
+export const wrapRootElement = ({ element }) => (
+  <DocsProvider>{element}</DocsProvider>
+)

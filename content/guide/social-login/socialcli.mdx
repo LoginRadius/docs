@@ -1,0 +1,32 @@
+To download or find more information about LoginRadius CLI, see the **<a href="https://www.loginradius.com/open-source/cli/" target="_blank">LoginRadius CLI feature page.</a>**
+
+Use the following commands to implement Social Login for your application.
+
+### Step 1: Add Login Method
+
+```shell
+$ lr add social
+? Select the provider from the list: google
+? Client ID: ###Client ID###
+? Client Secret: ###Client Secret###
+google is added as your login Method
+```
+
+> The list of [supported social providers](#supported-social-providers) varies based on your plan.
+
+### Step 2: Whitelist Domain
+
+Whitelist your application domain to allow the LoginRadius API access.
+
+```shell
+$ lr add domain -d htts://google.com
+htts://google.com is now added as your whitelisted domain.
+```
+
+### Step 3: Check Auth Page (IDX)
+
+Open your Auth Page (IDX) using below command and it will display the social icon for the configured social provider:
+
+```shell
+$ lr demo
+```

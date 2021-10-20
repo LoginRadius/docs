@@ -1,0 +1,17 @@
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import CLI from "./cli"
+import Dashboard from "./dashboard"
+
+For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+
+<TabContainer
+  tabheaders={["Using Dashboard", "Using CLI"]}
+  tabs={[
+    <Tab>
+      <Dashboard />
+    </Tab>,
+    <Tab>
+      <CLI />
+    </Tab>,
+  ]}
+/>

@@ -1,0 +1,15 @@
+import { Tab, TabContainer } from "../../../../src/components/tab.jsx"
+import SearchCli from "./searchcli"
+import SearchDashboard from "./searchdashboard"
+
+<TabContainer
+  tabheaders={["Using Dashboard", "Using CLI"]}
+  tabs={[
+    <Tab>
+      <SearchDashboard />
+    </Tab>,
+    <Tab>
+      <SearchCli />
+    </Tab>,
+  ]}
+/>

@@ -1,0 +1,17 @@
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import CLI from "./cli"
+import Dashboard from "./dashboard"
+
+Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
+
+<TabContainer
+  tabheaders={["Using Dashboard", "Using CLI"]}
+  tabs={[
+    <Tab>
+      <Dashboard />
+    </Tab>,
+    <Tab>
+      <CLI />
+    </Tab>,
+  ]}
+/>

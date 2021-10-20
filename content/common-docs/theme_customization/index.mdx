@@ -1,0 +1,19 @@
+import { Tab, TabContainer } from "../../../src/components/tab.jsx"
+import CLI from "./cli"
+import Dashboard from "./dashboard"
+
+LoginRadius provides the functionality where you can select a design theme for your login page or further customize the content displayed.
+
+<TabContainer
+  tabheaders={["Using Dashboard", "Using CLI"]}
+  tabs={[
+    <Tab>
+      <Dashboard />
+    </Tab>,
+    <Tab>
+      <CLI />
+    </Tab>,
+  ]}
+/>
+
+> Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).

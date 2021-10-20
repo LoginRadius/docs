@@ -6,7 +6,7 @@ module.exports = {
       summary: ``,
     },
     description: `LoginRadius Developer Docs`,
-    siteUrl: `https://www.loginradius.com/`
+    siteUrl: `https://www.loginradius.com/`,
   },
   plugins: [
     {
@@ -39,20 +39,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              fromHeading: 1,
-              toHeading: 2,
-              className: "table-of-contents"
-            },
-          },
           `gatsby-remark-component`,
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-use-frontmatter-path`
+          `gatsby-remark-use-frontmatter-path`,
         ],
       },
     },
@@ -101,7 +93,6 @@ module.exports = {
         sv: process.env.HOTJAR_SNIPPET_VERSION,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -126,15 +117,50 @@ module.exports = {
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
+          Mdx: {
+            title: node => node.frontmatter.title,
+            tags: node => node.frontmatter.tags,
+            path: node => node.fields.slug,
+          },
           MarkdownRemark: {
             title: node => node.frontmatter.title,
             tags: node => node.frontmatter.tags,
             // description: node => node.frontmatter.description,
-            path: node => node.fields.slug
+            path: node => node.fields.slug,
           },
         },
         // Optional filter to limit indexed nodes
         filter: (node, getNode) => node.frontmatter.tags !== "exempt",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+        duration: 100,
       },
     },
   ],

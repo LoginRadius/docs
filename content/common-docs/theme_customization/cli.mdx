@@ -1,0 +1,40 @@
+To download or find more information about LoginRadius CLI, see the **<a href="https://www.loginradius.com/open-source/cli/" target="_blank">LoginRadius CLI feature page.</a>**
+
+Use the following commands to select and manage your Auth Page(IDX) theme.
+
+**To get all available themes**:
+
+```shell
+$ lr get theme --all
+Available Themes:
+1. London
+2. Tokyo
+3. Helsinki
+
+```
+
+**To get an active theme**:
+
+```shell
+$ lr get theme --active
+Current Theme: London
+```
+
+**To choose the theme with the default configuration**:
+
+```shell
+$ lr set theme -t Tokyo
+? Previous changes will be lost. Do you wish to continue: Yes
+Resetting the current theme...
+Fetching Auth theme url...
+Updating CSS based on new theme...
+Fetching data...
+Updating to new theme...
+Your theme has been changed
+```
+
+**To preview your login page's theme**:
+
+```shell
+lr demo
+```

@@ -1,0 +1,26 @@
+To download or find more information about LoginRadius CLI, see the **<a href="https://www.loginradius.com/open-source/cli/" target="_blank">LoginRadius CLI feature page.</a>**
+
+Use the following commands to whitelist domains or manage domains that are already whitelisted.
+
+**To get the list of whitelisted domain**:
+
+```shell
+$ lr get domain
+1.http://localhost
+2.http://127.0.0.1
+3.loginradius.com
+```
+
+**To whitelist a domain**:
+
+```shell
+$ lr delete domain -d http://127.0.0.1
+http://127.0.0.1 is now removed from whitelisted domain.
+```
+
+**To remove whitelisted domain**:
+
+```shell
+$ lr add domain -d htts://google.com
+htts://google.com is now added as your whitelisted domain.
+```
