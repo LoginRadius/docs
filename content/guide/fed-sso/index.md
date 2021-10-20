@@ -8,21 +8,21 @@ path: "/guide/fed-sso"
 <span class="devloper-premium plan-tag">Developer Pro</span>
 <span class="devloper-premium plan-tag">Add on</span>
 
-# Federated SSO
+# Outbound SSO
 
-This document covers the Federated SSO introduction and its protocols supported by the LoginRadius Identity Platform.
+This document covers the Outbound SSO introduction and its protocols supported by the LoginRadius Identity Platform.
 
-## Federated SSO Introduction
+## Outbound SSO Introduction
 
-Federated SSO comes in handy while implementing SSO with third-party applications. For interaction with third-party web applications, common standards and protocols are used to manage and map user identities via trust relationships. LoginRadius Identity Platform supports SAML, JWT, OAuth, and OpenID protocols for Federated SSO. In the Federated SSO process, the LoginRadius Identity Platform acts as Identity Provider(IDP).
+Outbound SSO comes in handy while implementing SSO with third-party applications. For interaction with third-party web applications, common standards and protocols are used to manage and map user identities via trust relationships. LoginRadius Identity Platform supports SAML, JWT, OAuth, and OpenID protocols for Outbound SSO. In the Outbound SSO process, the LoginRadius Identity Platform acts as Identity Provider(IDP).
 
 LoginRadius acts as an IdP, which stores and authenticates the identities that your consumers use to log in to your systems, applications, files servers, and more depending upon the configuration. The following flow diagram displays the role of LoginRadius as IDP:
 
-![alt_text](/images/fed-sso-flow.png "image_tooltip")
+![alt_text](images/fed-sso-flow.png "image_tooltip")
 
-## Federated SSO Protocols
+## Outbound SSO Protocols
 
-The following are the list of Federated SSO Protocols supported by LoginRadius Identity Platform:
+The following are the list of Outbound SSO Protocols supported by LoginRadius Identity Platform:
 
 [SAML](#saml)
 
