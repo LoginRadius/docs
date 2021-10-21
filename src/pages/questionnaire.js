@@ -1933,7 +1933,7 @@ class Questionnaire extends React.Component {
                       <div className="qa">
                         <h1>Does LoginRadius Support my Use Case?</h1>
                         <p>
-                          Answer a few questions and get a self-served
+                          Answer a few questions and get a self-serve
                           implementation guide addressing your needs.
                         </p>
                       </div>

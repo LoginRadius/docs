@@ -101,6 +101,7 @@
   word-wrap: break-word;
   line-height: 1.4;
   font-size: 14px;
+  height: 224px;
 }
 
 .body .bodyEditor textarea:focus {
