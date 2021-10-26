@@ -13,7 +13,6 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Ruby on rails? Check out this <a href="https://guides.rubyonrails.org/v5.0/getting_started.html" target="_blank">reference</a>.
 
-
 ---
 
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
@@ -28,7 +27,7 @@ In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-To preview your login page's theme, click the **Go to your Login Page** link highlighted on the above screen. 
+To preview your login page's theme, click the **Go to your Login Page** link highlighted on the above screen.
 
 > Features like Email and Password login, User registration, Forgot password, and Remember me are already configured on your Auth Page(IDX).
 
@@ -36,7 +35,7 @@ To preview your login page's theme, click the **Go to your Login Page** link hig
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -59,10 +58,11 @@ bundle install
 Add `Figaro` for secure environment variables by this line to your application's Gemfile:
 
 ```
-gem "figaro" 
+gem "figaro"
 ```
 
 Run `bundle exec figaro install`, then configure the generated `/config/application.yml` file.
+
 ```
 
 SITE_NAME: "<App Name>"
@@ -116,7 +116,7 @@ Navigate your Register or Login links or buttons to the following URLs:
 >
 > If return_url is frontend, then from that application, pass the token to the backend ROR API. Otherwise, use the path of the back end API as the return_url.
 
-Create profile controller `app/controllers/api/profile_controller.rb `  and add the method to retrieve user profile using the received access token:
+Create profile controller `app/controllers/api/profile_controller.rb ` and add the method to retrieve user profile using the received access token:
 
 ```
     def read_profile_by_access_token
@@ -177,7 +177,7 @@ Similarly, you can implement more features using ROR SDK.
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a> and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
@@ -189,17 +189,17 @@ Check out our ROR demo to know how you can implement various LoginRadius feature
 
 ## Recommended Next Steps
 
-* <a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Ruby On Rails SDK Reference
 

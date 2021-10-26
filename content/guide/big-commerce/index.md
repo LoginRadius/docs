@@ -16,11 +16,7 @@ This document provides instructions for installing the LoginRadius CIAM Plugin f
 
 Before configuring the LoginRadius app in the Bigcommerce environment, you need to get your **API Key** and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to 
-
-<a href="https://dashboard.loginradius.com/configuration" target="_blank">**Configuration > API Credentials**</a> 
-
-and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">**Configuration > API Credentials**</a> and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -36,18 +32,17 @@ and click the **API Key And Secret** subsection to retrieve your API Credentials
 
    ![alt_text](images/bigcommerce-lr.png "image_tooltip")
 
-5. Once the app is added, click the **Install** button given next to the app:
+4. Once the app is added, click the **Install** button given next to the app:
 
    ![alt_text](images/bigcommerce-lrinstall.png "image_tooltip")
 
-6. Select the newly installed LoginRadius App on the left navigation (Apps > My Apps).
+5. Select the newly installed LoginRadius App on the left navigation (Apps > My Apps).
 
-7. Input your LoginRadius API Key and API Secret obtained from [Get Cedentials](#get-credentials) step and click the **Validate & Install** button.
+6. Input your LoginRadius API Key and API Secret obtained from [Get Cedentials](#get-credentials) step and click the **Validate & Install** button.
 
    ![alt_text](images/bigcommerce-lrinstallconfig.png "image_tooltip")
 
 This will install the LoginRadius App into your BigCommerce environment. If you receive any errors, contact [LoginRadius Support Team](https://loginradiusassist.freshdesk.com/support/home).
-
 
 ## BigCommerce Setup
 
@@ -59,11 +54,11 @@ This will install the LoginRadius App into your BigCommerce environment. If you 
 
    ![alt_text](images/bigcommerce-setup-create-api.png "image_tooltip")
 
-   * Change Content, Checkout Content, and Customers options to **modify**.
+   - Change Content, Checkout Content, and Customers options to **modify**.
 
-   * Change Customer Login to **login**.
+   - Change Customer Login to **login**.
 
-   * Change other all to **read-only**.
+   - Change other all to **read-only**.
 
 3. It will provide the API credentials and also generated credentials auto-downloaded as txt file.
 
@@ -77,24 +72,21 @@ This will install the LoginRadius App into your BigCommerce environment. If you 
 
 To support the BigCommerce SSO flows, you will need to handle the following:
 
-
 1. Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account, select your app and then navigate to the [Integration](https://dashboard.loginradius.com/integration) section.
 
    The following screen will appear:
 
    ![alt_text](images/bigcommerce-integration.png "image_tooltip")
 
-2. Click the **Add** button for adding a new BigCommerce app. The configuration options will appear. 
+2. Click the **Add** button for adding a new BigCommerce app. The configuration options will appear.
 
-
-3. Either search for **BigCommerce** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **BigCommerce** and click the **Add Me** option. 
+3. Either search for **BigCommerce** in the search bar or go to the **Select Category** dropdown and select **E-Commerce** category. Locate **BigCommerce** and click the **Add Me** option.
 
    ![alt_text](images/bigcommerce-integration-search-results.png "image_tooltip")
 
-   From the below pop-up, click the **Enable** button: 
+   From the below pop-up, click the **Enable** button:
 
    ![alt_text](images/bigcommerce-integration-enable.png "image_tooltip")
-
 
 4. After this configuration, the app is available in **Available Integrations**. There, click the **Let's configure** option under the BigCommerce box.
 
@@ -106,30 +98,29 @@ To support the BigCommerce SSO flows, you will need to handle the following:
 
 5. Enter or select the following values:
 
-   * Store Name: Enter your store name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your store name value should be `pqshk245fh`
+   - Store Name: Enter your store name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your store name value should be `pqshk245fh`
 
-   * Store URL: Set this to your BigCommerce Store URL. E.g.: `http://<BIGCOMMERCE Store NAME>.mybigcommerce.com`
+   - Store URL: Set this to your BigCommerce Store URL. E.g.: `http://<BIGCOMMERCE Store NAME>.mybigcommerce.com`
 
-   * Store Login URL: Set this to your BigCommerce Store Login URL. E.g.: `https://<BIGCOMMERCE Store NAME>.mybigcommerce.com/login/token/`
+   - Store Login URL: Set this to your BigCommerce Store Login URL. E.g.: `https://<BIGCOMMERCE Store NAME>.mybigcommerce.com/login/token/`
 
-   * Access Token: Enter a valid BigCommerce Access Token for an API Account, see this doc on [Creating API Accounts](https://support.bigcommerce.com/s/article/Store-API-Accounts)
+   - Access Token: Enter a valid BigCommerce Access Token for an API Account, see this doc on [Creating API Accounts](https://support.bigcommerce.com/s/article/Store-API-Accounts)
 
-   * Scopes: Enter a list of scopes you would like to have authorized for the users separated by spaces. E.g.: `store_v2_customers store_v2_customers_login store_v2_default store_v2_information_read_only users_basic_information`
+   - Scopes: Enter a list of scopes you would like to have authorized for the users separated by spaces. E.g.: `store_v2_customers store_v2_customers_login store_v2_default store_v2_information_read_only users_basic_information`
 
-   * Client Id: Enter the Client Id that was generated along with the access token.
+   - Client Id: Enter the Client Id that was generated along with the access token.
 
-   * Client Secret: Enter the Client Secret that was generated along with the access token.
+   - Client Secret: Enter the Client Secret that was generated along with the access token.
 
-   * Mapping: Map the following required fields to pass the respective values into BigCommerce. 
-   
-     | Key | Value | |
-     |----|----|-----|
-     |first_name| FirstName| |
-     |last_name| LastName |  |
-     |email | Other|Enter value  `Email[0].Value`|
-     
+   - Mapping: Map the following required fields to pass the respective values into BigCommerce.
+
+     | Key        | Value     |                              |
+     | ---------- | --------- | ---------------------------- |
+     | first_name | FirstName |                              |
+     | last_name  | LastName  |                              |
+     | email      | Other     | Enter value `Email[0].Value` |
+
      > Note: These are required fields for BigCommerce integration and you should use Key Values in the format given above.
-
 
 ## Stencil Theme Setup
 
@@ -149,17 +140,16 @@ It is recommended that you backup your theme before making any modifications if 
 
 3. Open the `config.js` in your **theme > assets > loginradius >assets > js** and update the LoginRadius options object with the following:
 
-   * `storeName`: Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`  , then your store name value should be `pqshk245fh`
+   - `storeName`: Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/` , then your store name value should be `pqshk245fh`
 
-   * `option.apiKey`: Add your LoginRadius [API Key](#get-credentials).
-   * `option.appName`: Add your LoginRadius [App Name](#get-credentials).
-   * `option.sott`: Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott).
-   * `option.verificationUrl`: You can leave this default unless you want to direct users to a specific location to validate the emails. This is required if you are using the Email add/remove the panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list here.
-   * `option.askEmailForUnverifiedProfileAlways`: You can leave this `true` if you want consumers to verify their email id. Change it to `false` for consumers to proceed without email verification. 
+   - `option.apiKey`: Add your LoginRadius [API Key](#get-credentials).
+   - `option.appName`: Add your LoginRadius [App Name](#get-credentials).
+   - `option.sott`: Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott).
+   - `option.verificationUrl`: You can leave this default unless you want to direct users to a specific location to validate the emails. This is required if you are using the Email add/remove the panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list here.
+   - `option.askEmailForUnverifiedProfileAlways`: You can leave this `true` if you want consumers to verify their email id. Change it to `false` for consumers to proceed without email verification.
 
-   * Add the following schema next to the `var LRObject= new LoginRadiusV2(option);`
+   - Add the following schema next to the `var LRObject= new LoginRadiusV2(option);`
 
-   
      ```
      LRObject.registrationFormSchema = [
          {
@@ -211,26 +201,34 @@ It is recommended that you backup your theme before making any modifications if 
          "type": "password"
          }
       ]
+     ```
+
 ```
 
 4. Include the reference files for LoginRadius in your header section by including the following code in your **theme > templates > components > common > header.html** just before the closing tag:
 
 ```
+
 {{> components/loginradius/LRreferences }}
+
 ```
 
 5. If you are using Single Sign-On, include the tag:
 
 ```
+
 {{> components/loginradius/LRsso }}
+
 ```
 
 6. Go to the theme and open the `create-account.html` file in your **theme > templates > pages > auth > create-account.html** and replace the existing complete create-account form code with:
- 
- ```
- {{inject 'passwordRequirements' settings.password_requirements}}
- {{#partial "page"}}
- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+```
+
+{{inject 'passwordRequirements' settings.password_requirements}}
+{{#partial "page"}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
  <h1 class="page-heading">{{lang 'create_account.heading' }}</h1>
 
  <div class="account account--fixed">
@@ -239,12 +237,14 @@ It is recommended that you backup your theme before making any modifications if 
  {{/partial}}
  {{> layout/base}}
 
- ```
+```
 
 7. Open the `login.html` file in your **theme >templates > pages > auth > login.html** and replace the existing Login Form interface 'div' code with
 
 ```
+
 {{> components/loginradius/auth }}
+
 ```
 
 ![alt_text](images/bigcommerce-code.png "image_tooltip")
@@ -254,22 +254,25 @@ This will display the pre-styled User authentication features which include hand
 8. If you are using SSO you will need to handle the Logout functionality by opening the `navigation.html` file in your **theme > templates > components > common** and change the logout link to:
 
 ```
+
 <a class="navUser-action" onclick="lrLogout(); return false;" href="#">{{lang 'common.logout'}}</a>
+
 ```
 
 9. If you are using the optimized one-page checkout, you will need to include the following component on your `checkout.html` page file in your **theme > templates > pages** after the partial page handlebars:
 
 ```
+
 {{#partial "page"}}
 
- {{> components/loginradius/LoginRadiusOptimizedCheckout }}
- 
- ```
+{{> components/loginradius/LoginRadiusOptimizedCheckout }}
+
+```
 > **Note:** To see the live preview of the changes you have made to your stencil theme, refer to this [document](https://developer.bigcommerce.com/stencil-docs/installing-stencil-cli/live-previewing-a-theme#serving-a-live-preview).
 
 ## Bundling and Uploading the Theme
 
-To upload the modified contents to the big commerce store, first bundle the updated theme and push it to the big commerce store. 
+To upload the modified contents to the big commerce store, first bundle the updated theme and push it to the big commerce store.
 
 Follow the given document for more insights on how to bundle the big commerce theme - https://developer.bigcommerce.com/stencil-docs/deploying-a-theme/bundling-and-pushing.
 
@@ -303,11 +306,11 @@ It is recommended that you backup your theme before making any modifications in 
 
 3. Copy the following folders to the specified locations in your **webdav/template** folder
 
-   * **assets/js**- Copy the loginradius folder to your **webdav/template/js** folder
+  * **assets/js**- Copy the loginradius folder to your **webdav/template/js** folder
 
-   * **assets/images**- Copy the loginradius folder to your **webdav/template/images** folder
+  * **assets/images**- Copy the loginradius folder to your **webdav/template/images** folder
 
-   * **assets/css**- Copy the loginradius folder to your **webdav/template/Styles** folder
+  * **assets/css**- Copy the loginradius folder to your **webdav/template/Styles** folder
 
 4. Copy the contents of the **panels** folder to the **webdav/Panels** Folder
 
@@ -315,32 +318,38 @@ It is recommended that you backup your theme before making any modifications in 
 
 1. Open the `config.js` in the provided `BlueprintThemeFile\assets\js\loginradius` and update the LoginRadius options object with the following:
 
-   * `storeName` - Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your storeName value should be `pqshk245fh`
+  * `storeName` - Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your storeName value should be `pqshk245fh`
 
-   * `option.apiKey` - Add your LoginRadius [API Key](#get-credentials)
+  * `option.apiKey` - Add your LoginRadius [API Key](#get-credentials)
 
-   * `option.appName` - Add your LoginRadius [App Name](#get-credentials)
+  * `option.appName` - Add your LoginRadius [App Name](#get-credentials)
 
-   * `option.sott` - Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott)
+  * `option.sott` - Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott)
 
-   * `option.verificationUrl` - You can leave this default unless you want to direct customers to a specific location to validate the emails. This is required if you are using the Email add/remove panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">here</a>.
+  * `option.verificationUrl` - You can leave this default unless you want to direct customers to a specific location to validate the emails. This is required if you are using the Email add/remove panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">here</a>.
 
 2. Include the reference files for LoginRadius in your header section by including the following code in your `webdav/Panels/header.html` or `webdav/Panels/HTMLHead.html` just before the closing `</header>` tag
 
 ```
+
 %%Panel.lrreferences%%
+
 ```
 
 3. If you are using Single Sign-On also include the tag after the lrreferences tag
 
 ```
+
 %%Panel.lrsso%%
+
 ```
 
 4. Open the `LoginForm.html` file in your `webdav/Panels/LoginForm.html` and replace the existing Login page code with
 
 ```
+
 %%Panel.lrauth%%
+
 ```
 
 This will display the pre-styled customer authentication features which include handling of Login, Social Login, Registration, Forgot Password, and Reset Password.
@@ -348,7 +357,9 @@ This will display the pre-styled customer authentication features which include 
 5. Logout is handled automatically in the `lrsso.html` panel. If you have custom logout links on any of your pages you can add the following on click action to them to tie into the normal LoginRadius Logout procedures.
 
 ```
+
 lrLogout(); return false;
+
 ```
 
 6. You will need to update any of the dynamically created checkout page links if you are using the streamlined cart flow.
@@ -382,28 +393,32 @@ The following options are available to render specific interfaces:
 BigCommerce uses the field `customer_id` to identify unique users for your store. In LoginRadius cloud, this is stored in the ExternalIds field of your consumer profile:
 
 ```
+
 "ExternalIds": [
- {
- "Source": "BigCommerce-mystore",
- "SourceId": "6"
- }
- ]
+{
+"Source": "BigCommerce-mystore",
+"SourceId": "6"
+}
+]
+
 ```
 
 The LoginRadius mapping of BigCommerce `customer_id` to ExternalIds also supports the configuration of multiple BigCommerce stores:
 
 ```
+
 "ExternalIds": [
- {
- "Source": "BigCommerce-myfirststore",
- "SourceId": "6"
- },
- {
- "Source": "BigCommerce-mysecondstore",
- "SourceId": "21"
- }
- ]
-``` 
+{
+"Source": "BigCommerce-myfirststore",
+"SourceId": "6"
+},
+{
+"Source": "BigCommerce-mysecondstore",
+"SourceId": "21"
+}
+]
+
+```
 ## Additional Considerations
 
 1. If you are including the email manage component or account details component on your account details page, You will need to provide a standard email verification page that all email verifications will be redirected to. This page should be accessible by logged-in and logged-out users and should include the verify component.
@@ -425,3 +440,4 @@ If you have installed the LoginRadius BigCommerce App on your BigCommerce Site a
 
 
 [Go Back to Home Page](/)
+```
