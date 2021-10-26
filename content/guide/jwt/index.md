@@ -185,10 +185,9 @@ The JWT will be encrypted with an algorithm. The decrypted JWT contains the Head
    "title": "Login"
   }
 
-  ```
+  ``` 
 
-# JWT Best Practices
-
+## JWT Best Practices
 Before starting with best practices, it is important to note that many attacks on JWT are related to its way of implementation, instead of its design. This does not mean that they are less critical.
 
 > **Note:** Signed JWTs sign both the header and the payload, while JWTs which are encrypted, only encrypt the payload and the header is always in a readable format.
