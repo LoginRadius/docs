@@ -788,15 +788,6 @@ const QuestionList = [
     },
   },
   {
-    question: "Tell us all the internal identity providers your consumers use.",
-    description: "",
-    answers: {
-      type: "multi",
-      isRequired: true,
-      choices: ["Azure AD", "Salesforce", "Other SAML enabled SSO providers"],
-    },
-  },
-  {
     question: "Do you want to implement Outbound SSO using LoginRadius IDP?",
     description:
       "Choose the protocol you want to utilize for allowing consumers to log into your application via LoginRadius IDP",
@@ -813,6 +804,15 @@ const QuestionList = [
     },
   },
   {
+    question: "Tell us all the internal identity providers your consumers use.",
+    description: "",
+    answers: {
+      type: "multi",
+      isRequired: true,
+      choices: ["Azure AD", "Salesforce", "Other SAML enabled SSO providers"],
+    },
+  },
+  {
     question:
       "Do you have consumer profile data in your app or in a third-party app and want to migrate it to LoginRadius?",
     description:
@@ -821,6 +821,22 @@ const QuestionList = [
       type: "single",
       isRequired: true,
       choices: ["Yes", "No"],
+    },
+  },
+  {
+    question:
+      "Choose the front-end technology of your application where you plan to implement LoginRadius.",
+    description: "",
+    answers: {
+      type: "single",
+      isRequired: true,
+      choices: [
+        "JavaScript",
+        // "Pure JavaScript implementation",
+        "AngularJS",
+        "ReactJS",
+        "VueJS",
+      ],
     },
   },
   {
@@ -843,22 +859,6 @@ const QuestionList = [
         "Shopify",
         "Drupal",
         "Other",
-      ],
-    },
-  },
-  {
-    question:
-      "Choose the front-end technology of your application where you plan to implement LoginRadius.",
-    description: "",
-    answers: {
-      type: "single",
-      isRequired: true,
-      choices: [
-        "JavaScript",
-        // "Pure JavaScript implementation",
-        "AngularJS",
-        "ReactJS",
-        "VueJS",
       ],
     },
   },
@@ -1097,33 +1097,7 @@ const DocsList = [
     },
   ],
   [],
-  // "Azure AD",
-  // "Salesforce",
-  // "Other SAML enabled SSO providers"
-  [
-    {
-      name: "Inbound SSO with Azure AD",
-      body: {
-        __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Azure AD.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/</a></span>`,
-      },
-    },
-    {
-      name: "Inbound SSO with Salesforce",
-      body: {
-        __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Salesforce.<br/>
-        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/</a></span>`,
-      },
-    },
-    {
-      name: "Inbound SSO with SAML supported applications",
-      body: {
-        __html: `<span>Here is a guide to configuring Inbound/Employee SSO using applications that support SAML protocol.<br/>
-        <a href="" target="_blank">Link not yet available</a></span>`,
-      },
-    },
-  ],
-  // "SSO SAML",
+   // "SSO SAML",
   // "SSO JWT",
   // "SSO OIDC",
   // "SSO OAuth2",
@@ -1165,6 +1139,32 @@ const DocsList = [
       },
     },
   ],
+  // "Azure AD",
+  // "Salesforce",
+  // "Other SAML enabled SSO providers"
+  [
+    {
+      name: "Inbound SSO with Azure AD",
+      body: {
+        __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Azure AD.<br/>
+        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-azure-ad/</a></span>`,
+      },
+    },
+    {
+      name: "Inbound SSO with Salesforce",
+      body: {
+        __html: `<span>Here is a guide to configuring Inbound/Employee SSO using Salesforce.<br/>
+        <a href="https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/" target="_blank">https://www.loginradius.com/docs/developer/guide/inbound-sso-saml-salesforce/</a></span>`,
+      },
+    },
+    {
+      name: "Inbound SSO with SAML supported applications",
+      body: {
+        __html: `<span>Here is a guide to configuring Inbound/Employee SSO using applications that support SAML protocol.<br/>
+        <a href="" target="_blank">Link not yet available</a></span>`,
+      },
+    },
+  ],
   // Data Migration Question
   [
     {
@@ -1172,6 +1172,47 @@ const DocsList = [
       body: {
         __html: `<span>Here is a guide to migrating user data from any third-party application to LoginRadius using the CSV file.<br/>
         <a href="https://www.loginradius.com/docs/developer/guide/migrate-user-data" target="_blank">https://www.loginradius.com/docs/developer/guide/migrate-user-data</a></span>`,
+      },
+    },
+  ],
+   // "JavaScript",
+  // "Pure JavaScript implementation",
+  // "AngularJS",
+  // "ReactJS",
+  // "VueJS"
+  [
+    {
+      name: "JavaScript Front-end Technology",
+      body: {
+        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your Javascript-based application.<br/>
+        <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/</a><br/>
+        This document covers how to utilize various features of LoginRadius using JavaScript. <br/>
+        <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/</a><br/>
+        Refer to the <strong>HTML5 SDK</strong> document for more information on available methods:<br/>
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/html5-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/html5-sdk</a></span>`,
+      },
+    },
+    {
+      name: "AngularJS Front-end Technology",
+      body: {
+        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your AngularJS based application.<br/>
+        <a href="https://www.loginradius.com/docs/developer/tutorial/angular/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/angular/</a></span>`,
+      },
+    },
+    {
+      name: "ReactJS Front-end Technology",
+      body: {
+        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your ReactJS based application.<br/>
+        <a href="https://www.loginradius.com/docs/developer/tutorial/react/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/react/</a><br/>
+        Refer to the <strong>ReactJS SDK</strong> document for more information on available methods:<br/>
+        <a href="https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk</a></span>`,
+      },
+    },
+    {
+      name: "VueJS Front-end Technology",
+      body: {
+        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your VueJS based application.<br/>
+        <a href="https://www.loginradius.com/docs/developer/tutorial/vue/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/vue/</a></span>`,
       },
     },
   ],
@@ -1187,6 +1228,7 @@ const DocsList = [
   // "Shopify",
   // "Drupal",
   // "Other",
+  
   [
     {
       name: "PHP Back-end Technology",
@@ -1286,47 +1328,6 @@ const DocsList = [
       body: {
         __html: `<span>Refer to our APIs for implementing LoginRadius features into your application irrespective of the technology or CMS.<br/>
         <a href="https://www.loginradius.com/docs/developer/#api" target="_blank">https://www.loginradius.com/docs/developer/#api</a></span>`,
-      },
-    },
-  ],
-  // "JavaScript",
-  // "Pure JavaScript implementation",
-  // "AngularJS",
-  // "ReactJS",
-  // "VueJS"
-  [
-    {
-      name: "JavaScript Front-end Technology",
-      body: {
-        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your Javascript-based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/html-and-js-tutorial/</a><br/>
-        This document covers how to utilize various features of LoginRadius using JavaScript. <br/>
-        <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/" target="_blank">https://www.loginradius.com/docs/developer/references/javascript-library/getting-started/</a><br/>
-        Refer to the <strong>HTML5 SDK</strong> document for more information on available methods:<br/>
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/html5-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/html5-sdk</a></span>`,
-      },
-    },
-    {
-      name: "AngularJS Front-end Technology",
-      body: {
-        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your AngularJS based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/angular/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/angular/</a></span>`,
-      },
-    },
-    {
-      name: "ReactJS Front-end Technology",
-      body: {
-        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your ReactJS based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/react/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/react/</a><br/>
-        Refer to the <strong>ReactJS SDK</strong> document for more information on available methods:<br/>
-        <a href="https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk" target="_blank">https://www.loginradius.com/docs/developer/references/sdk/react-native-sdk</a></span>`,
-      },
-    },
-    {
-      name: "VueJS Front-end Technology",
-      body: {
-        __html: `<span>Here is a tutorial to get started with implementing the LoginRadius features for your VueJS based application.<br/>
-        <a href="https://www.loginradius.com/docs/developer/tutorial/vue/" target="_blank">https://www.loginradius.com/docs/developer/tutorial/vue/</a></span>`,
       },
     },
   ],
