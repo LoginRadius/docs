@@ -1,6 +1,6 @@
 ---
 title: "Guide to connecting JWT"
-tags: ["JWT", "GetStarted"]
+tags: ["JWT", "GetStarted", "Outbound", "SSO"]
 description: "This is a tutorial with JWT implementation."
 path: "/guide/jwt"
 ---
