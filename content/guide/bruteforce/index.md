@@ -31,7 +31,7 @@ The Brute Force Lockout feature allows you to restrict account access based on f
      - **Suspend:** Select this option to prevent the customer from logging in for a specified amount of time (Suspend Effective Period), once the account is suspended.
 
      - **Captcha** Select this option to display Captcha options when the threshold reaches. 
-       > **Note:** Captcha should be pre-configured to use this option. Refer [MFA document](/guide/mfa) to see how to configure Captcha.
+       > **Note:** Captcha should be pre-configured to use this option. Refer to [MFA document](/guide/mfa) to see how to configure Captcha.
 
    - **Suspend Effective Period:** This option appears, if **Suspend** option is selected as **Lockout Type**. Enter the effective period for which the account is suspended. Default suspend effective period is 900 seconds.
 
