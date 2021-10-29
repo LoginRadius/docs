@@ -27,7 +27,7 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 * Click the down arrow and the **API Credentials** screen will appear.
 * Click the **API Key And Secret** to get your unique credentials as displayed in the following screen:
 
-  ![alt_text](images/api-credentials.png "image_tooltip")
+  ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 * The API key and secret are used to interact with LoginRadius' APIs. You can copy the **APP Name** and **API Key** by clicking the respective **Copy** button.
 
