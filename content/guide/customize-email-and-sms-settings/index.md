@@ -48,6 +48,8 @@ You can edit your application's SMS settings by clicking on the **SMS Settings**
 
 ![alt_text](images/sms-settings.png "image_tooltip")
 
+> **Note**: SMS Settings tab will appear in this section only when **Phone Login** feature is enabled for your app.
+
 You can configure the following settings:
 
   * **OTP Length**: The length of the One-Time Passcode that will be sent in SMS verification requests.
