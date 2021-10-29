@@ -1,11 +1,11 @@
 ---
 title: "Connect OAuth app with LoginRadius SDK"
-tags: ["OAuth", "GetStarted"]
+tags: ["OAuth", "GetStarted", "Outbound", "SSO"]
 description: "This is a guide for OAuth2.0 implementation."
 path: "/guide/oauth"
 ---
 
-# Connect OAuth App
+# Outbound SSO OAuth
 
 OAuth 2.0 is a protocol that facilitates token-based authentication and authorization; thus, allowing the consumers to grant limited access to their resources on one application, to another application, without having to expose their credentials.
 
