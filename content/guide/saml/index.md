@@ -304,7 +304,7 @@ The below steps are if the **Add App** option is selected.
    Copy the values of LoginRadius' certificate and key with headers and paste in the Id Provider Certificate and Id Provider Certificate fields, respectively.
 
    
-3. Add the key-value pairs in the **Attibutes** section(optional).
+3. Add the key-value pairs in the **Attributes** section(optional).
 
    ![alt_text](images/attributes.png "image_tooltip")
 

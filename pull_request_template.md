@@ -6,7 +6,7 @@ Thank you for your pull request. Please review the below requirements.
 
 <!-- Remove items that do not apply. For completed items, change [ ] to [x]. -->
 
-- [ ] You have read the [Contribution Guidlines](https://github.com/LoginRadius/docs/blob/master/CONTRIBUTING.md) before creating this PR.
+- [ ] You have read the [Contribution Guidelines](https://github.com/LoginRadius/docs/blob/master/CONTRIBUTING.md) before creating this PR.
 
 ##### Description of change
 

@@ -54,7 +54,7 @@ This <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-
       ```
    - **Algorithm:** The algorithm you would like to use for OpenID Connect (RS256 is currently the only algorithm supported).
 
-   - **Data Mapping:** Enter your desired fields and how they map out the left column is how they will show up in the OIDC, the right column is the field name in the LoginRadius profile, keep in mind that for some of the profile fields you will need to use dot notation to access them.
+   - **Data Mapping:** Enter your desired fields and how they map out the left column is how they will show up in the OIDC, the right column is the field name in the LoginRadius profile, keep in mind that for some profile fields you will need to use dot notation to access them.
 
 7. Click the **Save** button.
 
@@ -72,7 +72,7 @@ In the OpenID Connect standard, there are following 3 types of authentication fl
 
 Each flow requires going through an Authorization Endpoint, essentially the page where the consumer is prompted to Log in. Depending on the workflow you choose to leverage, you will need to add different query parameters to the URL that points to the Login page.
 
-You can use the table below for an overview of all of the different parameters that can be passed to the Authorization Endpoint:
+You can use the table below for an overview of all the different parameters that can be passed to the Authorization Endpoint:
 
 | Parameters    |               |
 | :-------------: |-------------|
@@ -216,7 +216,7 @@ Once you have the code, you can request an access_token via the <a href="https:/
 
 ### Implicit Flow
 
-The implicit flow requests tokens without explicit client authentication, instead of using the redirect URI to verify the client identity. Because of this, refresh tokens are not allowed, nor is this flow suitable for long lived access tokens. From the client application's point of view, this is the simplest to implement, as there is only one round trip to the openid&nonce={Unique Generated nonce}`
+The implicit flow requests tokens without explicit client authentication, instead of using the redirect URI to verify the client identity. Because of this, refresh tokens are not allowed, nor is this flow suitable for long-lived access tokens. From the client application's point of view, this is the simplest to implement, as there is only one round trip to the openid&nonce={Unique Generated nonce}`
 
 **Available Query Parameters**
 
@@ -237,7 +237,7 @@ Upon successful consumer authentication, the tokens will be returned as follows:
 
 ### Hybrid Flow
 
-The hybrid flow is a combination of aspects from the previous two. This flow allows the client to make immediate use of an identity token and retrieve an authorization code via one round trip to the authentication server. This can be used for long lived access (again, through the use of refresh tokens). Clients using this flow must be able to maintain a secret.
+The hybrid flow is a combination of aspects from the previous two. This flow allows the client to make immediate use of an identity token and retrieve an authorization code via one round trip to the authentication server. This can be used for long-lived access (again, through the use of refresh tokens). Clients using this flow must be able to maintain a secret.
 
 This flow can obtain an authorization code and tokens from the authorization endpoint, and can also request tokens from the token endpoint.
 
@@ -282,7 +282,7 @@ You can use the <a href="https://www.loginradius.com/docs/developer/references/a
 
 ### Get UserInfo
 
-The UserInfo of a logged in user can be retrieved with the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#userinfo-by-access-token" target="_blank">UserInfo by Access Token API</a> call, which will return the UserInfo in a JWT Token.
+The UserInfo of a logged-in user can be retrieved with the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#userinfo-by-access-token" target="_blank">UserInfo by Access Token API</a> call, which will return the UserInfo in a JWT Token.
 
 > **Note:** The RSA algorithm is currently the only supported encryption type for the JWT tokens.
 

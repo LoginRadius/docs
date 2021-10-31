@@ -42,7 +42,7 @@ and click the **API Key And Secret** subsection to retrieve your API Credentials
 
 6. Select the newly installed LoginRadius App on the left navigation (Apps > My Apps).
 
-7. Input your LoginRadius API Key and API Secret obtained from [Get Cedentials](#get-credentials) step and click the **Validate & Install** button.
+7. Input your LoginRadius API Key and API Secret obtained from [Get Credentials](#get-credentials) step and click the **Validate & Install** button.
 
    ![alt_text](images/bigcommerce-lrinstallconfig.png "image_tooltip")
 

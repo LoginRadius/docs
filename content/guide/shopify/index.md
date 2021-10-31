@@ -86,7 +86,7 @@ Now, click the **Add** button to save your configurations.
 
 ## Upload Assets 
 
-This section covers the LoginRadius Shopify Plugin integration under the Shopify Admin Console. To integrate it, you need to extract the Shopify plugin zip file, which you can get from <a href="https://github.com/LoginRadius/shopify-identity-plugin" target="_blank">LoginRadius Github</a>.
+This section covers the LoginRadius Shopify Plugin integration under the Shopify Admin Console. To integrate it, you need to extract the Shopify plugin zip file, which you can get from <a href="https://github.com/LoginRadius/shopify-identity-plugin" target="_blank">LoginRadius GitHub</a>.
 
 1. After extracting the above file, upload the Javascript and CSS files into your theme, refer to the following JavaScript and CSS files. 
 
@@ -110,7 +110,7 @@ This section covers the LoginRadius Shopify Plugin integration under the Shopify
 
 ## Edit 'theme.liquid' file
 
-In the left side theme editor menu, there is a theme file explorer, this expands the **Layouts** option, click the **theme.liquid** file.
+On the left side theme editor menu, there is a theme file explorer, this expands the **Layouts** option, click the **theme.liquid** file.
 
 ### Add LoginRadius Core JS File and Theme CSS
 Add the following tags just before the (closing head tag) tag:

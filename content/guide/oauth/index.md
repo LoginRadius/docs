@@ -469,7 +469,7 @@ func main() {
 ```
 
 
-> **Note**: Sometimes the packages of the language used, get deprecated so we recommend using the inbuilt packages in that case.
+> **Note**: Sometimes the packages of the language used get deprecated, so we recommend using the inbuilt packages in that case.
 
 Once you’ve generated the **code_verifier**, it uses that to create the **code challenge**. For devices that can perform a SHA256 hash, the code challenge is a BASE64-URL-encoded string of the SHA256 hash of the code verifier.
 

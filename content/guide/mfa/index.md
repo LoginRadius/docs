@@ -40,7 +40,7 @@ You can implement the 2FA in two following ways:
 
    - **Optional**: Consumers will have the ability to enable or disable Two Factor Authentication on login.
 
-   - **Required**: Consumers will be required to authenticate themself using the enabled 2FA option in addition to the initial authentication for login.
+   - **Required**: Consumers will be required to authenticate themselves using the enabled 2FA option in addition to the initial authentication for login.
 
 ## Step 3: Configure 2FA Templates
 
@@ -54,7 +54,7 @@ Two-Factor Authentication with SMS Passcode will be the default option for the c
 
 2. To edit the template used for the SMS Passcode method, click the Edit icon given in the action bar highlighted in the previous step.
 
-   > Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the log in.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
+   > Note: Two Factor Authentication SMS template is sent to your users when they authenticate through their credentials. This SMS will contain an OTP that the users will need to enter to complete the login.<a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">Phone Login</a> should be enabled for your application to use this 2FA method.
 
 ### Google Authenticator
 
@@ -84,7 +84,7 @@ In case of SMS Passcode, upon validating the login credentials, the consumer wil
 
 **Google Authenticator**
 
-To verify the 2FA with Google Authenticator on your authentication page, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. It will display the following google authenticator options (where the consumer needs to scan the QR code via their google authenticator app or enter the code generated via the app):
+To verify the 2FA with Google Authenticator on your authentication page, open your **Auth Page (IDX)** `https://<your-app-name>.hub.loginradius.com/auth.aspx`. It will display the following google authenticator options (where the consumer needs to scan the QR code via their Google authenticator app or enter the code generated via the app):
 
 ![alt_text](images/google-auth-page.png "image_tooltip")
 

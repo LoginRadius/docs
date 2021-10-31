@@ -89,9 +89,9 @@ The following flow chart shows how JWT flow works between IDP and SP, where IDP 
 
 LoginRadius supports a delegated redirect SSO flow through which you can redirect your consumer to [LoginRadius Auth Page (IDX)](/guide/customize-auth-page), where your consumer can do account management actions.
 
-Upon successful login or social login, the consumer will be redirected to the return URL along with the JWT for this authentication session. Here is the step by step instruction for setting JWT SSO flow:
+Upon successful login or social login, the consumer will be redirected to the return URL along with the JWT for this authentication session. Here is the step-by-step instruction for setting JWT SSO flow:
 
-1. First of all, configure a JWT app in your LoginRadius Dashboard. Refer to the JWT LoginRadius Dashboard Configuration(#loginradius-dashboard-configuration) section for how to configure JWT in the LoginRadius Dashboard.
+1. First, configure a JWT app in your LoginRadius Dashboard. Refer to the JWT LoginRadius Dashboard Configuration(#loginradius-dashboard-configuration) section for how to configure JWT in the LoginRadius Dashboard.
 
 2. Whitelist the service provider URL in the LoginRadius Dashboard. Follow [this](#whitelist-domain) for information on how to whitelist URLs in the LoginRadius Dashboard.
 
@@ -134,7 +134,7 @@ This section covers the required configurations that you need to perform in the 
 
 5. You need to provide or select the following values to configure the JWT App.
 
-   * **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
+   * **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., company_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
 
    * [**Secret Key:**](#get-credentials) A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
 
