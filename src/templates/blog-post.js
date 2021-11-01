@@ -135,8 +135,8 @@ const BlogPostTemplate = ({ data, location }) => {
                   <div className="headings">
                     <h2>Was this article helpful?</h2>
                   </div>
-                  <div className="actions">
-                    <a href="#" className="ga_event btn btn-primary  btn-sm">
+                  {!isSubmit?<div className="actions">
+                    <a  onClick={()=>setSubmit(true)} className="ga_event btn btn-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -148,7 +148,7 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       Yes
                     </a>
-                    <a href="#" className="ga_event btn btn-outline  btn-sm">
+                    <a  onClick={()=>setSubmit(true)}  className="ga_event btn btn-outline">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -161,16 +161,16 @@ const BlogPostTemplate = ({ data, location }) => {
                       </svg>
                       No
                     </a>
-                  </div>
+                  </div>:<div className="actions">"Thank you for your feedback!"</div>}
                   <p>
                     Have more questions?{" "}
                     <a
-                      href="https://loginradiusassist.freshdesk.com/customer/login"
+                      href="https://loginradiusassist.freshdesk.com/support/tickets/new"
                       target="_blank"
                     >
                       Submit a request
                     </a>
-                  </p>
+                  </p>     
                 </div>
               </div>
             </div>
