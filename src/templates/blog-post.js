@@ -15,7 +15,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
   const section = pathArray.length >= 2 ? pathArray[1] : undefined
-
+  const [isSubmit, setSubmit] = useState(false)
+  
   return (
     <div className="global-wrapper">
       <div id="root">
