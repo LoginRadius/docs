@@ -1,17 +1,15 @@
 ---
 title: "Connect OAuth app with LoginRadius SDK"
-tags: ["OAuth", "GetStarted"]
+tags: ["OAuth", "GetStarted", "Outbound", "SSO"]
 description: "This is a guide for OAuth2.0 implementation."
 path: "/guide/oauth"
 ---
 
-# Connect OAuth App
+# Outbound SSO OAuth
 
 OAuth 2.0 is a protocol that facilitates token-based authentication and authorization; thus, allowing the consumers to grant limited access to their resources on one application, to another application, without having to expose their credentials.
 
-
-LoginRadius Identity Platform supports standard <a href="https://tools.ietf.org/html/rfc6749" target="_blank">OAuth 2.0 specs</a>  to integrate your OAuth client with LoginRadius. Thus, you can allow your application's consumers to log in to an OAuth-enabled application without creating an account. This document goes over the full process of getting the SSO feature implemented with OAuth 2.0. 
-
+LoginRadius Identity Platform supports standard <a href="https://tools.ietf.org/html/rfc6749" target="_blank">OAuth 2.0 specs</a> to integrate your OAuth client with LoginRadius. Thus, you can allow your application's consumers to log in to an OAuth-enabled application without creating an account. This document goes over the full process of getting the SSO feature implemented with OAuth 2.0.
 
 ## OAuth 2.0 configuration using Loginradius API
 
@@ -68,6 +66,7 @@ Request Body:
 }
 
 ```
+
 **Required Parameters**
 
 Here is an explanation of the Request Body Parameter :
@@ -83,7 +82,7 @@ Here is an explanation of the Request Body Parameter :
 - **response_type:** Value must be 'token' always
 
 ```
-API Response containing the access_token: 
+API Response containing the access_token:
 {
  "access_token": {Loginradius Access Token},
  "token_type": {type},
@@ -99,7 +98,7 @@ You can use the obtained access_token with [LoginRadius APIs](/#api) supporting 
 
 > **Note:** To include PKCE within this request, refer to this [section](#proof-of-key-for-code-exchange) for more information.
 
-### Implicit 
+### Implicit
 
 This section covers use of the Implicit flow with LoginRadius. It is similar to Authorization Code flow except that the **response_type** can be **token** or both **code** and **token**.
 
@@ -130,13 +129,11 @@ The access token request will contain the following parameters. Here is an expla
 
 Now you can use the obtained **access_token** with **LoginRadius APIs** supporting the **access_token** until the token expires or revokes.
 
-
 ### Resource Owner Password Credentials Grant
 
 The Resource Owner Password Credentials Grant flow allows you to obtain an access_token by utilizing the consumer's traditional username/email/phoneid and password credentials.
 
-
-**Step 1: Obtain Access Token** 
+**Step 1: Obtain Access Token**
 
 Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#access-token-by-account-password" target="_blank">Access Token by Account Password</a> to obtain an access_token.
 
@@ -179,7 +176,7 @@ Here is an explanation of the Request Body Parameters:
 
 ```
 
-**Step 2: Use Obtained LoginRadius Access Token** 
+**Step 2: Use Obtained LoginRadius Access Token**
 
 You can use the obtained access_token with <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#user-registration-overview" target="_blank">LoginRadius APIs</a> supporting the access_token until the token expires or revokes.
 
@@ -190,14 +187,15 @@ This section covers use of the Device Code flow with LoginRadius.
 First, you need to enable the device code flow feature by raising a support ticket to the <a href="https://loginradiusassist.freshdesk.com/customer/login" target="_blank">LoginRadius Support</a> team. You should provide the following details at the time of configuration :
 
 ```
-"LoginUrl": "< login URL>"// Device will open this URL to get the code and login after authentication in the browser. 
+"LoginUrl": "< login URL>"// Device will open this URL to get the code and login after authentication in the browser.
 "VerificationUrl" : "<Verification URL>", //Consumer enter the code and complete login at this URL in the browser.
 "AfterVerificationUrl": "<After Verification URL>" //Consumer will be redirected to this URL after verifying the code.
 "DeviceCodeExpire" : e.g. 1800 (in second),
 "PollingInterval" : e.g.10 (in second)
 
 ```
-**Step 1: Obtained Device Code** 
+
+**Step 1: Obtained Device Code**
 
 Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#request-device-code" target="_blank">Request Device Code</a> API to request a new device code, user code from the Device Code Endpoint.
 
@@ -211,6 +209,7 @@ Request Body
 }
 
 ```
+
 **Required Parameters**
 
 Here is an explanation of the Request Parameters:
@@ -219,6 +218,7 @@ Here is an explanation of the Request Parameters:
 - **Scope:** Optional parameter(e.g email profile)
 
 **Response containing the user code and device code:**
+
 ```
 {
  "device_code": "NGU5OWFiNjQ5YmQwNGY3YTdmZTEyNzQ3YzQ1YSA",
@@ -229,7 +229,8 @@ Here is an explanation of the Request Parameters:
 }
 
 ```
-**Step 2: Device Authentication** 
+
+**Step 2: Device Authentication**
 
 By using the following endpoint: **/sso/oauth/{OAuthName}/device/confirm**, consumer provides the user code for the device authentication. In response, consumer receives the verification URL that contains the UI where they can enter the user code,
 
@@ -249,7 +250,8 @@ https://<hosted-page>/auth.aspx
 return_url=URLENCODE(https://cloud-api.lrinternal.com/sso/oauth/device/callback?state=<Random>)
 
 ```
-**Step 3: Accept Authorization Request** 
+
+**Step 3: Accept Authorization Request**
 
 Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#request-tokens" target="_blank">Request Token API</a> to accept the authorization request.
 
@@ -263,20 +265,20 @@ Use the <a href="https://www.loginradius.com/docs/developer/references/api/oauth
 }
 
 ```
+
 **Required Parameters**
 
 Here is an explanation of the Request Parameters:
 
-* **client_id:** [LoginRadius API key](#get-credentials).
-* **device_code:** Enter the device code
-* **Grant-Type:** Value should be used as **urn:ietf:params:oauth:grant-type:device_code**
-
+- **client_id:** [LoginRadius API key](#get-credentials).
+- **device_code:** Enter the device code
+- **Grant-Type:** Value should be used as **urn:ietf:params:oauth:grant-type:device_code**
 
 **API response should be:**
 
 - **Authorization Pending:**
 
-  The authorization request is still pending as the consumer hasn't yet completed the user code authentication. The client SHOULD repeat the Access Token Request to the token endpoint using polling. 
+  The authorization request is still pending as the consumer hasn't yet completed the user code authentication. The client SHOULD repeat the Access Token Request to the token endpoint using polling.
 
 ```
 
@@ -287,7 +289,7 @@ Here is an explanation of the Request Parameters:
 }
 
 ```
-  
+
 - **Slow Down:**
 
 ```
@@ -298,7 +300,8 @@ Before each new request, the client MUST wait at least the number of seconds spe
 }
 
 ```
-- **Expire Token:** 
+
+- **Expire Token:**
 
 ```
 When an access token is expired
@@ -308,6 +311,7 @@ When an access token is expired
 }
 
 ```
+
 - **Access Denied:**
 
 ```
@@ -318,6 +322,7 @@ If the consumer denied the authorization
 }
 
 ```
+
 - **Containing the access_token:**
 
 ```
@@ -329,6 +334,7 @@ If the consumer denied the authorization
 }
 
 ```
+
 ## Refresh Token
 
 Once you have obtained an **access_token**, you can use the Refresh Access Token API to refresh the access_token.
@@ -337,13 +343,13 @@ Once you have obtained an **access_token**, you can use the Refresh Access Token
 
 Here is an explanation of the Request Body Parameter:
 
-* **client_id:** [LoginRadius API key](#get-credentials). 
+- **client_id:** [LoginRadius API key](#get-credentials).
 
-* **client_secret:** [LoginRadius API secret](#get-credentials).
+- **client_secret:** [LoginRadius API secret](#get-credentials).
 
-* **grant_type:** The grant_type needs to be refresh_token.
+- **grant_type:** The grant_type needs to be refresh_token.
 
-* **refresh_token:** *This is the refresh_token you received when you used the 'Access token by OAuth 2 token' and 'Access Token by Account Password' API call
+- **refresh_token:** \*This is the refresh_token you received when you used the 'Access token by OAuth 2 token' and 'Access Token by Account Password' API call
 
 **API Response containing the refresh access_token:**
 
@@ -379,7 +385,7 @@ The following steps explain the working of the above sequence diagram:
 
 ### Generating PKCE code verifier and challenge
 
-First, you need to generate and store a secret **code_verifier** and **code_challenge**. The code verifier is a cryptographically random string using the characters **A-Z, a-z, 0-9**, and the punctuation characters **-._~** (hyphen, period, underscore, and tilde), between 43 and 128 characters long.
+First, you need to generate and store a secret **code_verifier** and **code_challenge**. The code verifier is a cryptographically random string using the characters **A-Z, a-z, 0-9**, and the punctuation characters **-.\_~** (hyphen, period, underscore, and tilde), between 43 and 128 characters long.
 
 Use the below code in your relevant SDK to generate the **code_verifier** and **code_challenge**.
 
@@ -407,7 +413,6 @@ function sha256(buffer) {
     return crypto.createHash('sha256').update(buffer).digest();
 }
 ```
-
 
 #### For Golang
 
@@ -467,7 +472,6 @@ func main() {
     fmt.Println("code_challenge :", challenge)
 }
 ```
-
 
 > **Note**: Sometimes the packages of the language used, get deprecated so we recommend using the inbuilt packages in that case.
 
@@ -537,12 +541,11 @@ client_id=
 &scope=openid email
 &nonce={nonce}
 &response_mode=form_post
-&max-age=123, 
+&max-age=123,
 &claims= {"email":null,"email_verified":null},"userinfo"{"email":null,"email_verified":null,"name":null}}
 &code_challenge={code challenge}
 &code_challenge_method=SHA256
 ```
-
 
 **Exchange the Authorization Code**
 
@@ -563,16 +566,13 @@ Request body:
 }
 ```
 
-
 > **Important Note: The `client_secret":{Loginradius app api secret}` is an optional parameter, you may or may not use this for validation purpose.**
-
-
 
 ## Get Credentials
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
@@ -580,11 +580,8 @@ In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginrad
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a> and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
-
-
-
 
 [Go Back to Home Page](/)
