@@ -316,15 +316,15 @@ It is recommended that you backup your theme before making any modifications in 
 
 1. Open the `config.js` in the provided `BlueprintThemeFile\assets\js\loginradius` and update the LoginRadius options object with the following:
 
-  * `storeName` - Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your storeName value should be `pqshk245fh`
+   * `storeName` - Add your BigCommerce Site Name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your storeName value should be `pqshk245fh`
 
-  * `option.apiKey` - Add your LoginRadius [API Key](#get-credentials)
+   * `option.apiKey` - Add your LoginRadius [API Key](#get-credentials)
 
-  * `option.appName` - Add your LoginRadius [App Name](#get-credentials)
+   * `option.appName` - Add your LoginRadius [App Name](#get-credentials)
 
-  * `option.sott` - Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott)
+   * `option.sott` - Add a valid LoginRadius [Sott](https://www.loginradius.com/docs/developer/concepts/sott)
 
-  * `option.verificationUrl` - You can leave this default unless you want to direct customers to a specific location to validate the emails. This is required if you are using the Email add/remove panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">here</a>.
+   * `option.verificationUrl` - You can leave this default unless you want to direct customers to a specific location to validate the emails. This is required if you are using the Email add/remove panel. You can add additional parameters to this options object if you want to include additional LoginRadius features or logic based on the parameters list <a href="https://www.loginradius.com/docs/developer/references/javascript-library/getting-started" target="_blank">here</a>.
 
 2. Include the reference files for LoginRadius in your header section by including the following code in your `webdav/Panels/header.html` or `webdav/Panels/HTMLHead.html` just before the closing `</header>` tag
 
@@ -438,4 +438,3 @@ If you have installed the LoginRadius BigCommerce App on your BigCommerce Site a
 
 
 [Go Back to Home Page](/)
-```
