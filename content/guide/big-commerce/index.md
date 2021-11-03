@@ -203,8 +203,6 @@ It is recommended that you backup your theme before making any modifications if 
       ]
      ```
 
-```
-
 4. Include the reference files for LoginRadius in your header section by including the following code in your **theme > templates > components > common > header.html** just before the closing tag:
 
 ```
