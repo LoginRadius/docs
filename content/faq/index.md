@@ -23,17 +23,13 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
 ### How to Retrieve API key and secret?
 
-* Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a>account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, select your app, then from the left navigation panel, click **Configuration** and then navigate to the **API Credentials** section.
+* Click the down arrow and the **API Credentials** screen will appear.
+* Click the **API Key And Secret** to get your unique credentials as displayed in the following screen:
 
-* Click the down arrow and the **API Credentials** screen will appear:
-
-  ![alt_text](images/api-credentails.png "image_tooltip")
-
-* Click **API Key And Secret** to get your unique credentials as displayed in the following screen:
-
-  ![alt_text](images/key-secret.png "image_tooltip")
-
-* The API key and secret are used to interact with LoginRadius' APIs. You can copy the APP Name and API Key by clicking the respective **Copy** button.
+  ![alt_text](images/api-credentials.png "image_tooltip")
+  
+* The API key and secret are used to interact with LoginRadius' APIs. You can copy the **APP Name** and **API Key** by clicking the respective **Copy** button.
 
 ### How to view the API Secret?
 

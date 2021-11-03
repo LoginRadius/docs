@@ -13,7 +13,6 @@ The tutorial lets you implement LoginRadius user registration, login, profile, a
 >
 > New to Python? Check out <a href="https://www.python.org/about/" target="_blank">this reference</a>.
 
-
 When you signed up for the LoginRadius account, it created an app for you. This app is linked to a ready to use web page - <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
 Auth Page (IDX) reflects the configuration changes that you make in <a href="https://dashboard.loginradius.com/getting-started" target="_blank">LoginRadius Dashboard</a>. You can utilize this webpage for authentication requirements on your python application.
@@ -26,7 +25,7 @@ In your LoginRadius Dashboard, select your app, then navigate to the **Auth Page
 
 ![alt_text](../../assets/blog-common/theme-customization.png "image_tooltip")
 
-To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen. 
+To preview your login page's theme, click **Go to your Login Page** link highlighted on the above screen.
 
 > Features like Email and Password login, User registration, Forgot password, and Remember me are already configured for your Auth Page(IDX).
 
@@ -34,40 +33,40 @@ To preview your login page's theme, click **Go to your Login Page** link highlig
 
 Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
 
-In your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a>** and click the **API Key And Secret** subsection to retrieve your API Credentials.
+In your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> and click the **API Key And Secret** subsection to retrieve your API Credentials.
 
 ![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
 
 ## Setup Virtualenv
 
-* Check if pip package manager is installed by running the following command:
+- Check if pip package manager is installed by running the following command:
 
-    `pip -h`
+  `pip -h`
 
-* Install virutalenv by running the following command:
+- Install virutalenv by running the following command:
 
-    `pip install virtualenv`
-    
-* Create the virtual environment by running the following command:
-    
-    `virtualenv python_demo`
+  `pip install virtualenv`
 
-* Activate the virtualenv, the following are the commands for MacOS/Linux and Windows:
+- Create the virtual environment by running the following command:
 
-  * For MacOS/Linux: `source python_demo/bin/activate`
-  * For Windows: `python_demo\Scripts\activate`
+  `virtualenv python_demo`
+
+- Activate the virtualenv, the following are the commands for MacOS/Linux and Windows:
+
+  - For MacOS/Linux: `source python_demo/bin/activate`
+  - For Windows: `python_demo\Scripts\activate`
 
 ## Setup Project
 
 This implementation uses the flask framework to create Python API.
 
-* Install flask by running the following command:
+- Install flask by running the following command:
 
   `pip install Flask`
 
-* Create a requirement file `pip freeze > requirements.txt`.
+- Create a requirement file `pip freeze > requirements.txt`.
 
-* Create a new file name `app.py` and add the following code snippet:
+- Create a new file name `app.py` and add the following code snippet:
 
   ```
   from flask import Flask
@@ -79,7 +78,7 @@ This implementation uses the flask framework to create Python API.
    return "Hello World!"
 
   if __name__ == "__main__":
-  
+
    app.run()
   ```
 
@@ -104,14 +103,14 @@ API_SECRET = ""
 LR.API_KEY = API_KEY
 LR.API_SECRET = API_SECRET
 LR.CUSTOM_DOMAIN = "https://example.com/"
-loginradius = LR()     
+loginradius = LR()
 
 ```
 
 Replace the placeholders in the above config object with the following values:
 
-* apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
-* apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
+- apiKey: **API Key** obtained in the [Get Credentials](#get-credentials) step.
+- apiSecret: **API Secret** obtained in the [Get Credentials](#get-credentials) step.
 
 ## Configure Registration and Login URLs
 
@@ -129,8 +128,8 @@ Navigate your Register or Login links or buttons to the following URLs:
 
 **Where:**
 
-* **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
-* **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
+- **LoginRadius App Name** is the name of your app as mentioned in the [Get Credentials](#get-credentials) step.
+- **return_url** is where you want to redirect users upon successful registration or login. [Whitelist your domain](#whitelist-domain) if you are not using Local Domain for this tutorial.
 
 > return_url can be your website, frontend app, or backend server url where you are handling the access token.
 
@@ -158,14 +157,14 @@ def get_user():
 
 ## Run and See Result
 
-* Run the API Server by executing the following command in the command line:
+- Run the API Server by executing the following command in the command line:
   [`python app.py`]
 
-* Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
+- Open your Auth Page(IDX) registration URL `https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&return_url=<Return URL>`. It will display the following screen:
 
   ![alt_text](../../assets/blog-common/login-register.png "image_tooltip")
 
-* Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format.
+- Register a user here and then log in. Upon successful login, it will redirect you to the return url with the access token. In response, you will get a user profile in JSON format.
 
 Similarly, you can implement more features using Python SDK.
 
@@ -175,27 +174,27 @@ Similarly, you can implement more features using Python SDK.
 
 For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
 
-To whitelist your domain, in your LoginRadius Dashboard, navigate to **<a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a>** and add your domain name:
+To whitelist your domain, in your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a> and add your domain name:
 
 ![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 ## Explore Python Github Demo
 
-* **<a href="https://github.com/LoginRadius/login-page-demos/tree/master/python-idx-demo/Demo" target="_blank">Refer to GitHub Demo</a>**  to know how to implement various LoginRadius features using SDK Functions.
+- **<a href="https://github.com/LoginRadius/login-page-demos/tree/master/python-idx-demo/Demo" target="_blank">Refer to GitHub Demo</a>** to know how to implement various LoginRadius features using SDK Functions.
 
 ## Recommended Next Steps
 
-* <a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/customize-email-and-sms-settings" target="_blank">How to manage email templates for verification and forgot password</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/customize-auth-page" target="_blank">How to personalize interfaces and branding of login pages</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">How to configure SMTP settings for sending emails to consumers</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/social-login" target="_blank">How to implement Social Login options like Facebook, Google</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/phone-login" target="_blank">How to implement Phone Login</a>
 
-* <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
+- <a href="https://www.loginradius.com/docs/developer/guide/passwordless-login" target="_blank">How to implement Passwordless Login</a>
 
 ## Python SDK Reference
 

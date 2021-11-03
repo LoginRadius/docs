@@ -14,7 +14,7 @@ Team Management screen has the following options:
 
 * [Manage Team Member](#manage-team-member)
 * [Add Team Member](#add-team-member)
-* [Audit Logs](#activity-logs)
+* [Activity Logs](#activity-logs)
 
 ## Access Team Management Section
 
