@@ -1011,6 +1011,9 @@ const Middle = () => {
               <li>
                 <Link to="references/api/webhooks">Webhooks</Link>
               </li>
+              <li>
+                <Link to="references/api/b2b-identity">B2B Identity</Link>
+              </li>
             </ul>
           </div>
           {/*Javascript references*/}
