@@ -685,6 +685,11 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/guide/manage-organizations">
+                  <span>Manage Organizations (B2B)</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/guide/setup-your-smtp-provider">
                   <span>Setup Your SMTP Provider</span>
                 </Link>
@@ -992,6 +997,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
+                <Link to="references/api/b2b-identity">B2B Identity</Link>
+              </li>
+              <li>
                 <Link to="references/api/roles-management">
                   Roles Management
                 </Link>
@@ -1010,9 +1018,6 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="references/api/webhooks">Webhooks</Link>
-              </li>
-              <li>
-                <Link to="references/api/b2b-identity">B2B Identity</Link>
               </li>
             </ul>
           </div>
