@@ -9,7 +9,7 @@ path: "/references/api/b2b-identity"
 
 ## Create Organization
 
-This API is used to create an organization
+Creates the organization with name, Uid and display name.
 
 ### Endpoint
 
@@ -26,9 +26,9 @@ This API is used to create an organization
 
 | Attribute | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-|Name| Name of the Organization  [**Required**]|
-|OwnerUid| Uid of the Owner [**Required**]|
-|DisplayName| A Display name of the organization  [**Opitonal**]
+|Name| Name of the organization  [**Required**]|
+|OwnerUid| Uid of the owner [**Required**]|
+|DisplayName| Display name of the organization  [**Opitonal**]
 
 ### Try Me Out
 
@@ -38,7 +38,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Update Organization
 
-This API is used to update an organization
+Updates the organization details.
 
 ### Endpoint
 
@@ -56,8 +56,8 @@ This API is used to update an organization
 
 | Attribute | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-|Name| Name of the Organization  [**Required**]|
-|DisplayName| A Display name of the organization  [**Opitonal**]
+|Name| Name of the organization  [**Required**]|
+|DisplayName| Display name of the organization  [**Opitonal**]
 
 
 ### Try Me Out
@@ -68,7 +68,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Remove Organization
 
-This API is used to remove an organization
+Removes the organization for the provided organization Id.
 
 ### Endpoint
 
@@ -90,7 +90,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Organization by Id
 
-This API is used to get an organization.
+Gets the organization by organization Id.
 
 ### Endpoint
 
@@ -112,7 +112,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Organization By Organization Name
 
-This API is used to get an organization by organization name.
+Gets the organization by organization name.
 
 ### Endpoint
 
@@ -134,7 +134,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## All Organizations
 
-This API is used to get all organizations.
+Gets all organizations.
 
 ### Endpoint
 
@@ -156,7 +156,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Update Status of Organization
 
-This API is used to update the status of an organization.
+Updates the status of an organization.
 
 ### Endpoint
 
@@ -185,7 +185,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Add/Update Roles
 
-This API is used to update an organization's default roles
+Updates the organization's default roles.
 
 ### Endpoint
 
@@ -213,7 +213,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Add user to Organization
 
-This API is used to add users to the organization.
+Adds users to the organization.
 
 ### Endpoint
 
@@ -226,15 +226,15 @@ This API is used to add users to the organization.
 | Apikey    | none    | LoginRadius API Key [**Required**]    |
 | Apisecret | none    | LoginRadius API Secret [**Required**] |
 | emailtemplate | ADDUSERTOORGANIZATION | Email Template Name [**Optional**] |
-| resetPasswordUrl | https://&lt;AppName&gt;.&lt;Domain&gt;/auth | Url used to reset the password by the user [**Optional**] |
-| loginUrl | https://&lt;AppName&gt;.&lt;Domain&gt;/auth?org_name=&lt;orgName&gt; | Url used to login to the organization [**Optional**] | 
+| resetPasswordUrl | https://&lt;AppName&gt;.&lt;Domain&gt;/auth | URL to reset the password by the user [**Optional**] |
+| loginUrl | https://&lt;AppName&gt;.&lt;Domain&gt;/auth?org_name=&lt;orgName&gt; | URL to login to the organization [**Optional**] | 
 
 
 ### Body Attributes
 
 | Attribute | Description 
 | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-|Email|An Email of the added User [**Required**]|
+|Email|Email of the added User [**Required**]|
 |FirstName|User's first name [**Optional**]|
 |LastName|User's last name [**Opitonal**]
 
@@ -247,7 +247,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Organization Members
 
-This API is used to get organization members.
+Gets organization members by organization Id.
 
 ### Endpoint
 
@@ -269,7 +269,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Remove Members From Organization
 
-This API is used to remove members from the organization.
+Removes members from the organization by organization Id.
 
 ### Endpoint
 
@@ -297,7 +297,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Set Global IDP on profile
 
-This API is used to enable/disable the App's authentication method for a profile.
+Enables/disables the App's authentication method for a profile.
 
 ### Endpoint
 
@@ -325,7 +325,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Set Global authentication method on Organization
 
-This API is used to enable/disable the App's authentication method for an organization.
+Enables/disables the App's authentication method for an organization.
 
 ### Endpoint
 
@@ -353,7 +353,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Create an Organizational SAML IDP
 
-This API is used to create an organizational saml idp
+Creates the organizational SAML IDP.
 
 ### Endpoint
 
@@ -381,7 +381,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## All IDPs of an Organization
 
-This API is used to get all IDPs of an organization.
+Gets all IDPs of an organization.
 
 ### Endpoint
 
@@ -403,7 +403,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## SAML IDP of an Organization By Id
 
-This API is used to get the SAML IDP of an organization By Id.
+Gets the SAML IDP of an organization by organization Id.
 
 ### Endpoint
 
@@ -426,7 +426,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Update Status of an Organizational idp
 
-This API is used to update the status of organizational idp.
+Updates the status of organizational IDP.
 
 ### Endpoint
 
@@ -454,7 +454,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Remove an Organizational idp
 
-This API is used to remove an organizational idp
+Removes the IDP of an organization.
 
 ### Endpoint
 
