@@ -1,25 +1,42 @@
+---
+title: "Manage Organizations"
+tags: ["Organization Management", "Manage Organization", "B2B"]
+description: "This is a guide for managing organization in the LoginRadius Identity Platform."
+path: "/guide/manage-organizations"
+---
+
 # Manage Organizations (B2B)
 
-This guide explains how to manage organizations, their roles, welcome email and email setting for a B2B setup.
-- You can manage Organizations using this <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity" target="_blank">APIs</a>.
-- You can either add the <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#addupdate-roles" target="_blank">default roles</a> to your users or create new roles using this <a href="https://www.loginradius.com/docs/developer/references/api/roles-management/" target="_blank">APIs</a> and then assign those to organization's members.
-- You can manage email settings and welcome emails for the organization as explained in the section below.
+This guide explains how to enable B2B feature, and then manage organizations, their roles, and email settings for the B2B setup.
+
 
 ## Enable B2B Identity
 
-By default B2B Identity feature will be disabled for your LoginRadius App. To enable the feature you need to toggle the switch in the **B2B Identity** section.
+By default **B2B Identity** feature remains disabled for your LoginRadius App. To enable this feature:
 
-![alt_text](images/enable-feature.png "image_tooltip")
+1. Log in to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account. Select your app, then from the left navigation panel, click **B2B Identity**.
 
-## Manage Email Setting
+2. Click the switch to enable the **B2B Identity** feature.
 
-### Step 1: Configure Email Templates
+   ![alt_text](images/enable-feature.png "image_tooltip")
 
-1. **Welcome Email**: The Welcome Email is sent to your consumer when they first register on your application. This email contains 2 links one to reset the password and the second one to log in to the organization's account.
+## Manage Organization and Roles
 
-![alt_text](images/welcome-email.png "image_tooltip")
+- Manage organizations using these <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity" target="_blank">APIs</a>.
 
-2. With an email template type selected, you can perform the following actions:
+- Add the <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#addupdate-roles" target="_blank">default roles</a> for organization users or create new roles using <a href="https://www.loginradius.com/docs/developer/references/api/roles-management/" target="_blank">Role Management APIs</a> and assign them to organization users.
+
+## Manage Email Template and Setting
+
+Manage welcome email template and email settings for the organization as explained below.
+
+### Step 1: Manage Welcome Email
+
+1. **Welcome Email**: The Welcome Email is sent to organization users when they first register on your application. This email contains reset password and login links for the user to reset the account password or to log in to the organization's account.
+
+   ![alt_text](images/welcome-email.png "image_tooltip")
+
+2. You can perform the following actions:
 
    * Edit template content.
    * Reset the template to its default content.
@@ -27,55 +44,46 @@ By default B2B Identity feature will be disabled for your LoginRadius App. To en
 
    These actions are available in the action bar highlighted in the image below:
 
-
-![alt_text](images/template-actions.png "image_tooltip")
+   ![alt_text](images/template-actions.png "image_tooltip")
 
 3. When editing a template, you can update the following:
 
    * **SUBJECT**: The subject line of the template.
-   * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body.
-   * **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use [Placeholder](#placeholder-tags) tags in the Text Body.
-
-   In your templates, you can use predefined tags to define where LoginRadius data will appear in your email. 
+   * **HTML BODY**: The HTML version of the template. This content will appear in clients that support HTML content in emails. You can use [Placeholder](#placeholder-tags) tags in the HTML Body to define where LoginRadius data will appear in your email. 
+   * **TEXT BODY**: The plain text version of the template. This content will appear in clients that support only plain text content in emails. You can use the [Placeholder](#placeholder-tags) tags in the Text Body to define where LoginRadius data will appear in your email. 
 
 4. To save your changes, click the **Save** button.
 
-### Placeholder Tags
-
+#### Placeholder Tags
 These tags are used to define where LoginRadius retrieved data will appear in your email.
 
-* **#OrgName#**: The Organization name as defined while creating an organization.
+   * **#OrgName#**: The organization name provided while creating an organization.
+   * **#Name#**: The organization user name provided in your registration form.
+   * **#AppName#**: The application name provided while creating a LoginRadius App.
+   * **#resetPasswordUrl#**: The URL that is generated by LoginRadius for resetting your user's account password.
+   * **#ResetToken#**: The token that is to send along with the reset password URL.
+   * **#loginUrl#**: The URL that is sent to your user to login into your organization account.
 
-* **#Name#**: The consumer's name as defined in your registration form.
+### Step 2: Manage Email Settings
 
-* **#AppName#**: The Application name as defined while creating a LoginRadius App.
+1. Edit email settings for Welcome Email by clicking the **Email Settings** tab. The following displays the email settings screen:
 
-* **#resetPasswordUrl#**: This tag defines a URL that is generated by LoginRadius for resetting your consumer's account password.
+   ![alt_text](images/email-settings.png "image_tooltip")
 
-* **#ResetToken#**: This tag defines a Token that is used to send along with the reset password URL.
+2. Configure the following setting:
 
-* **#loginUrl#**: This tag defines a URL that sent to your consumer to login into your organization
+   **Email Token Validity (Minutes)**: The amount of time (in minutes) of which the reset password link contained in a triggered email will remain valid.
 
-### Step 2: Configure Email Settings
+   For example, if the value is set to 10080, the reset password link in Welcome Email will remain valid for 7 days (10080 minutes).
 
-You can edit your application's email settings by clicking the **Email Settings** tab. The settings screen will show as below:
-
-![alt_text](images/email-settings.png "image_tooltip")
-
-You can configure the following settings:
-
-  * **Email Token Validity (Minutes)**: The amount of time (in minutes) of which the link contained in a triggered email will remain valid.
-
-For example, given the configurations set in the image above for the welcome email event: The welcome email link contained in the email will remain valid for 7 days (10080 minutes).
-
-Click the **Reset** button to reset all email configurations to default values. 
-
-Click the **Save** button to save your changes.
+3. Click the **Save** button to save your changes or **Reset** button to reset configuration value to its default.
 
 
-### References
 
-* <a href="https://www.loginradius.com/docs/developer/guide/custom-registration" target="_blank">Customize Registration Form Fields</a>
+## References
+
+* <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity" target="_blank">B2B Identity APIs</a>
+* <a href="https://www.loginradius.com/docs/developer/references/api/roles-management/" target="_blank">Role Management APIs</a>
 
 
 [Go Back to Home Page](/)
