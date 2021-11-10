@@ -68,9 +68,9 @@ Manage welcome email template and email settings for the organization as explain
 
 2. Configure the following setting:
 
-   **Email Token Validity (Minutes)**: The amount of time (in minutes) of which the link contained in a triggered email will remain valid.
+   **Email Token Validity (Minutes)**: The amount of time (in minutes) of which the reset password link contained in a triggered email will remain valid.
 
-   For example, if the value is set to 10080, the welcome email link(s) will remain valid for 7 days (10080 minutes).
+   For example, if the value is set to 10080, the reset password link in Welcome Email will remain valid for 7 days (10080 minutes).
 
 3. Click the **Save** button to save your changes or **Reset** button to reset configuration value to its default.
 
