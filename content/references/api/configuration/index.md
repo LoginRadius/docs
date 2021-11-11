@@ -7,6 +7,8 @@ path: "/references/api/configuration"
 
 # Configuration API
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Get Server Time
 
   This API allows you to query your LoginRadius account for basic server information and server time information which is useful when generating an SOTT token.

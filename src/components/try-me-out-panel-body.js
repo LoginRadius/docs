@@ -172,7 +172,21 @@ export default class TryMeOut extends React.Component {
       body: clientState.body || undefined,
     })
       .then(response => {
-        return Promise.all([response.json(), response.status])
+        if (response.status !== 200) {
+          this.setState(prevState => {
+            return {
+              clientState: {
+                ...prevState.clientState,
+                response: {
+                  status: response.status,
+                  body: response.statusText,
+                },
+              },
+            }
+          })
+        } else {
+          return Promise.all([response.json(), response.status])
+        }
       })
       .then(([data, status]) => {
         this.setState(prevState => {
@@ -186,7 +200,7 @@ export default class TryMeOut extends React.Component {
             },
           }
         })
-      })
+      }).catch(err => console.log("Something Went Wrong"))
   }
 
   render() {

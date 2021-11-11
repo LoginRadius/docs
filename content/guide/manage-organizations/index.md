@@ -26,6 +26,12 @@ By default **B2B Identity** feature remains disabled for your LoginRadius App. T
 
 - Add the <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#addupdate-roles" target="_blank">default roles</a> for organization users or create new roles using <a href="https://www.loginradius.com/docs/developer/references/api/roles-management/" target="_blank">Role Management APIs</a> and assign them to organization users.
 
+- Add users for the organization using the Add Users <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#add-user-to-organization" target="_blank">API</a>.
+
+> Note: Manage Login Methods for your users using the following APIs:
+> * <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#set-global-idp-on-profile" target="_blank">Set global IDP for the user profile.</a>
+> * <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#create-an-organizational-saml-idp" target="_blank">Create a SAML login method for the organization.</a>
+> * <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#set-global-authentication-method-for-organization" target="_blank">Set Global Authentication Method for Organization.</a>
 ## Manage Email Template and Setting
 
 Manage welcome email template and email settings for the organization as explained below.
@@ -74,7 +80,7 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 
    **Email Token Validity (Minutes)**: The amount of time (in minutes) of which the reset password link contained in a triggered email will remain valid.
 
-   For example, if the value is set to 10080, the reset password link in Welcome Email will remain valid for 7 days (10080 minutes).
+   For example, if the value is set to 10080 (default value), the reset password link in Welcome Email will remain valid for 7 days (10080 minutes).
 
 3. Click the **Save** button to save your changes or **Reset** button to reset configuration value to its default.
 

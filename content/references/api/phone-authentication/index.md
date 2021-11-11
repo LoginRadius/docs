@@ -7,6 +7,8 @@ path: "/references/api/phone-authentication"
 
 # Phone Authentication
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Phone Login
 
   Exchanges consumer login details for a copy of their user data and a LoginRadius access token.

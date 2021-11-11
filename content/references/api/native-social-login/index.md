@@ -7,6 +7,8 @@ path: "/references/api/native-social-login"
 
 # Native Social Login API
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Access Token via Facebook Token
 
   Exchanges a Facebook access token for a LoginRadius access token. It will be valid for the specific duration of time specified in the response.

@@ -7,6 +7,10 @@ path: "/references/api/two-factor-authentication"
 
 # Multi-Factor Authentication
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## 2FA Email Login
 
   Initiates the login process using Email ID on a Two-Factor Authentication (2FA) enabled LoginRadius app.
