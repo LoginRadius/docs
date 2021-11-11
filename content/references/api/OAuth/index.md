@@ -7,6 +7,8 @@ path: "/references/api/OAuth"
 
 # OAuth 2.0
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Request Tokens
 This API enables you to request a new access token from the Device code Endpoint
 

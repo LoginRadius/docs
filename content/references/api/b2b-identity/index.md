@@ -5,7 +5,9 @@ description: "This is a document detailing the LoginRadius B2B Identity APIs."
 path: "/references/api/b2b-identity"
 ---
 
-# B2B Identity Managment API
+# B2B Identity Management API
+
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
 
 ## Create Organization
 
@@ -38,7 +40,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Update Organization
 
-Updates the organization details.
+Updates the organization for the provided organization Id.
 
 ### Endpoint
 
@@ -110,7 +112,7 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="get-org-id" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
-## Organization By Organization Name
+## Organization by Organization Name
 
 Gets the organization by organization name.
 
@@ -132,7 +134,7 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="get-org-name" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/name/{org_name}" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
-## All Organizations
+## Get Organizations
 
 Gets all organizations.
 
@@ -156,7 +158,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Update Status of Organization
 
-Updates the status of an organization.
+Updates the status of an organization for the provided organization Id.
 
 ### Endpoint
 
@@ -185,7 +187,7 @@ Enter query parameters and send a request to view the sample response.
 
 ## Add/Update Roles
 
-Updates the organization's default roles.
+Updates the organization's default roles for the provided organization Id.
 
 ### Endpoint
 
@@ -211,9 +213,9 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="update-org-status" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/defaultroles" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"DefaultRoles":["Developer","ProductOwner"]}}'></try-me-out>
 
-## Add user to Organization
+## Add User to Organization
 
-Adds users to the organization.
+Adds users to the organization for the provided organization Id.
 
 ### Endpoint
 
@@ -245,9 +247,9 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="add-org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"emailtemplate","default":"ADDUSERTOORGANIZATION"},{"key":"resetPasswordUrl","default":"https://<AppName>.<Domain>/auth"},{"key":"loginUrl","default":"https://<AppName>.<Domain>/auth?org_name=<orgName>"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Name":"","DisplayName":"","OwnerUid":""}}'></try-me-out>
 
-## Organization Members
+## Organization Users
 
-Gets organization members by organization Id.
+Gets organization users by organization Id.
 
 ### Endpoint
 
@@ -267,9 +269,9 @@ Enter query parameters and send a request to view the sample response.
 <try-me-out id="org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}' sampleresponse='{"Data": [ {"UId":"","Email":[{"Type":"Primary","Value":"john.doe@gmail.com"}],"FullName":"John doe","IsActive":true,"GlobalIdpEnabled":true}
 ]}'></try-me-out>
 
-## Remove Members From Organization
+## Remove Users from Organization
 
-Removes members from the organization by organization Id.
+Removes users from the organization by organization Id.
 
 ### Endpoint
 
@@ -295,9 +297,9 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="remove-org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"UId": ["12","34"]}}' sampleresponse='{"IsDeleted": true}'></try-me-out>
 
-## Set Global IDP on profile
+## Set Global IDP on Profile
 
-Enables/disables the App's authentication method for a profile.
+Enables/disables the app’s authentication method for a profile by organization id and owner's uid.
 
 ### Endpoint
 
@@ -323,9 +325,9 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="set-global-idp-memeber" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org_id}/members/{uid}/idp/global" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsEnabled":true}}' sampleresponse='{{"IsEdited":true}}'></try-me-out>
 
-## Set Global authentication method on Organization
+## Set Global Authentication Method for Organization
 
-Enables/disables the App's authentication method for an organization.
+Enables/disables the App's authentication method for an organization for the provided organization Id.
 
 ### Endpoint
 
@@ -351,9 +353,9 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="set-global-org" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org_id}/idp/global" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsEnabled":true}}' sampleresponse='{{"IsEdited":true}}'></try-me-out>
 
-## Create an Organizational SAML IDP
+## Create Organizational SAML IDP
 
-Creates the organizational SAML IDP.
+Creates the organizational SAML IDP for the provided organization Id.
 
 ### Endpoint
 
@@ -379,9 +381,36 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="create-saml-cpnfig" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Provider":"MySAMLIdp","Config":{"FriendlyProviderName":"","IdentityProvider":{"Binding":"","Location":"","LogOut":""},"IdpCertificate":{"Certificate":""},"SpCertificate":{"Key":"","Certificate":""},"IsIdpInitiated":false,"DataMap":{"Email":"email","FirstName":"username"}}}}'></try-me-out>
 
-## All IDPs of an Organization
+## Update Organizational SAML IDP
 
-Gets all IDPs of an organization.
+Updates an organization's SAML IDP for the provided organization Id and SAML Id.
+
+### Endpoint
+
+`PUT` `https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml/{id}`
+
+### Query Parameters
+
+| Parameter | Default | Description                           |
+| :-------- | :------ | :------------------------------------ |
+| Apikey    | none    | LoginRadius API Key [**Required**]    |
+| Apisecret | none    | LoginRadius API Secret [**Required**] |
+
+### Body Attributes
+
+| Attribute | Description 
+| :------------ | :------- | :-------------------------------------------------------------------------------- | 
+|Config| SAML Configuration [**Required**]|
+
+### Try Me Out
+
+Enter query parameters and send a request to view the sample response.
+
+<try-me-out id="update-saml-cpnfig" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Config":{"FriendlyProviderName":"","IdentityProvider":{"Binding":"","Location":"","LogOut":""},"IdpCertificate":{"Certificate":""},"SpCertificate":{"Key":"","Certificate":""},"IsIdpInitiated":false,"DataMap":{"Email":"email","FirstName":"username"}}}}'></try-me-out>
+
+## All IDPs of Organization
+
+Gets all IDPs of an organization by organization Id and IDP Id.
 
 ### Endpoint
 
@@ -401,7 +430,7 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="get-all-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml/{idpid}" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
-## SAML IDP of an Organization By Id
+## SAML IDP of Organization by Id
 
 Gets the SAML IDP of an organization by organization Id.
 
@@ -422,11 +451,9 @@ Gets the SAML IDP of an organization by organization Id.
 Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="get-all-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
+## Update Status of Organizational IDP
 
-
-## Update Status of an Organizational idp
-
-Updates the status of organizational IDP.
+Updates the status of organizational IDP by organization Id and IDP Id.
 
 ### Endpoint
 
@@ -452,9 +479,9 @@ Enter query parameters and send a request to view the sample response.
 
 <try-me-out id="update-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/{id}/status" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsActive":true}}'></try-me-out>
 
-## Remove an Organizational idp
+## Remove Organizational IDP
 
-Removes the IDP of an organization.
+Removes the IDP of an organization by organization Id and IDP Id.
 
 ### Endpoint
 

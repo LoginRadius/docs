@@ -7,6 +7,8 @@ path: "/references/api/authentication"
 
 # Authentication API
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Auth Add Email
 
   Adds additional emails to the consumer corresponding to the specified access token.

@@ -8,6 +8,8 @@ path: "/references/api/oidc"
 
 # OpenID Connect
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Access Token by OpenID code
 
 This API allows you to exchange your OpenID code for a LoginRadius access_token.

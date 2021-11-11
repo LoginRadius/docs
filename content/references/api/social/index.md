@@ -7,6 +7,8 @@ path: "/references/api/social"
 
 # Social API
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Access Token
 
   This API Is used to translate the Request Token returned during authentication into an Access Token that can be used with other API calls.
