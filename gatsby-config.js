@@ -48,8 +48,8 @@ module.exports = {
         ],
       },
     },
-    { resolve: "gatsby-plugin-sharp", options: { failOnError: false } },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
