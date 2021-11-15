@@ -791,6 +791,9 @@ const Middle = () => {
                 <Link to="/guide/oidc">Outbound SSO OIDC</Link>
               </li>
               <li>
+                <Link to="/guide/outbound-sso-zendesk">Outbound SSO Zendesk</Link>
+              </li>
+              <li>
                 <Link to="/guide/big-commerce">Integrate BigCommerce</Link>
               </li>
               <li>
