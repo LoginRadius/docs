@@ -38,7 +38,7 @@ This document provides instructions to set up an outbound SSO with Zendesk. As a
 
 6. Select the **Enabled** option, enter the **Remote Login URL**. The following is an example of remote login URL:
 
-   https://cloud-api.loginradius.com/sso/jwt/redirect/token?apiKey=**<LR API Key goes here>**&brand_id=360004954977&jwtapp=**<LR JWT app name>**&return_url=**<return URL to be used after successful login>**
+   https://cloud-api.loginradius.com/sso/jwt/redirect/token?apiKey=**LR API Key goes here**&brand_id=360004954977&jwtapp=**LR JWT app name goes here**&return_url=**return URL to be used after successful login**
 
    * API Key: The [LoginRadius app’s API Key](https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret). 
    * JWT App: The JWT app name as mentioned in [LoginRadius Dashboard](#loginradius-dashboard-configuration).
@@ -66,7 +66,7 @@ This section covers the required configurations that you need to perform in the 
 
    The following pop-up will appear:
 
-   ![alt_text](../../guide/jwt/images/jwt-enable.png "image_tooltip")
+   ![alt_text](../../guide/outbound-sso-zendesk/images/zendesk-enable.png "image_tooltip")
 
 4. Click the **Enable** button from the above pop-up.
 
