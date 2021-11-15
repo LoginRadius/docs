@@ -38,7 +38,7 @@ This document provides instructions to set up an outbound SSO with Zendesk. As a
 
 6. Select the **Enabled** option, enter the **Remote Login URL**. The following is an example of remote login URL:
 
-   https://cloud-api.loginradius.com/sso/jwt/redirect/token?apiKey=**LR API Key goes here**&brand_id=360004954977&jwtapp=**LR JWT app name goes here**&return_url=**return URL to be used after successful login**
+   `https://cloud-api.loginradius.com/sso/jwt/redirect/token?apiKey=<LR API Key goes here>&jwtapp=<LR Zendesk app name goes here>&return_url=<return URL to be used after successful login>`
 
    * API Key: The [LoginRadius app’s API Key](https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret). 
    * JWT App: The JWT app name as mentioned in [LoginRadius Dashboard](#loginradius-dashboard-configuration).
@@ -79,7 +79,7 @@ This section covers the required configurations that you need to perform in the 
 
    * **Secret Key**: Enter the Secret Key you saved while configuring [Zendesk](#zendesk-configuration). 
 
-   * **Query String Parameter**: The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: ?=JWTtoken
+   * **Query String Parameter**: The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: `<redirecturi>?<parameter name from LoginRadius Dashboard>=JWTtoken`
 
    * **Enter Key and Profile Key**: Specify the key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
 
@@ -94,4 +94,4 @@ This section covers the required configurations that you need to perform in the 
 
 7. Click the **Save** button.
 
-You have successfully configured Zendesk using Outbound SSO. Open Auth Page(IDX) of your app and the **Login with Zendesk** option will appear.
+You have successfully configured Zendesk using Outbound SSO. 
