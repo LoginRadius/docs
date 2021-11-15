@@ -71,7 +71,7 @@ This section covers the required configurations that you need to perform in the 
 
    - **Secret Key:** Enter the secret key obtained from the service provider. It would be used to sign the JWT and will later be used to verify the received JWT.
 
-   - **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
+   - **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: `<redirecturi>?<parameter name from LoginRadius Dashboard>=JWTtoken`
 
    - **Algorithms:** Algorithm to sign JWT. LoginRadius supports the following algorithms:
 
