@@ -337,6 +337,21 @@ pre[class*="language-"] {
   }
 }
 
+.top-strip {
+  & ~ header {
+    top: 48px;
+  }
+  & ~ main {
+    padding-top: 148px;
+    .sidebar {
+      @media (min-width: 769px) {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 196px;
+      }
+    }
+  }
+}
 // main tag
 main {
   padding-top: 100px;

@@ -10,6 +10,7 @@ export default class Header extends Component {
       query: ``,
       results: [],
       toggleOpen: false,
+      showBanner: true,
     }
   }
 
@@ -40,7 +41,9 @@ export default class Header extends Component {
       })
     }
   }
-
+  removeBanner = () => {
+    this.setState({ showBanner: !this.state.showBanner })
+  }
   componentDidMount() {
     document.body.addEventListener("click", this.bodyClickHandler)
   }
@@ -50,53 +53,74 @@ export default class Header extends Component {
   }
 
   render() {
-    const { results, toggleOpen } = this.state
+    const { results, toggleOpen, showBanner } = this.state
     return (
-      <header>
-        <div>
-          <div className="logo">
-            <Link to="/">
-              <img src={Logo} width="228" />
-            </Link>
+      <React.Fragment>
+        {showBanner && (
+          <div className="top-strip">
+            The following documentation is applicable to <b>Free</b>,{" "}
+            <b>Developer</b>, and <b>Developer Premium</b> plans. For
+            documentation related to the enterprise plan, please{" "}
+            <a href="https://www.loginradius.com/docs/" target="_blank">
+              click here
+            </a>
+            .<button onClick={() => this.removeBanner()}></button>
           </div>
-          <div className="right-section">
-            <div
-              className="search "
-              onMouseOver={() => (this._shouldClose = false)}
-              onMouseLeave={() => (this._shouldClose = true)}
-            >
-              <form>
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  onChange={this.search}
-                  id={"search"}
-                />
-                <a onClick={this._toggleSearch}></a>
-                {results.length ? (
-                  <ul>
-                    {results.slice(0, 4).map(page => (
-                      <li key={page.id}>
-                        <div>
-                          <Link to={page.path}>{page.title}</Link>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </form>
+        )}
+        <header>
+          <div>
+            <div className="logo">
+              <Link to="/">
+                <img src={Logo} width="228" />
+              </Link>
             </div>
-            <div className="authentication-buttons">
-              <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login" target="_blank"  className="btn btn-secondary">
-                Login
-              </a>
-              <a href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register" target="_blank"  className="btn btn-primary">
-                Free Sign Up
-              </a>
+            <div className="right-section">
+              <div
+                className="search "
+                onMouseOver={() => (this._shouldClose = false)}
+                onMouseLeave={() => (this._shouldClose = true)}
+              >
+                <form>
+                  <input
+                    type="text"
+                    placeholder="Search documentation..."
+                    onChange={this.search}
+                    id={"search"}
+                  />
+                  <a onClick={this._toggleSearch}></a>
+                  {results.length ? (
+                    <ul>
+                      {results.slice(0, 4).map(page => (
+                        <li key={page.id}>
+                          <div>
+                            <Link to={page.path}>{page.title}</Link>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </form>
+              </div>
+              <div className="authentication-buttons">
+                <a
+                  href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login"
+                  target="_blank"
+                  className="btn btn-secondary"
+                >
+                  Login
+                </a>
+                <a
+                  href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register"
+                  target="_blank"
+                  className="btn btn-primary"
+                >
+                  Free Sign Up
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </React.Fragment>
     )
   }
   getOrCreateIndex = () =>
