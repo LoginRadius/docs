@@ -79,7 +79,7 @@ This section covers the required configurations that you need to perform in the 
 
    * **Secret Key**: Enter the Secret Key you saved while configuring [Zendesk](#zendesk-configuration). 
 
-   * **Query String Parameter**: The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: `<redirecturi>?<parameter name from LoginRadius Dashboard>=JWTtoken`
+   * **Query String Parameter**: The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: `<redirecturi>?<query string parameter>=JWTtoken`
 
    * **Enter Key and Profile Key**: Specify the key-value pair of LoginRadius profile data points that you want to receive in the JWT payload.
 
