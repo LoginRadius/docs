@@ -8,6 +8,8 @@ path: "/references/api/jwt"
 
 # JWT 
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 <!-- ## JWT Token by Username
 
 Use this API to get JWT token by access token by Username.

@@ -685,6 +685,11 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/guide/manage-organizations">
+                  <span>Manage Organizations (B2B)</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/guide/setup-your-smtp-provider">
                   <span>Setup Your SMTP Provider</span>
                 </Link>
@@ -784,6 +789,9 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="/guide/oidc">Outbound SSO OIDC</Link>
+              </li>
+              <li>
+                <Link to="/guide/outbound-sso-zendesk">Outbound SSO Zendesk</Link>
               </li>
               <li>
                 <Link to="/guide/big-commerce">Integrate BigCommerce</Link>
@@ -990,6 +998,9 @@ const Middle = () => {
                 <Link to="references/api/two-factor-authentication">
                   Two-Factor Authentication
                 </Link>
+              </li>
+              <li>
+                <Link to="references/api/b2b-identity">B2B Identity</Link>
               </li>
               <li>
                 <Link to="references/api/roles-management">

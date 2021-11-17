@@ -7,6 +7,8 @@ path: "/references/api/account"
 
 # Account API
 
+Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">this document</a> to get API Key and Secret.
+
 ## Account Create
 
   Creates a new consumer. This will bypass the normal email verification process.

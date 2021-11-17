@@ -1,7 +1,7 @@
 ---
 title: "Guide to connecting JWT"
 tags: ["JWT", "GetStarted", "Outbound", "SSO"]
-description: "This is a tutorial with JWT implementation."
+description: "This is a guide to configure JWT Outbound SSO."
 path: "/guide/jwt"
 ---
 
@@ -69,9 +69,9 @@ This section covers the required configurations that you need to perform in the 
 
    - **App Name:** A name that will be used by LoginRadius to identify the provider originating the request. If you have multiple JWT apps, the name should be unique for each. You can use any name, e.g., comapany_Jwt_app. This name will be used in LoginRadius to identify your app during API calls.
 
-   - [**Secret Key:**](#get-credentials) A secret key that would be used to sign the JWT and will later be used to verify the received JWT.
+   - **Secret Key:** Enter the secret key obtained from the service provider. It would be used to sign the JWT and will later be used to verify the received JWT.
 
-   - **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: <redirecturi>?<parameter name from admin console>=JWTtoken
+   - **Query String Parameter:** The query parameter name in which LoginRadius sends JWT during JWT SSO flow. After authentication, the redirect URL will contain a JWT under this parameter name. The redirect URL will look like this: `<redirecturi>?<query string parameter>=JWTtoken`
 
    - **Algorithms:** Algorithm to sign JWT. LoginRadius supports the following algorithms:
 
