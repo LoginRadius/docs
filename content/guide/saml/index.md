@@ -29,6 +29,7 @@ This document goes over how you can enable outbound SSO using SAML. In this setu
 3.  Either search for **SAML** in the search bar or go to the **Select Category** dropdown and select Outbound SSO. Locate Outbound SSO - SAML and click the **Try It For Free**.
 
     The following pop-up will appear:
+    
     ![alt_text](images/outboundsaml-enable.png "image_tooltip")
 
 4. Click **Enable** button from the above pop-up and then click the **Let’s Configure** option under the Outbound SSO-SAML. The following screen will appear:
@@ -88,13 +89,11 @@ The below steps are if the **Add App** option is selected.
 
    ![alt_text](images/attributes.png "image_tooltip")
 
-4. Select the Name Id format from the Dropdown.
-
-    Default is **urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified**
+4. Select the **Name Id Format** value from the dropdown.    The default value is **urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified**.
 
 5. Enter the URLs of the page that users will be redirected to for authentication in **Login URL** and **After Logout URL**.
 
-   Where Login URL is of your Auth Page (IDX).
+   Where Login URL is of your <a href="https://www.loginradius.com/docs/developer/concepts/idx" target="_blank">Auth Page (IDX)</a>.
 
     ![alt_text](images/url.png "image_tooltip")
 
