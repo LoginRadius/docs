@@ -111,7 +111,7 @@ The below steps are if the **Add App** option is selected.
 
 9. Once all the required fields are completed, scroll down and click **Save**.
 
-> **Note:** LoginRadius supports both IDP Initiated Login and SP Initiated Login, for more details, refer to <a href="https://www.loginradius.com/docs/developer/concept/loginradius-as-identity-provider" target="_blank">this document</a>.
+> **Note:** LoginRadius supports both IDP Initiated Login and SP Initiated Login, for more details, refer to <a href="https://www.loginradius.com/docs/developer/concepts/loginradius-as-identity-provider/" target="_blank">this document</a>.
 
 
 [Go Back to Home Page](/)
