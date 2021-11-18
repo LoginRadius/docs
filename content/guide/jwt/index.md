@@ -92,7 +92,7 @@ This section covers the required configurations that you need to perform in the 
 
 6. Click the **Save** button. Your Outbound SSO -JWT configurations are now complete.
 
-# JWT LoginRadius APIs
+## JWT LoginRadius APIs
 
 If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
@@ -109,7 +109,8 @@ The response from the above APIs will look like this:
 }
 ```
 
-For more information on `<JWTresponse>`, refer to <a href="https://www.loginradius.com/docs/developer/concepts/jwt" target="_blank">JWT Token Structure</a>.
+>**Note:** For more information on `<JWTresponse>`and JWT Protocol, refer to <a href="https://www.loginradius.com/docs/developer/concepts/jwt" target="_blank">this document</a>.
+
 
 
 
