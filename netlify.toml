@@ -103,7 +103,7 @@
   to = "/docs/developer/tutorial/ios/"
 
 [[redirects]]
-from = "/docs/developer/api/"
+from = "/docs/developer/api/*"
 to = "/docs/developer/#api"
 
 [[redirects]]
