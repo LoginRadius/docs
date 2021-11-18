@@ -45,6 +45,16 @@ LoginRadius support team is available 24/7, and you can reach them through the:
 
   ![alt_text](images/secret-reset.png "image_tooltip")
 
+
+### How to whitelist domain in LoginRadius Dashboard?
+
+* Login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account.
+* Navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a> and add your domain name:
+
+   ![alt_text](../assets/blog-common/domain-whitelisting.png "image_tooltip")
+
+>**Note:** For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
+
 ### How to access the LoginRadius Support section?
 
 * To access the LoginRadius Support section, login to your <a href="https://dashboard.loginradius.com/dashboard" target="_blank">LoginRadius Dashboard</a> account, from the top header panel, click **Support** as displayed in the below screen.
