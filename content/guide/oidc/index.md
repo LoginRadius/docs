@@ -34,7 +34,7 @@ This <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-
 
 5. Click the **Let's Configure** option under **OpenID** box. The following screen will appear:
 
-   ![alt_text](/images/OpenID-settings.png "image_tooltip")
+   ![alt_text](../../guide/oidc/images/OpenID-settings.png "image_tooltip")
 
 6. Enter or select the following to configure the OpenID app:
 
@@ -186,7 +186,7 @@ Redirect your user to the following URL to get the login prompt:
 
 **Available Query Parameters**
 
-- **client_id:** [Loginradius API key](#get-credentials)
+- **client_id:** <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">LoginRadius API Key</a>.
 - **redirect_uri:** Callback URL of your site where you want to redirect back your users
 - **response_type:** Possible value is only 'code' to specify that you are doing the Authorization Code flow.
 - **state:** Random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
@@ -214,13 +214,15 @@ e.g.
 
 Once you have the code, you can request an access_token via the <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#access-token-by-openid-code" target="_blank">Access token by OpenID Code API</a>.
 
+> **Note:** To include PKCE within this request, refer to <a href="https://www.loginradius.com/docs/developer/concepts/pkce" target="_blank">this document</a> for more information.
+
 ### Implicit Flow
 
 The implicit flow requests tokens without explicit client authentication, instead of using the redirect URI to verify the client identity. Because of this, refresh tokens are not allowed, nor is this flow suitable for long lived access tokens. From the client application's point of view, this is the simplest to implement, as there is only one round trip to the openid&nonce={Unique Generated nonce}`
 
 **Available Query Parameters**
 
-- **client_id:** [Loginradius API key](#get-credentials)
+- **client_id:** <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">LoginRadius API Key</a>.
 - **redirect_uri:** Callback URL of your site where you want to redirect back your users
 - **response_type :** Possible values are token, id_token or token id_token.
 - **state:** Random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
@@ -249,7 +251,7 @@ Redirect your user to the following URL to get the login prompt:
 
 `https://cloud-api.loginradius.com/sso/oidc/v2/{oidcappname}/authorize?client_id={LoginRadius API key}&redirect_uri={Callback URL}&scope={Scope}&response_type={one of the response_types available}&state={random long string}&scope=openid&nonce={Unique Generated nonce} `
 
-- **client_id:** [Loginradius API key](#get-credentials)
+- **client_id:** <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-api-key-and-secret" target="_blank">LoginRadius API Key</a>.
 - **redirect_uri:** Callback URL of your site where you want to redirect back your users
 - **response_type :** Possible values are token, id_token or token id_token.
 - **state:** Random string that returned with the access_token in the redirect callback. this parameter will be returned as it is, part of the response.
@@ -298,20 +300,6 @@ The <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#oid
 
 URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-known/openid-configuration
 
-## Get Credentials
 
-Before using any of the APIs or Methods that LoginRadius provides, you need to get your **App Name**, **API Key**, and **API Secret**.
-
-In your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > API Credentials</a> and click the **API Key And Secret** subsection to retrieve your API Credentials.
-
-![alt_text](../../assets/blog-common/api-credentials.png "image_tooltip")
-
-## Whitelist Domain
-
-For security reasons, LoginRadius processes the API calls that are received from the whitelisted domains. Local domains (http://localhost and http://127.0.0.1) are whitelisted by default.
-
-To whitelist your domain, in your LoginRadius Dashboard, navigate to <a href="https://dashboard.loginradius.com/configuration" target="_blank">Configuration > Whitelist Your Domain</a> and add your domain name:
-
-![alt_text](../../assets/blog-common/domain-whitelisting.png "image_tooltip")
 
 [Go Back to Home Page](/)
