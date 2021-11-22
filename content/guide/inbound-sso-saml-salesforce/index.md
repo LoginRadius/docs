@@ -106,7 +106,7 @@ To support the Inbound SSO - SAML, you will need to handle the following:
      |Email | email |
 
 
-5. Click the **Save** button to save the configuration.
+6. Click the **Save** button to save the configuration.
 You have successfully configured **Salesforce** IDP using Inbound SSO-SAML. Open Auth Page(IDX) of your app and the **Login with SAML Salesforce** option will appear:
 
 ![alt_text](images/image6.png "image_tooltip")
