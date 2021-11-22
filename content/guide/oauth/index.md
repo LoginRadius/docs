@@ -179,7 +179,7 @@ Here is an explanation of the Request Body Parameters:
 
 **Step 2: Use Obtained LoginRadius Access Token**
 
-You can use the obtained access_token with <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#user-registration-overview" target="_blank">LoginRadius APIs</a> supporting the access_token until the token expires or revokes.
+You can use the obtained access_token with <a href="https://www.loginradius.com/docs/developer/references/api/oauth/#user-registration-overview" target="_blank">LoginRadius API </a> supporting the access_token until the token expires or revokes.
 
 <!--### Device Code Flow
 
