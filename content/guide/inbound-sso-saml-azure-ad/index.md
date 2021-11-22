@@ -74,6 +74,8 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
    * Enter the Display Provider Name.
 
+   * Upload the Provider Icon.
+
    * Enter the Id Provider Location: `https://login.microsoftonline.com/22d****eeaa60/saml2`
 
    * Enter the Id Provider Logout URL: `https://login.microsoftonline.com/22*****bfd7-62dda0eeaa60/saml2`
