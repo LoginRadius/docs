@@ -47,10 +47,14 @@ This document provides instructions to add a custom Identity provider (Salesforc
 13. Select default or create and add IDP Certificate.
 
 14. Add SP Certificate and Key
-   a) Generate the SP Certificate key from the following command
-        i. ```openssl genrsa -out private.key 2048```
-   b) Generate certificate form the private key
-        i. ```openssl req -new -x509 -key private.key -out certificate.cert -days 365 -subj /CN=<loginradius-app-name>.hub.loginradius.com```
+
+    a) Generate the SP Certificate key from the following command:
+
+        ```openssl genrsa -out private.key 2048```
+
+    b) Generate the certificate form the private key
+
+        ```openssl req -new -x509 -key private.key -out certificate.cert -days 365 -subj /CN=<loginradius-app-name>.hub.loginradius.com```
 
 15. Save the configuration
 
@@ -65,9 +69,11 @@ To support the Inbound SSO - SAML, you will need to handle the following:
    ![alt_text](images/integration3.png "image_tooltip")
 
 
-2. Click the **Add** button for adding a new **Inbound SSO SAML app**. The configuration options will appear.
+2. Click the **Add** button for adding a new **Inbound SSO-SAML** app. The configuration options will appear.
 
-3. Search for **Inbound SSO SAML** in the search bar, locate Inbound SSO SAML and click the **Let’s Configure** option.
+3. Search for **Inbound** in the search bar, locate the **Inbound SSO-SAML**. Click the **Try It For Free** option and then the **Enable** button from the appeared pop-up. The **Inbound SSO-SAML** app is added to the Available Integrations.
+
+4. Click the **Let’s Configure** option.
 
    ![alt_text](images/Integration-inbound.png "image_tooltip")
 
@@ -75,32 +81,33 @@ To support the Inbound SSO - SAML, you will need to handle the following:
 
    ![alt_text](images/saml.png "image_tooltip")
 
-4. Enter or select the following values:
+5. Enter or select the following values:
 
-* Enter the Provider Name.
+   * Enter the Provider Name.
 
-* Enter the Display Provider Name.
-Select IDP Binding : `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
+   * Enter the Display Provider Name.
+   
+   * Select Id Provider Binding : `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 
-* Enter the IDP Location: `https://<account>.salesforce.com/idp/endpoint/HttpPost`
+   * Enter the Id Provider Location: `https://<account>.salesforce.com/idp/endpoint/HttpPost`
 
-* Enter the IDP Logout URL: `https://<account>.salesforce.com/services/auth/idp/saml2/logout`
+   * Enter the Id Provider Logout URL: `https://<account>.salesforce.com/services/auth/idp/saml2/logout`
 
-* Enter the IDP Certificate from the Salesforce connect app. You can download the<a href="https://help.salesforce.com/articleView?id=sf.identity_provider_enable.htm&type=5" target="_blank"> IDP Certificate</a> from the salesforce.
+   * Enter the Id Provider Certificate from the Salesforce connect app. You can download the<a href="https://help.salesforce.com/articleView?id=sf.identity_provider_enable.htm&type=5" target="_blank"> IDP Certificate</a> from the salesforce.
 
-* Enter the SP Certificate and SP Private Key that you have generated while doing [Salesforce Configuration](#salesforce-configuration).
+   * Enter the Service Provider Certificate and Service Provider Private Key that you have generated while doing [Salesforce Configuration](#salesforce-configuration).
 
-* Enter the Relay state param, i.e: RelayState.
+   * Enter the Relay state param, i.e: RelayState.
 
-* Data Mapping: Add the fields you want to map along with Email.
+   * Data Mapping: Add the fields you want to map along with Email.
 
-    | Key | Value | |
-    |----|----|-----|
-    |Email | email |
+     | Key | Value | |
+     |----|----|-----|
+     |Email | email |
 
 
-5. Click the **Save** button to save the configuration.
-You have successfully configured **Salesforce** IDP using Inbound SSO SAML. Open Auth Page(IDX) of your app and the **Login with SAML Salesforce option will appear:**
+6. Click the **Save** button to save the configuration.
+You have successfully configured **Salesforce** IDP using Inbound SSO-SAML. Open Auth Page(IDX) of your app and the **Login with SAML Salesforce** option will appear:
 
 ![alt_text](images/image6.png "image_tooltip")
 

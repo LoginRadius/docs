@@ -28,7 +28,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
   ### Body Attributes
   | Attribute | Description 
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|user's email id
+  |Email|user's email id with it's type. Sample - [{"Type": "Primary", "Value": "test@test.com"}]
   |FirstName|user's first name
   |LastName|user's last name
   |Password|Password for the email | Model Class containing Definition of payload for Account Create API [**Required**]
