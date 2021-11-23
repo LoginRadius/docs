@@ -32,7 +32,7 @@ This <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-
 
    ![alt_text](images/oidc-configure.png "image_tooltip")
 
-5. Click the **Let's Configure** option under **OpenID** box. The following screen will appear:
+5. Click the **Let's Configure** option under **Outbound SSO-OpenID** box. The following screen will appear:
 
    ![alt_text](../../guide/oidc/images/OpenID-settings.png "image_tooltip")
 

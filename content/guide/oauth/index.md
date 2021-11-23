@@ -15,7 +15,7 @@ LoginRadius Identity Platform supports standard <a href="https://tools.ietf.org/
 
 To understand OAuth 2.0 and the flows involved in this guide, check out <a href="https://itnext.io/an-oauth-2-0-introduction-for-beginners-6e386b19f7a9" target="_blank">this reference</a>.
 
-This section covers the configuration that one needs to do in LoginRadius to implement OAuth functionality. The aim remains to obtain an **access_token** and uses it to access protected resources. There are three flows involved, and you can choose one based on your requirements:
+This section covers the configuration that one needs to do in LoginRadius to implement OAuth functionality. The aim remains to obtain an **access_token** and use it to access protected resources. There are three flows involved, and you can choose one based on your requirements:
 
 - [Auth Code Grant](#authorization-code-grant)
 - [Implicit](#implicit)
@@ -340,7 +340,8 @@ If the consumer denied the authorization
 
 ## Refresh Token
 
-Once you have obtained an **access_token**, you can use the Refresh Access Token API to refresh the access_token.
+Once you have obtained an **access_token**, you can use the <a href="https://www.loginradius.com/docs/developer/references/api/OAuth/#refresh-access-token" target="_blank">Refresh Access Token API</a> to refresh the access_token.
+
 
 **Required Parameters**
 
@@ -352,7 +353,7 @@ Here is an explanation of the Request Body Parameter:
 
 - **grant_type:** The grant_type needs to be refresh_token.
 
-- **refresh_token:** This is the refresh_token you received when you used the 'Access token by OAuth 2 token' and 'Access Token by Account Password' API call.
+- **refresh_token:** This is the refresh_token you received when you used the <a href="https://www.loginradius.com/docs/developer/references/api/OAuth/#access-token-by-oauth-2-token" target="blank">Access token by OAuth 2 token</a> and <a href="https://www.loginradius.com/docs/developer/references/api/OAuth/#access-token-by-account-password" tagret="blank">Access Token by Account Password </a> API call.
 
 **API Response containing the refresh access_token:**
 
