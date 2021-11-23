@@ -5,7 +5,7 @@ description: "An overview about LoginRadius as Identity Provider."
 path: "/concept/loginradius-as-identity-provider"
 ---
 
-# LoginRadius as Identity Provider
+# SAML- LoginRadius as Identity Provider
 
 LoginRadius supports both SAML 1.1 and SAML 2.0 flows. LoginRadius Dashboard lets you do SAML configurations by allowing you to customize the assertions, keys, and endpoints to match any SAML provider requirements.
 

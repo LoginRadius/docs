@@ -912,6 +912,15 @@ const Middle = () => {
               <li>
                 <Link to="/concepts/sott">Secure One Time Token (SOTT)</Link>
               </li>
+              <li>
+                <Link to="/concepts/jwt">JWT Structure and Practices</Link>
+              </li>
+              <li>
+                <Link to="/concepts/oidc">OpenID Connect Flows</Link>
+              </li>
+              <li>
+                <Link to="/concepts/loginradius-as-identity-provider">SAML-LoginRadius as IDP</Link>
+              </li>
             </ul>
           </div>
           {/*Concepts*/}

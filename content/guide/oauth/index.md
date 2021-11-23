@@ -20,6 +20,7 @@ This section covers the configuration that one needs to do in LoginRadius to imp
 - [Auth Code Grant](#authorization-code-grant)
 - [Implicit](#implicit)
 - [Resource Owner Password Credentials Grant](#resource-owner-password-credentials-grant)
+
 <!-- - [Device Code Flow](#device-code-flow)-->
 
 The following section covers how to utilize OAuth 2.0 Code Grant via Loginradius APIs.
