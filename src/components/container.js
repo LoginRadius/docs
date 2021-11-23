@@ -913,7 +913,7 @@ const Middle = () => {
                 <Link to="/concepts/sott">Secure One Time Token (SOTT)</Link>
               </li>
               <li>
-                <Link to="/concepts/jwt">JWT Structure and Practices</Link>
+                <Link to="/concepts/jwt">JWT-Structure and Practices</Link>
               </li>
               <li>
                 <Link to="/concepts/oidc">OpenID Connect Flows</Link>
