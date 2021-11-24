@@ -49,7 +49,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
   ### Body Attributes
   | Attribute | Description 
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |email|user's email
+  |email|user's email id with it's type. Sample - [{"Type": "Primary", "Value": "test@test.com"}]
   |password|Password for the email | Model Class containing Definition of payload for Email Authentication API [**Required**]
 
   ### Try Me Out
@@ -99,7 +99,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
   ### Body Attributes
   | Attribute | Description 
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|boolean type value, default is true
+  |Email|user's email id with it's type. Sample - [{"Type": "Primary", "Value": "test@test.com"}]
   |FirstName|user's first name
   |LastName|user's last name
   |Password|Password for the email | Model Class containing Definition of payload for Auth User Registration API [**Required**]
@@ -131,7 +131,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
   ### Body Attributes
   | Attribute | Description 
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|boolean type value, default is true
+  |Email|user's email id with it's type. Sample - [{"Type": "Primary", "Value": "test@test.com"}]
   |FirstName|user's first name
   |g-recaptcha-response|The acknowledgement received by Google in Google recaptcha authorisation process.
   |LastName|user's last name

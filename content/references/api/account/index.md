@@ -328,7 +328,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
   ### Body Attributes
   | Attribute | Description 
   | :------------ | :------- | :-------------------------------------------------------------------------------- | 
-  |Email|user's email | Model Class containing Definition of payload for UpsertEmail Property [**Required**]
+  |Email|user's email id with it's type| Sample - [{"Type": "Primary", "Value": "test@test.com"}] [**Required**]
   
   ### Try Me Out
     
