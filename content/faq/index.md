@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-tags: ["FAQ"]
+tags: ["FAQ", "API Credentials", "API Key", "API Secret", "Upgrade Plan", "Domain Whitelist", "Whitelist Domain", "LoginRadius Support", "Support"]
 description: "Frequently asked Questions"
 path: "/faq"
 ---
