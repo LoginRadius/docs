@@ -92,12 +92,15 @@ To support the BigCommerce SSO flows, you will need to handle the following:
 
    - Store Name: Enter your store name. This should be a string in the API PATH when your BigCommerce ACCESS TOKEN, CLIENT ID, and CLIENT SECRET was generated. E.g. - if your API PATH is `https://api.bigcommerce.com/stores/pqshk245fh/v3/`, then your store name value should be `pqshk245fh`
 
-   - Store URL: Set this to your BigCommerce Store URL. Click the **View Store** option from the left navigation screen to get your store URL:
+   - Store URL: Set this to your BigCommerce Store URL. Example: `https://ecommbrand.mybigcommerce.com/`
+   Where `ecommbrand` is your store. Refer to the image below to get yours:
       
       ![alt_text](images/viewstore.png "image_tooltip")
         
       
-   - Store Login URL: Set this to your BigCommerce Store Login URL. E.g.: `https://<BIGCOMMERCE Store NAME>.mybigcommerce.com/login/token/`
+   - Store Login URL: Set this to your BigCommerce Store Login URL. Example: `https://ecommbrand.mybigcommerce.com/login/token/`
+
+   Where `ecommbrand` is your store.Refer to the image above to get yours.
 
    - Access Token: Enter a valid BigCommerce Access Token for an API Account, see this doc on [Creating API Accounts](https://support.bigcommerce.com/s/article/Store-API-Accounts)
 
@@ -130,7 +133,7 @@ It is recommended that you backup your theme before making any modifications if 
 
 3. Download and unzip the [LoginRadius BigCommerce-Stencil-Package](https://github.com/LoginRadius/bigcommerce-identity-plugin)
 
-## Modifying Your Stencil Theme
+### Modifying Your Stencil Theme
 
 1. Copy the contents of the **assets** folder from the LoginRadius theme into your theme's assets folder.
 
@@ -266,13 +269,13 @@ This will display the pre-styled User authentication features which include hand
 ```
 > **Note:** To see the live preview of the changes you have made to your stencil theme, refer to this [document](https://developer.bigcommerce.com/stencil-docs/installing-stencil-cli/live-previewing-a-theme#serving-a-live-preview).
 
-## Bundling and Uploading the Theme
+### Bundling and Uploading Theme
 
 To upload the modified contents to the big commerce store, first bundle the updated theme and push it to the big commerce store.
 
 Follow the given document for more insights on how to bundle the big commerce theme - https://developer.bigcommerce.com/stencil-docs/deploying-a-theme/bundling-and-pushing.
 
-## Additional Theme Options
+### Additional Theme Options
 
 The above steps will allow you to set up quickly, and all of the interfaces can be directly customized using the CSS, js, and HTML that comes in the Stencil Package. We have also included some more basic functions to display the interfaces that you can use to customize the look and feel or to embed specific interfaces directly on your preexisting forms.
 
@@ -289,6 +292,10 @@ The following options are available to render specific interfaces:
 9. `{{> components/loginradius/emailmanage }}` - Displays the Add/Remove email address interfaces.
 10. `{{> components/loginradius/profileeditor }}` - Displays the update profile data interface.
 11. `{{> components/loginradius/LoginRadiusOptimizedCheckout }}` - Overrides the deault optimzed checkout page functionality.
+
+### Passwordless Login Setup
+
+Refer to <a href="https://www.loginradius.com/docs/developer/guide/bigcommerce-passwordless" target="blank"> this document</a> for configuring Passwordless Login options for your BigCommerce store using Stencil theme. 
 
 ## Blueprint Theme Setup
 
@@ -310,7 +317,7 @@ It is recommended that you backup your theme before making any modifications in 
 
 4. Copy the contents of the **panels** folder to the **webdav/Panels** Folder
 
-## Modifying your BluePrint Theme
+### Modifying your BluePrint Theme
 
 1. Open the `config.js` in the provided `BlueprintThemeFile\assets\js\loginradius` and update the LoginRadius options object with the following:
 
@@ -366,7 +373,7 @@ lrLogout(); return false;
 
 >**Note:** Guest checkout is not supported by BigCommerce for Customized Login Providers
 
-## Additional Theme options
+### Additional Theme options
 
 The above steps will allow you to get quickly setup and all of the interfaces can be directly customized using the CSS, js, and HTML that comes in the BluePrint Package. We have also included some more basic functions to display the interfaces that you can use to customize the look and feel or to embed specific interfaces directly on your preexisting forms.
 
@@ -415,10 +422,6 @@ The LoginRadius mapping of BigCommerce `customer_id` to ExternalIds also support
 ]
 
 ```
-<!-- ## Passwordless Login with BigCommerce
-
-Refer to <a href="https://www.loginradius.com/docs/developer/guide/bigcommerce-passwordless" target="blank"> this document</a> for configuring Passwordless Login options for your BigCommerce store. -->
-
 ## Additional Considerations
 
 1. If you are including the email manage component or account details component on your account details page, You will need to provide a standard email verification page that all email verifications will be redirected to. This page should be accessible by logged-in and logged-out users and should include the verify component.
