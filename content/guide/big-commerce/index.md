@@ -1,6 +1,6 @@
 ---
 title: "Integrating BigCommerce"
-tags: ["Big Commerce", "BigCommerce", " Passwordless BigCommerce"]
+tags: ["Big Commerce", "BigCommerce", "Passwordless"]
 description: "This is a guide for integrating and configuring BigCommerce in the LoginRadius Identity Platform using Stencil Plugin."
 path: "/guide/big-commerce"
 ---

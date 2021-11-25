@@ -1,6 +1,6 @@
 ---
 title: "Passwordless Login BigCommerce"
-tags: ["Big Commerce", "BigCommerce", " Passwordless BigCommerce", `Stencil`]
+tags: ["Big Commerce", "BigCommerce", "Passwordless", "Stencil"]
 description: "This is a guide to configure passwordless login option for your BigCommerce store using Stencil theme. "
 path: "/guide/bigcommerce-passwordless"
 ---
