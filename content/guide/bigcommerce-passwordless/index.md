@@ -11,6 +11,8 @@ path: "/guide/bigcommerce-passwordless"
 # Passwordless Login with BigCommerce Stencil Theme
 This document explains how to enable password login method for your BigCommerce store using Stencil theme.
 
+> **Note:** It is a continuous implementation of <a href="https://www.loginradius.com/docs/developer/guide/big-commerce" target="blank"> this document</a>. You must follow the steps explained there and then perform the below actions.
+
 ## LoginRadius Dashboard Configurations
 
 Log in to your [LoginRadius Dashboard](https://dashboard.loginradius.com/) account. Select your app, navigate to the **Configuration > Auth Configuration > Login Method** and enable **Passwordless Login** method.
