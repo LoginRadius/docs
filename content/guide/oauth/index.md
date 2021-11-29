@@ -44,7 +44,7 @@ The access token request will contain the following parameters. Here is an expla
 - `https://cloud-api.loginradius.com/sso/oauth/redirect:` The API authorization endpoint.
 - **client_id:** The identifier of the customer at the authorization server. Enter the LoginRadius API key
 - **Redirect_uri:** Callback URL of your site where you want to redirect back your customers after an authorization code is granted.
-  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your LoginRadius Dashboard. For more information, refer to <a href="https://www.loginradius.com/docs/developer/faq/#how-to-whitelist-domain-in-loginradius-dashboard" target="_blank">this document</a>.
+  > **NOTE:** Make sure that you have whitelisted the `Redirect_uri` in your LoginRadius Dashboard. For more information, refer to <a href="https://www.loginradius.com/docs/developer/faq/#how-to-whitelist-domain-in-loginradius-dashboard" target="_blank">this document</a>.
 - **scope: [optional]** Specifies the scope of the requested token. If omitted, the authorization server may assume some default scope.
 - **state: [optional]** This parameter will be returned as it is, part of the response
 - **Response_type:** Set to code to indicate an authorization code flow. Find responses below:
@@ -120,7 +120,7 @@ The access token request will contain the following parameters. Here is an expla
 
 - **Redirect_uri:** Callback URL of your site where you want to redirect back your customers after an authorization code is granted.
 
-  > **NOTE:** Make sure that you have whitelisted the Redirect_uri in your <a href="https://dashboard.loginradius.com/configuration" target="_blank">LoginRadius Dashboard</a>. For more information, refer to <a href="https://www.loginradius.com/docs/developer/faq/#how-to-whitelist-domain-in-loginradius-dashboard" target="_blank">this document</a>.
+  > **NOTE:** Make sure that you have whitelisted the `Redirect_uri` in your <a href="https://dashboard.loginradius.com/configuration" target="_blank">LoginRadius Dashboard</a>. For more information, refer to <a href="https://www.loginradius.com/docs/developer/faq/#how-to-whitelist-domain-in-loginradius-dashboard" target="_blank">this document</a>.
 
 - **scope [optional]:** Specifies the scope of the requested token. If omitted, the authorization server may assume some default scope.
 - **state [optional]:** this parameter will be returned as it is, part of the response.
