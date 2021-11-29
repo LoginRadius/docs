@@ -293,9 +293,9 @@ The following options are available to render specific interfaces:
 10. `{{> components/loginradius/profileeditor }}` - Displays the update profile data interface.
 11. `{{> components/loginradius/LoginRadiusOptimizedCheckout }}` - Overrides the deault optimzed checkout page functionality.
 
-### Passwordless Login Setup
+<!-- ### Passwordless Login Setup
 
-Refer to <a href="https://www.loginradius.com/docs/developer/guide/bigcommerce-passwordless" target="blank"> this document</a> for configuring Passwordless Login options for your BigCommerce store using Stencil theme. 
+Refer to <a href="https://www.loginradius.com/docs/developer/guide/bigcommerce-passwordless" target="blank"> this document</a> for configuring Passwordless Login options for your BigCommerce store using Stencil theme. -->
 
 ## Blueprint Theme Setup
 
