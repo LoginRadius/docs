@@ -7,7 +7,7 @@ path: "/concepts/token-handle"
 
 # Handle Token 
 
-> Access tokens are used to retrieve profile data and handle other user functionality. A client passes the access token to the server, and the server uses this token to decide whether the client is authorized to access the resource or not.
+> **Note:** Access tokens are used to retrieve profile data and handle other user functionality. A client passes the access token to the server, and the server uses this token to decide whether the client is authorized to access the resource or not.
 
 
 On successful authentication on the [Auth Page (IDX)](/concepts/idx), LoginRadius’s default script sends an access token in the query string as a token parameter with the return_url that you specified in the action URL. 
