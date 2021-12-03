@@ -21,4 +21,49 @@ This section covers the required configurations that you need to perform in the 
 
    ![alt_text](../../guide/mailazy/images/mailazy-integrations.png "image_tooltip")
 
-   The following 
+   The following screen will appear:
+
+   ![alt_text](../../guide/mailazy/images/mailazy-configure.png "image_tooltip")
+
+3. Click the **Next** button given next to your email id. 
+   
+   >**Note:** Your account email id is prefilled here and you cannot change it. Also, it automatically creates a Mailazy account, if it does not exist for the given email address.
+   >
+   > An OTP will be sent to your email id. 
+
+   The following screen will appear: 
+   ![alt_text](../../guide/mailazy/images/mailazy-otp.png "image_tooltip")
+
+4. Enter OTP recived on your email id and click the **Verify** button. 
+
+   >**Note**: Click the **Resend OTP** link to receive the another OTP.
+   
+   The following screen will appear upon email id verification:
+
+   ![alt_text](../../guide/mailazy/images/mailazy-verifiedemail.png "image_tooltip")
+
+  
+5. Enter your **Domain Name** and click the **Add** button. The following screen will appear with CNAME key and value.
+
+   ![alt_text](../../guide/mailazy/images/mailazy-domainveri.png "image_tooltip")
+
+
+6. Copy the CNAME records and update them on your Domain.
+
+   >**Note:** Sometimes it might take up to 24 hours to reflect the DNS changes. If verification fails, you should wait and verify later.
+
+7. Click the **Verify** button to verify your domain.
+
+8. Upon successful verification, it generates **Key** and **Secrect** that you can use to configure Mailazy as <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="blank"> SMTP provider in LoginRadius </a>.
+
+   >**Note:** You can use generated **Key** and **Secrect** to integrate Mailazy for sending emails in any application.
+
+    ![alt_text](../../guide/mailazy/images/mailazy-domainkey.png "image_tooltip")
+
+   >**Note:** Make sure to copy **Key** and **Secrect**. To get these values later, you will have to regenerate/reset. 
+   > 
+   >If you reset API Key and Secret, any API calls you have developed will stop working until you update them with  new values.
+
+
+
+   
