@@ -813,6 +813,11 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/guide/mailazy">
+                  Integrate Mailazy
+                </Link>
+              </li>
+              <li>
                 <div className="read-more mt-0">
                   <Link to="/guide/3rd-party-all-integrations/">
                     <svg
