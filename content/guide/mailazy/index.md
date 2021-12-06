@@ -64,7 +64,7 @@ This section covers the required configurations that you need to perform in the 
    > 
    >If you reset API Key and Secret, any API calls you have developed will stop working until you update them with  new values.
 
-## SMTP Mailazy Configurations
+## SMTP Mailazy Configuration
 
 1. Access SMTP Configurations as explained <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="blank">here</a>
 
