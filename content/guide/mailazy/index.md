@@ -54,7 +54,7 @@ This section covers the required configurations that you need to perform in the 
 
 7. Click the **Verify** button to verify your domain.
 
-8. Upon successful verification, it generates **Key** and **Secret** that you can use to configure Mailazy as <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="blank"> SMTP provider in LoginRadius </a>. The configuration has been explained [below](#smtp-mailazy-configurations).
+8. Upon successful verification, it generates **Key** and **Secret** that you can use to configure Mailazy as <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="blank"> SMTP provider in LoginRadius </a>. The configuration has been explained [below](#smtp-mailazy-configuration).
 
    >**Note:** You can use generated **Key** and **Secret** to integrate Mailazy for sending emails in any application.
 
