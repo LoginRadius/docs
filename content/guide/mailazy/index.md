@@ -80,7 +80,7 @@ This section covers the required configurations that you need to perform in the 
 
 5. Click the **Save** button to save the configurations.
 
->**Note:** Now, you can try performing the action to receive the email. For example, open your [Auth Page(IDX)](https://www.loginradius.com/docs/developer/concepts/idx) and follow the forget password process to receive an email via Mailazy.
+>**Note:** Now, you can try performing a action to receive the respective email. For example, open your [Auth Page(IDX)](https://www.loginradius.com/docs/developer/concepts/idx) and follow the forget password process to receive an email via Mailazy.
 
 
    
