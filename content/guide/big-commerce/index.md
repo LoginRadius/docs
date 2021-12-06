@@ -68,7 +68,7 @@ To support the BigCommerce SSO flows, you will need to handle the following:
 
    The following screen will appear:
 
-   ![alt_text](images/bigcommerce-integration.png "image_tooltip")
+   ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
 2. Click the **Add** button for adding a new BigCommerce app. The configuration options will appear.
 
