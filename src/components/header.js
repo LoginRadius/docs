@@ -59,7 +59,7 @@ export default class Header extends Component {
         {showBanner && (
           <div className="top-strip">
             The following documentation is applicable to <b>Free</b>,{" "}
-            <b>Developer</b>, and <b>Developer Premium</b> plans. For
+            <b>Developer</b>, and <b>Developer Pro</b> plans. For
             documentation related to the enterprise plan, please{" "}
             <a href="https://www.loginradius.com/docs/" target="_blank">
               click here
