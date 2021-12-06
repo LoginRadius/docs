@@ -64,7 +64,7 @@ This section covers the required configurations that you need to perform in the 
    > 
    >If you reset API Key and Secret, any API calls you have developed will stop working until you update them with  new values.
 
-## SMTP Mailazy Configurations
+## SMTP Mailazy Configuration
 
 1. Access SMTP Configurations as explained <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="blank">here</a>
 
@@ -80,7 +80,7 @@ This section covers the required configurations that you need to perform in the 
 
 5. Click the **Save** button to save the configurations.
 
->**Note:** Now, you can try performing the action to receive the email. For example, open your [Auth Page(IDX)](https://www.loginradius.com/docs/developer/concepts/idx) and follow the forget password process to receive an email via Mailazy.
+>**Note:** Now, you can try performing an action to receive the respective email. For example, open your [Auth Page(IDX)](https://www.loginradius.com/docs/developer/concepts/idx) and follow the **forgot password** process to receive an email via Mailazy.
 
 
    
