@@ -72,11 +72,11 @@ This section covers the required configurations that you need to perform in the 
 
    ![alt_text](../../guide/mailazy/images/mailazy-smtp.png "image_tooltip")
 
-3. Enter the **Key** and **Secret** obtained from the above [section](#loginRadius-dashboard-configuration).
+3. Enter the **Key** and **Secret** obtained from the above [section](#loginradius-dashboard-configuration).
 
 4. Enter the desired **From Name** and **Email Id** in the respective text boxes.
 
-   >**Note**: Email Id should belong to domain added and verified in the above [section](#loginRadius-dashboard-configuration).
+   >**Note**: Email Id should belong to domain added and verified in the above [section](#loginradius-dashboard-configuration).
 
 5. Click the **Save** button to save the configurations.
 
