@@ -48,7 +48,7 @@ Manage welcome email template and email settings for the organization as explain
 
    * Edit template content.
 
-       >**Note:** Add the `org_name` query parameter to the existing reset password URL. For more details, refer to the underlined parameter in the screen below.
+       >**Note:** Add the **`org_name`** query parameter to the existing reset password URL. For more details, refer to the underlined parameter in the screen above.
 
    * Reset the template to its default content.
    * Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">SMTP Configuration</a>.
@@ -92,7 +92,7 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 
 3. Click the **Save** button to save your changes or **Reset** button to reset the configuration value to its default.
 
->**Note**: Whenever an organization user is added, the respective user will receive a `Welcome Email` containing the links to reset the account password and login.
+>**Note**: Whenever an organization user is added, the respective user will receive a **Welcome Email** containing the links to reset the account password and login.
 
 ## References
 
