@@ -7,7 +7,7 @@ path: "/guide/manage-organizations"
 
 # Manage Organizations (B2B)
 
-This guide explains how to enable B2B feature, and then manage organizations, their roles, and email settings for the B2B setup.
+This guide explains how to enable B2B feature. You can manage organizations, their users and roles, and email settings for the B2B setup.
 
 
 ## Enable B2B Identity
@@ -24,14 +24,16 @@ By default **B2B Identity** feature remains disabled for your LoginRadius App. T
 
 - Manage organizations using these <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity" target="_blank">APIs</a>.
 
-- Add the <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#addupdate-roles" target="_blank">default roles</a> for organization users or create new roles using <a href="https://www.loginradius.com/docs/developer/references/api/roles-management/" target="_blank">Role Management APIs</a> and assign them to organization users.
+- Add the <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#addupdate-roles" target="_blank">default roles</a> for organization users. Or create new roles using <a href="https://www.loginradius.com/docs/developer/references/api/roles-management/" target="_blank">Role Management APIs</a> and assign them to organization users.
 
 - Add users for the organization using the Add Users <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#add-user-to-organization" target="_blank">API</a>.
 
-> Note: Manage Login Methods for your users using the following APIs:
+>**Note:**  Manage Login Methods for your users using the following APIs:
+>
 > * <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#set-global-idp-on-profile" target="_blank">Set global IDP for the user profile.</a>
 > * <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#create-an-organizational-saml-idp" target="_blank">Create a SAML login method for the organization.</a>
 > * <a href="https://www.loginradius.com/docs/developer/references/api/b2b-identity/#set-global-authentication-method-for-organization" target="_blank">Set Global Authentication Method for Organization.</a>
+
 ## Manage Email Template and Setting
 
 Manage welcome email template and email settings for the organization as explained below.
@@ -45,12 +47,18 @@ Manage welcome email template and email settings for the organization as explain
 2. You can perform the following actions:
 
    * Edit template content.
+
+       >**Note:** Add the `org_name` query parameter to the existing reset password URL. For more details, refer to the underlined parameter in the screen below.
+
    * Reset the template to its default content.
    * Send a test email using the configured template. You can only send a test email if the required email configuration has been done as explained in <a href="https://www.loginradius.com/docs/developer/guide/setup-your-smtp-provider" target="_blank">SMTP Configuration</a>.
+
+       >**Note:** Organization users can reset their account password by clicking the link from the received email. Upon resetting the password, the user is redirected to their organization's login page.
 
    These actions are available in the action bar highlighted in the image below:
 
    ![alt_text](images/template-actions.png "image_tooltip")
+
 
 3. When editing a template, you can update the following:
 
@@ -82,9 +90,9 @@ These tags are used to define where LoginRadius retrieved data will appear in yo
 
    For example, if the value is set to 10080 (default value), the reset password link in Welcome Email will remain valid for 7 days (10080 minutes).
 
-3. Click the **Save** button to save your changes or **Reset** button to reset configuration value to its default.
+3. Click the **Save** button to save your changes or **Reset** button to reset the configuration value to its default.
 
-
+>**Note**: Whenever an organization user is added, the respective user will receive a `Welcome Email` containing the links to reset the account password and login.
 
 ## References
 
