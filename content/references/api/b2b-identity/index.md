@@ -245,7 +245,7 @@ Adds users to the organization for the provided organization Id.
 
 Enter query parameters and send a request to view the sample response.
 
-<try-me-out id="add-org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"emailtemplate","default":"ADDUSERTOORGANIZATION"},{"key":"resetPasswordUrl","default":"https://<AppName>.<Domain>/auth"},{"key":"loginUrl","default":"https://<AppName>.<Domain>/auth?org_name=<orgName>"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Name":"","DisplayName":"","OwnerUid":""}}'></try-me-out>
+<try-me-out id="add-org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"emailtemplate","default":"ADDUSERTOORGANIZATION"},{"key":"resetPasswordUrl","default":"https://<AppName>.<Domain>/auth"},{"key":"loginUrl","default":"https://<AppName>.<Domain>/auth?org_name=<orgName>"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Email":"","FirstName":"","LastName":""}}'></try-me-out>
 
 ## Organization Users
 
