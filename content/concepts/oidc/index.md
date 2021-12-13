@@ -244,5 +244,10 @@ The <a href="https://www.loginradius.com/docs/developer/references/api/oidc/#oid
 URL Format: https://cloud-api.loginradius.com/sso/oidc/v2/{sitename}/{oidcappname}/.well-known/openid-configuration
 
 
+## References
+
+- [OIDC APIs](/references/api/oidc)
+- [Outbound SSO-OIDC](/guide/oidc)
+- [Outbound SSO](/guide/fed-sso)
 
 [Go Back to Home Page](/)
