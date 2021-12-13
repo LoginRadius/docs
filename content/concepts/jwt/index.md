@@ -99,5 +99,11 @@ We've had a look at the basic structure and encryption of JWT now we can have a 
 
 It is recommended to use the Asymmetric algorithm when signing the JWT token. Asymmetric key signatures in JWT are produced by the sender with the private key and the receiver verify it via the public key. The receiver is provided only with the public key which happens **out_of_band** (i.e. through another means of communication than the one you use to exchange the secured data).
 
+## References
+
+- [JWT APIs](/references/api/jwt)
+- [Outbound SSO-JWT](/guide/jwt)
+- [Outbound SSO](/guide/fed-sso)
+
 
 [Go Back to Home Page](/)
