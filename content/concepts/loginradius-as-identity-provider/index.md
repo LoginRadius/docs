@@ -195,7 +195,7 @@ You can request to be logged out of LoginRadius, which will cause your consumer 
 `https://cloud-api.loginradius.com/sso/saml/logoutService?apiKey=<LoginRadiusApiKey>&appName=<SAMLAppName>`
 
 
-## Reference
+## References
 
 - [Outbound SSO-SAML](/guide/saml)
 - [Outbound SSO](/guide/fed-sso)
