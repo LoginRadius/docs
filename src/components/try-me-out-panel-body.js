@@ -102,6 +102,19 @@ export default class TryMeOut extends React.Component {
     })
   }
 
+  handleUrlChange = event => {
+    this.setState({
+      endpoint: event.target.value,
+    })
+  }
+
+  validateUrl = url => {
+    const urlPattern = new RegExp(
+      /(^|\s)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/i
+    )
+    return (urlPattern.test(url) && !url.includes(" "))
+  }
+
   handleSubmit(event) {
     event.preventDefault()
   }
@@ -161,10 +174,6 @@ export default class TryMeOut extends React.Component {
       }
     })
 
-    Object.entries(clientState.template).forEach(([key, value], index) => {
-      requestUrl = requestUrl.replace(`{${key}}`, value)
-    })
-
     fetch(requestUrl, {
       method: method,
       cache: "no-cache",
@@ -200,7 +209,8 @@ export default class TryMeOut extends React.Component {
             },
           }
         })
-      }).catch(err => console.log("Something Went Wrong"))
+      })
+      .catch(err => console.log("Something Went Wrong"))
   }
 
   render() {
@@ -214,9 +224,15 @@ export default class TryMeOut extends React.Component {
             <div className={styles.methodname}>{method}</div>
             <div className={styles.requestUrlRow}>
               <div className={styles.method}>Request URL</div>
-              <div className={styles.endpoint}>{endpoint}</div>
+              <div className={styles.endpoint}>
+                <input
+                  type="text"
+                  onChange={this.handleUrlChange}
+                  value={endpoint}
+                />
+              </div>
               <a
-                className={`${styles.requestBtn} btn btn-primary btn-sm`}
+                className = {`${this.validateUrl(endpoint)?"":`disabled`} ${styles.requestBtn} btn btn-primary btn-sm`}
                 onClick={this.onRequestSubmitClick}
               >
                 Send Request
@@ -236,26 +252,6 @@ export default class TryMeOut extends React.Component {
                         type="text"
                         onChange={this.handleQueryChange}
                         value={clientState.query[param.key] || ""}
-                      />
-                    </label>
-                  )
-                })}
-              </div>
-            ) : (
-              ""
-            )}
-            {params.templateParams ? (
-              <div className={styles.templateParams}>
-                <h4>Template Params</h4>
-                {params.templateParams.map((param, index) => {
-                  return (
-                    <label key={`templateParam_${index}`}>
-                      <div>{param.key}</div>
-                      <input
-                        name={param.key}
-                        type="text"
-                        onChange={this.handleTemplateChange}
-                        value={clientState.template[param.key] || ""}
                       />
                     </label>
                   )
