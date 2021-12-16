@@ -201,3 +201,19 @@
   font-size: 16px !important;
   font-weight: 400 !important;
 }
+.endpoint input {
+  width: 99%;
+  border: 0;
+}
+.disabled,
+.disabled:hover,
+.disabled:focus {
+  background: #b3b6b8;
+  border-color: #b3b6b8;
+  color: #d1d3d4;
+  cursor: not-allowed;
+}
+.endpoint input:hover,
+.endpoint input:focus {
+  outline: none;
+}

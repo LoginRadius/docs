@@ -112,7 +112,7 @@ export default class TryMeOut extends React.Component {
     const urlPattern = new RegExp(
       /(^|\s)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/i
     )
-    return (urlPattern.test(url) && !url.includes(" "))
+    return urlPattern.test(url) && !url.includes(" ")
   }
 
   handleSubmit(event) {
@@ -232,7 +232,9 @@ export default class TryMeOut extends React.Component {
                 />
               </div>
               <a
-                className = {`${this.validateUrl(endpoint)?"":`disabled`} ${styles.requestBtn} btn btn-primary btn-sm`}
+                className={`${styles.requestBtn} btn btn-primary btn-sm ${
+                  this.validateUrl(endpoint) ? "" : "disabled"
+                }`}
                 onClick={this.onRequestSubmitClick}
               >
                 Send Request
