@@ -90,6 +90,15 @@
   & + .btn {
     margin-left: 1rem;
   }
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background: #b3b6b8;
+    border-color: #b3b6b8;
+    color: #d1d3d4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 .btn-group {
   display: flex;

@@ -201,3 +201,11 @@
   font-size: 16px !important;
   font-weight: 400 !important;
 }
+.endpoint input {
+  width: 99%;
+  border: 0;
+}
+.endpoint input:hover,
+.endpoint input:focus {
+  outline: none;
+}
