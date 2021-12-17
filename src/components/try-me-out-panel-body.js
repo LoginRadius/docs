@@ -253,6 +253,7 @@ export default class TryMeOut extends React.Component {
                         name={param.key}
                         type="text"
                         onChange={this.handleQueryChange}
+                        placeholder = {"Enter value here"}
                         value={clientState.query[param.key] || ""}
                       />
                     </label>
@@ -274,6 +275,7 @@ export default class TryMeOut extends React.Component {
                         type="text"
                         onChange={this.handleHeaderChange}
                         value={clientState.headers[header.key] || ""}
+                        placeholder = {"Enter value here"}
                         readOnly={header.key === "Content-Type"}
                       />
                     </label>
