@@ -51,7 +51,7 @@ When editing a component, an action bar is available located at the top-right of
 
 You can perform the following actions:
 
-  * **Reset Theme Configurations**: Reset your Auth Page (IDX). Your theme and configurations will be reset to default.
+  * **Reset Theme Configurations**: Your theme and configurations will be reset to default for Authentication and Profile pages (you will lose any customization made for these pages). 
 
   * **Add New**: Only available for components that allow for multiple files. You can upload a new file or reference an existing URL of a file.
 
