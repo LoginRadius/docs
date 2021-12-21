@@ -40,7 +40,7 @@ https://<LoginRadius APP Name>.hub.loginradius.com/auth.aspx?action=register&ret
 ```
 
 
-> **NOTE:**  After the successful completion of Login or Registration action, token will get appended with the mentioned Return URL <Return URL>?token=745******-3e8e-****-b3**2-9c0******1e. This token can further be utilized as per your requirement.
+> **NOTE:**  After the successful completion of Login or Registration action, token will get appended with the mentioned Return URL <Return URL>?token=745******-3e8e-****-b3**2-9c0******1e. This token can further be utilized as per your requirement. In case of no Return URL, the consumer will be redirected to the [Profile Page](#profile-page).
 
 ### Forgot Password
 
@@ -70,7 +70,7 @@ https://<LoginRadius APP Name>hub.loginradius.com/auth.aspx?action=logout&return
 
 ```
 
-> **Note:** Replace <LoginRadius APP Name> with The LoginRadius APP Name that you can find on Setup your Dashboard page and the <Return URL> with the locations you would like to direct customers after completing the action.
+> **Note:** Replace <LoginRadius APP Name> with The LoginRadius APP Name that you can find on Setup your Dashboard page and the <Return URL> with the locations you would like to direct customers after completing the action. 
 
 
 ## Customization

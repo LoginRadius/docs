@@ -728,7 +728,7 @@ const Middle = () => {
               </li>
               <li>
                 <Link to="/guide/auth-page-advanced-editor">
-                  <span>Advanced Editor</span>
+                  <span>Advanced Editor-Auth Page(IDX)</span>
                 </Link>
               </li>
               <li>
