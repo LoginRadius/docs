@@ -50,7 +50,7 @@ Once LoginRadius verifies your domain, its status will be changed to **verified*
 
 >**Note:** The domain verification might take up to 12 hours. 
 >
-> If you are using Social Login, make sure to update the authentication and redirect URLs in the respective Social Provider Configurations after domain verification.
+> If you are using Social Login, make sure to update the `Redirect URI` in the respective Social Provider Configurations after domain verification.
 
 
 [Go Back to Home Page](/)
