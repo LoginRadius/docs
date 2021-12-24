@@ -1,5 +1,5 @@
 ---
-title: "Integrating Shopify"
+title: "Integrate Shopify"
 tags: ["Shopify","E-commerce"]
 description: "This is a guide for integrating and configuring Shopify e-commerce CMS in the LoginRadius Identity Platform."
 path: "/guide/shopify"
@@ -36,15 +36,11 @@ This section covers the required configurations that you need to perform to enab
 
    ![alt_text](../../assets/blog-common/configured-integration.png "image_tooltip")
 
+2. Click **Add** button for adding a new Shopify app. The **Available Integrations** screen will appear.
 
-2. Click **Add** button for adding a new Shopify app. The following configuration options will appear: 
+3. Either search for **Shopify** in the search bar or go to the **Select Category** dropdown and select **E-Commerce**category. Locate **Shopify** and click the **Try It For Me** option.
 
-   ![alt_text](images/shopify-available-integrations.png "image_tooltip")
-
-
-3. Either search for **Shopify** in the search bar or go to the **Select Category** dropdown and select **E-Commerce**category. Locate **Shopify** and click the **Add Me** option.
-
-   ![alt_text](images/shopify-integration-search.png "image_tooltip")
+   ![alt_text](../big-commerce/images/bigcommerce-integration-search-results.png "image_tooltip")
 
 4. The following pop-up will appear, click the **Enable** button.
 
@@ -208,8 +204,6 @@ It will generate the user registration form for you with validation logic. All t
 ## Customizations
 
 This implementation requires the LoginRadius JavaScript Interface, if you want to customize the look and feel or make some functionality changes, refer to our LoginRadius JavaScript Interface documentation.
-
-
 
 
 [Go Back to Home Page](/)

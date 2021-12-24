@@ -42,7 +42,7 @@ For more information, refer to the following documents:
 
 * <a href="https://www.loginradius.com/docs/developer/guide/saml" target="_blank">LoginRadius SAML Document</a>
 
-* <a href="http://saml.xml.org/saml-specifications" target="_blank>SAML Specs Document</a>
+* <a href="http://saml.xml.org/saml-specifications" target="_blank">SAML Specs Document</a>
 
 ### JWT
 
