@@ -20,15 +20,15 @@ const HitCount = connectStateResults(({ searchResults }) => {
 const PageHit = ({ hit }) => {
   let highlightedAttr = hit._highlightResult.headings.filter(attr => attr.matchedWords.length && attr.value)
   highlightedAttr = highlightedAttr.map(attr => attr.value.replace(/<ais-highlight-[0-9]+/, `<mark class="ais-Highlight__highlighted"`).replace(/<\/ais-highlight-[0-9]+/, `</mark`))
-  console.log(highlightedAttr)
+  highlightedAttr = highlightedAttr.slice(0, 3);
   return (
     <div>
       <Link to={hit.slug}>
         <h4>
           <Highlight attribute="title" hit={hit} tagName="mark" />
         </h4>
+        {highlightedAttr.map(val => <li key={`${val}`}><span className="ais-Highlight" dangerouslySetInnerHTML={{ __html: val }} /></li>)}
       </Link>
-      {[0, 1, 2].map(ind => <li key={`h1_${ind}`}>{highlightedAttr[ind] && <span className="ais-Highlight" dangerouslySetInnerHTML={{ __html: highlightedAttr[ind] }} />} </li>)}
     </div>
   )
 }
