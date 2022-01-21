@@ -10,7 +10,6 @@ const BlogIndex = ({ data, location }) => {
     <Layout
       location={location}
       title={siteTitle}
-      searchIndex={data.siteSearchIndex.index}
     >
       <SEO />
     </Layout>
@@ -21,9 +20,6 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    siteSearchIndex {
-      index
-    }
     site {
       siteMetadata {
         title

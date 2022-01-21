@@ -54,7 +54,7 @@ const ApiReferenceTemplate = ({ data, location }) => {
   return (
     <div className="global-wrapper">
       <div id="root">
-        <Header searchIndex={data.siteSearchIndex.index} />
+        <Header />
         <Layout location={location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
@@ -263,10 +263,6 @@ export default ApiReferenceTemplate
 
 export const pageQuery = graphql`
   query ApiReferenceBySlug($id: String!) {
-    siteSearchIndex {
-      index
-    }
-
     site {
       siteMetadata {
         title
