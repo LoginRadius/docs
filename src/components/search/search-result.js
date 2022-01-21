@@ -1,4 +1,4 @@
-import { Link, withPrefix } from "gatsby"
+import { Link } from "gatsby"
 import { default as React } from "react"
 import {
   connectStateResults,
@@ -17,16 +17,21 @@ const HitCount = connectStateResults(({ searchResults }) => {
     </div>
   ) : null
 })
-const PageHit = ({ hit }) => (
-  <div>
-    <Link to={hit.slug}>
-      <h4>
-        <Highlight attribute="title" hit={hit} tagName="mark" />
-      </h4>
-    </Link>
-    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
-  </div>
-)
+const PageHit = ({ hit }) => {
+  let highlightedAttr = hit._highlightResult.headings.filter(attr => attr.matchedWords.length && attr.value)
+  highlightedAttr = highlightedAttr.map(attr => attr.value.replace(/<ais-highlight-[0-9]+/, `<mark class="ais-Highlight__highlighted"`).replace(/<\/ais-highlight-[0-9]+/, `</mark`))
+  console.log(highlightedAttr)
+  return (
+    <div>
+      <Link to={hit.slug}>
+        <h4>
+          <Highlight attribute="title" hit={hit} tagName="mark" />
+        </h4>
+      </Link>
+      {[0, 1, 2].map(ind => <li key={`h1_${ind}`}>{highlightedAttr[ind] && <span className="ais-Highlight" dangerouslySetInnerHTML={{ __html: highlightedAttr[ind] }} />} </li>)}
+    </div>
+  )
+}
 const HitsInIndex = ({ index }) => (
   <Index indexName={index.name}>
     <HitCount />

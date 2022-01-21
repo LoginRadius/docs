@@ -3,7 +3,7 @@ import { createRef, default as React, useState, useMemo } from "react";
 import { InstantSearch } from "react-instantsearch-dom"
 
 import SearchBox from "./search-box"
-import SearchResult from "./search-results"
+import StyledSearchResult from "./styled-search-result"
 import useClickOutside from "./use-click-outside"
 
 
@@ -31,9 +31,10 @@ const Search = ({ indices }) => {
         onSearchStateChange={({ query }) => setQuery(query)}
       >
         <SearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus} />
-        {query && query.length > 0 && hasFocus && <SearchResult
+        <StyledSearchResult
+          show={query && query.length > 0 && hasFocus}
           indices={indices}
-        />}
+        />
       </InstantSearch>
     </div>
   );

@@ -148,6 +148,7 @@ module.exports = {
         duration: 100,
       },
     },
+    `gatsby-plugin-styled-components`
   ],
   pathPrefix: `/docs/developer`,
 }

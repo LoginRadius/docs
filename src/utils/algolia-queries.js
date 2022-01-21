@@ -11,20 +11,25 @@ const pageQuery = `{
       node {
         id
         frontmatter {
-          title
+          title,
+          tags
+        }
+        headings {
+          value
         }
         fields {
           slug
         }
-        excerpt(pruneLength: 5000)
       }
     }
   }
 }`
-function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, frontmatter, headings, fields, ...rest } }) {
+  const _headings = headings.map(h => h.value);
   return {
     objectID: id,
     ...frontmatter,
+    headings: _headings,
     ...fields,
     ...rest,
   }
@@ -34,7 +39,11 @@ const queries = [
     query: pageQuery,
     transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
     indexName,
-    settings: { attributesToSnippet: [`excerpt:20`] },
+    settings: {
+      attributesForFaceting: [
+        'headings',
+      ]
+    }
   },
 ]
 module.exports = queries
