@@ -8,7 +8,7 @@ import {
   Snippet,
   PoweredBy,
 } from "react-instantsearch-dom"
-
+import styles from "./search.module.css"
 const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults && searchResults.nbHits
   return hitCount > 0 ? (
@@ -18,23 +18,39 @@ const HitCount = connectStateResults(({ searchResults }) => {
   ) : null
 })
 const PageHit = ({ hit }) => {
-  let highlightedAttr = hit._highlightResult.headings.filter(attr => attr.matchedWords.length && attr.value)
-  highlightedAttr = highlightedAttr.map(attr => attr.value.replace(/<ais-highlight-[0-9]+/, `<mark class="ais-Highlight__highlighted"`).replace(/<\/ais-highlight-[0-9]+/, `</mark`))
-  highlightedAttr = highlightedAttr.slice(0, 3);
+  let highlightedAttr = hit._highlightResult.headings.filter(
+    attr => attr.matchedWords.length && attr.value
+  )
+  highlightedAttr = highlightedAttr.map(attr =>
+    attr.value
+      .replace(
+        /<ais-highlight-[0-9]+/,
+        `<mark class="ais-Highlight__highlighted"`
+      )
+      .replace(/<\/ais-highlight-[0-9]+/, `</mark`)
+  )
+  highlightedAttr = highlightedAttr.slice(0, 3)
   return (
     <div>
       <Link to={hit.slug}>
         <h4>
           <Highlight attribute="title" hit={hit} tagName="mark" />
         </h4>
-        {highlightedAttr.map(val => <li key={`${val}`}><span className="ais-Highlight" dangerouslySetInnerHTML={{ __html: val }} /></li>)}
+        {highlightedAttr.map(val => (
+          <li key={`${val}`}>
+            <span
+              className="ais-Highlight"
+              dangerouslySetInnerHTML={{ __html: val }}
+            />
+          </li>
+        ))}
       </Link>
     </div>
   )
 }
 const HitsInIndex = ({ index }) => (
   <Index indexName={index.name}>
-    <HitCount />
+    {/* <HitCount /> */}
     <Hits className="Hits" hitComponent={PageHit} />
   </Index>
 )

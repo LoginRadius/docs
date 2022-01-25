@@ -2,20 +2,20 @@ import styled, { css } from "styled-components"
 import SearchResult from "./search-result"
 
 const Popover = css`
-  max-height: 80vh;
-  height: 80vh;
-  overflow: scroll;
+  max-height: 50vh;
+  height: 50vh;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
   position: absolute;
   z-index: 2;
   right: 0;
   left: 0;
   top: 100%;
-  margin-top: 0.5em;
-  width: 80vw;
-  max-width: 30em;
-  box-shadow: 0 0 5px 0;
+  margin-top: 0.125em;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
   background: #fff;
+  border-radius: 4px;
 `
 
 export default styled(SearchResult)`
@@ -34,8 +34,6 @@ export default styled(SearchResult)`
     }
 
     li.ais-Hits-item {
-      margin-bottom: 1em;
-
       a {
         color: #050505;
 
