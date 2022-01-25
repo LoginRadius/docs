@@ -132,6 +132,18 @@
             }
           }
         }
+        .lr-commnity {
+          a {
+            &:hover {
+              svg {
+                path {
+                  stroke: transparent;
+                  fill: $blue;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

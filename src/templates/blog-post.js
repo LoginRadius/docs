@@ -41,23 +41,29 @@ const BlogPostTemplate = ({ data, location }) => {
                 <div className="get-in-touch">
                   <div className="headings">Get in Touch</div>
                   <ul>
-                    <li>
+                    <li className="lr-commnity">
                       <a
-                        href="https://stackoverflow.com/questions/tagged/loginradius"
+                        href="https://community.loginradius.com/"
                         target="_blank"
                       >
                         <span className="icon">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="ionicon"
-                            viewBox="0 0 512 512"
+                            version="1.1"
+                            id="verticals"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 617.8 598.4"
                           >
-                            <title>Logo Stackoverflow</title>
-                            <path d="M392 440V320h40v160H64V320h40v120z" />
-                            <path d="M149.1 308.77l198.57 40.87 8.4-39.32-198.57-40.87zm26.27-93.12L359.22 300 376 263.76l-183.82-84.84zm50.95-89l156 127.78 25.74-30.52-156-127.78zM328 32l-33.39 23.8 120.82 160.37L448 192zM144 400h204v-40H144z" />
+                            <path
+                              d="M309.7,2C139.4,2,1.5,140,1.5,310.2c0,131.8,82.7,244.1,199,288.2l26.1-72.5c-86.6-33.4-148-117.3-148-215.7
+                              C78.5,182.5,182,79.1,309.7,79.1s231.1,103.5,231.1,231.2c0,98.3-61.4,182.3-148,215.7l26,72.5c116.3-44.1,199-156.5,199-288.2
+                              C617.9,140,479.9,2,309.7,2z M252.5,453.3l26.1-72.6c-38.9-17.1-56.6-62.6-39.5-101.6s62.6-56.6,101.6-39.5s56.6,62.6,39.5,101.6
+                              c-7.8,17.6-21.8,31.7-39.5,39.5l26.1,72.6c79.1-31.5,117.6-121.2,86-200.3s-121.2-117.6-200.3-86s-117.6,121.2-86,200.3
+                              C182.2,406.6,213.3,437.7,252.5,453.3L252.5,453.3z"
+                            />
                           </svg>
                         </span>
-                        <span>Ask on StackOverflow</span>
+                        <span>Ask on Our Community</span>
                       </a>
                     </li>
                     <li>
