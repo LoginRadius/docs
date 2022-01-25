@@ -18,25 +18,20 @@ const HitCount = connectStateResults(({ searchResults }) => {
   ) : null
 })
 const PageHit = ({ hit }) => {
-  let highlightedAttr = hit._highlightResult.headings.filter(
-    attr => attr.matchedWords.length && attr.value
-  )
-  highlightedAttr = highlightedAttr.map(attr =>
-    attr.value
-      .replace(
-        /<ais-highlight-[0-9]+/,
-        `<mark class="ais-Highlight__highlighted"`
-      )
-      .replace(/<\/ais-highlight-[0-9]+/, `</mark`)
-  )
-  highlightedAttr = highlightedAttr.slice(0, 3)
+
+  let highlightedAttr = null;
+  if (hit._highlightResult.headings) {
+    highlightedAttr = hit._highlightResult.headings.filter(attr => attr.matchedWords.length && attr.value)
+    highlightedAttr = highlightedAttr.map(attr => attr.value.replace(/<ais-highlight-[0-9]+/, `<mark class="ais-Highlight__highlighted"`).replace(/<\/ais-highlight-[0-9]+/, `</mark`))
+    highlightedAttr = highlightedAttr.slice(0, 3);
+  }
   return (
     <div>
       <Link to={hit.slug}>
         <h4>
           <Highlight attribute="title" hit={hit} tagName="mark" />
         </h4>
-        {highlightedAttr.map(val => (
+        {highlightedAttr && highlightedAttr.map(val => (
           <li key={`${val}`}>
             <span
               className="ais-Highlight"
