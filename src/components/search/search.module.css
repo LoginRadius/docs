@@ -1,0 +1,11 @@
+.search-result h4 {
+  font-weight: 600;
+  border-bottom: 1px solid #d1d3d4;
+  padding-bottom: 0.5rem;
+  color: #41484e;
+}
+.search-result ul li li {
+  padding: 0 0 1rem 0 !important;
+  font-size: 16px;
+  color: #41484e;
+}
