@@ -34,7 +34,7 @@ Creates the organization with name, Uid and display name.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="create-org" endpoint="https://api.loginradius.com/identity/v2/manage/organizations" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"body":{"Name":"","DisplayName":"","OwnerUid":""}}'></try-me-out>
 
@@ -64,7 +64,7 @@ Updates the organization for the provided organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="update-org" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Name":"","DisplayName":""}}'></try-me-out>
 
@@ -86,7 +86,7 @@ Removes the organization for the provided organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="remove-org" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
@@ -108,7 +108,7 @@ Gets the organization by organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="get-org-id" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
@@ -130,7 +130,7 @@ Gets the organization by organization name.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="get-org-name" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/name/{org_name}" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
@@ -152,7 +152,7 @@ Gets all organizations.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="get-all-org" endpoint="https://api.loginradius.com/identity/v2/manage/organizations" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
@@ -181,7 +181,7 @@ Updates the status of an organization for the provided organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="update-org-status" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/status" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsActive":true}}'></try-me-out>
 
@@ -209,7 +209,7 @@ Updates the organization's default roles for the provided organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="update-org-status" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/defaultroles" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"DefaultRoles":["Developer","ProductOwner"]}}'></try-me-out>
 
@@ -243,7 +243,7 @@ Adds users to the organization for the provided organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="add-org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"emailtemplate","default":"ADDUSERTOORGANIZATION"},{"key":"resetPasswordUrl","default":"https://<AppName>.<Domain>/auth"},{"key":"loginUrl","default":"https://<AppName>.<Domain>/auth?org_name=<orgName>"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Email":"","FirstName":"","LastName":""}}'></try-me-out>
 
@@ -264,7 +264,7 @@ Gets organization users by organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}' sampleresponse='{"Data": [ {"UId":"","Email":[{"Type":"Primary","Value":"john.doe@gmail.com"}],"FullName":"John doe","IsActive":true,"GlobalIdpEnabled":true}
 ]}'></try-me-out>
@@ -293,7 +293,7 @@ Removes users from the organization by organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="remove-org-members" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{id}/members" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"UId": ["12","34"]}}' sampleresponse='{"IsDeleted": true}'></try-me-out>
 
@@ -321,7 +321,7 @@ Enables/disables the app’s authentication method for a profile by organization
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="set-global-idp-memeber" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org_id}/members/{uid}/idp/global" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsEnabled":true}}' sampleresponse='{{"IsEdited":true}}'></try-me-out>
 
@@ -349,7 +349,7 @@ Enables/disables the App's authentication method for an organization for the pro
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="set-global-org" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org_id}/idp/global" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsEnabled":true}}' sampleresponse='{{"IsEdited":true}}'></try-me-out>
 
@@ -377,7 +377,7 @@ Creates the organizational SAML IDP for the provided organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="create-saml-cpnfig" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Provider":"MySAMLIdp","Config":{"FriendlyProviderName":"","IdentityProvider":{"Binding":"","Location":"","LogOut":""},"IdpCertificate":{"Certificate":""},"SpCertificate":{"Key":"","Certificate":""},"IsIdpInitiated":false,"DataMap":{"Email":"email","FirstName":"username"}}}}'></try-me-out>
 
@@ -404,7 +404,7 @@ Updates an organization's SAML IDP for the provided organization Id and SAML Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="update-saml-cpnfig" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"Config":{"FriendlyProviderName":"","IdentityProvider":{"Binding":"","Location":"","LogOut":""},"IdpCertificate":{"Certificate":""},"SpCertificate":{"Key":"","Certificate":""},"IsIdpInitiated":false,"DataMap":{"Email":"email","FirstName":"username"}}}}'></try-me-out>
 
@@ -426,7 +426,7 @@ Gets all IDPs of an organization by organization Id and IDP Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="get-all-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/saml/{idpid}" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 
@@ -448,7 +448,7 @@ Gets the SAML IDP of an organization by organization Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="get-all-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}]}'></try-me-out>
 ## Update Status of Organizational IDP
@@ -475,7 +475,7 @@ Updates the status of organizational IDP by organization Id and IDP Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="update-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/{id}/status" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"IsActive":true}}'></try-me-out>
 
@@ -497,7 +497,7 @@ Removes the IDP of an organization by organization Id and IDP Id.
 
 ### Try Me Out
 
-Enter query parameters and send a request to view the sample response.
+Click the button below to enter parameters, send a request and see the response.
 
 <try-me-out id="remove-org-idp" endpoint="https://api.loginradius.com/identity/v2/manage/organizations/{org id}/idp/{id}" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}]}'></try-me-out>
 
