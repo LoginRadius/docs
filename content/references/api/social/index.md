@@ -24,7 +24,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="access-token" endpoint="https://api.loginradius.com/api/v2/access_token" method="GET" params='{"queryParams":[{"key":"secret","default":""},{"key":"token","default":""}]}' sampleresponse='{ "access_token": "a123qwe2-9**3-4202-833c-320aoo58**66", "expires_in": "2017-10-09T06:07:00.296Z" }'></try-me-out>
  
@@ -44,7 +44,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="token-validate" endpoint="https://api.loginradius.com/api/v2/access_token/Validate" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"key","default":""},{"key":"secret"}]}' sampleresponse='{ "access_token": "a123qwe2-9**3-4002-833c-3****o58cf66", "expires_in": "2017-10-09T06:07:00.296Z" }'></try-me-out>
 
@@ -64,7 +64,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="access-token-invalidate" endpoint="https://api.loginradius.com/api/v2/access_token/inValidate" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"key","default":""},{"key":"secret"}]}' sampleresponse='{ "IsPosted": true }'></try-me-out>
 
@@ -84,7 +84,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="get-active-session-details" endpoint="https://api.loginradius.com/api/v2/access_token/activeSession" method="GET" params='{"queryParams":[{"key":"key","default":""},{"key":"secret","default":""},{"key":"token"}]}' sampleresponse='{ "data": [ { "AccessToken": "8h******-****-8**5-***c-e8c*******9b", "Browser": "Chrome", "Device": "PC", "Os": "Windows", "DeviceType": "Computer", "City": "****", "Country": "a**d", "Ip": "***.0*6.1*2.**1", "LoginDate": "2017-10-02T10:02:52.534Z" } ], "nextcursor": 0 }'></try-me-out>
  
@@ -104,7 +104,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="get-active-session-by-account-id" endpoint="https://api.loginradius.com/api/v2/access_token/activeSession" method="GET" params='{"queryParams":[{"key":"accountId","default":""},{"key":"key","default":""},{"key":"secret"}]}' sampleresponse='{ "data": [ { "AccessToken": "8h******-****-8**5-***c-e8c*******9b", "Browser": "Chrome", "Device": "PC", "Os": "Windows", "DeviceType": "Computer", "City": "****", "Country": "a**d", "Ip": "***.0*6.1*2.**1", "LoginDate": "2017-10-02T10:02:52.534Z" } ], "nextcursor": 0 }'></try-me-out>
 
@@ -124,7 +124,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="get-active-session-by-profile-id" endpoint="https://api.loginradius.com/api/v2/access_token/activeSession" method="GET" params='{"queryParams":[{"key":"profileId","default":""},{"key":"key","default":""},{"key":"secret"}]}' sampleresponse='{ "data": [ { "AccessToken": "8h******-****-8**5-***c-e8c*******9b", "Browser": "Chrome", "Device": "PC", "Os": "Windows", "DeviceType": "Computer", "City": "****", "Country": "a**d", "Ip": "***.0*6.1*2.**1", "LoginDate": "2017-10-02T10:02:52.534Z" } ], "nextcursor": 0 }'></try-me-out>
  
@@ -143,7 +143,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="user-profile" endpoint="https://api.loginradius.com/api/v2/userprofile" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"fields","default":""}]}' sampleresponse='{ user Social Profile object }'></try-me-out>
 

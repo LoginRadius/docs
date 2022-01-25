@@ -24,7 +24,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="get-server-time" endpoint="https://api.loginradius.com/identity/v2/serverinfo" method="GET" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"timeDifference","default":""}]}' sampleresponse='{ "ServerLocation": "East Us", "ServerName": "RD0003FF3F38DD", "CurrentTime": "2017-11-06 06:15:53", "Sott": { "StartTime": "2017-11-06 06:15:53", "EndTime": "2017-11-06 06:20:53", "TimeDifference": "5 Minutes" } }'></try-me-out>
 

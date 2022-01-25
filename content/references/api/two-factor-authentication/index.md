@@ -31,7 +31,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-email-login" endpoint="https://api.loginradius.com/identity/v2/auth/login/2FA" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"emailTemplate","default":""},{"key":"fields"},{"key":"loginUrl"},{"key":"smsTemplate"},{"key":"smsTemplate2FA"},{"key":"verificationUrl"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"email":"","password":""}}' sampleresponse='{ "SecondFactorAuthentication": { "SecondFactorAuthenticationToken": "b1fbbba5-2a5e-41a2-96da-c216df36e6f4", "ExpireIn": "2021-04-06T08:36:53.3005592Z", "QRCode": "http://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=otpauth%3A%2F%2Ftotp%2Fanil1%40mail7.io%3Fsecret%3DHBRWENLDHEZGIMBYHFTDINJSMVRDANDBHE4WINJTMYZTCYZSGFRA%26issuer%3Ddev-aniltest", "ManualEntryCode": "HBRWENLDHEZGIMBYHFTDINJSMVRDANDBHE4WINJTMYZTCYZSGFRA", "IsGoogleAuthenticatorVerified": false, "IsEmailOtpAuthenticatorVerified": false, "IsOTPAuthenticatorVerified": false, "OTPPhoneNo": null, "OTPStatus": null, "Email": [ "x**z@e****le.c*m" ], "EmailOTPStatus": { "Email": "x**z@e****e.c*m" }, "IsSecurityQuestionAuthenticatorVerified": false, "SecurityQuestions": [ { "QuestionId": "<QuestionId>", "Question": "<Question>" } ] }, "Profile": null, "access_token": "00000000-0000-0000-0000-000000000000", "expires_in": "0001-01-01T00:00:00" }'></try-me-out>
 
@@ -55,7 +55,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-phone-login" endpoint="https://api.loginradius.com/identity/v2/auth/login/2FA" method="POST" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"emailTemplate","default":""},{"key":"fields"},{"key":"loginUrl"},{"key":"smsTemplate"},{"key":"smsTemplate2FA"},{"key":"verificationUrl"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phone":"","password":""}}' sampleresponse='{ "SecondFactorAuthentication": { "SecondFactorAuthenticationToken": "b1fbbba5-2a5e-41a2-96da-c216df36e6f4", "ExpireIn": "2021-04-06T08:36:53.3005592Z", "QRCode": "http://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=otpauth%3A%2F%2Ftotp%2Fanil1%40mail7.io%3Fsecret%3DHBRWENLDHEZGIMBYHFTDINJSMVRDANDBHE4WINJTMYZTCYZSGFRA%26issuer%3Ddev-aniltest", "ManualEntryCode": "HBRWENLDHEZGIMBYHFTDINJSMVRDANDBHE4WINJTMYZTCYZSGFRA", "IsGoogleAuthenticatorVerified": false, "IsEmailOtpAuthenticatorVerified": false, "IsOTPAuthenticatorVerified": false, "OTPPhoneNo": null, "OTPStatus": null, "Email": [ "x**z@e****le.c*m" ], "EmailOTPStatus": { "Email": "x**z@e****e.c*m" }, "IsSecurityQuestionAuthenticatorVerified": false, "SecurityQuestions": [ { "QuestionId": "<QuestionId>", "Question": "<Question>" } ] } }'></try-me-out>
 
@@ -75,7 +75,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-validate-access-token" endpoint="https://api.loginradius.com/identity/v2/auth/account/2FA" method="GET" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey","default":""},{"key":"smsTemplate2FA"}]}' sampleresponse='{ "QRCode": null, "ManualEntryCode": null, "IsGoogleAuthenticatorVerified": true, "IsOTPAuthenticatorVerified": false, "OTPPhoneNo": null, "OTPStatus": null, "IsEmailOtpAuthenticatorVerified": false, "Email": [ "xyz@example.com" ], "EmailOTPStatus": null, "IsSecurityQuestionEnabled": false, "SecurityQuestions": [ { "QuestionId": "<QuestionId>", "Question": "<Question>" } ] }'></try-me-out>
 
@@ -101,7 +101,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="enable-twofa-google-authenticator-by-access-token" endpoint="https://api.loginradius.com/identity/v2/auth/account/2FA/Verification/GoogleAuthenticatorCode" method="PUT" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey","default":""},{"key":"fields"},{"key":"smsTemplate"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"googleauthenticatorcode":""}}' sampleresponse='{ "GoogleAuthenticatorCode*":"<GoogleAuthenticatorCode>" }'></try-me-out>
 
@@ -126,7 +126,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-validate-otp" endpoint="https://api.loginradius.com/identity/v2/auth/login/2FA/verification/otp" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"secondFactorAuthenticationToken","default":""},{"key":"smsTemplate2FA"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"otp":""}}' sampleresponse='{ "otp":"<otp>", "securityanswer": { "db7****8a73e4******bd9****8c20": "Answer" }, "qq_captcha_ticket": "", "qq_captcha_randstr": "", "g-recaptcha-response ": "" }'></try-me-out>
 
@@ -146,7 +146,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-update-phone-number-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/account/2FA" method="PUT" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey","default":""},{"key":"smsTemplate2FA"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phoneno2fa":""}}' sampleresponse='{ "AccountSid": "XXXXXXXXXXXXXXXXXXXXX", "Sid": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX" }'></try-me-out>
 
@@ -167,7 +167,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-validate-google-auth-code" endpoint="https://api.loginradius.com/identity/v2/auth/login/2FA/verification/GoogleAuthenticatorCode" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"secondFactorAuthenticationToken","default":""},{"key":"fields"},{"key":"smsTemplate2FA"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"googleauthenticatorcode":""}}' sampleresponse='{ "Profile": "<Standard API V2 Profile Response>" , "access_token": "a029e8a7-****-4453-****-a5e721e1f358", "refresh_token": "b12988a7-****-4453-****-a5e721e1f358", "expires_in": "2017-08-17T10:52:36.1644137Z" }'></try-me-out>
 
@@ -187,7 +187,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-update-phone-number" endpoint="https://api.loginradius.com/identity/v2/auth/login/2FA" method="PUT" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"secondFactorAuthenticationToken","default":""},{"key":"smsTemplate2FA"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"phoneno2fa":""}}' sampleresponse='{ "AccountSid": "XXXXXXXXXXXXXXXXXXXXX", "Sid": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX" }'></try-me-out>
 
@@ -206,7 +206,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out  
 
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-reset-google-authenticator-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/account/2FA/authenticator" method="DELETE" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"googleauthenticator":true}}' sampleresponse='{ "IsDeleted": true }'></try-me-out>
 
@@ -225,7 +225,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-reset-sms-authenticator-by-token" endpoint="https://api.loginradius.com/identity/v2/auth/account/2FA/authenticator" method="DELETE" params='{"queryParams":[{"key":"access_token","default":""},{"key":"apiKey","default":""}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"otpauthenticator":true}}' sampleresponse='{ "IsDeleted": true }'></try-me-out>
  
@@ -245,7 +245,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-reset-sms-authenticator-by-uid" endpoint="https://api.loginradius.com/identity/v2/manage/account/2FA/authenticator" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"uid"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"otpauthenticator":true}}' sampleresponse='{ "IsDeleted": true }'></try-me-out>
 
@@ -265,7 +265,7 @@ Refer <a href="https://www.loginradius.com/docs/developer/faq/#how-to-retrieve-a
 
   ### Try Me Out
     
-  Enter query parameters and send a request to view the sample response.
+  Click the button below to enter parameters, send a request and see the response.
 
   <try-me-out id="twofa-reset-google-authenticator-by-uid" endpoint="https://api.loginradius.com/identity/v2/manage/account/2FA/authenticator" method="DELETE" params='{"queryParams":[{"key":"apiKey","default":""},{"key":"apiSecret","default":""},{"key":"uid"}],"headers":[{"key":"Content-Type","default":"application/json"}],"body":{"googleauthenticator":true}}' sampleresponse='{ "IsDeleted": true }'></try-me-out>
 
