@@ -25,8 +25,8 @@ export default styled(SearchResult)`
     ul {
       list-style: none;
       margin-left: 0;
-      max-height: 50vh;
-      min-height: 17vh;
+      max-height: 62vh;
+      min-height: 10vh;
       overflow: auto;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
       background: #fff;
