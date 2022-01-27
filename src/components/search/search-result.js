@@ -20,13 +20,16 @@ const HitCount = connectStateResults(({ searchResults }) => {
 const PageHit = ({ hit }) => {
 
   let highlightedAttr = null;
-  if (hit._highlightResult.headings) {
+  if (hit.title && hit._highlightResult.headings) {
     highlightedAttr = hit._highlightResult.headings.filter(attr => attr.matchedWords.length && attr.value)
-    highlightedAttr = highlightedAttr.map(attr => attr.value.replace(/<ais-highlight-[0-9]+/, `<mark class="ais-Highlight__highlighted"`).replace(/<\/ais-highlight-[0-9]+/, `</mark`))
+
+    // To highlight search keyword uncomment this code
+    // highlightedAttr = highlightedAttr.map(attr => attr.value.replace(/<ais-highlight-[0-9]+/, `<mark class="ais-Highlight__highlighted"`).replace(/<\/ais-highlight-[0-9]+/, `</mark`))
+    
     highlightedAttr = highlightedAttr.slice(0, 3);
   }
   return (
-    <div>
+    hit.title ? <div>
       <Link to={hit.slug}>
         <h4>
           <Highlight attribute="title" hit={hit} tagName="mark" />
@@ -35,12 +38,12 @@ const PageHit = ({ hit }) => {
           <li key={`${val}`}>
             <span
               className="ais-Highlight"
-              dangerouslySetInnerHTML={{ __html: val }}
+              dangerouslySetInnerHTML={{ __html: val.value }}
             />
           </li>
         ))}
       </Link>
-    </div>
+    </div> : null
   )
 }
 const HitsInIndex = ({ index }) => (

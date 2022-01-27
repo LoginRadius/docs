@@ -16,3 +16,6 @@
   font-size: 15px;
   color: #41484e;
 }
+.search-result mark {
+  background-color: transparent;
+}
