@@ -26,6 +26,7 @@ const pageQuery = `{
   mdxPages:allMdx(
     filter: {
       fileAbsolutePath: { regex: "/${escapeStringRegexp(pagePath)}/" },
+      frontmatter: { title: { ne: "" } },
     }
   ) {
     edges {
