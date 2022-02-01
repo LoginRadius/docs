@@ -35,7 +35,7 @@ export default styled(SearchResult)`
 
     li.ais-Hits-item {
       a {
-        color: #050505;
+        color: #41484e;
 
         h4 {
           margin-bottom: 0.2em;
