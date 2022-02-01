@@ -340,6 +340,13 @@ pre[class*="language-"] {
 .top-strip {
   & ~ header {
     top: 48px;
+    @media (min-width: 991px) {
+      &.scrollUp {
+        -webkit-transform: translateY(-148px);
+        transform: translateY(-148px);
+        transition: all 0.5s;
+      }
+    }
   }
   & ~ main {
     padding-top: 148px;
@@ -347,7 +354,7 @@ pre[class*="language-"] {
       @media (min-width: 769px) {
         position: -webkit-sticky;
         position: sticky;
-        top: 196px;
+        top: 124px;
       }
     }
   }

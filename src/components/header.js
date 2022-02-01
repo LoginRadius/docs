@@ -6,38 +6,39 @@ const searchIndices = [{ name: `Pages`, title: `Pages` }]
 // Header component
 
 const Header = () => {
-  const [showBanner, toggleBanner] = useState(true);
-  const [y, setY] = useState(window.scrollY);
-  const [scrollClass, setClass] = useState("");
+  const [showBanner, toggleBanner] = useState(true)
+  const [y, setY] = useState(window.scrollY)
+  const [scrollClass, setClass] = useState("")
 
   const handleNavigation = useCallback(
     e => {
-      const window = e.currentTarget;
+      const window = e.currentTarget
       if (y > window.scrollY) {
-        setClass("scrollUp");
+        setClass("")
       } else if (y < window.scrollY) {
-        setClass("");
+        setClass("scrollUp")
       }
-      setY(window.scrollY);
-    }, [y]
-  );
+      setY(window.scrollY)
+    },
+    [y]
+  )
 
   useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
+    setY(window.scrollY)
+    window.addEventListener("scroll", handleNavigation)
 
     return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [handleNavigation]);
+      window.removeEventListener("scroll", handleNavigation)
+    }
+  }, [handleNavigation])
 
   return (
     <React.Fragment>
       {showBanner && (
         <div className="top-strip">
           The following documentation is applicable to <b>Free</b>,{" "}
-          <b>Developer</b>, and <b>Developer Pro</b> plans. For
-          documentation related to the enterprise plan, please{" "}
+          <b>Developer</b>, and <b>Developer Pro</b> plans. For documentation
+          related to the enterprise plan, please{" "}
           <a href="https://www.loginradius.com/docs/" target="_blank">
             click here
           </a>
@@ -73,7 +74,7 @@ const Header = () => {
         </div>
       </header>
     </React.Fragment>
-  );
+  )
 }
 
-export default Header;
+export default Header
