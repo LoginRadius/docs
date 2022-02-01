@@ -7,24 +7,30 @@ const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 const Header = () => {
   const [showBanner, toggleBanner] = useState(true)
-  const [y, setY] = useState(window.scrollY)
+  let sY = 0;
+  if (typeof window !== "undefined") {
+    sY = window.scrollY
+  }
+  const [y, setY] = useState(sY)
   const [scrollClass, setClass] = useState("")
 
   const handleNavigation = useCallback(
     e => {
-      const window = e.currentTarget
-      if (y > window.scrollY) {
+      const currWin = e.currentTarget
+      if (y > currWin.scrollY) {
         setClass("")
-      } else if (y < window.scrollY) {
+      } else if (y < currWin.scrollY) {
         setClass("scrollUp")
       }
-      setY(window.scrollY)
+      setY(currWin.scrollY)
     },
     [y]
   )
 
   useEffect(() => {
-    setY(window.scrollY)
+    if (typeof window !== "undefined") {
+      setY(window.scrollY)
+    }
     window.addEventListener("scroll", handleNavigation)
 
     return () => {
