@@ -1,6 +1,6 @@
 const escapeStringRegexp = require("escape-string-regexp")
 const pagePath = `content`
-const indexName = `Pages`
+const indexName = process.env.GATSBY_ALGOLIA_INDEX
 const pageQuery = `{
   pages: allMarkdownRemark(
     filter: {
