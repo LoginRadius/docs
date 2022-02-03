@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React, { useCallback, useEffect, useState } from "react"
 import Logo from "../../public/images/logo.svg"
 import Search from "./search"
-const searchIndices = [{ name: `Pages`, title: `Pages` }]
+const searchIndices = [{ name: process.env.GATSBY_ALGOLIA_INDEX, title: process.env.GATSBY_ALGOLIA_INDEX }]
 // Header component
 
 const Header = () => {
