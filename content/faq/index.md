@@ -86,15 +86,15 @@ The Manage App screen will appear.
 ### How to update credit card?
 * Click **Account Icon** from the top-right of the screen and select the **Manage Apps** option:
 
-  ![alt_text](images/ManageApp.PNG "image_tooltip")
+  ![alt_text](images/ManageApp.png "image_tooltip")
   
 * Click the **Update Card** button from the Manage Apps screen.
 
-  ![alt_text](images/updateCard.PNG "image_tooltip")
+  ![alt_text](images/updateCard.png "image_tooltip")
 
 * Add **New Card** details in the pop-up and click **Update Card**.
 
-  ![alt_text](images/Update_Card_Details.PNG "image_tooltip")
+  ![alt_text](images/Update_Card_Details.png "image_tooltip")
 
 **Note:** Top-right of the pop-up displays the existing credit card (if added already).
 
