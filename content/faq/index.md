@@ -7,7 +7,7 @@ path: "/faq"
 
 # FAQ
 
-Contact our support team for any questions you might have.
+Contact our support team for any questions you might have. Blah Blah Blah
 
 
 ## Frequently Asked Questions
