@@ -96,7 +96,7 @@ The Manage App screen will appear.
 
   ![alt_text](images/Update_Card_Details.PNG "image_tooltip")
 
-**Note:** Top-right of the pop-up displays the existing credit card (if added already).
+> **Note:** Top-right of the pop-up displays the existing credit card (if added already).
 
 
 ### How do I contact LoginRadius Support?
