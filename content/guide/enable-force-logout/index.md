@@ -14,7 +14,7 @@ Force Logout enables you to expire all active sessions of the consumer account o
 
 ## Force Logout
 
-The **Force Logout** option is enabled by default for all your LoginRadius apps, considering it a security measure. You cannot manage it manually or turn it On/Off.
+The **Force Logout** option is enabled by default for all your LoginRadius apps, considering it a security measure for consumer account.
 
 
 ## Remember Me 
