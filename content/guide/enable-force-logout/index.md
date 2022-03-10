@@ -10,7 +10,7 @@ path: "/guide/enable-force-logout"
 
 # Force Logout and Remember Me
 
-Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed. Also, enabling the Remember Me option will keep the customer logged in until the access token expires.
+Force Logout enables you to expire all active sessions of the consumer account on Password Reset or Change, except the session in which the password has been reset/changed. Also, enabling the Remember Me option will keep the consumer logged in until the access token expires.
 
 ## Force Logout
 
