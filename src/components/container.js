@@ -7,6 +7,7 @@ const Middle = () => {
   const apiRef = React.createRef()
   const sdkRef = React.createRef()
   const gotQRef = React.createRef()
+  const redRef = React.createRef()
   const [display, setDisplay] = useState(false)
 
   useEffect(() => {
@@ -25,6 +26,9 @@ const Middle = () => {
       } else if (window.location.hash === "#loginmethods") {
         window.history.scrollRestoration = "manual"
         gotQRef.current.scrollIntoView({ block: "start" })
+      } else if (window.location.hash === "#readytogetbuilding") {
+        window.history.scrollRestoration = "manual"
+        redRef.current.scrollIntoView({ block: "start" })
       }
     }
   })
@@ -437,7 +441,7 @@ const Middle = () => {
       </section>
       {/*Tutorials section*/}
 
-      <section className="tutorials py-72">
+      <section className="tutorials py-72" ref={redRef}>
         <div className="section-header">
           <h2>Ready To Start Building?</h2>
           <p>
@@ -791,7 +795,9 @@ const Middle = () => {
                 <Link to="/guide/oidc">Outbound SSO OIDC</Link>
               </li>
               <li>
-                <Link to="/guide/outbound-sso-zendesk">Outbound SSO Zendesk</Link>
+                <Link to="/guide/outbound-sso-zendesk">
+                  Outbound SSO Zendesk
+                </Link>
               </li>
               <li>
                 <Link to="/guide/big-commerce">Integrate BigCommerce</Link>
@@ -813,9 +819,7 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/guide/mailazy">
-                  Integrate Mailazy
-                </Link>
+                <Link to="/guide/mailazy">Integrate Mailazy</Link>
               </li>
               <li>
                 <div className="read-more mt-0">
@@ -924,7 +928,9 @@ const Middle = () => {
                 <Link to="/concepts/oidc">OpenID Connect Flows</Link>
               </li>
               <li>
-                <Link to="/concepts/loginradius-as-identity-provider">SAML-LoginRadius as IDP</Link>
+                <Link to="/concepts/loginradius-as-identity-provider">
+                  SAML-LoginRadius as IDP
+                </Link>
               </li>
             </ul>
           </div>
