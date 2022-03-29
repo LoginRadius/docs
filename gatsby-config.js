@@ -150,5 +150,5 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`
   ],
-  pathPrefix: `/docs/developer`,
+  pathPrefix: `/ciam-for-developers/docs`,
 }
