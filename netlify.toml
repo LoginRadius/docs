@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/docs/developer"
+  to = "/ciam-for-developers/docs"
+  status = 301
+
+[[redirects]]
   from = "/docs/developer/howto/dashboard-setup/"
   to = "https://youtu.be/wgkT2x2khV4"
 
@@ -231,8 +236,7 @@ to = "/ciam-for-developers/docs/guide/wordpress"
   to = "/ciam-for-developers/docs"
 
 [[redirects]]
-  from = "/docs/developer"
-  to = "/ciam-for-developers/docs"
-  status = 301
+  from = "/docs/developer/*"
+  to = "/ciam-for-developers/docs/:splat"
 
 
