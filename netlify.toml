@@ -1,242 +1,233 @@
 [[redirects]]
-  from = "/docs/developer"
-  to = "/ciam-for-developers/docs"
-  status = 301
-
-[[redirects]]
-  from = "/docs/developer/howto/dashboard-setup/"
+  from = "/ciam-for-developers/docs/howto/dashboard-setup/"
   to = "https://youtu.be/wgkT2x2khV4"
 
 [[redirects]]
-  from = "/docs/developer/faq/api-credentials/"
+  from = "/ciam-for-developers/docs/faq/api-credentials/"
   to = "/ciam-for-developers/docs/contact-us/#how-to-retrieve-api-key-and-secret"
 
 [[redirects]]
-  from = "/docs/developer/howto/work-with-sott/"
+  from = "/ciam-for-developers/docs/howto/work-with-sott/"
   to = "/ciam-for-developers/docs/concepts/sott"
 
 [[redirects]]
-  from = "/docs/developer/howto/setup-login-methods/"
+  from = "/ciam-for-developers/docs/howto/setup-login-methods/"
   to = "/ciam-for-developers/docs/#loginmethods"
 
 [[redirects]]
-  from = "/docs/developer/howto/web-sso/"
+  from = "/ciam-for-developers/docs/howto/web-sso/"
   to = "/ciam-for-developers/docs/guide/web-sso"
 
 [[redirects]]
-  from = "/docs/developer/howto/manage-communication-settings/"
+  from = "/ciam-for-developers/docs/howto/manage-communication-settings/"
   to = "/ciam-for-developers/docs/guide/setup-your-smtp-provider/"
 
 [[redirects]]
-  from = "/docs/developer/howto/authentication-theme/"
+  from = "/ciam-for-developers/docs/howto/authentication-theme/"
   to = "/ciam-for-developers/docs/guide/customize-auth-page"
 
 [[redirects]]
-  from = "/docs/developer/howto/user-management/"
+  from = "/ciam-for-developers/docs/howto/user-management/"
   to = "/ciam-for-developers/docs/guide/manage-users"
 
 [[redirects]]
-  from = "/docs/developer/api/account-api"
+  from = "/ciam-for-developers/docs/api/account-api"
   to = "/ciam-for-developers/docs/references/api/account"
 
 [[redirects]]
-  from = "/docs/developer/customize-domain/"
+  from = "/ciam-for-developers/docs/customize-domain/"
   to = "/ciam-for-developers/docs/guide/customize-domain"
 
 [[redirects]]
-  from = "/docs/developer/howto/manage-role/"
+  from = "/ciam-for-developers/docs/howto/manage-role/"
   to = "/ciam-for-developers/docs/guide/manage-roles"
 
 [[redirects]]
-  from = "/docs/developer/howto/setup-team-management/"
+  from = "/ciam-for-developers/docs/howto/setup-team-management/"
   to = "/ciam-for-developers/docs/guide/manage-team-members/"
 
 [[redirects]]
-  from = "/docs/developer/security/google-recaptcha/"
+  from = "/ciam-for-developers/docs/security/google-recaptcha/"
   to = "/ciam-for-developers/docs/guide/captcha"
 
 [[redirects]]
-  from = "/docs/developer/security/brute-force-lockout/"
+  from = "/ciam-for-developers/docs/security/brute-force-lockout/"
   to = "/ciam-for-developers/docs/guide/bruteforce/"
 
 [[redirects]]
-  from = "/docs/developer/security/password-policy/"
+  from = "/ciam-for-developers/docs/security/password-policy/"
   to = "/ciam-for-developers/docs/guide/set-strong-password-policy/"
 
 [[redirects]]
-  from = "/docs/developer/security/two-factor-authentication/"
+  from = "/ciam-for-developers/docs/security/two-factor-authentication/"
   to = "/ciam-for-developers/docs/guide/mfa/"
 
 [[redirects]]
-  from = "/docs/developer/security/session-management/"
+  from = "/ciam-for-developers/docs/security/session-management/"
   to = "/ciam-for-developers/docs/guide/change-session-lifetime/"
 
 [[redirects]]
-  from = "/docs/developer/integrations/webhook/"
+  from = "/ciam-for-developers/docs/integrations/webhook/"
   to = "/ciam-for-developers/docs/guide/webhook/"
 
 [[redirects]]
-  from = "/docs/developer/sdk-libraries/golang-library/"
+  from = "/ciam-for-developers/docs/sdk-libraries/golang-library/"
   to = "/ciam-for-developers/docs/tutorial/golang/"
 
 [[redirects]]
-  from = "/docs/developer/sdk-libraries/node-js-library/"
+  from = "/ciam-for-developers/docs/sdk-libraries/node-js-library/"
   to = "/ciam-for-developers/docs/tutorial/node-js/"
 
 [[redirects]]
-  from = "/docs/developer/sdk-libraries/html5-library/"
+  from = "/ciam-for-developers/docs/sdk-libraries/html5-library/"
   to = "/ciam-for-developers/docs/tutorial/html-and-js-tutorial"
 
 [[redirects]]
-  from = "/docs/developer/guides/web-php/"
+  from = "/ciam-for-developers/docs/guides/web-php/"
   to = "/ciam-for-developers/docs/tutorial/php/"
 
 [[redirects]]
-  from = "/docs/developer/sdk-libraries/asp-net-library/"
+  from = "/ciam-for-developers/docs/sdk-libraries/asp-net-library/"
   to = "/ciam-for-developers/docs/tutorial/dotnetcore-mvc/"
 
 [[redirects]]
-  from = "/docs/developer/sdk-libraries/java-library/"
+  from = "/ciam-for-developers/docs/sdk-libraries/java-library/"
   to = "/ciam-for-developers/docs/tutorial/java/"
 
 [[redirects]]
-  from = "/docs/developer/mobile-sdk-libraries/android-library/"
+  from = "/ciam-for-developers/docs/mobile-sdk-libraries/android-library/"
   to = "/ciam-for-developers/docs/tutorial/android/"
 
 [[redirects]]
-  from = "/docs/developer/mobile-sdk-libraries/ios-library/"
+  from = "/ciam-for-developers/docs/mobile-sdk-libraries/ios-library/"
   to = "/ciam-for-developers/docs/tutorial/ios/"
 
 [[redirects]]
-  from = "/docs/developer/api/*"
+  from = "/ciam-for-developers/docs/api/*"
   to = "/ciam-for-developers/docs/#api"
 
 [[redirects]]
-  from = "/docs/developer/howto/customize-domain/"
+  from = "/ciam-for-developers/docs/howto/customize-domain/"
   to = "/ciam-for-developers/docs/guide/customize-auth-page/"
 
 [[redirects]]
-from = "/docs/developer/howto/manage-passwordless-login/"
+from = "/ciam-for-developers/docs/howto/manage-passwordless-login/"
 to = "/ciam-for-developers/docs/guide/passwordless-login/"
 
 [[redirects]]
-from = "/docs/developer/howto/manage-email-password-login/"
+from = "/ciam-for-developers/docs/howto/manage-email-password-login/"
 to = "/ciam-for-developers/docs/guide/emailpassword-login"
 
 [[redirects]]
-from = "/docs/developer/sdk-libraries/overview/"
+from = "/ciam-for-developers/docs/sdk-libraries/overview/"
 to = "/ciam-for-developers/docs/#sdk"
 
 [[redirects]]
-from = "/docs/developer/howto/social-login/"
+from = "/ciam-for-developers/docs/howto/social-login/"
 to = "/ciam-for-developers/docs/guide/social-login"
 
 [[redirects]]
-from = "/docs/developer/guides/web-nodejs/"
+from = "/ciam-for-developers/docs/guides/web-nodejs/"
 to = "/ciam-for-developers/docs/tutorial/node-js"
 
 [[redirects]]
-from = "/docs/developer/sdk-libraries/python-library/"
+from = "/ciam-for-developers/docs/sdk-libraries/python-library/"
 to = "/ciam-for-developers/docs/references/sdk/python-sdk"
 
 [[redirects]]
-from = "/docs/developer/guides/web-python/"
+from = "/ciam-for-developers/docs/guides/web-python/"
 to = "/ciam-for-developers/docs/tutorial/python"
 
 [[redirects]]
-from = "/docs/developer/sdk-libraries/php-library/"
+from = "/ciam-for-developers/docs/sdk-libraries/php-library/"
 to = "/ciam-for-developers/docs/references/sdk/php-sdk"
 
 [[redirects]]
-from = "/docs/developer/guides/web-ror/"
+from = "/ciam-for-developers/docs/guides/web-ror/"
 to = "/ciam-for-developers/docs/tutorial/ror"
 
 [[redirects]]
-from = "/docs/developer/sdk-libraries/ruby-library/"
+from = "/ciam-for-developers/docs/sdk-libraries/ruby-library/"
 to = "/ciam-for-developers/docs/references/sdk/ruby-sdk"
 
 [[redirects]]
-from = "/docs/developer/guides/web-golang/"
+from = "/ciam-for-developers/docs/guides/web-golang/"
 to = "/ciam-for-developers/docs/tutorial/golang"
 
 [[redirects]]
-from = "/docs/developer/guides/web-java/"
+from = "/ciam-for-developers/docs/guides/web-java/"
 to = "/ciam-for-developers/docs/tutorial/java"
 
 [[redirects]]
-from = "/docs/developer/guides/mobile-ios/"
+from = "/ciam-for-developers/docs/guides/mobile-ios/"
 to = "/ciam-for-developers/docs/tutorial/ios"
 
 [[redirects]]
-from = "/docs/developer/plugin/wordpress/"
+from = "/ciam-for-developers/docs/plugin/wordpress/"
 to = "/ciam-for-developers/docs/guide/wordpress"
 
 [[redirects]]
-  from = "/docs/developer/api/webhooks-api/"
+  from = "/ciam-for-developers/docs/api/webhooks-api/"
   to = "/ciam-for-developers/docs/references/api/webhooks"
 
 [[redirects]]
-  from = "/docs/developer/faq/loginradius-support/"
+  from = "/ciam-for-developers/docs/faq/loginradius-support/"
   to = "/ciam-for-developers/docs/contact-us/#how-do-i-contact-loginradius-support"
 
 [[redirects]]
-  from = "/docs/developer/contact-us"
+  from = "/ciam-for-developers/docs/contact-us"
   to = "/ciam-for-developers/docs/faq"
 
 [[redirects]]
-  from = "/docs/developer/concepts/idx-overview/"
+  from = "/ciam-for-developers/docs/concepts/idx-overview/"
   to = "/ciam-for-developers/docs/concepts/idx"
 
 [[redirects]]
-  from = "/docs/developer/references/sdk/java"
+  from = "/ciam-for-developers/docs/references/sdk/java"
   to = "/ciam-for-developers/docs/references/sdk/java-sdk"
 
 [[redirects]]
-  from = "/docs/developer/references/sdk/node-js"
+  from = "/ciam-for-developers/docs/references/sdk/node-js"
   to = "/ciam-for-developers/docs/references/sdk/nodejs-sdk"
 
 [[redirects]]
-  from = "/docs/developer/references/sdk/php"
+  from = "/ciam-for-developers/docs/references/sdk/php"
   to = "/ciam-for-developers/docs/references/sdk/php-sdk"
 
 [[redirects]]
-  from = "/docs/developer/references/sdk/python"
+  from = "/ciam-for-developers/docs/references/sdk/python"
   to = "/ciam-for-developers/docs/references/sdk/python-sdk"
 
 [[redirects]]
-  from = "/docs/developer/references/sdk/react-native"
+  from = "/ciam-for-developers/docs/references/sdk/react-native"
   to = "/ciam-for-developers/docs/references/sdk/react-native-sdk"
 
 [[redirects]]
-  from = "/docs/developer/references/sdk/golang"
+  from = "/ciam-for-developers/docs/references/sdk/golang"
   to = "/ciam-for-developers/docs/references/sdk/golang-sdk"
 
 [[redirects]]
-  from = "/docs/developer/howto/manage-phone-login/"
+  from = "/ciam-for-developers/docs/howto/manage-phone-login/"
   to = "/ciam-for-developers/docs/guide/phone-login"
 
 [[redirects]]
-  from = "/docs/developer/howto/email-templates/"
+  from = "/ciam-for-developers/docs/howto/email-templates/"
   to = "/ciam-for-developers/docs/guide/emailpassword-login"
 
 [[redirects]]
-  from = "/docs/developer/howto/email-smtp-config/"
+  from = "/ciam-for-developers/docs/howto/email-smtp-config/"
   to = "/ciam-for-developers/docs/guide/customize-email-and-sms-settings"
 
 [[redirects]]
-  from = "/docs/developer/api/v2/customer-identity-api/overview/"
+  from = "/ciam-for-developers/docs/api/v2/customer-identity-api/overview/"
   to = "/ciam-for-developers/docs/#api"
 
 [[redirects]]
-  from = "/docs/developer/api/introduction/"
+  from = "/ciam-for-developers/docs/api/introduction/"
   to = "/ciam-for-developers/docs/#api"
 
 [[redirects]]
-  from = "/docs/developer/overview/"
+  from = "/ciam-for-developers/docs/overview/"
   to = "/ciam-for-developers/docs"
-
-[[redirects]]
-  from = "/docs/developer/*"
-  to = "/ciam-for-developers/docs/:splat"
 
 
