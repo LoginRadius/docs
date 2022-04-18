@@ -48,7 +48,8 @@ const Header = () => {
           <a href="https://www.loginradius.com/docs/" target="_blank">
             click here
           </a>
-          .<button onClick={() => toggleBanner(false)}></button>
+          .
+          {/* <button onClick={() => toggleBanner(false)}></button> */}
         </div>
       )}
       <header className={scrollClass}>
