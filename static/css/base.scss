@@ -452,3 +452,44 @@ body {
 .slide-pane__title-wrapper {
   margin-left: 24px !important;
 }
+#doc-popup {
+  max-width: 660px;
+  .doc-popup {
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      color: $gray-dark;
+      margin-top: 32px;
+      margin-bottom: 40px;
+    }
+    .close {
+      display: block;
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      svg {
+        stroke: $gray-dark;
+        display: block;
+      }
+    }
+    .popup-content {
+      text-align: center;
+      a {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        align-items: center;
+        color: $gray-dark;
+        svg {
+          margin-left: 8px;
+        }
+        &:last-child {
+          margin-top: 32px;
+          color: $cta;
+          font-weight: 500;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
