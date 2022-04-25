@@ -83,6 +83,22 @@ The Manage App screen will appear.
   ![alt_text](images/FAQ3.png "image_tooltip")
 
 
+### How to update credit card?
+* Click **Account Icon** from the top-right of the screen and select the **Manage Apps** option:
+
+  ![alt_text](images/ManageApp.PNG "image_tooltip")
+  
+* Click the **Update Card** button from the Manage Apps screen.
+
+  ![alt_text](images/updateCard.PNG "image_tooltip")
+
+* Add **New Card** details in the pop-up and click **Update Card**.
+
+  ![alt_text](images/Update_Card_Details.PNG "image_tooltip")
+
+**Note:** Top-right of the pop-up displays the existing credit card (if added already).
+
+
 ### How do I contact LoginRadius Support?
 
 * For quick, general, or verification-type questions, you can chat with a LoginRadius Support Team member by clicking the blue chat icon on the dashboard’s bottom right.
