@@ -8,7 +8,7 @@ const Middle = () => {
   const sdkRef = React.createRef()
   const gotQRef = React.createRef()
   const [display, setDisplay] = useState(false)
- 
+
   useEffect(() => {
     if (
       window &&
@@ -27,7 +27,6 @@ const Middle = () => {
         gotQRef.current.scrollIntoView({ block: "start" })
       }
     }
-    
   })
 
   return (
@@ -450,31 +449,31 @@ const Middle = () => {
         <div className="grid-25">
           <div className="card">
             <div className="icon">
-              <img src="images/single-page-app.svg" />
+              <img src="images/single-page-app.svg" alt="Single Page App" />
             </div>
             <h3 className="title">Single Page App</h3>
             <ul>
               <li>
                 <Link to="/tutorial/react">
-                  <img src="images/react.svg" width={20} />
+                  <img src="images/react.svg" width={20} alt="React" />
                   <span>React</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/angular">
-                  <img src="images/angular.svg" width={20} />
+                  <img src="images/angular.svg" width={20} alt="Angular" />
                   <span>Angular</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/vue">
-                  <img src="images/vue-dot-js.svg" width={20} />
+                  <img src="images/vue-dot-js.svg" width={20} alt="Vue js" />
                   <span>VueJs</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/html-and-js-tutorial">
-                  <img src="images/html5.svg" width={20} />
+                  <img src="images/html5.svg" width={20} alt="html5" />
                   <span>HTML and JS</span>
                 </Link>
               </li>
@@ -482,25 +481,25 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/web-apps.svg" />
+              <img src="images/web-apps.svg" alt="Web Apps" />
             </div>
             <h3 className="title">Web Apps</h3>
             <ul>
               <li>
                 <Link to="/tutorial/node-js">
-                  <img src="images/node-dot-js.svg" width={20} />
+                  <img src="images/node-dot-js.svg" width={20} alt="Node js" />
                   <span>NodeJs</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/php">
-                  <img src="images/php.svg" width={20} />
+                  <img src="images/php.svg" width={20} alt="PHP" />
                   <span>PHP</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/java">
-                  <img src="images/java.svg" width={20} />
+                  <img src="images/java.svg" width={20} alt="Java" />
                   <span>JAVA</span>
                 </Link>
               </li>
@@ -557,25 +556,25 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/mobile-apps.svg" />
+              <img src="images/mobile-apps.svg" alt="Mobile App" />
             </div>
             <h3 className="title">Mobile Apps</h3>
             <ul>
               <li>
                 <Link to="/tutorial/android">
-                  <img src="images/android.svg" width={20} />
+                  <img src="images/android.svg" width={20} alt="Android" />
                   <span>Android</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/ios">
-                  <img src="images/ios.svg" width={20} />
+                  <img src="images/ios.svg" width={20} alt="IOS" />
                   <span>iOS</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/ionic">
-                  <img src="images/ionic.svg" width={20} />
+                  <img src="images/ionic.svg" width={20} alt="Ionic" />
                   <span>Ionic </span>
                 </Link>
               </li>
@@ -583,37 +582,41 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/cms-app.svg" />
+              <img src="images/cms-app.svg" alt="CMS App" />
             </div>
             <h3 className="title">CMS App</h3>
             <ul>
               <li>
                 <Link to="/guide/wordpress">
-                  <img src="images/wordpress.svg" width={20} />
+                  <img src="images/wordpress.svg" width={20} alt="Wordpress" />
                   <span>WordPress </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/drupal">
-                  <img src="images/drupal.svg" width={20} />
+                  <img src="images/drupal.svg" width={20} alt="Drupal" />
                   <span>Drupal </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/big-commerce">
-                  <img src="images/bigcommerce.svg" width={20} />
+                  <img
+                    src="images/bigcommerce.svg"
+                    width={20}
+                    alt="big Commerce"
+                  />
                   <span>BigCommerce </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/shopify">
-                  <img src="images/shopify.svg" width={20} />
+                  <img src="images/shopify.svg" width={20} alt="Shopify" />
                   <span>Shopify </span>
                 </Link>
               </li>
               {/* <li>
                 <a href="#">
-                  <img src="images/joomla.svg" width={20} />
+                  <img src="images/joomla.svg" width={20} alt="" />
                   <span>Joomla</span>
                 </a>
               </li> */}
@@ -636,7 +639,7 @@ const Middle = () => {
           {/*Login Methods we offer*/}
           <div className="card">
             <div className="icon">
-              <img src="images/login-methods.svg" />
+              <img src="images/login-methods.svg" alt="Login Methods" />
             </div>
             <h3 className="title">Add Login Methods</h3>
             <ul>
@@ -666,7 +669,7 @@ const Middle = () => {
           {/*Explore user managment options*/}
           <div className="card">
             <div className="icon">
-              <img src="images/user-managment.svg" />
+              <img src="images/user-managment.svg" alt="User Managment" />
             </div>
             <h3 className="title">Manage Users with LoginRadius</h3>
             <ul>
@@ -716,7 +719,7 @@ const Middle = () => {
           {/*Personalize interfaces and branding*/}
           <div className="card">
             <div className="icon">
-              <img src="images/branding.svg" />
+              <img src="images/branding.svg" alt="Branding" />
             </div>
             <h3 className="title">
               Personalize Your Login Interface and Branding
@@ -753,7 +756,7 @@ const Middle = () => {
           {/*Single Sign On*/}
           <div className="card">
             <div className="icon">
-              <img src="images/sso.svg" />
+              <img src="images/sso.svg" alt="SSO" />
             </div>
             <h3 className="title">Implement Sign Sign-On</h3>
             <ul>
@@ -769,7 +772,7 @@ const Middle = () => {
           {/*Integrate Third Parties*/}
           <div className="card">
             <div className="icon">
-              <img src="images/intigration.svg" />
+              <img src="images/intigration.svg" alt="Intigration" />
             </div>
             <h3 className="title">Integrate Third Parties</h3>
             <ul>
@@ -846,7 +849,10 @@ const Middle = () => {
           {/*Secure Authentication*/}
           <div className="card">
             <div className="icon">
-              <img src="images/secure-authentication.svg" />
+              <img
+                src="images/secure-authentication.svg"
+                alt="Secure Authentication"
+              />
             </div>
             <h3 className="title">Utilize Secure Authentication</h3>
             <ul>
@@ -899,7 +905,7 @@ const Middle = () => {
           {/*Concepts*/}
           <div className="card">
             <div className="icon">
-              <img src="images/concepts.svg" />
+              <img src="images/concepts.svg" alt="Concepts" />
             </div>
             <h3 className="title">Concepts</h3>
             <ul>
@@ -935,7 +941,7 @@ const Middle = () => {
           {/*SDKs*/}
           <div ref={sdkRef} className="card">
             <div className="icon">
-              <img src="images/sdks-icon.svg" />
+              <img src="images/sdks-icon.svg" alt="SDK" />
             </div>
             <h3 className="title">SDKs</h3>
             <ul>
@@ -980,7 +986,7 @@ const Middle = () => {
           {/*APIs*/}
           <div ref={apiRef} className="card">
             <div className="icon">
-              <img src="images/api-icon.svg" />
+              <img src="images/api-icon.svg" alt="API" />
             </div>
             <h3 className="title">APIs</h3>
             <ul>
@@ -1044,7 +1050,7 @@ const Middle = () => {
           {/*Javascript references*/}
           <div className="card">
             <div className="icon">
-              <img src="images/references.svg" />
+              <img src="images/references.svg" alt="References" />
             </div>
             <h3 className="title">JavaScript Library</h3>
             <ul>

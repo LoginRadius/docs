@@ -1097,7 +1097,7 @@ const DocsList = [
     },
   ],
   [],
-   // "SSO SAML",
+  // "SSO SAML",
   // "SSO JWT",
   // "SSO OIDC",
   // "SSO OAuth2",
@@ -1175,7 +1175,7 @@ const DocsList = [
       },
     },
   ],
-   // "JavaScript",
+  // "JavaScript",
   // "Pure JavaScript implementation",
   // "AngularJS",
   // "ReactJS",
@@ -1228,7 +1228,7 @@ const DocsList = [
   // "Shopify",
   // "Drupal",
   // "Other",
-  
+
   [
     {
       name: "PHP Back-end Technology",
@@ -1701,7 +1701,7 @@ class Questionnaire extends React.Component {
                     <div>
                       <div className="logo">
                         <Link to="/">
-                          <img src={Logo} width="228" />
+                          <img src={Logo} width="228" alt="LoginRadius" />
                         </Link>
                       </div>
                       <div className="right-section">
@@ -1735,7 +1735,7 @@ class Questionnaire extends React.Component {
                       <div>
                         <div className="logo">
                           <Link to="/">
-                            <img src={Logo} width="228" />
+                            <img src={Logo} width="228" alt="LoginRadius" />
                           </Link>
                         </div>
                         <div className="right-section">
@@ -1862,7 +1862,11 @@ class Questionnaire extends React.Component {
                         </div>
                         <div className="no-print share-widget">
                           <div className="btn-box top-half">
-                            <img src={ResultBanner} width={228} />
+                            <img
+                              src={ResultBanner}
+                              width={228}
+                              alt="Questionnaire Graphics"
+                            />
                           </div>
                           <div className="btn-box bottom-half">
                             <h3>
@@ -1919,7 +1923,10 @@ class Questionnaire extends React.Component {
             >
               <div className="dd-close">
                 <Link to="/">
-                  <img src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E" />
+                  <img
+                    src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E"
+                    alt="Close"
+                  />
                 </Link>
               </div>
               <div className="grid-50">
@@ -1927,7 +1934,7 @@ class Questionnaire extends React.Component {
                   <div className="dd-content max-height-restricted">
                     <div className="dd-logo">
                       <Link to="/">
-                        <img src={Logo} width={228} />
+                        <img src={Logo} width={228} alt="LoginRadius" />
                       </Link>
                     </div>
                     {this.state.step === 0 ? (

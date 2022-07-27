@@ -53,7 +53,7 @@ function PopUp(props) {
                 props.data.map((item, index) => (
                   <li key={index}>
                     <Link to={item.link}>
-                      <img src={item.icon} width={20} />
+                      <img src={item.icon} width={20} alt="" />
                       <span>{item.text}</span>
                     </Link>
                   </li>
