@@ -8,13 +8,7 @@ const Middle = () => {
   const sdkRef = React.createRef()
   const gotQRef = React.createRef()
   const [display, setDisplay] = useState(false)
-  const [openModel, setOpenModel] = useState(true)
-  const closePopup = () => {
-    var expires = new Date()
-    expires = expires.setHours(expires.getHours() + 24)
-    localStorage.setItem("docsModelShown", expires)
-    setOpenModel(false)
-  }
+
   useEffect(() => {
     if (
       window &&
@@ -33,84 +27,12 @@ const Middle = () => {
         gotQRef.current.scrollIntoView({ block: "start" })
       }
     }
-    let modelShown = localStorage.getItem("docsModelShown")
-    if (modelShown && modelShown > new Date()) {
-      setOpenModel(false)
-    }
   })
 
   return (
     <main>
       {/*Hero section*/}
       <section className="hero py-72">
-        <Modal id="doc-popup" isOpen={openModel} ariaHideApp={false}>
-          <div className="card no-shadow p-0 doc-popup">
-            <a
-              className="close"
-              onClick={() => {
-                closePopup()
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </a>
-            <div className="popup-content">
-              <h2>You are viewing Developer CIAM documents.</h2>
-              <a href="https://www.loginradius.com/docs/" target="_blank">
-                Move to Enterprise CIAM
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15 10.8333V15.8333C15 16.2754 14.8244 16.6993 14.5118 17.0118C14.1993 17.3244 13.7754 17.5 13.3333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V6.66667C2.5 6.22464 2.67559 5.80072 2.98816 5.48816C3.30072 5.17559 3.72464 5 4.16667 5H9.16667"
-                    stroke="#008ECF"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M12.1665 3H17.1665V8"
-                    stroke="#008ECF"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M8 12.1667L17.1667 3"
-                    stroke="#008ECF"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-              <a
-                onClick={() => {
-                  closePopup()
-                }}
-              >
-                Continue to Developer CIAM
-              </a>
-            </div>
-          </div>
-        </Modal>
         <div className="grid-50 d-flex align-items-end justify-content-between">
           <div>
             <h1>LoginRadius Documentation</h1>
@@ -527,31 +449,31 @@ const Middle = () => {
         <div className="grid-25">
           <div className="card">
             <div className="icon">
-              <img src="images/single-page-app.svg" />
+              <img src="images/single-page-app.svg" alt="Single Page App" />
             </div>
             <h3 className="title">Single Page App</h3>
             <ul>
               <li>
                 <Link to="/tutorial/react">
-                  <img src="images/react.svg" width={20} />
+                  <img src="images/react.svg" width={20} alt="React" />
                   <span>React</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/angular">
-                  <img src="images/angular.svg" width={20} />
+                  <img src="images/angular.svg" width={20} alt="Angular" />
                   <span>Angular</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/vue">
-                  <img src="images/vue-dot-js.svg" width={20} />
+                  <img src="images/vue-dot-js.svg" width={20} alt="Vue js" />
                   <span>VueJs</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/html-and-js-tutorial">
-                  <img src="images/html5.svg" width={20} />
+                  <img src="images/html5.svg" width={20} alt="html5" />
                   <span>HTML and JS</span>
                 </Link>
               </li>
@@ -559,25 +481,25 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/web-apps.svg" />
+              <img src="images/web-apps.svg" alt="Web Apps" />
             </div>
             <h3 className="title">Web Apps</h3>
             <ul>
               <li>
                 <Link to="/tutorial/node-js">
-                  <img src="images/node-dot-js.svg" width={20} />
+                  <img src="images/node-dot-js.svg" width={20} alt="Node js" />
                   <span>NodeJs</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/php">
-                  <img src="images/php.svg" width={20} />
+                  <img src="images/php.svg" width={20} alt="PHP" />
                   <span>PHP</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/java">
-                  <img src="images/java.svg" width={20} />
+                  <img src="images/java.svg" width={20} alt="Java" />
                   <span>JAVA</span>
                 </Link>
               </li>
@@ -634,25 +556,25 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/mobile-apps.svg" />
+              <img src="images/mobile-apps.svg" alt="Mobile App" />
             </div>
             <h3 className="title">Mobile Apps</h3>
             <ul>
               <li>
                 <Link to="/tutorial/android">
-                  <img src="images/android.svg" width={20} />
+                  <img src="images/android.svg" width={20} alt="Android" />
                   <span>Android</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/ios">
-                  <img src="images/ios.svg" width={20} />
+                  <img src="images/ios.svg" width={20} alt="IOS" />
                   <span>iOS</span>
                 </Link>
               </li>
               <li>
                 <Link to="/tutorial/ionic">
-                  <img src="images/ionic.svg" width={20} />
+                  <img src="images/ionic.svg" width={20} alt="Ionic" />
                   <span>Ionic </span>
                 </Link>
               </li>
@@ -660,37 +582,41 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/cms-app.svg" />
+              <img src="images/cms-app.svg" alt="CMS App" />
             </div>
             <h3 className="title">CMS App</h3>
             <ul>
               <li>
                 <Link to="/guide/wordpress">
-                  <img src="images/wordpress.svg" width={20} />
+                  <img src="images/wordpress.svg" width={20} alt="Wordpress" />
                   <span>WordPress </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/drupal">
-                  <img src="images/drupal.svg" width={20} />
+                  <img src="images/drupal.svg" width={20} alt="Drupal" />
                   <span>Drupal </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/big-commerce">
-                  <img src="images/bigcommerce.svg" width={20} />
+                  <img
+                    src="images/bigcommerce.svg"
+                    width={20}
+                    alt="big Commerce"
+                  />
                   <span>BigCommerce </span>
                 </Link>
               </li>
               <li>
                 <Link to="/guide/shopify">
-                  <img src="images/shopify.svg" width={20} />
+                  <img src="images/shopify.svg" width={20} alt="Shopify" />
                   <span>Shopify </span>
                 </Link>
               </li>
               {/* <li>
                 <a href="#">
-                  <img src="images/joomla.svg" width={20} />
+                  <img src="images/joomla.svg" width={20} alt="" />
                   <span>Joomla</span>
                 </a>
               </li> */}
@@ -713,7 +639,7 @@ const Middle = () => {
           {/*Login Methods we offer*/}
           <div className="card">
             <div className="icon">
-              <img src="images/login-methods.svg" />
+              <img src="images/login-methods.svg" alt="Login Methods" />
             </div>
             <h3 className="title">Add Login Methods</h3>
             <ul>
@@ -743,7 +669,7 @@ const Middle = () => {
           {/*Explore user managment options*/}
           <div className="card">
             <div className="icon">
-              <img src="images/user-managment.svg" />
+              <img src="images/user-managment.svg" alt="User Managment" />
             </div>
             <h3 className="title">Manage Users with LoginRadius</h3>
             <ul>
@@ -793,7 +719,7 @@ const Middle = () => {
           {/*Personalize interfaces and branding*/}
           <div className="card">
             <div className="icon">
-              <img src="images/branding.svg" />
+              <img src="images/branding.svg" alt="Branding" />
             </div>
             <h3 className="title">
               Personalize Your Login Interface and Branding
@@ -830,7 +756,7 @@ const Middle = () => {
           {/*Single Sign On*/}
           <div className="card">
             <div className="icon">
-              <img src="images/sso.svg" />
+              <img src="images/sso.svg" alt="SSO" />
             </div>
             <h3 className="title">Implement Sign Sign-On</h3>
             <ul>
@@ -846,7 +772,7 @@ const Middle = () => {
           {/*Integrate Third Parties*/}
           <div className="card">
             <div className="icon">
-              <img src="images/intigration.svg" />
+              <img src="images/intigration.svg" alt="Intigration" />
             </div>
             <h3 className="title">Integrate Third Parties</h3>
             <ul>
@@ -923,7 +849,10 @@ const Middle = () => {
           {/*Secure Authentication*/}
           <div className="card">
             <div className="icon">
-              <img src="images/secure-authentication.svg" />
+              <img
+                src="images/secure-authentication.svg"
+                alt="Secure Authentication"
+              />
             </div>
             <h3 className="title">Utilize Secure Authentication</h3>
             <ul>
@@ -976,7 +905,7 @@ const Middle = () => {
           {/*Concepts*/}
           <div className="card">
             <div className="icon">
-              <img src="images/concepts.svg" />
+              <img src="images/concepts.svg" alt="Concepts" />
             </div>
             <h3 className="title">Concepts</h3>
             <ul>
@@ -1012,7 +941,7 @@ const Middle = () => {
           {/*SDKs*/}
           <div ref={sdkRef} className="card">
             <div className="icon">
-              <img src="images/sdks-icon.svg" />
+              <img src="images/sdks-icon.svg" alt="SDK" />
             </div>
             <h3 className="title">SDKs</h3>
             <ul>
@@ -1057,7 +986,7 @@ const Middle = () => {
           {/*APIs*/}
           <div ref={apiRef} className="card">
             <div className="icon">
-              <img src="images/api-icon.svg" />
+              <img src="images/api-icon.svg" alt="API" />
             </div>
             <h3 className="title">APIs</h3>
             <ul>
@@ -1121,7 +1050,7 @@ const Middle = () => {
           {/*Javascript references*/}
           <div className="card">
             <div className="icon">
-              <img src="images/references.svg" />
+              <img src="images/references.svg" alt="References" />
             </div>
             <h3 className="title">JavaScript Library</h3>
             <ul>
