@@ -39,7 +39,35 @@ const Header = () => {
     },
     [y]
   )
-
+const loading_spinner = {
+	position: "fixed",
+	top: "-500%",
+left: "-500%",
+right: "-500%",
+bottom: "-500%",
+zIndex: 9999,
+background: "#ffffff"
+}
+const lr_loading_screen = {
+	background: "linear-gradient(to bottom, #f9f9f9 10%, #eeeff3 100%)",
+height: "100vh",
+position: "relative",
+zIndex: 10000
+}
+const lr_loading_screen_center = {
+	position: "fixed",
+left: "50%",
+top: "50%",
+width: "500px",
+marginLeft: "-250px",
+marginTop: "-44px"
+}
+const lr_loading_screen_spinner = {
+	height: "100px",
+width: "100px",
+margin: "0 auto",
+display: "block"
+}
   useEffect(() => {
     let modelShown = localStorage.getItem("docsModelShown")
     if (modelShown && modelShown > new Date()) {
@@ -57,6 +85,13 @@ const Header = () => {
 
   return (
     <React.Fragment>
+	  <div id="loading-spinner" style={loading_spinner}>
+		<div style={lr_loading_screen}>
+		  <div style={lr_loading_screen_center}>
+			<img src="https://cdn.loginradius.com/hub/prod/v1/images/loader.gif" style={lr_loading_screen_spinner}/>
+		  </div>
+		</div>
+	  </div>
       <Modal id="doc-popup" isOpen={openModel} ariaHideApp={false}>
         <div className="card no-shadow p-0 doc-popup">
           <a
@@ -149,16 +184,9 @@ const Header = () => {
               <a
                 href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login"
                 target="_blank"
-                className="btn btn-secondary"
-              >
-                Login
-              </a>
-              <a
-                href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login&action=register"
-                target="_blank"
                 className="btn btn-primary"
               >
-                Free Sign Up
+                Dashboard
               </a>
             </div>
           </div>

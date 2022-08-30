@@ -5,7 +5,9 @@ document.body.appendChild(s);
 function redirectUnauthUser(token){
     if(typeof(token) == "undefined"){
         window.location.href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login";
-    }
+    }else{
+		document.getElementById("loading-spinner").style.display = "none";
+	}
 }
 function lrssocallback() {
     var options = {};
