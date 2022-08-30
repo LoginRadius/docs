@@ -4,7 +4,7 @@ s.onload = lrssocallback;
 document.body.appendChild(s);
 function redirectUnauthUser(token){
     if(typeof(token) == "undefined"){
-        window.location.href="https://adminconsole.loginradius.com/";
+        window.location.href="https://accounts.loginradius.com/auth.aspx?return_url=https://dashboard.loginradius.com/login";
     }
 }
 function lrssocallback() {
