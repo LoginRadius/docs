@@ -109,7 +109,7 @@ module.exports = {
     {
         resolve: 'gatsby-plugin-load-script',
           options: {
-            src: '/checksso.js', // Change to the script filename
+            src: '/ciam-for-developers/docs/checksso.js', // Change to the script filename
           },
     },
     `gatsby-plugin-react-helmet`,
