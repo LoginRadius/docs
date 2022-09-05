@@ -106,6 +106,12 @@ module.exports = {
         icon: `content/assets/sm-logo.png`,
       },
     },
+    {
+        resolve: 'gatsby-plugin-load-script',
+          options: {
+            src: '/ciam-for-developers/docs/checksso.js', // Change to the script filename
+          },
+    },
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
