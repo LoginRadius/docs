@@ -34,7 +34,7 @@
     "gatsby-remark-smartypants": "^2.10.0",
     "gatsby-remark-use-frontmatter-path": "^1.0.0",
     "gatsby-source-filesystem": "^2.11.0",
-    "gatsby-transformer-remark": "^2.16.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.12.0",
     "prismjs": "^1.27.0",
     "react": "^16.12.0",
